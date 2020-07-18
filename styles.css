@@ -45,30 +45,12 @@ nav li {
   margin-left: 38px;
   margin-right: 38px;
   display: inline-block;
-  text-transform: uppercase;
   border-bottom: 1px solid transparent;
 }
 
 nav li:hover {
   border-bottom: 1px solid seagreen;
   transition: border-bottom 1s;
-}
-
-main hr {
-  border: 0;
-  height: 1px;
-  background-image: linear-gradient(
-    to right,
-    rgba(46, 139, 87,0),
-    rgba(46, 139, 87,.75),
-    rgba(46, 139, 87,0));
-}
-
-main article {
-  padding-left: 36px;
-  padding-right: 36px;
-  padding-top: 18px;
-  padding-bottom: 18px;
 }
 
 footer {
@@ -95,4 +77,21 @@ nav a, footer a {
 nav a:hover, footer a:hover {
   color: seagreen;
   transition: color 1s;
+}
+
+main hr {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(
+    to right,
+    rgba(46, 139, 87,0),
+    rgba(46, 139, 87,.75),
+    rgba(46, 139, 87,0));
+}
+
+main article {
+  padding-left: 36px;
+  padding-right: 36px;
+  padding-top: 18px;
+  padding-bottom: 18px;
 }
