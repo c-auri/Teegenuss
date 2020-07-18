@@ -53,6 +53,16 @@ nav a {
   color: dimgray;
 }
 
+main hr {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(
+    to right,
+    rgba(46, 139, 87,0),
+    rgba(46, 139, 87,.75),
+    rgba(46, 139, 87,0));
+}
+
 main article {
   padding-left: 36px;
   padding-right: 36px;
