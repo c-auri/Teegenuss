@@ -36,6 +36,10 @@ header h1 {
   text-align: center;
 }
 
+header h1 a:hover {
+  border-bottom: none;
+}
+
 nav ul {
   list-style: none;
   display: flex;
