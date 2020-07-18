@@ -59,3 +59,27 @@ main article {
   padding-top: 18px;
   padding-bottom: 18px;
 }
+
+footer {
+  padding-bottom: 18px;
+}
+
+footer ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+footer li {
+  display: inline-block;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+footer a {
+  color: dimgray;
+}
+
+footer a:hover {
+  border: none;
+}
