@@ -14,16 +14,6 @@ header, nav, main, footer {
   background-color: white;
 }
 
-a {
-  color: seagreen;
-  text-decoration: none;
-}
-
-a:hover {
-  color: seagreen;
-  border-bottom: 1px solid seagreen;
-}
-
 header {
   padding-top: 18px;
 }
@@ -34,6 +24,11 @@ header h1 {
   font-weight: 300;
   font-size: 64;
   text-align: center;
+}
+
+header h1 a {
+  color: seagreen;
+  text-decoration: none;
 }
 
 header h1 a:hover {
@@ -47,14 +42,16 @@ nav ul {
 }
 
 nav li {
+  margin-left: 38px;
+  margin-right: 38px;
   display: inline-block;
-  padding-left: 38px;
-  padding-right: 38px;
   text-transform: uppercase;
+  border-bottom: 1px solid transparent;
 }
 
-nav a {
-  color: dimgray;
+nav li:hover {
+  border-bottom: 1px solid seagreen;
+  transition: border-bottom 1s;
 }
 
 main hr {
@@ -85,15 +82,17 @@ footer ul {
 }
 
 footer li {
-  display: inline-block;
   padding-left: 32px;
   padding-right: 32px;
+  display: inline-block;
 }
 
-footer a {
+nav a, footer a {
   color: dimgray;
+  text-decoration: none;
 }
 
-footer a:hover {
-  border: none;
+nav a:hover, footer a:hover {
+  color: seagreen;
+  transition: color 1s;
 }
