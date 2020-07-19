@@ -48,6 +48,14 @@ nav li {
   border-bottom: 1px solid transparent;
 }
 
+nav .current {
+  border-bottom: 1px solid seagreen;
+}
+
+nav .current a {
+  color: seagreen;
+}
+
 nav li:hover {
   border-bottom: 1px solid seagreen;
   transition: border-bottom 1s;
