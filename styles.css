@@ -94,6 +94,7 @@ main article {
   padding-bottom: 32px;
   padding-left: 48px;
   padding-right: 48px;
+  font-size: 1.1em;
   max-width: 50ch;
 }
 
@@ -103,6 +104,31 @@ main article h1 {
   font-weight: 300;
   font-size: 1.4em;
   text-align: center;
+}
+
+main aside {
+  padding: 4px;
+  font-size: 0.9em;
+  text-align: center;
+}
+
+main aside h1 {
+  color: seagreen;
+  font-family: 'Lato', sans-serif;
+  font-style: italic;
+  font-size: 1.2em;
+}
+
+main aside table {
+  margin: auto;
+}
+
+main aside .left {
+  text-align: left;
+}
+
+main aside .right {
+  text-align: right;
 }
 
 main .signature {
