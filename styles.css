@@ -1,21 +1,17 @@
-body {
-  margin: 0px;
+html {
+  height: 100%;
   font-family: 'Lato', sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   background-color: #f0f0f0;
 }
 
-header, nav, main, footer {
+body {
   margin: auto;
-  width: 720px;
+  min-height: 100%;
   max-width: 100%;
+  width: 720px;
+  display: flex;
+  flex-direction: column;
   background-color: white;
-}
-
-header {
-  padding-top: 32px;
 }
 
 header h1 {
@@ -63,7 +59,7 @@ nav li:hover {
 }
 
 footer {
-  padding-top: 16px;
+  margin-top: auto;
   padding-bottom: 32px;
   text-align: center;
 }
@@ -78,7 +74,7 @@ nav a:hover, footer a:hover {
   transition: color 1s;
 }
 
-main hr {
+hr {
   border: 0;
   height: 1px;
   background-image: linear-gradient(
