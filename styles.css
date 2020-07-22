@@ -14,21 +14,20 @@ body {
   background-color: white;
 }
 
-header h1 {
-  color: seagreen;
+header {
+  height:180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(img/banner.png);
+  background-size: cover;
+}
+
+header a {
+  color: white;
   font-family: 'Charmonman', cursive;
-  font-weight: 300;
-  font-size: 64;
-  text-align: center;
-}
-
-header h1 a {
-  color: seagreen;
+  font-size: 3em;
   text-decoration: none;
-}
-
-header h1 a:hover {
-  border-bottom: none;
 }
 
 nav, footer {
