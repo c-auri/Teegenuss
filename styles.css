@@ -24,7 +24,7 @@ header {
 }
 
 header a {
-  color: white;
+  color: #e9ece3;
   font-family: 'Charmonman', cursive;
   font-size: 3em;
   text-decoration: none;
@@ -35,7 +35,7 @@ nav, footer {
 }
 
 nav a, footer a {
-  color: white;
+  color: #e9ece3;
   text-decoration: none;
 }
 
