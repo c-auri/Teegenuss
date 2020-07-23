@@ -154,17 +154,17 @@ main aside .right {
   text-align: right;
 }
 
-main .signature {
+main .cursive {
   margin: 0px;
   padding-top: 12px;
   color: var(--green);
   font-family: 'Tangerine', cursive;
   font-weight: 500;
-  font-size: 2em;
+  font-size: 3em;
   text-align: center;
 }
 
-main .occupation {
+main .caption {
   margin: 0px;
   color: var(--gray);
   font-family: 'Lato', sans-serif;
