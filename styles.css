@@ -58,6 +58,11 @@ nav a:hover, footer a:hover {
   color: var(--white);
 }
 
+#home .home, #sorts .sorts, #prep .prep {
+  padding-top: 13px;
+  border-top: 2px solid var(--white);
+}
+
 nav {
   display: flex;
 }
@@ -81,11 +86,6 @@ nav li {
 nav li:hover {
   border-top: 2px solid var(--white);
   transition: border-top 1s;
-}
-
-nav .current {
-  padding-top: 13px;
-  border-top: 2px solid var(--white);
 }
 
 footer {
