@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap');
+
 :root {
   --white: white;
   --gray: dimgray;
@@ -7,7 +10,6 @@
 
 html {
   height: 100%;
-  font-family: 'Lato', sans-serif;
   background-color: var(--light-green);
 }
 
@@ -18,6 +20,8 @@ body {
   width: 720px;
   display: flex;
   flex-direction: column;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
   background-color: var(--white);
 }
 
@@ -32,7 +36,6 @@ header {
 
 header a {
   color: var(--light-green);
-  font-family: 'Charmonman', cursive;
   font-size: 3em;
   text-decoration: none;
 }
@@ -66,7 +69,7 @@ nav li {
   padding-bottom: 12px;
   width: 160px;
   text-align: center;
-  font-weight: 600;
+  font-weight: 500;
   border-top: 2px solid transparent;
 }
 
@@ -117,7 +120,6 @@ main article {
 
 main article h1 {
   color: var(--green);
-  font-family: 'Charmonman', cursive;
   font-weight: 300;
   font-size: 1.4em;
   text-align: center;
@@ -131,7 +133,6 @@ main aside {
 
 main aside h1 {
   color: var(--green);
-  font-family: 'Lato', sans-serif;
   font-style: italic;
   font-size: 1.2em;
 }
@@ -152,9 +153,9 @@ main .signature {
   margin: 0px;
   padding-top: 12px;
   color: var(--green);
-  font-family: 'Charmonman', cursive;
-  font-weight: 300;
-  font-size: 1.3em;
+  font-family: 'Tangerine', cursive;
+  font-weight: 500;
+  font-size: 2em;
   text-align: center;
 }
 
