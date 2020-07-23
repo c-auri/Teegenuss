@@ -89,10 +89,10 @@ nav li:hover {
 }
 
 footer {
+  height: 50px;
   margin-top: auto;
-  padding-top: 32px;
-  padding-bottom: 32px;
-  text-align: center;
+  display: grid;
+  place-items: center;
 }
 
 footer a:hover {
