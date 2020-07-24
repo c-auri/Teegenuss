@@ -5,32 +5,34 @@ $white: white;
 $gray: dimgray;
 $green: seagreen;
 $green_light: #e9ece3;
-
-.preloader {
-  position: absolute;
-  left: -9999px;
-  top:  -999px;
-
-  img {
-    display: block;
-  }
-}
+$green_dark: #002700;
 
 html {
+  background-color: $green_dark;
+}
+
+.bg {
   height: 100%;
-  background-color: $green_light;
+  background-image: url('../img/bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 body {
   margin: auto;
   min-height: 100%;
-  max-width: 100%;
-  width: 720px;
   display: flex;
   flex-direction: column;
   font-family: 'Lato', sans-serif;
   font-weight: 300;
-  background-color: $white;
+}
+
+header, nav, main, footer {
+  max-width: 100%;
+  width: 720px;
+  margin: auto;
 }
 
 header {
@@ -38,9 +40,6 @@ header {
   display: flex;
   align-items: flex-end;
   text-align: center;
-  background-image: url(../img/banner.jpg);
-  background-size: cover;
-  background-position: center top;
 
   h1 {
     width: 100%;
@@ -120,6 +119,7 @@ footer {
 main {
   padding-top: 16px;
   padding-bottom: 32px;
+  background-color: $white;
   
   article {
     margin: auto;
@@ -186,4 +186,15 @@ table {
   font-family: 'Lato', sans-serif;
   font-size: 0.8em;
   text-align: center;
+}
+
+
+.preloader {
+  position: absolute;
+  left: -9999px;
+  top:  -999px;
+
+  img {
+    display: block;
+  }
 }
