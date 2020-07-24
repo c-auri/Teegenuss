@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap");
+:root {
+  --white: white;
+  --gray: dimgray;
+  --green: seagreen;
+  --light-green: #e9ece3;
+}
+
+.preloader {
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+}
+
+.preloader img {
+  display: block;
+}
+
+html {
+  height: 100%;
+  background-color: var(--light-green);
+}
+
+body {
+  margin: auto;
+  min-height: 100%;
+  max-width: 100%;
+  width: 720px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  background-color: var(--white);
+}
+
+header {
+  height: 180px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  text-align: center;
+  background-image: url(../img/banner.jpg);
+  background-size: cover;
+  background-position: center top;
+}
+
+header a {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+header img {
+  width: 75%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+nav, footer {
+  background-color: var(--green);
+}
+
+nav a, footer a {
+  color: var(--light-green);
+  text-decoration: none;
+}
+
+nav a:hover, footer a:hover {
+  color: var(--white);
+}
+
+#home .home, #sorts .sorts, #prep .prep {
+  padding-top: 13px;
+  border-top: 2px solid var(--white);
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+nav ul {
+  padding: 0px;
+  margin: auto;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+nav li {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  width: 160px;
+  text-align: center;
+  font-weight: 500;
+  border-top: 2px solid transparent;
+}
+
+nav li:hover {
+  border-top: 2px solid var(--white);
+  -webkit-transition: border-top 1s;
+  transition: border-top 1s;
+}
+
+footer {
+  height: 50px;
+  margin-top: auto;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+footer a:hover {
+  border-bottom: 1px solid var(--white);
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+main {
+  padding-top: 16px;
+  padding-bottom: 32px;
+}
+
+main article {
+  margin: auto;
+  padding-left: 48px;
+  padding-right: 48px;
+  font-size: 1.1em;
+  max-width: 50ch;
+}
+
+main article h1 {
+  color: var(--green);
+  font-weight: 300;
+  font-size: 1.4em;
+  text-align: center;
+}
+
+main aside {
+  padding: 4px;
+  font-size: 0.9em;
+  text-align: center;
+  border-width: 1px;
+  border-style: solid none solid none;
+  -o-border-image: linear-gradient(to right, rgba(0, 0, 0, 0), seagreen, rgba(0, 0, 0, 0)) 1 5%;
+     border-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), color-stop(seagreen), to(rgba(0, 0, 0, 0))) 1 5%;
+     border-image: linear-gradient(to right, rgba(0, 0, 0, 0), seagreen, rgba(0, 0, 0, 0)) 1 5%;
+}
+
+main aside h1 {
+  color: var(--green);
+  font-style: italic;
+  font-size: 1.2em;
+}
+
+main aside table {
+  margin: auto;
+}
+
+main aside .left {
+  text-align: left;
+}
+
+main aside .right {
+  text-align: right;
+}
+
+main .cursive {
+  margin: 0px;
+  padding-top: 12px;
+  color: var(--green);
+  font-family: 'Tangerine', cursive;
+  font-weight: 500;
+  font-size: 3em;
+  text-align: center;
+}
+
+main .caption {
+  margin: 0px;
+  color: var(--gray);
+  font-family: 'Lato', sans-serif;
+  font-size: 0.8em;
+  text-align: center;
+}
+/*# sourceMappingURL=styles.css.map */
