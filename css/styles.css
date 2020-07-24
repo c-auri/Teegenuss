@@ -1,16 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap");
-:root {
-  --white: white;
-  --gray: dimgray;
-  --green: seagreen;
-  --light-green: #e9ece3;
-}
-
 .preloader {
   position: absolute;
   left: -9999px;
-  top: -9999px;
+  top: -999px;
 }
 
 .preloader img {
@@ -19,7 +12,7 @@
 
 html {
   height: 100%;
-  background-color: var(--light-green);
+  background-color: #e9ece3;
 }
 
 body {
@@ -36,7 +29,7 @@ body {
           flex-direction: column;
   font-family: 'Lato', sans-serif;
   font-weight: 300;
-  background-color: var(--white);
+  background-color: white;
 }
 
 header {
@@ -65,21 +58,21 @@ header img {
 }
 
 nav, footer {
-  background-color: var(--green);
+  background-color: seagreen;
 }
 
 nav a, footer a {
-  color: var(--light-green);
+  color: #e9ece3;
   text-decoration: none;
 }
 
 nav a:hover, footer a:hover {
-  color: var(--white);
+  color: white;
 }
 
 #home .home, #sorts .sorts, #prep .prep {
   padding-top: 13px;
-  border-top: 2px solid var(--white);
+  border-top: 2px solid white;
 }
 
 nav {
@@ -107,7 +100,7 @@ nav li {
 }
 
 nav li:hover {
-  border-top: 2px solid var(--white);
+  border-top: 2px solid white;
   -webkit-transition: border-top 1s;
   transition: border-top 1s;
 }
@@ -121,7 +114,7 @@ footer {
 }
 
 footer a:hover {
-  border-bottom: 1px solid var(--white);
+  border-bottom: 1px solid white;
   -webkit-transition: 1s;
   transition: 1s;
 }
@@ -140,7 +133,7 @@ main article {
 }
 
 main article h1 {
-  color: var(--green);
+  color: seagreen;
   font-weight: 300;
   font-size: 1.4em;
   text-align: center;
@@ -158,7 +151,7 @@ main aside {
 }
 
 main aside h1 {
-  color: var(--green);
+  color: seagreen;
   font-style: italic;
   font-size: 1.2em;
 }
@@ -178,7 +171,7 @@ main aside .right {
 main .cursive {
   margin: 0px;
   padding-top: 12px;
-  color: var(--green);
+  color: seagreen;
   font-family: 'Tangerine', cursive;
   font-weight: 500;
   font-size: 3em;
@@ -187,7 +180,7 @@ main .cursive {
 
 main .caption {
   margin: 0px;
-  color: var(--gray);
+  color: dimgray;
   font-family: 'Lato', sans-serif;
   font-size: 0.8em;
   text-align: center;
