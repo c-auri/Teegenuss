@@ -139,7 +139,7 @@ main article h1 {
   text-align: center;
 }
 
-main aside {
+main article aside {
   padding: 4px;
   font-size: 0.9em;
   text-align: center;
@@ -150,25 +150,25 @@ main aside {
      border-image: linear-gradient(to right, rgba(0, 0, 0, 0), seagreen, rgba(0, 0, 0, 0)) 1 5%;
 }
 
-main aside h1 {
+main article aside h1 {
   color: seagreen;
   font-style: italic;
   font-size: 1.2em;
 }
 
-main aside table {
+table {
   margin: auto;
 }
 
-main aside .left {
+.left {
   text-align: left;
 }
 
-main aside .right {
+.right {
   text-align: right;
 }
 
-main .cursive {
+.cursive {
   margin: 0px;
   padding-top: 12px;
   color: seagreen;
@@ -178,7 +178,7 @@ main .cursive {
   text-align: center;
 }
 
-main .caption {
+.caption {
   margin: 0px;
   color: dimgray;
   font-family: 'Lato', sans-serif;
