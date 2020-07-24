@@ -8,6 +8,16 @@
   --light-green: #e9ece3;
 }
 
+.preloader {
+  position: absolute;
+  left: -9999px;
+  top:  -9999px;
+}
+
+.preloader img {
+  display: block;
+}
+
 html {
   height: 100%;
   background-color: var(--light-green);
@@ -30,7 +40,7 @@ header {
   display: flex;
   align-items: flex-end;
   text-align: center;
-  background-image: url(https://projekt-teegenuss.netlify.app/img/banner.png);
+  background-image: url(../img/banner.jpg);
   background-size: cover;
   background-position: center top;
 }
