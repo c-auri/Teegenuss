@@ -30,7 +30,7 @@ header {
   display: flex;
   align-items: flex-end;
   text-align: center;
-  background-image: url(img/banner.png);
+  background-image: url(https://projekt-teegenuss.netlify.app/img/banner.png);
   background-size: cover;
   background-position: center top;
 }
