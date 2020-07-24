@@ -42,14 +42,23 @@ header {
   background-size: cover;
   background-position: center top;
 
-  a {
+  h1 {
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    font-size: 38px;
+    text-transform: uppercase;
+  }
+
+  @media screen and (min-width: 600px) {
+    h1 {
+      font-size: 48px;
+    }
   }
   
-  img {
-    width: 75%;
-    object-fit: cover;
+  a {
+    color: white;
+    opacity: 0.75;
+    text-decoration: none;
   }
 }
   

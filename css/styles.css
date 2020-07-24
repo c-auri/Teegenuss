@@ -46,15 +46,23 @@ header {
   background-position: center top;
 }
 
-header a {
+header h1 {
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
+  font-size: 38px;
+  text-transform: uppercase;
 }
 
-header img {
-  width: 75%;
-  -o-object-fit: cover;
-     object-fit: cover;
+@media screen and (min-width: 600px) {
+  header h1 {
+    font-size: 48px;
+  }
+}
+
+header a {
+  color: white;
+  opacity: 0.75;
+  text-decoration: none;
 }
 
 nav, footer {
