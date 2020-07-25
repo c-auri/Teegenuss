@@ -12,7 +12,7 @@ footer .about {
   display: -ms-grid;
   display: grid;
   place-items: center;
-  background-color: #005425;
+  background-color: #3a4a3f;
 }
 
 footer .about a {
@@ -27,7 +27,7 @@ footer .about a:hover {
 }
 
 footer .copyright {
-  height: 100px;
+  height: 75px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

@@ -232,7 +232,7 @@ footer .about a:hover {
 }
 
 footer .copyright {
-  height: 100px;
+  height: 75px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
