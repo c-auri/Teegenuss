@@ -1,0 +1,41 @@
+@import '../base/colors.scss';
+
+nav {
+  background-color: $green;
+  display: flex;
+  
+  ul {
+    padding: 0px;
+    margin: auto;
+    list-style: none;
+    display: flex;
+  }
+  
+  li {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    width: 160px;
+    text-align: center;
+    font-weight: 500;
+    border-top: 2px solid transparent;
+  }
+  
+  li:hover {
+    border-top: 2px solid $white;
+    transition: border-top 1s;
+  }
+
+  a {
+    color: $green_light;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: $white;
+  }
+}
+
+#home .home, #sorts .sorts, #prep .prep {
+  padding-top: 13px;
+  border-top: 2px solid $white;
+}

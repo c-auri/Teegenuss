@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap");
+main {
+  padding-top: 16px;
+  padding-bottom: 32px;
+  background-color: white;
+}
+
+main article {
+  margin: auto;
+  padding-left: 48px;
+  padding-right: 48px;
+  font-size: 1.1em;
+  max-width: 50ch;
+}
+
+main article h1 {
+  color: seagreen;
+  font-weight: 300;
+  font-size: 1.4em;
+  text-align: center;
+}
+
+main article aside {
+  padding: 4px;
+  font-size: 0.9em;
+  text-align: center;
+  border-width: 1px;
+  border-style: solid none solid none;
+  -o-border-image: linear-gradient(to right, rgba(0, 0, 0, 0), seagreen, rgba(0, 0, 0, 0)) 1 5%;
+     border-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), color-stop(seagreen), to(rgba(0, 0, 0, 0))) 1 5%;
+     border-image: linear-gradient(to right, rgba(0, 0, 0, 0), seagreen, rgba(0, 0, 0, 0)) 1 5%;
+}
+
+main article aside h1 {
+  color: seagreen;
+  font-style: italic;
+  font-size: 1.2em;
+}
+/*# sourceMappingURL=main.css.map */

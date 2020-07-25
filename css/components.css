@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap");
+table {
+  margin: auto;
+}
+
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
+.cursive {
+  margin: 0px;
+  padding-top: 12px;
+  color: seagreen;
+  font-family: 'Tangerine', cursive;
+  font-weight: 500;
+  font-size: 3em;
+  text-align: center;
+}
+
+.caption {
+  margin: 0px;
+  color: dimgray;
+  font-family: 'Lato', sans-serif;
+  font-size: 0.8em;
+  text-align: center;
+}
+/*# sourceMappingURL=components.css.map */

@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap");
+footer {
+  background-color: seagreen;
+  height: 50px;
+  margin-top: auto;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+footer a {
+  color: #e9ece3;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: white;
+  border-bottom: 1px solid white;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+/*# sourceMappingURL=footer.css.map */

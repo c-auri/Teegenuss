@@ -1,0 +1,10 @@
+.preloader {
+  position: absolute;
+  left: -9999px;
+  top: -999px;
+}
+
+.preloader img {
+  display: block;
+}
+/*# sourceMappingURL=preload.css.map */

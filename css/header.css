@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap");
+header {
+  height: 180px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  text-align: center;
+}
+
+header h1 {
+  width: 100%;
+  margin-bottom: 25px;
+  font-size: 38px;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 600px) {
+  header h1 {
+    font-size: 48px;
+  }
+}
+
+header a {
+  color: white;
+  opacity: 0.75;
+  text-decoration: none;
+}
+/*# sourceMappingURL=header.css.map */

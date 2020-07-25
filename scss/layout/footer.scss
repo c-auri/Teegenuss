@@ -1,0 +1,21 @@
+@import '../base/colors';
+@import '../base/fonts';
+
+footer {
+  background-color: $green;
+  height: 50px;
+  margin-top: auto;
+  display: grid;
+  place-items: center;
+  
+  a {
+    color: $green_light;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: $white;
+    border-bottom: 1px solid $white;
+    transition: 1s;
+  }
+}

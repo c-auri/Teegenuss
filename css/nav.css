@@ -1,0 +1,45 @@
+nav {
+  background-color: seagreen;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+nav ul {
+  padding: 0px;
+  margin: auto;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+nav li {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  width: 160px;
+  text-align: center;
+  font-weight: 500;
+  border-top: 2px solid transparent;
+}
+
+nav li:hover {
+  border-top: 2px solid white;
+  -webkit-transition: border-top 1s;
+  transition: border-top 1s;
+}
+
+nav a {
+  color: #e9ece3;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: white;
+}
+
+#home .home, #sorts .sorts, #prep .prep {
+  padding-top: 13px;
+  border-top: 2px solid white;
+}
+/*# sourceMappingURL=nav.css.map */
