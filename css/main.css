@@ -1,24 +1,22 @@
 main {
-  padding-top: 16px;
-  padding-bottom: 32px;
+  max-width: 100%;
   background-color: white;
+  color: #3a4a3f;
 }
 
-main article {
+article {
   margin: auto;
-  padding-left: 48px;
-  padding-right: 48px;
-  max-width: 50ch;
+  padding: 32px;
 }
 
-main article h1 {
+article section {
+  max-width: 100%;
+}
+
+aside {
   color: seagreen;
   text-align: center;
-}
-
-main article aside {
-  padding: 4px;
-  text-align: center;
+  font-style: italic;
   border-width: 1px;
   border-style: solid none solid none;
   -o-border-image: linear-gradient(to right, rgba(0, 0, 0, 0), seagreen, rgba(0, 0, 0, 0)) 1 5%;
@@ -26,7 +24,9 @@ main article aside {
      border-image: linear-gradient(to right, rgba(0, 0, 0, 0), seagreen, rgba(0, 0, 0, 0)) 1 5%;
 }
 
-main article aside h1 {
-  color: seagreen;
+@media screen and (min-width: 720px) {
+  article {
+    padding: 32px 64px;
+  }
 }
 /*# sourceMappingURL=main.css.map */

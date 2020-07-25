@@ -21,7 +21,11 @@ body {
 }
 
 header, nav, main, footer {
+  margin: auto;
   max-width: 100%;
   width: 720px;
-  margin: auto;
+
+  @media screen and (min-width: 1000px) {
+    width: 960px;
+  }
 }

@@ -1,7 +1,13 @@
 @import 'base/colors';
 
+h1 {
+  color: $green;
+  text-align: center;
+}
+
 table {
   margin: auto;
+  padding-bottom: 20px;
 }
 
 .left {

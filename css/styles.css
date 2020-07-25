@@ -1,6 +1,5 @@
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:900");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900");
 @import url("https://fonts.googleapis.com/css?family=Merriweather:300,300italic");
-@import url("https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap");
 .preloader {
   position: absolute;
   left: -9999px;
@@ -11,49 +10,70 @@
   display: block;
 }
 
-h1 {
+header {
   font-family: "Source Sans Pro", sans-serif;
-  font-size: 38px;
+  font-weight: 900;
   text-transform: uppercase;
-}
-
-@media screen and (min-width: 600px) {
-  h1 {
-    font-size: 48px;
-  }
+  font-size: 38px;
 }
 
 nav {
   font-family: "Source Sans Pro", sans-serif;
-  font-weight: 500;
+  font-weight: 900;
+  font-size: 18px;
 }
 
-main p {
-  font-size: 1.1em;
-}
-
-main article aside {
-  font-size: 0.9em;
-}
-
-main article aside h1 {
-  font-style: italic;
-  font-size: 1.2em;
-}
-
-.cursive {
-  font-family: "Tangerine", cursive;
-  font-weight: 500;
-  font-size: 3em;
-}
-
-.caption {
+h1, h2, h3, h4, h5, h6 {
   font-family: "Source Sans Pro", sans-serif;
-  font-size: 0.8em;
 }
 
-.copyright {
-  font-weight: 500;
+h1 {
+  text-transform: uppercase;
+  font-size: 32px;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-size: 28px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+h4 {
+  font-size: 20px;
+}
+
+p {
+  font-family: "Merriweather", serif;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+footer {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 300;
+}
+
+@media screen and (min-width: 720px) {
+  header {
+    font-size: 50px;
+  }
+  p {
+    font-size: 17px;
+    line-height: 1.5em;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  header {
+    font-size: 64px;
+  }
+  p {
+    font-size: 18px;
+    line-height: 1.6em;
+  }
 }
 
 html {
@@ -82,25 +102,24 @@ body {
 }
 
 header, nav, main, footer {
+  margin: auto;
   max-width: 100%;
   width: 720px;
-  margin: auto;
+}
+
+@media screen and (min-width: 1000px) {
+  header, nav, main, footer {
+    width: 960px;
+  }
 }
 
 header {
-  height: 180px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  text-align: center;
-}
-
-header h1 {
   width: 100%;
-  margin-bottom: 25px;
+  height: 180px;
+  padding-bottom: 25px;
+  display: -ms-grid;
+  display: grid;
+  place-items: end center;
 }
 
 header a {
@@ -163,26 +182,24 @@ nav a:hover {
 }
 
 main {
-  padding-top: 16px;
-  padding-bottom: 32px;
+  max-width: 100%;
   background-color: white;
+  color: #3a4a3f;
 }
 
-main article {
+article {
   margin: auto;
-  padding-left: 48px;
-  padding-right: 48px;
-  max-width: 50ch;
+  padding: 32px;
 }
 
-main article h1 {
+article section {
+  max-width: 100%;
+}
+
+aside {
   color: seagreen;
   text-align: center;
-}
-
-main article aside {
-  padding: 4px;
-  text-align: center;
+  font-style: italic;
   border-width: 1px;
   border-style: solid none solid none;
   -o-border-image: linear-gradient(to right, rgba(0, 0, 0, 0), seagreen, rgba(0, 0, 0, 0)) 1 5%;
@@ -190,8 +207,10 @@ main article aside {
      border-image: linear-gradient(to right, rgba(0, 0, 0, 0), seagreen, rgba(0, 0, 0, 0)) 1 5%;
 }
 
-main article aside h1 {
-  color: seagreen;
+@media screen and (min-width: 720px) {
+  article {
+    padding: 32px 64px;
+  }
 }
 
 footer {
@@ -255,8 +274,14 @@ footer .copyright a:hover {
   transition: 1s;
 }
 
+h1 {
+  color: seagreen;
+  text-align: center;
+}
+
 table {
   margin: auto;
+  padding-bottom: 20px;
 }
 
 .left {

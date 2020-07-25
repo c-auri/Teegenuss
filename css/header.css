@@ -1,17 +1,10 @@
 header {
-  height: 180px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  text-align: center;
-}
-
-header h1 {
   width: 100%;
-  margin-bottom: 25px;
+  height: 180px;
+  padding-bottom: 25px;
+  display: -ms-grid;
+  display: grid;
+  place-items: end center;
 }
 
 header a {
