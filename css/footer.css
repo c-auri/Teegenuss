@@ -1,22 +1,63 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap");
 footer {
-  background-color: seagreen;
-  height: 50px;
-  margin-top: auto;
   display: -ms-grid;
   display: grid;
   place-items: center;
 }
 
-footer a {
-  color: #e9ece3;
+footer .about {
+  width: 100%;
+  height: 50px;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  background-color: #002700;
+}
+
+footer .about a {
+  color: #9db0a3;
   text-decoration: none;
 }
 
-footer a:hover {
+footer .about a:hover {
   color: white;
-  border-bottom: 1px solid white;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+footer .copyright {
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: rgba(58, 74, 63, 0.75);
+  font-weight: 500;
+}
+
+footer .copyright ul {
+  padding: 0px;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer .copyright li {
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+footer .copyright a {
+  color: rgba(58, 74, 63, 0.75);
+  text-decoration: none;
+}
+
+footer .copyright a:hover {
+  color: #9db0a3;
   -webkit-transition: 1s;
   transition: 1s;
 }
