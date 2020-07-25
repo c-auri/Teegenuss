@@ -1,15 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:900");
+@import url("https://fonts.googleapis.com/css?family=Merriweather:300,300italic");
+@import url("https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap");
 .preloader {
   position: absolute;
   left: -9999px;
@@ -20,34 +11,49 @@
   display: block;
 }
 
-table {
-  margin: auto;
+h1 {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 38px;
+  text-transform: uppercase;
 }
 
-.left {
-  text-align: left;
+@media screen and (min-width: 600px) {
+  h1 {
+    font-size: 48px;
+  }
 }
 
-.right {
-  text-align: right;
+nav {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 500;
+}
+
+main p {
+  font-size: 1.1em;
+}
+
+main article aside {
+  font-size: 0.9em;
+}
+
+main article aside h1 {
+  font-style: italic;
+  font-size: 1.2em;
 }
 
 .cursive {
-  margin: 0px;
-  padding-top: 12px;
-  color: seagreen;
-  font-family: 'Tangerine', cursive;
+  font-family: "Tangerine", cursive;
   font-weight: 500;
   font-size: 3em;
-  text-align: center;
 }
 
 .caption {
-  margin: 0px;
-  color: #3a4a3f;
-  font-family: 'Lato', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-size: 0.8em;
-  text-align: center;
+}
+
+.copyright {
+  font-weight: 500;
 }
 
 html {
@@ -73,8 +79,6 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  font-family: 'Lato', sans-serif;
-  font-weight: 300;
 }
 
 header, nav, main, footer {
@@ -97,14 +101,6 @@ header {
 header h1 {
   width: 100%;
   margin-bottom: 25px;
-  font-size: 38px;
-  text-transform: uppercase;
-}
-
-@media screen and (min-width: 600px) {
-  header h1 {
-    font-size: 48px;
-  }
 }
 
 header a {
@@ -139,7 +135,6 @@ nav li {
   padding-bottom: 12px;
   width: 160px;
   text-align: center;
-  font-weight: 500;
   border-bottom: 2px solid seagreen;
 }
 
@@ -177,20 +172,16 @@ main article {
   margin: auto;
   padding-left: 48px;
   padding-right: 48px;
-  font-size: 1.1em;
   max-width: 50ch;
 }
 
 main article h1 {
   color: seagreen;
-  font-weight: 300;
-  font-size: 1.4em;
   text-align: center;
 }
 
 main article aside {
   padding: 4px;
-  font-size: 0.9em;
   text-align: center;
   border-width: 1px;
   border-style: solid none solid none;
@@ -201,8 +192,6 @@ main article aside {
 
 main article aside h1 {
   color: seagreen;
-  font-style: italic;
-  font-size: 1.2em;
 }
 
 footer {
@@ -240,7 +229,6 @@ footer .copyright {
       -ms-flex-align: center;
           align-items: center;
   color: rgba(157, 176, 163, 0.75);
-  font-weight: 500;
 }
 
 footer .copyright ul {
@@ -265,5 +253,30 @@ footer .copyright a:hover {
   color: rgba(232, 237, 220, 0.75);
   -webkit-transition: 1s;
   transition: 1s;
+}
+
+table {
+  margin: auto;
+}
+
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
+.cursive {
+  margin: 0px;
+  padding-top: 12px;
+  color: seagreen;
+  text-align: center;
+}
+
+.caption {
+  margin: 0px;
+  color: #3a4a3f;
+  text-align: center;
 }
 /*# sourceMappingURL=styles.css.map */

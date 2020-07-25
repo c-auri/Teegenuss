@@ -1,5 +1,4 @@
 @import '../base/colors';
-@import '../base/fonts';
 
 main {
   padding-top: 16px;
@@ -10,19 +9,15 @@ main {
     margin: auto;
     padding-left: 48px;
     padding-right: 48px;
-    font-size: 1.1em;
     max-width: 50ch;
     
     h1 {
       color: $green;
-      font-weight: 300;
-      font-size: 1.4em;
       text-align: center;
     }
     
     aside {
       padding: 4px;
-      font-size: 0.9em;
       text-align: center;
       border-width: 1px;
       border-style: solid none solid none;
@@ -36,8 +31,6 @@ main {
 
       h1 {
         color: $green;
-        font-style: italic;
-        font-size: 1.2em;
       }
     }
   }

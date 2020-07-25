@@ -1,5 +1,4 @@
 @import '../base/colors';
-@import '../base/fonts';
 
 footer {
   display: grid;
@@ -28,7 +27,6 @@ footer {
     display: flex;
     align-items: center;
     color: rgba($gray, 0.75);
-    font-weight: 500;
 
     ul {
       padding: 0px;

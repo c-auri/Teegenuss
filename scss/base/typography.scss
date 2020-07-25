@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:900");
+@import url("https://fonts.googleapis.com/css?family=Merriweather:300,300italic");
+@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap');
+
+$sans-serif: 'Source Sans Pro';
+$serif: 'Merriweather';
+$cursive: 'Tangerine';
+
+h1 {
+  font-family: $sans-serif, sans-serif;
+  font-size: 38px;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 600px) {
+  h1 {
+    font-size: 48px;
+  }
+}
+
+nav {
+  font-family: $sans-serif, sans-serif;
+  font-weight: 500;
+}
+
+main {
+  p {
+    font-size: 1.1em;
+  }
+  
+  article {
+    aside {
+      font-size: 0.9em;
+
+      h1 {
+        font-style: italic;
+        font-size: 1.2em;
+      }
+    }
+  }
+}
+
+.cursive {
+  font-family: $cursive, cursive;
+  font-weight: 500;
+  font-size: 3em;
+}
+
+.caption {
+  font-family: $sans-serif, sans-serif;
+  font-size: 0.8em;
+}
+
+.copyright {
+  font-weight: 500;
+}

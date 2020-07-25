@@ -1,5 +1,4 @@
 @import '../base/colors';
-@import '../base/fonts';
 
 header {
   height: 180px;
@@ -10,14 +9,6 @@ header {
   h1 {
     width: 100%;
     margin-bottom: 25px;
-    font-size: 38px;
-    text-transform: uppercase;
-  }
-
-  @media screen and (min-width: 600px) {
-    h1 {
-      font-size: 48px;
-    }
   }
   
   a {

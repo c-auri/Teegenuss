@@ -1,3 +1,48 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:900");
+@import url("https://fonts.googleapis.com/css?family=Merriweather:300,300italic");
+@import url("https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap");
+h1 {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 38px;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 600px) {
+  h1 {
+    font-size: 48px;
+  }
+}
+
+nav {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 500;
+}
+
+main p {
+  font-size: 1.1em;
+}
+
+main article aside {
+  font-size: 0.9em;
+}
+
+main article aside h1 {
+  font-style: italic;
+  font-size: 1.2em;
+}
+
+.cursive {
+  font-family: "Tangerine", cursive;
+  font-weight: 500;
+  font-size: 3em;
+}
+
+.caption {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 0.8em;
+}
+
+.copyright {
+  font-weight: 500;
+}
 /*# sourceMappingURL=typography.css.map */

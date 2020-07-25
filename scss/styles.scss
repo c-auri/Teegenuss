@@ -1,9 +1,10 @@
 @import 'preload';
-@import 'base/fonts';
-@import 'components';
+@import 'base/typography';
 
 @import 'layout/base';
 @import 'layout/header';
 @import 'layout/nav';
 @import 'layout/main';
 @import 'layout/footer';
+
+@import 'components';
