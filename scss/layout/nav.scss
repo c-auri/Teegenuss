@@ -4,6 +4,11 @@ nav {
   background-color: rgba($white, 0.175);
   display: flex;
   
+  .padding {
+    width: 100%;
+    border-bottom: 2px solid $green;
+  }
+
   ul {
     padding: 0px;
     margin: auto;
@@ -21,13 +26,11 @@ nav {
   }
   
   li:hover {
-    border-bottom: 2px solid $white;
-    transition: border-bottom 1s;
     background-color: rgba($green_light, 0.175);
   }
 
   a {
-    color: $green_light;
+    color: $gray_light;
     text-decoration: none;
   }
   
@@ -41,7 +44,7 @@ nav {
   background-color: white;
   border: 2px solid $green;
   border-bottom: 2px solid transparent;
-  
+
   a {
     color: $green;
   }

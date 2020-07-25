@@ -12,7 +12,7 @@ footer .about {
   display: -ms-grid;
   display: grid;
   place-items: center;
-  background-color: #002700;
+  background-color: #005425;
 }
 
 footer .about a {
@@ -34,7 +34,7 @@ footer .copyright {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: rgba(58, 74, 63, 0.75);
+  color: rgba(157, 176, 163, 0.75);
   font-weight: 500;
 }
 
@@ -52,12 +52,12 @@ footer .copyright li {
 }
 
 footer .copyright a {
-  color: rgba(58, 74, 63, 0.75);
+  color: rgba(157, 176, 163, 0.75);
   text-decoration: none;
 }
 
 footer .copyright a:hover {
-  color: #9db0a3;
+  color: rgba(232, 237, 220, 0.75);
   -webkit-transition: 1s;
   transition: 1s;
 }

@@ -5,6 +5,11 @@ nav {
   display: flex;
 }
 
+nav .padding {
+  width: 100%;
+  border-bottom: 2px solid seagreen;
+}
+
 nav ul {
   padding: 0px;
   margin: auto;
@@ -24,14 +29,11 @@ nav li {
 }
 
 nav li:hover {
-  border-bottom: 2px solid white;
-  -webkit-transition: border-bottom 1s;
-  transition: border-bottom 1s;
-  background-color: rgba(233, 236, 227, 0.175);
+  background-color: rgba(117, 170, 94, 0.175);
 }
 
 nav a {
-  color: #e9ece3;
+  color: #e8eddc;
   text-decoration: none;
 }
 
