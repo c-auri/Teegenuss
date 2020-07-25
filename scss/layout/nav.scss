@@ -1,7 +1,7 @@
 @import '../base/colors.scss';
 
 nav {
-  background-color: $green;
+  background-color: rgba($white, 0.175);
   display: flex;
   
   ul {
@@ -17,12 +17,13 @@ nav {
     width: 160px;
     text-align: center;
     font-weight: 500;
-    border-top: 2px solid transparent;
+    border-bottom: 2px solid $green;
   }
   
   li:hover {
-    border-top: 2px solid $white;
-    transition: border-top 1s;
+    border-bottom: 2px solid $white;
+    transition: border-bottom 1s;
+    background-color: rgba($green_light, 0.175);
   }
 
   a {
@@ -37,5 +38,11 @@ nav {
 
 #home .home, #sorts .sorts, #prep .prep {
   padding-top: 13px;
-  border-top: 2px solid $white;
+  background-color: white;
+  border: 2px solid $green;
+  border-bottom: 2px solid transparent;
+  
+  a {
+    color: $green;
+  }
 }

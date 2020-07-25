@@ -1,5 +1,5 @@
 nav {
-  background-color: seagreen;
+  background-color: rgba(255, 255, 255, 0.175);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -20,13 +20,14 @@ nav li {
   width: 160px;
   text-align: center;
   font-weight: 500;
-  border-top: 2px solid transparent;
+  border-bottom: 2px solid seagreen;
 }
 
 nav li:hover {
-  border-top: 2px solid white;
-  -webkit-transition: border-top 1s;
-  transition: border-top 1s;
+  border-bottom: 2px solid white;
+  -webkit-transition: border-bottom 1s;
+  transition: border-bottom 1s;
+  background-color: rgba(233, 236, 227, 0.175);
 }
 
 nav a {
@@ -40,6 +41,12 @@ nav a:hover {
 
 #home .home, #sorts .sorts, #prep .prep {
   padding-top: 13px;
-  border-top: 2px solid white;
+  background-color: white;
+  border: 2px solid seagreen;
+  border-bottom: 2px solid transparent;
+}
+
+#home .home a, #sorts .sorts a, #prep .prep a {
+  color: seagreen;
 }
 /*# sourceMappingURL=nav.css.map */
