@@ -129,7 +129,7 @@ header a {
 }
 
 nav {
-  background-color: rgba(255, 255, 255, 0.175);
+  background-color: rgba(255, 255, 255, 0.3);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -137,7 +137,7 @@ nav {
 
 nav .padding {
   width: 100%;
-  border-bottom: 2px solid seagreen;
+  border-bottom: 3px solid seagreen;
 }
 
 nav ul {
@@ -154,7 +154,7 @@ nav li {
   padding-bottom: 12px;
   width: 160px;
   text-align: center;
-  border-bottom: 2px solid seagreen;
+  border-bottom: 3px solid seagreen;
 }
 
 nav li:hover {
@@ -173,8 +173,8 @@ nav a:hover {
 #home .home, #sorts .sorts, #prep .prep {
   padding-top: 13px;
   background-color: white;
-  border: 2px solid seagreen;
-  border-bottom: 2px solid transparent;
+  border-top: 3px solid seagreen;
+  border-bottom: 3px solid transparent;
 }
 
 #home .home a, #sorts .sorts a, #prep .prep a {

@@ -1,12 +1,14 @@
 @import '../base/colors.scss';
 
+$border-width: 3px;
+
 nav {
-  background-color: rgba($white, 0.175);
+  background-color: rgba($white, 0.3);
   display: flex;
   
   .padding {
     width: 100%;
-    border-bottom: 2px solid $green;
+    border-bottom: $border-width solid $green;
   }
 
   ul {
@@ -21,7 +23,7 @@ nav {
     padding-bottom: 12px;
     width: 160px;
     text-align: center;
-    border-bottom: 2px solid $green;
+    border-bottom: $border-width solid $green;
   }
   
   li:hover {
@@ -41,8 +43,8 @@ nav {
 #home .home, #sorts .sorts, #prep .prep {
   padding-top: 13px;
   background-color: white;
-  border: 2px solid $green;
-  border-bottom: 2px solid transparent;
+  border-top: $border-width solid $green;
+  border-bottom: $border-width solid transparent;
 
   a {
     color: $green;
