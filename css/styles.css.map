@@ -13,7 +13,7 @@
         "../scss/layout/main.scss",
         "../scss/base/colors.scss",
         "../scss/layout/footer.scss",
-        "../scss/components.scss"
+        "../scss/components/article"
     ],
     "names": [],
     "file": "styles.css"
