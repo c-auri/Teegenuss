@@ -7,14 +7,27 @@ header {
   font-size: 38px;
 }
 
+header a {
+  text-decoration: none;
+}
+
 nav {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 900;
   font-size: 18px;
 }
 
+nav li {
+  text-align: center;
+}
+
+nav a {
+  text-decoration: none;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: "Source Sans Pro", sans-serif;
+  text-align: center;
 }
 
 h1 {
@@ -41,9 +54,18 @@ p {
   line-height: 1.4;
 }
 
+aside {
+  text-align: center;
+  font-style: italic;
+}
+
 footer {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 300;
+}
+
+footer a {
+  text-decoration: none;
 }
 
 @media screen and (min-width: 720px) {

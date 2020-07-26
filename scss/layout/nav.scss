@@ -3,7 +3,6 @@
 $border-width: 3px;
 
 nav {
-  background-color: rgba($white, 0.3);
   display: flex;
   
   .padding {
@@ -22,31 +21,12 @@ nav {
     padding-top: 12px;
     padding-bottom: 12px;
     width: 160px;
-    text-align: center;
     border-bottom: $border-width solid $green;
-  }
-  
-  li:hover {
-    background-color: rgba($green_light, 0.175);
-  }
-
-  a {
-    color: $gray_light;
-    text-decoration: none;
-  }
-  
-  a:hover {
-    color: $white;
   }
 }
 
 #home .home, #sorts .sorts, #prep .prep {
   padding-top: 13px;
-  background-color: white;
   border-top: $border-width solid $green;
   border-bottom: $border-width solid transparent;
-
-  a {
-    color: $green;
-  }
 }

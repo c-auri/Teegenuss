@@ -5,3 +5,77 @@ $gray_dark: #3a4a3f;
 $green: seagreen;
 $green_light: #75aa5e;
 $green_dark: #3a4a3f;
+
+html {
+  background-color: $green_dark;
+}
+
+header a {
+    color: white;
+    opacity: 0.75;
+}
+
+main {
+  background-color: $white;
+  color: $gray_dark;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  color: $green;
+}
+
+aside {
+  color: $green;
+}
+
+nav {
+  background-color: rgba($white, 0.3);
+  li:hover {
+    background-color: rgba($green_light, 0.175);
+  }
+
+  a {
+    color: $gray_light;
+  }
+  
+  a:hover {
+    color: $white;
+  }
+}
+
+#home .home, #sorts .sorts, #prep .prep {
+  background-color: white;
+
+  a {
+    color: $green;
+  }
+}
+
+footer {
+  .about {
+    background-color: $green_dark;
+    
+    a {
+      color: $gray;
+    }
+    
+    a:hover {
+      color: $white;
+      transition: 1s;
+    }
+  }
+
+  .copyright {
+    color: rgba($gray, 0.75);
+
+    a {
+      color: rgba($gray, 0.75);
+    }
+    
+    a:hover {
+      color: rgba($gray_light, 0.75);
+      transition: 1s;
+    }
+  }
+}

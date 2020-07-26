@@ -1,3 +1,77 @@
+html {
+  background-color: #3a4a3f;
+}
+
+header a {
+  color: white;
+  opacity: 0.75;
+}
+
+main {
+  background-color: white;
+  color: #3a4a3f;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: seagreen;
+}
+
+aside {
+  color: seagreen;
+}
+
+nav {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+nav li:hover {
+  background-color: rgba(117, 170, 94, 0.175);
+}
+
+nav a {
+  color: #e8eddc;
+}
+
+nav a:hover {
+  color: white;
+}
+
+#home .home, #sorts .sorts, #prep .prep {
+  background-color: white;
+}
+
+#home .home a, #sorts .sorts a, #prep .prep a {
+  color: seagreen;
+}
+
+footer .about {
+  background-color: #3a4a3f;
+}
+
+footer .about a {
+  color: #9db0a3;
+}
+
+footer .about a:hover {
+  color: white;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+footer .copyright {
+  color: rgba(157, 176, 163, 0.75);
+}
+
+footer .copyright a {
+  color: rgba(157, 176, 163, 0.75);
+}
+
+footer .copyright a:hover {
+  color: rgba(232, 237, 220, 0.75);
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
 header {
   width: 100%;
   height: 180px;
@@ -5,11 +79,5 @@ header {
   display: -ms-grid;
   display: grid;
   place-items: end center;
-}
-
-header a {
-  color: white;
-  opacity: 0.75;
-  text-decoration: none;
 }
 /*# sourceMappingURL=header.css.map */

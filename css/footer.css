@@ -10,18 +10,6 @@ footer .about {
   display: -ms-grid;
   display: grid;
   place-items: center;
-  background-color: #3a4a3f;
-}
-
-footer .about a {
-  color: #9db0a3;
-  text-decoration: none;
-}
-
-footer .about a:hover {
-  color: white;
-  -webkit-transition: 1s;
-  transition: 1s;
 }
 
 footer .copyright {
@@ -32,7 +20,6 @@ footer .copyright {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: rgba(157, 176, 163, 0.75);
 }
 
 footer .copyright ul {
@@ -46,16 +33,5 @@ footer .copyright ul {
 footer .copyright li {
   padding-right: 5px;
   padding-left: 5px;
-}
-
-footer .copyright a {
-  color: rgba(157, 176, 163, 0.75);
-  text-decoration: none;
-}
-
-footer .copyright a:hover {
-  color: rgba(232, 237, 220, 0.75);
-  -webkit-transition: 1s;
-  transition: 1s;
 }
 /*# sourceMappingURL=footer.css.map */
