@@ -21,11 +21,11 @@ aside {
 }
 
 nav {
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 nav li:hover {
-  background-color: rgba(117, 170, 94, 0.175);
+  background-color: rgba(117, 170, 94, 0.1);
 }
 
 nav a {
@@ -91,6 +91,24 @@ aside {
   -o-border-image: linear-gradient(to right, rgba(0, 0, 0, 0), seagreen, rgba(0, 0, 0, 0)) 1 5%;
      border-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), color-stop(seagreen), to(rgba(0, 0, 0, 0))) 1 5%;
      border-image: linear-gradient(to right, rgba(0, 0, 0, 0), seagreen, rgba(0, 0, 0, 0)) 1 5%;
+}
+
+.float-left {
+  margin: 0.5rem 2rem 0.5rem 1rem;
+  padding: 0rem 1rem 0rem 0rem;
+  float: left;
+}
+
+@media screen and (max-width: 720px) {
+  .float-left {
+    float: none;
+  }
+}
+
+.float-right {
+  margin: 1rem;
+  padding: 1rem 2rem;
+  float: right;
 }
 
 @media screen and (min-width: 720px) {
