@@ -64,6 +64,12 @@ p {
   line-height: 1.4;
 }
 
+table {
+  font-family: "Source Sans Pro";
+  font-size: 16px;
+  line-height: 1.4;
+}
+
 aside {
   text-align: center;
   font-style: italic;
@@ -82,7 +88,7 @@ footer a {
   header {
     font-size: 50px;
   }
-  p {
+  p, table {
     font-size: 17px;
     line-height: 1.5em;
   }
@@ -92,10 +98,84 @@ footer a {
   header {
     font-size: 64px;
   }
-  p {
+  p, table {
     font-size: 18px;
     line-height: 1.6em;
   }
+}
+
+html {
+  background-color: #3a4a3f;
+}
+
+header a {
+  color: white;
+  opacity: 0.75;
+}
+
+main {
+  background-color: white;
+  color: #3a4a3f;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: seagreen;
+}
+
+aside {
+  color: seagreen;
+}
+
+nav {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+nav li:hover {
+  background-color: rgba(117, 170, 94, 0.1);
+}
+
+nav a {
+  color: #e8eddc;
+}
+
+nav a:hover {
+  color: white;
+}
+
+#home .home, #sorts .sorts, #prep .prep {
+  background-color: white;
+}
+
+#home .home a, #sorts .sorts a, #prep .prep a {
+  color: seagreen;
+}
+
+footer .about {
+  background-color: #3a4a3f;
+}
+
+footer .about a {
+  color: #9db0a3;
+}
+
+footer .about a:hover {
+  color: white;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+footer .copyright {
+  color: rgba(157, 176, 163, 0.75);
+}
+
+footer .copyright a {
+  color: rgba(157, 176, 163, 0.75);
+}
+
+footer .copyright a:hover {
+  color: rgba(232, 237, 220, 0.75);
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 .bg {
@@ -117,6 +197,15 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+main a {
+  color: seagreen;
+  text-decoration: none;
+}
+
+main a:hover {
+  text-decoration: underline;
 }
 
 header, nav, main, footer {
@@ -477,16 +566,106 @@ footer .copyright li {
   padding-left: 5px;
 }
 
-table {
-  margin: auto;
-  padding-bottom: 20px;
+html {
+  background-color: #3a4a3f;
 }
 
-.left {
+header a {
+  color: white;
+  opacity: 0.75;
+}
+
+main {
+  background-color: white;
+  color: #3a4a3f;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: seagreen;
+}
+
+aside {
+  color: seagreen;
+}
+
+nav {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+nav li:hover {
+  background-color: rgba(117, 170, 94, 0.1);
+}
+
+nav a {
+  color: #e8eddc;
+}
+
+nav a:hover {
+  color: white;
+}
+
+#home .home, #sorts .sorts, #prep .prep {
+  background-color: white;
+}
+
+#home .home a, #sorts .sorts a, #prep .prep a {
+  color: seagreen;
+}
+
+footer .about {
+  background-color: #3a4a3f;
+}
+
+footer .about a {
+  color: #9db0a3;
+}
+
+footer .about a:hover {
+  color: white;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+footer .copyright {
+  color: rgba(157, 176, 163, 0.75);
+}
+
+footer .copyright a {
+  color: rgba(157, 176, 163, 0.75);
+}
+
+footer .copyright a:hover {
+  color: rgba(232, 237, 220, 0.75);
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+table {
+  margin: 0 auto;
+  width: 100%;
+}
+
+tr {
+  background: #e8eddc;
+  opacity: 0.8;
+}
+
+tr:first-child {
+  color: white;
+  background-color: seagreen;
+  opacity: 1;
+}
+
+td {
+  text-align: center;
+}
+
+td:first-child {
+  padding-left: 10px;
   text-align: left;
 }
 
-.right {
-  text-align: right;
+tr:hover {
+  opacity: 1;
 }
 /*# sourceMappingURL=styles.css.map */

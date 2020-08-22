@@ -1,0 +1,30 @@
+@import '../base/colors';
+
+table {
+  margin: 0 auto;
+  width: 100%;
+}
+
+tr {
+  background: $gray_light;
+  opacity: 0.8;
+}
+
+tr:first-child {
+  color: $white;
+  background-color: $green;
+  opacity: 1;
+}
+
+td {
+  text-align: center;
+}
+
+td:first-child {
+  padding-left: 10px;
+  text-align: left;
+}
+
+tr:hover {
+  opacity: 1;
+}

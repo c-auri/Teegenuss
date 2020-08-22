@@ -54,6 +54,12 @@ p {
   line-height: 1.4;
 }
 
+table {
+  font-family: "Source Sans Pro";
+  font-size: 16px;
+  line-height: 1.4;
+}
+
 aside {
   text-align: center;
   font-style: italic;
@@ -72,7 +78,7 @@ footer a {
   header {
     font-size: 50px;
   }
-  p {
+  p, table {
     font-size: 17px;
     line-height: 1.5em;
   }
@@ -82,7 +88,7 @@ footer a {
   header {
     font-size: 64px;
   }
-  p {
+  p, table {
     font-size: 18px;
     line-height: 1.6em;
   }

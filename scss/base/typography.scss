@@ -59,6 +59,12 @@ p {
   line-height: 1.4;
 }
 
+table {
+  font-family: $sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
 aside {
   text-align: center;
   font-style: italic;
@@ -78,7 +84,7 @@ footer {
     font-size: 50px;
   }
 
-  p {
+  p, table {
     font-size: 17px;
     line-height: 1.5em;
   }
@@ -89,7 +95,7 @@ footer {
     font-size: 64px;
   }
 
-  p {
+  p, table {
     font-size: 18px;
     line-height: 1.6em;
   }

@@ -72,45 +72,32 @@ footer .copyright a:hover {
   transition: 1s;
 }
 
-.bg {
-  height: 100%;
-  background-image: url("../img/bg.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
+table {
+  margin: 0 auto;
+  width: 100%;
 }
 
-body {
-  margin: auto;
-  min-height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+tr {
+  background: #e8eddc;
+  opacity: 0.8;
 }
 
-main a {
-  color: seagreen;
-  text-decoration: none;
+tr:first-child {
+  color: white;
+  background-color: seagreen;
+  opacity: 1;
 }
 
-main a:hover {
-  text-decoration: underline;
+td {
+  text-align: center;
 }
 
-header, nav, main, footer {
-  margin: auto;
-  max-width: 100%;
-  width: 720px;
+td:first-child {
+  padding-left: 10px;
+  text-align: left;
 }
 
-@media screen and (min-width: 1000px) {
-  header, nav, main, footer {
-    width: 960px;
-  }
+tr:hover {
+  opacity: 1;
 }
-/*# sourceMappingURL=base.css.map */
+/*# sourceMappingURL=table.css.map */
