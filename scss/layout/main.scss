@@ -48,3 +48,9 @@ aside td:first-child {
     padding: 32px 64px;
   }
 }
+
+@media screen and (min-width: 800px) {
+  article {
+    padding: 32px 128px;
+  }
+}

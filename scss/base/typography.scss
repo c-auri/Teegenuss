@@ -5,11 +5,50 @@ $sans-serif: 'Source Sans Pro';
 $serif: 'Merriweather';
 $cursive: 'Tangerine';
 
+/* font sizes */
+
+:root {
+  font-size: 16px;
+}
+
+header {
+  font-size: 2.5rem;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+nav {
+  font-size: 1rem;
+}
+
+@media (min-width: 680px) {
+  header {
+    font-size: 3.5rem;
+  }
+}
+
+nav {
+  font-size: 1.1rem;
+}
+
+@media (min-width: 960px) {
+  header {
+    font-size: 4rem;
+  }
+
+  nav {
+    font-size: 1.2rem;
+  }
+}
+
+/* font styling */
+
 header {
   font-family: $sans-serif, sans-serif;
   font-weight: 900;
   text-transform: uppercase;
-  font-size: 38px;
 
   a {
     text-decoration: none;
@@ -19,7 +58,6 @@ header {
 nav {
   font-family: $sans-serif, sans-serif;
   font-weight: 900;
-  font-size: 18px;
 
   li {
     text-align: center;
@@ -37,32 +75,18 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   text-transform: uppercase;
-  font-size: 32px;
 }
 
 h2 {
   text-transform: uppercase;
-  font-size: 28px;
-}
-
-h3 {
-  font-size: 24px;
-}
-
-h4 {
-  font-size: 20px;
 }
   
 p {
   font-family: $serif, serif;
-  font-size: 16px;
-  line-height: 1.4;
 }
 
 table {
   font-family: $sans-serif;
-  font-size: 16px;
-  line-height: 1.4;
 }
 
 aside {
@@ -76,27 +100,5 @@ footer {
     
   a {
     text-decoration: none;
-  }
-}
-
-@media screen and (min-width: 720px) {
-  header {
-    font-size: 50px;
-  }
-
-  p, table {
-    font-size: 17px;
-    line-height: 1.5em;
-  }
-}
-
-@media screen and (min-width: 1000px) {
-  header {
-    font-size: 64px;
-  }
-
-  p, table {
-    font-size: 18px;
-    line-height: 1.6em;
   }
 }

@@ -84,11 +84,47 @@ footer .copyright a:hover {
   transition: 1s;
 }
 
+/* font sizes */
+:root {
+  font-size: 16px;
+}
+
+header {
+  font-size: 2.5rem;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+nav {
+  font-size: 1rem;
+}
+
+@media (min-width: 680px) {
+  header {
+    font-size: 3.5rem;
+  }
+}
+
+nav {
+  font-size: 1.1rem;
+}
+
+@media (min-width: 960px) {
+  header {
+    font-size: 4rem;
+  }
+  nav {
+    font-size: 1.2rem;
+  }
+}
+
+/* font styling */
 header {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 900;
   text-transform: uppercase;
-  font-size: 38px;
 }
 
 header a {
@@ -98,7 +134,6 @@ header a {
 nav {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 900;
-  font-size: 18px;
 }
 
 nav li {
@@ -116,32 +151,18 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   text-transform: uppercase;
-  font-size: 32px;
 }
 
 h2 {
   text-transform: uppercase;
-  font-size: 28px;
-}
-
-h3 {
-  font-size: 24px;
-}
-
-h4 {
-  font-size: 20px;
 }
 
 p {
   font-family: "Merriweather", serif;
-  font-size: 16px;
-  line-height: 1.4;
 }
 
 table {
   font-family: "Source Sans Pro";
-  font-size: 16px;
-  line-height: 1.4;
 }
 
 aside {
@@ -156,26 +177,6 @@ footer {
 
 footer a {
   text-decoration: none;
-}
-
-@media screen and (min-width: 720px) {
-  header {
-    font-size: 50px;
-  }
-  p, table {
-    font-size: 17px;
-    line-height: 1.5em;
-  }
-}
-
-@media screen and (min-width: 1000px) {
-  header {
-    font-size: 64px;
-  }
-  p, table {
-    font-size: 18px;
-    line-height: 1.6em;
-  }
 }
 
 html {
@@ -272,13 +273,7 @@ body {
 header, nav, main, footer {
   margin: 0 auto;
   max-width: 100%;
-  width: 720px;
-}
-
-@media screen and (min-width: 1000px) {
-  header, nav, main, footer {
-    width: 960px;
-  }
+  width: 960px;
 }
 
 html {
@@ -376,6 +371,7 @@ nav .padding {
 }
 
 nav ul {
+  max-width: 100%;
   padding: 0px;
   margin: auto;
   list-style: none;
@@ -513,6 +509,12 @@ aside td:first-child {
 @media screen and (min-width: 720px) {
   article {
     padding: 32px 64px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  article {
+    padding: 32px 128px;
   }
 }
 

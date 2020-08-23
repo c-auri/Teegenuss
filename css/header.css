@@ -93,6 +93,7 @@ nav .padding {
 }
 
 nav ul {
+  max-width: 100%;
   padding: 0px;
   margin: auto;
   list-style: none;
