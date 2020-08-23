@@ -1,7 +1,11 @@
 @import '../base/colors';
 
-.bg {
-  height: 100%;
+body {
+  margin: auto;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+
   background-image: url('../img/bg.jpg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -9,15 +13,8 @@
   background-attachment: fixed;
 }
 
-body {
-  margin: auto;
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
 header, nav, main, footer {
-  margin: auto;
+  margin: 0 auto;
   max-width: 100%;
   width: 720px;
 
