@@ -505,57 +505,19 @@ aside {
      border-image: linear-gradient(to right, rgba(0, 0, 0, 0), seagreen, rgba(0, 0, 0, 0)) 1 5%;
 }
 
-.float-left {
-  margin: 0.5rem 2rem 0.5rem 1rem;
-  padding: 0rem 1rem 0rem 0rem;
-  float: left;
+aside table {
+  margin: 0 auto;
+  text-align: center;
 }
 
-@media screen and (max-width: 720px) {
-  .float-left {
-    float: none;
-  }
-}
-
-.float-right {
-  margin: 1rem;
-  padding: 1rem 2rem;
-  float: right;
+aside td:first-child {
+  text-align: right;
 }
 
 @media screen and (min-width: 720px) {
   article {
     padding: 32px 64px;
   }
-}
-
-table {
-  margin: 0 auto;
-  width: 100%;
-}
-
-tr {
-  background: #e8eddc;
-  opacity: 0.8;
-}
-
-tr:first-child {
-  color: white;
-  background-color: seagreen;
-  opacity: 1;
-}
-
-td {
-  text-align: center;
-}
-
-td:first-child {
-  padding-left: 10px;
-  text-align: left;
-}
-
-tr:hover {
-  opacity: 1;
 }
 
 footer {
