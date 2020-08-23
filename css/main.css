@@ -76,6 +76,15 @@ main {
   max-width: 100%;
 }
 
+main a {
+  color: seagreen;
+  text-decoration: none;
+}
+
+main a:hover {
+  text-decoration: underline;
+}
+
 article {
   margin: auto;
   padding: 32px;
@@ -115,5 +124,34 @@ aside {
   article {
     padding: 32px 64px;
   }
+}
+
+table {
+  margin: 0 auto;
+  width: 100%;
+}
+
+tr {
+  background: #e8eddc;
+  opacity: 0.8;
+}
+
+tr:first-child {
+  color: white;
+  background-color: seagreen;
+  opacity: 1;
+}
+
+td {
+  text-align: center;
+}
+
+td:first-child {
+  padding-left: 10px;
+  text-align: left;
+}
+
+tr:hover {
+  opacity: 1;
 }
 /*# sourceMappingURL=main.css.map */

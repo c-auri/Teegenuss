@@ -16,15 +16,6 @@ body {
   flex-direction: column;
 }
 
-main a {
-  color: $green;
-  text-decoration: none;
-}
-
-main a:hover {
-  text-decoration: underline;
-}
-
 header, nav, main, footer {
   margin: auto;
   max-width: 100%;
