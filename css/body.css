@@ -91,7 +91,6 @@ body {
 
 header, nav, main, footer {
   margin: 0 auto;
-  max-width: 100%;
-  width: 960px;
+  width: 100%;
 }
 /*# sourceMappingURL=body.css.map */

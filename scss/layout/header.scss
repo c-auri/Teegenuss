@@ -27,15 +27,14 @@ nav {
   }
   
   li {
-    padding-top: 12px;
-    padding-bottom: 12px;
+    padding: 8px 0;
     width: 160px;
     border-bottom: $border-width solid $green;
   }
 }
 
 #home .home, #sorts .sorts, #prep .prep {
-  padding-top: 13px;
+  padding-top: 9px;
   border-top: $border-width solid $green;
   border-bottom: $border-width solid transparent;
 }

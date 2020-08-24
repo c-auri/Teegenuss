@@ -272,8 +272,7 @@ body {
 
 header, nav, main, footer {
   margin: 0 auto;
-  max-width: 100%;
-  width: 960px;
+  width: 100%;
 }
 
 html {
@@ -381,14 +380,13 @@ nav ul {
 }
 
 nav li {
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding: 8px 0;
   width: 160px;
   border-bottom: 3px solid seagreen;
 }
 
 #home .home, #sorts .sorts, #prep .prep {
-  padding-top: 13px;
+  padding-top: 9px;
   border-top: 3px solid seagreen;
   border-bottom: 3px solid transparent;
 }
@@ -483,6 +481,7 @@ main a:hover {
 article {
   margin: auto;
   padding: 32px;
+  max-width: 740px;
 }
 
 article section {
