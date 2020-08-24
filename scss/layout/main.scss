@@ -15,11 +15,24 @@ main a:hover {
 
 article {
   margin: auto;
+  max-width: 800px;
   padding: 32px;
-  max-width: 740px;
-
+  
   section {
+    margin: 0 auto;
+    max-width: 740px;
+  }
+}
+
+figure {
+  margin: 24px 0;
+
+  img {
     max-width: 100%;
+  }
+
+  figcaption {
+    text-align: center;
   }
 }
 
