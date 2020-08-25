@@ -44,6 +44,10 @@ nav a:hover {
   color: seagreen;
 }
 
+footer {
+  background: #3a4a3f;
+}
+
 footer a {
   color: #9db0a3;
 }
@@ -52,12 +56,20 @@ footer a:hover {
   color: white;
 }
 
-footer .about {
-  background-color: #3a4a3f;
+footer nav {
+  background: #3a4a3f;
 }
 
-footer .legal {
+.legal {
   color: #9db0a3;
   opacity: 0.75;
+}
+
+.legal a {
+  color: #9db0a3;
+}
+
+.legal a:hover {
+  color: white;
 }
 /*# sourceMappingURL=colors.css.map */

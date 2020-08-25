@@ -24,13 +24,35 @@ header, nav, main, footer {
   width: 100%;
 }
 
+@media (min-width: 720px) {
+  header, nav, main, footer {
+    width: 90%;
+  }
+}
+
 .legal {
   margin: 25px auto;
 }
 
 @media (min-width: 720px) {
-  header, nav, main, footer {
-    width: 90%;
+  .legal {
+    margin: 35px auto;
   }
+}
+
+@media (min-width: 960px) {
+  .legal {
+    margin: 35px auto 45px;
+  }
+}
+
+.preloader {
+  position: absolute;
+  left: -9999px;
+  top: -999px;
+}
+
+.preloader img {
+  display: block;
 }
 /*# sourceMappingURL=body.css.map */

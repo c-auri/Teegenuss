@@ -5,13 +5,3 @@
 @import 'layout/header';
 @import 'layout/main';
 @import 'layout/footer';
-
-.preloader {
-  position: absolute;
-  left: -9999px;
-  top:  -999px;
-
-  img {
-    display: block;
-  }
-}

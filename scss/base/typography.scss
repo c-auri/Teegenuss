@@ -24,17 +24,13 @@ h1 {
   line-height: 1.2em;
 }
 
-nav {
-  font-size: 1rem;
-}
-
 @media (min-width: $medium) {
   header {
     font-size: 3.5rem;
   }
 }
 
-nav {
+body > nav {
   font-size: 1.1rem;
 }
 
@@ -43,7 +39,7 @@ nav {
     font-size: 4rem;
   }
 
-  nav {
+  body > nav {
     font-size: 1.2rem;
   }
 }
@@ -60,7 +56,7 @@ header {
   }
 }
 
-nav {
+body > nav {
   font-family: $sans-serif, sans-serif;
   font-weight: 900;
 
@@ -103,7 +99,7 @@ aside {
   font-style: italic;
 }
 
-footer {
+footer, .legal {
   font-family: $sans-serif, sans-serif;
-  font-weight: 300;
+  font-weight: normal;
 }

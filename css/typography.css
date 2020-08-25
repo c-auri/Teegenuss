@@ -16,17 +16,13 @@ h1 {
   line-height: 1.2em;
 }
 
-nav {
-  font-size: 1rem;
-}
-
 @media (min-width: 720px) {
   header {
     font-size: 3.5rem;
   }
 }
 
-nav {
+body > nav {
   font-size: 1.1rem;
 }
 
@@ -34,7 +30,7 @@ nav {
   header {
     font-size: 4rem;
   }
-  nav {
+  body > nav {
     font-size: 1.2rem;
   }
 }
@@ -50,16 +46,16 @@ header a {
   text-decoration: none;
 }
 
-nav {
+body > nav {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 900;
 }
 
-nav li {
+body > nav li {
   text-align: center;
 }
 
-nav a {
+body > nav a {
   text-decoration: none;
 }
 
@@ -93,8 +89,8 @@ aside {
   font-style: italic;
 }
 
-footer {
+footer, .legal {
   font-family: "Source Sans Pro", sans-serif;
-  font-weight: 300;
+  font-weight: normal;
 }
 /*# sourceMappingURL=typography.css.map */

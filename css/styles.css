@@ -46,6 +46,10 @@ nav a:hover {
   color: seagreen;
 }
 
+footer {
+  background: #3a4a3f;
+}
+
 footer a {
   color: #9db0a3;
 }
@@ -54,13 +58,21 @@ footer a:hover {
   color: white;
 }
 
-footer .about {
-  background-color: #3a4a3f;
+footer nav {
+  background: #3a4a3f;
 }
 
-footer .legal {
+.legal {
   color: #9db0a3;
   opacity: 0.75;
+}
+
+.legal a {
+  color: #9db0a3;
+}
+
+.legal a:hover {
+  color: white;
 }
 
 /* font sizes */
@@ -79,17 +91,13 @@ h1 {
   line-height: 1.2em;
 }
 
-nav {
-  font-size: 1rem;
-}
-
 @media (min-width: 720px) {
   header {
     font-size: 3.5rem;
   }
 }
 
-nav {
+body > nav {
   font-size: 1.1rem;
 }
 
@@ -97,7 +105,7 @@ nav {
   header {
     font-size: 4rem;
   }
-  nav {
+  body > nav {
     font-size: 1.2rem;
   }
 }
@@ -113,16 +121,16 @@ header a {
   text-decoration: none;
 }
 
-nav {
+body > nav {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 900;
 }
 
-nav li {
+body > nav li {
   text-align: center;
 }
 
-nav a {
+body > nav a {
   text-decoration: none;
 }
 
@@ -156,9 +164,9 @@ aside {
   font-style: italic;
 }
 
-footer {
+footer, .legal {
   font-family: "Source Sans Pro", sans-serif;
-  font-weight: 300;
+  font-weight: normal;
 }
 
 html {
@@ -187,14 +195,36 @@ header, nav, main, footer {
   width: 100%;
 }
 
+@media (min-width: 720px) {
+  header, nav, main, footer {
+    width: 90%;
+  }
+}
+
 .legal {
   margin: 25px auto;
 }
 
 @media (min-width: 720px) {
-  header, nav, main, footer {
-    width: 90%;
+  .legal {
+    margin: 35px auto;
   }
+}
+
+@media (min-width: 960px) {
+  .legal {
+    margin: 35px auto 45px;
+  }
+}
+
+.preloader {
+  position: absolute;
+  left: -9999px;
+  top: -999px;
+}
+
+.preloader img {
+  display: block;
 }
 
 html {
@@ -243,6 +273,10 @@ nav a:hover {
   color: seagreen;
 }
 
+footer {
+  background: #3a4a3f;
+}
+
 footer a {
   color: #9db0a3;
 }
@@ -251,13 +285,21 @@ footer a:hover {
   color: white;
 }
 
-footer .about {
-  background-color: #3a4a3f;
+footer nav {
+  background: #3a4a3f;
 }
 
-footer .legal {
+.legal {
   color: #9db0a3;
   opacity: 0.75;
+}
+
+.legal a {
+  color: #9db0a3;
+}
+
+.legal a:hover {
+  color: white;
 }
 
 header {
@@ -354,6 +396,10 @@ nav a:hover {
   color: seagreen;
 }
 
+footer {
+  background: #3a4a3f;
+}
+
 footer a {
   color: #9db0a3;
 }
@@ -362,13 +408,21 @@ footer a:hover {
   color: white;
 }
 
-footer .about {
-  background-color: #3a4a3f;
+footer nav {
+  background: #3a4a3f;
 }
 
-footer .legal {
+.legal {
   color: #9db0a3;
   opacity: 0.75;
+}
+
+.legal a {
+  color: #9db0a3;
+}
+
+.legal a:hover {
+  color: white;
 }
 
 main {
@@ -437,26 +491,68 @@ aside td:first-child {
 }
 
 footer {
-  display: -ms-grid;
-  display: grid;
-  place-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-footer .about {
+footer .wrapper {
   width: 100%;
-  height: 50px;
+  max-width: 800px;
   display: -ms-grid;
   display: grid;
-  place-items: center;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
 }
 
-.preloader {
-  position: absolute;
-  left: -9999px;
-  top: -999px;
+footer .logo {
+  max-width: 10ch;
+  padding: 32px;
 }
 
-.preloader img {
-  display: block;
+footer .logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+footer nav {
+  margin: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media screen and (min-width: 720px) {
+  footer .logo {
+    max-width: 30ch;
+    padding: 32px 64px;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  footer .logo {
+    max-width: 30ch;
+    padding: 0 auto;
+  }
+  footer nav {
+    margin: 32px auto;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  footer nav a {
+    padding: 0 12px;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

@@ -31,6 +31,7 @@ aside {
 
 nav {
   background-color: rgba($white, 0.2);
+
   li:hover {
     background-color: rgba($green_light, 0.1);
   }
@@ -53,6 +54,8 @@ nav {
 }
 
 footer {
+  background: $green_dark;
+
   a {
     color: $gray;
   }
@@ -61,12 +64,20 @@ footer {
     color: $white;
   }
   
-  .about {
-    background-color: $green_dark;
+  nav {
+    background: $green_dark;
+  }
+}
+
+.legal {
+  color: $gray;
+  opacity: 0.75;
+
+  a {
+    color: $gray;
   }
   
-  .legal {
-    color: $gray;
-    opacity: 0.75;
+  a:hover {
+    color: $white;
   }
 }
