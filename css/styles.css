@@ -83,7 +83,7 @@ nav {
   font-size: 1rem;
 }
 
-@media (min-width: 680px) {
+@media (min-width: 720px) {
   header {
     font-size: 3.5rem;
   }
@@ -430,7 +430,7 @@ aside td:first-child {
   }
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 960px) {
   article {
     padding: 32px 128px;
   }

@@ -1,3 +1,5 @@
+@import '../base/breakpoints.scss';
+
 html {
   height: 100%;
 }
@@ -24,7 +26,7 @@ header, nav, main, footer {
   margin: 25px auto;
 }
 
-@media (min-width: 720px) {
+@media (min-width: $medium) {
   header, nav, main, footer {
     width: 90%;
   }
