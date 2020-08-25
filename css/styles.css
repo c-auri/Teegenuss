@@ -275,6 +275,12 @@ header, nav, main, footer {
   width: 100%;
 }
 
+@media (min-width: 720px) {
+  header, nav, main, footer {
+    width: 90%;
+  }
+}
+
 html {
   background-color: #3a4a3f;
 }
