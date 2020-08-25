@@ -269,6 +269,12 @@ header {
   place-items: end center;
 }
 
+@media (min-width: 720px) {
+  header {
+    height: 240px;
+  }
+}
+
 nav {
   display: -webkit-box;
   display: -ms-flexbox;
