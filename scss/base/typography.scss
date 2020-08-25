@@ -88,6 +88,10 @@ p {
   font-family: $serif, serif;
 }
 
+a {
+  text-decoration: none;
+}
+
 table {
   font-family: $sans-serif;
 }
@@ -100,8 +104,4 @@ aside {
 footer {
   font-family: $sans-serif, sans-serif;
   font-weight: 300;
-    
-  a {
-    text-decoration: none;
-  }
 }

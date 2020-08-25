@@ -53,29 +53,20 @@ nav {
 }
 
 footer {
+  a {
+    color: $gray;
+  }
+  
+  a:hover {
+    color: $white;
+  }
+  
   .about {
     background-color: $green_dark;
-    
-    a {
-      color: $gray;
-    }
-    
-    a:hover {
-      color: $white;
-      transition: 1s;
-    }
   }
-
-  .copyright {
-    color: rgba($gray, 0.75);
-
-    a {
-      color: rgba($gray, 0.75);
-    }
-    
-    a:hover {
-      color: rgba($gray_light, 0.75);
-      transition: 1s;
-    }
+  
+  .legal {
+    color: $gray;
+    opacity: 0.75;
   }
 }

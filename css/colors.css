@@ -44,31 +44,20 @@ nav a:hover {
   color: seagreen;
 }
 
+footer a {
+  color: #9db0a3;
+}
+
+footer a:hover {
+  color: white;
+}
+
 footer .about {
   background-color: #3a4a3f;
 }
 
-footer .about a {
+footer .legal {
   color: #9db0a3;
-}
-
-footer .about a:hover {
-  color: white;
-  -webkit-transition: 1s;
-  transition: 1s;
-}
-
-footer .copyright {
-  color: rgba(157, 176, 163, 0.75);
-}
-
-footer .copyright a {
-  color: rgba(157, 176, 163, 0.75);
-}
-
-footer .copyright a:hover {
-  color: rgba(232, 237, 220, 0.75);
-  -webkit-transition: 1s;
-  transition: 1s;
+  opacity: 0.75;
 }
 /*# sourceMappingURL=colors.css.map */

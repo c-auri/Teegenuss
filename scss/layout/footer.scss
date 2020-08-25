@@ -8,21 +8,4 @@ footer {
     display: grid;
     place-items: center;
   }
-
-  .copyright {
-    height: 75px;
-    display: flex;
-    align-items: center;
-
-    ul {
-      padding: 0px;
-      list-style: none;
-      display: flex;
-    }
-
-    li {
-      padding-right: 5px;
-      padding-left: 5px;
-    }
-  }
 }

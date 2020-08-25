@@ -1,4 +1,6 @@
-@import '../base/colors';
+html {
+  height: 100%;
+}
 
 body {
   margin: auto;
@@ -16,6 +18,10 @@ body {
 header, nav, main, footer {
   margin: 0 auto;
   width: 100%;
+}
+
+.legal {
+  margin: 25px auto;
 }
 
 @media (min-width: 720px) {
