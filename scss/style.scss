@@ -1,0 +1,264 @@
+/* 
+  *****************************
+  *        TYPOGRAPHY         *
+  *****************************
+*/
+
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900");
+@import url("https://fonts.googleapis.com/css?family=Merriweather:300,300italic");
+
+$sans-serif: 'Source Sans Pro';
+$serif: 'Merriweather';
+
+/* ***** FONT STYLE ***** */
+
+* { text-decoration: none;  }
+
+header a{
+  font-weight: bold;
+  font-family: $sans-serif;
+}
+
+body > nav {
+  font-weight: bold;
+  font-family: $sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $sans-serif;
+  text-align: center;
+}
+
+p {
+  font-family: $serif;
+}
+
+article {
+  figcaption, aside {
+    text-align: center;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+}
+
+footer {
+  font-family: $sans-serif;
+
+  .logo { font-weight: bold; }
+}
+
+/* ***** FONT SIZE ***** */
+
+:root { font-size: 13px; line-height: 1.6; }
+
+header a    { font-size: clamp(30px, 10vw, 82px); line-height: 1; }
+body > nav  { font-size: clamp(1.1rem, 4vw, 1.4rem); line-height: 2; }
+
+h1 { font-size: clamp(2.0rem, 8vw, 4.0rem); line-height: 1.2; }
+h2 { font-size: clamp(1.8rem, 6vw, 2.5rem); line-height: 1.0; }
+
+p { font-size: clamp(1rem, 5vw, 1.25rem); line-height: clamp(1, 8vw ,1.25); }
+
+article figcaption, article aside {
+  font-size: 0.9rem;
+  line-height: 1.3;
+}
+
+.logo       { font-size: clamp(1.5rem, 6vw, 2.5rem); line-height: 1.0; }
+footer nav  { font-size: clamp(1.2rem, 4vw, 1.4rem); line-height: 1.6; }
+
+/*
+    ***********************
+    *        COLOR        *
+    ***********************
+*/
+
+$white: white;
+$gray_light: #e8eddc;
+$gray: #9db0a3;
+$gray_dark: #3a4a3f;
+$green: seagreen;
+$green_light: #75aa5e;
+$green_dark: #3a4a3f;
+
+body {
+  background: $green url('../img/bg.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center top;
+}
+
+header {
+  a       { opacity: 0.7; color: $white; } 
+  a:hover { opacity: 0.8; }
+}
+
+body > nav {
+  background: rgba($white, 0.6);
+
+  a       { color: rgba($white, 0.8); }
+  a:hover { color: rgba($white, 1.0); }
+}
+
+#home a.home, #sorts a.sorts, #prep a.prep {
+  color: $green;
+  background: $white;
+}
+
+main {
+  background: $white;
+  
+  a, h1, h2, h3, h4, h5, h6 { 
+    color: $green; 
+  }
+
+  figcaption, aside {
+    opacity: 0.8;
+  }
+}
+
+footer {
+  background: $green_dark;
+
+  a       { color: $gray; }
+  a:hover { color: $gray_light; }
+}
+
+.legal {
+  color: rgba($gray, 0.8);
+
+  a       { color: rgba($gray, 0.8); }
+  a:hover { color: rgba($gray_light, 0.8); }
+}
+
+/*
+    ************************
+    *        LAYOUT        *
+    ************************
+*/
+
+*, *::before, *::after { 
+  margin: 0px;
+  box-sizing: border-box; 
+}
+
+img { max-width: 100%; }
+
+html { height: 100%; }
+
+body { 
+  margin: 0 auto;
+  width: calc(min(100%, 800px)); }
+
+header {
+  position: relative;
+  height: clamp(180px, 50vw, 260px);
+  text-align: center;
+
+  a {
+    position: absolute;
+    bottom: 25%;
+    left: 0;
+    width: 100%;
+  }
+}
+
+body > nav {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  
+  a {
+    display: inline-block;
+    padding: 0 12px;
+    flex: 0 0 calc(min(25%, 200px));
+    border-bottom: 3px solid $green;
+  }
+}
+
+body > nav:before, body > nav:after {
+  content: '';
+  width: 100%;
+  border-bottom: 3px solid $green;
+}
+
+#home a.home, #sorts a.sorts, #prep a.prep {
+  border-top: 3px solid $green;
+  border-bottom: 3px solid transparent;
+}
+
+article {
+  padding: 24px 0;
+  
+  p, h1, h2, h3, h4, h5, h6 {
+    margin: 0 auto;
+    padding: 24px 10vw;
+    max-width: 80ch;
+  }
+
+  figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    img { 
+      width: clamp(600px, 90%, 640px);
+    }
+
+    figcaption {
+      margin: 0 auto;
+      padding: 12px 0;
+      width: calc(min(85%, 680px)); 
+      text-align: center;
+    }
+  }
+
+  aside {
+    border-width: 1px;
+    border-style: solid none solid none;
+    border-image: 
+      linear-gradient(
+        to right, 
+        rgba(0, 0, 0, 0),
+        $green, 
+        rgba(0, 0, 0, 0)
+      ) 1 5%;
+  }
+}
+
+footer {
+  display: flex;
+  padding: 24px 10vw;
+  justify-content: space-around;
+
+  .logo {
+    max-width: 10ch;
+    text-align: left;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+
+    a {
+      padding-right: 24px;
+    }
+  }
+}
+
+.legal {
+  margin: auto;
+  padding: 24px;
+  text-align: center;
+}
+
+@media (min-width: 620px) {
+  footer > nav {
+    height: 4em;
+    flex-direction: row;
+    align-items: center;
+  }
+}
