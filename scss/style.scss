@@ -1,6 +1,26 @@
 /* 
   *****************************
-  *        TYPOGRAPHY         *
+  **      GLOBAL STYLES      **
+  *****************************
+*/
+
+*, *::before, *::after { 
+  margin: 0px;
+  box-sizing: border-box; 
+  text-decoration: none;
+}
+
+html { 
+  height: 100%; 
+}
+
+img { 
+  max-width: 100%; 
+}
+
+/* 
+  *****************************
+  **       TYPOGRAPHY        **
   *****************************
 */
 
@@ -11,8 +31,6 @@ $sans-serif: 'Source Sans Pro', sans-serif;
 $serif: 'Merriweather', serif;
 
 /* ***** FONT STYLE ***** */
-
-* { text-decoration: none;  }
 
 header a{
   font-weight: bold;
@@ -34,19 +52,22 @@ p {
 }
 
 article {
-  figcaption, aside {
-    text-align: center;
-  }
-
   a:hover {
     text-decoration: underline;
   }
 }
 
+figcaption, 
+aside {
+  text-align: center;
+}
+
 footer {
   font-family: $sans-serif;
+}
 
-  .logo { font-weight: bold; }
+.logo { 
+  font-weight: bold; 
 }
 
 /* ***** FONT SIZE ***** */
@@ -61,18 +82,19 @@ h2 { font-size: clamp(1.8rem, 6vw, 2.5rem); line-height: 1.0; }
 
 p { font-size: clamp(1rem, 5vw, 1.25rem); line-height: clamp(1, 8vw ,1.25); }
 
-article figcaption, article aside {
+figcaption, 
+aside {
   font-size: 0.9rem;
   line-height: 1.3;
 }
 
-.logo       { font-size: clamp(1.5rem, 6vw, 2.5rem); line-height: 1.0; }
 footer nav  { font-size: clamp(1.2rem, 4vw, 1.4rem); line-height: 1.6; }
+.logo       { font-size: clamp(1.5rem, 6vw, 2.5rem); line-height: 1.0; }
 
-/*
-    ***********************
-    *        COLOR        *
-    ***********************
+/* 
+  *****************************
+  **          COLOR          **
+  *****************************
 */
 
 $white: white;
@@ -140,24 +162,18 @@ footer {
   a:hover { color: rgba($gray_light, 0.8); }
 }
 
-/*
-    ************************
-    *        LAYOUT        *
-    ************************
+/* 
+  *****************************
+  **          LAYOUT         **
+  *****************************
 */
 
-*, *::before, *::after { 
-  margin: 0px;
-  box-sizing: border-box; 
-}
-
-img { max-width: 100%; }
-
-html { height: 100%; }
+/* *****  STRUCTURE ***** */
 
 body { 
   margin: 0 auto;
-  width: calc(min(100%, 800px)); }
+  width: calc(min(100%, 800px)); 
+}
 
 header {
   position: relative;
@@ -185,7 +201,8 @@ body > nav {
   }
 }
 
-body > nav:before, body > nav:after {
+body > nav:before, 
+body > nav:after {
   content: '';
   width: 100%;
   border-bottom: 3px solid $green;
@@ -194,45 +211,6 @@ body > nav:before, body > nav:after {
 #home a.home, #sorts a.sorts, #prep a.prep {
   border-top: 3px solid $green;
   border-bottom: 3px solid transparent;
-}
-
-article {
-  padding: 24px 0;
-  
-  p, h1, h2, h3, h4, h5, h6 {
-    margin: 0 auto;
-    padding: 24px 10vw;
-    max-width: 80ch;
-  }
-
-  figure {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    img { 
-      width: clamp(600px, 90%, 640px);
-    }
-
-    figcaption {
-      margin: 0 auto;
-      padding: 12px 0;
-      width: calc(min(85%, 680px)); 
-      text-align: center;
-    }
-  }
-
-  aside {
-    border-width: 1px;
-    border-style: solid none solid none;
-    border-image: 
-      linear-gradient(
-        to right, 
-        rgba(0, 0, 0, 0),
-        $green, 
-        rgba(0, 0, 0, 0)
-      ) 1 5%;
-  }
 }
 
 footer {
@@ -256,16 +234,58 @@ footer {
   }
 }
 
-.legal {
-  margin: auto;
-  padding: 24px;
-  text-align: center;
-}
-
 @media (min-width: 620px) {
   footer > nav {
     height: 4em;
     flex-direction: row;
     align-items: center;
   }
+}
+
+.legal {
+  margin: auto;
+  padding: 24px;
+  text-align: center;
+}
+
+
+/* ***** COMPONENTS ***** */
+
+article {
+  padding: 24px 0;
+  
+  p, h1, h2, h3, h4, h5, h6 {
+    margin: 0 auto;
+    padding: 24px 10vw;
+    max-width: 80ch;
+  }
+}
+
+figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  img { 
+    width: clamp(600px, 90%, 640px);
+  }
+
+  figcaption {
+    margin: 0 auto;
+    padding: 12px 0;
+    width: calc(min(85%, 680px)); 
+    text-align: center;
+  }
+}
+
+aside {
+  border-width: 1px;
+  border-style: solid none solid none;
+  border-image: 
+    linear-gradient(
+      to right, 
+      rgba(0, 0, 0, 0),
+      $green, 
+      rgba(0, 0, 0, 0)
+    ) 1 5%;
 }
