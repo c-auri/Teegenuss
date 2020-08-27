@@ -310,7 +310,7 @@ article {
 
 article p, article h1, article h2, article h3, article h4, article h5, article h6 {
   margin: 0 auto;
-  padding: 24px 10vw;
+  padding: 24px 10%;
   max-width: 80ch;
 }
 
@@ -328,13 +328,13 @@ figure {
 }
 
 figure img {
-  width: clamp(600px, 90%, 640px);
+  width: clamp(600px, 90%, 680px);
 }
 
 figure figcaption {
   margin: 0 auto;
   padding: 12px 0;
-  width: calc(min(85%, 680px));
+  width: calc(min(85%, 660px));
   text-align: center;
 }
 

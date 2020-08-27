@@ -260,7 +260,7 @@ article {
   
   p, h1, h2, h3, h4, h5, h6 {
     margin: 0 auto;
-    padding: 24px 10vw;
+    padding: 24px 10%;
     max-width: 80ch;
   }
 }
@@ -271,13 +271,13 @@ figure {
   align-items: center;
 
   img { 
-    width: clamp(600px, 90%, 640px);
+    width: clamp(600px, 90%, 680px);
   }
 
   figcaption {
     margin: 0 auto;
     padding: 12px 0;
-    width: calc(min(85%, 680px)); 
+    width: calc(min(85%, 660px)); 
     text-align: center;
   }
 }
