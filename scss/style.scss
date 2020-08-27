@@ -84,7 +84,7 @@ p { font-size: clamp(1rem, 5vw, 1.25rem); line-height: clamp(1, 8vw ,1.25); }
 
 figcaption, 
 aside {
-  font-size: 0.9rem;
+  font-size: clamp(1rem, 3vw, 1.1rem);
   line-height: 1.3;
 }
 

@@ -95,7 +95,7 @@ p {
 
 figcaption,
 aside {
-  font-size: 0.9rem;
+  font-size: clamp(1rem, 3vw, 1.1rem);
   line-height: 1.3;
 }
 
