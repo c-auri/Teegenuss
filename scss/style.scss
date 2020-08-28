@@ -116,13 +116,6 @@ body {
   background-position: center top;
 }
 
-body#my-tea {
-  background: $green url('../img/by.jpg');
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center top;
-}
-
 header {
   a       { opacity: 0.7; color: $white; } 
   a:hover { opacity: 0.8; }
