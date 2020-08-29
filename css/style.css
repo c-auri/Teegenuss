@@ -384,4 +384,17 @@ aside {
   text-align: left;
   padding-left: 5%;
 }
+
+.contact-form {
+  padding: 12px 10%;
+}
+
+.contact-form input,
+.contact-form textarea {
+  margin-bottom: 3px;
+}
+
+.contact-form textarea {
+  padding: 3px;
+}
 /*# sourceMappingURL=style.css.map */
