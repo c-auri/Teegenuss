@@ -1,0 +1,6 @@
+- name: Start
+  link: /
+- name: Sorten
+  link: /sorten.html
+- name: Zubereitung
+  link: /zubereitung.html
