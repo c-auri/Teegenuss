@@ -21,7 +21,7 @@ header a { font-weight: bold; font-family: "Source Sans Pro", sans-serif; }
 
 nav { font-weight: bold; font-family: "Source Sans Pro", sans-serif; }
 
-h1, h2, h3, h4, h5, h6 { font-family: "Source Sans Pro", sans-serif; }
+h1, h2, h3, h4, h5, h6 { text-align: center; font-family: "Source Sans Pro", sans-serif; }
 
 p { font-family: "Merriweather", serif; }
 
@@ -75,7 +75,7 @@ nav a { color: rgba(255, 255, 255, 0.8); }
 
 nav a:hover { color: white; }
 
-.current, .current:hover { color: seagreen; background: white; }
+.current { color: seagreen; background: white; }
 
 main { background: white; }
 
@@ -107,7 +107,7 @@ header { position: relative; height: clamp(180px, 50vw, 260px); text-align: cent
 
 header a { position: absolute; bottom: 25%; left: 0; width: 100%; }
 
-nav { display: flex; justify-content: center; text-align: center; }
+nav { height: 36px; display: flex; justify-content: center; text-align: center; }
 
 nav a { display: inline-block; padding: 0 12px; flex: 0 0 calc(min(25%, 180px)); border-bottom: 3px solid seagreen; }
 

@@ -6,14 +6,13 @@
   <title>{{ page.title }}</title>
 </head>
 <body>
-
-{% include header.html %}
-
-<main>
-{{ content }}
-</main>
-
-{% include footer.html %}
-
+  <header><a href="index.html">Projekt:&nbsp;Teegenuss</a></header>
+  <nav> {% include navigation.html %} </nav>
+  <main>
+    <article>
+      {{ content }}
+    </article>
+  </main>
+  <footer> {% include footer.html %} </footer>
 </body>
 </html>
