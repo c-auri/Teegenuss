@@ -1,0 +1,19 @@
+article > h2,
+article > h3,
+article > h4 {
+    color: $dark-gray;
+}
+
+article {
+    margin: 2rem auto;
+    padding: 0 .5rem;
+}
+
+article > p {
+    max-width: 60ch;
+    padding: .5em 0;
+}
+
+article > ul {
+    padding: .5rem 2.5rem;
+}

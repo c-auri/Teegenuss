@@ -1,2 +1,26 @@
 ---
 ---
+<article>
+    <h2>Teeteilung</h2>
+    <h1>Einstieg in den taiwanesischen Oolong</h1>
+    <h3>Taiwan Tea Crafts, Februar 2022</h3>
+    <br>
+    <p>
+        Dieses mal möchte ich mit euch eine Bestellung von <a href="https://www.taiwanteacrafts.com/">Taiwan Tea Crafts</a> teilen. Enthalten sind sieben Oolongs in verschiedenen Oxidations- und Röststufen, die einen guten Einblick in die Sortenvielfalt des taiwanesischen Oolongs bieten sollen.
+    </p>
+    <p>
+        Folgende Tees werden geteilt:
+        <ul>
+            {% assign teas = site.ttc | sort: "key" %}
+            {% for tea in teas %}
+                <li><a href="{{tea.shop_url}}">{{tea.title}}</a></li>
+            {% endfor %}
+        </ul>
+    </p>
+    <p>
+        Von jedem Tee wird 12g verteilt. Der Gesamtpreis inklusive Lieferung innerhalb Deutschlands beträgt 23€. Lieferungen ins Ausland lassen sich auch machen, müssen aber individuell besprochen werden.
+    </p>
+    <p>
+        Erste Bestellungen werde ich bald hier annehmen. Die Tees habe ich schon vorrätig, bis sie bei euch ankommen sollte es also nicht so lange dauern. Dadurch ist der Vorrat aber auch begrenzt, vorerst kann ich nur 20 Pakete verteilen. Sollte die Nachfrage deutlich größer ausfallen kann ich vielleicht auch nachbestellen, das kann ich jetzt aber noch nicht garantieren. Wer unbedingt mitmachen möchte sollte also darauf achten in der ersten Runde dabei zu sein.
+    </p>
+</article>
