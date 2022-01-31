@@ -13,7 +13,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: $main-font;
 }
 
 .content {
@@ -27,34 +26,15 @@ header {
     align-items: center;
     justify-content: space-between;
     
-    a.logo {
-        font-weight: bold;
-        color: #000;
-    }
-
     a.logo:hover {
         text-decoration: none;
     }
 
-    p:first-child {
-        font-size: 1.1rem;
-        color: $dark-gray;
-    }
-
-    p:last-child {
-        font-size: 1.2rem;
-    }
-
     nav {
         padding-right: 1rem;
-        font-size: 1rem;
 
         a {
             margin: 0 0.3rem;
-        }
-
-        a:hover {
-            color: blue;
         }
 
         a.current {

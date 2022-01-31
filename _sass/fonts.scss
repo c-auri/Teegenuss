@@ -1,3 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto');
 
 $main-font: 'Roboto', sans-serif;
+
+body {
+    font-family: $main-font;
+}
+
+header {
+    a.logo {
+        font-weight: bold;
+        color: #000;
+    }
+
+    p:first-child {
+        font-size: 1.1rem;
+        color: $dark-gray;
+    }
+
+    p:last-child {
+        font-size: 1.2rem;
+    }
+
+    nav {
+        font-size: 1rem;
+
+        a:hover {
+            color: blue;
+        }
+    }
+}
