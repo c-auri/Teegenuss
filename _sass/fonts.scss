@@ -33,6 +33,7 @@ $main-font: 'Roboto', sans-serif;
 body {
     font-family: $main-font;
     font-size: var(--fs-400);
+    line-height: 1.25;
 }
 
 header {
