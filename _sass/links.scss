@@ -1,15 +1,9 @@
 a:link {
     text-decoration: none;
-    color: $clr-link;
 }
 
 a:hover {
     text-decoration: underline;
-    color: $clr-link-hover;
-}
-
-a:visited {
-    color: $clr-link;
 }
 
 header {
@@ -22,10 +16,6 @@ header {
             margin: 0 0.3rem;
         }
         
-        a:hover {
-            color: $clr-link-hover;
-        }
-
         a.current {
             text-decoration: underline;
         }

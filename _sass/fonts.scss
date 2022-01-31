@@ -38,12 +38,10 @@ body {
 header {
     a.logo {
         font-weight: bold;
-        color: $clr-black;
     }
 
     p:first-child {
         font-size: var(--fs-500);
-        color: $clr-dark-gray;
     }
 
     p:last-child {

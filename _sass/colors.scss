@@ -3,3 +3,35 @@ $clr-dark-gray: #555;
 
 $clr-link: darkblue;
 $clr-link-hover: blue;
+
+header {
+    a.logo {
+        color: $clr-black;
+    }
+
+    p:first-child {
+        color: $clr-dark-gray;
+    }
+
+    nav > a:hover {
+        color: $clr-link-hover;
+    }
+}
+
+article > header {
+    span {
+        color: $clr-dark-gray;
+    }
+}
+
+a:link {
+    color: $clr-link;
+}
+
+a:hover {
+    color: $clr-link-hover;
+}
+
+a:visited {
+    color: $clr-link;
+}
