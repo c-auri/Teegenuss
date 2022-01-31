@@ -26,20 +26,8 @@ header {
     align-items: center;
     justify-content: space-between;
     
-    a.logo:hover {
-        text-decoration: none;
-    }
-
     nav {
         padding-right: 1rem;
-
-        a {
-            margin: 0 0.3rem;
-        }
-
-        a.current {
-            text-decoration: underline;
-        }
     }
 }
 

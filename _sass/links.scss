@@ -11,3 +11,23 @@ a:hover {
 a:visited {
     color: darkblue;
 }
+
+header {
+    a.logo:hover {
+        text-decoration: none;
+    }
+
+    nav {
+        a {
+            margin: 0 0.3rem;
+        }
+        
+        a:hover {
+            color: blue;
+        }
+
+        a.current {
+            text-decoration: underline;
+        }
+    }
+}
