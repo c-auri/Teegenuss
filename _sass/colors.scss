@@ -1,16 +1,17 @@
 $clr-black: #000;
-$clr-dark-gray: #555;
+$clr-dark-gray: #222;
+$clr-medium-gray: #555;
 
 $clr-link: darkblue;
 $clr-link-hover: blue;
 
 header {
     a.logo {
-        color: $clr-black;
+        color: $clr-dark-gray;
     }
 
     p:first-child {
-        color: $clr-dark-gray;
+        color: $clr-medium-gray;
     }
 
     nav > a:hover {
@@ -20,7 +21,7 @@ header {
 
 article > header {
     span {
-        color: $clr-dark-gray;
+        color: $clr-medium-gray;
     }
 }
 
@@ -34,4 +35,8 @@ a:hover {
 
 a:visited {
     color: $clr-link;
+}
+
+footer {
+    color: $clr-dark-gray;
 }
