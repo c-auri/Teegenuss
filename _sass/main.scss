@@ -17,16 +17,49 @@ body {
 }
 
 .content {
-    max-width: 800px;
+    width: 600px;
+    max-width: 100vw;
 }
 
 header {
     padding: 1rem;
-    font-size: 1rem;
-    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    a.logo {
+        font-weight: bold;
+        color: #000;
+    }
+
+    a.logo:hover {
+        text-decoration: none;
+    }
 
     p:first-child {
+        font-size: 1.1rem;
         color: $dark-gray;
+    }
+
+    p:last-child {
+        font-size: 1.2rem;
+    }
+
+    nav {
+        padding-right: 1rem;
+        font-size: 1rem;
+
+        a {
+            margin: 0 0.3rem;
+        }
+
+        a:hover {
+            color: blue;
+        }
+
+        a.current {
+            text-decoration: underline;
+        }
     }
 }
 

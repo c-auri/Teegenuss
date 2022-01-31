@@ -8,12 +8,17 @@
   <body>
     <div class="content">
       <header>
-        <p>
-          Projekt:
-        </p>
-        <p>
-          Teegenuss
-        </p>
+        <a class="logo" href="/index.html">
+          <p>
+            Projekt:
+          </p>
+          <p>
+            Teegenuss
+          </p>
+        </a>
+        <nav>
+          {% include nav.html %}
+        </nav>
       </header>
       <main>
         {{ content }}
