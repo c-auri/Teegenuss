@@ -9,12 +9,12 @@ body {
 header {
     a.logo {
         font-weight: bold;
-        color: #000;
+        color: $clr-black;
     }
 
     p:first-child {
         font-size: 1.1rem;
-        color: $dark-gray;
+        color: $clr-dark-gray;
     }
 
     p:last-child {

@@ -1,15 +1,15 @@
 a:link {
     text-decoration: none;
-    color: darkblue;
+    color: $clr-link;
 }
 
 a:hover {
     text-decoration: underline;
-    color: blue;
+    color: $clr-link-hover;
 }
 
 a:visited {
-    color: darkblue;
+    color: $clr-link;
 }
 
 header {
@@ -23,7 +23,7 @@ header {
         }
         
         a:hover {
-            color: blue;
+            color: $clr-link-hover;
         }
 
         a.current {
