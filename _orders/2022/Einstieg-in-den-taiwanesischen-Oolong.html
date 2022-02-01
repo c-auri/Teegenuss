@@ -12,7 +12,7 @@ title: Taiwan-Oolongeinstieg
     </p>
     <p>
         <ul>
-            {% assign teas = site.ttc | sort: "key" %}
+            {% assign teas = site.teas | sort: "key" %}
             {% for tea in teas %}
                 <li><a href="{{tea.shop_url}}">{{tea.title}}</a><span class="tea-info">, {{ tea.info }}</span></li>
             {% endfor %}
