@@ -9,11 +9,35 @@ header {
 
     nav {
         a {
+            display: inline-block;
             margin: 0 0.3rem;
         }
+
+        a::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: $clr-nav-link;
+            transition: width .3s;
+        }
         
-        a.current {
-            text-decoration: underline;
+        a.current::after {
+            content: '';
+            margin: 0 auto;
+            display: block;
+            width: 80%;
+            height: 2px;
+            background: $clr-nav-link;
+        }
+        
+        a:hover::after {
+            content: '';
+            display: block;
+            margin: 0 auto;
+            width: 80%;
+            height: 2px;
+            transition: width .3s;
         }
     }
 }

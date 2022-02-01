@@ -5,6 +5,7 @@ $clr-light-gray: #f9f9f9;
 
 $clr-link: #339;
 $clr-button-hover: #eeeeff;
+$clr-nav-link: $clr-medium-gray;
 
 $clr-tea-gradient: linear-gradient(
         to right, 
@@ -46,6 +47,11 @@ a:hover {
     color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
+}
+
+nav > a,
+nav > a:hover {
+    color: $clr-nav-link;
 }
 
 footer {
