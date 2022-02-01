@@ -3,10 +3,16 @@ $clr-dark-gray: #222;
 $clr-medium-gray: #555;
 $clr-light-gray: #f9f9f9;
 
-$clr-link: darkblue;
-$clr-link-hover: blue;
-
+$clr-link: #339;
 $clr-button-hover: #eeeeff;
+
+$clr-tea-gradient: linear-gradient(
+        to right, 
+        #96D121 0%,
+        #FFEC35 20%,
+        #FFBF29 40%,
+        #FF8417 80%,
+        #E64900 100%);
 
 header {
     a.logo {
@@ -15,6 +21,13 @@ header {
 
     p:first-child {
         color: $clr-medium-gray;
+    }
+
+    .logo:hover {
+        background-image: $clr-tea-gradient;
+        color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
     }
 }
 
@@ -29,7 +42,10 @@ a {
 }
 
 a:hover {
-    color: $clr-link-hover;
+    background-image: $clr-tea-gradient;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
 }
 
 footer {
