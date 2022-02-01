@@ -9,7 +9,7 @@ cultivar: Qing Xin
 oxidation: medium
 roasting-level: medium
 roasting-method: traditionelle Holzkohleröstung
-info: ähnlich zum Wuyi Oolong, aber traditionell über einem Holzkohle geröstet.
+info: ähnlich zum Wuyi Oolong, aber traditionell über Holzkohle geröstet.
 
 shop: Taiwan Tea Crafts
 shop_url: https://www.taiwanteacrafts.com/product/high-mountain-charcoal-pit-fired-oolong-tea
