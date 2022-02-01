@@ -16,10 +16,6 @@ header {
     p:first-child {
         color: $clr-medium-gray;
     }
-
-    nav > a:hover {
-        color: $clr-link-hover;
-    }
 }
 
 article > header {
@@ -28,16 +24,12 @@ article > header {
     }
 }
 
-a:link {
+a {
     color: $clr-link;
 }
 
 a:hover {
     color: $clr-link-hover;
-}
-
-a:visited {
-    color: $clr-link;
 }
 
 footer {
