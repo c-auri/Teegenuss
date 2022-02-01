@@ -12,6 +12,7 @@ $main-font: 'Roboto', sans-serif;
 
 @media(min-width: 400px) {
     :root {
+        --fs-300: 1rem;
         --fs-400: 1.1rem;
         --fs-500: 1.2rem;
         --fs-600: 1.3rem;
@@ -22,6 +23,7 @@ $main-font: 'Roboto', sans-serif;
 
 @media(min-width: 600px) {
     :root {
+        --fs-300: 1.1rem;
         --fs-400: 1.2rem;
         --fs-500: 1.3rem;
         --fs-600: 1.4rem;
@@ -52,4 +54,8 @@ header {
     nav {
         font-size: var(--fs-400);
     }
+}
+
+ol.TOS {
+    font-size: var(--fs-300);
 }

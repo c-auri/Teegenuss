@@ -1,9 +1,12 @@
 $clr-black: #000;
 $clr-dark-gray: #222;
 $clr-medium-gray: #555;
+$clr-light-gray: #f9f9f9;
 
 $clr-link: darkblue;
 $clr-link-hover: blue;
+
+$clr-button-hover: #eeeeff;
 
 header {
     a.logo {
@@ -39,4 +42,23 @@ a:visited {
 
 footer {
     color: $clr-dark-gray;
+}
+
+h3.TOS {
+    background-color: $clr-light-gray;
+}
+
+ol.TOS {
+    background-color: $clr-light-gray;
+    color: $clr-dark-gray;
+    background-color: $clr-light-gray;
+}
+
+.TosButton {
+    color: $clr-medium-gray;
+    background-color: $clr-light-gray;
+}
+
+.TosButton:hover {
+    background-color: $clr-button-hover;
 }
