@@ -1,0 +1,28 @@
+---
+title: Taiwan-Oolongeinstieg
+---
+<article>
+    <header>
+        <h1>Einstieg in den taiwanesischen Oolong</h1>
+        <span>Taiwan Tea Crafts, Februar 2022</span>
+    </header>
+    <br>
+    <p>
+        Dieses mal möchte ich mit euch eine Bestellung von <a href="https://www.taiwanteacrafts.com/">Taiwan Tea Crafts</a> teilen. Enthalten sind sieben Oolongs in verschiedenen Oxidations- und Röststufen, die einen guten Einblick in die Sortenvielfalt des taiwanesischen Oolongs bieten sollen:
+    </p>
+    <p>
+        <ul>
+            {% assign teas = site.ttc | sort: "key" %}
+            {% for tea in teas %}
+                <li><a href="{{tea.shop_url}}">{{tea.title}}</a><span class="tea-info">, {{ tea.info }}</span></li>
+            {% endfor %}
+        </ul>
+    </p>
+    <p>
+        Von jedem Tee wird 12 Gramm verteilt. Der Gesamtpreis inklusive Lieferung innerhalb Deutschlands beträgt 23€.
+    </p>
+    {% include tos.html %}
+    <p>
+        Erste Bestellungen werde ich voraussichtlich ab Mittwoch, den 2.1.2022 um 20 Uhr annehmen. Schaut dann am besten nochmal hier rein.
+    </p>
+</article>

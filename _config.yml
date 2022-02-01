@@ -1,6 +1,8 @@
 collections:
   ttc:
     output: true
+  orders:
+    output: true
 
 defaults:
   - scope:
