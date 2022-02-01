@@ -9,6 +9,7 @@ cultivar: Jin Xuan
 oxidation: niedrig
 roasting-level: leicht
 roasting-method: ofengeröstet
+info: wie der Vertreter aus Alishan, aber zusätzlich ganz leicht geröstet.
 
 shop: Taiwan Tea Crafts
 shop_url: https://www.taiwanteacrafts.com/product/organic-jin-xuan-oolong-tea

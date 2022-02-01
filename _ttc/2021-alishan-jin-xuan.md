@@ -9,6 +9,7 @@ terroir: Alishan
 cultivar: Jin Xuan
 oxidation: niedrig
 roasting-level: keine
+info: ebenfalls ein grüner Oolong, aber in Kugelform und deutlich hochwertiger. Die Strauchsorte Jin Xuan ist bekannt für ihre besondere Milchigkeit.
 
 shop: Taiwan Tea Crafts
 shop_url: https://www.taiwanteacrafts.com/product/alishan-jin-xuan-high-mountain-oolong-tea
