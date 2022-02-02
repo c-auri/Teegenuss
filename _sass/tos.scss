@@ -6,13 +6,12 @@ h3.TOS {
     margin-top: 2rem;
     padding: 1rem;
     text-align: center;
-    background-color: $clr-light-gray;
+    background-color: $clr-tos-bg;
 }
 
 ol.TOS {
-    background-color: $clr-light-gray;
+    background-color: $clr-tos-bg;
     color: $clr-dark-gray;
-    background-color: $clr-light-gray;
 }
 
 ol.TOS > li {
@@ -31,11 +30,11 @@ ol.TOS > li {
     padding: .5rem;
     cursor: pointer;
     color: $clr-medium-gray;
-    background-color: $clr-light-gray;
+    background-color: $clr-tos-bg;
 }
 
 .TosButton:hover {
-    background-color: $clr-button-hover;
+    background-color: $clr-tos-button-hover;
 }
 
 #TOS-long {
