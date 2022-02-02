@@ -1,0 +1,47 @@
+<form name="{{ page.id }}" method="POST" data-netlify="true">
+    <h2>Bestellformular</h2>
+    <h3>Kontaktdaten</h3>
+    <div class="form">
+        <label for="discord-tag">Dein <span class="mouseover" title="Das ist dein Username und eine vierstellige ID, zu finden in deinem Discord Profil">Discord Tag</span>: </label>   
+        <input type="text" name="discord-tag" />
+        <p class="form-description">z.B. blutgarten#3528</p>
+    </div>
+    <div class="form">
+        <label for="connection">Woher kennen wir uns?: </label>
+        <input type="text" name="connection" />
+        <p class="form-description">z.B. Jomons Stream, Dotasource, etc.</p>
+    </div>
+    <br>
+    <h3>Lieferadresse</h3>
+    <div class="form">
+        <label for="name">Vor- und Nachname: </label>
+        <input type="text" name="name" />
+    </div>
+    <div class="form">
+        <label for="additional-info">Adresszusatz: </label>
+        <input type="text" name="additional-info" />
+    </div>
+    <div class="form">
+        <label for="street">Straße: </label>
+        <input type="text" name="street" />
+    </div>
+    <div class="form">
+        <label for="postalcode">PLZ: </label>
+        <input type="text" name="postalcode" />
+    </div>
+    <div class="form">
+        <label for="city">Ort: </label>
+        <input type="text" name="city" />
+    </div>
+    <div class="form">
+        <label for="country">Land: </label>
+        <input type="text" name="country" />
+    </div>
+    <h3>Zusatz</h3>
+    <div class="form">
+      <textarea name="message"></textarea>
+    </div>
+    <div class="form-submit">
+      <button type="submit">Bestellen</button>
+    </div>
+  </form>

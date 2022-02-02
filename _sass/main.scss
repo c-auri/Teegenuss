@@ -82,3 +82,8 @@ footer {
     color: $clr-medium-gray;
     font-size: var(--fs-200);
 }
+
+.mouseover {
+    text-decoration: underline dotted;
+    cursor: help;
+}
