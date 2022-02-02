@@ -23,7 +23,7 @@ ol.TOS > li {
     cursor: help;
 }
 
-.TosButton {
+button.TOS {
     margin-bottom: 2rem;
     width: 100%;
     border: none;
@@ -33,14 +33,11 @@ ol.TOS > li {
     background-color: $clr-tos-bg;
 }
 
-.TosButton:hover {
+button.TOS:hover {
     background-color: $clr-tos-button-hover;
 }
 
-#TOS-long {
-    display: none;
-}
-
+#TOS-long,
 #HideTosButton {
     display: none;
 }
