@@ -25,9 +25,29 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    a.logo {
+        color: $clr-dark-gray;
+    }
+
+    .logo:hover {
+        background-image: $clr-tea-gradient;
+        color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+    }
+
+    p:first-child {
+        color: $clr-medium-gray;
+    }
     
     nav {
         padding-right: 1rem;
+    }
+
+    nav > a,
+    nav > a:hover {
+        color: $clr-nav-link;
     }
 }
 
@@ -48,4 +68,5 @@ footer {
     padding: 2em 0;
     display: flex;
     justify-content: center;
+    color: $clr-dark-gray;
 }
