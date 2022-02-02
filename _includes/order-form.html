@@ -1,10 +1,15 @@
-<form name="{{ page.id }}" method="POST" data-netlify="true">
+<form name="{{ page.id }}" method="POST" action="/success.html" data-netlify="true" onsubmit="return validateForm()">
     <h2>Bestellformular</h2>
+    <h3>Teilung</h3>
+    <p class="title">{{ page.title }}</p>
     <h3>Kontaktdaten</h3>
     <div class="form">
-        <label for="discord-tag">Dein <span class="mouseover" title="Das ist dein Username und eine vierstellige ID, zu finden in deinem Discord Profil">Discord Tag</span>: </label>   
-        <input type="text" name="discord-tag" />
-        <p class="form-description">z.B. blutgarten#3528</p>
+        <label for="discord-username">Dein Discord Username</span>: </label>   
+        <input type="text" name="discord-username" />
+    </div>
+    <div class="form">
+        <label for="discord-id">Deine <span class="mouseover" title="Das ist eine vierstellige Nummer, zu finden in deinem Discord Profil hinter dem Username">Discord ID</span>: </label>   
+        <input type="text" name="discord-id" />
     </div>
     <div class="form">
         <label for="connection">Woher kennen wir uns?: </label>
@@ -22,7 +27,7 @@
         <input type="text" name="additional-info" />
     </div>
     <div class="form">
-        <label for="street">Straße: </label>
+        <label for="street">Straße und Hausnummer: </label>
         <input type="text" name="street" />
     </div>
     <div class="form">
@@ -39,9 +44,48 @@
     </div>
     <h3>Zusatz</h3>
     <div class="form">
-      <textarea name="message"></textarea>
+        <textarea name="message"></textarea>
     </div>
     <div class="form-submit">
-      <button type="submit">Bestellen</button>
+        <button type="submit">Bestellen</button>
     </div>
-  </form>
+</form>
+
+<script>
+    function validateForm() {
+    let names = [
+        "discord-username",
+        "connection",
+        "name",
+        "street",
+        "postalcode",
+        "city",
+        "country",
+    ]
+
+    let output = [
+        "Discord Username",
+        "Woher kennen wir uns?",
+        "Vor- und Nachname",
+        "Straße und Hausnummer",
+        "PLZ",
+        "Ort",
+        "Land",
+    ]
+
+    for (let i = 0; i < names.length; i++) {
+        let input = document.forms["{{ page.id }}"][names[i]].value;
+        if (input == "") {
+            alert(output[i] + " muss angegeben werden");
+            return false;
+        }
+    }
+
+    let x = document.forms["{{ page.id }}"]["discord-id"].value;
+
+    if (isNaN(x) || x < 1 || x > 10000) {
+        alert("Discord ID muss eine vierstellige Nummer sein.");
+            return false;
+    }
+}
+</script>
