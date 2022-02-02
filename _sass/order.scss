@@ -1,3 +1,28 @@
 .price {
     font-weight: bold;
 }
+
+p.order-button {
+    display: flex;
+    justify-content: center;
+}
+
+button.order-button {
+    padding: .5rem 3rem;
+    font-size: var(--fs-600);
+    border-top: none;
+    border-left: none;
+    background-color: $clr-order-button;
+}
+
+button.order-button:hover {
+    background-color: $clr-order-button-hover;
+    cursor: pointer;
+}
+
+#order-disclaimer {
+    margin: 0 3rem;
+    color: $clr-medium-gray;
+    text-align: center;
+    font-size: var(--fs-300);
+}
