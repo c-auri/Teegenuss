@@ -3,6 +3,8 @@
 $main-font: 'Roboto', sans-serif;
 
 :root {
+    --fs-200: 0.8rem;
+    --fs-300: 0.9rem;
     --fs-400: 1rem;
     --fs-500: 1.1rem;
     --fs-600: 1.2rem;
@@ -12,6 +14,7 @@ $main-font: 'Roboto', sans-serif;
 
 @media(min-width: 400px) {
     :root {
+        --fs-200: 0.9rem;
         --fs-300: 1rem;
         --fs-400: 1.1rem;
         --fs-500: 1.2rem;
@@ -23,6 +26,7 @@ $main-font: 'Roboto', sans-serif;
 
 @media(min-width: 600px) {
     :root {
+        --fs-200: 1rem;
         --fs-300: 1.1rem;
         --fs-400: 1.2rem;
         --fs-500: 1.3rem;
