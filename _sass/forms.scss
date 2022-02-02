@@ -49,6 +49,10 @@ textarea {
     outline: none;
 }
 
+textarea {
+    resize: vertical;
+}
+
 input[type=text]:focus,
 textarea:focus {
     border: 1px $clr-order-highlight solid;
