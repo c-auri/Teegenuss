@@ -2,14 +2,16 @@ div.TOS {
     margin: .5rem;
 }
 
-h3.TOS {
-    margin-top: 2rem;
+h2.TOS {
+    margin-top: 1.5rem;
     padding: 1rem;
+    padding-top: 3rem;
     text-align: center;
     background-color: $clr-tos-bg;
 }
 
 ol.TOS {
+    padding-bottom: 1.5rem;
     background-color: $clr-tos-bg;
     color: $clr-dark-gray;
     font-size: var(--fs-300);
