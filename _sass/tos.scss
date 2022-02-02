@@ -7,12 +7,12 @@ h2.TOS {
     padding: 1rem;
     padding-top: 3rem;
     text-align: center;
-    background-color: $clr-tos-bg;
+    background-color: $clr-order-bg;
 }
 
 ol.TOS {
     padding-bottom: 1.5rem;
-    background-color: $clr-tos-bg;
+    background-color: $clr-order-bg;
     color: $clr-dark-gray;
     font-size: var(--fs-300);
 }
@@ -28,11 +28,11 @@ button.TOS {
     padding: .5rem;
     cursor: pointer;
     color: $clr-medium-gray;
-    background-color: $clr-tos-bg;
+    background-color: $clr-order-bg;
 }
 
 button.TOS:hover {
-    background-color: $clr-tos-button-hover;
+    background-color: $clr-order-button-hover;
 }
 
 #TOS-long,
