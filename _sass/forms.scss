@@ -5,24 +5,36 @@ form {
 
     h2 {
         text-align: center;
-        padding: 1.5rem 0;
     }
 }
 
 section.order {
     padding: 2rem 0;
 
-    h2,
     h3 {
-        padding: 1rem 0;
+        padding: 1.5rem 0;
+    }
+
+    h4 {
+        padding-top: 0;
+        padding-bottom: .5rem;
     }
 }
 
 p.order-info {
-    padding: 0.25rem 0;
+    font-size: var(--fs-400)
 }
 
-p.order-int-disclaimer {
+p.order-price {
+    text-align: right;
+    font-weight: bold;
+    font-size: var(--fs-500)
+}
+
+
+p.order-price-disclaimer {
+    column-span: 2;
+    text-align: right;
     font-size: var(--fs-300);
     color: $clr-medium-gray;
 }
@@ -38,11 +50,12 @@ label {
 
 input[type=text],
 textarea {
+    box-sizing: border-box;
     border-top: none;
     border-left: none;
     padding: .5rem 1rem;
     margin-top: .5rem;
-    width: 90%;
+    width: 100%;
     font-size: var(--fs-400);
     background-color: $clr-light-gray;
 }

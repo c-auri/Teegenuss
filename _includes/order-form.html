@@ -1,10 +1,13 @@
 <form name="{{ page.id }}" method="POST" action="/success.html" data-netlify="true" onsubmit="return validateForm()">
     <h2>Bestellformular</h2>
     <section class="order">
-        <h3>Teilung</h3>
-        <p class="order-info">{{ page.title }}</p>
-        <p class="order-info">Preis: {{ page.price }}</p>
-        <p class="order-int-disclaimer">evtl. zuzüglich Versandkosten ins Ausland</p>
+        <h3>Zusammenfassung</h3>
+        <h4>{{ page.title }}</h4>
+        <p class="order-info">{{ page.summary }}</p>
+        <p class="order-info">{{ page.shipping-info }}</p>
+        <br>
+        <p class="order-price">{{ page.price }}</p>
+        <p class="order-price-disclaimer">evtl. zzgl. Versandkosten ins Ausland</p>
     </section>
     <section class="order">
         <h3>Kontaktdaten</h3>
