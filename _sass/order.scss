@@ -1,3 +1,23 @@
+div.order {
+    margin: 3rem .5rem;
+    padding: 3rem 1rem;
+    background-color: $clr-order-bg;
+}
+
+@media (min-width: $bp-1) {
+    div.order {
+        padding: 3rem 2rem;
+        background-color: $clr-order-bg;
+    }
+}
+
+@media (min-width: $bp-2) {
+    div.order {
+        padding: 3rem 3rem;
+        background-color: $clr-order-bg;
+    }
+}
+
 .price {
     font-weight: bold;
 }

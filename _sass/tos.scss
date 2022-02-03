@@ -1,16 +1,9 @@
-div.TOS {
-    margin: 3rem .5rem;
-    padding: 2rem 0;
-    background-color: $clr-order-bg;
-}
-
 h2.TOS {
-    padding: 1rem;
+    padding: 2rem 0;
     text-align: center;
 }
 
 p.TOS {
-    padding: 1rem;
     text-align: center;
     color: $clr-dark-gray;
 }
@@ -23,7 +16,7 @@ ol.TOS {
 }
 
 ol.TOS > li {
-    padding: .5rem;
+    padding: .5rem 0;
 }
 
 button.TOS {
