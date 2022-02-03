@@ -3,6 +3,8 @@ collections:
     output: true
   orders:
     output: true
+  terms:
+    output: true
   order-forms:
     output: true
 

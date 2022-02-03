@@ -3,19 +3,23 @@
 }
 
 p.order-button {
+    padding: 1rem 0;
     display: flex;
     justify-content: center;
 }
 
-button.order-button {
-    padding: .5rem 3rem;
+button.order {
+    margin: 1rem auto;
+    padding: 0.8rem 3rem;
     font-size: var(--fs-600);
     border-top: none;
     border-left: none;
+    color: $clr-dark-gray;
     background-color: $clr-order-button;
 }
 
-button.order-button:hover {
+button.order:hover {
+    color: $clr-black;
     background-color: $clr-order-button-hover;
     cursor: pointer;
 }
