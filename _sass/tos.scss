@@ -9,15 +9,21 @@ h2.TOS {
     text-align: center;
 }
 
+p.TOS {
+    padding: 1rem;
+    text-align: center;
+    color: $clr-dark-gray;
+}
+
 ol.TOS {
-    padding-bottom: 1.5rem;
+    padding-block: 1.5rem;
     background-color: $clr-order-bg;
     color: $clr-dark-gray;
     font-size: var(--fs-300);
 }
 
 ol.TOS > li {
-    padding: .25rem;
+    padding: .5rem;
 }
 
 button.TOS {
