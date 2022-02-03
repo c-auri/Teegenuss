@@ -1,6 +1,8 @@
 ---
 title: Leicht gerösteter Jin Xuan
 type: Oolong
+color: yellow
+
 harvest: Oktober 2021
 harvest-style: handgepflückt
 elevation: 1100m

@@ -2,6 +2,8 @@
 title: Bai Hao Oolong
 type: Oolong
 sub-type: Bai Hao Oolong
+color: red
+
 harvest: Juni 2021
 harvest-style: handgepflückt
 elevation: 600m

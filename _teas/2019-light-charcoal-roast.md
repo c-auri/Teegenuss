@@ -1,6 +1,8 @@
 ---
 title: Leicht kohle-gerösteter Jin Xuan
 type: Oolong
+color: dark-yellow
+
 harvest: October 2019
 harvest-style: handgepflückt
 elevation: 400m
@@ -14,5 +16,5 @@ info: leichtere Holzkohleröstung.
 shop: Taiwan Tea Crafts
 shop_url: https://www.taiwanteacrafts.com/product/organic-jin-xuan-light-charcoal-pit-fired-oolong-tea
 orders: [ ttc1 ]
-key: 6
+key: 4
 ---

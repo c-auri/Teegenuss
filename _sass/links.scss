@@ -4,10 +4,38 @@ a {
 }
 
 a:hover {
+    color: $clr-link-hover;
+}
+
+a.logo:hover {
     background-image: $clr-tea-gradient;
     color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
+}
+
+a.green:hover {
+    color: $clr-tea-green;
+}
+
+a.yellow-green:hover {
+    color: $clr-tea-yellow-green;
+}
+
+a.yellow:hover {
+    color: $clr-tea-yellow;
+}
+
+a.dark-yellow:hover {
+    color: $clr-tea-dark-yellow;
+}
+
+a.orange:hover {
+    color: $clr-tea-orange;
+}
+
+a.red:hover {
+    color: $clr-tea-red;
 }
 
 header {

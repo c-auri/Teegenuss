@@ -2,6 +2,8 @@
 title: Bao Zhong
 type: Oolong
 sub-type: grüner Oolong
+color: yellow-green
+
 harvest: Frühling 2021
 harvest-style: maschinengepflückt
 elevation: 350m

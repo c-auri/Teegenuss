@@ -2,6 +2,8 @@
 title: Alishan Jin Xuan
 type: Oolong
 sub-type: grüner Oolong
+color: yellow-green
+
 harvest: April 2021
 harvest-style: handgepflückt
 elevation: 1200m
