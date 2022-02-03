@@ -1,51 +1,61 @@
 <form name="{{ page.id }}" method="POST" action="/success.html" data-netlify="true" onsubmit="return validateForm()">
     <h2>Bestellformular</h2>
-    <h3>Teilung</h3>
-    <p class="title">{{ page.title }}</p>
-    <h3>Kontaktdaten</h3>
-    <div class="form">
-        <label for="discord-username">Dein Discord Username</span>: </label>   
-        <input type="text" name="discord-username" />
-    </div>
-    <div class="form">
-        <label for="discord-id">Deine <span class="mouseover" title="Das ist eine vierstellige Nummer, zu finden in deinem Discord Profil hinter dem Username">Discord ID</span>: </label>   
-        <input type="text" name="discord-id" />
-    </div>
-    <div class="form">
-        <label for="connection">Woher kennen wir uns?: </label>
-        <input type="text" name="connection" />
-        <p class="form-description">z.B. Jomons Stream, Dotasource, etc.</p>
-    </div>
-    <br>
-    <h3>Lieferadresse</h3>
-    <div class="form">
-        <label for="name">Vor- und Nachname: </label>
-        <input type="text" name="name" />
-    </div>
-    <div class="form">
-        <label for="additional-info">Adresszusatz: </label>
-        <input type="text" name="additional-info" />
-    </div>
-    <div class="form">
-        <label for="street">Straße und Hausnummer: </label>
-        <input type="text" name="street" />
-    </div>
-    <div class="form">
-        <label for="postalcode">PLZ: </label>
-        <input type="text" name="postalcode" />
-    </div>
-    <div class="form">
-        <label for="city">Ort: </label>
-        <input type="text" name="city" />
-    </div>
-    <div class="form">
-        <label for="country">Land: </label>
-        <input type="text" name="country" />
-    </div>
-    <h3>Zusatz</h3>
-    <div class="form">
-        <textarea name="message"></textarea>
-    </div>
+    <section class="order">
+        <h3>Teilung</h3>
+        <p class="order-info">{{ page.title }}</p>
+        <p class="order-info">Preis: {{ page.price }}</p>
+        <p class="order-int-disclaimer">evtl. zuzüglich Versandkosten ins Ausland</p>
+    </section>
+    <section class="order">
+        <h3>Kontaktdaten</h3>
+        <div class="form">
+            <label for="discord-username">Dein Discord Username</span>: </label>   
+            <input type="text" name="discord-username" />
+        </div>
+        <div class="form">
+            <label for="discord-id">Deine <span class="mouseover" title="Das ist eine vierstellige Nummer, zu finden in deinem Discord Profil hinter dem Username">Discord ID</span>: </label>   
+            <input type="text" name="discord-id" />
+        </div>
+        <div class="form">
+            <label for="connection">Woher kennen wir uns?: </label>
+            <input type="text" name="connection" />
+            <p class="form-description">z.B. Jomons Stream, Dotasource, etc.</p>
+        </div>
+    </section>
+    <section class="order">
+        <h3>Lieferadresse</h3>
+        <div class="form">
+            <label for="name">Vor- und Nachname: </label>
+            <input type="text" name="name" />
+        </div>
+        <div class="form">
+            <label for="additional-info">Adresszusatz: </label>
+            <input type="text" name="additional-info" />
+        </div>
+        <div class="form">
+            <label for="street">Straße und Hausnummer: </label>
+            <input type="text" name="street" />
+        </div>
+        <div class="form">
+            <label for="postalcode">PLZ: </label>
+            <input type="text" name="postalcode" />
+        </div>
+        <div class="form">
+            <label for="city">Ort: </label>
+            <input type="text" name="city" />
+        </div>
+        <div class="form">
+            <label for="country">Land: </label>
+            <input type="text" name="country" />
+        </div>
+    </section>
+    <section class="order">
+        <h3>Zusatz</h3>
+        <div class="form">
+            <textarea name="message"></textarea>
+        </div>
+    </section>
+    
     <p class="order-button">
         <button class="order" type="submit">Bestellen</button>
     </p>
