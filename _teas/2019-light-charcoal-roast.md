@@ -11,7 +11,7 @@ cultivar: Jin Xuan
 oxidation: niedrig
 roasting-level: leicht
 roasting-method: traditionelle Holzkohleröstung
-info: leichtere Holzkohleröstung.
+info: ebenfalls leicht geröstet, aber mit Holzkohle und nicht in einem elektrischen Ofen.
 
 shop: Taiwan Tea Crafts
 shop_url: https://www.taiwanteacrafts.com/product/organic-jin-xuan-light-charcoal-pit-fired-oolong-tea
