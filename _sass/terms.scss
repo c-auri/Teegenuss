@@ -1,25 +1,25 @@
-h2.TOS {
+h2.terms {
     padding: 2rem 0;
     text-align: center;
 }
 
-p.TOS {
+p.terms {
     text-align: center;
     color: $clr-dark-gray;
 }
 
-ol.TOS {
+ol.terms {
     padding-block: 2.5rem;
     background-color: $clr-order-bg;
     color: $clr-dark-gray;
     font-size: var(--fs-300);
 }
 
-ol.TOS > li {
+ol.terms > li {
     padding: .5rem 0;
 }
 
-button.TOS {
+button.terms {
     margin: 3rem auto;
     width: 100%;
     border: none;
