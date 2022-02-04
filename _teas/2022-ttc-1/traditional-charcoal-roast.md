@@ -14,7 +14,7 @@ roasting-method: traditionelle Holzkohleröstung
 info: stärkere Holzkohleröstung, wie es traditionell üblich ist.
 
 shop: Taiwan Tea Crafts
-shop_url: https://www.taiwanteacrafts.com/product/high-mountain-charcoal-pit-fired-oolong-tea
+shop-url: https://www.taiwanteacrafts.com/product/high-mountain-charcoal-pit-fired-oolong-tea
 orders: [ ttc-1 ]
 key: 5
 ---

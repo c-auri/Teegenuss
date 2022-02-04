@@ -15,7 +15,7 @@ roasting-method: ofengeröstet
 info: ein stark oxidierter und nur sehr wenig gerösteter offener Oolong, der sein besonderes Aroma durch feine Käferbisse bekommt.
 
 shop: Taiwan Tea Crafts
-shop_url: https://www.taiwanteacrafts.com/product/oriental-beauty-superior-grade-oolong-tea
+shop-url: https://www.taiwanteacrafts.com/product/oriental-beauty-superior-grade-oolong-tea
 orders: [ ttc-1 ]
 key: 7
 ---
