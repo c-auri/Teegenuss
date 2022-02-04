@@ -2,16 +2,4 @@
 title: Teilnahmebedingungen
 form-id: 2022-ttc-1
 ---
-<div class="order">
-    {% include terms.html %}
-    <p class="order-button">
-        <button 
-            class="order"
-            onclick="location.href='/order-forms/{{page.form-id}}.html'"
-            type="button">
-            Okay, verstanden.
-            <br>
-            Ich will jetzt bestellen!
-        </button>
-    </p>
-</div>
+{% include terms.html %}
