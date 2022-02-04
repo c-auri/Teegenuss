@@ -15,6 +15,6 @@ info: ebenfalls leicht geröstet, aber mit Holzkohle und nicht in einem elektris
 
 shop: Taiwan Tea Crafts
 shop_url: https://www.taiwanteacrafts.com/product/organic-jin-xuan-light-charcoal-pit-fired-oolong-tea
-orders: [ ttc1 ]
+orders: [ ttc-1 ]
 key: 4
 ---

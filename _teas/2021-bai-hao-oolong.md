@@ -16,6 +16,6 @@ info: ein stark oxidierter und nur sehr wenig gerösteter offener Oolong, der se
 
 shop: Taiwan Tea Crafts
 shop_url: https://www.taiwanteacrafts.com/product/oriental-beauty-superior-grade-oolong-tea
-orders: [ ttc1 ]
+orders: [ ttc-1 ]
 key: 7
 ---

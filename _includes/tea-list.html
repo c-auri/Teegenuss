@@ -1,0 +1,8 @@
+<ul>
+    {% assign teas = site.teas | where: "orders",  page.oid | sort: "key" %}
+    {%- for tea in teas -%}
+        <li>
+            <a class="{{tea.color}}" href="{{ tea.shop_url }}">{{ tea.title }}</a><span class="tea-info">, {{ tea.info }}</span>
+        </li>
+    {% endfor %}
+</ul>

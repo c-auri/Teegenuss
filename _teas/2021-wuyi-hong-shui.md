@@ -15,6 +15,6 @@ info: ein stärker oxidierter und gerösteter Oolong, dessen Strauchsorte aus de
 
 shop: Taiwan Tea Crafts
 shop_url: https://www.taiwanteacrafts.com/product/wuyi-hong-shui-high-mountain-oolong-tea
-orders: [ ttc1 ]
+orders: [ ttc-1 ]
 key: 6
 ---
