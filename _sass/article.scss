@@ -38,4 +38,12 @@ article {
         max-width: 60ch;
         padding: .5em 0;
     }
+
+    ol, ul {
+        padding: .5rem 2.5rem;
+    }
+    
+    ul > li {
+        padding: .1rem 0;
+    }
 }
