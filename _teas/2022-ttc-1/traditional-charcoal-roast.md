@@ -7,7 +7,7 @@ info: stärkere Holzkohleröstung, wie es traditionell üblich ist.
 shop: Taiwan Tea Crafts
 shop-url: https://www.taiwanteacrafts.com/product/high-mountain-charcoal-pit-fired-oolong-tea
 order-id: 2022-ttc-1
-order-date: Januar 2022
+order-date: Januar&nbsp;2022
 key: 5
 
 show-details: true

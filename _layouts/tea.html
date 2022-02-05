@@ -1,13 +1,15 @@
 ---
 layout: default
 ---
-<div class="tea">
-    <h1>{{ page.title }}</h1>
-    <p class="purchase-info">Gekauft bei <a href="{{ page.shop-url }}">{{ page.shop }}</a> im {{ page.order-date }}</p>
+<article>
+    <header>
+        <h1>{{ page.title }}</h1>
+        <span class="sub-heading">Gekauft bei <a href="{{ page.shop-url }}">{{ page.shop }}</a> im&nbsp;{{ page.order-date }}</span>
+    </header>
     
     {{ content }}
     
     {% include tea-details.html %}
     {% include tea-brewing-advice.html %}
-</div>
+</article>
 

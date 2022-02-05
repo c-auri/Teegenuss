@@ -6,7 +6,7 @@ info: wie der Vertreter aus Alishan, aber zusätzlich leicht geröstet.
 shop: Taiwan Tea Crafts
 shop-url: https://www.taiwanteacrafts.com/product/organic-jin-xuan-oolong-tea
 order-id: 2022-ttc-1
-order-date: Januar 2022
+order-date: Januar&nbsp;2022
 key: 3
 
 show-details: true

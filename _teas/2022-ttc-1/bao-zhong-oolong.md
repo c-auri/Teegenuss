@@ -6,7 +6,7 @@ info: ein günstiger Vertreter der modernen grünen, ungerösteten Oolongs mit o
 shop: Taiwan Tea Crafts
 shop-url: https://www.taiwanteacrafts.com/product/baguashan-spring-bao-zhong-tea/
 order-id: 2022-ttc-1
-order-date: Januar 2022
+order-date: Januar&nbsp;2022
 key: 1
 
 show-details: true
