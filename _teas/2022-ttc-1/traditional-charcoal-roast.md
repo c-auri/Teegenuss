@@ -1,20 +1,33 @@
 ---
-title: Traditionell kohle-gerösteter Jin Xuan
-type: Oolong
+title: Traditionell kohle-gerösteter Jin&nbsp;Xuan
 color: orange
-
-harvest: April 2019
-harvest-style: handgepflückt
-elevation: 1200m
-terroir: Baguashan
-cultivar: Qing Xin
-oxidation: medium
-roasting-level: medium
 roasting-method: traditionelle Holzkohleröstung
 info: stärkere Holzkohleröstung, wie es traditionell üblich ist.
 
 shop: Taiwan Tea Crafts
 shop-url: https://www.taiwanteacrafts.com/product/high-mountain-charcoal-pit-fired-oolong-tea
-orders: [ ttc-1 ]
+order-id: 2022-ttc-1
+order-date: Januar 2022
 key: 5
+
+show-details: true
+type: Oolong
+country: Taiwan
+location: Baguashan
+harvest: April 2019
+harvest-style: handgepflückt
+elevation: 1200m
+cultivar: Qing Xin
+oxidation: medium
+roasting: mittelstarke Holzkohleröstung
+
+gongfu: true
+gongfu-temperature: 100°C
+gongfu-weight: 6g pro 100ml 
+gongfu-volume: der Gefäßboden bedeckt ist
+gongfu-rinse: blitz
+gongfu-first: 5 Sekunden
+gongfu-second: 5 Sekunden
+gongfu-third: 10 Sekunden
+gongfu-further: +10 Sekunden pro Aufguss
 ---

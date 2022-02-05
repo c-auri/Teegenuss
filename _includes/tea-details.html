@@ -1,0 +1,61 @@
+<section>
+{% if page.show-details %}
+<h2>Details</h2>
+<table>
+    {% if page.type %}
+        <tr>
+            <td>Sorte</td>
+            <td>{{ page.type }}</td>
+        </tr>
+    {% endif %}
+    {% if page.country %}
+        <tr>
+            <td>Herkunftsland</td>
+            <td>{{ page.country }}</td>
+        </tr>
+    {% endif %}
+    {% if page.location %}
+        <tr>
+            <td>Region</td>
+            <td>{{ page.location }}</td>
+        </tr>
+    {% endif %}
+    {% if page.elevation %}
+        <tr>
+            <td>Höhe</td>
+            <td>{{ page.elevation }}</td>
+        </tr>
+    {% endif %}
+    {% if page.harvest %}
+        <tr>
+            <td>Ernte</td>
+            <td>{{ page.harvest }}</td>
+        </tr>
+    {% endif %}
+    {% if page.harvest-style %}
+        <tr>
+            <td>Ernteart</td>
+            <td>{{ page.harvest-style }}</td>
+        </tr>
+    {% endif %}
+    {% if page.cultivar %}
+        <tr>
+            <td>Strauchsorte</td>
+            <td>{{ page.cultivar }}</td>
+        </tr>
+    {% endif %}
+    {% if page.oxidation %}
+        <tr>
+            <td>Oxidation</td>
+            <td>{{ page.oxidation }}</td>
+        </tr>
+    {% endif %}
+    {% if page.roasting %}
+        <tr>
+            <td>Röstung</td>
+            <td>{{ page.roasting }}</td>
+        </tr>
+    {% endif %}
+</table>
+{% endif %}
+</section>

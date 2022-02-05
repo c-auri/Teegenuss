@@ -1,21 +1,30 @@
 ---
 title: Bai Hao Oolong
-type: Oolong
-sub-type: Bai Hao Oolong
 color: red
-
-harvest: Juni 2021
-harvest-style: handgepflückt
-elevation: 600m
-terroir: Emei
-cultivar: Qin Xin Da Mu
-oxidation: mittel-stark
-roasting-level: leicht
-roasting-method: ofengeröstet
-info: ein stark oxidierter und nur sehr wenig gerösteter offener Oolong, der sein besonderes Aroma durch feine Käferbisse bekommt.
+info: ein offener Oolong, der sein besonderes Aroma durch feine Käferbisse bekommt. Stark oxidiert und nur sehr wenig geröstet.
 
 shop: Taiwan Tea Crafts
 shop-url: https://www.taiwanteacrafts.com/product/oriental-beauty-superior-grade-oolong-tea
-orders: [ ttc-1 ]
+order-id: 2022-ttc-1
+order-date: Januar 2022
 key: 7
+
+show-details: true
+type: Oolong
+location: Emei
+elevation: 600m
+harvest: Juni 2021
+harvest-style: handgepflückt
+cultivar: Qin Xin Da Mu
+oxidation: hoch
+roasting: leicht
+
+
+gongfu: true
+gongfu-temperature: 95°C
+gongfu-weight: 5g pro 100ml 
+gongfu-volume: ca. 2/3 des Gefäßes gefüllt ist
+gongfu-rinse: blitz
+gongfu-first: 10 Sekunden
+gongfu-further: +10 Sekunden pro Aufguss
 ---

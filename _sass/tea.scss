@@ -1,0 +1,40 @@
+div.tea {
+    margin: 3rem .5rem;
+
+    h1,
+    h2,
+    h3 {
+        text-align: center;
+    }
+
+    p.purchase-info {
+        text-align: center;
+        color: $clr-medium-gray;
+    }
+
+    section {
+        padding: 2rem 0;
+    }
+
+    table {
+        width: 100%;
+        margin: 1rem 0;
+        border: solid $clr-light-gray 1px;
+    }
+
+    tr:nth-child(even) {
+        background-color: $clr-table-even;
+    }
+
+    tr:nth-child(odd) {
+        background-color: $clr-table-odd;
+    }
+
+    td {
+        padding: .25rem .5rem;
+    }
+
+    td:first-child {
+        width: 15ch;
+    }
+}

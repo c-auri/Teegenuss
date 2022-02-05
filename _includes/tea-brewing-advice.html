@@ -1,0 +1,81 @@
+<section>
+{% if page.gongfu or page.grandpa or page.western %}
+<h2>Zubereitungsempfehlung</h2>
+{% endif %}
+{% if page.gongfu %}
+<table>
+    <tr>
+        <td>Temperatur</td>
+        <td>{{ page.gongfu-temperature }}</td>
+    </tr>
+    <tr>
+        <td>Menge</td>
+        <td>
+            {{ page.gongfu-weight }}
+            {% if page.gongfu-volume %}
+                <br>oder bis {{ page.gongfu-volume }}
+            {% endif %}
+        </td>
+    </tr>
+    
+    <tr>
+        <td class="mouseover"
+            title="Das ist der Aufguss vorm ersten Trinkaufguss. Er dient der Vorbereitung der Blätter und ist nicht zum trinken gedacht. Kann direkt entsorgt werden, wenn man möchte kann man ihn aber auch trinken.">
+            Abguss
+        </td>
+        <td {% if page.gongfu-rinse == "blitz" %}
+                class="mouseover"
+                title="D.h. so schnell wie möglich ein- und wieder ausgießen."
+            {%endif%}>
+            {{ page.gongfu-rinse }}
+        </td>
+    </tr>
+    <tr>
+        <td>1. Aufguss</td>
+        <td {% if page.gongfu-first == "blitz" %}
+                class="mouseover"
+                title="D.h. so schnell wie möglich ein- und wieder ausgießen."
+            {%endif%}>
+            {{ page.gongfu-first }}
+        </td>
+    </tr>
+    {% if page.gongfu-second %}
+        <tr>
+            <td>2. Aufguss</td>
+            <td {% if page.gongfu-second == "blitz" %}
+                    class="mouseover"
+                    title="D.h. so schnell wie möglich ein- und wieder ausgießen."
+                {%endif%}>
+            {{ page.gongfu-second }}
+        </td>
+        </tr>
+    {% endif %}
+    {% if page.gongfu-third %}
+        <tr>
+            <td>3. Aufguss</td>
+            <td {% if page.gongfu-third == "blitz" %}
+                    class="mouseover"
+                    title="D.h. so schnell wie möglich ein- und wieder ausgießen."
+                {%endif%}>
+            {{ page.gongfu-third }}
+        </td>
+        </tr>
+    {% endif %}
+    {% if page.gongfu-further %}
+        <tr>
+            <td {% if page.gongfu-increase-temperature %}
+                    rowspan="2"
+                {% endif %}>
+                Weitere</td>
+            <td>
+                {{ page.gongfu-further }}
+                {% if page.gongfu-increase-temperature %}
+                    <br>Temperatur kann später erhöht werden</td>
+                {% endif %}
+            </td>
+        </tr>
+        
+    {% endif %}
+</table>
+{% endif %}
+</section>
