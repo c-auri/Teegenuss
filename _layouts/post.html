@@ -4,13 +4,11 @@ layout: default
 <article>
     <header>
         <h1>{{ page.title }}</h1>
-        <span clasS="blog-date">Geschrieben am {{ page.date | date: "%-d.%-m.%Y" }}</span>
+        <span class="sub-heading">Geschrieben am {{ page.date | date: "%-d.%-m.%Y" }}</span>
     </header>
-    <section>
-        <div class="lead">
-            <img src="/assets/img/posts/{{ page.pid }}/lead.jpg">
-            <p class="subtitle">{{ page.lead-subtitle }}</p>
-        </div>
+    <section class="lead">
+        <img src="/assets/img/posts/{{ page.pid }}/lead.jpg">
+        <p class="subtitle">{{ page.lead-subtitle }}</p>
     </section>
     <section class="excerpt">
         {{ content }}
