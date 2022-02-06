@@ -28,4 +28,11 @@ gongfu-rinse: blitz
 gongfu-first: 10 Sekunden
 gongfu-further: +10 Sekunden pro Aufguss
 gongfu-increase-temperature: true
+
+show-notes: true
+short-notes: true
+aroma: milchig, blumig
+liquer-color: blasses Gelb
+taste: milchig, blumig
+spent-leaf: dunkelgrün mit roten Rändern
 ---

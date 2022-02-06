@@ -1,0 +1,71 @@
+{% if page.show-notes %}
+<section>
+    <header>
+        <h2>Notizen</h2>
+    </header>
+<table class="tasting-notes">
+{% if page.short-notes %}
+    <tr>
+        <th>Aroma</th>
+        <td>{{ page.aroma }}</td>
+    </tr>
+    <tr>
+        <th>Aufguss-<br>farbe</th>
+        <td>{{ page.liquer-color }}</td>
+    </tr>
+    <tr>
+        <th>Geschmack</th>
+        <td>{{ page.taste }}</td>
+    </tr>
+    <tr>
+        <th>Blätter</th>
+        <td>{{ page.spent-leaf }}</td>
+    </tr>
+
+{% else %}
+    <tr>
+        <th rowspan="2">Aroma</th>
+        <td>trockenes Blatt</td>
+        <td>{{ page.aroma-dry }}</td>
+    </tr>
+    <tr>
+        <td>feuchtes Blatt</td>
+        <td>{{ page.aroma-wet }}</td>
+    </tr>
+    <tr>
+        <th>Aufguss-<br>farbe</th>
+        <td></td>
+        <td>{{ page.liquer-color }}</td>
+    </tr>
+    <tr>
+        <th rowspan="2">Geschmack</th>
+        <td>ersten Aufgüsse</td>
+        <td>{{ page.taste-early }}</td>
+    </tr>
+    <tr>
+        <td>spätere Aufgüsse</td>
+        <td>{{ page.taste-later }}</td>
+    </tr>
+    {% if page.texture %}
+        <tr>
+            <th>Textur</th>
+            <td></td>
+            <td>{{ page.texture }}</td>
+        </tr>
+    {% endif %}
+    {% if page.feeling %}
+        <tr>
+            <th>Gefühl</th>
+            <td></td>
+            <td>{{ page.feeling }}</td>
+        </tr>
+    {%endif %}
+    <tr>
+        <th>Blätter</th>
+        <td></td>
+        <td>{{ page.spent-leaf }}</td>
+    </tr>
+{% endif %}
+</table>
+</section>
+{% endif %}

@@ -30,4 +30,14 @@ gongfu-second: 10 Sekunden
 gongfu-third: 10 Sekunden
 gongfu-further: +10 Sekunden pro Aufguss
 gongfu-increase-temperature: true
+
+show-notes: true
+aroma-dry: Milch, Blütenduft,<br>angeschnittene Blumenstängel
+aroma-wet: Stängelaroma wird stärker,<br>erinnert an einen Blumenladen
+liquer-color: blasses Gelb
+taste-early: milchig, blumig,<br>leicht grasig-herb
+taste-later: Milchigkeit und Süße kommt stärker heraus
+texture: eher dünn
+feeling: betörend,<br>leicht wärmend
+spent-leaf: dunkelgrün mit wenig roten Rändern,<br>ganze Blätter, teilweise noch mit Stiel
 ---

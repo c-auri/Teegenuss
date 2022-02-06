@@ -22,15 +22,30 @@ table {
 }
 
 tr:nth-child(even) {
-    background-color: $clr-table-even;
+    background-color: $clr-table-light;
 }
 
 tr:nth-child(odd) {
-    background-color: $clr-table-odd;
+    background-color: $clr-table-medium;
+}
+
+th {
+    padding: .5rem 0;
+    background-color: $clr-table-dark;
 }
 
 td {
     padding: .25rem .5rem;
+}
+
+table.tasting-notes {
+    th {
+        width: 12ch;
+    }
+
+    td:first-child {
+        width: 8ch;
+    }
 }
 
 td:first-child {
