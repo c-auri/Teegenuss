@@ -45,6 +45,6 @@ taste-early: ebenfalls nussig und leicht blumig,<br>trotz der geringen Oxidation
 taste-later: Süße kommt stärker heraus
 texture: leicht,<br>hinterlässt ein leicht samtiges Gefühl,<br> erinnert an Zimt
 feeling: wärmend
-spent-leaf: dunkelgrün mit wenig roten Rändern,<br>ganze Blätter, teilweise noch mit Stiel
+spent-leaf: sattes grün mit wenig roten Rändern,<br>ganze Blätter, überwigend noch am Stiel
 ---
 <img src="/assets/img/orders/2022-ttc-1/lrjx/07-late-infusion.jpg" alt="Ein grüner Oolong mit aufgegangenen Blättern im Gaiwan, daneben eine Schale mit einem blassgelbem Aufguss.">

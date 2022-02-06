@@ -43,6 +43,6 @@ taste-early: milchig, blumig,<br>leicht grasig-herb
 taste-later: Milchigkeit und Süße kommen stärker heraus
 texture: leicht
 feeling: betörend,<br>leicht wärmend
-spent-leaf: dunkelgrün mit wenig roten Rändern,<br>ganze Blätter, überwiegend noch mit Stiel
+spent-leaf: sattes grün mit wenig roten Rändern,<br>ganze Blätter, häufig noch am Stiel
 ---
 <img src="/assets/img/orders/2022-ttc-1/ajx/03-infusion.jpg" alt="Ein grüner Kugeloolong im Gaiwan, daneben eine Schale mit einem blassgelbem Aufguss.">
