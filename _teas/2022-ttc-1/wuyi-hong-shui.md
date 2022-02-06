@@ -44,3 +44,4 @@ taste-later: weiterhin cremig und nussig,<br> herber werdend,<br>erinnert an Kr�
 feeling: w채rmend
 spent-leaf: olivgr체n, braun,<br>rote R채nder,<br>einzelne Bl채tter,<br>teilweise eingerissen,<br>keine St채ngel
 ---
+<img src="/assets/img/orders/2022-ttc-1/wuyi/01-dry-leaf.jpg" alt="Ein olivgr체ner Kugeloolong auf einem Pr채sentierteller.">

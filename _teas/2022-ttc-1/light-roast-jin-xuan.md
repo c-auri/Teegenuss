@@ -47,3 +47,4 @@ texture: leicht,<br>hinterlässt ein leicht samtiges Gefühl,<br> erinnert an Zi
 feeling: wärmend
 spent-leaf: dunkelgrün mit wenig roten Rändern,<br>ganze Blätter, teilweise noch mit Stiel
 ---
+<img src="/assets/img/orders/2022-ttc-1/lrjx/07-late-infusion.jpg" alt="Ein grüner Oolong mit aufgegangenen Blättern im Gaiwan, daneben eine Schale mit einem blassgelbem Aufguss.">

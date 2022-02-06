@@ -40,3 +40,4 @@ liquer-color: blasses Gelb
 taste: milchig, blumig
 spent-leaf: dunkelgrün mit roten Rändern
 ---
+<img src="/assets/img/orders/2022-ttc-1/baozhong/01-dry-leaf.jpg" alt="Ein offener Oolong mit sehr grünen Blättern auf einem Präsentierteller.">
