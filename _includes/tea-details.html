@@ -4,6 +4,19 @@
     <h2>Details</h2>
 </header>
 <table>
+    <tr>
+        <td>Gekauft bei</td>
+        <td><a href="{{page.shop-url }}"">{{ page.shop }}</a></td>
+    </tr>
+    <tr>
+        <td>Gekauft am</td>
+        <td>{{ page.order-date }}</td>
+    </tr>
+    <tr>
+        <td>Preis</td>
+        <td>{{ page.price }}</td>
+    </tr>
+    </tr>
     {% if page.type %}
         <tr>
             <td>Sorte</td>
@@ -62,12 +75,6 @@
         <tr>
             <td>Röstmethode</td>
             <td>{{ page.roast-method }}</td>
-        </tr>
-    {% endif %}
-    {% if page.price %}
-        <tr>
-            <td>Preis</td>
-            <td>{{ page.price }}</td>
         </tr>
     {% endif %}
 </table>
