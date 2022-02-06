@@ -4,26 +4,13 @@ $border-inactive: 2px $clr-table-medium solid;
 
 div.tea {
     margin: 3rem .5rem;
-
-    h1,
-    h2,
-    h3 {
-        text-align: center;
-    }
-
-    p.purchase-info {
-        text-align: center;
-        color: $clr-medium-gray;
-    }
-}
-
-table {
-    width: 100%;
-    margin: 1rem 0;
-    border-collapse: collapse; 
 }
 
 table.tea-details {
+    width: 100%;
+    margin: 1rem 0;
+    border-collapse: collapse; 
+
     th {
         width: 12ch;
     }
@@ -34,9 +21,7 @@ table.tea-details {
 }
 
 tbody {
-    border-left: $border-outside;
-    border-right: $border-outside;
-    border-bottom: $border-outside;
+    border: $border-outside;
 }
 
 tr:nth-child(odd) {
@@ -49,7 +34,7 @@ tr:nth-child(even) {
 
 th.table-swap-active,
 th.table-swap-inactive {
-    padding: .8rem 0;
+    padding: .8rem;
     cursor: pointer;
 }
 
@@ -72,9 +57,7 @@ thead {
     }
 
     th.table-swap-active {
-        border-top: $border-outside;
-        border-left: $border-outside;
-        border-right: $border-outside;
+        border: $border-outside;
         border-bottom: 2px $clr-table-dark solid;
         background-color: $clr-table-dark;
     }
@@ -85,11 +68,9 @@ thead {
 }
 
 tbody {
-    border-bottom: $border-outside;
-    border-left: $border-outside;
-    border-right: $border-outside;
+    border: $border-outside;
 
-    th:first-child {
+    th {
         padding: .5rem 0;
         border-top: $border-inside;
         background-color: $clr-table-dark;
@@ -99,8 +80,4 @@ tbody {
 td {
     border-left: $border-inside;
     padding: .5rem;
-}
-
-td:first-child {
-    width: 10ch;
 }
