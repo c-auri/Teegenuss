@@ -21,7 +21,8 @@ harvest-style: maschinell
 elevation: 1100m
 cultivar: Wuyi
 oxidation: medium
-roasting: mittelstark
+roasting: medium
+roast-method: Ofenröstung
 
 gongfu: true
 gongfu-temperature: 100°C

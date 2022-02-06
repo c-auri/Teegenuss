@@ -18,8 +18,9 @@ harvest: October 2019
 harvest-style: handgepflückt
 elevation: 400m
 cultivar: Jin Xuan
-oxidation: niedrig
-roasting: leichte Holzkohleröstung
+oxidation: leicht
+roasting: leicht
+roast-method: Holzkohleröstung
 
 gongfu: true
 gongfu-temperature: 100°C

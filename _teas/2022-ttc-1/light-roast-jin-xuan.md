@@ -21,8 +21,9 @@ harvest: Oktober 2021
 harvest-style: handgepflückt
 elevation: 1100m
 cultivar: Jin Xuan
-oxidation: sehr niedrig
+oxidation: sehr leicht
 roasting: sehr leicht
+roast-method: Ofenröstung
 
 gongfu: true
 gongfu-temperature: 90°C

@@ -20,7 +20,8 @@ harvest-style: handgepflückt
 elevation: 1200m
 cultivar: Qing Xin
 oxidation: medium
-roasting: mittelstarke Holzkohleröstung
+roasting: medium
+roast-method: Holzkohleröstung
 
 gongfu: true
 gongfu-temperature: 100°C

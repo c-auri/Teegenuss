@@ -20,7 +20,7 @@ harvest-style: maschinell
 elevation: 350m
 location: Baguashan
 cultivar: Si Ji Chun
-oxidation: sehr niedrig
+oxidation: sehr leicht
 roasting: keine
 
 gongfu: true
