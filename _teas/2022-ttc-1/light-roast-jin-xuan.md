@@ -1,7 +1,7 @@
 ---
 title: Leicht gerösteter Jin&nbsp;Xuan
 color: yellow
-info: wie der Vertreter aus Alishan, aber zusätzlich leicht geröstet.
+info: Wie der Vertreter aus Alishan, aber zusätzlich leicht geröstet.
 
 shop: Taiwan Tea Crafts
 shop-url: https://www.taiwanteacrafts.com/product/organic-jin-xuan-oolong-tea

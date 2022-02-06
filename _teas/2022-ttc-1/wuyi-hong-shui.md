@@ -1,7 +1,7 @@
 ---
 title: Wuyi Hong Shui
 color: orange
-info: ein stärker oxidierter und gerösteter Oolong, dessen Strauchsorte aus dem Wuyi-Gebirge in China stammt und auch stilistisch an die dortigen Felsentees erinnert.
+info: Ein stärker oxidierter und gerösteter Oolong, dessen Strauchsorte aus dem Wuyi-Gebirge in China stammt und auch stilistisch an die dortigen Felsentees erinnert.
 
 shop: Taiwan Tea Crafts
 shop-url: https://www.taiwanteacrafts.com/product/wuyi-hong-shui-high-mountain-oolong-tea

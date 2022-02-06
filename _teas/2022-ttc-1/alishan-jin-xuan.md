@@ -1,7 +1,7 @@
 ---
 title: Alishan Jin&nbsp;Xuan
 color: yellow-green
-info: ein grüner Oolong in Kugelform, bekannt für seine besondere Milchigkeit.
+info: Ein grüner Oolong in Kugelform, bekannt für seine besondere Milchigkeit.
 
 shop: Taiwan Tea Crafts
 shop-url: https://www.taiwanteacrafts.com/product/alishan-jin-xuan-high-mountain-oolong-tea

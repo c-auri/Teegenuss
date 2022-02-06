@@ -1,7 +1,7 @@
 ---
 title: Bai Hao Oolong
 color: red
-info: ein offener Oolong, der sein besonderes Aroma durch feine Käferbisse bekommt. Stark oxidiert und nur sehr wenig geröstet.
+info: Ein offener Oolong, der sein besonderes Aroma durch feine Käferbisse bekommt. Stark oxidiert und nur sehr wenig geröstet.
 
 shop: Taiwan Tea Crafts
 shop-url: https://www.taiwanteacrafts.com/product/oriental-beauty-superior-grade-oolong-tea
