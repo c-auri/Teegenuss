@@ -58,6 +58,12 @@
             <td>{{ page.roasting }}</td>
         </tr>
     {% endif %}
+    {% if page.price %}
+        <tr>
+            <td>Preis</td>
+            <td>{{ page.price }}</td>
+        </tr>
+    {% endif %}
 </table>
 </section>
 {% endif %}

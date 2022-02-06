@@ -6,6 +6,7 @@ shop: Taiwan Tea Crafts
 shop-url: https://www.taiwanteacrafts.com/product/alishan-jin-xuan-high-mountain-oolong-tea
 order-id: 2022-ttc-1
 order-date: Januar&nbsp;2022
+price: 0,22&hairsp;$/g
 key: 2
 
 info: Ein grüner Oolong in Kugelform, bekannt für seine besondere Milchigkeit.

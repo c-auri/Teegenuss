@@ -6,6 +6,7 @@ shop: Taiwan Tea Crafts
 shop-url: https://www.taiwanteacrafts.com/product/wuyi-hong-shui-high-mountain-oolong-tea
 order-id: 2022-ttc-1
 order-date: Januar&nbsp;2022
+price: 0,24&hairsp;$/g
 key: 6
 
 info: Ein stärker oxidierter und gerösteter Oolong, dessen Strauchsorte aus dem Wuyi-Gebirge in China stammt und auch stilistisch an die dortigen Felsentees erinnert.

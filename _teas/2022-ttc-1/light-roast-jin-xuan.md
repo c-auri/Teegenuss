@@ -6,6 +6,7 @@ shop: Taiwan Tea Crafts
 shop-url: https://www.taiwanteacrafts.com/product/organic-jin-xuan-oolong-tea
 order-id: 2022-ttc-1
 order-date: Januar&nbsp;2022
+price: 0,16&hairsp;$/g
 key: 3
 
 info: Wie der Vertreter aus Alishan, aber zusätzlich leicht geröstet.
