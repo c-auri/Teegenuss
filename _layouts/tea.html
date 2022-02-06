@@ -16,9 +16,65 @@ layout: default
         </section>
     {% endif %}
 
-    {% include tea-details.html %}
-    {% include tea-brewing-advice.html %}
-    {% include tea-notes.html %}
+    <table class="tea-details">
+        <thead>
+            <tr id="tea-header">
+                <th class="table-swap-active" id="tea-details-header" onclick="toggle('tea-details')">Details</th>
+                <th class="table-swap-inactive" id="tea-brewing-header" onclick="toggle('tea-brewing')">Zubereitung</th>
+                <th class="table-swap-inactive" id="tea-notes-header" onclick="toggle('tea-notes')">Notizen</th>
+            </tr>
+        </thead>
+        <tbody id="tea-details">
+            {% include tea-details.html %}
+        </tbody>
+        <tbody id="tea-brewing" hidden>
+            {% include tea-brewing-advice.html %}
+        </tbody>
+        <tbody id="tea-notes" hidden>
+            {% include tea-notes.html %}
+        </tbody>
+    </table>
 
 </article>
 
+<script>
+    function toggle(id) {
+        let details = document.getElementById("tea-details");
+        let brewing = document.getElementById("tea-brewing");
+        let notes = document.getElementById("tea-notes");
+
+        let detailsHeader = document.getElementById("tea-details-header");
+        let brewingHeader = document.getElementById("tea-brewing-header");
+        let notesHeader = document.getElementById("tea-notes-header");
+
+        if (id == "tea-details") {
+            details.removeAttribute("hidden");
+            brewing.setAttribute("hidden", "hidden");
+            notes.setAttribute("hidden", "hidden");
+
+            detailsHeader.className = "table-swap-active";
+            brewingHeader.className = "table-swap-inactive";
+            notesHeader.className = "table-swap-inactive";
+        }
+
+        if (id == "tea-brewing") {
+            details.setAttribute("hidden", "hidden");
+            brewing.removeAttribute("hidden");
+            notes.setAttribute("hidden", "hidden");
+
+            detailsHeader.className = "table-swap-inactive";
+            brewingHeader.className = "table-swap-active";
+            notesHeader.className = "table-swap-inactive";
+        }
+
+        if (id == "tea-notes") {
+            details.setAttribute("hidden", "hidden");
+            brewing.setAttribute("hidden", "hidden");
+            notes.removeAttribute("hidden");
+
+            detailsHeader.className = "table-swap-inactive";
+            brewingHeader.className = "table-swap-inactive";
+            notesHeader.className = "table-swap-active";
+        }
+    }
+</script>

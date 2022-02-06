@@ -1,3 +1,7 @@
+$border-outside: 1px $clr-table-border solid;
+$border-inside: 1px $clr-bg solid;
+$border-inactive: 1px $clr-table-medium solid;
+
 div.tea {
     margin: 3rem .5rem;
 
@@ -18,24 +22,7 @@ div.tea {
 table {
     width: 100%;
     margin: 1rem 0;
-    border: solid $clr-light-gray 1px;
-}
-
-tr:nth-child(even) {
-    background-color: $clr-table-light;
-}
-
-tr:nth-child(odd) {
-    background-color: $clr-table-medium;
-}
-
-th {
-    padding: .5rem 0;
-    background-color: $clr-table-dark;
-}
-
-td {
-    padding: .25rem .5rem;
+    border-collapse: collapse; 
 }
 
 table.tea-details {
@@ -46,6 +33,59 @@ table.tea-details {
     td:first-child {
         width: 8ch;
     }
+}
+
+tbody {
+    border-left: $border-outside;
+    border-right: $border-outside;
+    border-bottom: $border-outside;
+}
+
+tr:nth-child(odd) {
+    background-color: $clr-table-medium;
+}
+
+tr:nth-child(even) {
+    background-color: $clr-table-light;
+}
+
+th:first-child {
+    padding: .5rem 0;
+    border-top: $border-inside;
+    background-color: $clr-table-dark;
+}
+
+th.table-swap-active,
+th.table-swap-inactive {
+    padding: .8rem 0;
+    cursor: pointer;
+}
+
+th.table-swap-active:hover,
+th.table-swap-inactive:hover {
+    background-color: $clr-order-button-hover;
+}
+
+th.table-swap-active {
+    border-top: $border-outside;
+    border-left: $border-outside;
+    border-right: $border-outside;
+    border-bottom: $border-inside;
+    background-color: $clr-table-dark;
+}
+
+th.table-swap-inactive {
+    border-top: $border-inactive;
+    border-left: $border-inactive;
+    border-right: $border-inactive;
+    border-bottom: $border-outside;
+    background-color: $clr-table-light;
+    color: $clr-medium-gray;
+}
+
+td {
+    border-left: $border-inside;
+    padding: .25rem .5rem;
 }
 
 td:first-child {

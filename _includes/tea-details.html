@@ -1,98 +1,89 @@
-<section>
-{% if page.show-details %}
-<header>
-    <h2>Details</h2>
-</header>
-<table class="tea-details">
+<tr>
+    <th rowspan="3">Gekauft</th>
+    <td>bei</td>
+    <td><a href="{{page.shop-url }}"">{{ page.shop }}</a></td>
+</tr>
+<tr>
+    <td>am</td>
+    <td>{{ page.order-date }}</td>
+</tr>
+<tr>
+    <td>Preis</td>
+    <td>{{ page.price }}</td>
+</tr>
+{% if page.type and page.cultivar %}
     <tr>
-        <th rowspan="3">Gekauft</th>
-        <td>bei</td>
-        <td><a href="{{page.shop-url }}"">{{ page.shop }}</a></td>
+        <th rowspan="2">Sorte</th>
+        <td>Teesorte</td>
+        <td>{{ page.type }}</td>
     </tr>
     <tr>
-        <td>am</td>
-        <td>{{ page.order-date }}</td>
+        <td>Strauchsorte</td>
+        <td>{{ page.cultivar }}</td>
+    </tr>
+{% else %}
+    <tr>
+        <th>Teesorte</th>
+        <td></td>
+        <td>{{ page.type }}</td>
+    </tr>
+{% endif %}
+<tr>
+    <th rowspan="3">Herkunft</th>
+    <td>Land</td>
+    <td>{{ page.country }}</td>
+</tr>
+<tr>
+    <td>Region</td>
+    <td>{{ page.location }}</td>
+</tr>
+{% if page.elevation %}
+    <tr>
+        <td>Höhe</td>
+        <td>{{ page.elevation }}</td>
+    </tr>
+{% endif %}
+{% if page.harvest and page.harvest-style %}
+    <tr>
+        <th rowspan="2">Ernte</th>
+        <td>Zeitpunkt</td>
+        <td>{{ page.harvest }}</td>
     </tr>
     <tr>
-        <td>Preis</td>
-        <td>{{ page.price }}</td>
+        <td>Art</td>
+        <td>{{ page.harvest-style }}</td>
     </tr>
-    {% if page.type and page.cultivar %}
-        <tr>
-            <th rowspan="2">Sorte</th>
-            <td>Teesorte</td>
-            <td>{{ page.type }}</td>
-        </tr>
-        <tr>
-            <td>Strauchsorte</td>
-            <td>{{ page.cultivar }}</td>
-        </tr>
-    {% else %}
-        <tr>
-            <th>Teesorte</th>
+{% elsif page.harvest %}
+    <tr>
+        <th>Ernte</th>
+        <td></td>
+        <td>{{ page.harvest }}</td>
+    </tr>
+{% endif %}
+{% if page.show-production %}
+<tr>
+        {% if page.oxidation and page.roasting and page.roast-method %}
+            <th rowspan="3">Verarbeitung</th>
+            <td>Oxidation</td>
+        {% elsif page.oxidation and page.roasting %}
+            <th rowspan="2">Verarbeitung</th>
+            <td>Oxidation</td>
+        {% elsif page.oxidation %}
+            <th>Oxidation</th>
             <td></td>
-            <td>{{ page.type }}</td>
-        </tr>
-    {% endif %}
-    <tr>
-        <th rowspan="3">Herkunft</th>
-        <td>Land</td>
-        <td>{{ page.country }}</td>
-    </tr>
-    <tr>
-        <td>Region</td>
-        <td>{{ page.location }}</td>
-    </tr>
-    {% if page.elevation %}
-        <tr>
-            <td>Höhe</td>
-            <td>{{ page.elevation }}</td>
-        </tr>
-    {% endif %}
-    {% if page.harvest and page.harvest-style %}
-        <tr>
-            <th rowspan="2">Ernte</th>
-            <td>Zeitpunkt</td>
-            <td>{{ page.harvest }}</td>
-        </tr>
-        <tr>
-            <td>Art</td>
-            <td>{{ page.harvest-style }}</td>
-        </tr>
-    {% elsif page.harvest %}
-        <tr>
-            <th>Ernte</th>
-            <td></td>
-            <td>{{ page.harvest }}</td>
-        </tr>
-    {% endif %}
-    {% if page.show-production %}
-    <tr>
-            {% if page.oxidation and page.roasting and page.roast-method %}
-                <th rowspan="3">Verarbeitung</th>
-                <td>Oxidation</td>
-            {% elsif page.oxidation and page.roasting %}
-                <th rowspan="2">Verarbeitung</th>
-                <td>Oxidation</td>
-            {% elsif page.oxidation %}
-                <th>Oxidation</th>
-                <td></td>
-            {% endif %}
-            <td>{{ page.oxidation }}</td>
-        </tr>
-        {% if page.roasting %}
-            <tr>
-                <td>Röststufe</td>
-                <td>{{ page.roasting }}</td>
-            </tr>
         {% endif %}
-        {% if page.roast-method %}
-            <tr>
-                <td>Röstmethode</td>
-                <td>{{ page.roast-method }}</td>
-            </tr>
-        {% endif %}
+        <td>{{ page.oxidation }}</td>
+    </tr>
+    {% if page.roasting %}
+        <tr>
+            <td>Röststufe</td>
+            <td>{{ page.roasting }}</td>
+        </tr>
     {% endif %}
-</table>
-</section>
+    {% if page.roast-method %}
+        <tr>
+            <td>Röstmethode</td>
+            <td>{{ page.roast-method }}</td>
+        </tr>
+    {% endif %}
 {% endif %}

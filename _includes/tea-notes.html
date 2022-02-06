@@ -1,27 +1,20 @@
-{% if page.show-notes %}
-<section>
-    <header>
-        <h2>Notizen</h2>
-    </header>
-<table class="tea-details">
 {% if page.short-notes %}
     <tr>
         <th>Aroma</th>
-        <td>{{ page.aroma }}</td>
+        <td colspan="2">{{ page.aroma }}</td>
     </tr>
     <tr>
         <th>Aufguss-<br>farbe</th>
-        <td>{{ page.liquer-color }}</td>
+        <td colspan="2">{{ page.liquer-color }}</td>
     </tr>
     <tr>
         <th>Geschmack</th>
-        <td>{{ page.taste }}</td>
+        <td colspan="2">{{ page.taste }}</td>
     </tr>
     <tr>
         <th>Blätter</th>
-        <td>{{ page.spent-leaf }}</td>
+        <td colspan="2">{{ page.spent-leaf }}</td>
     </tr>
-
 {% else %}
     <tr>
         <th rowspan="2">Aroma</th>
@@ -65,7 +58,4 @@
         <td></td>
         <td>{{ page.spent-leaf }}</td>
     </tr>
-{% endif %}
-</table>
-</section>
 {% endif %}
