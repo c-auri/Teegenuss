@@ -9,14 +9,10 @@ div.tea {
 table.tea-details {
     width: 100%;
     margin: 1rem 0;
-    border-collapse: collapse; 
+    border-collapse: collapse;
 
-    th {
-        width: 12ch;
-    }
-
-    td:first-child {
-        width: 8ch;
+    col {
+        width: 11%;
     }
 }
 

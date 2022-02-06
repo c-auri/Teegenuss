@@ -1,89 +1,89 @@
 <tr>
-    <th rowspan="3">Gekauft</th>
-    <td>bei</td>
-    <td><a href="{{page.shop-url }}"">{{ page.shop }}</a></td>
+    <th colspan="3" rowspan="3">Gekauft</th>
+    <td colspan="3">bei</td>
+    <td colspan="3"><a href="{{page.shop-url }}"">{{ page.shop }}</a></td>
 </tr>
 <tr>
-    <td>am</td>
-    <td>{{ page.order-date }}</td>
+    <td colspan="3">am</td>
+    <td colspan="3">{{ page.order-date }}</td>
 </tr>
 <tr>
-    <td>Preis</td>
-    <td>{{ page.price }}</td>
+    <td colspan="3">Preis</td>
+    <td colspan="3">{{ page.price }}</td>
 </tr>
 {% if page.type and page.cultivar %}
     <tr>
-        <th rowspan="2">Sorte</th>
-        <td>Teesorte</td>
-        <td>{{ page.type }}</td>
+        <th colspan="3" rowspan="2">Sorte</th>
+        <td colspan="3">Teesorte</td>
+        <td colspan="3">{{ page.type }}</td>
     </tr>
     <tr>
-        <td>Strauchsorte</td>
-        <td>{{ page.cultivar }}</td>
+        <td colspan="3">Strauchsorte</td>
+        <td colspan="3">{{ page.cultivar }}</td>
     </tr>
 {% else %}
     <tr>
-        <th>Teesorte</th>
-        <td></td>
-        <td>{{ page.type }}</td>
+        <th colspan="3">Teesorte</th>
+        <td colspan="3"></td>
+        <td colspan="3">{{ page.type }}</td>
     </tr>
 {% endif %}
 <tr>
-    <th rowspan="3">Herkunft</th>
-    <td>Land</td>
-    <td>{{ page.country }}</td>
+    <th colspan="3" rowspan="3">Herkunft</th>
+    <td colspan="3">Land</td>
+    <td colspan="3">{{ page.country }}</td>
 </tr>
 <tr>
-    <td>Region</td>
-    <td>{{ page.location }}</td>
+    <td colspan="3">Region</td>
+    <td colspan="3">{{ page.location }}</td>
 </tr>
 {% if page.elevation %}
     <tr>
-        <td>Höhe</td>
-        <td>{{ page.elevation }}</td>
+        <td colspan="3">Höhe</td>
+        <td colspan="3">{{ page.elevation }}</td>
     </tr>
 {% endif %}
 {% if page.harvest and page.harvest-style %}
     <tr>
-        <th rowspan="2">Ernte</th>
-        <td>Zeitpunkt</td>
-        <td>{{ page.harvest }}</td>
+        <th colspan="3" rowspan="2">Ernte</th>
+        <td colspan="3">Zeitpunkt</td>
+        <td colspan="3">{{ page.harvest }}</td>
     </tr>
     <tr>
-        <td>Art</td>
-        <td>{{ page.harvest-style }}</td>
+        <td colspan="3">Art</td>
+        <td colspan="3">{{ page.harvest-style }}</td>
     </tr>
 {% elsif page.harvest %}
     <tr>
         <th>Ernte</th>
-        <td></td>
-        <td>{{ page.harvest }}</td>
+        <td colspan="3"></td>
+        <td colspan="3">{{ page.harvest }}</td>
     </tr>
 {% endif %}
 {% if page.show-production %}
 <tr>
         {% if page.oxidation and page.roasting and page.roast-method %}
-            <th rowspan="3">Verarbeitung</th>
-            <td>Oxidation</td>
+            <th colspan="3" rowspan="3">Verarbeitung</th>
+            <td colspan="3">Oxidation</td>
         {% elsif page.oxidation and page.roasting %}
-            <th rowspan="2">Verarbeitung</th>
-            <td>Oxidation</td>
+            <th colspan="3" rowspan="2">Verarbeitung</th>
+            <td colspan="3">Oxidation</td>
         {% elsif page.oxidation %}
-            <th>Oxidation</th>
-            <td></td>
+            <th colspan="3">Oxidation</th>
+            <td colspan="3"></td>
         {% endif %}
-        <td>{{ page.oxidation }}</td>
+        <td colspan="3">{{ page.oxidation }}</td>
     </tr>
     {% if page.roasting %}
         <tr>
-            <td>Röststufe</td>
-            <td>{{ page.roasting }}</td>
+            <td colspan="3">Röststufe</td>
+            <td colspan="3">{{ page.roasting }}</td>
         </tr>
     {% endif %}
     {% if page.roast-method %}
         <tr>
-            <td>Röstmethode</td>
-            <td>{{ page.roast-method }}</td>
+            <td colspan="3">Röstmethode</td>
+            <td colspan="3">{{ page.roast-method }}</td>
         </tr>
     {% endif %}
 {% endif %}

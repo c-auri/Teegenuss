@@ -1,61 +1,61 @@
 {% if page.short-notes %}
     <tr>
-        <th>Aroma</th>
-        <td colspan="2">{{ page.aroma }}</td>
+        <th colspan="3">Aroma</th>
+        <td colspan="6">{{ page.aroma }}</td>
     </tr>
     <tr>
-        <th>Aufguss-<br>farbe</th>
-        <td colspan="2">{{ page.liquer-color }}</td>
+        <th colspan="3">Aufguss-<br>farbe</th>
+        <td colspan="6">{{ page.liquer-color }}</td>
     </tr>
     <tr>
-        <th>Geschmack</th>
-        <td colspan="2">{{ page.taste }}</td>
+        <th colspan="3">Geschmack</th>
+        <td colspan="6">{{ page.taste }}</td>
     </tr>
     <tr>
-        <th>Blätter</th>
-        <td colspan="2">{{ page.spent-leaf }}</td>
+        <th colspan="3">Blätter</th>
+        <td colspan="6">{{ page.spent-leaf }}</td>
     </tr>
 {% else %}
     <tr>
-        <th rowspan="2">Aroma</th>
-        <td>trockenes Blatt</td>
-        <td>{{ page.aroma-dry }}</td>
+        <th colspan="3" rowspan="2">Aroma</th>
+        <td colspan="2">trockenes<br>Blatt</td>
+        <td colspan="4">{{ page.aroma-dry }}</td>
     </tr>
     <tr>
-        <td>feuchtes Blatt</td>
-        <td>{{ page.aroma-wet }}</td>
+        <td colspan="2">feuchtes<br>Blatt</td>
+        <td colspan="4">{{ page.aroma-wet }}</td>
     </tr>
     <tr>
-        <th>Aufguss-<br>farbe</th>
-        <td></td>
-        <td>{{ page.liquer-color }}</td>
+        <th colspan="3">Aufguss-<br>farbe</th>
+        <td colspan="2"></td>
+        <td colspan="4">{{ page.liquer-color }}</td>
     </tr>
     <tr>
-        <th rowspan="2">Geschmack</th>
-        <td>ersten Aufgüsse</td>
-        <td>{{ page.taste-early }}</td>
+        <th colspan="3" rowspan="2">Geschmack</th>
+        <td colspan="2">ersten<br>Aufgüsse</td>
+        <td colspan="4">{{ page.taste-early }}</td>
     </tr>
     <tr>
-        <td>spätere Aufgüsse</td>
-        <td>{{ page.taste-later }}</td>
+        <td colspan="2">spätere<br>Aufgüsse</td>
+        <td colspan="4">{{ page.taste-later }}</td>
     </tr>
     {% if page.texture %}
         <tr>
-            <th>Textur</th>
-            <td></td>
-            <td>{{ page.texture }}</td>
+            <th colspan="3">Textur</th>
+            <td colspan="2"d></td>
+            <td colspan="4">{{ page.texture }}</td>
         </tr>
     {% endif %}
     {% if page.feeling %}
         <tr>
-            <th>Gefühl</th>
-            <td></td>
-            <td>{{ page.feeling }}</td>
+            <th colspan="3">Gefühl</th>
+            <td colspan="2"></td>
+            <td colspan="4">{{ page.feeling }}</td>
         </tr>
     {%endif %}
     <tr>
-        <th>Blätter</th>
-        <td></td>
-        <td>{{ page.spent-leaf }}</td>
+        <th colspan="3">Blätter</th>
+        <td colspan="2"></td>
+        <td colspan="4">{{ page.spent-leaf }}</td>
     </tr>
 {% endif %}

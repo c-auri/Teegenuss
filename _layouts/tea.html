@@ -17,11 +17,20 @@ layout: default
     {% endif %}
 
     <table class="tea-details">
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
         <thead>
-            <tr id="tea-header">
-                <th class="table-swap-active" id="tea-details-header" onclick="toggle('tea-details')">Details</th>
-                <th class="table-swap-inactive" id="tea-brewing-header" onclick="toggle('tea-brewing')">Zubereitung</th>
-                <th class="table-swap-inactive" id="tea-notes-header" onclick="toggle('tea-notes')">Notizen</th>
+            <tr id="tea-header" class="table-swap-inactive">
+                <th class="table-swap-active" id="tea-details-header" onclick="toggle('tea-details')" colspan="3">Details</th>
+                <th class="table-swap-inactive" id="tea-brewing-header" onclick="toggle('tea-brewing')" colspan="3">Zubereitung</th>
+                <th class="table-swap-inactive" id="tea-notes-header" onclick="toggle('tea-notes')" colspan="3">Notizen</th>
             </tr>
         </thead>
         <tbody id="tea-details">
