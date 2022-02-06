@@ -33,7 +33,6 @@ gongfu-first: 10 Sekunden
 gongfu-second: 10 Sekunden
 gongfu-third: 10 Sekunden
 gongfu-further: +10 Sekunden pro Aufguss
-gongfu-increase-temperature: true
 
 show-notes: true
 aroma-dry: Milch, Blütenduft,<br>angeschnittene Blumenstängel
