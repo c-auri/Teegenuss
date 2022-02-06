@@ -1,13 +1,15 @@
 ---
 title: Bao Zhong Oolong
 color: yellow-green
-info: Ein günstiger Vertreter der modernen grünen, ungerösteten Oolongs mit offenen Blatt.
 
 shop: Taiwan Tea Crafts
 shop-url: https://www.taiwanteacrafts.com/product/baguashan-spring-bao-zhong-tea/
 order-id: 2022-ttc-1
 order-date: Januar&nbsp;2022
 key: 1
+
+info: Ein günstiger Vertreter der modernen grünen, ungerösteten Oolongs mit offenen Blatt.
+summary: Erinnert optisch an grünen Tee, wegen seiner Milchigkeit ist es aber zweifellos ein Oolong. Geschmacklich wenig überraschend und eher eindimensional, trotzdem eine überraschend gute Qualität für diesen außerordentlich niedrigen Preis.
 
 show-details: true
 type: Oolong

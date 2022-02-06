@@ -6,11 +6,16 @@ layout: default
         <h1>{{ page.title }}</h1>
         <span class="sub-heading">Gekauft bei <a href="{{ page.shop-url }}">{{ page.shop }}</a> im&nbsp;{{ page.order-date }}</span>
     </header>
-    
-    {{ content }}
-    
+    {% if page.summary %}
+        <section>
+            <p>{{ page.summary }}</p>
+        </section>
+    {% endif %}
+
     {% include tea-details.html %}
     {% include tea-brewing-advice.html %}
     {% include tea-notes.html %}
+
+    {{ content }}
 </article>
 

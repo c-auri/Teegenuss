@@ -1,13 +1,16 @@
 ---
 title: Leicht gerösteter Jin&nbsp;Xuan
 color: yellow
-info: Wie der Vertreter aus Alishan, aber zusätzlich leicht geröstet.
 
 shop: Taiwan Tea Crafts
 shop-url: https://www.taiwanteacrafts.com/product/organic-jin-xuan-oolong-tea
 order-id: 2022-ttc-1
 order-date: Januar&nbsp;2022
 key: 3
+
+info: Wie der Vertreter aus Alishan, aber zusätzlich leicht geröstet.
+summary: Die leichte Röstung gibt diesem ansonsten sehr grünen Oolong eine leichte Nussigkeit und macht ihn etwas robuster in der Zubereitung. Weniger herb und damit etwas bekömmlicher als ungeröstete grüne Oolongs.
+
 
 show-details: true
 type: Oolong
@@ -19,7 +22,6 @@ elevation: 1100m
 cultivar: Jin Xuan
 oxidation: sehr niedrig
 roasting: leicht
-
 gongfu: true
 gongfu-temperature: 90°C
 gongfu-weight: 5-6&hairsp;g pro 100&hairsp;ml
