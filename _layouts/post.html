@@ -7,7 +7,7 @@ layout: default
         <span class="sub-heading">Geschrieben am {{ page.date | date: "%-d.%-m.%Y" }}</span>
     </header>
     <section class="lead">
-        <img src="/assets/img/posts/{{ page.pid }}/lead.jpg">
+        <img src="/assets/img/posts/{{ page.pid }}/lead.jpg" alt="{{ post.lead-alt }}">
         <p class="subtitle">{{ page.lead-subtitle }}</p>
     </section>
     <section class="excerpt">
