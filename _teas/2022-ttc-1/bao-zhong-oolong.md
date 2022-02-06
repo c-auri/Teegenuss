@@ -13,7 +13,7 @@ show-details: true
 type: Oolong
 country: Taiwan
 harvest: Frühling 2021
-harvest-style: maschinengepflückt
+harvest-style: maschinell
 elevation: 350m
 location: Baguashan
 cultivar: Si Ji Chun
@@ -22,7 +22,7 @@ roasting: keine
 
 gongfu: true
 gongfu-temperature: 85°C
-gongfu-weight: 6g pro 100ml 
+gongfu-weight: 5-6&hairsp;g pro 100&hairsp;ml
 gongfu-volume: ca. 2/3 des Gefäßes gefüllt ist
 gongfu-rinse: blitz
 gongfu-first: 10 Sekunden

@@ -22,7 +22,7 @@ roasting: leicht
 
 gongfu: true
 gongfu-temperature: 95°C
-gongfu-weight: 5g pro 100ml 
+gongfu-weight: 4-5&hairsp;g pro 100&hairsp;ml
 gongfu-volume: ca. 2/3 des Gefäßes gefüllt ist
 gongfu-rinse: blitz
 gongfu-first: 10 Sekunden

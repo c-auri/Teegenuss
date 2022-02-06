@@ -14,7 +14,7 @@ type: Oolong
 country: Taiwan
 location: Beishan
 harvest: Juni 2021
-harvest-style: maschinengepflückt
+harvest-style: maschinell
 elevation: 1100m
 cultivar: Wuyi
 oxidation: medium
@@ -22,7 +22,7 @@ roasting: mittelstark
 
 gongfu: true
 gongfu-temperature: 100°C
-gongfu-weight: 6g pro 100ml 
+gongfu-weight: 5-6&hairsp;g pro 100&hairsp;ml
 gongfu-volume: der Gefäßboden bedeckt ist
 gongfu-rinse: blitz
 gongfu-first: 5 Sekunden
