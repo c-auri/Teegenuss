@@ -19,6 +19,7 @@ harvest: April 2019
 harvest-style: handgepflückt
 elevation: 1200m
 cultivar: Qing Xin
+show-production: true
 oxidation: medium
 roasting: medium
 roast-method: Holzkohleröstung

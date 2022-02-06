@@ -21,6 +21,7 @@ harvest: Oktober 2021
 harvest-style: handgepflückt
 elevation: 1100m
 cultivar: Jin Xuan
+show-production: true
 oxidation: sehr leicht
 roasting: sehr leicht
 roast-method: Ofenröstung

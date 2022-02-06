@@ -20,6 +20,7 @@ harvest: Juni 2021
 harvest-style: maschinell
 elevation: 1100m
 cultivar: Wuyi
+show-production: true
 oxidation: medium
 roasting: medium
 roast-method: Ofenröstung

@@ -18,6 +18,7 @@ harvest: October 2019
 harvest-style: handgepflückt
 elevation: 400m
 cultivar: Jin Xuan
+show-production: true
 oxidation: leicht
 roasting: leicht
 roast-method: Holzkohleröstung

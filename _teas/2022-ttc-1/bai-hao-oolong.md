@@ -17,6 +17,7 @@ elevation: 600m
 harvest: Juni 2021
 harvest-style: handgepflückt
 cultivar: Qin Xin Da Mu
+show-production: true
 oxidation: stark
 roasting: leicht
 roast-method: Ofengeröstet
