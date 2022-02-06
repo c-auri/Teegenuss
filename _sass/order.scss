@@ -40,12 +40,12 @@ button.order {
     border-top: none;
     border-left: none;
     color: $clr-dark-gray;
-    background-color: $clr-order-button;
+    background-color: $clr-button;
 }
 
 button.order:hover {
     color: $clr-black;
-    background-color: $clr-order-button-hover;
+    background-color: $clr-button-hover;
     cursor: pointer;
 }
 

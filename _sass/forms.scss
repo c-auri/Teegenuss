@@ -77,11 +77,11 @@ button[type=submit] {
     font-size: var(--fs-600);
     border-top: none;
     border-left: none;
-    background-color: $clr-order-button;
+    background-color: $clr-button;
 }
 
 button[type=submit]:hover {
-    background-color: $clr-order-button-hover;
+    background-color: $clr-button-hover;
     cursor: pointer;
 }
 
