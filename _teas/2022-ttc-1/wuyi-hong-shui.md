@@ -10,7 +10,7 @@ price: 0,24&hairsp;$/g
 key: 6
 
 info: Ein stärker oxidierter und gerösteter Oolong, dessen Strauchsorte aus dem Wuyi-Gebirge in China stammt und auch stilistisch an die dortigen Felsentees erinnert.
-summary: Die althergebrachte Strauchsorte aus dem Wuyi in China eignet sich hervorragend für diesen als Hong Shui ("Rotes Wasser") bezeichneten Oolong-Stil mit höherer Oxidation und Röstung. Ein wärmend-nussiger Tee mit einer starken Röstnote, allerdings etwas heller als die meisten Felsentees aus China.
+summary: Die althergebrachte Strauchsorte aus dem Wuyi in China eignet sich hervorragend für diesen als Hong Shui ("Rotes Wasser") bezeichneten Oolong-Stil mit höherer Oxidation. Ein wärmend-nussiger Tee mit einer starken Röstnote, allerdings noch etwas heller als die meisten Felsentees aus China.
 
 show-details: true
 type: Oolong
@@ -40,5 +40,5 @@ liquer-color: gelb-orange,<br>anfangs hell, später dunkler werdend
 taste-early: leicht süß, cremig, nussig
 taste-later: weiterhin cremig und nussig,<br> herber werdend,<br>erinnert an Kräuter
 feeling: wärmend
-spent-leaf: olivgrün, braun,<br>rote Ränder,<br>einzelne Blätter ohne Stängel,<br>teilweise eingerissen
+spent-leaf: olivgrün, braun,<br>rote Ränder,<br>einzelne Blätter,<br>teilweise eingerissen,<br>keine Stängel
 ---
