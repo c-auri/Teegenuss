@@ -1,6 +1,7 @@
-$border-outside: 2px $clr-table-border solid;
-$border-inside: 2px $clr-bg solid;
-$border-inactive: 2px $clr-table-medium solid;
+$border-width: 2px;
+$border-outside: $border-width $clr-table-border solid;
+$border-inside: $border-width $clr-bg solid;
+$border-inactive: $border-width $clr-table-medium solid;
 
 div.tea {
     margin: 3rem .5rem;
@@ -36,6 +37,8 @@ th.table-swap-inactive {
 
 th.table-swap-active:hover,
 th.table-swap-inactive:hover {
+    color: black;
+    border: $border-width $clr-button-hover solid;
     background-color: $clr-button-hover;
 }
 
@@ -44,8 +47,9 @@ thead {
         border-top: $border-inactive;
         border-left: $border-inactive;
         border-bottom: $border-outside;
-        background-color: $clr-table-light;
+        font-weight: 500;
         color: $clr-medium-gray;
+        background-color: $clr-table-light;
     }
 
     th.table-swap-inactive:last-child {
@@ -54,7 +58,7 @@ thead {
 
     th.table-swap-active {
         border: $border-outside;
-        border-bottom: 2px $clr-table-dark solid;
+        border-bottom: $border-width $clr-table-dark solid;
         background-color: $clr-table-dark;
     }
 
