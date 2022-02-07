@@ -3,6 +3,7 @@ title: Traditionell kohle-gerösteter Jin&nbsp;Xuan
 color: orange
 roasting-method: traditionelle Holzkohleröstung
 info: Stärkere Holzkohleröstung, wie es traditionell üblich ist.
+summary: Ein mitteldunkler Oolong mit traditioneller Holzkohleröstung. Süße Honignoten verbinden sich mit deutlichen, aber nicht zu starken Röstnoten und erinnern stellenweise an den Geschmack von Karamellbonbons.
 
 shop: Taiwan Tea Crafts
 shop-url: https://www.taiwanteacrafts.com/product/high-mountain-charcoal-pit-fired-oolong-tea

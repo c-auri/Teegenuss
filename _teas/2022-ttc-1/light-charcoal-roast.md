@@ -2,6 +2,7 @@
 title: Leicht kohle-gerösteter Jin&nbsp;Xuan
 color: dark-yellow
 info: Ebenfalls leicht geröstet, aber mit Holzkohle und nicht in einem elektrischen Ofen.
+summary: Ein Oolong auf der helleren Seite, der durch seine leichte Holzkohleröstung aber etwas an Komplexität gewinnt. Zu einer leichten Milchigkeit und eher grünen Aromen kommen Röstnoten und eine sanfte Nussigkeit.
 
 shop: Taiwan Tea Crafts
 shop-url: https://www.taiwanteacrafts.com/product/organic-jin-xuan-light-charcoal-pit-fired-oolong-tea
