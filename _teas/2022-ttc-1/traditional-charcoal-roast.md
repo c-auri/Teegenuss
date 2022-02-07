@@ -45,3 +45,4 @@ texture: leicht
 feeling: wärmend
 spent-leaf: grün-braun,<br>ganze Blätter, lose Stängel,<br>öffnen sich auch nach dem Aufgießen nicht komplett
 ---
+<img src="/assets/img/orders/2022-ttc-1/tcrqx/04-third-infusion.jpg" alt="Ein mitteldunkler Oolong mit aufgegangenen Blättern im Gaiwan, daneben eine Schale mit einem hellorangenen Aufguss.">

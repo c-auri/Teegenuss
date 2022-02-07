@@ -44,3 +44,4 @@ texture: leicht
 feeling: wärmend
 spent-leaf: olivgrün,<br>ganze Blätter,<br>manche noch am Stiel
 ---
+<img src="/assets/img/orders/2022-ttc-1/lcrjx/05-second-infusion.jpg" alt="Ein mitteldunkler Oolong mit aufgegangenen Blättern im Gaiwan, daneben eine Schale mit einem sattgelben Aufguss.">
