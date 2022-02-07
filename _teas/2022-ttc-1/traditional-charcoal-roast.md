@@ -33,4 +33,14 @@ gongfu-first: 5 Sekunden
 gongfu-second: 5 Sekunden
 gongfu-third: 10 Sekunden
 gongfu-further: +10 Sekunden pro Aufguss
+
+show-notes: true
+aroma-dry: Toast, Getreide
+aroma-wet: Toffee, Moschus
+liquer-color: sattes Gelb bis helles Orange
+taste-early: weich und süß,<br>leicht sahnig
+taste-later: süß, Karamell,<br>leicht herb
+texture: leicht
+feeling: wärmend
+spent-leaf: grün-braun,<br>ganze Blätter, lose Stängel,<br>öffnen sich auch nach dem Aufgießen nicht komplett
 ---

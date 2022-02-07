@@ -32,4 +32,14 @@ gongfu-first: 5 Sekunden
 gongfu-second: 5 Sekunden
 gongfu-third: 10 Sekunden
 gongfu-further: +10 Sekunden pro Aufguss
+
+show-notes: true
+aroma-dry: Toast, Getreite
+aroma-wet: lebt auf und wird grüner,<br>erinnert an einen Laubwald
+liquer-color: sattes Gelb
+taste-early: Toast, Haselnuss,<br>leicht milchig
+taste-later: herber werdend,<br>Röstnote nimmt ab
+texture: leicht
+feeling: wärmend
+spent-leaf: olivgrün,<br>ganze Blätter,<br>manche noch am Stiel
 ---
