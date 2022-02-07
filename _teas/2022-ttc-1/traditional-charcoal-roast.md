@@ -37,6 +37,7 @@ gongfu-further: +10 Sekunden pro Aufguss
 show-notes: true
 aroma-dry: Toast, Getreide
 aroma-wet: Toffee, Moschus
+aroma-ceramics: Honig, Karamellbonbon
 liquer-color: sattes Gelb bis helles Orange
 taste-early: weich und süß,<br>leicht sahnig
 taste-later: süß, Karamell,<br>leicht herb

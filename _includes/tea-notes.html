@@ -17,7 +17,11 @@
     </tr>
 {% else %}
     <tr>
+        {% if page.aroma-ceramics %}
+        <th colspan="3" rowspan="3">Aroma</th>
+        {% else %}
         <th colspan="3" rowspan="2">Aroma</th>
+        {% endif %}
         <td colspan="2">trockenes<br>Blatt</td>
         <td colspan="4">{{ page.aroma-dry }}</td>
     </tr>
@@ -25,6 +29,12 @@
         <td colspan="2">feuchtes<br>Blatt</td>
         <td colspan="4">{{ page.aroma-wet }}</td>
     </tr>
+    {% if page.aroma-ceramics %}
+        <tr>
+            <td colspan="2"><span class="mouseover" title="Das Aroma des Teegeschirrs nach dem Aufgießen bzw. Trinken. Zum Beispiel der Gaiwandeckel, die Ausschankkanne oder die Trinkschalen.">Geschirr</span></td>
+            <td colspan="4">{{ page.aroma-ceramics }}</td>
+        </tr>
+    {% endif %}
     <tr>
         <th colspan="3">Aufguss-<br>farbe</th>
         <td colspan="2"></td>
