@@ -22,7 +22,11 @@
             title="D.h. so schnell wie möglich ein- und wieder ausgießen."
         {%endif%}
         colspan="6">
-        {{ page.gongfu-rinse }}
+        {% if page.gongfu-rinse == "optional" %}
+            <span class="subtitle">kann übersprungen werden</span>
+        {% else %}
+            {{ page.gongfu-rinse }}
+        {% endif %}
     </td>
 </tr>
 <tr>
