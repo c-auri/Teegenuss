@@ -1,10 +1,12 @@
 <tr>
     <th colspan="3">Temperatur</th>
-    <td colspan="6">{{ page.gongfu-temperature }}</td>
+    <td colspan="2"></td>
+    <td colspan="4">{{ page.gongfu-temperature }}</td>
 </tr>
 <tr>
     <th colspan="3">Menge</th>
-    <td colspan="6">
+    <td colspan="2"></td>
+    <td colspan="4">
         {{ page.gongfu-weight }}
         {% if page.gongfu-volume %}
             <br><span class="subtitle">oder bis {{ page.gongfu-volume }}</span>
@@ -12,16 +14,17 @@
     </td>
 </tr>
 <tr>
-    <th colspan="3"
+    <th colspan="3" rowspan="3">Ziehzeiten</th>
+    <td colspan="2"
         class="mouseover"
         title="Das ist der Aufguss vorm ersten Trinkaufguss. Er dient der Vorbereitung der Blätter und ist nicht zum trinken gedacht. Kann direkt entsorgt werden, wenn man möchte kann man ihn aber auch trinken.">
         Abguss
-    </th>
+    </td>
     <td {% if page.gongfu-rinse == "blitz" %}
             class="mouseover"
             title="D.h. so schnell wie möglich ein- und wieder ausgießen."
         {%endif%}
-        colspan="6">
+        colspan="5">
         {% if page.gongfu-rinse == "optional" %}
             <span class="subtitle">kann übersprungen werden</span>
         {% else %}
@@ -30,49 +33,23 @@
     </td>
 </tr>
 <tr>
-    <th colspan="3">1. Aufguss</th>
-    <td {% if page.gongfu-first == "blitz" %}
+    <td colspan="2">Anfangs</th>
+    <td {% if page.gongfu-early == "blitz" %}
             class="mouseover"
             title="D.h. so schnell wie möglich ein- und wieder ausgießen."
         {%endif%}
-        colspan="6">
-        {{ page.gongfu-first }}
+        colspan="5">
+        {{ page.gongfu-early }}
     </td>
 </tr>
-{% if page.gongfu-second %}
-    <tr>
-        <th colspan="3">2. Aufguss</th>
-        <td {% if page.gongfu-second == "blitz" %}
-                class="mouseover"
-                title="D.h. so schnell wie möglich ein- und wieder ausgießen."
-            {%endif%}
-            colspan="6">
-        {{ page.gongfu-second }}
-        </td>
-    </tr>
-{% endif %}
-{% if page.gongfu-third %}
-    <tr>
-        <th colspan="3">3. Aufguss</th>
-        <td {% if page.gongfu-third == "blitz" %}
-                class="mouseover"
-                title="D.h. so schnell wie möglich ein- und wieder ausgießen."
-            {%endif%}
-            colspan="6">
-        {{ page.gongfu-third }}
-        </td>
-    </tr>
-{% endif %}
-{% if page.gongfu-further %}
-    <tr>
-        <th colspan="3">
-            Weitere
-        </th>
-        <td colspan="6">
-            {{ page.gongfu-further }}
-            {% if page.gongfu-increase-temperature %}
-                <br><span class="subtitle">Temperatur kann später erhöht werden</span>
-            {% endif %}
-        </td>
-    </tr>
-{% endif %}
+<tr>
+    <td colspan="2">
+        Später
+    </td >
+    <td colspan="5">
+        {{ page.gongfu-further }}
+        {% if page.gongfu-increase-temperature %}
+            <br><span class="subtitle">Temperatur kann später erhöht werden</span>
+        {% endif %}
+    </td>
+</tr>
