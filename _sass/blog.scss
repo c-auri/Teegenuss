@@ -1,0 +1,15 @@
+@media (min-width: $bp-2) {
+    img.blog {
+        width: 300px;
+        float: left;
+        padding-right: .5rem;
+    }
+}
+
+section {
+    padding: 2em 0;
+}
+
+h1.blog {
+    padding: .5em 0;
+}
