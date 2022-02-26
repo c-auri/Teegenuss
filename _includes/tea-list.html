@@ -1,5 +1,5 @@
 <ul>
-    {% assign teas = site.teas | where: "order-id",  page.terms-id | sort: "key" %}
+    {% assign teas = site.teas | where: "order-id",  page.order-id | sort: "key" %}
     {%- for tea in teas -%}
         <li>
             <a class="{{tea.color}}" href="{{ tea.url }}">{{ tea.title }}</a><span class="tea-info">: {{ tea.info }}</span>
