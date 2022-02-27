@@ -1,8 +1,6 @@
 collections:
   teas:
     output: true
-  orders:
-    output: true
 
 defaults:
   - scope:
