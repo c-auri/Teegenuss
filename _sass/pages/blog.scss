@@ -1,15 +1,43 @@
-@media (min-width: $bp-2) {
+article.blog {
+    padding-bottom: 3rem;
+}
+
+h1.blog,
+img.blog {
+    padding: .5rem 0;
+}
+
+@media (min-width: $bp-1) {
+    section.blog {
+        padding: .5rem 0;
+    }
+
     img.blog {
-        width: 300px;
+        width: 50%;
+        max-width: 300px;
+        padding: 0 1.5rem .5rem 0;
         float: left;
-        padding-right: .5rem;
     }
 }
 
-section {
-    padding: 2em 0;
-}
+@media (min-width: $bp-2) {
+    img.blog {
+        width: 300px;
+        padding: 0 1.5rem .5rem 0;
+    }
 
-h1.blog {
-    padding: .5em 0;
+    section.blog {
+        height: 240px;
+        overflow: hidden;
+        
+        p {
+            margin-right: 3rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 9; /* number of lines to show */
+                    line-clamp: 9; 
+            -webkit-box-orient: vertical;
+        }
+    }
 }
