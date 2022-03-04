@@ -1,5 +1,5 @@
-header {
-    padding: 1rem;
+header.main {
+    margin: .5rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -78,10 +78,10 @@ header {
     }
 }
 
-@media (min-width: 500px) {
+@media (min-width: $bp-2) {
     header {
         nav {
-            padding-right: 3rem;
+            margin-right: 5rem;
         }
     }
 }
