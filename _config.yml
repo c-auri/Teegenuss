@@ -1,12 +1,19 @@
 collections:
   teas:
     output: true
+  orders:
+    output: true
 
 defaults:
   - scope:
       path: ""
     values:
       layout: "default"
+  - scope:
+      path: ""
+      type: "orders"
+    values:
+      layout: "order"
   - scope:
       path: ""
       type: "teas"
