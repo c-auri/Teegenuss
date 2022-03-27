@@ -18,22 +18,6 @@ div.order {
     }
 }
 
-button.order {
-    margin: 1rem auto;
-    padding: 0.8rem 3rem;
-    font-size: var(--fs-600);
-    border-top: none;
-    border-left: none;
-    color: $clr-dark-gray;
-    background-color: $clr-button;
-}
-
-button.order:hover {
-    color: $clr-black;
-    background-color: $clr-button-hover;
-    cursor: pointer;
-}
-
 form {
     background-color: $clr-order-bg;
 

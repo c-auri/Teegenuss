@@ -28,20 +28,46 @@ span.order-tea-price {
     float: right;
 }
 
-.order-status {
-    margin: 0 3rem;
-    color: $clr-medium-gray;
-    text-align: center;
-    font-size: var(--fs-300);
-}
-
 .price {
     font-weight: bold;
 }
 
 p.order-button {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding: 2rem 0;
     display: flex;
     justify-content: center;
+}
+
+button.order,
+button.order-closed {
+    padding: 0.8rem 3rem;
+    font-size: var(--fs-600);
+    border-top: none;
+    border-left: none;
+    background-color: $clr-button;
+}
+
+button.order {
+    color: $clr-dark-gray;
+}
+
+button.order-closed {
+    color: $clr-medium-gray;
+}
+
+button.order:hover {
+    color: $clr-black;
+    background-color: $clr-button-hover;
+    cursor: pointer;
+}
+
+button.order-closed:hover {
+    cursor: pointer;
+}
+
+.order-status {
+    margin: 0 3rem;
+    color: $clr-medium-gray;
+    text-align: center;
+    font-size: var(--fs-300);
 }
