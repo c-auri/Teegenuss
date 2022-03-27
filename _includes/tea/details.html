@@ -11,7 +11,7 @@
 </tr>
 <tr>
     <td colspan="3">Preis</td>
-    <td colspan="3">{{ page.price }}</td>
+    <td colspan="3">{{ page.price }}&hairsp;<sup>{{ page.currency }}</sup>/<sub>g</sub></td>
 </tr>
 {% if page.type and page.cultivar %}
     <tr>
@@ -42,7 +42,7 @@
 {% if page.elevation %}
     <tr>
         <td colspan="3">Höhe</td>
-        <td colspan="3">{{ page.elevation }}</td>
+        <td colspan="3">{{ page.elevation }}&hairsp;m</td>
     </tr>
 {% endif %}
 {% if page.harvest and page.harvest-style %}
