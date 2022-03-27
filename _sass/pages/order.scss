@@ -1,3 +1,33 @@
+div.order-overview {
+    margin: 3rem 0;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+@media (min-width: $bp-2) {
+    div.order-overview {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+div.order-tea {
+    width: 200px;
+}
+
+span.order-tea-type,
+span.order-tea-price {
+    color: $clr-medium-gray;
+}
+
+span.order-tea-type {
+    float: left;
+}
+
+span.order-tea-price {
+    float: right;
+}
+
 .order-status {
     margin: 0 3rem;
     color: $clr-medium-gray;

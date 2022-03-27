@@ -1,0 +1,18 @@
+<div class="order-overview">
+    {% assign teas = site.teas 
+        | where: "order-id",  page.order-id 
+        | sort: "key" %}
+
+    {%- for tea in teas -%}
+        <div class="order-tea">
+            <a class="{{ tea.color }}" href="{{- tea.url -}}">
+                <img src="/assets/img/orders/{{tea.order-id}}/{{tea.shorthand}}/01.jpg">
+                <span>{{ tea.title }}</span>
+                <br>
+                <span class="order-tea-type">{{ tea.type }}</span>
+                <span class="order-tea-price">{{ tea.price }}</span>
+            </a>
+        </div>
+    {% endfor %}
+
+</div>
