@@ -5,8 +5,9 @@
 
     {%- for tea in teas -%}
         <div class="order-tea">
-            <a href="{{- tea.url -}}">
-                <img src="/assets/img/orders/{{tea.order-id}}/{{tea.shorthand}}/thumb.jpg">
+            <a class="preview" href="{{- tea.url -}}">
+                <img class="thumb" src="/assets/img/orders/{{tea.order-id}}/{{tea.shorthand}}/thumb.jpg">
+                <img class="hover" src="/assets/img/orders/{{tea.order-id}}/{{tea.shorthand}}/hover.jpg">
                 <span>{{ tea.title }}</span>
                 <br>
                 <span class="order-tea-type">{{ tea.type }}</span>

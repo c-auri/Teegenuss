@@ -71,3 +71,15 @@ button.order-closed:hover {
     text-align: center;
     font-size: var(--fs-300);
 }
+
+a.preview img.hover {
+    display: none;  
+}
+
+a.preview:hover img.hover {
+    display: inline-block;  
+}
+
+a.preview:hover img.thumb {
+    display: none;  
+}
