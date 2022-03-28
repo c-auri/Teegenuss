@@ -14,10 +14,14 @@ layout: default
     <section class="slideshow">
 
         {% for image in site.static_files %}
-            {% if image.path contains page.order-id and image.path contains page.shorthand %}
-                <div class="slide fade">
-                    <img src="{{ site.baseurl }}{{ image.path }}" alt="image" />
-                </div>
+            {% if image.path contains page.order-id 
+                and image.path contains page.shorthand %}
+                {% unless image.basename == "thumb" 
+                    or image.basename == "hover" %}
+                    <div class="slide fade">
+                        <img src="{{ site.baseurl }}{{ image.path }}" alt="image" />
+                    </div>
+                {% endunless %}
             {% endif %}
         {% endfor %}
         
