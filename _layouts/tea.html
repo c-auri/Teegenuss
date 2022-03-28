@@ -19,7 +19,9 @@ layout: default
                 {% unless image.basename == "thumb" 
                     or image.basename == "hover" %}
                     <div class="slide fade">
-                        <img src="{{ site.baseurl }}{{ image.path }}" alt="image" />
+                        <img 
+                            src="{{ site.baseurl }}{{ image.path }}" 
+                            alt="{{ image.basename }}" />
                     </div>
                 {% endunless %}
             {% endif %}
