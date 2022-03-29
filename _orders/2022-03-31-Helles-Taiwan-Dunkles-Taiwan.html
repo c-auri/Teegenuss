@@ -1,0 +1,58 @@
+---
+title: Helles Taiwan, Dunkles Taiwan
+date: 2022-03-28T00:01:00Z
+order-id: 22-2
+open: false
+stash: [ 20, 20 ]
+price: [ "25,00", "25,00" ]
+---
+<section class="order-intro">
+    <p>
+        Vor dem Beginn der diesjährigen Frühjahrsernte habe ich auf <a href="https://www.taiwanteacrafts.com/">Taiwan Tea Crafts</a> eine Auswahl von Vorjahrestees zu reduzierten Preisen gekauft, die ich hier mit euch teilen möchte. Dieses mal könnt ihr euch zwischen zwei getrennten Paketen entscheiden und entweder nur eines von beiden, oder beide zusammen bestellen. Von jedem Tee wird wieder 12&hairsp;g verteilt.
+    </p>
+</section>
+
+<section class="order-package">
+    <h3>Paket</h3>
+    <h2>Helles Taiwan</h2>
+    <p>
+        Das erste Paket besteht aus zwei Grüntees und sechs Hochgebirgsoolongs. Letztere reichen von günstigen Vertretern aus vergleichsweise niedrigen Höhenlagen bis zu absoluten Spitzentees aus den höchsten Anbauregionen Taiwans. Eine gute Gelegenheit um die Unterschiede zwischen den verschiedenen Hochgebirgsregionen kennenzulernen.
+    </p>
+    
+    {% assign teas = site.teas | where: 'order-id',  '22-2' | where: 'package', 'H' | sort: "key" %}
+    {% include order/overview.html %}
+
+    {% assign package-number = 0 %}
+    {% include order/package-status.html %}
+</section>
+
+<section class="order-package">
+    <h3>Paket</h3>
+    <h2>Dunkles Taiwan</h2>
+    <p>
+        Das zweite Paket bietet eine Auswahl an verschiedenen dunklen Tees. Sechs Oolongs mit sehr unterschiedlichen Charakteristiken und zwei schwarze Tees bieten ein breites Spektrum verschiedener Oxidations- und Röstgrade.
+    </p>
+    
+    {% assign teas = site.teas | where: 'order-id',  '22-2' | where: 'package', 'D' | sort: "key" %}
+    {% include order/overview.html %}
+
+    {% assign package-number = 1 %}
+    {% include order/package-status.html %}
+</section>
+
+<p class="order-button">
+    <button 
+        {% if page.open %}
+            class="order"
+            onclick="location.href='/terms/{{page.terms-id}}.html'"
+        {% else %}
+            class="order-closed"
+        {% endif %}
+            type="button">
+            Zur Bestellung
+    </button>
+</p>
+
+<p class="order-status">
+    Die Bestellung ist noch nicht geöffnet.
+</p>

@@ -20,6 +20,28 @@ section.order-package {
     p {
         padding: .5rem 0;
     }
+
+    table.package-status {
+        padding: 2rem 0;
+        width: 100%;
+        
+        td:first-child {
+            vertical-align: top;
+        }
+
+        td:last-child {
+            text-align: right;
+        }
+
+        p.package-price,
+        p.package-shipping {
+            padding: 0;
+        }
+
+        p.package-shipping {
+            color: $clr-medium-gray;
+        }
+    }
 }
 
 .order-overview {

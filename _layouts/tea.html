@@ -20,10 +20,12 @@ layout: default
             {% for image in site.static_files %}
                 {% if image.path contains page.order-id 
                     and image.path contains page.shorthand %}
+
                     {% unless image.basename == "thumb" 
                         or image.basename == "hover" %}
                         <div class="slide fade">
                             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                            
                             <img 
                                 src="{{ site.baseurl }}{{ image.path }}" 
                                 alt="{{ image.basename }}" />
@@ -31,6 +33,7 @@ layout: default
                             <a class="next" onclick="plusSlides(1)">&#10095;</a>
                         </div>
                     {% endunless %}
+
                 {% endif %}
             {% endfor %}
             

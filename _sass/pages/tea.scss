@@ -35,9 +35,12 @@ article.tea {
     }
 }
 
+.tea-reference {
+    color: $clr-medium-dark-gray;
+}
+
 .tea-slideshow {
     max-width: 100%;
-    max-height: 300px;
     margin: 2rem 0;
     padding: 1rem 0;
     position: relative;
@@ -58,7 +61,8 @@ article.tea {
     }
 
     .tea-heading,
-    .tea-summary {
+    .tea-summary,
+    .tea-reference {
         text-align: left;
     }
 }
