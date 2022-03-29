@@ -3,8 +3,67 @@ $border-outside: $border-width $clr-table-border solid;
 $border-inside: $border-width $clr-bg solid;
 $border-inactive: $border-width $clr-table-medium solid;
 
-div.tea {
-    margin: 3rem .5rem;
+article.tea {
+    margin: 2rem auto;
+    padding: 0 .5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tea-description {
+    display: grid;
+    padding: 1rem 0;
+}
+
+.tea-summary {
+    text-align: center;
+    
+    h1 {
+        font-size: var(--fs-800);
+    }
+
+    h2 {
+        font-size: var(--fs-600);
+        color: $clr-medium-dark-gray;
+    }
+    
+    p {
+        padding: 1rem 0;
+    }
+}
+
+.tea-slideshow {
+    max-width: 100%;
+    max-height: 300px;
+    margin: 2rem 0;
+    padding: 1rem 0;
+    position: relative;
+    margin: auto;
+}
+
+@media (min-width: $bp-2) {
+    .tea-description {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 0rem 1rem;
+    }
+
+    .tea-slideshow {
+        grid-row-start: 1;
+        grid-row-end: 3;
+        margin: 0;
+        padding: 0;
+    }
+
+    .tea-heading,
+    .tea-summary {
+        text-align: left;
+    }
+}
+
+.tea-preparation {
+    padding: 1rem 0;
+    max-width: 100%;
 }
 
 table.tea-details {
@@ -16,10 +75,6 @@ table.tea-details {
     col {
         width: 11%;
     }
-}
-
-.tea-summary {
-    text-align: center;
 }
 
 tbody {
@@ -53,7 +108,7 @@ thead {
         border-left: $border-inactive;
         border-bottom: $border-outside;
         font-weight: 500;
-        color: $clr-medium-gray;
+        color: $clr-medium-dark-gray;
         background-color: $clr-table-light;
     }
 

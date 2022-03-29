@@ -1,83 +1,88 @@
 ---
 layout: default
 ---
-<article class="post">
+<article class="tea">
     
-    <header>
-        <h1>{{ page.title }}</h1>
-    </header>
+    <section class="tea-description">
 
-    <section>
-        <p class="tea-summary">{{ page.content }}</p>
+        <section class="tea-summary">
+            <h1>{{ page.title }}</h1>
+            <h2>{{ page.type }}</h2>
+            <p class="tea-summary">{{ page.content }}</p>
+        </section>
+
+        <section class="tea-slideshow">
+    
+            {% for image in site.static_files %}
+                {% if image.path contains page.order-id 
+                    and image.path contains page.shorthand %}
+                    {% unless image.basename == "thumb" 
+                        or image.basename == "hover" %}
+                        <div class="slide fade">
+                            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                            <img 
+                                src="{{ site.baseurl }}{{ image.path }}" 
+                                alt="{{ image.basename }}" />
+            
+                            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                        </div>
+                    {% endunless %}
+                {% endif %}
+            {% endfor %}
+            
+        </section>
+
     </section>
-        
-    <section class="slideshow">
 
-        {% for image in site.static_files %}
-            {% if image.path contains page.order-id 
-                and image.path contains page.shorthand %}
-                {% unless image.basename == "thumb" 
-                    or image.basename == "hover" %}
-                    <div class="slide fade">
-                        <img 
-                            src="{{ site.baseurl }}{{ image.path }}" 
-                            alt="{{ image.basename }}" />
-                    </div>
-                {% endunless %}
-            {% endif %}
-        {% endfor %}
-        
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
-        
+    <section class="tea-preparation">
+
+        <table class="tea-details">
+            <col>
+            <col>
+            <col>
+            <col>
+            <col>
+            <col>
+            <col>
+            <col>
+            <col>
+            <thead>
+                <tr id="tea-header" class="table-swap-inactive">
+                    <th 
+                        class="table-swap-active" 
+                        id="tea-details-header" 
+                        onclick="toggle('tea-details')" 
+                        colspan="3">
+                        Details
+                    </th>
+                    <th 
+                        class="table-swap-inactive" 
+                        id="tea-brewing-header" 
+                        onclick="toggle('tea-brewing')" 
+                        colspan="3">
+                        Zubereitung
+                    </th>
+                    <th 
+                        class="table-swap-inactive" 
+                        id="tea-notes-header" 
+                        onclick="toggle('tea-notes')" 
+                        colspan="3">
+                        Notizen
+                    </th>
+                </tr>
+            </thead>
+            <tbody id="tea-details">
+                {% include tea/details.html %}
+            </tbody>
+            <tbody id="tea-brewing" hidden>
+                {% include tea/brewing.html %}
+            </tbody>
+            <tbody id="tea-notes" hidden>
+                {% include tea/notes.html %}
+            </tbody>
+        </table>
+
     </section>
-        
-
-    <table class="tea-details">
-        <col>
-        <col>
-        <col>
-        <col>
-        <col>
-        <col>
-        <col>
-        <col>
-        <col>
-        <thead>
-            <tr id="tea-header" class="table-swap-inactive">
-                <th 
-                    class="table-swap-active" 
-                    id="tea-details-header" 
-                    onclick="toggle('tea-details')" 
-                    colspan="3">
-                    Details
-                </th>
-                <th 
-                    class="table-swap-inactive" 
-                    id="tea-brewing-header" 
-                    onclick="toggle('tea-brewing')" 
-                    colspan="3">
-                    Zubereitung
-                </th>
-                <th 
-                    class="table-swap-inactive" 
-                    id="tea-notes-header" 
-                    onclick="toggle('tea-notes')" 
-                    colspan="3">
-                    Notizen
-                </th>
-            </tr>
-        </thead>
-        <tbody id="tea-details">
-            {% include tea/details.html %}
-        </tbody>
-        <tbody id="tea-brewing" hidden>
-            {% include tea/brewing.html %}
-        </tbody>
-        <tbody id="tea-notes" hidden>
-            {% include tea/notes.html %}
-        </tbody>
-    </table>
 
 </article>
 

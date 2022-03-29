@@ -17,7 +17,7 @@ div.order-tea {
 
 span.order-tea-type,
 span.order-tea-price {
-    color: $clr-medium-gray;
+    color: $clr-medium-dark-gray;
 }
 
 span.order-tea-type {
@@ -52,7 +52,7 @@ button.order {
 }
 
 button.order-closed {
-    color: $clr-medium-gray;
+    color: $clr-medium-dark-gray;
 }
 
 button.order:hover {
@@ -67,7 +67,7 @@ button.order-closed:hover {
 
 .order-status {
     margin: 0 3rem;
-    color: $clr-medium-gray;
+    color: $clr-medium-dark-gray;
     text-align: center;
     font-size: var(--fs-300);
 }

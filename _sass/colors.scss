@@ -1,13 +1,15 @@
 $clr-black: #000;
 $clr-dark-gray: #222;
-$clr-medium-gray: #555;
+$clr-medium-dark-gray: #555;
+$clr-medium-gray: #888;
+$clr-medium-light-gray: #ccc;
 $clr-light-gray: #f9f9f9;
 
 $clr-bg: #fff;
 
 $clr-link: #339;
 $clr-link-hover: #6f6fdf;
-$clr-nav-link: $clr-medium-gray;
+$clr-nav-link: $clr-medium-dark-gray;
 
 $clr-table-light: #f1f1ff;
 $clr-table-medium: #e9e9ff;
@@ -16,9 +18,6 @@ $clr-table-border: #d1d1ff;
 
 $clr-button: #e1e1ee;
 $clr-button-hover: #d1d1ff;
-
-$clr-slideshow-dot: #bbf;
-$clr-slideshow-dot-active: #88f;
 
 $clr-order-bg: #e9e9ff;
 $clr-order-highlight: blue;

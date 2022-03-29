@@ -6,7 +6,7 @@ function plusSlides(n) {
 }
 
 function currentSlide(n) {
-  showSlides(slideIndex = n);
+  showSlides(slideIndex = n + 1);
 }
 
 function showSlides(n) {
