@@ -1,5 +1,29 @@
-div.order-overview {
-    margin: 3rem 0;
+section.order-package {
+    margin: 1rem 0;
+    
+    h2,
+    h3 {
+        text-align: center;
+    }
+
+    h2 {
+        padding-bottom: 1rem;
+        font-size: var(--fs-600);
+    }
+
+    h3 {
+        padding-top: 1rem;
+        font-size: var(--fs-400);
+        color: $clr-medium-dark-gray;
+    }
+
+    p {
+        padding: .5rem 0;
+    }
+}
+
+.order-overview {
+    margin: 2rem 0;
     display: grid;
     grid-gap: 1rem;
     grid-template-columns: repeat(2, 1fr);

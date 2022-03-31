@@ -1,8 +1,4 @@
 <div class="order-overview">
-    {% assign teas = site.teas 
-        | where: "order-id",  page.order-id 
-        | sort: "key" %}
-
     {%- for tea in teas -%}
         <div class="order-tea">
             <a class="preview" href="{{- tea.url -}}">
@@ -19,5 +15,4 @@
             </a>
         </div>
     {% endfor %}
-
 </div>

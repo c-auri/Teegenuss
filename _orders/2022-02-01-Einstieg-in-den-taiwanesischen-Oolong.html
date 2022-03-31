@@ -14,8 +14,8 @@ stash: 0
     Von jedem Tee wird 12 Gramm verteilt. Der Preis setzt sich zusammen aus 18€ für den <span class="mouseover" title="inklusive Versandkosten aus Taiwan und 9% Einfuhrumsatzsteuer">Tee</span> und 5€ für den <span class="mouseover" title="0,50€ für den Karton, &#10;1,75€ für die Beutel und &#10;2,75€ Versandkosten innerhalb Deutschlands,&#10;Versand ins nichtdeutsche Ausland ist gegen Aufpreis möglich">Versand</span>. Der Gesamtpreis beträgt also <span class="price">23€</span>.
 </p>
 
+{% assign teas = site.teas | where: 'order-id',  page.order-id | sort: "key" %}
 {% include order/overview.html %}
-
 
 
 {% if page.open %}
