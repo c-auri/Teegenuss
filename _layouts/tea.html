@@ -13,6 +13,10 @@ layout: default
 
         <section class="tea-slideshow">
     
+            {% if page.show-placeholder %}
+                <img src="/assets/img/orders/placeholder.jpg" alt="">
+            {% endif %}
+
             {% for image in site.static_files %}
                 {% if image.path contains page.order-id 
                     and image.path contains page.shorthand %}
