@@ -9,7 +9,7 @@
     <td colspan="4">
         {{ page.gongfu-weight }}&hairsp;g pro 100&hairsp;ml
         {% if page.gongfu-volume %}
-            <br><span class="subtitle">oder bis {{ page.gongfu-volume }}</span>
+            <br><span class="brewing-comment">oder {{ page.gongfu-volume }}</span>
         {% endif %}
     </td>
 </tr>
@@ -26,7 +26,7 @@
         {%endif%}
         colspan="5">
         {% if page.gongfu-rinse == "optional" %}
-            <span class="subtitle">kann übersprungen werden</span>
+            <span class="brewing-comment">kann übersprungen werden</span>
         {% else %}
             {{ page.gongfu-rinse }}
         {% endif %}
@@ -49,7 +49,7 @@
     <td colspan="5">
         {{ page.gongfu-further }}
         {% if page.gongfu-increase-temperature %}
-            <br><span class="subtitle">Temperatur kann zum Ende hin erhöht werden</span>
+            <br><span class="brewing-comment">Temperatur kann zum Ende hin erhöht werden</span>
         {% endif %}
     </td>
 </tr>
