@@ -13,13 +13,22 @@ article.tea {
 
 .tea-description {
     display: grid;
-    padding: 1rem 0;
 }
 
+.tea-heading,
 .tea-summary,
 .tea-reference {
-    padding-top: 1rem;
     text-align: center;
+    
+    p {
+        padding: .5rem 0;
+    }
+}
+
+.tea-heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
     
     h1 {
         font-size: var(--fs-800);
@@ -28,10 +37,6 @@ article.tea {
     h2 {
         font-size: var(--fs-600);
         color: $clr-medium-dark-gray;
-    }
-    
-    p {
-        padding: .5rem 0;
     }
 }
 
@@ -50,6 +55,7 @@ article.tea {
 @media (min-width: $bp-2) {
     .tea-description {
         grid-template-columns: 1fr 1fr;
+        grid-template-rows: 100px auto;
         grid-gap: 0rem 1rem;
     }
 
