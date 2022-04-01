@@ -2,6 +2,26 @@
 layout: default
 ---
 <article class="tea">
+
+    <section class="tea-order-nav">
+        {% assign order = site.orders | where: 'order-id', page.order-id | first %}
+        {% assign teas = site.teas | where: 'order-id', page.order-id %}
+        {% assign prev-key = page.key | plus: -1 | modulo: teas.size %}
+        {% assign next-key = page.key | plus: 1 | modulo: teas.size %}
+        {% assign prev = teas | where: 'key', prev-key | first %}
+        {% assign next = teas | where: 'key', next-key | first %}
+
+
+        <div class="order-link">
+            <a href="{{ order.url }}">{{ order.title }}</a>
+        </div>
+        <div class="order-prev">
+            <a href="{{ prev.url }}">zurück</a>
+        </div>
+        <div class="order-next">
+            <a href="{{ next.url }}">weiter</a>
+        </div>
+    </section>
     
     <section class="tea-description">
 
