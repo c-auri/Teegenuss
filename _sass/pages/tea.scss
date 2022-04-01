@@ -134,7 +134,7 @@ table.tea-details {
             background-color: $clr-table-dark;
         }
     
-        th.table-swap-active:first-child {
+        th.table-swap-active {
             border-bottom: $border-inside;
         }
     }
@@ -144,9 +144,13 @@ table.tea-details {
     
         th {
             padding: .5rem 0;
-            border-top: $border-inside;
             background-color: $clr-table-dark;
         }
+    }
+
+    th,
+    th ~ td {
+        border-top: $border-inside;
     }
     
     td {
