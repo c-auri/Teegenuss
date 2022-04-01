@@ -23,13 +23,13 @@ layout: default
                     {% unless image.basename == "thumb" 
                         or image.basename == "hover" %}
                         <div class="slide fade">
-                            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                            <a class="slideshow-prev" onclick="plusSlides(-1)">&#10094;</a>
+                            <a class="slideshow-next" onclick="plusSlides(1)">&#10095;</a>
                             
                             <img 
                                 src="{{ site.baseurl }}{{ image.path }}" 
                                 alt="{{ image.basename }}" />
             
-                            <a class="next" onclick="plusSlides(1)">&#10095;</a>
                         </div>
                     {% endunless %}
 

@@ -45,11 +45,12 @@ article.tea {
 }
 
 .tea-slideshow {
-    max-width: 100%;
-    margin: 2rem 0;
-    padding: 1rem 0;
     position: relative;
-    margin: auto;
+    overflow: hidden;
+
+    img {
+        display: block;
+    }
 }
 
 @media (min-width: $bp-2) {
