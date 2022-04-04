@@ -1,11 +1,44 @@
-section.order-package {
-    margin: 1rem 0;
+article.order {
+    margin: 2rem auto;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     
+    h1,
     h2,
     h3 {
         text-align: center;
     }
 
+    p {
+        margin: 0 auto;
+        max-width: 60ch;
+        padding: .5em 0;
+    }
+}
+
+.order-header {
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+
+    .sub-heading {
+        text-align: center;
+        font-size: var(--fs-500);
+        color: $clr-medium-dark-gray;
+    }
+}
+
+section.order-intro,
+section.order-package {
+    padding: 1rem 0;
+}
+
+section.order-package {
+    margin: 1rem 0;
+    
     h2 {
         padding-bottom: 1rem;
         font-size: var(--fs-600);
@@ -18,7 +51,7 @@ section.order-package {
     }
 
     p {
-        padding: .5rem 0;
+        padding: 1rem 0;
     }
 
     table.package-status {
