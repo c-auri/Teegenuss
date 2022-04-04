@@ -44,7 +44,7 @@ section.order-package {
     }
 }
 
-.order-overview {
+.package-overview {
     margin: 2rem 0;
     display: grid;
     grid-gap: 1rem;
@@ -52,25 +52,25 @@ section.order-package {
 }
 
 @media (min-width: $bp-2) {
-    div.order-overview {
+    div.package-overview {
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
-div.order-tea {
+div.package-tea {
     width: 200px;
 }
 
-span.order-tea-type,
-span.order-tea-price {
+span.package-tea-type,
+span.package-tea-price {
     color: $clr-medium-dark-gray;
 }
 
-span.order-tea-type {
+span.package-tea-type {
     float: left;
 }
 
-span.order-tea-price {
+span.package-tea-price {
     float: right;
 }
 
