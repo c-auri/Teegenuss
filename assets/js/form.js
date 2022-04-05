@@ -1,17 +1,10 @@
-function showTerms() {
-    let form = document.getElementsByClassName("order-form")[0];
-    form.setAttribute("hidden", "hidden");
-
-    hideAllForms();
-
-    let terms = document.getElementsByClassName("order-terms")[0];
-    terms.removeAttribute("hidden");
-
-    window.scrollTo(0, 0);
-}
+---
+layout: none
+---
 
 function advanceTo(formName) {
-    if (formName == "contact" || 
+    if (formName == "packages" ||
+        formName == "contact" && validatePackages() || 
         formName == "shipping" && validateContact() ||
         formName == "addition" && validateShipping() ||
         formName == "summary") {
@@ -20,13 +13,7 @@ function advanceTo(formName) {
 }
 
 function showForm(formName) {
-    let terms = document.getElementsByClassName("order-terms")[0];
-    terms.setAttribute("hidden", "hidden");
-
-    let form = document.getElementsByClassName("order-form")[0];
-    form.removeAttribute("hidden");
-
-    hideAllForms();
+    hideAllSections();
 
     let section = document.getElementsByClassName(formName)[0];
     section.removeAttribute("hidden");
@@ -34,7 +21,7 @@ function showForm(formName) {
     window.scrollTo(0, 0);
 }
 
-function hideAllForms() {
+function hideAllSections() {
     let sections = document.getElementsByClassName("order-form-section");
 
     for (let i = 0; i < sections.length; i++) {
@@ -72,8 +59,8 @@ function summarize() {
     citySummary.innerHTML = postalCode + " " + city;
 
     let addition = document.getElementById("addition").value;
-    let additionWrapper = document.getElementsByClassName("addition-summary")[0];
-    let additionSummary = document.getElementById("addition-summary");
+    let additionWrapper = document.getElementsByClassName("summary-addition")[0];
+    let additionSummary = document.getElementById("summary-addition");
 
     if (addition.length == 0) {
         additionWrapper.setAttribute("hidden", "hidden");
@@ -82,6 +69,53 @@ function summarize() {
         additionWrapper.removeAttribute("hidden");
         additionSummary.innerHTML = addition;
     }
+
+    summarizeCosts();
+}
+
+function summarizeCosts() {
+    {% assign packages = site.packages | where: 'order-id', '22-2' %}
+    let spanShippingCost = document.getElementById("shipping-cost-euro").innerHTML;
+    let totalCost = parseInt(spanShippingCost);
+    
+    var checkbox;
+    var listing;
+
+    {% for package in packages %}
+        checkbox = document.getElementById("{{package.order-id}}{{ package.shorthand }}");
+        listing = document.getElementById("listing-{{package.order-id}}{{ package.shorthand }}");
+
+        if (checkbox.checked) {
+            totalCost += {{ package.price }};
+            listing.removeAttribute("hidden");
+        }
+        else {
+            listing.setAttribute("hidden", "hidden");
+        }
+    {% endfor %}
+        
+    let spanTotalCost = document.getElementById("total-cost-euro");
+    spanTotalCost.innerHTML = totalCost;
+}
+
+function validatePackages() {
+    let checkboxes = document.getElementsByClassName("checkbox-package");
+    let alert = document.getElementById("checkbox-alert");
+
+    let checked = false;
+
+    for (let i = 0; i < checkboxes.length; i++) {
+        checked |= checkboxes[i].checked
+    }
+
+    if (checked) {
+        alert.setAttribute("hidden", "hidden");
+    }
+    else {
+        alert.removeAttribute("hidden");
+    }
+
+    return checked;
 }
 
 function validateContact() {

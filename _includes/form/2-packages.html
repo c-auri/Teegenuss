@@ -1,0 +1,63 @@
+<section class="order-form-section packages" hidden>
+
+    <h1>Paketauswahl</h1>
+
+    <p class="order-form-subtitle">
+        Wähle aus welches Paket du möchtest.<br>Du kannst eines oder alle beide nehmen.
+    </p>
+
+    <div class="package-selection">
+
+        {% for package in packages %}
+            
+            <label class="container">
+                <input 
+                        type="checkbox" 
+                        class="checkbox-package" 
+                        id="{{ package.order-id }}{{ package.shorthand }}"
+                        name="package-{{ package.shorthand }}"
+                        value="ordered">
+
+                <div class="package-selector">
+                    <h2>
+                        {{ package.title }}
+                    </h2>
+                    {% assign teas = site.teas 
+                        | where: 'order-id', page.order-id 
+                        | where: 'package', package.shorthand %}
+
+                    {% for tea in teas %}
+                        <p class="checkbox-tea">{{ tea.title }}</p>
+                    {% endfor %}
+
+                    <p class="checkbox-price">{{ package.price }},00&hairsp;€</p>
+                    
+                </div>
+            </label>
+
+        {% endfor %}
+
+        <p class="form-alert" id="checkbox-alert" hidden>
+            Bitte wähle mindestens ein Paket aus.
+        </p>
+
+    </div>
+
+    <p class="order-buttons">
+
+        <button 
+            class="order"
+            onclick="showForm('terms')"
+            type="button">
+            Zurück
+        </button>
+
+        <button 
+            class="order"
+            onclick="advanceTo('contact')"
+            type="button">
+            Weiter
+        </button>
+    </p>
+
+</section>

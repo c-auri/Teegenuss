@@ -1,0 +1,45 @@
+<section class="order-form-section contact" hidden>
+
+    <h1>Kontakt</h1>
+
+    <div class="form-discord">
+        <div class="form">
+            <label for="discord-username">Dein Discord Username</span>: </label>   
+            <input type="text" name="discord-username" id="discord-username" />
+        </div>
+
+        <div class="form">
+            <label for="discord-id">Discord ID</span>: </label>   
+            <input type="text" name="discord-id" id="discord-id" />
+        </div>
+    </div>
+
+    <p class="form-description">
+        Die ID ist eine vierstellige Nummernfolge hinter deinem Username, zu finden in deinem Profil.
+    </p>
+
+    <div class="form">
+        <label for="connection">Woher kennen wir uns? </label>
+        <input type="text" name="connection" id="connection" />
+        <p class="form-description">z.B. Jomons Stream, Dotasource, etc.</p>
+    </div>
+
+    <p class="order-buttons">
+
+        <button 
+            class="order"
+            onclick="showForm('packages')"
+            type="button">
+            Zurück
+        </button>
+
+        <button 
+            class="order"
+            onclick="advanceTo('shipping')"
+            type="button">
+            Weiter
+        </button>
+
+    </p>
+
+</section>
