@@ -6,55 +6,42 @@ open: false
 stash: [ 20, 20 ]
 price: [ "25,00", "25,00" ]
 ---
-<section class="order-overview">
-    <section class="order-intro">
-        <p>
-            Vor dem Beginn der diesjährigen Frühjahrsernte habe ich auf <a href="https://www.taiwanteacrafts.com/">Taiwan Tea Crafts</a> eine Auswahl von Vorjahrestees zu reduzierten Preisen gekauft. Dieses mal könnt ihr euch zwischen zwei getrennten Paketen entscheiden und entweder nur eines von beiden, oder beide zusammen bestellen. Von jedem Tee wird wieder 12&hairsp;g verteilt.
-        </p>
-    </section>
-    
+<p>
+    Vor dem Beginn der diesjährigen Frühjahrsernte habe ich auf <a href="https://www.taiwanteacrafts.com/">Taiwan Tea Crafts</a> eine Auswahl von Vorjahrestees zu reduzierten Preisen gekauft. Dieses mal könnt ihr euch zwischen zwei getrennten Paketen entscheiden und entweder nur eines von beiden, oder beide zusammen bestellen. Von jedem Tee wird wieder 12&hairsp;g verteilt.
+</p>
+
+{% assign packages = site.packages | where: 'order-id', page.order-id %}
+{% for package in packages %}
+
     <section class="order-package">
+
         <h3>Paket</h3>
-        <h2>Helles Taiwan</h2>
+        <h2>{{ package.title }}</h2>
+
         <p>
-            Das erste Paket besteht aus zwei Grüntees und sechs hellen Oolongs. Letztere reichen von zwei vergleichsweise günstigen Vertretern bis hin zu namenhaften Hochgebirgsoolongs aus den besten Lagen Taiwans. Das Paket bietet somit die Gelegenheit sich mit den feinen Unterschieden zwischen verschiedenen Anbauregionen vertraut zu machen.
+            {{ package.content }}
         </p>
-        
-        {% assign teas = site.teas | where: 'order-id',  '22-2' | where: 'package', 'H' | sort: "key" %}
-        {% include order/overview.html %}
-    
-        {% assign package-number = 0 %}
+
+        {% include order/package-overview.html %}
         {% include order/package-status.html %}
+
     </section>
-    
-    <section class="order-package">
-        <h3>Paket</h3>
-        <h2>Dunkles Taiwan</h2>
-        <p>
-            Das zweite Paket bietet eine breite Auswahl an verschiedenen dunklen Tees. Sechs Oolongs mit sehr unterschiedlichen Charakteristiken und zwei schwarze Tees bieten ein abwechslungsreiches Spektrum verschiedener Oxidations- und Röstgrade.
-        </p>
-        
-        {% assign teas = site.teas | where: 'order-id',  '22-2' | where: 'package', 'D' | sort: "key" %}
-        {% include order/overview.html %}
-    
-        {% assign package-number = 1 %}
-        {% include order/package-status.html %}
-    </section>
-    
-    <p class="order-button">
-        <button 
-            {% if page.open %}
-                class="order"
-                onclick="location.href='/terms/{{page.terms-id}}.html'"
-            {% else %}
-                class="order-closed"
-            {% endif %}
-                type="button">
-                Zur Bestellung
-        </button>
-    </p>
-    
-    <p class="order-status">
-        Die Bestellung ist noch nicht geöffnet.
-    </p>
-</section>
+
+{% endfor %}
+
+<p class="order-button">
+    <button 
+        {% if page.open %}
+            class="order"
+            onclick="location.href='/terms/{{page.terms-id}}.html'"
+        {% else %}
+            class="order-closed"
+        {% endif %}
+            type="button">
+            Zur Bestellung
+    </button>
+</p>
+
+<p class="order-status">
+    Die Bestellung ist noch nicht geöffnet.
+</p>

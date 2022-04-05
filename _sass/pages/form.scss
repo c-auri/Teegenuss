@@ -1,0 +1,168 @@
+.order-terms,
+.order-form {
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: $clr-order-bg;
+
+    h1 {
+        font-size: var(--fs-800);
+        padding: 3rem;
+        text-align: center;
+    }
+
+    ol {
+        padding: 2rem;
+    }
+
+    li {
+        padding-bottom: .5rem;
+    }
+}
+
+.order-form-section {
+    h2 {
+        padding: 1rem 0;
+        font-size: var(--fs-700);
+    }
+
+    h3 {
+        padding-top: 2rem;
+        padding-bottom: .5rem;
+    }
+}
+
+@media (min-width: $bp-2) {
+    .order-terms,
+    .order-form {
+        padding: 4rem;
+    }
+
+    .order-form-section {
+        padding: 0 3rem;
+    }
+}
+
+.form {
+    padding-top: 1.5rem;
+    padding-bottom: .5rem;
+}
+
+.form-discord,
+.form-name,
+.form-street,
+.form-city {
+    display: grid;
+    grid-gap: .5rem;
+}
+
+.form-discord {
+    grid-template-columns: 3fr 1fr;
+}
+
+.form-name {
+    grid-template-columns: 1fr 1fr;
+}
+
+.form-street {
+    grid-template-columns: 4fr 1fr;
+}
+
+.form-city {
+    grid-template-columns: 1fr 3fr;
+}
+
+label {
+    display: block;
+    font-size: var(--fs-300);
+}
+
+p.order-buttons {
+    padding-top: 3.5rem;
+    padding-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: .5rem;
+}
+
+button.order,
+button.order-closed {
+    padding: 0.8rem 3rem;
+    width: 13rem;
+    font-size: var(--fs-600);
+    border-top: none;
+    border-left: none;
+    background-color: $clr-button;
+}
+
+button.order {
+    color: $clr-dark-gray;
+}
+
+button.order-closed {
+    color: $clr-medium-dark-gray;
+}
+
+button.order:hover {
+    color: $clr-black;
+    background-color: $clr-button-hover;
+    cursor: pointer;
+}
+
+button.order-closed:hover {
+    cursor: pointer;
+}
+
+input[type=text],
+textarea {
+    box-sizing: border-box;
+    border-top: none;
+    border-left: none;
+    padding: .5rem 1rem;
+    margin-top: .5rem;
+    width: 100%;
+    font-size: var(--fs-400);
+    background-color: $clr-light-gray;
+}
+
+input[type=text],
+textarea {
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input[type=text]:focus,
+textarea:focus {
+    border: 1px $clr-order-highlight solid;
+}
+
+input[type=text].invalid {
+    border: 1px red solid;
+}
+
+button[type=submit] {
+    padding: .5rem 3rem;
+    font-size: var(--fs-600);
+    border-top: none;
+    border-left: none;
+    background-color: $clr-submit;
+}
+
+button[type=submit]:hover {
+    background-color: $clr-submit-hover;
+    color: white;
+    cursor: pointer;
+}
+
+p.form-description {
+    padding: .25rem 0;
+    color: $clr-medium-gray;
+    font-size: var(--fs-200);
+}
+
+.personal-summary {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}

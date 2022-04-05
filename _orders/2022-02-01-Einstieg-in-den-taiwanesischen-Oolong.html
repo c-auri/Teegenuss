@@ -4,41 +4,41 @@ date: 2022-02-01T00:01:00Z
 order-id: 22-1
 open: false
 stash: 0
+price: 23€
 ---
-
 <p>
     Zur Eröffnung von Projekt:&nbsp;Teegenuss möchte ich mit euch eine Bestellung von <a href="https://www.taiwanteacrafts.com/">Taiwan Tea Crafts</a> teilen. Enthalten sind sieben Oolongs in verschiedenen Oxidations- und Röststufen, die einen guten Einblick in die Sortenvielfalt des taiwanesischen Oolongs bieten sollen.
 </p>
 
-<p>
-    Von jedem Tee wird 12 Gramm verteilt. Der Preis setzt sich zusammen aus 18€ für den <span class="mouseover" title="inklusive Versandkosten aus Taiwan und 9% Einfuhrumsatzsteuer">Tee</span> und 5€ für den <span class="mouseover" title="0,50€ für den Karton, &#10;1,75€ für die Beutel und &#10;2,75€ Versandkosten innerhalb Deutschlands,&#10;Versand ins nichtdeutsche Ausland ist gegen Aufpreis möglich">Versand</span>. Der Gesamtpreis beträgt also <span class="price">23€</span>.
-</p>
+<section class="order-package">
 
-{% assign teas = site.teas | where: 'order-id',  page.order-id | sort: "key" %}
-{% include order/overview.html %}
+    {% assign package = site.packages | where: 'order-id', page.order-id | first %}
+    {% include order/package-overview.html %}
+    {% include order/package-status.html %}
 
+    {% if page.open %}
+        <p class="order-button">
+            <button 
+                class="order"
+                onclick="location.href='/terms/{{page.terms-id}}.html'"
+                type="button">
+                Ich will mitmachen!
+            </button>
+        </p>
+        <p class="order-status">
+            Es sind noch {{ page.stash }} Pakete vorrätig.
+        </p>
+    {% else %}
+        <p class="order-button">
+            <button 
+                class="order-closed"
+                type="button">
+                Zur Bestellung
+            </button>
+        </p>
+        <p class="order-status">
+            Es sind keine Pakete mehr vorrätig.
+        </p>
+    {% endif %}
 
-{% if page.open %}
-    <p class="order-button">
-        <button 
-            class="order"
-            onclick="location.href='/terms/{{page.terms-id}}.html'"
-            type="button">
-            Ich will mitmachen!
-        </button>
-    </p>
-    <p class="order-status">
-        Es sind noch {{ page.stash }} Pakete vorrätig.
-    </p>
-{% else %}
-    <p class="order-button">
-        <button 
-            class="order-closed"
-            type="button">
-            Ich will mitmachen!
-        </button>
-    </p>
-    <p class="order-status">
-        Es sind keine Pakete mehr vorrätig.
-    </p>
-{% endif %}
+</section>

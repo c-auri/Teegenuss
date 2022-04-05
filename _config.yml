@@ -3,6 +3,7 @@ collections:
     output: true
   orders:
     output: true
+  packages:
 
 defaults:
   - scope:
