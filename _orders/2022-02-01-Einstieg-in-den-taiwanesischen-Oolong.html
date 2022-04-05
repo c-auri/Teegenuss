@@ -16,29 +16,4 @@ price: 23€
     {% include order/package-overview.html %}
     {% include order/package-status.html %}
 
-    {% if page.open %}
-        <p class="order-button">
-            <button 
-                class="order"
-                onclick="location.href='/terms/{{page.terms-id}}.html'"
-                type="button">
-                Ich will mitmachen!
-            </button>
-        </p>
-        <p class="order-status">
-            Es sind noch {{ page.stash }} Pakete vorrätig.
-        </p>
-    {% else %}
-        <p class="order-button">
-            <button 
-                class="order-closed"
-                type="button">
-                Zur Bestellung
-            </button>
-        </p>
-        <p class="order-status">
-            Es sind keine Pakete mehr vorrätig.
-        </p>
-    {% endif %}
-
 </section>
