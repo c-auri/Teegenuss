@@ -2,7 +2,7 @@
 title: Helles Taiwan, Dunkles Taiwan
 date: 2022-03-28T00:01:00Z
 order-id: 22-2
-open: false
+open: true
 shipping-cost: 5
 ---
 <p>
@@ -32,15 +32,11 @@ shipping-cost: 5
     <button 
         {% if page.open %}
             class="order"
-            onclick="location.href='/terms/{{page.terms-id}}.html'"
+            onclick="location.href='/form'"
         {% else %}
             class="order-closed"
         {% endif %}
             type="button">
             Bestellen
     </button>
-</p>
-
-<p class="order-status">
-    Die Bestellung ist noch nicht geöffnet.
 </p>
