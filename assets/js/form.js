@@ -100,27 +100,24 @@ function summarizeCosts() {
 
 function validatePackages() {
     let checkboxes = document.getElementsByClassName("checkbox-package");
-    let alert = document.getElementById("checkbox-alert");
-
+    
     let checked = false;
-
+    
     for (let i = 0; i < checkboxes.length; i++) {
         checked |= checkboxes[i].checked
     }
-
-    if (checked) {
-        alert.setAttribute("hidden", "hidden");
-    }
-    else {
-        alert.removeAttribute("hidden");
-    }
+    
+    fillAlert(
+        checked, 
+        "package-alert", 
+        "Bitte wähle mindestens ein Paket aus.");
 
     return checked;
 }
 
 function validateContact() {
     let isValid = true;
-
+    
     isValid &= validateTextInput("discord-username");
     isValid &= validateTextInput("connection");
     
@@ -133,6 +130,8 @@ function validateContact() {
     else {
         id.classList.remove("invalid");
     }
+    
+    fillAlert(isValid, "contact-alert");
 
     return isValid;
 }
@@ -148,13 +147,29 @@ function validateShipping() {
         "country",
     ]
 
+    
     let isValid = true;
-
+    
     for (let i = 0; i < ids.length; i++) {
         isValid &= validateTextInput(ids[i]);
     }
-
+    
+    fillAlert(isValid, "shipping-alert");
+    
     return isValid;
+}
+
+function fillAlert(
+    isValid, 
+    alertID,
+    message = "Bitte fülle alle Pflichtfelder aus.") {
+    let alert = document.getElementById(alertID)
+    if (isValid) {
+        alert.innerHTML = "";
+    }
+    else {
+        alert.innerHTML = message;    
+    }
 }
 
 function validateTextInput(id) {

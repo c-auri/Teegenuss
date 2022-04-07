@@ -162,15 +162,20 @@ button[type=submit]:hover {
     cursor: pointer;
 }
 
-p.form-description,
-p.form-alert {
+p.form-description {
     padding: .25rem 0;
     color: $clr-medium-gray;
     font-size: var(--fs-200);
 }
 
 p.form-alert {
+    padding-top: 2rem;
+    margin: 0;
+    min-height: 1rem;
+    line-height: 1rem;
+    text-align: center;
     color: red;
+    font-size: var(--fs-200);
 }
 
 .summary-person,
@@ -242,13 +247,6 @@ p.form-alert {
 .checkbox-package:checked ~ div.package-selector {
     background-color: $clr-button-hover;
     border: solid 1px white;
-}
-
-#checkbox-alert {
-    grid-row: 2;
-    grid-column-start: 1;
-    grid-column-end: 3;
-    text-align: center;
 }
 
 .checkbox-price {
