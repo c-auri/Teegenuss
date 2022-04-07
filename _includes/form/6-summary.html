@@ -24,7 +24,7 @@
     </div>
 
     <div class="summary-order">
-        <h3>Bestellung</h3>
+        <h3>Kosten</h3>
         <table>
             {% for package in packages %}
                 <tr id="listing-{{ package.order-id }}{{ package.shorthand }}">
@@ -37,12 +37,12 @@
                 <td><span id="shipping-cost-euro">{{ order.shipping-cost }}</span>,00&hairsp;€</td>
             </tr>
             <tr>
-                <td>Gesamtkosten</td>
+                <td>Gesamt</td>
                 <td class="total-cost"><span id="total-cost-euro">{{ order-shipping-cost }}</span>,00&hairsp;€</td>
             </tr>
         </table>
-        <p class="form-description shipping">
-            Bei Versand ins Ausland kommen noch zusätzliche Versandkosten dazu.
+        <p class="form-description" id="shipping-description">
+            evtl. zzgl. Auslandsversandkosten
         </p>
     </div>
 

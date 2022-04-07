@@ -185,8 +185,12 @@ p.form-alert {
 }
 
 .summary-person {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    justify-content: space-between;
+}
+
+.summary-person div:last-child {
+    padding-right: 2rem;
 }
 
 .summary-order table {
@@ -199,9 +203,13 @@ p.form-alert {
 }
 
 .summary-order table tr:last-child td {
-    margin-top: 2rem;
+    padding-top: .5rem;
     font-weight: bold;
     border-bottom: 1px solid $clr-medium-gray;
+}
+
+#shipping-description {
+    text-align: right;
 }
 
 // ----- Checkboxes ----- //
