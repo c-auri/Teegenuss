@@ -3,53 +3,57 @@
     <td colspan="2"></td>
     <td colspan="4">{{ page.gongfu-temperature }}&hairsp;°C</td>
 </tr>
+
+{% if page.gongfu-amount %}
 <tr>
-    <th colspan="3">Menge</th>
-    <td colspan="2"></td>
+    <th colspan="3" rowspan="{{ page.gongfu-amount | size }}">
+        Menge
+    </th>
+{% for entry in page.gongfu-amount}} %}
+    <td colspan="2">{{ entry[0] }}</td>
     <td colspan="4">
-        {{ page.gongfu-weight }}&hairsp;g pro 100&hairsp;ml
-        {% if page.gongfu-volume %}
-            <br><span class="brewing-comment">oder {{ page.gongfu-volume }}</span>
-        {% endif %}
+        {{ entry[1] }}{% if entry[0] == 'Gewicht' %}&hairsp;g pro 100&hairsp;ml{%endif%}
     </td>
 </tr>
+{% unless forloop.last %}
 <tr>
-    <th colspan="3" rowspan="3">Ziehzeiten</th>
-    <td colspan="2"
-        class="mouseover"
-        title="Das ist der Aufguss vorm ersten Trinkaufguss. Er dient der Vorbereitung der Blätter und ist nicht zum trinken gedacht. Kann direkt entsorgt werden, wenn man möchte kann man ihn aber auch trinken.">
-        Abguss
-    </td>
-    <td {% if page.gongfu-rinse == "blitz" %}
-            class="mouseover"
-            title="D.h. so schnell wie möglich ein- und wieder ausgießen."
-        {%endif%}
-        colspan="5">
-        {% if page.gongfu-rinse == "optional" %}
-            <span class="brewing-comment">kann übersprungen werden</span>
-        {% else %}
-            {{ page.gongfu-rinse }}
-        {% endif %}
-    </td>
-</tr>
+{% endunless %}
+{% endfor %}
+{% endif %}
+
+{% if page.gongfu-times %}
 <tr>
-    <td colspan="2">Anfangs</th>
-    <td {% if page.gongfu-early == "blitz" %}
-            class="mouseover"
-            title="D.h. so schnell wie möglich ein- und wieder ausgießen."
-        {%endif%}
-        colspan="5">
-        {{ page.gongfu-early }}
-    </td>
-</tr>
-<tr>
+    <th colspan="3" rowspan="{{ page.gongfu-times | size }}">
+        Ziehzeiten
+    </th>
+{% for entry in page.gongfu-times}} %}
     <td colspan="2">
-        Später
-    </td >
-    <td colspan="5">
-        {{ page.gongfu-further }}
-        {% if page.gongfu-increase-temperature %}
-            <br><span class="brewing-comment">Temperatur kann zum Ende hin erhöht werden</span>
+        {% if entry[0] == "Abguss" %}
+        <span class="mouseover"
+        title="Das ist der Aufguss vorm ersten Trinkaufguss. Er dient der Vorbereitung der Blätter und ist nicht zum trinken gedacht. Kann direkt entsorgt werden, wenn man möchte kann man ihn aber auch trinken.">
+        {{ entry[0] }}
+        </span>
+        {% else %}
+        {{ entry[0] }}
         {% endif %}
     </td>
+    <td colspan="4">
+        {% if entry[1] == "blitz" %}
+        <span class="mouseover"
+        title="D.h. so schnell wie möglich ein- und wieder ausgießen.">
+        {{ entry[1] }}
+        </span>
+        {% elsif entry[0] == 'Gewicht' %}
+        {{ entry[1] }}&hairsp;g pro 100&hairsp;ml
+        {% elsif entry[1] == "optional" or entry[1] == "weglassen" %}
+        <span class="brewing-comment">{{ entry[1] }}</span>
+        {% else %}
+        {{ entry[1] }}
+        {%endif%}
+    </td>
 </tr>
+{% unless forloop.last %}
+<tr>
+{% endunless %}
+{% endfor %}
+{% endif %}
