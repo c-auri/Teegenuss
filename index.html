@@ -2,16 +2,21 @@
 ---
 {% assign orders = site.orders | sort: date %}
 {% for order in orders reversed %}
-<article class="blog">
-    <header>
-        <h1 class="blog"><a href="{{ order.url }}">{{ order.title }}</a></h1>
-    </header>
-    <section class="blog">
+<section class="blog-post">
+
+    <a class="blog-post-image" href="{{ order.url }}">
         <img 
-            class="blog"
             src="/assets/img/orders/{{ order.order-id }}/lead.jpg" 
             alt="{{ order.lead-alt }}">
-        <p class="blog">{{ order.excerpt }}</p>
-    </section>
-</article>
+    </a>
+
+    <a class="blog-post-header" href="{{ order.url }}">
+        <header>
+            <h2>{{ order.subtitle }}</h2>
+            <h1 class="blog-post-title">{{ order.title }}</h1>
+        </header>
+    </a>
+
+    <p class="blog-post-excerpt">{{ order.excerpt }}</p>
+</section>
 {% endfor %}
