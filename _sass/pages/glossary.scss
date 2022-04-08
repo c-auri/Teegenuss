@@ -1,3 +1,13 @@
+a.glossary {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-style: dotted;
+}
+
+a.glossary:hover {
+    color: $clr-black;
+}
+
 .glossary-entry {
     padding: 1rem 0;
 }
