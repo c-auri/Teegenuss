@@ -64,6 +64,21 @@ layout: default
 
     </section>
 
+    {% if page.tags and page.tags.size != 0 %}
+    <section class="tea-explanations">
+        <header class="tea-explanations">
+            <h3>Begriffserklärungen</h3>
+        </header>
+        {% for tag in page.tags %}
+        {% assign term = site.explanations | where: 'tag', tag | first %}
+        <p>
+            <span class="glossary-term">{{ term.title }}:</span>
+            <span class="glossary-explanation">{{ term.content }}</span>
+        </p>
+        {% endfor %}
+    </section>
+    {% endif %}
+
     <section class="tea-preparation">
 
         <table class="tea-details">
