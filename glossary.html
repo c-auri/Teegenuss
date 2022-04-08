@@ -1,0 +1,17 @@
+---
+title: Glossar
+layout: default
+---
+<article class="post">
+    <header>
+        <h1>Glossar</h1>
+    </header>
+    <section>
+        {% for term in site.explanations %}
+        <p class="glossary-entry" id="{{ term.tag }}">
+            <span class="glossary-term">{{ term.title }}:</span>
+            <span class="glossary-explanation">{{ term.content }}</span>
+        </p>
+        {% endfor %}
+    </section>
+</article>
