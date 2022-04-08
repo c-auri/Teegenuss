@@ -1,4 +1,5 @@
 collections:
+  explanations:
   teas:
     output: true
   orders:
