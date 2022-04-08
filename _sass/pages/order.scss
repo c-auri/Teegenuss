@@ -117,12 +117,21 @@ span.package-tea-price {
     font-size: var(--fs-300);
 }
 
-a.preview img.hover {
-    display: none;  
+a.preview {
+    color: $clr-dark-gray;
+
+    img.hover {
+        display: none;  
+    }
 }
 
-a.preview:hover img.hover {
-    display: inline-block;  
+
+a.preview:hover {
+    color: black;
+
+    img.hover {
+        display: inline-block;
+    }
 }
 
 a.preview:hover img.thumb {
