@@ -1,7 +1,5 @@
-- name: Blog
+- name: Start
   link: /
-- name: Teilungen
-  link: /orders.html
 - name: Glossar
   link: /glossary.html
 - name: Über
