@@ -124,7 +124,7 @@ article.tea {
 
     .tea-order-nav {
         width: 100%;
-        grid-template-columns: 4fr 3fr 1fr;
+        grid-template-columns: 4fr auto auto;
 
         .order-link {
             grid-column: 1;
