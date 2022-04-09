@@ -17,6 +17,7 @@ $main-font: 'Roboto', sans-serif;
     --fs-600: 1.2rem;
     --fs-700: 1.3rem;
     --fs-800: 1.4rem;
+    --fs-1000: 3rem;
 }
 
 @media(min-width: $bp-1) {
@@ -28,6 +29,7 @@ $main-font: 'Roboto', sans-serif;
         --fs-600: 1.3rem;
         --fs-700: 1.4rem;
         --fs-800: 1.5rem;
+        --fs-1000: 3.5rem;
     }
 }
 
@@ -40,6 +42,7 @@ $main-font: 'Roboto', sans-serif;
         --fs-600: 1.4rem;
         --fs-700: 1.5rem;
         --fs-800: 1.6rem;
+        --fs-1000: 4rem;
     }
 }
 
