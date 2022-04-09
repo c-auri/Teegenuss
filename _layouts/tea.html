@@ -28,6 +28,15 @@ layout: default
         <section class="tea-heading">
             <h1>{{ page.title }}</h1>
             <h2>{{ page.type }}</h2>
+            <p class="tea-info">
+                <span>{{ page.harvest }}</span>
+                |
+                <span><a href="{{ page.shop-url }}">{{ page.shop }}</a></span>
+                |
+                <span>{{ page.shared-amount }}</span>
+                |
+                <span>{{ page.price }}&hairsp;<sup>{{ page.currency }}</sup>/<sub>g</sub></span>
+            </p>
         </section>
 
         <section class="tea-slideshow">

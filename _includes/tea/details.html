@@ -1,20 +1,4 @@
 <tr>
-    <th colspan="3" rowspan="3">Kauf</th>
-    <td colspan="3">Shop</td>
-    <td colspan="3">
-        <a href="{{page.shop-url }}">{{ page.shop }}</a>
-    </td>
-</tr>
-<tr>
-    <td colspan="3">Datum</td>
-    <td colspan="3">{{ page.order-date }}</td>
-</tr>
-<tr>
-    <td colspan="3">Preis</td>
-    <td colspan="3">{{ page.price }}&hairsp;<sup>{{ page.currency }}</sup>/<sub>g</sub></td>
-</tr>
-
-<tr>
     <th colspan="3" rowspan="2">Sorte</th>
     <td colspan="3">Teesorte</td>
     <td colspan="3">{{ page.type }}</td>
@@ -34,21 +18,6 @@
     <td colspan="3">
         {{ entry[1] }}{% if entry[0] == 'Höhe' %}&hairsp;m{%endif%}
     </td>
-</tr>
-{% unless forloop.last %}
-<tr>
-{% endunless %}
-{% endfor %}
-{% endif %}
-
-{% if page.harvest %}
-<tr>
-    <th colspan="3" rowspan="{{ page.harvest | size }}">
-        Ernte
-    </th>
-{% for entry in page.harvest }} %}
-    <td colspan="3">{{ entry[0] }}</td>
-    <td colspan="3">{{ entry[1] }}</td>
 </tr>
 {% unless forloop.last %}
 <tr>
