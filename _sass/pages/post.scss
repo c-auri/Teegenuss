@@ -34,7 +34,7 @@ article.post {
 
     p {
         margin: 0 auto;
-        max-width: 60ch;
+        max-width: $p-max-width;
         padding: .5em 0;
     }
 
