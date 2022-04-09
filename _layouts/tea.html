@@ -4,12 +4,12 @@ layout: default
 <article class="tea">
 
     <section class="tea-order-nav">
-        {% assign order = site.orders | where: 'order-id', page.order-id | first %}
+        {% assign order = site.orders | find: 'order-id', page.order-id %}
         {% assign teas = site.teas | where: 'order-id', page.order-id %}
         {% assign prev-key = page.key | plus: -1 | modulo: teas.size %}
         {% assign next-key = page.key | plus: 1 | modulo: teas.size %}
-        {% assign prev = teas | where: 'key', prev-key | first %}
-        {% assign next = teas | where: 'key', next-key | first %}
+        {% assign prev = teas | find: 'key', prev-key %}
+        {% assign next = teas | find: 'key', next-key %}
 
 
         <div class="order-link">
@@ -79,7 +79,7 @@ layout: default
             <h3>Begriffserklärungen</h3>
         </header>
         {% for tag in page.tags %}
-        {% assign term = site.explanations | where: 'tag', tag | first %}
+        {% assign term = site.explanations | find: 'tag', tag %}
         <p>
             <span class="glossary-term">{{ term.title }}:</span>
             <span class="glossary-explanation">{{ term.content }}</span>
