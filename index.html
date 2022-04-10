@@ -2,7 +2,34 @@
 title: "Projekt: Teegenuss"
 ---
 {% assign orders = site.orders | sort: date %}
-{% for order in orders reversed %}
+
+<p class="blog-separator">Laufend</p>
+
+{% assign open = orders | where: 'open', 'true' %}
+{% for order in open %}
+<section class="blog-post">
+
+    <a class="blog-post-image" href="{{ order.url }}">
+        <img 
+            src="/assets/img/orders/{{ order.order-id }}/lead.jpg" 
+            alt="{{ order.lead-alt }}">
+    </a>
+
+    <a class="blog-post-header" href="{{ order.url }}">
+        <header>
+            <h2>{{ order.subtitle }}</h2>
+            <h1 class="blog-post-title">{{ order.title }}</h1>
+        </header>
+    </a>
+
+    <p class="blog-post-excerpt">{{ order.excerpt }}</p>
+</section>
+{% endfor %}
+
+<p class="blog-separator">Beendet</p>
+
+{% assign closed = orders | where: 'open', 'false' %}
+{% for order in closed  %}
 <section class="blog-post">
 
     <a class="blog-post-image" href="{{ order.url }}">

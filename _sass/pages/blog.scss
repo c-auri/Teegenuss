@@ -10,6 +10,14 @@ section.blog-post {
     }
 }
 
+.blog-separator {
+    padding: .1rem 0;
+    font-size: var(--fs-500);
+    color: black;
+    border-top: 1px black dashed;
+    border-bottom: 1px black dashed;
+}
+
 .blog-post-header {
     h1 {
         color: $clr-dark-gray;
