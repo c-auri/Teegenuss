@@ -3,18 +3,20 @@ title: Glossar
 layout: default
 permalink: /glossar
 ---
-<article class="article">
+<section class="content">
 
-    <header class="lead">
+    <header class="content__header--hero">
         <img src="/assets/img/glossary.jpg" alt="Bücheregal">
-        <h1>Glossar</h1>
+        <h2 class="content__header__title--hero">Glossar</h2>
     </header>
 
     {% for term in site.explanations %}
-    <p class="glossary-entry" id="{{ term.tag }}">
-        <span class="glossary-term">{{ term.title }}:</span>
-        <span class="glossary-explanation">{{ term.content }}</span>
-    </p>
+    <section class="glossary__entry" id="{{term.tag}}">
+        <header class="glossary__term">
+            <h3 class="glossary__term">{{ term.title }}:</h3>
+        </header>
+        {{ term.content }}
+    </section>
     {% endfor %}
 
 </article>

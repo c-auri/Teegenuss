@@ -1,7 +1,13 @@
-img {
-    max-width: 100%;
+.slideshow {
+    position: relative;
+    overflow: hidden;
+
+    img {
+        margin: 0 auto;
+        display: block;
+    }
 }
-  
+
 .slide {
     display: none;
 }
@@ -11,12 +17,13 @@ img {
     cursor: pointer;
     user-select: none;
     position: absolute;
-    top: 115px;
+    top: calc(50% - 5rem);
     padding: 4rem 6px;
-    color: $clr-medium-dark-gray;
+    color: $medium-dark-gray;
     opacity: .5;
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 2rem;
+    line-height: 2rem;
     border-radius: 0 5px 5px 0;
     transition: 0.6s ease;
 }
@@ -28,9 +35,9 @@ img {
 
 .slideshow-prev:hover, 
 .slideshow-next:hover {
-    background-color: $clr-medium-dark-gray;
+    background-color: $medium-dark-gray;
     opacity: .5;
-    color: $clr-light-gray;
+    color: $light-gray;
 }
 
 .fade {

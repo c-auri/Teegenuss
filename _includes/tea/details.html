@@ -1,41 +1,51 @@
-<tr>
-    <th colspan="3" rowspan="2">Sorte</th>
-    <td colspan="3">Teesorte</td>
-    <td colspan="3">{{ page.type }}</td>
-</tr>
-<tr>
-    <td colspan="3">Strauchsorte</td>
-    <td colspan="3">{{ page.variety }}</td>
-</tr>
+<div class="tea__grid--outer">
+    <div class="tea__grid__attribute--outer">Sorte</div>
+    <div class="tea__grid--inner">
+
+        <div class="tea__grid__attribute--inner">Teesorte</div>
+        <div class="tea__grid__value">{{ page.type }}</div>
+
+        <div class="tea__grid__attribute--inner">Strauchsorte</div>
+        <div class="tea__grid__value">{{ page.variety }}</div>
+
+    </div>
+</div>
 
 {% if page.origin %}
-<tr>
-    <th colspan="3" rowspan="{{ page.origin | size }}">
-        Herkunft
-    </th>
-{% for entry in page.origin }} %}
-    <td colspan="3">{{ entry[0] }}</td>
-    <td colspan="3">
-        {{ entry[1] }}{% if entry[0] == 'Höhe' %}&hairsp;m{%endif%}
-    </td>
-</tr>
-{% unless forloop.last %}
-<tr>
-{% endunless %}
-{% endfor %}
+<div class="tea__grid--outer">
+    <div class="tea__grid__attribute--outer">Herkunft</div>
+    <div class="tea__grid--inner">
+
+        {% for entry in page.origin %}
+        <div class="tea__grid__attribute--inner">
+            {{ entry[0] }}
+        </div>
+
+        <div class="tea__grid__value">
+            {{ entry[1] -}}
+            {%- if entry[0] == 'Höhe' %}&hairsp;m{% endif %}
+        </div>
+        {% endfor %}
+
+    </div>
+</div>
 {% endif %}
 
 {% if page.production %}
-<tr>
-    <th colspan="3" rowspan="{{ page.production | size }}">
-        Verarbeitung
-    </th>
-{% for entry in page.production }} %}
-    <td colspan="3">{{ entry[0] }}</td>
-    <td colspan="3">{{ entry[1] }}</td>
-</tr>
-{% unless forloop.last %}
-<tr>
-{% endunless %}
-{% endfor %}
+<div class="tea__grid--outer">
+    <div class="tea__grid__attribute--outer">Ver&shy;arbeitung</div>
+    <div class="tea__grid--inner">
+
+        {% for entry in page.production %}
+        <div class="tea__grid__attribute--inner">
+            {{ entry[0] }}
+        </div>
+
+        <div class="tea__grid__value">
+            {{ entry[1] }}
+        </div>
+        {% endfor %}
+
+    </div>
+</div>
 {% endif %}

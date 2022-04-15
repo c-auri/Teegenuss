@@ -3,48 +3,66 @@ title: "Projekt: Teegenuss"
 ---
 {% assign orders = site.orders | sort: date %}
 
-<p class="blog-separator">Laufend</p>
+<section class="content">
 
-{% assign open = orders | where: 'open', 'true' %}
-{% for order in open %}
-<section class="blog-post">
+    <header class="content__header dashed-separator">
+        <h2 class="fs-500 dark-gray">Laufend</h2>
+    </header>
 
-    <a class="blog-post-image" href="{{ order.url }}">
-        <img 
-            src="/assets/img/orders/{{ order.order-id }}/lead.jpg" 
-            alt="{{ order.lead-alt }}">
-    </a>
+    {% assign ongoing = orders | where: 'open', 'true' %}
+    {% for order in ongoing %}
+    <section class="order-showcase">  
+    
+        <a class="order-showcase__image" href="{{ order.url }}">
+            <img 
+                src="/assets/img/orders/{{ order.order-id }}/lead.jpg" 
+                alt="{{ order.lead-alt }}">
+        </a>
+    
+        <a class="order-showcase__header" href="{{ order.url }}">
+            <header>
+                <span class="fs-500 dark-gray">{{ order.subtitle }}</span>
+                <h3 class="order-showcase__header__title">{{ order.title }}</h3>
+            </header>
+        </a>
+    
+        <p class="order-showcase__excerpt">
+            {{ order.excerpt }}
+        </p>
 
-    <a class="blog-post-header" href="{{ order.url }}">
-        <header>
-            <h2>{{ order.subtitle }}</h2>
-            <h1 class="blog-post-title">{{ order.title }}</h1>
-        </header>
-    </a>
+    </section>
+    {% endfor %}
 
-    <p class="blog-post-excerpt">{{ order.excerpt }}</p>
 </section>
-{% endfor %}
 
-<p class="blog-separator">Beendet</p>
+<section class="content">
 
-{% assign closed = orders | where: 'open', 'false' %}
-{% for order in closed  %}
-<section class="blog-post">
+    <header class="content__header dashed-separator">
+        <h2 class="fs-500 dark-gray">Beendet</h2>
+    </header>
 
-    <a class="blog-post-image" href="{{ order.url }}">
-        <img 
-            src="/assets/img/orders/{{ order.order-id }}/lead.jpg" 
-            alt="{{ order.lead-alt }}">
-    </a>
+    {% assign closed = orders | where: 'open', 'false' %}
+    {% for order in closed %}
+    <section class="order-showcase">  
+    
+        <a class="order-showcase__image" href="{{ order.url }}">
+            <img 
+                src="/assets/img/orders/{{ order.order-id }}/lead.jpg" 
+                alt="{{ order.lead-alt }}">
+        </a>
+    
+        <a class="order-showcase__header" href="{{ order.url }}">
+            <header>
+                <span class="fs-500 dark-gray">{{ order.subtitle }}</span>
+                <h3 class="order-showcase__header__title">{{ order.title }}</h3>
+            </header>
+        </a>
+    
+        <p class="order-showcase__excerpt">
+            {{ order.excerpt }}
+        </p>
 
-    <a class="blog-post-header" href="{{ order.url }}">
-        <header>
-            <h2>{{ order.subtitle }}</h2>
-            <h1 class="blog-post-title">{{ order.title }}</h1>
-        </header>
-    </a>
+    </section>
+    {% endfor %}
 
-    <p class="blog-post-excerpt">{{ order.excerpt }}</p>
 </section>
-{% endfor %}

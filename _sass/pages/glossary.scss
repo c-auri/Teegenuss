@@ -1,46 +1,25 @@
-article.glossary {
-    margin: 2rem auto;
-    padding: 0 .5rem;
-}
+.glossary {
+    &__entry {
+        color: $almost-black;
+        font-size: var(--fs-400);
+        line-height: var(--fs-600);
+        margin: 1rem auto;
+        max-width: $p-width;
+    }
 
-header.glossary {
-    padding: 1rem 0;
-    position: relative;
-    display: flex;
-    justify-content: center;
-
-    h1 {
-        position: absolute;
-        text-align: center;
-        top: calc(50% - (var(--fs-1000) / 2));
-        line-height: var(--fs-1000);
-        font-size: var(--fs-1000);
-        text-align: center;
-        color: $clr-light-gray;
-        opacity: .8;
+    &__term {
+        display: inline;
+        color: $black;
         font-weight: bold;
     }
-}
-
-a.glossary {
-    color: inherit;
-    text-decoration: underline;
-    text-decoration-style: dotted;
-}
-
-a.glossary:hover {
-    color: $clr-black;
-}
-
-.glossary-entry {
-    margin: 1rem auto;
-    max-width: 60ch;
-}
-
-.glossary-term {
-    font-weight: bold;
-}
-
-.glossary-explanation {
-    color: $clr-dark-gray;
+    
+    &__link {
+        color: inherit;
+        text-decoration: underline;
+        text-decoration-style: dotted;
+    
+        &:hover {
+            color: inherit;
+        }
+    }
 }

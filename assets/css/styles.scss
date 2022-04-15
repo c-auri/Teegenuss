@@ -1,18 +1,13 @@
 ---
 ---
 @import "constants";
-@import "embeddings";
-@import "layout/body";
-@import "layout/header";
-@import "layout/footer";
-@import "layout/main";
-@import "layout/article";
-@import "pages/blog";
-@import "pages/glossary";
-@import "pages/order";
-@import "pages/form";
+@import "default";
+@import "utilities";
+@import "page";
+@import "pages/start";
+@import "pages/package";
 @import "pages/tea";
+@import "pages/form";
+@import "pages/glossary";
 
-// ------------ Misc ------------//
-
-$p-max-width: 60ch;
+@import "slideshow";

@@ -1,14 +1,13 @@
 ---
 layout: default
 ---
-<article class="order" id="top">
-    <header class="order-header">
-        <h2 class="sub-heading">{{ page.subtitle }}</h2>
-        <h1>{{ page.title }}</h1>
+<section class="content">
+
+    <header class="content__header">
+        <span class="content__header__subtitle">{{ page.subtitle }}</span>
+        <h2 class="content__header__title">{{ page.title }}</h2>
     </header>
 
-    <section class="order-overview">
-        {{ content }}
-    </section>
+    {{ content }}
 
-</article>
+</section>

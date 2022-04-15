@@ -1,0 +1,43 @@
+.almost-black {
+    color: $almost-black !important;
+}
+
+.dark-gray {
+    color: $dark-gray !important;
+}
+
+.medium-dark-gray {
+    color: $medium-dark-gray !important;
+}
+
+.medium-gray {
+    color: $medium-gray !important;
+}
+
+.fs-300 {
+    font-size: var(--fs-300) !important;
+}
+.fs-500 {
+    font-size: var(--fs-500) !important;
+}
+
+.fs-600 {
+    font-size: var(--fs-600) !important;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.mouseover {
+    text-decoration: underline dotted;
+    cursor: help;
+}
+
+.dashed-separator {
+    border-top: 1px $black dashed;
+    border-bottom: 1px $black dashed;
+    padding: .1rem 0;
+    color: $almost-black;
+    text-align: left !important;
+}

@@ -1,31 +1,40 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="/assets/css/styles.css">
-    <title>{{ page.title }}</title>
-  </head>
-  <body>
-    <div class="content">
-      <header class="main">
-        <a class="logo" href="/">
-          <p>
-            Projekt:
-          </p>
-          <p>
-            Teegenuss
-          </p>
-        </a>
-        <nav>
-          {% include nav.html %}
-        </nav>
-      </header>
-      <main>
-        {{ content }}
-      </main>
-      <footer>
-        &copy; Herbert Zilelberg
-      </footer>
-    </div>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <title>{{ page.title }}</title>
+</head>
+<body>
+
+  <div class="page">
+
+    <header class="page__header">
+
+      <a class="logo" href="/">
+        <h1>
+          <span>Projekt:</span>
+          <br>
+          <span>Teegenuss</span>
+        </h1>
+      </a>
+
+      <nav class="page__nav">
+        {% include nav.html %}
+      </nav>
+
+    </header>
+
+    <main>
+      {{ content }}
+    </main>
+
+    <footer class="page__footer">
+      &copy; Herbert Zilelberg
+    </footer>
+
+  </div>
+
+</body>
 </html>

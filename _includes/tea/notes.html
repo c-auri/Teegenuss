@@ -1,75 +1,61 @@
-{% assign size = page.visual | size %}
-{% if size < 2 %}
-<tr>
-    <th colspan="3">Aussehen</th>
-    <td colspan="2"></td>
-    <td colspan="4">
-        {% if size == 1 %}{{ page.visual }}{% endif %}
-    </td>
-</tr>
-{% else %}
-<tr>
-    <th colspan="3" rowspan="{{page.visual | size }}">Aussehen</th>
-{% for entry in page.visual %}
-    <td colspan="2">{{ entry[0] }}</td>
-    <td colspan="4">{{ entry[1] }}</td>
-</tr>
-{% unless forloop.last %}
-<tr>
-{% endunless %}
-{% endfor %}
-{% endif %}
+{% if page.visual %}
+        <div class="tea__grid--outer">
+            <div class="tea__grid__attribute--outer">Aussehen</div>
+            <div class="tea__grid--inner">
 
-{% assign size = page.aroma | size %}
-{% if size < 2 %}
-<tr>
-    <th colspan="3">Aroma</th>
-    <td colspan="2"></td>
-    <td colspan="4">
-        {% if size == 1 %}{{ page.aroma }}{% endif %}
-    </td>
-</tr>
-{% else %}
-<tr>
-    <th colspan="3" rowspan="{{page.aroma | size }}">Aroma</th>
-{% for entry in page.aroma %}
-    <td colspan="2">
-        {% if entry[0] == 'Geschirr' %}
-        <span 
-            class="mouseover" 
-            title="Das Aroma des Teegeschirrs nach dem Aufgießen bzw. Trinken. Zum Beispiel der Gaiwandeckel, die Ausschankkanne oder die Trinkschalen.">
-            {{ entry[0] }}
-        </span>
-        {% else %}
-            {{ entry[0] }}
+                {% for entry in page.visual %}
+                <div class="tea__grid__attribute--inner">
+                    {{ entry[0] }}
+                </div>
+
+                <div class="tea__grid__value">
+                    {{ entry[1] }}
+                </div>
+                {% endfor %}
+
+            </div>
+        </div>
         {% endif %}
-    </td>
-    <td colspan="4">{{ entry[1] }}</td>
-</tr>
-{% unless forloop.last %}
-<tr>
-{% endunless %}
-{% endfor %}
-{% endif %}
+        
+        {% if page.aroma %}
+        <div class="tea__grid--outer">
+            <div class="tea__grid__attribute--outer">Aroma</div>
+            <div class="tea__grid--inner">
 
-{% assign size = page.taste | size %}
-{% if size < 2 %}
-<tr>
-    <th colspan="3">Geschmack</th>
-    <td colspan="2"></td>
-    <td colspan="4">
-        {% if size == 1 %}{{ page.taste }}{% endif %}
-    </td>
-</tr>
-{% else %}
-<tr>
-    <th colspan="3" rowspan="{{page.taste | size }}">Geschmack</th>
-{% for entry in page.taste %}
-    <td colspan="2">{{ entry[0] }}</td>
-    <td colspan="4">{{ entry[1] }}</td>
-</tr>
-{% unless forloop.last %}
-<tr>
-{% endunless %}
-{% endfor %}
-{% endif %}
+                {% for entry in page.aroma %}
+                <div class="tea__grid__attribute--inner">
+                    <span
+                    {% if entry[0] == 'Geschirr' %}
+                        class="mouseover" title="Das Aroma des Teegeschirrs nach dem Aufgießen bzw. Trinken. Zum Beispiel der Gaiwandeckel, die Ausschankkanne oder die Trinkschalen."
+                    {% endif %}>
+                        {{ entry[0] }}
+                    </span>
+                </div>
+
+                <div class="tea__grid__value">
+                    {{ entry[1] }}
+                </div>
+                {% endfor %}
+
+            </div>
+        </div>
+        {% endif %}
+
+        {% if page.taste %}
+        <div class="tea__grid--outer">
+            <div class="tea__grid__attribute--outer">Ge&shy;schmack</div>
+            <div class="tea__grid--inner">
+
+                {% for entry in page.taste %}
+                <div class="tea__grid__attribute--inner">
+                    {{ entry[0] }}
+                </div>
+
+                <div class="tea__grid__value">
+                    {{ entry[1] }}
+                </div>
+                {% endfor %}
+
+            </div>
+        </div>
+        {% endif %}

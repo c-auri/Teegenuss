@@ -1,59 +1,93 @@
-<tr>
-    <th colspan="3">Temperatur</th>
-    <td colspan="2"></td>
-    <td colspan="4">{{ page.gongfu-temperature }}&hairsp;°C</td>
-</tr>
+<div class="tea__grid--outer">
+    <div class="tea__grid__attribute--outer">Temperatur</div>
+    <div class="tea__grid--inner">
+
+        <div class="tea__grid__attribute--inner"></div>
+        <div class="tea__grid__value">{{ page.gongfu-temperature }}&hairsp;°C</div>
+
+    </div>
+</div>
 
 {% if page.gongfu-amount %}
-<tr>
-    <th colspan="3" rowspan="{{ page.gongfu-amount | size }}">
-        Menge
-    </th>
-{% for entry in page.gongfu-amount}} %}
-    <td colspan="2">{{ entry[0] }}</td>
-    <td colspan="4">
-        {{ entry[1] }}{% if entry[0] == 'Gewicht' %}&hairsp;g pro 100&hairsp;ml{%endif%}
-    </td>
-</tr>
-{% unless forloop.last %}
-<tr>
-{% endunless %}
-{% endfor %}
+<div class="tea__grid--outer">
+    <div class="tea__grid__attribute--outer">Menge</div>
+    <div class="tea__grid--inner">
+
+        {% for entry in page.gongfu-amount %}
+        <div class="tea__grid__attribute--inner">
+
+            <span
+
+            {% if entry[0] == "oder Volumen" %}
+                class="medium-gray"
+            {% endif %}>
+
+                {{ entry[0] }}
+            </span>
+        </div>
+
+        <div class="tea__grid__value">
+
+            <span
+            {% if entry[0] == "oder Volumen" %}
+                class="medium-gray"
+            {% endif %}>
+                {{ entry[1] }}
+                {%- if entry[0] == 'Gewicht' -%}
+                    &hairsp;g pro 100&hairsp;ml
+                {%endif%}
+            </span>
+            
+        </div>
+        {% endfor %}
+
+    </div>
+</div>
 {% endif %}
 
 {% if page.gongfu-times %}
-<tr>
-    <th colspan="3" rowspan="{{ page.gongfu-times | size }}">
-        Ziehzeiten
-    </th>
-{% for entry in page.gongfu-times}} %}
-    <td colspan="2">
-        {% if entry[0] == "Abguss" %}
-        <span class="mouseover"
-        title="Das ist der Aufguss vorm ersten Trinkaufguss. Er dient der Vorbereitung der Blätter und ist nicht zum trinken gedacht. Kann direkt entsorgt werden, wenn man möchte kann man ihn aber auch trinken.">
-        {{ entry[0] }}
-        </span>
-        {% else %}
-        {{ entry[0] }}
-        {% endif %}
-    </td>
-    <td colspan="4">
-        {% if entry[1] == "blitz" %}
-        <span class="mouseover"
-        title="D.h. so schnell wie möglich ein- und wieder ausgießen.">
-        {{ entry[1] }}
-        </span>
-        {% elsif entry[0] == 'Gewicht' %}
-        {{ entry[1] }}&hairsp;g pro 100&hairsp;ml
-        {% elsif entry[1] == "optional" or entry[1] == "weglassen" %}
-        <span class="brewing-comment">{{ entry[1] }}</span>
-        {% else %}
-        {{ entry[1] }}
-        {%endif%}
-    </td>
-</tr>
-{% unless forloop.last %}
-<tr>
-{% endunless %}
-{% endfor %}
+<div class="tea__grid--outer">
+    <div class="tea__grid__attribute--outer">Zieh&shy;zeiten</div>
+    <div class="tea__grid--inner">
+
+        {% for entry in page.gongfu-times %}
+        <div class="tea__grid__attribute--inner">
+
+            <span
+            {% if entry[0] == "Abguss" %}
+                class="mouseover" title="Das ist der Aufguss vorm ersten Trinkaufguss. Er dient der Vorbereitung der Blätter und ist nicht zum trinken gedacht. Kann direkt entsorgt werden, wenn man möchte kann man ihn aber auch trinken."
+            {% endif %}>
+            {% unless entry[0] == "bis" %}
+                {{ entry[0] }}
+            {% endunless %}
+            </span>
+
+        </div>
+
+        <div class="tea__grid__value">
+
+            <span
+            {% if entry[1] == "blitz" %}
+                class="mouseover" title="D.h. so schnell wie möglich ein- und wieder ausgießen."
+            {% elsif entry[1] == "optional" 
+                or entry[1] == "weglassen" 
+                or entry[0] == "bis" %}
+                class="medium-gray"
+            {% endif %}>
+                {{ entry[1] }}
+                <!-- The next 2 lines are a workaround for: if string.startswith('+') -->
+                {% assign splitPlus = entry[1] | split: '+' %}
+                {% if splitPlus[0] == '' %}
+                    <br>
+                    <span class="medium-gray">pro Aufguss</span>
+                {% elsif entry[0] == 'Gewicht' %}
+                    &hairsp;g pro 100&hairsp;ml
+                {% endif %}
+            </span>
+            
+        </div>
+        {% endfor %}
+
+    </div>
+</div>
 {% endif %}

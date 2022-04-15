@@ -1,65 +1,57 @@
-// -------- Breakpoints -------- //
+// --------- Dimensions ---------//
 
-$bp-1: 600px;
-$bp-2: 800px;
+$content-margin-top: 3rem;
+$content-width: 900px;
+$p-width: 45rem;
+
+$bp-tablet: 600px;
+$bp-desktop: $content-width;
 
 // ----------- Fonts ----------- //
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto');
 
-$main-font: 'Roboto', sans-serif;
+$ff-main: 'Roboto', sans-serif;
 
 :root {
-    --fs-200: 0.8rem;
-    --fs-300: 0.9rem;
-    --fs-400: 1rem;
-    --fs-500: 1.1rem;
-    --fs-600: 1.2rem;
-    --fs-700: 1.3rem;
-    --fs-800: 1.4rem;
-    --fs-1000: 3rem;
-}
+    font-size: 16px;
 
-@media(min-width: $bp-1) {
-    :root {
-        --fs-200: 0.9rem;
-        --fs-300: 1rem;
-        --fs-400: 1.1rem;
-        --fs-500: 1.2rem;
-        --fs-600: 1.3rem;
-        --fs-700: 1.4rem;
-        --fs-800: 1.5rem;
-        --fs-1000: 3.5rem;
-    }
-}
+    --fs-200: .75rem;
+    --fs-300: 1rem;
+    --fs-400: 1.125rem;
+    --fs-500: 1.25rem;
+    --fs-600: 1.5rem;
+    --fs-700: 1.625rem;
+    --fs-800: 1.75rem;
+    --fs-900: 1.875rem;
+    --fs-1000: 2rem;
 
-@media(min-width: $bp-2) {
-    :root {
+    @media(min-width: $bp-tablet) {
         --fs-200: 1rem;
-        --fs-300: 1.1rem;
-        --fs-400: 1.2rem;
-        --fs-500: 1.3rem;
-        --fs-600: 1.4rem;
-        --fs-700: 1.5rem;
-        --fs-800: 1.6rem;
+        --fs-300: 1.125rem;
+        --fs-400: 1.25rem;
+        --fs-500: 1.5rem;
+        --fs-600: 1.75rem;
+        --fs-700: 2rem;
+        --fs-800: 2.5rem;
+        --fs-900: 3rem;
         --fs-1000: 4rem;
     }
 }
 
 // ---------- Colors ---------- //
 
-$clr-black: #000;
-$clr-dark-gray: #393939;
-$clr-medium-dark-gray: #595959;
-$clr-medium-gray: #888;
-$clr-medium-light-gray: #ccc;
-$clr-light-gray: #f9f9f9;
+$black: #000;
+$almost-black: #222;
+$dark-gray: #444;
+$medium-dark-gray: #595959;
+$medium-gray: #888;
+$medium-light-gray: #ccc;
+$light-gray: #f9f9f9;
+$almost-white: #f5f5f5;
+$white: #fff;
 
-$clr-bg: #fff;
-
-$clr-link: #339;
-$clr-link-hover: #6f6fdf;
-$clr-nav-link: $clr-medium-dark-gray;
+$light-blue: #f9f9ff;
 
 $clr-table-light: #f1f1ff;
 $clr-table-medium: #e9e9ff;
@@ -74,7 +66,7 @@ $clr-submit-hover: #00804f;
 $clr-order-bg: #e9e9ff;
 $clr-order-highlight: blue;
 
-$clr-tea-gradient: linear-gradient(
+$tea-gradient: linear-gradient(
         to right, 
         darkgreen 0%,
         #96D121 10%,
@@ -85,7 +77,3 @@ $clr-tea-gradient: linear-gradient(
         #c23d00 80%,
         #912e00 90%,
         #3d1300 100%);
-
-// ------------ Misc ------------//
-
-$p-max-width: 60ch;
