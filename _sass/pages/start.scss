@@ -1,5 +1,11 @@
+.start__title {
+    color: $medium-dark-gray;
+    line-height: var(--fs-600);
+    font-size: var(--fs-400);
+}
+
 .order-showcase {
-    padding: 3rem 0;
+    padding: 1rem 0;
     display: grid;
 
     &__header {

@@ -6,7 +6,7 @@ title: "Projekt: Teegenuss"
 <section class="content">
 
     <header class="content__header dashed-separator">
-        <h2 class="fs-500 dark-gray">Laufend</h2>
+        <h2 class="start__title">Laufend</h2>
     </header>
 
     {% assign ongoing = orders | where: 'open', 'true' %}
@@ -38,7 +38,7 @@ title: "Projekt: Teegenuss"
 <section class="content">
 
     <header class="content__header dashed-separator">
-        <h2 class="fs-500 dark-gray">Beendet</h2>
+        <h2 class="start__title">Beendet</h2>
     </header>
 
     {% assign closed = orders | where: 'open', 'false' %}
