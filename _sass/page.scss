@@ -84,8 +84,9 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
-        color: $medium-dark-gray;
+        color: $medium-gray;
         font-size: var(--fs-300);
+        user-select: none;
     }
 }
 
