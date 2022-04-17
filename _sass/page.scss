@@ -90,8 +90,9 @@ body {
 }
 
 .content {
+    margin: $content-margin-top 0;
+
     &__header {
-        margin: $content-margin-top 0;
         text-align: center;
         font-weight: bold;
         line-height: var(--fs-800);
