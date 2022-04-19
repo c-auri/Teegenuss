@@ -15,7 +15,7 @@
     }
 
     li {
-        padding-bottom: .5rem;
+        padding-bottom: 1rem;
     }
 }
 
@@ -250,9 +250,20 @@ p.form-alert {
 }
 
 .package-selector {
-    padding: 1rem 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     border: dotted 1px $medium-dark-gray;
     cursor: pointer;
+}
+
+.container:first-child .package-selector {
+    padding-left: .5rem;
+    padding-right: 2rem
+}
+
+.container:last-child .package-selector {
+    padding-left: 2rem;
+    padding-right: .5rem;
 }
 
 .package-selector:hover {
@@ -274,6 +285,8 @@ p.form-alert {
 }
 
 .checkbox-tea {
+    margin: 0;
+    padding: .1rem 0;
     color: $medium-dark-gray;
     font-size: var(--fs-300);
 }
