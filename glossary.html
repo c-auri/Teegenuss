@@ -13,9 +13,12 @@ permalink: /glossar
     {% for term in site.explanations %}
     <section class="glossary__entry" id="{{term.tag}}">
         <header class="glossary__term">
-            <h3 class="glossary__term">{{ term.title }}:</h3>
+            <h3>{{ term.title }}</h3>
+            <span>+</span>
         </header>
-        {{ term.content }}
+        <div class="glossary__description">
+            {{ term.content }}
+        </div>
     </section>
     {% endfor %}
 

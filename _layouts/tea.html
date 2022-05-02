@@ -76,16 +76,23 @@ layout: default
     <section class="tea__explanations">
 
         <header class="tea__subheader">
-            <h3 class="tea__subheader__title">Begriffserklärungen</h3>
+            <h3 class="tea__subheader__title">Begriffe</h3>
         </header>
 
         {% for tag in page.tags %}
         {% assign term = site.explanations | find: 'tag', tag %}
 
-        <p class="tea__explanations__entry">
-            <span class="glossary__term almost-black">{{ term.title }}:</span>
-            <span class="dark-gray">{{ term.content }}</span>
-        </p>
+        <section class="glossary__entry">
+
+            <header class="glossary__term">
+                <h3>{{ term.title }}</h3>
+            </header>
+
+            <div class="glossary__description">
+                {{ term.content }}
+            </div>
+
+        </section>
 
         {% endfor %}
 

@@ -6,11 +6,41 @@
         margin: 1rem auto;
         max-width: $p-width;
     }
-
+    
     &__term {
-        display: inline;
-        color: $black;
+        border-radius: 5px;
+        padding: .7rem clamp(1rem, 5vw, 3rem);
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        color: $dark-gray;
         font-weight: bold;
+        background-color: $almost-white;
+
+        span {
+            color: $medium-gray;
+        }
+
+        span:hover,
+        &:hover {
+            color: $black;
+            background-color: $light-gray;
+        }
+
+        &:hover ~ div {
+            border-color: $light-gray;
+        }
+    }
+
+    &__term--active {
+        border-radius: 5px 5px 0 0;
+    }
+    
+    &__description {
+        border: 2px solid $almost-white;
+        padding: 1.5rem clamp(1rem, 5vw, 3rem);
+        display: none;
+        background-color: $white;
     }
     
     &__link {
