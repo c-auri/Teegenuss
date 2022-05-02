@@ -1,14 +1,11 @@
 .glossary {
     &__entry {
-        color: $almost-black;
         font-size: var(--fs-400);
         line-height: var(--fs-600);
         margin: 1rem auto;
-        max-width: $p-width;
     }
     
     &__term {
-        border-radius: 5px;
         padding: .7rem clamp(1rem, 5vw, 3rem);
         cursor: pointer;
         display: flex;
@@ -17,30 +14,24 @@
         font-weight: bold;
         background-color: $almost-white;
 
-        span {
-            color: $medium-gray;
-        }
-
-        span:hover,
         &:hover {
             color: $black;
             background-color: $light-gray;
         }
 
-        &:hover ~ div {
+        &:hover ~ div div {
             border-color: $light-gray;
         }
     }
-
-    &__term--active {
-        border-radius: 5px 5px 0 0;
-    }
     
     &__description {
-        border: 2px solid $almost-white;
-        padding: 1.5rem clamp(1rem, 5vw, 3rem);
-        display: none;
-        background-color: $white;
+        border: 5px solid $almost-white;
+        border-top: none;
+        border-radius: 0 0 5px 5px;
+        padding-top: 1rem;
+        padding-bottom: 1.5rem;
+        padding-inline: clamp(1rem, 5vw, 3rem);
+        color: $dark-gray;
     }
     
     &__link {

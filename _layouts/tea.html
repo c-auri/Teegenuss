@@ -84,12 +84,14 @@ layout: default
 
         <section class="glossary__entry">
 
-            <header class="glossary__term">
+            <header class="glossary__term accordion">
                 <h3>{{ term.title }}</h3>
             </header>
 
-            <div class="glossary__description">
-                {{ term.content }}
+            <div class="panel">
+                <div class="glossary__description">
+                    {{ term.content }}
+                </div>
             </div>
 
         </section>
@@ -140,3 +142,4 @@ layout: default
 </section>
 
 <script src="/assets/js/slideshow.js"></script>
+<script src="/assets/js/accordion.js"></script>

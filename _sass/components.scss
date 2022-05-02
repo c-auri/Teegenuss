@@ -16,6 +16,36 @@
     }
 }
 
+// ------ Accordion ------ //
+
+.accordion {
+    border-radius: 5px;
+
+    &::after {
+        content: '\02795';
+        opacity: .6;
+        font-size: var(--fs-200);
+    }
+
+    &--active {
+        border-radius: 5px 5px 0 0;
+    }
+
+    &--active::after {
+        content: '\2796';
+    }
+
+    &:hover::after {
+        opacity: 1;
+    }
+}
+
+.panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
 // ------ Slideshow ------ //
 
 .slideshow {
