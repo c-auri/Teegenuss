@@ -2,12 +2,12 @@
 ---
 @import "constants";
 @import "default";
+@import "mixins";
 @import "utilities";
 @import "page";
+@import "components";
 @import "pages/start";
 @import "pages/package";
 @import "pages/tea";
 @import "pages/form";
 @import "pages/glossary";
-
-@import "slideshow";

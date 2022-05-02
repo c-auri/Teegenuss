@@ -1,8 +1,14 @@
-.start__title {
-    color: $medium-dark-gray;
-    line-height: var(--fs-600);
-    font-size: var(--fs-400);
+.start__header {
+    @include dashed-separator;
+
+    &__title {
+        color: $medium-dark-gray;
+        font-weight: bold;
+        line-height: var(--fs-600);
+        font-size: var(--fs-400);
+    }
 }
+
 
 .order-showcase {
     padding: clamp(2rem, 4vw, 4rem) 0;

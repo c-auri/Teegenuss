@@ -1,3 +1,23 @@
+// ------ Headers -------- //
+
+.hero {
+    position: relative;
+    margin-bottom: clamp(2rem, 10vw, 4rem);
+
+    &__title {
+        width: 100%;
+        position: absolute;
+        top: calc(55% - (var(--fs-1000) / 2));
+        color: rgba($light-gray, .8);
+        text-align: center;
+        line-height: var(--fs-1000);
+        font-size: var(--fs-1000);
+        user-select: none;
+    }
+}
+
+// ------ Slideshow ------ //
+
 .slideshow {
     position: relative;
     overflow: hidden;

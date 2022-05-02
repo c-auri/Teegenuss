@@ -68,10 +68,14 @@
         grid-row: 2;
     }
 
-    &__subheading {
-        max-width: $p-width;
-        color: $almost-black;
-        font-size: var(--fs-500);
+    &__subheader {
+        @include dashed-separator;
+
+        &__title {
+            max-width: $p-width;
+            color: $almost-black;
+            font-size: var(--fs-500);
+        }
     }
 }
 
