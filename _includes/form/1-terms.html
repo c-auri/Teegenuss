@@ -1,43 +1,43 @@
 <section class="order-form-section terms">
 
-    <h1>Teilnahme&shy;bedingungen</h1>
+  <h1>Teilnahme&shy;bedingungen</h1>
 
-    <ol>
-        <li>
-            Ich gebe den Tee ohne Gewinnabsicht an euch weiter und bin kein gewerblich eingetragener Händler. Es handelt sich hier um einen freundschaftlichen Austausch. Deshalb ist es mir auch wichtig jeden Teilnehmer zuordnen zu können. Gebt also bitte kurz an woher wir uns kennen.
-        </li>
-        <li>
-            Nachdem ihr die Bestellung aufgegeben habt, kontaktiere ich euch im Discord und gebe euch meine Zahlungsverbindung. Ich bevorzuge PayPal, sollte das für euch nicht möglich sein ist eine Banküberweisung aber auch in Ordnung. Vorkasse ist aber auf alle Fälle erforderlich.
-        </li>
-        <li>
-            Nachdem ich die Zahlungsinformationen weitergegeben habe, reserviere ich für zwei Tage ein Paket. Wenn die Zahlung erfolgt ist geht dieses dann zeitnah in die Post. Sollte ich in den zwei Tagen keine Rückmeldung erhalten gebe ich das Paket wieder frei.
-        </li>
-        <li>
-            Das Paket wird aus Kostengründen unversichtert und ohne Sendungsverfolgung mit der Briefpost verschickt. Bisher ist dabei noch nie etwas schief gegangen. Ihr tragt dabei als Empfänger aber das Risiko. Sollte das Paket auf dem Versandweg doch verloren gehen, werde ich euch die Kosten wahrscheinlich nicht erstatten können. Wer sicher gehen möchte kann sich gegen Aufpreis für eine andere Versandoption entscheiden. Teilt mir das einfach in der Anmerkung mit.
-        </li>
-        <li>
-            Alle persönlichen Daten die ich sammle verwende ich nur zum Abwickeln der Bezahlung und dem Versenden der Pakete. Sie werden von mir direkt im Anschluss an die Teilung gelöscht.
-        </li>
-    </ol>
+  <ol>
+    <li>
+      Ich gebe den Tee ohne Gewinnabsicht an euch weiter und bin kein gewerblich eingetragener Händler. Es handelt sich hier um einen freundschaftlichen Austausch. Deshalb ist es mir auch wichtig jeden Teilnehmer zuordnen zu können. Gebt also bitte kurz an woher wir uns kennen.
+    </li>
+    <li>
+      Nachdem ihr die Bestellung aufgegeben habt, kontaktiere ich euch im Discord und gebe euch meine Zahlungsverbindung. Ich bevorzuge PayPal, sollte das für euch nicht möglich sein ist eine Banküberweisung aber auch in Ordnung. Vorkasse ist aber auf alle Fälle erforderlich.
+    </li>
+    <li>
+      Nachdem ich die Zahlungsinformationen weitergegeben habe, reserviere ich für zwei Tage ein Paket. Wenn die Zahlung erfolgt ist geht dieses dann zeitnah in die Post. Sollte ich in den zwei Tagen keine Rückmeldung erhalten gebe ich das Paket wieder frei.
+    </li>
+    <li>
+      Das Paket wird aus Kostengründen unversichtert und ohne Sendungsverfolgung mit der Briefpost verschickt. Bisher ist dabei noch nie etwas schief gegangen. Ihr tragt dabei als Empfänger aber das Risiko. Sollte das Paket auf dem Versandweg doch verloren gehen, werde ich euch die Kosten wahrscheinlich nicht erstatten können. Wer sicher gehen möchte kann sich gegen Aufpreis für eine andere Versandoption entscheiden. Teilt mir das einfach in der Anmerkung mit.
+    </li>
+    <li>
+      Alle persönlichen Daten die ich sammle verwende ich nur zum Abwickeln der Bezahlung und dem Versenden der Pakete. Sie werden von mir direkt im Anschluss an die Teilung gelöscht.
+    </li>
+  </ol>
 
-    <p class="order-buttons">
+  <p class="order-buttons">
 
-        {% assign from-order = site.orders | where: 'order-id', page.order-id | first %}
+    {% assign from-order = site.orders | where: 'order-id', page.order-id | first %}
 
-        <button 
-            class="order"
-            onclick="location.href='{{ from-order.url }}'"
-            type="button">
-            Zurück
-        </button>
+    <button 
+      class="order"
+      onclick="location.href='{{ from-order.url }}'"
+      type="button">
+      Zurück
+    </button>
 
-        <button 
-            class="order"
-            onclick="advanceTo('packages')"
-            type="button">
-            Weiter
-        </button>
+    <button 
+      class="order"
+      onclick="advanceTo('packages')"
+      type="button">
+      Weiter
+    </button>
 
-    </p>
+  </p>
 
 </section>

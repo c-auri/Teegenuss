@@ -7,13 +7,13 @@ order-id: 22-2
 {% assign packages = site.packages | where: 'order-id', page.order-id %}
 
 <form  class="order-form" name="{{ page.order-id }}" method="POST" action="/success.html" data-netlify="true">
-    
-    {% include form/1-terms.html %}
-    {% include form/2-packages.html %}
-    {% include form/3-contact.html %}
-    {% include form/4-shipping.html %}
-    {% include form/5-addition.html %}
-    {% include form/6-summary.html %}
+  
+  {% include form/1-terms.html %}
+  {% include form/2-packages.html %}
+  {% include form/3-contact.html %}
+  {% include form/4-shipping.html %}
+  {% include form/5-addition.html %}
+  {% include form/6-summary.html %}
 
 </form>
 

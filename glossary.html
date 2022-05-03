@@ -5,25 +5,25 @@ permalink: /glossar
 ---
 <section class="content">
 
-    <header class="hero">
-        <img src="/assets/img/glossary.jpg" alt="Bücheregal">
-        <h2 class="hero__title">Glossar</h2>
-    </header>
+  <header class="hero">
+    <img src="/assets/img/glossary.jpg" alt="Bücheregal">
+    <h2 class="hero__title">Glossar</h2>
+  </header>
 
-    {% for term in site.explanations %}
-    <section class="glossary__entry" id="{{term.tag}}">
-        <header class="glossary__term accordion">
-            <h3>{{ term.title }}</h3>
-        </header>
-        <div class="panel">
-            <div  class="glossary__description">
-                <p>
-                    {{ term.content }}
-                </p>
-            </div>
-        </div>
-    </section>
-    {% endfor %}
+  {% for term in site.explanations %}
+  <section class="glossary__entry" id="{{term.tag}}">
+    <header class="glossary__term accordion">
+      <h3>{{ term.title }}</h3>
+    </header>
+    <div class="panel">
+      <div  class="glossary__description">
+        <p>
+          {{ term.content }}
+        </p>
+      </div>
+    </div>
+  </section>
+  {% endfor %}
 
 </article>
 

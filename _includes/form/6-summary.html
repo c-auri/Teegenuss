@@ -1,64 +1,64 @@
 <section class="order-form-section summary" hidden>
 
-    <h1>Zusammenfassung</h1>
+  <h1>Zusammenfassung</h1>
 
-    <div class="summary-person">
-        <div>
-            <h3 class="summary-person__heading">Kontakt</h3>
-            <p id="discord-summary"></p>
-            <p id="connection-summary"></p>
-        </div>
-        <div>
-            <h3 class="summary-person__heading">Lieferadresse</h3>
-            <p id="name-summary"></p>
-            <p id="street-summary"></p>
-            <p id="info-summary"></p>
-            <p id="city-summary"></p>
-            <p id="country-summary"></p>
-        </div>
+  <div class="summary-person">
+    <div>
+      <h3 class="summary-person__heading">Kontakt</h3>
+      <p id="discord-summary"></p>
+      <p id="connection-summary"></p>
     </div>
-
-    <div class="summary-addition">
-        <h3 class="summary-person__heading">Anmerkung</h3>
-        <p id="summary-addition"></p>
+    <div>
+      <h3 class="summary-person__heading">Lieferadresse</h3>
+      <p id="name-summary"></p>
+      <p id="street-summary"></p>
+      <p id="info-summary"></p>
+      <p id="city-summary"></p>
+      <p id="country-summary"></p>
     </div>
+  </div>
 
-    <div class="summary-order">
-        <h3 class="summary-person__heading">Kosten</h3>
-        <table>
-            {% for package in packages %}
-                <tr id="listing-{{ package.order-id }}{{ package.shorthand }}">
-                    <td>{{ package.title }}</td>
-                    <td>{{ package.price }},00&hairsp;€</td>
-                </tr>
-            {% endfor %}
-            <tr>
-                <td>Verpackung & Versand</td>
-                <td><span id="shipping-cost-euro">{{ order.shipping-cost }}</span>,00&hairsp;€</td>
-            </tr>
-            <tr>
-                <td>Gesamt</td>
-                <td class="total-cost"><span id="total-cost-euro">{{ order-shipping-cost }}</span>,00&hairsp;€</td>
-            </tr>
-        </table>
-        <p class="form-description" id="shipping-description">
-            evtl. zzgl. Auslandsversandkosten
-        </p>
-    </div>
+  <div class="summary-addition">
+    <h3 class="summary-person__heading">Anmerkung</h3>
+    <p id="summary-addition"></p>
+  </div>
 
-    <p class="order-buttons">
-
-        <button 
-            class="order"
-            onclick="showForm('addition')"
-            type="button">
-            Zurück
-        </button>
-
-        <button class="submit" type="submit">
-            Bestellen
-        </button>
-
+  <div class="summary-order">
+    <h3 class="summary-person__heading">Kosten</h3>
+    <table>
+      {% for package in packages %}
+        <tr id="listing-{{ package.order-id }}{{ package.shorthand }}">
+          <td>{{ package.title }}</td>
+          <td>{{ package.price }},00&hairsp;€</td>
+        </tr>
+      {% endfor %}
+      <tr>
+        <td>Verpackung & Versand</td>
+        <td><span id="shipping-cost-euro">{{ order.shipping-cost }}</span>,00&hairsp;€</td>
+      </tr>
+      <tr>
+        <td>Gesamt</td>
+        <td class="total-cost"><span id="total-cost-euro">{{ order-shipping-cost }}</span>,00&hairsp;€</td>
+      </tr>
+    </table>
+    <p class="form-description" id="shipping-description">
+      evtl. zzgl. Auslandsversandkosten
     </p>
+  </div>
+
+  <p class="order-buttons">
+
+    <button 
+      class="order"
+      onclick="showForm('addition')"
+      type="button">
+      Zurück
+    </button>
+
+    <button class="submit" type="submit">
+      Bestellen
+    </button>
+
+  </p>
 
 </section>

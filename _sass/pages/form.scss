@@ -1,293 +1,293 @@
 .order-form {
-    margin-top: 2rem;
-    padding: 1rem;
-    font-size: var(--fs-400);
-    background-color: $clr-order-bg;
+  margin-top: 2rem;
+  padding: 1rem;
+  font-size: var(--fs-400);
+  background-color: $clr-order-bg;
 
-    h1 {
-        font-size: var(--fs-800);
-        padding: 3rem;
-        text-align: center;
-    }
+  h1 {
+    font-size: var(--fs-800);
+    padding: 3rem;
+    text-align: center;
+  }
 
-    ol {
-        color: $almost-black;
-        padding: 2rem;
-    }
+  ol {
+    color: $almost-black;
+    padding: 2rem;
+  }
 
-    li {
-        padding-bottom: 1rem;
-    }
+  li {
+    padding-bottom: 1rem;
+  }
 }
 
 .order-form-section {
-    h2 {
-        padding: 1rem 0;
-        font-size: var(--fs-700);
-    }
+  h2 {
+    padding: 1rem 0;
+    font-size: var(--fs-700);
+  }
 
-    h3 {
-        padding-top: 2rem;
-        padding-bottom: .5rem;
-    }
+  h3 {
+    padding-top: 2rem;
+    padding-bottom: .5rem;
+  }
 }
 
 @media (min-width: $bp-desktop) {
-    .order-terms,
-    .order-form {
-        padding: 4rem;
-    }
+  .order-terms,
+  .order-form {
+    padding: 4rem;
+  }
 
-    .order-form-section {
-        padding: 0 3rem;
-    }
+  .order-form-section {
+    padding: 0 3rem;
+  }
 }
 
 .order-form-subtitle {
-    padding-bottom: 3rem;
-    color: $medium-dark-gray;
-    text-align: center;
+  padding-bottom: 3rem;
+  color: $medium-dark-gray;
+  text-align: center;
 }
 
 .form {
-    padding-top: 1.5rem;
-    padding-bottom: .5rem;
+  padding-top: 1.5rem;
+  padding-bottom: .5rem;
 }
 
 .form-discord,
 .form-name,
 .form-street,
 .form-city {
-    display: grid;
-    grid-gap: .5rem;
+  display: grid;
+  grid-gap: .5rem;
 }
 
 .form-discord {
-    grid-template-columns: 3fr 1fr;
+  grid-template-columns: 3fr 1fr;
 }
 
 .form-name {
-    grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
 }
 
 .form-street {
-    grid-template-columns: 4fr 1fr;
+  grid-template-columns: 4fr 1fr;
 }
 
 .form-city {
-    grid-template-columns: 1fr 3fr;
+  grid-template-columns: 1fr 3fr;
 }
 
 label {
-    padding-left: .2rem;
-    display: block;
-    font-size: var(--fs-300);
+  padding-left: .2rem;
+  display: block;
+  font-size: var(--fs-300);
 }
 
 p.order-buttons {
-    padding-top: 3.5rem;
-    padding-bottom: 2rem;
-    max-width: 80%;
-    display: flex;
-    justify-content: center;
-    gap: .5rem;
+  padding-top: 3.5rem;
+  padding-bottom: 2rem;
+  max-width: 80%;
+  display: flex;
+  justify-content: center;
+  gap: .5rem;
 }
 
 button.order,
 button.order-closed {
-    padding: 0.8rem 3rem;
-    width: 13rem;
-    font-size: var(--fs-600);
-    border-top: none;
-    border-left: none;
-    background-color: $clr-button;
+  padding: 0.8rem 3rem;
+  width: 13rem;
+  font-size: var(--fs-600);
+  border-top: none;
+  border-left: none;
+  background-color: $clr-button;
 }
 
 button.order {
-    color: $dark-gray;
+  color: $dark-gray;
 }
 
 button.order-closed {
-    color: $medium-dark-gray;
+  color: $medium-dark-gray;
 }
 
 button.order:hover {
-    color: $black;
-    background-color: $clr-button-hover;
-    cursor: pointer;
+  color: $black;
+  background-color: $clr-button-hover;
+  cursor: pointer;
 }
 
 button.order-closed:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 input[type=text],
 textarea {
-    box-sizing: border-box;
-    border-top: none;
-    border-left: none;
-    padding: .5rem 1rem;
-    margin-top: .5rem;
-    width: 100%;
-    font-size: var(--fs-400);
-    background-color: $light-gray;
+  box-sizing: border-box;
+  border-top: none;
+  border-left: none;
+  padding: .5rem 1rem;
+  margin-top: .5rem;
+  width: 100%;
+  font-size: var(--fs-400);
+  background-color: $light-gray;
 }
 
 input[type=text],
 textarea {
-    outline: none;
+  outline: none;
 }
 
 textarea {
-    resize: vertical;
+  resize: vertical;
 }
 
 input[type=text]:focus,
 textarea:focus {
-    border: 1px $clr-order-highlight solid;
+  border: 1px $clr-order-highlight solid;
 }
 
 input[type=text].invalid {
-    border: 1px red solid;
+  border: 1px red solid;
 }
 
 button[type=submit] {
-    padding: .5rem 3rem;
-    font-size: var(--fs-600);
-    border-top: none;
-    border-left: none;
-    background-color: $clr-submit;
+  padding: .5rem 3rem;
+  font-size: var(--fs-600);
+  border-top: none;
+  border-left: none;
+  background-color: $clr-submit;
 }
 
 button[type=submit]:hover {
-    background-color: $clr-submit-hover;
-    color: white;
-    cursor: pointer;
+  background-color: $clr-submit-hover;
+  color: white;
+  cursor: pointer;
 }
 
 p.form-description {
-    padding: .25rem 0;
-    color: $medium-gray;
-    font-size: var(--fs-200);
+  padding: .25rem 0;
+  color: $medium-gray;
+  font-size: var(--fs-200);
 }
 
 p.form-alert {
-    padding-top: 2rem;
-    margin: 0;
-    min-height: 1rem;
-    line-height: 1rem;
-    text-align: center;
-    color: red;
-    font-size: var(--fs-200);
+  padding-top: 2rem;
+  margin: 0;
+  min-height: 1rem;
+  line-height: 1rem;
+  text-align: center;
+  color: red;
+  font-size: var(--fs-200);
 }
 
 .summary-person,
 .summary-addition,
 .summary-order {
-    padding: 1rem;
+  padding: 1rem;
 }
 
 .summary-person {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 
-    &__heading {
-        font-weight: bold;
-        font-size: var(--fs-600);
-    }
+  &__heading {
+    font-weight: bold;
+    font-size: var(--fs-600);
+  }
 
-    @media (max-width: $bp-tablet) {
-        flex-direction: column;
-    }
+  @media (max-width: $bp-tablet) {
+    flex-direction: column;
+  }
 }
 
 .summary-person div:last-child {
-    padding-right: 2rem;
+  padding-right: 2rem;
 }
 
 .summary-order table {
-    width: 100%;
-    border-collapse: collapse;
+  width: 100%;
+  border-collapse: collapse;
 }
 
 .summary-order table td:last-child {
-    text-align: right;
+  text-align: right;
 }
 
 .summary-order table tr:last-child td {
-    padding-top: .5rem;
-    font-weight: bold;
-    border-bottom: 1px solid $medium-gray;
+  padding-top: .5rem;
+  font-weight: bold;
+  border-bottom: 1px solid $medium-gray;
 }
 
 #shipping-description {
-    text-align: right;
+  text-align: right;
 }
 
 // ----- Checkboxes ----- //
 
 .package-selection {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: .5rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: .5rem;
 }
 
 .container:first-child {
-    text-align: right;
+  text-align: right;
 }
 
 .container:last-child {
-    text-align: left;
+  text-align: left;
 }
 
 .container {
-    position: relative;
-    display: grid;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+  position: relative;
+  display: grid;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .package-selector {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    border: dotted 1px $medium-dark-gray;
-    cursor: pointer;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border: dotted 1px $medium-dark-gray;
+  cursor: pointer;
 }
 
 .container:first-child .package-selector {
-    padding-left: .5rem;
-    padding-right: 2rem
+  padding-left: .5rem;
+  padding-right: 2rem
 }
 
 .container:last-child .package-selector {
-    padding-left: 2rem;
-    padding-right: .5rem;
+  padding-left: 2rem;
+  padding-right: .5rem;
 }
 
 .package-selector:hover {
-    background-color: $clr-button;
+  background-color: $clr-button;
 }
 
 .checkbox-package {
-    display: none;
+  display: none;
 }
 
 .checkbox-package:checked ~ div.package-selector {
-    background-color: $clr-button-hover;
-    border: solid 1px white;
+  background-color: $clr-button-hover;
+  border: solid 1px white;
 }
 
 .checkbox-price {
-    padding: 1rem 0;
-    font-weight: bold;
+  padding: 1rem 0;
+  font-weight: bold;
 }
 
 .checkbox-tea {
-    margin: 0;
-    padding: .1rem 0;
-    color: $medium-dark-gray;
-    font-size: var(--fs-300);
+  margin: 0;
+  padding: .1rem 0;
+  color: $medium-dark-gray;
+  font-size: var(--fs-300);
 }

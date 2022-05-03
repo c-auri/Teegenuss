@@ -9,13 +9,13 @@ price: 23€
 excerpt: Zur Eröffnung von Projekt:&nbsp;Teegenuss habe ich ein Paket aus sieben verschiedenen Oolongs zusammengestellt, das einen Überblick über das vielfältige Angebot des taiwanesischen Oolongs geben soll.
 ---
 <p>
-    {{ page.excerpt }}
+  {{ page.excerpt }}
 </p>
 
 <section class="order-package">
 
-    {% assign package = site.packages | where: 'order-id', page.order-id | first %}
-    {% include order/package-overview.html %}
-    {% include order/package-status.html %}
+  {% assign package = site.packages | where: 'order-id', page.order-id | first %}
+  {% include order/package-overview.html %}
+  {% include order/package-status.html %}
 
 </section>

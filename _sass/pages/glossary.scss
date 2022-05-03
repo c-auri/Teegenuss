@@ -1,46 +1,46 @@
 .glossary {
-    &__entry {
-        font-size: var(--fs-400);
-        line-height: var(--fs-600);
-        margin: 1rem auto;
-    }
-    
-    &__term {
-        padding: .7rem clamp(1rem, 5vw, 3rem);
-        cursor: pointer;
-        display: flex;
-        justify-content: space-between;
-        color: $dark-gray;
-        font-weight: bold;
-        background-color: $almost-white;
+  &__entry {
+    font-size: var(--fs-400);
+    line-height: var(--fs-600);
+    margin: 1rem auto;
+  }
+  
+  &__term {
+    padding: .7rem clamp(1rem, 5vw, 3rem);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    color: $dark-gray;
+    font-weight: bold;
+    background-color: $almost-white;
 
-        &:hover {
-            color: $black;
-            background-color: $light-gray;
-        }
+    &:hover {
+      color: $black;
+      background-color: $light-gray;
+    }
 
-        &:hover ~ div div {
-            border-color: $light-gray;
-        }
+    &:hover ~ div div {
+      border-color: $light-gray;
     }
-    
-    &__description {
-        border: 5px solid $almost-white;
-        border-top: none;
-        border-radius: 0 0 5px 5px;
-        padding-top: 1rem;
-        padding-bottom: 1.5rem;
-        padding-inline: clamp(1rem, 5vw, 3rem);
-        color: $dark-gray;
+  }
+  
+  &__description {
+    border: 5px solid $almost-white;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+    padding-top: 1rem;
+    padding-bottom: 1.5rem;
+    padding-inline: clamp(1rem, 5vw, 3rem);
+    color: $dark-gray;
+  }
+  
+  &__link {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-style: dotted;
+  
+    &:hover {
+      color: inherit;
     }
-    
-    &__link {
-        color: inherit;
-        text-decoration: underline;
-        text-decoration-style: dotted;
-    
-        &:hover {
-            color: inherit;
-        }
-    }
+  }
 }
