@@ -1,4 +1,4 @@
-.logo {
+.brand {
   text-decoration: none;
   line-height: var(--fs-600);
   font-weight: bold;
@@ -21,7 +21,7 @@
   }
 }
 
-.page__nav {
+.primary-nav {
   padding-right: 1rem;
   display: flex;
   gap: clamp(1rem, 5vw, 3rem);
@@ -29,11 +29,12 @@
   font-size: var(--fs-400);
   font-weight: 500;
   
-  a {
+  &__link,
+  &__link:hover {
     color: $medium-dark-gray;
   }
 
-  a::after {
+  &__link::after {
     content: '';
     margin: 1px auto;
     height: 2px;
@@ -43,8 +44,8 @@
     transition: width .3s;
   }
 
-  a.current::after,
-  a:hover::after {
+  &__link--current::after,
+  &__link:hover::after {
     width: 75%;
     transition: width .3s;
   }
