@@ -2,7 +2,7 @@
   margin-top: 2rem;
   padding: 1rem;
   font-size: var(--fs-400);
-  background-color: $clr-order-bg;
+  background-color: $light-blue;
 
   h1 {
     font-size: var(--fs-800);
@@ -102,7 +102,7 @@ textarea {
   margin-top: .5rem;
   width: 100%;
   font-size: var(--fs-400);
-  background-color: $light-gray;
+  background-color: $white;
 }
 
 input[type=text],
@@ -226,7 +226,7 @@ p.form-alert {
 }
 
 .package-selector:hover {
-  background-color: $light-blue;
+  background-color: $medium-light-blue;
 }
 
 .checkbox-package {
@@ -234,7 +234,7 @@ p.form-alert {
 }
 
 .checkbox-package:checked ~ div.package-selector {
-  background-color: $light-blue;
+  background-color: $medium-light-blue;
   border: solid 1px white;
 }
 
