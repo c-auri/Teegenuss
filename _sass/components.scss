@@ -12,10 +12,14 @@
     line-height: var(--fs-1000);
     font-size: var(--fs-1000);
     user-select: none;
+  }
 
-    &--link:hover {
-      color: rgba($almost-white, .9);
-    }
+  a:hover img {
+    filter:grayscale(.1);
+  }
+
+  a:hover .hero__title {
+    color: rgba($almost-white, .9);
   }
 }
 
