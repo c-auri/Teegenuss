@@ -93,34 +93,6 @@ p.order-buttons {
   gap: .5rem;
 }
 
-button.order,
-button.order-closed {
-  padding: 0.8rem 3rem;
-  width: 13rem;
-  font-size: var(--fs-600);
-  border-top: none;
-  border-left: none;
-  background-color: $clr-button;
-}
-
-button.order {
-  color: $dark-gray;
-}
-
-button.order-closed {
-  color: $medium-dark-gray;
-}
-
-button.order:hover {
-  color: $black;
-  background-color: $clr-button-hover;
-  cursor: pointer;
-}
-
-button.order-closed:hover {
-  cursor: pointer;
-}
-
 input[type=text],
 textarea {
   box-sizing: border-box;
@@ -149,20 +121,6 @@ textarea:focus {
 
 input[type=text].invalid {
   border: 1px red solid;
-}
-
-button[type=submit] {
-  padding: .5rem 3rem;
-  font-size: var(--fs-600);
-  border-top: none;
-  border-left: none;
-  background-color: $clr-submit;
-}
-
-button[type=submit]:hover {
-  background-color: $clr-submit-hover;
-  color: white;
-  cursor: pointer;
 }
 
 p.form-description {
@@ -268,7 +226,7 @@ p.form-alert {
 }
 
 .package-selector:hover {
-  background-color: $clr-button;
+  background-color: $light-blue;
 }
 
 .checkbox-package {
@@ -276,7 +234,7 @@ p.form-alert {
 }
 
 .checkbox-package:checked ~ div.package-selector {
-  background-color: $clr-button-hover;
+  background-color: $light-blue;
   border: solid 1px white;
 }
 

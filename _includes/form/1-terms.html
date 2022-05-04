@@ -25,14 +25,14 @@
     {% assign from-order = site.orders | where: 'order-id', page.order-id | first %}
 
     <button 
-      class="order"
+      class="button button--gray"
       onclick="location.href='{{ from-order.url }}'"
       type="button">
       Zurück
     </button>
 
     <button 
-      class="order"
+      class="button button--black"
       onclick="advanceTo('packages')"
       type="button">
       Weiter

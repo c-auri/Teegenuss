@@ -64,7 +64,7 @@
 
     &:hover {
       color: $white;
-      background-color: $medium-dark-gray;
+      background-color: $dark-gray;
     }
   }
 
@@ -75,6 +75,16 @@
     &:hover {
       color: $almost-white;
       background-color: $medium-dark-gray;
+    }
+  }
+
+  &--accept {
+    color: $almost-white;
+    background-color: $almost-black;
+
+    &:hover {
+      color: $white;
+      background-color: $clr-accept;
     }
   }
 }
