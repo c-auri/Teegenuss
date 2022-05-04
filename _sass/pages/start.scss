@@ -1,41 +1,28 @@
-.dashed-header {
-  @include dashed-separator;
-}
-
-
-.order-showcase {
-  padding: clamp(2rem, 4vw, 4rem) 0;
+.orders {
+  margin: 5rem 0;
   display: grid;
+  gap: 5rem;
 
   &__header {
-    .subtitle {
-      font-size: var(--fs-500);
-    }
+    @include dashed-separator;
+    color: $dark-gray;
   }
+}
 
-  &__image img {
-    max-height: 300px;
-  }
+.order-showcase {
+  display: grid;
+}
+
+.learn-more {
+  padding: 1rem 0;
 }
 
 @media (min-width: $bp-tablet) {
-  .order-showcase {
+  .order-showcase--secondary {
     grid-template-columns: auto auto;
-    grid-template-rows: 4.5rem auto;
+    grid-template-rows: 4.5rem auto auto;
 
-    &__header {
-      height: fit-content;
-    }
-
-    &__image {
-      grid-row: span 2;
-
-      img {
-        max-height: 400px;
-      }
-    }
-
-    &__excerpt {
+    p {
       margin: .5rem 0;
       grid-column: 2;
     }

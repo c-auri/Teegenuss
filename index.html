@@ -2,67 +2,57 @@
 title: "Projekt: Teegenuss"
 ---
 {% assign orders = site.orders | sort: date %}
+{% assign primary = orders | where: "order-id", "22-2" | first %}
 
-<section class="content">
+<section class="order-showcase order-showcase--primary">
 
-  <header class="dashed-header">
-    <h2 class="title">Laufend</h2>
+  <header class="hero">
+    <a href="{{ primary.url }}">
+      <img src="{{ primary.lead-path }}" alt="{{ primary-order.lead-alt }}">
+      <h2 class="hero__title">{{ primary.title }}</h2>
+    </a>
   </header>
 
-  {% assign ongoing = orders | where: 'open', 'true' %}
-  {% for order in ongoing %}
-  <section class="order-showcase">  
-  
-    <a class="order-showcase__image" href="{{ order.url }}">
-      <img 
-        src="/assets/img/orders/{{ order.order-id }}/lead.jpg" 
-        alt="{{ order.lead-alt }}">
-    </a>
-  
-    <header class="text-header text-align-left">
-      <a href="{{ order.url }}">
-        <span class="subtitle subtitle--medium">{{ order.subtitle }}</span>
-        <h3 class="title title--medium">{{ order.title }}</h3>
-      </a>
-    </header>
-  
-    <p class="order-showcase__excerpt">
-      {{ order.excerpt }}
-    </p>
+  <p>
+    {{ primary.excerpt }}
+  </p>
 
-  </section>
-  {% endfor %}
-
+  <p class="learn-more">
+    <a class="button button--black" href="{{ primary.url }}">Mehr erfahren</a>
+  </p>
+    
 </section>
 
-<section class="content">
+<section class="orders">
 
-  <header class="dashed-header">
-    <h2 class="title">Beendet</h2>
+  <header>
+    <h2 class="orders__header">Weitere</h2>
   </header>
 
   {% assign closed = orders | where: 'open', 'false' %}
   {% for order in closed %}
-  <section class="order-showcase">  
+  <article class="order-showcase order-showcase--secondary">  
   
     <a class="order-showcase__image" href="{{ order.url }}">
-      <img 
-        src="/assets/img/orders/{{ order.order-id }}/lead.jpg" 
-        alt="{{ order.lead-alt }}">
+      <img src="{{ order.lead-path }}" alt="{{ order.lead-alt }}">
     </a>
   
     <header class="text-header text-align-left">
       <a href="{{ order.url }}">
-        <span class="subtitle subtitle--medium">{{ order.subtitle }}</span>
+        <span class="subtitle subtitle--medium">Beendet</span>
         <h3 class="title title--medium">{{ order.title }}</h3>
       </a>
     </header>
   
-    <p class="order-showcase__excerpt">
+    <p>
       {{ order.excerpt }}
     </p>
+    
+    <p class="learn-more">
+      <a class="button button--gray" href="{{ order.url }}">Mehr erfahren</a>
+    </p>
 
-  </section>
+  </article>
   {% endfor %}
 
 </section>

@@ -44,6 +44,39 @@
   &--medium {
     font-size: var(--fs-500);
   }
+
+  &--small {
+    font-weight: normal;
+    font-size: var(--fs-400);
+  }
+}
+
+// ------- Buttons ------- //
+
+.button {
+  all: unset;
+  cursor: pointer;
+  padding: .5rem 1rem;
+
+  &--black {
+    color: $almost-white;
+    background-color: $almost-black;
+
+    &:hover {
+      color: $white;
+      background-color: $medium-dark-gray;
+    }
+  }
+
+  &--gray {
+    color: $light-gray;
+    background-color: $medium-gray;
+
+    &:hover {
+      color: $almost-white;
+      background-color: $medium-dark-gray;
+    }
+  }
 }
 
 // ------ Accordion ------ //
