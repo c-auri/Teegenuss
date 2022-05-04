@@ -9,7 +9,7 @@ title: "Projekt: Teegenuss"
   <header class="hero">
     <a href="{{ primary.url }}">
       <img src="{{ primary.lead-path }}" alt="{{ primary-order.lead-alt }}">
-      <h2 class="hero__title">{{ primary.title }}</h2>
+      <h2 class="hero__title hero__title--link">{{ primary.title }}</h2>
     </a>
   </header>
 
@@ -42,9 +42,9 @@ title: "Projekt: Teegenuss"
     </a>
   
     <header class="text-header text-align-left">
-      <a href="{{ order.url }}">
+      <a class="order-link" href="{{ order.url }}">
         <span class="subtitle subtitle--medium">Beendet</span>
-        <h3 class="title title--medium">{{ order.title }}</h3>
+        <h3 class="title title--link title--medium">{{ order.title }}</h3>
       </a>
     </header>
   

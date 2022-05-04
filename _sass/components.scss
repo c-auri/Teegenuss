@@ -12,6 +12,10 @@
     line-height: var(--fs-1000);
     font-size: var(--fs-1000);
     user-select: none;
+
+    &--link:hover {
+      color: rgba($almost-white, .9);
+    }
   }
 }
 
@@ -22,6 +26,10 @@
 
 .title {
   color: $almost-black;
+
+  &--link:hover {
+    color: $black;
+  }
 
   &--large {
     font-size: var(--fs-700);
