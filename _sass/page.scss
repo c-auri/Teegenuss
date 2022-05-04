@@ -46,3 +46,8 @@ body {
 .content {
   margin: $content-margin-top 0;
 }
+
+.about {
+  display: grid;
+  gap: $content-gap;
+}

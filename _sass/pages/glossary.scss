@@ -1,4 +1,7 @@
 .glossary {
+  display: grid;
+  gap: $content-gap;
+
   &__entry {
     font-size: var(--fs-400);
     line-height: var(--fs-600);

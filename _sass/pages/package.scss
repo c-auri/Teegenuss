@@ -1,3 +1,9 @@
+.order-intro,
+.package {
+  display: grid;
+  gap: $content-gap;
+}
+
 .package {
   margin: 5rem 0;
 
