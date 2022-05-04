@@ -8,6 +8,11 @@ shipping-cost: 5
 
 excerpt: "Dieses mal gibt es direkt zwei Pakete: eines widmet sich Taiwans heller Seite und besteht Grüntees und Hochgebirgsoolongs, das andere zeigt Taiwans dunkle Seite mit verschiedenen gerösteten Oolongs und zwei Schwarztees."
 ---
+<header class="text-header">
+  <span class="subtitle subtitle--large">{{ page.subtitle }}</span>
+  <h2 class="title title--large">{{ page.title }}</h2>
+</header>
+
 <p>
   {{ page.excerpt }}
 </p>
@@ -20,9 +25,9 @@ excerpt: "Dieses mal gibt es direkt zwei Pakete: eines widmet sich Taiwans helle
 {% for package in packages %}
 <section class="package">
 
-  <header class="package__header">
-    <span class="subtitle">Paket</span>
-    <h3>{{ package.title }}</h3>
+  <header class="text-header">
+    <span class="subtitle subtitle--medium">Paket</span>
+    <h3 class="title title--medium">{{ package.title }}</h3>
   </header>
 
   <p>

@@ -1,22 +1,6 @@
 .package {
   margin: 5rem 0;
 
-  &__header {
-    margin-bottom: 2rem;
-    text-align: center;
-    font-weight: bold;
-    line-height: var(--fs-700);
-
-    h3 {
-      font-size: var(--fs-700);
-    }
-
-    .subtitle {
-      color: $dark-gray;
-      font-size: var(--fs-600);
-    }
-  }
-
   &__overview {
     margin: 3rem auto;
     max-width: $p-width;

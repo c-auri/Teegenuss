@@ -45,20 +45,4 @@ body {
 
 .content {
   margin: $content-margin-top 0;
-
-  &__header {
-    text-align: center;
-    font-weight: bold;
-    line-height: var(--fs-800);
-    margin-bottom: clamp(2rem, 7vw, 4rem);
-
-    &__title {
-      font-size: var(--fs-800);
-    }
-
-    &__subtitle {
-      color: $medium-dark-gray;
-      font-size: var(--fs-600);
-    }
-  }
 }

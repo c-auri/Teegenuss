@@ -5,8 +5,8 @@ title: "Projekt: Teegenuss"
 
 <section class="content">
 
-  <header class="start__header">
-    <h2 class="start__header__title">Laufend</h2>
+  <header class="dashed-header">
+    <h2 class="title">Laufend</h2>
   </header>
 
   {% assign ongoing = orders | where: 'open', 'true' %}
@@ -19,10 +19,10 @@ title: "Projekt: Teegenuss"
         alt="{{ order.lead-alt }}">
     </a>
   
-    <header class="order-showcase__header">
+    <header class="text-header text-align-left">
       <a href="{{ order.url }}">
-        <span class="fs-500 dark-gray">{{ order.subtitle }}</span>
-        <h3 class="order-showcase__header__title">{{ order.title }}</h3>
+        <span class="subtitle subtitle--medium">{{ order.subtitle }}</span>
+        <h3 class="title title--medium">{{ order.title }}</h3>
       </a>
     </header>
   
@@ -37,8 +37,8 @@ title: "Projekt: Teegenuss"
 
 <section class="content">
 
-  <header class="start__header dashed-separator">
-    <h2 class="start__header__title">Beendet</h2>
+  <header class="dashed-header">
+    <h2 class="title">Beendet</h2>
   </header>
 
   {% assign closed = orders | where: 'open', 'false' %}
@@ -51,10 +51,10 @@ title: "Projekt: Teegenuss"
         alt="{{ order.lead-alt }}">
     </a>
   
-    <header class="order-showcase__header">
+    <header class="text-header text-align-left">
       <a href="{{ order.url }}">
-        <span class="fs-500 dark-gray">{{ order.subtitle }}</span>
-        <h3 class="order-showcase__header__title">{{ order.title }}</h3>
+        <span class="subtitle subtitle--medium">{{ order.subtitle }}</span>
+        <h3 class="title title--medium">{{ order.title }}</h3>
       </a>
     </header>
   
