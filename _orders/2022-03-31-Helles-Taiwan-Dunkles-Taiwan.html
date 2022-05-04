@@ -8,18 +8,22 @@ shipping-cost: 5
 
 excerpt: "Dieses mal gibt es direkt zwei Pakete: eines widmet sich Taiwans heller Seite und besteht Grüntees und Hochgebirgsoolongs, das andere zeigt Taiwans dunkle Seite mit verschiedenen gerösteten Oolongs und zwei Schwarztees."
 ---
-<header class="text-header">
-  <span class="subtitle subtitle--large">{{ page.subtitle }}</span>
-  <h2 class="title title--large">{{ page.title }}</h2>
-</header>
+<section>
 
-<p>
-  {{ page.excerpt }}
-</p>
-
-<p>
-  Alle Tees habe ich vor dem Beginn der diesjährigen Frühjahrsernte auf <a href="https://www.taiwanteacrafts.com/">Taiwan Tea Crafts</a> zu reduzierten Preisen gekauft.
-</p>
+  <header class="text-header">
+    <span class="subtitle subtitle--large">{{ page.subtitle }}</span>
+    <h2 class="title title--large">{{ page.title }}</h2>
+  </header>
+  
+  <p>
+    {{ page.excerpt }}
+  </p>
+  
+  <p>
+    Alle Tees habe ich vor dem Beginn der diesjährigen Frühjahrsernte auf <a href="https://www.taiwanteacrafts.com/">Taiwan Tea Crafts</a> zu reduzierten Preisen gekauft.
+  </p>
+  
+</section>
 
 {% assign packages = site.packages | where: 'order-id', page.order-id %}
 {% for package in packages %}
@@ -40,15 +44,19 @@ excerpt: "Dieses mal gibt es direkt zwei Pakete: eines widmet sich Taiwans helle
 </section>
 {% endfor %}
 
-<p class="order-buttons">
-  <button 
-    {% if page.open %}
-      class="order"
-      onclick="location.href='/form'"
-    {% else %}
-      class="order-closed"
-    {% endif %}
-      type="button">
-      Bestellen
-  </button>
-</p>
+<section>
+
+  <p class="order-buttons">
+    <button 
+      {% if page.open %}
+        class="order"
+        onclick="location.href='/form'"
+      {% else %}
+        class="order-closed"
+      {% endif %}
+        type="button">
+        Bestellen
+    </button>
+  </p>
+
+</section>
