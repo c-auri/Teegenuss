@@ -2,6 +2,8 @@
 title: Helles Taiwan
 order-id: 22-2
 shorthand: H
+shop: TTC
+shop-url: https://www.taiwanteacrafts.com/
 stash: 15
 price: 25
 ---

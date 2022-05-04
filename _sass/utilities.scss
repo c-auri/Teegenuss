@@ -39,6 +39,15 @@
 }
 
 .mouseover {
-  text-decoration: underline dotted;
+  @include dotted-underline;
   cursor: help;
+}
+
+.dotted-link {
+  @include dotted-underline;
+
+  &:hover {
+    color: inherit;
+    opacity: .75;
+  }
 }

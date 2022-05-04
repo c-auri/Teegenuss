@@ -3,3 +3,8 @@
   border-bottom: 1px $black dashed;
   text-align: left;
 }
+
+@mixin dotted-underline {
+  color: inherit;
+  text-decoration: underline dotted;
+}
