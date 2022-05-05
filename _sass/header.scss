@@ -1,9 +1,10 @@
 .page__header {
+  box-sizing: border-box;
   margin-inline: auto;
-  padding: 1rem;
+  padding: 1rem .5rem;
   height: 5rem;
-  width: $content-width;
-  max-width: 100%;
+  width: 100%;
+  max-width: $content-width;
   display: flex;
   justify-content: space-between;
   align-items: center;
