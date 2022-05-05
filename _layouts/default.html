@@ -21,7 +21,11 @@
     </a>
 
     <nav class="primary-nav" id="primary-navigation" data-visible="false">
-    {% include nav.html %}
+      {% for item in site.data.navigation %}
+      <a href="{{item.link}}" class="primary-nav__link {% if page.url == item.link %}primary-nav__link--current{% endif %}">
+        {{item.name}}
+      </a>
+      {% endfor %}
     </nav>
 
     <button aria-controls="primary-navigation" aria-expanded="false" class="nav-toggle">
