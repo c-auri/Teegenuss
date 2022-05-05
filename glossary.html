@@ -21,6 +21,18 @@ permalink: /glossar
   
       <div class="panel">
         <div  class="glossary__description">
+          {% if term.translation %}
+          <p class="glossary__addition">
+            <span>Übersetzt: </span>
+            <span>{{ term.translation }}</span>
+          </p>
+          {% endif %}
+          {% if term.synonyms %}
+          <p class="glossary__addition">
+            <span>Auch: </span>
+            <span>{{ term.synonyms }}</span>
+          </p>
+          {% endif %}
           <p>
             {{ term.content }}
           </p>

@@ -36,6 +36,15 @@
     padding-inline: clamp(1rem, 5vw, 3rem);
     color: $dark-gray;
   }
+
+  &__addition {
+    color: $medium-dark-gray;
+    font-size: var(--fs-400);
+
+    span:nth-child(even) {
+      font-style: italic;
+    }
+  }
   
   &__link {
     color: inherit;
