@@ -14,13 +14,16 @@
     user-select: none;
   }
 
-  a:hover img {
-    filter:grayscale(.1);
+  a:hover {
+    img {
+      filter:grayscale(.1);
+    }
+
+    .hero__title {
+      color: rgba($white, .8);
+    }
   }
 
-  a:hover .hero__title {
-    color: rgba($white, .8);
-  }
 }
 
 .text-header {
