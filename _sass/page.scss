@@ -19,7 +19,7 @@ body {
   flex-direction: column;
 
   &__header {
-    margin-bottom: clamp(.5rem, 5vw, 2rem);
+    margin-bottom: clamp(3.5rem, 10vw, 5rem);
     height: 5rem;
     display: flex;
     justify-content: space-between;
@@ -40,7 +40,6 @@ body {
 }
 
 .content {
-  margin: $content-margin-top 0;
   width: 100%;
   max-width: $content-width;
 }
