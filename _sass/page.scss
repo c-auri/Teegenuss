@@ -18,10 +18,6 @@ body {
   display: flex;
   flex-direction: column;
 
-  @media (min-width: $content-width) {
-    width: $content-width;
-  }
-
   &__header {
     margin-bottom: clamp(.5rem, 5vw, 2rem);
     height: 5rem;
@@ -45,6 +41,8 @@ body {
 
 .content {
   margin: $content-margin-top 0;
+  width: 100%;
+  max-width: $content-width;
 }
 
 .about {
