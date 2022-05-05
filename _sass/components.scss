@@ -4,9 +4,10 @@
   position: relative;
 
   &__title {
-    width: 100%;
     position: absolute;
     top: calc(55% - (var(--fs-1000) / 2));
+    margin: 0 10%;
+    width: 80%;
     color: rgba($light-gray, .8);
     text-align: center;
     line-height: var(--fs-1000);
