@@ -80,7 +80,7 @@ layout: default
     </header>
 
     {% for tag in page.tags %}
-    {% assign entry = site.explanations | find: 'tag', tag %}
+    {% assign entry = site.glossary | find: 'tag', tag %}
     {% include glossary-entry.html %}
     {% endfor %}
 

@@ -1,5 +1,5 @@
 collections:
-  explanations:
+  glossary:
   teas:
     output: true
   orders:
