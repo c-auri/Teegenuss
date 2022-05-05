@@ -12,34 +12,8 @@ permalink: /glossar
 
   <div>
 
-    {% for term in site.explanations %}
-    <article class="glossary__entry" id="{{term.tag}}">
-  
-      <header class="glossary__term accordion">
-        <h3>{{ term.title }}</h3>
-      </header>
-  
-      <div class="panel">
-        <div  class="glossary__description">
-          {% if term.translation %}
-          <p class="glossary__addition">
-            <span>Übersetzt: </span>
-            <span>{{ term.translation }}</span>
-          </p>
-          {% endif %}
-          {% if term.synonyms %}
-          <p class="glossary__addition">
-            <span>Auch: </span>
-            <span>{{ term.synonyms }}</span>
-          </p>
-          {% endif %}
-          <p>
-            {{ term.content }}
-          </p>
-        </div>
-      </div>
-  
-    </article>
+    {% for entry in site.explanations %}
+    {% include glossary-entry.html %}
     {% endfor %}
 
   </div>

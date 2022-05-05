@@ -8,7 +8,8 @@
     margin: 1rem auto;
   }
   
-  &__term {
+  &__header {
+    border-radius: 5px;
     padding: .7rem clamp(1rem, 5vw, 3rem);
     cursor: pointer;
     display: flex;
@@ -16,36 +17,65 @@
     color: $dark-gray;
     font-weight: bold;
     background-color: $almost-white;
+  
+    &::after {
+      content: '\02795';
+      opacity: .6;
+      font-size: var(--fs-200);
+    }
+  
+    &--expanded {
+      border-radius: 5px 5px 0 0;
+    }
+  
+    &--expanded::after {
+      content: '\2796';
+    }
+  
+    &:hover::after {
+      opacity: 1;
+    }
 
     &:hover {
       color: $black;
       background-color: $light-gray;
     }
 
-    &:hover ~ div div {
+    &:hover ~ .glossary__panel {
       border-color: $light-gray;
     }
   }
   
-  &__description {
-    border: 5px solid $almost-white;
-    border-top: none;
+  &__panel {
+    border-inline: 5px solid $almost-white;
     border-radius: 0 0 5px 5px;
-    padding-top: 1rem;
-    padding-bottom: 1.5rem;
-    padding-inline: clamp(1rem, 5vw, 3rem);
+    padding: 0 clamp(1rem, 5vw, 3rem);
     color: $dark-gray;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+
+    p {
+      margin-inline: 0;
+    }
+  }
+
+  &__panel[data-visible="true"] {
+    border-bottom: 5px solid $almost-white;
   }
 
   &__addition {
-    color: $medium-dark-gray;
-    font-size: var(--fs-400);
+    margin: 1rem 0;
 
-    span:nth-child(even) {
-      font-style: italic;
+    p {
+      margin: 0;
+      color: $medium-dark-gray;
+
+      span:last-child {
+        font-style: italic;
+      }
     }
   }
-  
+
   &__link {
     color: inherit;
     text-decoration: underline;

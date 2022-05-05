@@ -80,22 +80,8 @@ layout: default
     </header>
 
     {% for tag in page.tags %}
-    {% assign term = site.explanations | find: 'tag', tag %}
-
-    <section class="glossary__entry">
-
-      <header class="glossary__term accordion">
-        <h3>{{ term.title }}</h3>
-      </header>
-
-      <div class="panel">
-        <div class="glossary__description">
-          {{ term.content }}
-        </div>
-      </div>
-
-    </section>
-
+    {% assign entry = site.explanations | find: 'tag', tag %}
+    {% include glossary-entry.html %}
     {% endfor %}
 
   </section>

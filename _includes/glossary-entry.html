@@ -1,0 +1,29 @@
+<article class="glossary__entry" id="{{entry.tag}}">
+  
+    <header class="glossary__header glossary__header--expanded">
+      <h3>{{ entry.title }}</h3>
+    </header>
+
+    <div  class="glossary__panel" data-visible="true">
+      {% if entry.translation or entry.synonyms %}
+      <div class="glossary__addition">
+        {% if entry.translation %}
+        <p>
+          <span>Übersetzt: </span>
+          <span>{{ entry.translation }}</span>
+        </p>
+        {% endif %}
+        {% if entry.synonyms %}
+        <p>
+          <span>Auch: </span>
+          <span>{{ entry.synonyms }}</span>
+        </p class="glossary__description">
+        {% endif %}
+      </div>
+      {% endif %}
+      <p>
+        {{ entry.content }}
+      </p>
+    </div>
+
+  </article>
