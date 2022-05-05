@@ -6,6 +6,7 @@
     font-size: var(--fs-400);
     line-height: var(--fs-600);
     margin: 1rem auto;
+    max-width: calc(#{$p-width} + 8rem);
   }
   
   &__header {
