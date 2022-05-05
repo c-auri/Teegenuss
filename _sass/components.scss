@@ -67,15 +67,12 @@
   all: unset;
   cursor: pointer;
   padding: .5rem 1rem;
+  color: $almost-white;
+  background-color: $almost-black;
 
-  &--black {
-    color: $almost-white;
-    background-color: $almost-black;
-
-    &:hover {
-      color: $white;
-      background-color: $dark-gray;
-    }
+  &:hover {
+    color: $white;
+    background-color: $dark-gray;
   }
 
   &--gray {
