@@ -1,5 +1,7 @@
 .tea {
-  display: grid;
+  &__overview {
+    display: grid;
+  }
 
   &__nav {
     display: grid;
@@ -63,6 +65,7 @@
 
   &__subheader {
     @include dashed-separator;
+    margin-bottom: 3rem;
 
     &__title {
       max-width: $p-width;
@@ -74,7 +77,7 @@
 
 .tea__explanations,
 .tea__grid {
-  margin: 2rem auto;
+  margin: 5rem auto;
   width: 100%;
   max-width: $p-width;
 }
@@ -114,13 +117,10 @@
 
 @media (min-width: $bp-tablet) {
   .tea {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 4rem 8rem auto auto auto auto auto;
-    grid-gap: 0 2rem;
-
-    &__explanations,
-    &__grid {
-      grid-column: span 2;
+    &__overview {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 4rem 8rem;
+      grid-gap: 0 2rem;
     }
 
     &__nav {

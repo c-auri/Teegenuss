@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<section class="tea">
+<section class="tea__overview">
 
   <nav class="tea__nav">
 
@@ -72,58 +72,58 @@ layout: default
     {{ page.content }}
   </p>
 
-  {% if page.tags and page.tags.size != 0 %}
-  <section class="tea__explanations">
+</section>
 
-    <header class="tea__subheader">
-      <h3 class="tea__subheader__title">Begriffe</h3>
-    </header>
+{% if page.tags and page.tags.size != 0 %}
+<section class="tea__explanations">
 
-    {% for tag in page.tags %}
-    {% assign entry = site.glossary | find: 'tag', tag %}
-    {% include glossary-entry.html %}
-    {% endfor %}
+  <header class="tea__subheader">
+    <h3 class="tea__subheader__title">Begriffe</h3>
+  </header>
 
-  </section>
+  {% for tag in page.tags %}
+  {% assign entry = site.glossary | find: 'tag', tag %}
+  {% include glossary-entry.html %}
+  {% endfor %}
+
+</section>
+{% endif %}
+
+<section class="tea__grid">
+
+  <header class="tea__subheader">
+    <h3 class="tea__subheader__title">Details</h3>
+  </header>
+
+  {% include tea/details.html %}
+
+</section>
+
+<section class="tea__grid">
+
+  <header class="tea__subheader">
+    <h3 class="tea__subheader__title">Zubereitung</h3>
+  </header>
+
+  {% if page.gongfu-temperature or page.gongfu-amount or page.gongfu-times %}
+  {% include tea/brewing.html %}
+  {% else %}
+  <p class="italic medium-gray">Muss noch ziehen.</p>
   {% endif %}
 
-  <section class="tea__grid">
+</section>
 
-    <header class="tea__subheader">
-      <h3 class="tea__subheader__title">Details</h3>
-    </header>
-
-    {% include tea/details.html %}
-
-  </section>
-
-  <section class="tea__grid">
-
-    <header class="tea__subheader">
-      <h3 class="tea__subheader__title">Zubereitung</h3>
-    </header>
-
-    {% if page.gongfu-temperature or page.gongfu-amount or page.gongfu-times %}
-    {% include tea/brewing.html %}
-    {% else %}
-    <p class="italic medium-gray">Muss noch ziehen.</p>
-    {% endif %}
+<section class="tea__grid">
   
-  </section>
-
-  <section class="tea__grid">
-    
-    <header class="tea__subheader">
-      <h3 class="tea__subheader__title">Notizen</h3>
-    </header>
-    
-    {% if page.visual or page.aroma or page.taste %}
-    {% include tea/notes.html %}
-    {% else %}
-    <p class="italic medium-gray">Muss noch ziehen.</p>
-    {% endif %}
-
-  </section>
+  <header class="tea__subheader">
+    <h3 class="tea__subheader__title">Notizen</h3>
+  </header>
+  
+  {% if page.visual or page.aroma or page.taste %}
+  {% include tea/notes.html %}
+  {% else %}
+  <p class="italic medium-gray">Muss noch ziehen.</p>
+  {% endif %}
 
 </section>
 
