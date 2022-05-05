@@ -16,18 +16,6 @@ body {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-
-  &__footer {
-    margin-top: auto;
-    padding: 2.5rem 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: $medium-gray;
-    font-size: var(--fs-300);
-    user-select: none;
-    background-color: $almost-black;
-  }
 }
 
 .content {

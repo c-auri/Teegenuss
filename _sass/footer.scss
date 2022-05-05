@@ -1,0 +1,11 @@
+.page__footer {
+  margin-top: auto;
+  padding: 2.5rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $medium-gray;
+  font-size: var(--fs-300);
+  user-select: none;
+  background-color: $almost-black;
+}
