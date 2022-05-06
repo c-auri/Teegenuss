@@ -29,7 +29,7 @@ layout: default
   
   <header class="tea__header">
 
-    <h2 class="tea__header__title">{{ page.title }}</h2>
+    <h1 class="tea__header__title">{{ page.title }}</h1>
     <span class="tea__header__subtitle">{{ page.type }}</span>
 
     <p class="tea__header__info">
@@ -78,7 +78,7 @@ layout: default
 <section class="tea__explanations">
 
   <header class="tea__subheader">
-    <h3 class="tea__subheader__title">Erläuterungen</h3>
+    <h2 class="tea__subheader__title">Erläuterungen</h2>
   </header>
 
   {% for tag in page.tags %}
@@ -92,7 +92,7 @@ layout: default
 <section class="tea__grid">
 
   <header class="tea__subheader">
-    <h3 class="tea__subheader__title">Details</h3>
+    <h2 class="tea__subheader__title">Details</h2>
   </header>
 
   {% include tea/details.html %}
@@ -102,7 +102,7 @@ layout: default
 <section class="tea__grid">
 
   <header class="tea__subheader">
-    <h3 class="tea__subheader__title">Zubereitung</h3>
+    <h2 class="tea__subheader__title">Zubereitung</h2>
   </header>
 
   {% if page.gongfu-temperature or page.gongfu-amount or page.gongfu-times %}
@@ -116,7 +116,7 @@ layout: default
 <section class="tea__grid">
   
   <header class="tea__subheader">
-    <h3 class="tea__subheader__title">Notizen</h3>
+    <h2 class="tea__subheader__title">Notizen</h2>
   </header>
   
   {% if page.visual or page.aroma or page.taste %}
