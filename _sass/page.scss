@@ -19,7 +19,7 @@ body {
 
 .content {
   box-sizing: border-box;
-  margin-top: clamp(3.5rem, 10vw, 5rem);
+  margin-top: clamp(2.5rem, calc(1rem + 5vw), 4rem);
   margin-bottom: clamp(7rem, 10vw, 10rem);
   margin-inline: auto;
   padding-inline: .5rem;
