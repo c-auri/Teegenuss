@@ -28,20 +28,8 @@ layout: default
   </nav>
   
   <header class="tea__header">
-
     <h1 class="tea__header__title">{{ page.title }}</h1>
     <span class="tea__header__subtitle">{{ page.type }}</span>
-
-    <p class="tea__header__info">
-      <span>{{ page.harvest }}</span>
-      |
-      <span><a class="dotted-link" href="{{ page.shop-url }}">{{ page.shop }}</a></span>
-      |
-      <span>{{ page.shared-amount }}</span>
-      |
-      <span>{{ page.price }}&hairsp;<sup>{{ page.currency }}</sup>/<sub>g</sub></span>
-    </p>
-
   </header>
 
   <div class="tea__images">
@@ -68,9 +56,23 @@ layout: default
     </div>
   </div> 
 
-  <p class="tea__description">
-    {{ page.content }}
-  </p>
+  <div class="tea__description">
+
+    <p class="tea__description__info">
+      <span>{{ page.harvest }}</span>
+      |
+      <span><a class="dotted-link" href="{{ page.shop-url }}">{{ page.shop }}</a></span>
+      |
+      <span>{{ page.shared-amount }}</span>
+      |
+      <span>{{ page.price }}&hairsp;<sup>{{ page.currency }}</sup>/<sub>g</sub></span>
+    </p>
+
+    <p>
+      {{ page.content }}
+    </p>
+
+  </div>
 
 </section>
 

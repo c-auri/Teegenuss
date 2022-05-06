@@ -44,7 +44,9 @@
       color: $medium-dark-gray;
       font-size: var(--fs-600);
     }
+  }
 
+  &__description {
     &__info {
       margin: .5rem 0;
       padding: 0;
@@ -119,7 +121,7 @@
   .tea {
     &__overview {
       grid-template-columns: 4fr 3fr;
-      grid-template-rows: 3rem 4rem 8rem;
+      grid-template-rows: 3rem 4rem 5rem auto;
       grid-gap: 0 2rem;
     }
 
@@ -146,15 +148,15 @@
       grid-column: 2;
       grid-row: 3;
       text-align: left;
-
-      &__info {
-        justify-content: space-between;
-      }
     }
 
     &__description {
       grid-column: 2;
       grid-row: 4;
+
+      &__info {
+        justify-content: space-between;
+      }
     }
   }
 }
