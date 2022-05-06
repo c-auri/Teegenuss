@@ -68,9 +68,19 @@ layout: default
       <span>{{ page.price }}&hairsp;<sup>{{ page.currency }}</sup>/<sub>g</sub></span>
     </p>
 
-    <p>
+    <p class="tea__description__text" data-visible="true">
       {{ page.content }}
     </p>
+
+    <div class="tea__description__details" data-visible="false">
+      {% include tea/details.html %}
+    </div>
+
+    <div class="tea__description__controls">
+      <div class="tea__description__toggle" title="Zeige Details">
+        <div class="tea__description__status" data-active="false"></div>
+      </div>
+    </div>
 
   </div>
 
@@ -90,16 +100,6 @@ layout: default
 
 </section>
 {% endif %}
-
-<section class="tea__grid">
-
-  <header class="tea__subheader">
-    <h2 class="tea__subheader__title">Details</h2>
-  </header>
-
-  {% include tea/details.html %}
-
-</section>
 
 <section class="tea__grid">
 
@@ -131,3 +131,4 @@ layout: default
 
 <script src="/assets/js/slideshow.js"></script>
 <script src="/assets/js/accordion.js"></script>
+<script src="/assets/js/toggle-details.js"></script>

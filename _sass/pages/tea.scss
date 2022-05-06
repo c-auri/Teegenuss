@@ -59,6 +59,48 @@
         line-height: 0;
       }
     }
+
+    &__text,
+    &__details {
+      margin: 0;
+      height: 16rem;
+      display: block;
+      overflow: hidden;
+      
+      &[data-visible="false"] {
+        display: none;
+      }
+    }
+
+    &__controls {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    &__toggle {
+      margin-top: auto;
+      border-radius: 25px;
+      padding-inline: 4px;
+      width: 22px;
+      height: 20px;
+      display: flex;
+      justify-content: flex-start;
+      place-items: center;
+      cursor: pointer;
+      background-color: $medium-light-gray;
+
+      div {
+        border-radius: 25px;
+        height: 12px;
+        width: 17px;
+        background-color: $almost-white;
+        transition: all 350ms;
+      }
+
+      div[data-active="true"] {
+        transform: translateX(5px);
+      }
+    }
   }
 
   &__images {
