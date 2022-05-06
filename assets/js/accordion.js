@@ -1,9 +1,7 @@
-for (const panel of document.getElementsByClassName("glossary__panel")) {
-  collapse(panel);
-}
-
 for (const header of document.getElementsByClassName("glossary__header")) {
   toggleStyles(header);
+  var panel = header.nextElementSibling;
+  collapse(panel);
   header.addEventListener("click", togglePanelVisibilty);
 }
 
