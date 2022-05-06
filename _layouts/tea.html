@@ -1,133 +1,137 @@
 ---
 layout: default
 ---
-<section class="tea__overview">
+<div class="tea">
 
-  <nav class="tea__nav">
-
-    {% assign order = site.orders | find: 'order-id', page.order-id %}
-    {% assign teas = site.teas | where: 'order-id', page.order-id %}
-    {% assign prev-key = page.key | plus: -1 | modulo: teas.size %}
-    {% assign next-key = page.key | plus: 1 | modulo: teas.size %}
-    {% assign prev = teas | find: 'key', prev-key %}
-    {% assign next = teas | find: 'key', next-key %}
-
-
-    <div class="tea__nav__order">
-      <a href="{{ order.url }}">{{ order.title }}</a>
-    </div>
-
-    <div class="tea__nav__prev">
-      <a href="{{ prev.url }}">&#8249; zurück</a>
-    </div>
-
-    <div class="tea__nav__next">
-      <a href="{{ next.url }}">weiter &#8250;</a>
-    </div>
-
-  </nav>
+  <section class="tea__overview">
   
-  <header class="tea__header">
-    <h1 class="tea__header__title">{{ page.title }}</h1>
-    <span class="tea__header__subtitle">{{ page.type }}</span>
-  </header>
-
-  <div class="tea__images">
-    <div class="slideshow">
-
-    {% for image in site.static_files %}
-    {% if image.path contains page.order-id  and image.path contains page.shorthand %}
+    <nav class="tea__nav">
   
-      {% unless image.basename == "thumb" or image.basename == "hover" %}
-        <div class="slide fade">
-          <a class="slideshow-prev" onclick="plusSlides(-1)">&#10094;</a>
-          <a class="slideshow-next" onclick="plusSlides(1)">&#10095;</a>
-          
-          <img 
-            src="{{ site.baseurl }}{{ image.path }}" 
-            alt="{{ image.basename }}" />
+      {% assign order = site.orders | find: 'order-id', page.order-id %}
+      {% assign teas = site.teas | where: 'order-id', page.order-id %}
+      {% assign prev-key = page.key | plus: -1 | modulo: teas.size %}
+      {% assign next-key = page.key | plus: 1 | modulo: teas.size %}
+      {% assign prev = teas | find: 'key', prev-key %}
+      {% assign next = teas | find: 'key', next-key %}
   
-        </div>
-      {% endunless %}
   
-    {% endif %}
-    {% endfor %}
-
-    </div>
-  </div> 
-
-  <div class="tea__description">
-
-    <p class="tea__description__info">
-      <span>{{ page.harvest }}</span>
-      |
-      <span><a class="dotted-link" href="{{ page.shop-url }}">{{ page.shop }}</a></span>
-      |
-      <span>{{ page.shared-amount }}</span>
-      |
-      <span>{{ page.price }}&hairsp;<sup>{{ page.currency }}</sup>/<sub>g</sub></span>
-    </p>
-
-    <p class="tea__description__text" data-visible="true">
-      {{ page.content }}
-    </p>
-
-    <div class="tea__description__details" data-visible="false">
-      {% include tea/details.html %}
-    </div>
-
-    <div class="tea__description__controls">
-      <div class="tea__description__toggle" title="Zeige Details">
-        <div class="tea__description__status" data-active="false"></div>
+      <div class="tea__nav__order">
+        <a href="{{ order.url }}">{{ order.title }}</a>
       </div>
+  
+      <div class="tea__nav__prev">
+        <a href="{{ prev.url }}">&#8249; zurück</a>
+      </div>
+  
+      <div class="tea__nav__next">
+        <a href="{{ next.url }}">weiter &#8250;</a>
+      </div>
+  
+    </nav>
+    
+    <header class="tea__header">
+      <h1 class="tea__header__title">{{ page.title }}</h1>
+      <span class="tea__header__subtitle">{{ page.type }}</span>
+    </header>
+  
+    <div class="tea__images">
+      <div class="slideshow">
+  
+      {% for image in site.static_files %}
+      {% if image.path contains page.order-id  and image.path contains page.shorthand %}
+    
+        {% unless image.basename == "thumb" or image.basename == "hover" %}
+          <div class="slide fade">
+            <a class="slideshow-prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="slideshow-next" onclick="plusSlides(1)">&#10095;</a>
+            
+            <img 
+              src="{{ site.baseurl }}{{ image.path }}" 
+              alt="{{ image.basename }}" />
+    
+          </div>
+        {% endunless %}
+    
+      {% endif %}
+      {% endfor %}
+  
+      </div>
+    </div> 
+  
+    <div class="tea__description">
+  
+      <p class="tea__description__info">
+        <span>{{ page.harvest }}</span>
+        |
+        <span><a class="dotted-link" href="{{ page.shop-url }}">{{ page.shop }}</a></span>
+        |
+        <span>{{ page.shared-amount }}</span>
+        |
+        <span>{{ page.price }}&hairsp;<sup>{{ page.currency }}</sup>/<sub>g</sub></span>
+      </p>
+  
+      <p class="tea__description__text" data-visible="true">
+        {{ page.content }}
+      </p>
+  
+      <div class="tea__description__details" data-visible="false">
+        {% include tea/details.html %}
+      </div>
+  
+      <div class="tea__description__controls">
+        <div class="tea__description__toggle" title="Zeige Details">
+          <div class="tea__description__status" data-active="false"></div>
+        </div>
+      </div>
+  
     </div>
-
-  </div>
-
-</section>
-
-{% if page.tags and page.tags.size != 0 %}
-<section class="tea__explanations">
-
-  <header class="tea__subheader">
-    <h2 class="tea__subheader__title">Erläuterungen</h2>
-  </header>
-
-  {% for tag in page.tags %}
-  {% assign entry = site.glossary | find: 'tag', tag %}
-  {% include glossary-entry.html %}
-  {% endfor %}
-
-</section>
-{% endif %}
-
-<section class="tea__grid">
-
-  <header class="tea__subheader">
-    <h2 class="tea__subheader__title">Zubereitung</h2>
-  </header>
-
-  {% if page.gongfu-temperature or page.gongfu-amount or page.gongfu-times %}
-  {% include tea/brewing.html %}
-  {% else %}
-  <p class="italic medium-gray">Muss noch ziehen.</p>
-  {% endif %}
-
-</section>
-
-<section class="tea__grid">
   
-  <header class="tea__subheader">
-    <h2 class="tea__subheader__title">Notizen</h2>
-  </header>
+  </section>
   
-  {% if page.visual or page.aroma or page.taste %}
-  {% include tea/notes.html %}
-  {% else %}
-  <p class="italic medium-gray">Muss noch ziehen.</p>
+  {% if page.tags and page.tags.size != 0 %}
+  <section class="tea__explanations">
+  
+    <header class="tea__subheader">
+      <h2 class="tea__subheader__title">Erläuterungen</h2>
+    </header>
+  
+    {% for tag in page.tags %}
+    {% assign entry = site.glossary | find: 'tag', tag %}
+    {% include glossary-entry.html %}
+    {% endfor %}
+  
+  </section>
   {% endif %}
+  
+  <section class="tea__grid">
+  
+    <header class="tea__subheader">
+      <h2 class="tea__subheader__title">Zubereitung</h2>
+    </header>
+  
+    {% if page.gongfu-temperature or page.gongfu-amount or page.gongfu-times %}
+    {% include tea/brewing.html %}
+    {% else %}
+    <p class="italic medium-gray">Muss noch ziehen.</p>
+    {% endif %}
+  
+  </section>
+  
+  <section class="tea__grid">
+    
+    <header class="tea__subheader">
+      <h2 class="tea__subheader__title">Notizen</h2>
+    </header>
+    
+    {% if page.visual or page.aroma or page.taste %}
+    {% include tea/notes.html %}
+    {% else %}
+    <p class="italic medium-gray">Muss noch ziehen.</p>
+    {% endif %}
+  
+  </section>
 
-</section>
+</div>
 
 <script src="/assets/js/slideshow.js"></script>
 <script src="/assets/js/accordion.js"></script>

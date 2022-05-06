@@ -1,5 +1,9 @@
 .tea {
+  display: grid;
+  gap: $content-gap;
+
   &__overview {
+    margin-bottom: 3rem;
     display: grid;
   }
 
@@ -63,7 +67,7 @@
     &__text,
     &__details {
       margin: 0;
-      height: 16rem;
+      height: 18rem;
       display: block;
       overflow: hidden;
       
@@ -165,7 +169,7 @@
 
 .tea__explanations,
 .tea__grid {
-  margin: 5rem auto;
+  margin: 0 auto;
   width: 100%;
   max-width: $p-width;
 }
@@ -183,6 +187,7 @@
   }
 
   &--inner {
+    padding-left: 2rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: .5rem;
@@ -190,7 +195,6 @@
 
   &__attribute--outer,
   &__attribute--inner {
-    padding: 0 .5rem;
     color: $almost-black;
   }
   
