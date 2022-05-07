@@ -175,8 +175,8 @@
   hyphens: manual;
   
   &--outer {
-    padding-inline: 1rem 0;
-    max-width: 100%;
+    margin-bottom: 1rem;
+    max-width: $p-width;
     display: grid;
     grid-template-columns: 1fr 3fr;
   }
