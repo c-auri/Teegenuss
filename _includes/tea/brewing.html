@@ -1,20 +1,20 @@
-<div class="tea__grid--outer">
-  <div class="tea__grid__attribute--outer">Temperatur</div>
-  <div class="tea__grid--inner">
+<div class="data-table--outer">
+  <div class="data-table__attribute--outer">Temperatur</div>
+  <div class="data-table--inner">
 
-    <div class="tea__grid__attribute--inner"></div>
-    <div class="tea__grid__value">{{ page.gongfu-temperature }}&hairsp;°C</div>
+    <div class="data-table__attribute--inner"></div>
+    <div class="data-table__value">{{ page.gongfu-temperature }}&hairsp;°C</div>
 
   </div>
 </div>
 
 {% if page.gongfu-amount %}
-<div class="tea__grid--outer">
-  <div class="tea__grid__attribute--outer">Menge</div>
-  <div class="tea__grid--inner">
+<div class="data-table--outer">
+  <div class="data-table__attribute--outer">Menge</div>
+  <div class="data-table--inner">
 
     {% for entry in page.gongfu-amount %}
-    <div class="tea__grid__attribute--inner">
+    <div class="data-table__attribute--inner">
 
       <span
 
@@ -26,7 +26,7 @@
       </span>
     </div>
 
-    <div class="tea__grid__value">
+    <div class="data-table__value">
 
       <span
       {% if entry[0] == "oder Volumen" %}
@@ -46,12 +46,12 @@
 {% endif %}
 
 {% if page.gongfu-times %}
-<div class="tea__grid--outer">
-  <div class="tea__grid__attribute--outer">Zieh&shy;zeiten</div>
-  <div class="tea__grid--inner">
+<div class="data-table--outer">
+  <div class="data-table__attribute--outer">Zieh&shy;zeiten</div>
+  <div class="data-table--inner">
 
     {% for entry in page.gongfu-times %}
-    <div class="tea__grid__attribute--inner">
+    <div class="data-table__attribute--inner">
 
       <span
       {% if entry[0] == "Abguss" %}
@@ -64,7 +64,7 @@
 
     </div>
 
-    <div class="tea__grid__value">
+    <div class="data-table__value">
 
       <span
       {% if entry[1] == "blitz" %}

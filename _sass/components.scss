@@ -162,3 +162,42 @@
   from {opacity: .4}
   to {opacity: 1}
 }
+
+// -------- Tables ------- //
+
+.data-table {
+  margin-inline: auto;
+  margin-bottom: auto;
+  width: 100%;
+  font-size: var(--fs-400);
+  display: grid;
+  grid-gap: 1rem 0;
+  hyphens: manual;
+  
+  &--outer {
+    padding-inline: 1rem 0;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+  }
+
+  &--inner {
+    padding-left: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: .5rem;
+  }
+
+  &__attribute--outer,
+  &__attribute--inner {
+    color: $almost-black;
+  }
+  
+  &__attribute--outer {
+    font-weight: bold;
+  }
+
+  &__value {
+    color: $dark-gray;
+  }
+}

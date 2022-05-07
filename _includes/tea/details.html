@@ -1,27 +1,27 @@
-<div class="tea__grid--outer">
-  <div class="tea__grid__attribute--outer">Sorte</div>
-  <div class="tea__grid--inner">
+<div class="data-table--outer">
+  <div class="data-table__attribute--outer">Sorte</div>
+  <div class="data-table--inner">
 
-    <div class="tea__grid__attribute--inner">Teesorte</div>
-    <div class="tea__grid__value">{{ page.type }}</div>
+    <div class="data-table__attribute--inner">Teesorte</div>
+    <div class="data-table__value">{{ page.type }}</div>
 
-    <div class="tea__grid__attribute--inner">Strauchsorte</div>
-    <div class="tea__grid__value">{{ page.variety }}</div>
+    <div class="data-table__attribute--inner">Strauchsorte</div>
+    <div class="data-table__value">{{ page.variety }}</div>
 
   </div>
 </div>
 
 {% if page.origin %}
-<div class="tea__grid--outer">
-  <div class="tea__grid__attribute--outer">Herkunft</div>
-  <div class="tea__grid--inner">
+<div class="data-table--outer">
+  <div class="data-table__attribute--outer">Herkunft</div>
+  <div class="data-table--inner">
 
     {% for entry in page.origin %}
-    <div class="tea__grid__attribute--inner">
+    <div class="data-table__attribute--inner">
       {{ entry[0] }}
     </div>
 
-    <div class="tea__grid__value">
+    <div class="data-table__value">
       {{ entry[1] -}}
       {%- if entry[0] == 'Höhe' %}&hairsp;m{% endif %}
     </div>
@@ -32,16 +32,16 @@
 {% endif %}
 
 {% if page.production %}
-<div class="tea__grid--outer">
-  <div class="tea__grid__attribute--outer">Ver&shy;arbeitung</div>
-  <div class="tea__grid--inner">
+<div class="data-table--outer">
+  <div class="data-table__attribute--outer">Ver&shy;arbeitung</div>
+  <div class="data-table--inner">
 
     {% for entry in page.production %}
-    <div class="tea__grid__attribute--inner">
+    <div class="data-table__attribute--inner">
       {{ entry[0] }}
     </div>
 
-    <div class="tea__grid__value">
+    <div class="data-table__value">
       {{ entry[1] }}
     </div>
     {% endfor %}
