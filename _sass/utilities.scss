@@ -38,6 +38,10 @@
   text-align: center !important;
 }
 
+.user-select-none {
+  user-select: none;
+}
+
 .mouseover {
   @include dotted-underline;
   cursor: help;
