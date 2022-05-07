@@ -144,6 +144,10 @@ p.form-alert {
 .summary-addition,
 .summary-order {
   padding: 1rem;
+
+  div p {
+    margin: 0;
+  }
 }
 
 .summary-person {
