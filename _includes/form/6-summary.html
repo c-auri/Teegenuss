@@ -4,12 +4,12 @@
 
   <div class="summary-person">
     <div>
-      <h3 class="summary-person__heading">Kontakt</h3>
+      <h3 class="summary__heading">Kontakt</h3>
       <p id="discord-summary"></p>
       <p id="connection-summary"></p>
     </div>
     <div>
-      <h3 class="summary-person__heading">Lieferadresse</h3>
+      <h3 class="summary__heading">Lieferadresse</h3>
       <p id="name-summary"></p>
       <p id="street-summary"></p>
       <p id="info-summary"></p>
@@ -19,12 +19,12 @@
   </div>
 
   <div class="summary-addition">
-    <h3 class="summary-person__heading">Anmerkung</h3>
+    <h3 class="summary__heading">Anmerkung</h3>
     <p id="summary-addition"></p>
   </div>
 
   <div class="summary-order">
-    <h3 class="summary-person__heading">Kosten</h3>
+    <h3 class="summary__heading">Kosten</h3>
     <table>
       {% for package in packages %}
         <tr id="listing-{{ package.order-id }}{{ package.shorthand }}">

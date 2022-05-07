@@ -19,9 +19,9 @@
             value="ordered">
 
         <div class="package-selector">
-          <h2>
+          <h3>
             {{ package.title }}
-          </h2>
+          </h3>
           {% assign teas = site.teas 
             | where: 'order-id', page.order-id 
             | where: 'package', package.shorthand %}

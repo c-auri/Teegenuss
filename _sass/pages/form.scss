@@ -4,7 +4,7 @@
   font-size: var(--fs-400);
   background-color: $light-blue;
 
-  h1 {
+  h2 {
     font-size: var(--fs-800);
     padding: 3rem;
     text-align: center;
@@ -23,6 +23,7 @@
 .order-form-section {
   h2 {
     padding: 1rem 0;
+    font-weight: bold;
     font-size: var(--fs-700);
   }
 
@@ -149,14 +150,14 @@ p.form-alert {
   display: flex;
   justify-content: space-between;
 
-  &__heading {
-    font-weight: bold;
-    font-size: var(--fs-600);
-  }
-
   @media (max-width: $bp-tablet) {
     flex-direction: column;
   }
+}
+
+.summary__heading {
+  font-weight: bold;
+  font-size: var(--fs-600);
 }
 
 .summary-person div:last-child {
