@@ -111,7 +111,7 @@
 
   &__subheader {
     @include dashed-separator;
-    margin-bottom: 3rem;
+    margin: 2rem 0;
 
     &__title {
       color: $medium-gray;
@@ -124,7 +124,7 @@
   .tea {
     &__overview {
       grid-template-columns: 4fr 3fr;
-      grid-template-rows: 3rem 4rem 5rem auto;
+      grid-template-rows: 2.5rem 3.5rem 5rem auto;
       grid-gap: 0 2rem;
     }
 
