@@ -128,7 +128,18 @@ layout: default
     </header>
     
     {% if page.visual or page.aroma or page.taste %}
-    {% include tea/notes.html %}
+    <div class="review">
+
+      <div class="review__user">
+        <img class="review__user__icon" src="/assets/img/users/gruenblatt.jpg">
+        <span class="review__user__name">gruenblatt</span>
+      </div>
+
+      <div class="review__content">
+        {% include tea/notes.html %}
+      </div>
+
+    </div>
     {% else %}
     <p class="italic medium-gray">Noch kein Bericht vorhanden.</p>
     {% endif %}
