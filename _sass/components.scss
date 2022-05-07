@@ -71,7 +71,9 @@
   all: unset;
   cursor: pointer;
   padding: .5rem 1rem;
+  width: 8rem;
   color: $almost-white;
+  text-align: center;
   background-color: $almost-black;
 
   &:hover {
