@@ -88,34 +88,38 @@ layout: default
   
   </section>
   
-  {% if page.tags and page.tags.size != 0 %}
-  <section class="tea__explanations">
-  
-    <header class="tea__subheader">
-      <h2 class="tea__subheader__title">Erläuterungen</h2>
-    </header>
-  
-    {% for tag in page.tags %}
-    {% assign entry = site.glossary | find: 'tag', tag %}
-    {% include glossary-entry.html %}
-    {% endfor %}
-  
-  </section>
-  {% endif %}
-  
-  <section class="tea__grid">
-  
-    <header class="tea__subheader">
-      <h2 class="tea__subheader__title">Zubereitung</h2>
-    </header>
-  
-    {% if page.gongfu-temperature or page.gongfu-amount or page.gongfu-times %}
-    {% include tea/brewing.html %}
-    {% else %}
-    <p class="italic medium-gray">Muss noch ziehen.</p>
+  <div class="tea__help">
+
+    {% if page.tags and page.tags.size != 0 %}
+    <section class="tea__explanations">
+    
+      <header class="tea__subheader">
+        <h2 class="tea__subheader__title">Erläuterungen</h2>
+      </header>
+    
+      {% for tag in page.tags %}
+      {% assign entry = site.glossary | find: 'tag', tag %}
+      {% include glossary-entry.html %}
+      {% endfor %}
+    
+    </section>
     {% endif %}
-  
-  </section>
+    
+    <section class="tea__grid">
+    
+      <header class="tea__subheader">
+        <h2 class="tea__subheader__title">Zubereitung</h2>
+      </header>
+    
+      {% if page.gongfu-temperature or page.gongfu-amount or page.gongfu-times %}
+      {% include tea/brewing.html %}
+      {% else %}
+      <p class="italic medium-gray">Muss noch ziehen.</p>
+      {% endif %}
+    
+    </section>
+
+  </div>
   
   <section class="tea__grid">
     
