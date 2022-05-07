@@ -6,11 +6,15 @@ navToggle.addEventListener('click', () => {
 
     if (isVisible) {
         primaryNav.setAttribute("data-visible", "false");
-        navToggle.setAttribute("aria-expanded", "false");
+        setTimeout(
+            () => { navToggle.setAttribute("aria-expanded", "false"); },
+            350);
         document.getElementsByTagName('body')[0].style.overflow = 'visible'
     } else {
         primaryNav.setAttribute("data-visible", "true");
-        navToggle.setAttribute("aria-expanded", "true");
+        setTimeout(
+            () => { navToggle.setAttribute("aria-expanded", "true"); },
+            350);
         document.getElementsByTagName('body')[0].style.overflow = 'hidden';
     }
 });
