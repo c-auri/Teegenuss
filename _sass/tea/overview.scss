@@ -1,7 +1,4 @@
 .tea {
-  display: grid;
-  gap: $content-gap;
-
   &__overview {
     margin-bottom: 3rem;
     display: grid;
@@ -109,132 +106,45 @@
     grid-row: 2;
   }
 
-  &__subheader {
-    @include dashed-separator;
-    margin: 2rem 0;
-
-    &__title {
-      color: $medium-gray;
-      font-size: var(--fs-500);
-    }
-  }
-}
-
-.review {
-  display: grid;
-
-  &__content {
-    border-radius: 0 5px 5px 0;
-    border: 3px $almost-white solid;
-    margin: 0;
-    padding: 1rem;
-    background-color: $white;
-  }
-
-  &__user {
-    display: grid;
-    grid-template-columns: clamp(75px, 5vw, 150px) auto;
-    align-items: center;
-    gap: 2rem;
-    background-color: $almost-white;
-  
-    &__icon {
-      border-radius: 5px 0 0 0;
-      width: clamp(75px, 5vw, 150px);
-    }
-    
-    &__name {
-      color: $medium-dark-gray;
-      font-size: var(--fs-600);
-    }
-  }
-}
-
-
-
-@media (min-width: $bp-tablet) {
-  .tea {
+  @media (min-width: $bp-tablet) {
     &__overview {
       grid-template-columns: 4fr 3fr;
       grid-template-rows: 2.5rem 3.5rem 5rem auto;
       grid-gap: 0 2rem;
     }
-
+  
     &__nav {
       margin-top: auto;
       margin-bottom: 1rem;
       grid-row: 2;
       grid-column: 2;
       grid-template-columns: 1fr 5rem 5rem;
-
+  
       &__order {
         grid-column: span 1;
         grid-row: 1;
         text-align: left;
       }
     }
-
+  
     &__images {
       grid-column: 1;
       grid-row: 1 / span 4;
     }
-
+  
     &__header {
       grid-column: 2;
       grid-row: 3;
       text-align: left;
     }
-
+  
     &__description {
       grid-column: 2;
       grid-row: 4;
-
+  
       &__info {
         justify-content: space-between;
       }
-    }
-  }
-
-  .review {
-    grid-template-columns: 225px auto;
-
-    &__user {
-      border-radius: 5px 0 0 5px;
-      grid-template-columns: 100%;
-      grid-template-rows: 6rem auto;
-      gap: 0;
-      align-items: center;
-      justify-items: center;
-    
-      &__name {
-        grid-row: 1;
-        width: 100%;
-        text-align: center;
-      }
-  
-      &__icon {
-        grid-row: 2;
-        align-self: baseline;
-        border-radius: 0;
-        width: 150px;
-      }
-    }
-
-    &__content {
-      margin: 0;
-      padding: 2rem 3rem;
-      border-left: none;
-      font-size: var(--fs-400);
-    }
-  }
-}
-
-@media (min-width: $bp-desktop) {
-  .tea {
-    &__help {
-      display: grid;
-      gap: 1rem;
-      grid-template-columns: 4fr 3fr;
     }
   }
 }

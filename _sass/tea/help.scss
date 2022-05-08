@@ -1,0 +1,11 @@
+
+
+@media (min-width: $bp-desktop) {
+  .tea {
+    &__help {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 4fr 3fr;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+.tea {
+  display: grid;
+  gap: $content-gap;
+
+  &__subheader {
+    @include dashed-separator;
+    margin: 2rem 0;
+
+    &__title {
+      color: $medium-gray;
+      font-size: var(--fs-500);
+    }
+  }
+}
