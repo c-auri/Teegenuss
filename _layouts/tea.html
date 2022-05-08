@@ -70,19 +70,9 @@ layout: default
         <span>{{ page.price }}&hairsp;<sup>{{ page.currency }}</sup>/<sub>g</sub></span>
       </p>
   
-      <p class="tea__description__text" data-visible="true">
+      <p class="tea__description__text">
         {{ page.content }}
       </p>
-  
-      <div class="tea__description__details" data-visible="false">
-        {% include tea/details.html %}
-      </div>
-  
-      <div class="tea__description__controls">
-        <div class="tea__description__toggle" title="Zeige Details">
-          <div class="tea__description__status" data-active="false"></div>
-        </div>
-      </div>
   
     </div>
   
@@ -108,14 +98,27 @@ layout: default
     <section class="tea__grid">
     
       <header class="tea__subheader">
-        <h2 class="tea__subheader__title">Zubereitung</h2>
+        <h2 class="tea__subheader__title" id="details">Details</h2>
+  
+        <div class="tea__subheader__controls">
+          <div class="toggle" title="Zeige Details">
+            <div class="toggle__status" data-position="left"></div>
+          </div>
+        </div>
+
       </header>
-    
-      {% if page.gongfu-temperature or page.gongfu-amount or page.gongfu-times %}
-      {% include tea/brewing.html %}
-      {% else %}
-      <p class="italic medium-gray">Muss noch ziehen.</p>
-      {% endif %}
+
+      <div class="tea__details" data-visible="true">
+        {% include tea/details.html %}
+      </div>
+
+      <div class="tea__brewing" data-visible="false">
+        {% if page.gongfu-temperature or page.gongfu-amount or page.gongfu-times %}
+        {% include tea/brewing.html %}
+        {% else %}
+        <p class="italic medium-gray">Muss noch ziehen.</p>
+        {% endif %}
+      </div>
     
     </section>
 

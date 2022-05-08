@@ -5,10 +5,18 @@
   &__subheader {
     @include dashed-separator;
     margin: 2rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
     &__title {
       color: $medium-gray;
       font-size: var(--fs-500);
+    }
+
+    &__controls {
+      display: flex;
+      justify-content: flex-end;
     }
   }
 }
