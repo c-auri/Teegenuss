@@ -80,22 +80,22 @@ layout: default
   
   <div class="tea__help">
 
-    {% if page.tags and page.tags.size != 0 %}
     <section class="tea__explanations">
-    
+      
       <header class="tea__subheader">
         <h2 class="tea__subheader__title">Erläuterungen</h2>
       </header>
-    
+      
+      {% if page.tags and page.tags.size != 0 %}
       {% for tag in page.tags %}
       {% assign entry = site.glossary | find: 'tag', tag %}
       {% include glossary-entry.html %}
       {% endfor %}
-    
+      {% endif %}
+      
     </section>
-    {% endif %}
     
-    <section class="tea__grid">
+    <section>
     
       <header class="tea__subheader">
         <h2 class="tea__subheader__title" id="details">Details</h2>
@@ -124,7 +124,7 @@ layout: default
 
   </div>
   
-  <section class="tea__grid">
+  <section>
     
     <header class="tea__subheader">
       <h2 class="tea__subheader__title">Berichte</h2>
