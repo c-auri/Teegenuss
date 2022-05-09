@@ -1,0 +1,19 @@
+{
+  "order-id": "22-1",
+  "shorthand": "lrjx",
+  "user-name": "gruenblatt",
+  "visual": [
+    [ "Aufgussfarbe", "blasses Gelb" ],
+    [ "verbrauchte Blätter", "sattes Grün,<br> wenig rote Ränder" ]
+  ],
+  "aroma": [
+    [ "trockenes<br> Blatt", "milchig-blumig,<br>leicht nussiger Grundton" ],
+    [ "feuchtes<br> Blatt", "Nussigkeit kommt stärker heraus,<br>erinnert an gerösteten Rosenkohl" ]
+  
+  ],
+  "taste": [
+    [ "ersten Aufgüsse", "ebenfalls nussig und leicht blumig, nicht grasig oder herb" ],
+    [ "spätere Aufgüsse", "Süße kommt stärker heraus" ],
+    [ "Textur", "leicht samtig" ]
+  ]
+}

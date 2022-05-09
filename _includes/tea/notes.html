@@ -1,9 +1,9 @@
-{% if page.visual %}
+{% if review.visual %}
 <div class="data-table--outer">
   <div class="data-table__attribute--outer">Aussehen</div>
   <div class="data-table--inner">
 
-    {% for entry in page.visual %}
+    {% for entry in review.visual %}
     <div class="data-table__attribute--inner">
       {{ entry[0] }}
     </div>
@@ -17,12 +17,12 @@
 </div>
 {% endif %}
 
-{% if page.aroma %}
+{% if review.aroma %}
 <div class="data-table--outer">
   <div class="data-table__attribute--outer">Aroma</div>
   <div class="data-table--inner">
 
-    {% for entry in page.aroma %}
+    {% for entry in review.aroma %}
     <div class="data-table__attribute--inner">
       <span
       {% if entry[0] == 'Geschirr' %}
@@ -41,12 +41,12 @@
 </div>
 {% endif %}
 
-{% if page.taste %}
+{% if review.taste %}
 <div class="data-table--outer">
   <div class="data-table__attribute--outer">Ge&shy;schmack</div>
   <div class="data-table--inner">
 
-    {% for entry in page.taste %}
+    {% for entry in review.taste %}
     <div class="data-table__attribute--inner">
       {{ entry[0] }}
     </div>

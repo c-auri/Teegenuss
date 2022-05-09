@@ -130,12 +130,15 @@ layout: default
       <h2 class="tea__subheader__title">Berichte</h2>
     </header>
     
-    {% if page.visual or page.aroma or page.taste %}
+    {% assign reviews = site.data.reviews | where: 'order-id', page.order-id | where: 'shorthand', page.shorthand %}
+    {% if reviews.size > 0 %}
+
+    {% for review in reviews %}
     <div class="review">
 
       <div class="review__user">
         <img class="review__user__icon" src="/assets/img/users/gruenblatt.jpg">
-        <span class="review__user__name">gruenblatt</span>
+        <span class="review__user__name">{{ review.user-name }}</span>
       </div>
 
       <div class="review__content">
@@ -143,9 +146,12 @@ layout: default
       </div>
 
     </div>
+    {% endfor %}
+
     {% else %}
     <p class="italic medium-gray">Noch kein Bericht vorhanden.</p>
     {% endif %}
+    
   
   </section>
 
