@@ -95,10 +95,10 @@ layout: default
       
     </section>
     
-    <section>
+    <section id="details-brewing">
     
       <header class="tea__subheader">
-        <h2 class="tea__subheader__title" id="details">Details</h2>
+        <h2 class="tea__subheader__title" id="details-brewing-title">Details</h2>
   
         <div class="tea__subheader__controls">
           <div class="toggle" title="Zeige Details">
@@ -129,7 +129,7 @@ layout: default
     <header class="tea__subheader">
       <h2 class="tea__subheader__title">Berichte</h2>
     </header>
-    
+
     {% assign reviews = site.data.reviews | where: 'order-id', page.order-id | where: 'shorthand', page.shorthand %}
     {% if reviews.size > 0 %}
 

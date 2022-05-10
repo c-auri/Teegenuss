@@ -9,6 +9,10 @@
   }
 }
 
+#details-brewing {
+  transition: max-height 350ms ease;
+}
+
 .toggle {
   margin-top: auto;
   border-radius: 25px;
