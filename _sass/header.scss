@@ -35,7 +35,6 @@
 }
 
 .primary-nav {
-
   @media (max-width: $bp-tablet) {
     position: fixed;
     inset: 0 0 0 10rem;
@@ -104,7 +103,7 @@
 
   @media (max-width: $bp-tablet) {
     all: unset;
-    position: absolute;
+    position: relative;
     right: 1rem;
     z-index: 999;
     height: 24px;
@@ -113,11 +112,30 @@
     flex-direction: column;
     justify-content: space-between;
     cursor: pointer;
-    background-image: url(/assets/img/nav-toggle-open.png);
+    background-image: url();
     background-repeat: no-repeat;
 
+    &__open,
+    &__close {
+      position: absolute;
+      top: 0;
+      transition: opacity 350ms ease-in;
+    }
+
+    &__close {
+      opacity: 0;
+    }
+
     &[aria-expanded="true"] {
-      background-image: url(/assets/img/nav-toggle-close.png);
+      .nav-toggle {
+        &__open {
+          opacity: 0;
+        }
+
+        &__close {
+          opacity: 1;
+        }
+      }
     }
   }
 }
