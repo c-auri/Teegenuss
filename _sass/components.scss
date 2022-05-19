@@ -84,16 +84,6 @@
     background-color: $dark-gray;
   }
 
-  &--gray {
-    color: $light-gray;
-    background-color: $medium-gray;
-
-    &:hover {
-      color: $almost-white;
-      background-color: $medium-dark-gray;
-    }
-  }
-
   &--accept {
     color: $almost-white;
     background-color: $almost-black;
