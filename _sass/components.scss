@@ -75,10 +75,12 @@
   color: $almost-white;
   font-weight: bold;
   text-align: center;
+  border: 2px solid $almost-black;
   background-color: $almost-black;
 
   &:hover {
     color: $white;
+    border-color: $dark-gray;
     background-color: $dark-gray;
   }
 
@@ -95,10 +97,22 @@
   &--accept {
     color: $almost-white;
     background-color: $almost-black;
-
+    
     &:hover {
       color: $white;
+      border-color: $clr-accept;
       background-color: $clr-accept;
+    }
+  }
+
+  &--white {
+    color: $almost-black;
+    border-color: $medium-dark-gray;
+    background-color: $white;
+
+    &:hover {
+      color: $almost-white;
+      background-color: $dark-gray;
     }
   }
 }
