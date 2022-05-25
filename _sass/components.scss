@@ -73,6 +73,7 @@
   padding: .5rem 1rem;
   width: 8rem;
   color: $almost-white;
+  font-size: var(--fs-400);
   font-weight: bold;
   text-align: center;
   border: 2px solid $almost-black;
@@ -80,8 +81,8 @@
 
   &:hover {
     color: $white;
-    border-color: $dark-gray;
-    background-color: $dark-gray;
+    border-color: $black;
+    background-color: $black;
   }
 
   &--accept {
@@ -109,12 +110,13 @@
 
   &--white {
     color: $almost-black;
-    border-color: $medium-dark-gray;
+    border-color: $almost-black;
     background-color: $white;
 
     &:hover {
       color: $almost-white;
-      background-color: $dark-gray;
+      border-color: $black;
+      background-color: $black;
     }
   }
 
