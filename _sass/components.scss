@@ -95,6 +95,18 @@
     }
   }
 
+  &--danger {
+    color: $almost-black;
+    border-color: $medium-dark-gray;
+    background-color: $white;
+
+    &:hover {
+      color: $white;
+      border-color: $clr-danger;
+      background-color: $clr-danger;
+    }
+  }
+
   &--white {
     color: $almost-black;
     border-color: $medium-dark-gray;
@@ -104,6 +116,10 @@
       color: $almost-white;
       background-color: $dark-gray;
     }
+  }
+
+  &--large {
+    width: 16rem;
   }
 }
 
