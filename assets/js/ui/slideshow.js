@@ -1,29 +1,16 @@
-var slideIndex = 1;
-showSlides(slideIndex);
+import { show, hide } from "/assets/js/utils/visibility.js"
+import { mod } from "/assets/js/utils/math.js"
 
-function plusSlides(n) {
-    showSlides(slideIndex += n);
+const slides = document.getElementsByClassName("slide");
+const prevButtons = document.getElementsByClassName('slideshow-prev')
+const nextButtons = document.getElementsByClassName('slideshow-next')
+
+function showSlide(position) {
+  hide(...slides)
+  show(slides[position])
 }
 
-function currentSlide(n) {
-    showSlides(slideIndex = n + 1);
+for (let i = 0; i < slides.length; i++) {
+  prevButtons[i].addEventListener("click", () => showSlide(mod(i-1, slides.length)))
+  nextButtons[i].addEventListener("click", () => showSlide(mod(i+1, slides.length)))
 }
-
-function showSlides(n) {
-    var i;
-    var slides = document.getElementsByClassName("slide");
-
-    if (n > slides.length) {
-        slideIndex = 1
-    }   
-
-    if (n < 1) {
-        slideIndex = slides.length
-    }
-
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-
-    slides[slideIndex-1].style.display = "block";
-} 

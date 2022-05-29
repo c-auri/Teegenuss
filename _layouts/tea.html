@@ -41,9 +41,9 @@ layout: default
       {% if image.path contains page.order-id  and image.path contains page.shorthand %}
     
         {% unless image.basename == "thumb" or image.basename == "hover" %}
-          <div class="slide fade">
-            <a class="slideshow-prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="slideshow-next" onclick="plusSlides(1)">&#10095;</a>
+          <div class="slide fade" {%unless image.basename == "01"%}data-display="none"{%endunless%}>
+            <a class="slideshow-prev">&#10094;</a>
+            <a class="slideshow-next">&#10095;</a>
             
             <img 
               src="{{ site.baseurl }}{{ image.path }}" 
@@ -157,6 +157,6 @@ layout: default
 
 </div>
 
-<script src="/assets/js/ui/slideshow.js"></script>
+<script type="module" src="/assets/js/ui/slideshow.js"></script>
 <script type="module" src="/assets/js/ui/accordion.js"></script>
 <script type="module" src="/assets/js/ui/toggle-details.js"></script>
