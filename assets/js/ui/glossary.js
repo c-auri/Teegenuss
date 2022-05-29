@@ -1,26 +1,20 @@
 import { isExpanded, expand, collapse } from "/assets/js/utils/visibility.js";
 
 for (const header of document.getElementsByClassName("glossary__header")) {
-    toggleStyles(header);
     var panel = header.nextElementSibling;
     panel.style.maxHeight = '0';
-    collapse(panel);
+    collapse(header, panel);
     header.addEventListener("click", togglePanelVisibilty);
 }
 
 function togglePanelVisibilty() {
-    toggleStyles(this);
     var panel = this.nextElementSibling;
 
     if (isExpanded(panel)) {
         panel.style.maxHeight = '0';
-        collapse(panel);
+        collapse(this, panel);
     } else {
         panel.style.maxHeight = panel.scrollHeight + 'px';
-        expand(panel);
+        expand(this, panel);
     } 
-}
-
-function toggleStyles(header) {
-    header.classList.toggle("glossary__header--expanded");
 }

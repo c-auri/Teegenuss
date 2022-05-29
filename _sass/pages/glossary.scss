@@ -30,12 +30,12 @@
       font-size: var(--fs-200);
     }
   
-    &--expanded {
+    &[data-expanded="true"] {
       border-radius: 5px 5px 0 0;
-    }
-  
-    &--expanded::after {
-      content: '\2796';
+
+      &::after {
+        content: '\2796';
+      }
     }
   
     &:hover::after {
