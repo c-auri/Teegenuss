@@ -4,7 +4,6 @@ toggle.addEventListener('click', function() {
     const brewing = document.querySelector('.tea__brewing');
     const details = document.querySelector('.tea__details');
     const status = document.querySelector('.toggle__status');
-    const section = document.querySelector('#details-brewing');
     const header = document.querySelector('#details-brewing-title');
 
     if (status.getAttribute('data-position') === "left") {
@@ -20,6 +19,4 @@ toggle.addEventListener('click', function() {
         status.setAttribute("title", "Zeige Details");
         header.innerHTML = "Details";
     }
-
-    section.style.maxHeight = section.scrollHeight + 'px';
 });
