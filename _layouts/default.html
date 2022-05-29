@@ -19,11 +19,20 @@
     </a>
 
     <nav class="primary-nav" id="primary-navigation" data-expanded="false">
-      {% for item in site.data.navigation %}
-      <a href="{{item.link}}" class="primary-nav__link {% if page.url == item.link %}primary-nav__link--current{% endif %}">
-        {{item.name}}
-      </a>
-      {% endfor %}
+      
+      <div class="primary-nav__group">
+        {% for item in site.data.navigation %}
+        <a href="{{item.link}}" class="primary-nav__link {% if page.url == item.link %}primary-nav__link--current{% endif %}">
+          {{item.name}}
+        </a>
+        {% endfor %}
+      </div>
+
+      <div class="primary-nav__group">
+        <button aria-controls="login" class="primary-nav__auth" id="btnOpenLogin">Anmeldung</button>
+        <a href="/profil" class="primary-nav__auth" data-display="none">Profil</a>
+      </div>
+
     </nav>
 
     <button aria-controls="primary-navigation" aria-expanded="false" class="nav-toggle">
