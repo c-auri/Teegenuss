@@ -95,24 +95,26 @@ layout: default
       
     </section>
     
-    <section id="details-brewing">
+    <section class="tea__explanations" id="details-brewing">
     
       <header class="tea__subheader">
         <h2 class="tea__subheader__title" id="details-brewing-title">Details</h2>
   
-        <div class="tea__subheader__controls">
-          <div class="toggle" title="Zeige Details">
-            <div class="toggle__status" data-position="left"></div>
-          </div>
+        <div class="toggler-container">
+          <input class="toggler" type="checkbox"
+            data-label-id="details-brewing-title"
+            data-label-text-unchecked="Details" data-label-text-checked="Zubereitung"
+            data-target-unchecked="teaDetails" data-target-checked="teaBrewing">
+          </input>
         </div>
 
       </header>
 
-      <div class="tea__details">
+      <div id="teaDetails">
         {% include tea/details.html %}
       </div>
 
-      <div class="tea__brewing" data-display="none">
+      <div id="teaBrewing" data-display="none">
         {% if page.gongfu-temperature or page.gongfu-amount or page.gongfu-times %}
         {% include tea/brewing.html %}
         {% else %}

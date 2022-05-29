@@ -1,30 +1,32 @@
 import { show, hide } from "/assets/js/utils/visibility.js"
 import { mod } from "/assets/js/utils/math.js"
 
-// ------ Toggle Details ------ //
+// --------- Toggler ---------- //
 
-const toggle = document.querySelector('.toggle');
+const togglers = document.getElementsByClassName('toggler')
 
-toggle.addEventListener('click', function() {
-    const brewing = document.querySelector('.tea__brewing');
-    const details = document.querySelector('.tea__details');
-    const status = document.querySelector('.toggle__status');
-    const header = document.querySelector('#details-brewing-title');
+for (const toggler of togglers) {
+    const idLabel = toggler.getAttribute("data-label-id")
+    const idUncheckedTarget = toggler.getAttribute("data-target-unchecked")
+    const idCheckedTarget = toggler.getAttribute("data-target-checked")
+    
+    const label = document.getElementById(idLabel)
+    const uncheckedTarget = document.getElementById(idUncheckedTarget)
+    const checkedTarget = document.getElementById(idCheckedTarget)
 
-    if (status.getAttribute('data-position') === "left") {
-        show(brewing)
-        hide(details)
-        status.setAttribute("data-position", "right");
-        status.setAttribute("title", "Zeige Zubereitung");
-        header.innerHTML = "Zubereitung";
-    } else {
-        show(details)
-        hide(brewing)
-        status.setAttribute("data-position", "left");
-        status.setAttribute("title", "Zeige Details");
-        header.innerHTML = "Details";
-    }
-});
+    toggler.addEventListener('change', () => {
+        if (toggler.checked) {
+            show(checkedTarget)
+            hide(uncheckedTarget)
+            label.innerHTML = toggler.getAttribute("data-label-text-checked")
+        }
+        else {
+            show(uncheckedTarget)
+            hide(checkedTarget)
+            label.innerHTML = toggler.getAttribute("data-label-text-unchecked")
+        }
+    });
+}
 
 // -------- Slideshow --------- //
 
