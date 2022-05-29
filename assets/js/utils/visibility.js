@@ -39,3 +39,11 @@ export function collapse(...elements) {
         element.setAttribute("data-expanded", "false")
     }
 }
+
+export function hideOverflow(element) {
+    element.setAttribute("data-overflow", "hidden")
+}
+
+export function showOverflow(element) {
+    element.removeAttribute("data-overflow")
+}

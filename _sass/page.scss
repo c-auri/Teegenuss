@@ -4,6 +4,10 @@ html {
   *[data-display="none"] {
     display: none;
   }
+
+  *[data-overflow="hidden"] {
+    overflow: hidden;
+  }
 }
 
 body {
@@ -11,6 +15,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: visible;
 }
 
 .page {
