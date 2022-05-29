@@ -2,10 +2,15 @@
   display: grid;
   gap: $content-gap;
 
+  &__entries {
+    display: grid;
+    gap: 1rem;
+  }
+
   &__entry {
     font-size: var(--fs-400);
     line-height: var(--fs-600);
-    margin: 1rem auto;
+    margin: 0 auto;
     max-width: calc(#{$p-width} + 8rem);
   }
   

@@ -1,10 +1,10 @@
 .tea {
   display: grid;
-  gap: $content-gap;
+  gap: 3rem;
 
   &__subheader {
     @include dashed-separator;
-    margin: 2rem 0;
+    margin-bottom: 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -18,5 +18,10 @@
       display: flex;
       justify-content: flex-end;
     }
+  }
+
+  &__reviews {
+    display: grid;
+    gap: 1rem;
   }
 }
