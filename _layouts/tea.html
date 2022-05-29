@@ -108,11 +108,11 @@ layout: default
 
       </header>
 
-      <div class="tea__details" data-visible="true">
+      <div class="tea__details">
         {% include tea/details.html %}
       </div>
 
-      <div class="tea__brewing" data-visible="false">
+      <div class="tea__brewing" data-display="none">
         {% if page.gongfu-temperature or page.gongfu-amount or page.gongfu-times %}
         {% include tea/brewing.html %}
         {% else %}

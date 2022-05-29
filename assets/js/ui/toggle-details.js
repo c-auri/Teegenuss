@@ -7,14 +7,14 @@ toggle.addEventListener('click', function() {
     const header = document.querySelector('#details-brewing-title');
 
     if (status.getAttribute('data-position') === "left") {
-        brewing.setAttribute("data-visible", "true");
-        details.setAttribute("data-visible", "false");
+        brewing.removeAttribute("data-display");
+        details.setAttribute("data-display", "none");
         status.setAttribute("data-position", "right");
         status.setAttribute("title", "Zeige Zubereitung");
         header.innerHTML = "Zubereitung";
     } else {
-        brewing.setAttribute("data-visible", "false");
-        details.setAttribute("data-visible", "true");
+        details.removeAttribute("data-display");
+        brewing.setAttribute("data-display", "none");
         status.setAttribute("data-position", "left");
         status.setAttribute("title", "Zeige Details");
         header.innerHTML = "Details";

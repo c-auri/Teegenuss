@@ -1,5 +1,9 @@
 html {
   scrollbar-gutter: stable;
+    
+  *[data-display="none"] {
+    display: none;
+  }
 }
 
 body {

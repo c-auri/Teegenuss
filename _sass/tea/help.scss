@@ -1,14 +1,3 @@
-.tea {
-  &__details,
-  &__brewing {
-    display: block;
-    
-    &[data-visible="false"] {
-      display: none;
-    }
-  }
-}
-
 #details-brewing {
   transition: max-height 350ms ease;
 }
