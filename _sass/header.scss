@@ -43,10 +43,19 @@
       color: inherit;
     }
 
-    &__auth {
+    &__auth,
+    &__profile {
       all: unset;
       cursor: pointer;
       color: inherit;
+
+      &:hover {
+        color: inherit;
+      }
+    }
+
+    &__profile img {
+      display: none;
     }
   }
 
@@ -87,7 +96,8 @@
       transition: width .3s;
     }
 
-    &__auth {
+    &__auth,
+    &__profile {
       all: unset;
       cursor: pointer;
       width: 100%;
@@ -98,20 +108,26 @@
       justify-content: flex-end;
       gap: .5rem;
 
+      &:hover {
+        color: $dark-gray;
+      }
+    }
+
+    &__auth::before,
+    &__profile img {
+      width: var(--fs-200);
+      aspect-ratio: 1;
+    }
+
+    &__auth {
       &::before {
         content: '';
-        width: var(--fs-200);
-        aspect-ratio: 1;
         background-image: url("/assets/img/icons/login.png");
         background-size: cover;
       }
 
-      &:hover {
-        color: $dark-gray;
-
-        &::before {
-          background-image: url("/assets/img/icons/login-hover.png");
-        }
+      &:hover::before {
+        background-image: url("/assets/img/icons/login-hover.png");
       }
     }
   }

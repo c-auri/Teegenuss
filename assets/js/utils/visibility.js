@@ -20,6 +20,16 @@ export function hide(...elements) {
     }
 }
 
+export function toggleVisibility(...elements) {
+    for (const element of elements) {
+        if (isVisible(element)) {
+            hide(element)
+        } else {
+            show(element)
+        }
+    }
+}
+
 export function isExpanded(element) {
     return element.getAttribute("data-expanded") === "true"
 }

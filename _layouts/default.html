@@ -29,8 +29,8 @@
       </div>
 
       <div class="primary-nav__group">
-        <button aria-controls="login" class="primary-nav__auth" id="btnOpenLogin">Anmeldung</button>
-        <a href="/profil" class="primary-nav__auth" data-display="none">Profil</a>
+        <button aria-controls="authentication" class="primary-nav__auth" id="btnOpenAuth">Anmeldung</button>
+        <a href="/profil" class="primary-nav__profile" id="aProfile" data-display="none"><img id="imgProfile" src="/assets/img/icons/user.png"><span id="spanProfile">Profil</span></a>
       </div>
 
     </nav>
@@ -41,6 +41,68 @@
     </button>
 
   </header>
+
+  <dialog class="auth" id="dlgAuth">
+    <div class="auth__container">
+
+      <nav class="auth__nav" aria-label="authentication navigation">
+        <button class="auth__tab auth__tab--current" id="tabLogin">Anmelden</button>
+        <button class="auth__tab" id="tabRegister">Registrieren</button>
+      </nav>
+  
+      <form class="auth__form">
+  
+        <div id="formLogin">
+
+          <div class="auth__group">
+            <input class="auth__input" id="txtEmail" type="email">
+            <label class="auth__label">Email</label>
+          </div>
+  
+          <div class="auth__group">
+            <input class="auth__input" id="txtPassword" type="password">
+            <label class="auth__label" id="lblPassword">Passwort</label>
+          </div>
+
+        </div>
+
+        <div id="formRegister" data-display="none">
+
+          <div class="auth__group">
+            <input class="auth__input" id="txtRegisterName">
+            <label class="auth__label" id="lblName">Benutzername</label>
+          </div>
+
+          <div class="auth__group">
+            <input class="auth__input" id="txtRegisterEmail" type="email">
+            <label class="auth__label">Email</label>
+          </div>
+
+          <div class="auth__group">
+            <input class="auth__input" id="txtRegisterPassword" type="password">
+            <label class="auth__label" id="lblRegisterPassword">Passwort (mindestens 6 Zeichen)</label>
+          </div>
+          <div class="auth__group">
+            <input class="auth__input" id="txtRegisterRepeat" type="password">
+            <label class="auth__label" id="lblRegisterRepeat">Passwort wiederholen</label>
+          </div>
+
+        </div>
+
+        <div class="auth__error">
+          <span id="spanError" data-display="none">Fehler</span>
+        </div>
+        
+        <div class="auth__buttons">
+          <button type="button" class="button button--white" id="btnCloseAuth">Zurück</button>
+          <button type="button" class="button button--accept" id="btnLogin">Anmelden</button>
+          <button type="button" class="button button--accept" id="btnRegister" data-display="none">Registrieren</button>
+        </div>
+        
+      </form>
+  
+    </div>
+  </dialog>
 
   <main>
     <div class="content">

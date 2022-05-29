@@ -1,0 +1,108 @@
+.auth {
+  top: calc(min(20vw, 8rem));
+  margin: 0 auto;
+  padding: 0; // needed to enable closing with event.target
+  width: 40rem;
+  max-width: 100%;
+  max-height: 100%;
+  font-size: var(--fs-400);
+  border: none;
+  background-color: $light-blue;
+
+  @media (max-height: 720px) {
+    top: 0;
+    height: 100%;
+  }
+
+  &::backdrop {
+    background-color: $black;
+    opacity: .4;
+  }
+
+  &__container {
+    box-sizing: border-box;
+    padding: 0 clamp(5rem, 10vw, 8rem);
+    height: 100%;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  &__nav {
+    padding-top: 5rem;
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    font-weight: bold;
+  }
+
+  &__tab {
+    all: unset;
+    cursor: pointer;
+    color: $medium-dark-gray;
+
+    &:hover {
+      color: $dark-gray;
+      text-decoration: underline;
+    }
+
+    &--current {
+      color: $almost-black;
+      text-decoration: underline;
+    }
+  }
+
+  &__form {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  &__group {
+    margin: .5rem 0;
+  }
+
+  &__input {
+    width: 100%;
+    padding: .5rem 1rem;
+    color: $almost-black;
+    font-size: var(--fs-400);
+    border: none;
+    box-shadow: 1px 1px $almost-black;
+    background-color: $white;
+
+    &:focus {
+      outline: none;
+      box-shadow: 1px 1px $black;
+
+      + label {
+        color: $dark-gray;
+      }
+    }
+  }
+
+  &__label {
+    padding: .25rem .1rem;
+    color: $medium-dark-gray;
+    font-size: var(--fs-300);
+  }
+
+  &__error {
+    margin-top: 1rem;
+    height: 2rem;
+    color: $clr-danger;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  &__buttons {
+    width: 100%;
+    margin-top: auto;
+    padding-bottom: 6rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+}
