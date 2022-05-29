@@ -1,0 +1,57 @@
+.button {
+  all: unset;
+  cursor: pointer;
+  padding: .5rem 1rem;
+  width: 8rem;
+  color: $almost-white;
+  font-size: var(--fs-400);
+  font-weight: bold;
+  text-align: center;
+  border: 2px solid $almost-black;
+  background-color: $almost-black;
+
+  &:hover {
+    color: $white;
+    border-color: $black;
+    background-color: $black;
+  }
+
+  &--accept {
+    color: $almost-white;
+    background-color: $almost-black;
+    
+    &:hover {
+      color: $white;
+      border-color: $clr-accept;
+      background-color: $clr-accept;
+    }
+  }
+
+  &--danger {
+    color: $almost-black;
+    border-color: $medium-dark-gray;
+    background-color: $white;
+
+    &:hover {
+      color: $white;
+      border-color: $clr-danger;
+      background-color: $clr-danger;
+    }
+  }
+
+  &--white {
+    color: $almost-black;
+    border-color: $almost-black;
+    background-color: $white;
+
+    &:hover {
+      color: $almost-white;
+      border-color: $black;
+      background-color: $black;
+    }
+  }
+
+  &--large {
+    width: 16rem;
+  }
+}

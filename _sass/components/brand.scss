@@ -1,0 +1,22 @@
+.brand {
+  text-decoration: none;
+  line-height: var(--fs-600);
+  font-weight: bold;
+  
+  :first-child {
+    font-size: var(--fs-500);
+    color: $medium-dark-gray;
+  }
+  
+  :last-child {
+    font-size: var(--fs-600);
+    color: $dark-gray;
+  }
+
+  &:hover span:last-child{
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: $tea-gradient;
+  }
+}
