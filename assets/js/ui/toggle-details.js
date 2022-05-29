@@ -1,3 +1,5 @@
+import { show, hide } from "/assets/js/utils/visibility.js"
+
 const toggle = document.querySelector('.toggle');
 
 toggle.addEventListener('click', function() {
@@ -7,14 +9,14 @@ toggle.addEventListener('click', function() {
     const header = document.querySelector('#details-brewing-title');
 
     if (status.getAttribute('data-position') === "left") {
-        brewing.removeAttribute("data-display");
-        details.setAttribute("data-display", "none");
+        show(brewing)
+        hide(details)
         status.setAttribute("data-position", "right");
         status.setAttribute("title", "Zeige Zubereitung");
         header.innerHTML = "Zubereitung";
     } else {
-        details.removeAttribute("data-display");
-        brewing.setAttribute("data-display", "none");
+        show(details)
+        hide(brewing)
         status.setAttribute("data-position", "left");
         status.setAttribute("title", "Zeige Details");
         header.innerHTML = "Details";
