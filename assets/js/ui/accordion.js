@@ -9,7 +9,7 @@ function togglePanelVisibilty() {
     toggleStyles(this);
     var panel = this.nextElementSibling;
 
-    if (panel.getAttribute("data-visible") === "true") {
+    if (panel.getAttribute("data-expanded") === "true") {
         collapse(panel);
     } else {
         expand(panel);
@@ -22,10 +22,10 @@ function toggleStyles(header) {
 
 function collapse(panel) {
     panel.style.maxHeight = '0';
-    panel.setAttribute("data-visible", "false");
+    panel.setAttribute("data-expanded", "false");
 }
 
 function expand(panel) {
-    panel.setAttribute("data-visible", "true");
+    panel.setAttribute("data-expanded", "true");
     panel.style.maxHeight = panel.scrollHeight + 'px';
 }

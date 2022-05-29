@@ -61,7 +61,7 @@
     }
   }
 
-  &__panel[data-visible="true"] {
+  &__panel[data-expanded="true"] {
     border-bottom: 5px solid $almost-white;
   }
 

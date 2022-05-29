@@ -19,7 +19,7 @@
       <span>Teegenuss</span>
     </a>
 
-    <nav class="primary-nav" id="primary-navigation" data-visible="false">
+    <nav class="primary-nav" id="primary-navigation" data-expanded="false">
       {% for item in site.data.navigation %}
       <a href="{{item.link}}" class="primary-nav__link {% if page.url == item.link %}primary-nav__link--current{% endif %}">
         {{item.name}}
