@@ -17,3 +17,7 @@ defaults:
       type: "teas"
     values:
       layout: "tea"
+
+exclude:
+  - ui-debug.log
+  - firebase-debug.log
