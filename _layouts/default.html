@@ -29,7 +29,7 @@
       </div>
 
       <div class="primary-nav__group">
-        <button aria-controls="authentication" class="primary-nav__auth" id="btnOpenAuth">Anmeldung</button>
+        <button aria-controls="authentication" class="primary-nav__auth" id="btnOpenAuth" data-display="none">Anmeldung</button>
         <a href="/profil" class="primary-nav__profile" id="aProfile" data-display="none"><img id="imgProfile" src="/assets/img/icons/user.png"><span id="spanProfile">Profil</span></a>
       </div>
 
@@ -117,6 +117,8 @@
 </div>
 
 <script type="module" src="/assets/js/ui/navigation.js" defer></script>
+<script type="module" src="/assets/js/firebase/navigation.js" defer></script>
+<script type="module" src="/assets/js/firebase/auth.js" defer></script>
 
 </body>
 </html>

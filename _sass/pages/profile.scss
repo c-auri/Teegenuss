@@ -1,0 +1,16 @@
+.profile {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+
+  &__title {
+    font-size: var(--fs-600);
+    font-weight: bold;
+  }
+
+  p {
+    color: $dark-gray;
+    text-align: center;
+  }
+}
