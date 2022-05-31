@@ -106,12 +106,18 @@
     }
   }
 
-  &__error {
-    margin-top: 1rem;
+  &__message {
     height: 2rem;
-    color: $clr-danger;
     text-align: center;
     font-weight: bold;
+    
+    &--error {
+      color: $clr-danger;
+    }
+
+    &--success {
+      color: $clr-accept;
+    }
   }
 
   &__buttons {

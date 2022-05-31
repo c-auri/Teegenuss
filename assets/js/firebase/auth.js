@@ -20,7 +20,8 @@ import {
     txtRegisterEmail,
     txtRegisterPassword,
     txtRegisterRepeat,
-    btnRegister
+    btnRegister,
+    showSuccess,
 } from "/assets/js/ui/auth.js"
 
 import { emailIsValid } from "/assets/js/utils/validation.js"
@@ -77,7 +78,13 @@ const loginEmailPassword = async () => {
 const resetPassword = async () => {
     const email = txtReset.value
 
+    if (!emailIsValid(email)) {
+        showError({ code: InputErrorCodes.INVALID_EMAIL })
+        return
+    }
+
     sendPasswordResetEmail(auth, email)
+    .then(() => showSuccess('Email zur Passwortrücksetzung versendet'))
     .catch((error) => showError(error))
 }
 

@@ -11,6 +11,7 @@ const body = document.querySelector('body')
 export const dlgAuth = document.querySelector('#dlgAuth')
 const formAuth = document.querySelector('#formAuth')
 const spanError = document.querySelector('#spanError')
+const spanSuccess = document.querySelector('#spanSuccess')
 const btnCloseAuth = document.querySelector('#btnCloseAuth')
 
 const tabLogin = document.querySelector('#tabLogin')
@@ -74,6 +75,12 @@ export function showError(error) {
     show(spanError)
 }
 
+export function showSuccess(message) {
+    hide(formLogin, btnLogin, formReset, btnReset, formRegister, btnRegister)
+    spanSuccess.textContent = message
+    show(spanSuccess)
+}
+
 function resetForm() {
     for (const element of formAuth.elements) {
         element.value = ''
@@ -81,6 +88,9 @@ function resetForm() {
 
     spanError.textContent = 'Fehler'
     hide(spanError)
+
+    spanSuccess.textContent = 'Erfolg'
+    hide(spanSuccess)
 }
 
 function setCurrent(element) {
