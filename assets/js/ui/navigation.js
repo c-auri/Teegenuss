@@ -7,7 +7,7 @@ import {
  } from "/assets/js/utils/visibility.js";
 
 import { show, hide } from "/assets/js/utils/visibility.js"
-import { dlgAuth } from "/assets/js/ui/auth.js";
+import { showAuthModal } from "/assets/js/ui/auth.js";
 
 const body = document.querySelector('body')
 const navToggle = document.querySelector('.nav-toggle');
@@ -52,5 +52,5 @@ navToggle.addEventListener('click', () => {
 btnOpenAuth.addEventListener("click", () => {
     collapseNav()
     hideOverflow(body)
-    dlgAuth.showModal()
+    showAuthModal()
 })

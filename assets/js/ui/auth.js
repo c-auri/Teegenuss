@@ -9,6 +9,7 @@ import {
 
 const body = document.querySelector('body')
 export const dlgAuth = document.querySelector('#dlgAuth')
+const formAuth = document.querySelector('#formAuth')
 const spanError = document.querySelector('#spanError')
 const btnCloseAuth = document.querySelector('#btnCloseAuth')
 
@@ -30,6 +31,11 @@ export const txtRegisterEmail = document.querySelector('#txtRegisterEmail')
 export const txtRegisterPassword = document.querySelector('#txtRegisterPassword')
 export const txtRegisterRepeat = document.querySelector('#txtRegisterRepeat')
 export const btnRegister = document.querySelector('#btnRegister')
+
+export function showAuthModal() {
+    showLogin()
+    dlgAuth.showModal()
+}
 
 export const InputErrorCodes = {
     INVALID_EMAIL: 'INVALID_EMAIL',
@@ -68,9 +74,13 @@ export function showError(error) {
     show(spanError)
 }
 
-export function hideError() {
+function resetForm() {
+    for (const element of formAuth.elements) {
+        element.value = ''
+    }
+
     spanError.textContent = 'Fehler'
-    hideError(spanError)
+    hide(spanError)
 }
 
 function setCurrent(element) {
@@ -85,6 +95,7 @@ function unsetCurrent(...elements) {
 
 function showLogin() {
     if (isHidden(formLogin)) {
+        resetForm()
         setCurrent(tabLogin)
         unsetCurrent(tabRegister)
         show(formLogin, btnLogin)
@@ -94,6 +105,7 @@ function showLogin() {
 
 function showRegister() {
     if (isHidden(formRegister)) {
+        resetForm()
         setCurrent(tabRegister)
         unsetCurrent(tabLogin)
         show(formRegister, btnRegister)
@@ -102,6 +114,7 @@ function showRegister() {
 }
 
 function showReset() {
+    resetForm()
     unsetCurrent(tabLogin, tabRegister)
     show(formReset, btnReset)
     hide(formLogin, btnLogin, formRegister, btnRegister)
@@ -109,14 +122,19 @@ function showReset() {
 
 function closeOnBackdropClick(event) {
     if (event.target === dlgAuth) {
-        dlgAuth.close();
+        closeAuth();
     }
+}
+
+function closeAuth() {
+    dlgAuth.close()
+    resetForm()
 }
 
 dlgAuth.addEventListener("close", () => showOverflow(body))
 dlgAuth.addEventListener("click", event => closeOnBackdropClick(event))
 
-btnCloseAuth.addEventListener("click", () => dlgAuth.close())
+btnCloseAuth.addEventListener("click", closeAuth)
 
 tabLogin.addEventListener("click", showLogin)
 tabRegister.addEventListener("click", showRegister)
