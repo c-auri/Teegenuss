@@ -61,10 +61,20 @@
   
           <div class="auth__group">
             <input class="auth__input" id="txtPassword" type="password">
-            <label class="auth__label" id="lblPassword">Passwort</label>
+            <label class="auth__label" id="lblPassword">Passwort<button type="button" class="auth__forgot" id="btnForgot">vergessen?</a></label>
+            
           </div>
 
         </div>
+
+        <div id="formReset" data-display="none">
+
+          <div class="auth__group">
+            <input class="auth__input" id="txtReset" type="email">
+            <label class="auth__label">Email</label>
+          </div>
+
+        </div>          
 
         <div id="formRegister" data-display="none">
 
@@ -96,6 +106,7 @@
         <div class="auth__buttons">
           <button type="button" class="button button--white" id="btnCloseAuth">Zurück</button>
           <button type="button" class="button button--accept" id="btnLogin">Anmelden</button>
+          <button type="button" class="button button--accept" id="btnReset" data-display="none">Zurücksetzen</button>
           <button type="button" class="button button--accept" id="btnRegister" data-display="none">Registrieren</button>
         </div>
         

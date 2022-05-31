@@ -2,6 +2,7 @@ import { auth } from "/assets/js/firebase/app.js";
   
 import { 
     signInWithEmailAndPassword,
+    sendPasswordResetEmail,
     createUserWithEmailAndPassword,
     updateProfile,
     sendEmailVerification,
@@ -13,6 +14,8 @@ import {
     txtEmail,
     txtPassword,
     btnLogin,
+    txtReset,
+    btnReset,
     txtRegisterName,
     txtRegisterEmail,
     txtRegisterPassword,
@@ -71,5 +74,13 @@ const loginEmailPassword = async () => {
     .catch((error) => showError(error))
 }
 
+const resetPassword = async () => {
+    const email = txtReset.value
+
+    sendPasswordResetEmail(auth, email)
+    .catch((error) => showError(error))
+}
+
 btnLogin.addEventListener("click", loginEmailPassword)
+btnReset.addEventListener("click", resetPassword)
 btnRegister.addEventListener("click", createUser)

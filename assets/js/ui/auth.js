@@ -3,8 +3,8 @@ import { AuthErrorCodes } from 'https://www.gstatic.com/firebasejs/9.8.1/firebas
 import { 
     showOverflow, 
     isHidden,
-    toggleVisibility,
-    show
+    show,
+    hide,
  } from "/assets/js/utils/visibility.js";
 
 const body = document.querySelector('body')
@@ -17,6 +17,11 @@ const formLogin = document.querySelector('#formLogin')
 export const txtEmail = document.querySelector('#txtEmail')
 export const txtPassword = document.querySelector('#txtPassword')
 export const btnLogin = document.querySelector('#btnLogin')
+
+export const btnForgot = document.querySelector('#btnForgot')
+export const formReset = document.querySelector('#formReset')
+export const txtReset = document.querySelector('#txtReset')
+export const btnReset = document.querySelector('#btnReset')
 
 const tabRegister = document.querySelector('#tabRegister')
 const formRegister = document.querySelector('#formRegister')
@@ -68,17 +73,38 @@ export function hideError() {
     hideError(spanError)
 }
 
-function toggleCurrent(...elements) {
+function setCurrent(element) {
+    element.classList.add('auth__tab--current')
+}
+
+function unsetCurrent(...elements) {
     for (const element of elements) {
-        element.classList.toggle('auth__tab--current')
+        element.classList.remove('auth__tab--current')
     }
 }
 
-function showForm(form) {
-    if (isHidden(form)) {
-        toggleCurrent(tabLogin, tabRegister)
-        toggleVisibility(formLogin, formRegister, btnLogin, btnRegister)
+function showLogin() {
+    if (isHidden(formLogin)) {
+        setCurrent(tabLogin)
+        unsetCurrent(tabRegister)
+        show(formLogin, btnLogin)
+        hide(formRegister, btnRegister, formReset, btnReset)
     }
+}
+
+function showRegister() {
+    if (isHidden(formRegister)) {
+        setCurrent(tabRegister)
+        unsetCurrent(tabLogin)
+        show(formRegister, btnRegister)
+        hide(formLogin, btnLogin, formReset, btnReset)
+    }
+}
+
+function showReset() {
+    unsetCurrent(tabLogin, tabRegister)
+    show(formReset, btnReset)
+    hide(formLogin, btnLogin, formRegister, btnRegister)
 }
 
 function closeOnBackdropClick(event) {
@@ -92,5 +118,6 @@ dlgAuth.addEventListener("click", event => closeOnBackdropClick(event))
 
 btnCloseAuth.addEventListener("click", () => dlgAuth.close())
 
-tabLogin.addEventListener("click", () => showForm(formLogin))
-tabRegister.addEventListener("click", () => showForm(formRegister))
+tabLogin.addEventListener("click", showLogin)
+tabRegister.addEventListener("click", showRegister)
+btnForgot.addEventListener("click", showReset)
