@@ -34,8 +34,8 @@ export const txtRegisterRepeat = document.querySelector('#txtRegisterRepeat')
 export const btnRegister = document.querySelector('#btnRegister')
 
 export function showAuthModal() {
-    showLogin()
     dlgAuth.showModal()
+    showLogin()
 }
 
 export const InputErrorCodes = {
@@ -110,6 +110,7 @@ function showLogin() {
         unsetCurrent(tabRegister)
         show(formLogin, btnLogin)
         hide(formRegister, btnRegister, formReset, btnReset)
+        txtEmail.focus()
     }
 }
 
@@ -120,6 +121,7 @@ function showRegister() {
         unsetCurrent(tabLogin)
         show(formRegister, btnRegister)
         hide(formLogin, btnLogin, formReset, btnReset)
+        txtRegisterName.focus()
     }
 }
 
@@ -128,6 +130,7 @@ function showReset() {
     unsetCurrent(tabLogin, tabRegister)
     show(formReset, btnReset)
     hide(formLogin, btnLogin, formRegister, btnRegister)
+    txtReset.focus()
 }
 
 function closeOnBackdropClick(event) {
