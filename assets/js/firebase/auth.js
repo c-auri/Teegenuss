@@ -88,6 +88,17 @@ const resetPassword = async () => {
     .catch((error) => showError(error))
 }
 
+function onEnter(event, func) {
+    if (event.key === 'Enter') {
+        func()
+    }
+}
+
 btnLogin.addEventListener("click", loginEmailPassword)
+txtPassword.addEventListener("keypress", (event) => onEnter(event, loginEmailPassword))
+
 btnReset.addEventListener("click", resetPassword)
+txtReset.addEventListener("keypress", (event) => onEnter(event, resetPassword))
+
 btnRegister.addEventListener("click", createUser)
+txtRegisterRepeat.addEventListener("keypress", (event) => onEnter(event, createUser))
