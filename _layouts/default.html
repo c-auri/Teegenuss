@@ -43,11 +43,16 @@
   </header>
 
   <dialog class="auth" id="dlgAuth">
+    
+    <div class="auth__close-container">
+      <button type="button" class="auth__close" id="btnCloseAuth"><img src="/assets/img/icons/close.png"></button>
+    </div>
+
     <div class="auth__container">
 
       <nav class="auth__nav" aria-label="authentication navigation">
-        <button class="auth__tab auth__tab--current" id="tabLogin">Anmelden</button>
-        <button class="auth__tab" id="tabRegister">Registrieren</button>
+        <button type="button" class="auth__tab auth__tab--current" id="tabLogin">Anmelden</button>
+        <button type="button" class="auth__tab" id="tabRegister">Registrieren</button>
       </nav>
   
       <form class="auth__form" id="formAuth">
@@ -107,10 +112,9 @@
         </div>
         
         <div class="auth__buttons">
-          <button type="button" class="button button--white" id="btnCloseAuth">Zurück</button>
-          <button type="button" class="button button--accept" id="btnLogin">Anmelden</button>
-          <button type="button" class="button button--accept" id="btnReset" data-display="none">Zurücksetzen</button>
-          <button type="button" class="button button--accept" id="btnRegister" data-display="none">Registrieren</button>
+          <button type="button" class="button button--large" id="btnLogin">Anmelden</button>
+          <button type="button" class="button button--large" id="btnReset" data-display="none">Zurücksetzen</button>
+          <button type="button" class="button button--large" id="btnRegister" data-display="none">Registrieren</button>
         </div>
         
       </form>
