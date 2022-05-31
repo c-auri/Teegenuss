@@ -113,22 +113,9 @@
       }
     }
 
-    &__auth::before,
     &__profile img {
       width: var(--fs-200);
       aspect-ratio: 1;
-    }
-
-    &__auth {
-      &::before {
-        content: '';
-        background-image: url("/assets/img/icons/login.png");
-        background-size: cover;
-      }
-
-      &:hover::before {
-        background-image: url("/assets/img/icons/login-hover.png");
-      }
     }
   }
 }
