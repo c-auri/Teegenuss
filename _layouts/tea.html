@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<div class="tea">
+<div class="tea" id="divTea" data-bundle="{{ page.order-id }}{{ page.package }}" data-tea="{{ page.order-id }}{{ page.package }}-{{ page.shorthand }}">
 
   <section class="tea__overview">
   
@@ -41,7 +41,7 @@ layout: default
       {% if image.path contains page.order-id  and image.path contains page.shorthand %}
     
         {% unless image.basename == "thumb" or image.basename == "hover" %}
-          <div class="slide fade" {%unless image.basename == "01"%}data-display="none"{%endunless%}>
+          <div class="slide fade" {%unless image.basename=="01"%}data-display="none"{%endunless%}>
             <a class="slideshow-prev">&#10094;</a>
             <a class="slideshow-next">&#10095;</a>
             
@@ -86,14 +86,14 @@ layout: default
         <h2 class="tea__subheader__title">Erläuterungen</h2>
       </header>
       
-      {% if page.tags and page.tags.size != 0 %}
-      {% for tag in page.tags %}
-      {% assign entry = site.glossary | find: 'tag', tag %}
-      {% include glossary-entry.html %}
-      {% endfor %}
-      {% endif %}
-      
-    </section>
+        {% if page.tags and page.tags.size != 0 %}
+        {% for tag in page.tags %}
+        {% assign entry = site.glossary | find: 'tag', tag %}
+        {% include glossary-entry.html %}
+        {% endfor %}
+        {% endif %}
+
+      </section>
     
     <section class="tea__explanations" id="details-brewing">
     
@@ -126,38 +126,159 @@ layout: default
 
   </div>
   
-  <section class="tea__reviews">
+  <section>
     
-    <header class="tea__subheader">
+    <header class="tea__subheader" id="titleReviews">
       <h2 class="tea__subheader__title">Berichte</h2>
     </header>
 
-    {% assign reviews = site.data.reviews | where: 'order-id', page.order-id | where: 'shorthand', page.shorthand %}
-    {% if reviews.size > 0 %}
+    <div class="tea__reviews" id="divReviews"></div>
 
-    {% for review in reviews %}
+    <p class="italic medium-gray text-align-center" id="pLoadMessage" data-display="none"></p>
+
+    <div class="review__buttons">
+      <button type="button" class="button button--large" id="btnOpenReview" data-display="none">
+        Bericht anlegen
+      </button>
+    </div>
+
+  </section>
+
+  <section class="tea__reviews tea__reviews--new" id="secNewReview" data-display="none">
+
+    <header class="tea__subheader">
+      <h2 class="tea__subheader__title">Entwurf</h2>
+    </header>
+    
     <div class="review">
-
+      
       <div class="review__user">
-        <img class="review__user__icon" src="/assets/img/users/gruenblatt.jpg">
-        <span class="review__user__name">{{ review.user-name }}</span>
+        <img class="review__user__icon" id="imgReviewer">
+        <span class="review__user__name" id="spanReviewer"></span>
       </div>
-
+      
       <div class="review__content">
-        {% include tea/notes.html %}
+
+        <div class="preview" id="divPreview" data-display="none">
+          <div id="divPreviewContent"></div>
+        </div>
+
+        <form class="review-input__form" id="formReview">
+
+          <div class="review-input__category">
+            <header class="review-input__header">
+              <h3 class="review-input__title">Aussehen</h3>
+    
+              <div class="review-input__toggler">
+                <label for="togglerVisual" id="lblVisual">einfach</label>
+                <div class="toggler-container">
+                  <input class="toggler" type="checkbox"
+                    data-label-id="lblVisual"
+                    data-label-text-unchecked="einfach" data-label-text-checked="detailliert"
+                    data-target-unchecked="simpleVisual" data-target-checked="detailedVisual"
+                    id="togglerVisual">
+                  </input>
+                </div>
+              </div>
+            </header>
+
+            <div class="review-input__simple" id="simpleVisual">
+              <label class="review-input__label">Zusammenfassung:</label>
+              <textarea class="review-input__textarea" id="txtVisual" maxlength="100"></textarea>
+            </div>
+            <div class="review-input__detailed" id="detailedVisual" data-display="none">
+              <label class="review-input__label">trockenes Blatt:</label>
+              <textarea class="review-input__textarea" id="txtDryLeafLooks" maxlength="100"></textarea>
+              <label class="review-input__label">Aufgussfarbe:</label>
+              <textarea class="review-input__textarea" id="txtLiquerColor" maxlength="100"></textarea>
+              <label class="review-input__label">verbrauchte Blätter:</label>
+              <textarea class="review-input__textarea" id="txtSpentLeafLooks" maxlength="100"></textarea>
+            </div>
+          </div>
+
+          <section class="review-input__category">
+
+            <header class="review-input__header">
+              <h3 class="review-input__title">Aroma</h3>
+    
+              <div class="review-input__toggler">
+                <label for="togglerAroma" id="lblAroma">einfach</label>
+                <div class="toggler-container">
+                  <input class="toggler" type="checkbox"
+                    data-label-id="lblAroma"
+                    data-label-text-unchecked="einfach" data-label-text-checked="detailliert"
+                    data-target-unchecked="simpleAroma" data-target-checked="detailedAroma"
+                    id="togglerAroma">
+                  </input>
+                </div>
+              </div>
+            </header>
+
+            <div class="review-input__simple" id="simpleAroma">
+              <label class="review-input__label">Zusammenfassung:</label>
+              <textarea class="review-input__textarea" id="txtAroma" maxlength="100"></textarea>
+            </div>
+            <div class="review-input__detailed" id="detailedAroma" data-display="none">
+              <label class="review-input__label">trockenes Blatt:</label>
+              <textarea class="review-input__textarea" id="txtDryLeaf" maxlength="100"></textarea>
+              <label class="review-input__label">feuchtes Blatt:</label>
+              <textarea class="review-input__textarea" id="txtWetLeaf" maxlength="100"></textarea>
+              <label class="review-input__label">Geschirr:</label>
+              <textarea class="review-input__textarea" id="txtCeramics" maxlength="100"></textarea>
+            </div>
+          </section>
+
+          <section class="review-input__category">
+
+            <header class="review-input__header">
+              <h3 class="review-input__title">Geschmack</h3>
+              
+              <div class="review-input__toggler">
+                <label for="togglerTaste" id="lblTaste">einfach</label>
+                <div class="toggler-container">
+                  <input class="toggler" type="checkbox"
+                    data-label-id="lblTaste"
+                    data-label-text-unchecked="einfach" data-label-text-checked="detailliert"
+                    data-target-unchecked="simpleTaste" data-target-checked="detailedTaste"
+                    id="togglerTaste">
+                  </input>
+                </div>
+              </div>
+            </header>
+
+            <div class="review-input__simple" id="simpleTaste">
+              <label class="review-input__label">Zusammenfassung:</label>
+              <textarea class="review-input__textarea" id="txtTaste" maxlength="100"></textarea>
+            </div>
+            <div class="review-input__detailed" id="detailedTaste" data-display="none">
+              <label class="review-input__label">ersten Aufgüsse:</label>
+              <textarea class="review-input__textarea" id="txtEarlyTaste" maxlength="100"></textarea>
+              <label class="review-input__label">spätere Aufgüsse:</label>
+              <textarea class="review-input__textarea" id="txtLaterTaste" maxlength="100"></textarea>
+              <label class="review-input__label">Textur:</label>
+              <textarea class="review-input__textarea" id="txtTexture" maxlength="100"></textarea>
+              <label class="review-input__label">Nachgeschmack:</label>
+              <textarea class="review-input__textarea" id="txtAftertaste" maxlength="100"></textarea>
+            </div>
+          </section>
+
+        </form>
       </div>
 
     </div>
-    {% endfor %}
 
-    {% else %}
-    <p class="italic medium-gray">Noch kein Bericht vorhanden.</p>
-    {% endif %}
-    
-  
+    <div class="review__buttons" id="btnsReview">
+      <button type="button" class="button button--danger" id="btnCancelReview" data-display="none">Abbrechen</button>
+      <button type="button" class="button" id="btnPreview" data-display="none">Vorschau</button>
+      <button type="button" class="button button--white" id="btnBack" data-display="none">Bearbeiten</button>
+      <button type="button" class="button button--accept" id="btnSendReview" data-display="none">Abschicken</button>
+    </div>
+
   </section>
-
+  
 </div>
 
-<script type="module" src="/assets/js/ui/tea.js"></script>
-<script type="module" src="/assets/js/ui/glossary.js"></script>
+<script type="module" src="/assets/js/ui/tea.js" defer></script>
+<script type="module" src="/assets/js/ui/glossary.js" defer></script>
+<script type="module" src="/assets/js/ui/reviews.js" defer></script>
+<script type="module" src="/assets/js/firebase/reviews.js" defer></script>

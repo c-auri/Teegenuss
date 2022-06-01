@@ -16,7 +16,7 @@
     "user-name": "gruenblatt",
     "visual": [
       [ "Aufgussfarbe", "blasses Gelb" ],
-      [ "verbrauchte Blätter", "sattes Grün,<br> wenig rote Ränder" ],
+      [ "verbrauchte Blätter", "sattes Grün,<br> wenig rote Ränder" ]
     ],
     "aroma": [
       [ "trockenes<br> Blatt", "Milch, Blütenduft,<br>angeschnittene Blumenstängel" ],
@@ -24,7 +24,7 @@
     ],
     "taste": [
       [ "ersten Aufgüsse", "milchig, blumig,<br>leicht grasig-herb" ],
-      [ "spätere Aufgüsse", "Milchigkeit & Süße kommen stärker heraus" ],
+      [ "spätere Aufgüsse", "Milchigkeit & Süße kommen stärker heraus" ]
     ]
   },
   "22-1-lcr-gruenblatt": {
@@ -223,7 +223,7 @@
     "user-name": "gruenblatt",
     "visual": [
       [ "Aufgussfarbe", "Bernstein,<br>deutlicher Rotstich wenn stark gebrüht" ],
-      [ "verbrauchte Blätter", "dunkelbraun,<br>große Blätter" ],
+      [ "verbrauchte Blätter", "dunkelbraun,<br>große Blätter" ]
     ],
     "aroma": [[ "", "Bubblegum" ]],
     "taste": [[ "", "robust, leicht fruchtig, Eukalyptus" ]]

@@ -24,7 +24,7 @@ import {
     showSuccess,
 } from "/assets/js/ui/auth.js"
 
-import { emailIsValid } from "/assets/js/utils/validation.js"
+import { emailIsValid } from "/assets/js/utils/input.js"
 
 const createUser = async () => {
     const name = txtRegisterName.value
