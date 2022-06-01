@@ -1,5 +1,7 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-app.js"
 import { getAuth, connectAuthEmulator } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-auth.js"
+import { getFirestore, connectFirestoreEmulator } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-firestore.js"
+
 
 const app = initializeApp({
     apiKey: "AIzaSyAF2X4muxdmP8crLOt0wtOZ-4Le-6qaGJo",
@@ -12,7 +14,9 @@ const app = initializeApp({
 })
 
 export const auth = getAuth(app)
+export const firestore = getFirestore(app)
 
 if (location.hostname === "localhost") {
     connectAuthEmulator(auth, "http://localhost:9099");
+    connectFirestoreEmulator(firestore, 'localhost', 8080);
 }

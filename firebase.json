@@ -6,6 +6,14 @@
     "ui": {
       "enabled": true,
       "port": 9999
+    },
+    "firestore": {
+      "port": 8080,
+      "rules": "firestore.rules"
     }
+  },
+  "firestore": {
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json"
   }
 }
