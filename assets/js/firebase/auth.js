@@ -49,7 +49,7 @@ const createUser = async () => {
 
     createUserWithEmailAndPassword(auth, email, password)
     .then((credentials) => {
-        updateProfile(credentials.user, { displayName: name })
+        updateProfile(credentials.user, { displayName: name, photoURL: "/assets/img/icons/user.png" })
         sendEmailVerification(credentials.user)
     })
     .then(() => window.location.replace('/profil'))
