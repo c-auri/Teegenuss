@@ -1,12 +1,16 @@
 .profile {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  align-items: center;
+  display: grid;
+  place-items: center;
+  gap: 1rem;
 
   &__title {
     font-size: var(--fs-600);
     font-weight: bold;
+  }
+
+  &__image {
+    height: 250px;
+    aspect-ratio: 1;
   }
 
   p {
