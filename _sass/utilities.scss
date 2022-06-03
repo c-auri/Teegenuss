@@ -42,6 +42,14 @@
   user-select: none;
 }
 
+.padding-top-3 {
+  padding-top: 3rem;
+}
+
+.padding-bottom-1 {
+  padding-bottom: 1rem;
+}
+
 .mouseover {
   @include dotted-underline;
   cursor: help;

@@ -48,6 +48,7 @@
 
 .subtitle {
   color: $medium-dark-gray;
+  display: block;
 
   &--large {
     font-size: var(--fs-600);
