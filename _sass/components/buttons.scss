@@ -1,18 +1,18 @@
 .button {
   all: unset;
   cursor: pointer;
+  border: 2px solid transparent;
   padding: .5rem 1rem;
   width: 8rem;
-  color: $almost-white;
   font-size: var(--fs-400);
   font-weight: bold;
   text-align: center;
-  border: 2px solid $almost-black;
+  color: $almost-white;
   background-color: $almost-black;
 
   &:hover {
     color: $white;
-    border-color: $black;
+    border-color: transparent;
     background-color: $black;
   }
 
@@ -22,7 +22,6 @@
     
     &:hover {
       color: $white;
-      border-color: $clr-accept;
       background-color: $clr-accept;
     }
   }
@@ -34,7 +33,6 @@
 
     &:hover {
       color: $white;
-      border-color: $clr-danger;
       background-color: $clr-danger;
     }
   }
@@ -46,7 +44,6 @@
 
     &:hover {
       color: $almost-white;
-      border-color: $black;
       background-color: $black;
     }
   }
