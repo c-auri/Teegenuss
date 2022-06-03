@@ -1,8 +1,9 @@
 .button {
   all: unset;
   cursor: pointer;
+  display: block;
   border: 2px solid transparent;
-  padding: .5rem 1rem;
+  padding: .4rem 1rem;
   width: 8rem;
   font-size: var(--fs-400);
   font-weight: bold;
@@ -49,6 +50,12 @@
   }
 
   &--large {
-    width: 16rem;
+    width: 10rem;
+    padding-block: .5rem;
+  }
+
+  &--very-large {
+    width: 12rem;
+    padding-block: .6rem;
   }
 }
