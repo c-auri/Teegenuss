@@ -4,10 +4,10 @@
 @import "default";
 @import "mixins";
 @import "utilities";
-@import "page";
-@import "header";
-@import "login";
-@import "footer";
+@import "page/main";
+@import "page/header";
+@import "page/login";
+@import "page/footer";
 @import "components/buttons";
 @import "components/brand";
 @import "components/data-table";

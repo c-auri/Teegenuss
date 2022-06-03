@@ -1,7 +1,7 @@
 .auth {
   top: calc(min(20vw, 8rem));
   margin: 0 auto;
-  padding: 0; // needed to enable closing with event.target
+  padding: 0; // needed to enable closing on backdrop click
   width: 40rem;
   max-width: 100%;
   max-height: 100%;
