@@ -162,6 +162,18 @@ $border-radius: 5px;
   box-shadow: 2px 2px $medium-light-gray;
   border-radius: $border-radius;
   display: grid;
+
+  &__load-message {
+    box-sizing: border-box;
+    max-width: 100%;
+    margin: 0;
+    border: 1px solid $light-gray;
+    border-radius: $border-radius;
+    padding: 4rem 0;
+    color: $medium-gray;
+    text-align: center;
+    font-style: italic;
+  }
   
   &__content {
     border-radius: 0 $border-radius $border-radius 0;
