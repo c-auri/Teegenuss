@@ -28,7 +28,7 @@
 
   &--danger {
     color: $almost-black;
-    border-color: $medium-dark-gray;
+    border-color: $almost-black;
     background-color: $white;
 
     &:hover {
@@ -44,7 +44,7 @@
 
     &:hover {
       color: $almost-white;
-      background-color: $black;
+      background-color: $almost-black;
     }
   }
 
