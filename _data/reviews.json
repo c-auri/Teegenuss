@@ -1,7 +1,7 @@
 {
   "22-1-bz-gruenblatt": {
     "order-id": "22-1",
-    "shorthand": "bz",
+    "shorthand": "BZ",
     "user-name": "gruenblatt",
     "visual": [
       [ "Aufgussfarbe", "blasses Gelb" ],
@@ -12,7 +12,7 @@
   },
   "22-1-ajx-gruenblatt": {
     "order-id": "22-1",
-    "shorthand": "ajx",
+    "shorthand": "AJX",
     "user-name": "gruenblatt",
     "visual": [
       [ "Aufgussfarbe", "blasses Gelb" ],
@@ -29,7 +29,7 @@
   },
   "22-1-lcr-gruenblatt": {
     "order-id": "22-1",
-    "shorthand": "lcr",
+    "shorthand": "LCR",
     "user-name": "gruenblatt",
     "visual": [
       [ "Aufgussfarbe", "sattes Gelb" ],
@@ -47,7 +47,7 @@
   },
   "22-1-lrjx-gruenblatt": {
     "order-id": "22-1",
-    "shorthand": "lrjx",
+    "shorthand": "LRJX",
     "user-name": "gruenblatt",
     "visual": [
       [ "Aufgussfarbe", "blasses Gelb" ],
@@ -66,7 +66,7 @@
   },
   "22-1-tcr-gruenblatt": {
     "order-id": "22-1",
-    "shorthand": "tcr",
+    "shorthand": "TCR",
     "user-name": "gruenblatt",
     "visual": [
       [ "Aufgussfarbe", "Bernstein" ],
@@ -85,7 +85,7 @@
   },
   "22-1-wuyi-gruenblatt": {
     "order-id": "22-1",
-    "shorthand": "wuyi",
+    "shorthand": "Wuyi",
     "user-name": "gruenblatt",
     "visual": [
       [ "Aufgussfarbe", "Bernstein" ],
@@ -103,7 +103,7 @@
   },
   "22-1-bho-gruenblatt": {
     "order-id": "22-1",
-    "shorthand": "bho",
+    "shorthand": "BHO",
     "user-name": "gruenblatt",
     "visual": [
       [ "Aufgussfarbe", "Bernstein" ],
@@ -124,7 +124,7 @@
   },
   "22-2-D1-DD-gruenblatt": {
     "order-id": "22-2",
-    "shorthand": "D1-DD",
+    "shorthand": "DD",
     "user-name": "gruenblatt",
     "visual": [
       [ "Aufgussfarbe", "sattes Gelb bis Bernstein" ],
@@ -144,7 +144,7 @@
   },
   "22-2-D2-TGY": {
     "order-id": "22-2",
-    "shorthand": "D2-TGY",
+    "shorthand": "TGY",
     "user-name": "gruenblatt",
     "visual": [
       [ "Aufgussfarbe", "sattes Gelb bis Bernstein" ],
@@ -155,7 +155,7 @@
   },
   "22-2-D3-HS": {
     "order-id": "22-2",
-    "shorthand": "D3-HS",
+    "shorthand": "HS",
     "user-name": "gruenblatt",
     "visual": [
       [ "Aufgussfarbe", "Bernstein" ],
@@ -166,7 +166,7 @@
   },
   "22-2-D4-GABA": {
     "order-id": "22-2",
-    "shorthand": "D4-GABA",
+    "shorthand": "GABA",
     "user-name": "gruenblatt",
     "visual": [
       [ "Aufgussfarbe", "dunkles Bernstein mit deutlichem Rotstich" ],
@@ -184,7 +184,7 @@
   },
   "22-2-5-2001": {
     "order-id": "22-2",
-    "shorthand": "D5-2001",
+    "shorthand": "2001",
     "user-name": "gruenblatt",
     "visual": [
       [ "trockene Blätter", "sehr lose Kugeln, <br>haben sich vermutlich mit der Zeit gelockert"],
@@ -199,7 +199,7 @@
   },
   "22-2-D6-EB": {
     "order-id": "22-2",
-    "shorthand": "D6-EB",
+    "shorthand": "EB",
     "user-name": "gruenblatt",
     "visual": [
       [ "Aufgussfarbe", "Bernstein" ],
@@ -219,7 +219,7 @@
   },
   "22-2-D8-HY": {
     "order-id": "22-2",
-    "shorthand": "D8-HY",
+    "shorthand": "HY",
     "user-name": "gruenblatt",
     "visual": [
       [ "Aufgussfarbe", "Bernstein,<br>deutlicher Rotstich wenn stark gebrüht" ],
@@ -230,7 +230,7 @@
   },
   "22-2-H1-BLC": {
     "order-id": "22-2",
-    "shorthand": "H1-BLC",
+    "shorthand": "BLC",
     "user-name": "gruenblatt",
     "visual": [
       [ "Blätter", "leicht gedrehtes Blatt,<br>eine Knospe und 1&hairsp;-&hairsp;2 Blätter" ],
@@ -241,7 +241,7 @@
   },
   "22-2-H2-LJ": {
     "order-id": "22-2",
-    "shorthand": "H2-LJ",
+    "shorthand": "LJ",
     "user-name": "gruenblatt",
     "visual": [
       [ "Blätter", "flache Nadelform,<br>eine Knospe und 1&hairsp;-&hairsp;2 Blätter" ],
@@ -252,7 +252,7 @@
   },
   "22-2-H3-MJX": {
     "order-id": "22-2",
-    "shorthand": "H3-MJX",
+    "shorthand": "MJX",
     "user-name": "gruenblatt",
     "visual": [
       [ "Aufgussfarbe", "leuchtend helles Gelb" ],
@@ -266,7 +266,7 @@
   },
   "22-2-H4-Shibi": {
     "order-id": "22-2",
-    "shorthand": "H4-Shibi",
+    "shorthand": "Shibi",
     "user-name": "gruenblatt",
     "visual": [
       [ "Aufgussfarbe", "leuchtend helles Gelb" ],
@@ -280,7 +280,7 @@
   },
   "22-2-H5-LFX": {
     "order-id": "22-2",
-    "shorthand": "H5-LFX",
+    "shorthand": "LFX",
     "user-name": "gruenblatt",
     "visual": [
       [ "Aufgussfarbe", "blasses Gelb, <br>anfangs leichter Grünstich" ],
@@ -294,7 +294,7 @@
   },
   "22-2-H7-FSS": {
     "order-id": "22-2",
-    "shorthand": "H7-FSS",
+    "shorthand": "FSS",
     "user-name": "gruenblatt",
     "visual": [
       [ "Aufgussfarbe", "blasses Gelb, <br>anfangs leichter Grünstich" ],
