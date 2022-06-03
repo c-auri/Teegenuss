@@ -6,8 +6,12 @@
 
   {%- for tea in teas -%}
   <a class="tea-showcase" href="{{- tea.url -}}">
+    {% if tea.no-hover %}
+    <img src="/assets/img/orders/{{tea.order-id}}/{{tea.shorthand}}/thumb.jpg" alt="">
+    {% else %}
     <img class="thumb" src="/assets/img/orders/{{tea.order-id}}/{{tea.shorthand}}/thumb.jpg" alt="">
     <img class="hover" src="/assets/img/orders/{{tea.order-id}}/{{tea.shorthand}}/hover.jpg" alt="">
+    {% endif %}
     <p>{{ tea.title }}</p>
     <p class="subtitle">
       <span>{{ tea.type }}</span>
