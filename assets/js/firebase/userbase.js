@@ -9,6 +9,9 @@ import {
     createUserWithEmailAndPassword,
     sendEmailVerification,
     deleteUser,
+    signInWithEmailAndPassword,
+    updateProfile,
+    signOut
 } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-auth.js"
 
 import { auth, firestore } from "/assets/js/firebase/app.js"
@@ -36,7 +39,32 @@ export async function createNamedUserWithEmailAndPassword(name, email, password)
         throw { code: UserbaseErrorCodes.INTERNAL_ERROR }
     })
     await sendEmailVerification(credentials.user)
+    await synchronizeProfile(credentials.user)
     return credentials
+}
+
+export async function signInWithPassword(email, password) {
+    await signInWithEmailAndPassword(auth, email, password)
+    .then((credentials) => synchronizeProfile(credentials.user))
+}
+
+async function synchronizeProfile(user) {
+    await getUserDetails(user)
+    .then((details) => updateProfile(user, {
+        displayName: details.name,
+        photoURL: details.photoURL
+    }))
+    .catch(async (error) => {
+        await signOut(auth)
+        console.error(error)
+        throw { code: UserbaseErrorCodes.INTERNAL_ERROR }
+    })
+}
+
+async function getUserDetails(user) {
+    const userReference = Document(firestore, "users", user.uid)
+    const snapshot = await getDocument(userReference)
+    return snapshot.data()
 }
 
 async function createUserbaseEntry(user, username) {

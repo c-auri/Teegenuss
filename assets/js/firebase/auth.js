@@ -1,15 +1,14 @@
 import { auth } from "/assets/js/firebase/app.js";
 
 import {
-    signInWithEmailAndPassword,
     sendPasswordResetEmail,
-    updateProfile,
 } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-auth.js"
 
 import { 
     UserbaseErrorCodes, 
     isTaken, 
-    createNamedUserWithEmailAndPassword 
+    createNamedUserWithEmailAndPassword,
+    signInWithPassword
 } from "/assets/js/firebase/userbase.js"
 
 import {
@@ -57,8 +56,7 @@ const createUser = async () => {
         return
     }
 
-    createNamedUserWithEmailAndPassword(name, email, password)
-    .then((credentials) => updateProfile(credentials.user, { displayName: name, photoURL: "/assets/img/icons/user.png" }))
+    await createNamedUserWithEmailAndPassword(name, email, password)
     .then(() => window.location.replace('/profil'))
     .catch((error) => showError(error))
 }
@@ -76,8 +74,8 @@ const loginEmailPassword = async () => {
         showError({ code: InputErrorCodes.NO_PASSWORD })
         return
     }
-
-    signInWithEmailAndPassword(auth, email, password)
+    
+    await signInWithPassword(email, password)
     .then(() => window.location.replace('/profil'))
     .catch((error) => showError(error))
 }
