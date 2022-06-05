@@ -23,24 +23,24 @@ const btnPreview = document.getElementById('btnPreview')
 const btnBack = document.getElementById('btnBack')
 export const btnSendReview = document.getElementById('btnSendReview')
 
-const togglerVisual = document.getElementById('togglerVisual')
-const txtVisual = document.getElementById('txtVisual')
-const txtDryLeafLooks = document.getElementById('txtDryLeafLooks')
-const txtLiquerColor = document.getElementById('txtLiquerColor')
-const txtSpentLeafLooks = document.getElementById('txtSpentLeafLooks')
+const togglerLooks = document.getElementById('togglerLooks')
+const txtLooks = document.getElementById('txtLooks')
+const txtLooksDryLeaf = document.getElementById('txtLooksDryLeaf')
+const txtLooksLiquer = document.getElementById('txtLooksLiquer')
+const txtLooksSpentLeaf = document.getElementById('txtLooksSpentLeaf')
 
 const togglerAroma = document.getElementById('togglerAroma')
 const txtAroma = document.getElementById('txtAroma')
-const txtDryLeaf = document.getElementById('txtDryLeaf')
-const txtWetLeaf = document.getElementById('txtWetLeaf')
-const txtCeramics = document.getElementById('txtCeramics')
+const txtAromaDryLeaf = document.getElementById('txtAromaDryLeaf')
+const txtAromaWetLeaf = document.getElementById('txtAromaWetLeaf')
+const txtAromaCeramics = document.getElementById('txtAromaCeramics')
 
 const togglerTaste = document.getElementById('togglerTaste')
 const txtTaste = document.getElementById('txtTaste')
-const txtEarlyTaste = document.getElementById('txtEarlyTaste')
-const txtLaterTaste = document.getElementById('txtLaterTaste')
-const txtTexture = document.getElementById('txtTexture')
-const txtAftertaste = document.getElementById('txtAftertaste')
+const txtTasteEarly = document.getElementById('txtTasteEarly')
+const txtTasteLater = document.getElementById('txtTasteLater')
+const txtTasteTexture = document.getElementById('txtTasteTexture')
+const txtTasteAfter = document.getElementById('txtTasteAfter')
 
 export function enableReviewInput(user) {
     imgReviewer.src = user.photoURL
@@ -84,27 +84,27 @@ export function getReviewInput() {
     let data = {
         "tea": tea,
         "bundle": bundle,
-        "showDetailedVisuals": togglerVisual.checked,
-        "simpleVisual": txtVisual.value,
-        "detailedVisual": {
-            "dryLeafLooks": txtDryLeafLooks.value,
-            "liquerColor": txtLiquerColor.value,
-            "leafColor": txtSpentLeafLooks.value,
+        "showDetailedLooks": togglerLooks.checked,
+        "simpleLooks": txtLooks.value,
+        "detailedLooks": {
+            "dryLeaf": txtLooksDryLeaf.value,
+            "liquer": txtLooksLiquer.value,
+            "spentLeaf": txtLooksSpentLeaf.value,
         },
         "showDetailedAroma": togglerAroma.checked,
         "simpleAroma": txtAroma.value,
         "detailedAroma": {
-            "dryLeaf": txtDryLeaf.value,
-            "wetLeaf": txtWetLeaf.value,
-            "ceramics": txtCeramics.value,
+            "dryLeaf": txtAromaDryLeaf.value,
+            "wetLeaf": txtAromaWetLeaf.value,
+            "ceramics": txtAromaCeramics.value,
         },
         "showDetailedTaste": togglerTaste.checked,
         "simpleTaste": txtTaste.value,
         "detailedTaste": {
-            "earlyTaste": txtEarlyTaste.value,
-            "laterTaste": txtLaterTaste.value,
-            "texture": txtTexture.value,
-            "aftertaste": txtAftertaste.value,
+            "early": txtTasteEarly.value,
+            "later": txtTasteLater.value,
+            "texture": txtTasteTexture.value,
+            "aftertaste": txtTasteAfter.value,
         }
     }
 
@@ -134,12 +134,12 @@ function generateReviewMarkup(data) {
             "Aufgussfarbe", 
             "verbrauchte Blätter" 
         ],
-        showDetails: data.showDetailedVisuals,
-        simpleNotes: data.simpleVisual,
+        showDetails: data.showDetailedLooks,
+        simpleNotes: data.simpleLooks,
         detailedNotes: [ 
-            data.detailedVisual.dryLeafLooks,
-            data.detailedVisual.liquerColor, 
-            data.detailedVisual.leafColor 
+            data.detailedLooks.dryLeaf,
+            data.detailedLooks.liquer, 
+            data.detailedLooks.spentLeaf, 
         ]})
 
     const aromaMarkup = generateMarkup({
@@ -168,8 +168,8 @@ function generateReviewMarkup(data) {
         showDetails: data.showDetailedTaste,
         simpleNotes: data.simpleTaste,
         detailedNotes: [ 
-            data.detailedTaste.earlyTaste, 
-            data.detailedTaste.laterTaste, 
+            data.detailedTaste.early, 
+            data.detailedTaste.later, 
             data.detailedTaste.texture, 
             data.detailedTaste.aftertaste 
         ]})
@@ -219,17 +219,17 @@ function generateMarkup({
 }
 
 function hasRelevantInput() {
-    if (togglerVisual.checked) {
-        if (hasInput(txtDryLeafLooks, txtLiquerColor, txtSpentLeafLooks))
+    if (togglerLooks.checked) {
+        if (hasInput(txtLooksDryLeaf, txtLooksLiquer, txtLooksSpentLeaf))
             return true
     }
     else {
-        if (!isEmptyOrSpaces(txtVisual.value))
+        if (!isEmptyOrSpaces(txtLooks.value))
             return true
     }
 
     if (togglerAroma.checked) {
-        if (hasInput(txtDryLeaf, txtWetLeaf, txtCeramics))
+        if (hasInput(txtAromaDryLeaf, txtAromaWetLeaf, txtAromaCeramics))
             return true
     }
     else {
@@ -238,7 +238,7 @@ function hasRelevantInput() {
     }
 
     if (togglerTaste.checked) {
-        if (hasInput(txtEarlyTaste, txtLaterTaste, txtTexture, txtAftertaste))
+        if (hasInput(txtTasteEarly, txtTasteLater, txtTasteTexture, txtTasteAfter))
             return true
     }
     else {
