@@ -61,7 +61,7 @@ async function synchronizeProfile(user) {
     })
 }
 
-async function getUserDetails(user) {
+export async function getUserDetails(user) {
     const userReference = Document(firestore, "users", user.uid)
     const snapshot = await getDocument(userReference)
     return snapshot.data()

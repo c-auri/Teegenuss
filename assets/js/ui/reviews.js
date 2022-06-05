@@ -72,7 +72,7 @@ export function renderReview(data) {
         '<div class="review">' +
             '<div class="review__user">' +
                 '<img class="review__user__icon" src="' + data.user.photoURL + '">' +
-                '<span class="review__user__name">' + data.user.displayName + '</span>' +
+                '<span class="review__user__name">' + data.user.name + '</span>' +
             '</div>' +
             '<div class="review__content">' +
                 generateReviewMarkup(data) +
@@ -80,7 +80,7 @@ export function renderReview(data) {
         '</div>'
 }
 
-export function getReviewInput(user = null) {
+export function getReviewInput() {
     let data = {
         "tea": tea,
         "bundle": bundle,
@@ -105,14 +105,6 @@ export function getReviewInput(user = null) {
             "laterTaste": txtLaterTaste.value,
             "texture": txtTexture.value,
             "aftertaste": txtAftertaste.value,
-        }
-    }
-
-    if (user) {
-        data.user = { 
-            "uid": user.uid, 
-            "displayName": user.displayName, 
-            "photoURL": user.photoURL
         }
     }
 

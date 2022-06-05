@@ -7,11 +7,11 @@ import {
     getDoc as getDocument,
     getDocs as getDocuments,
     setDoc as setDocument,
-    updateDoc as updateDocument,
     serverTimestamp,
 } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-firestore.js"
 
-import { auth, firestore } from "/assets/js/firebase/app.js"
+import { auth, firestore } from "./app.js"
+import { getUserDetails } from "./userbase.js"
 
 import { 
     bundle,
@@ -51,12 +51,10 @@ async function sendReview() {
     onAuthStateChanged(auth, async user => {
         if (user) {
             const reviewId = tea + '-' + user.uid
-            const document = Document(firestore, "reviews", reviewId)
-            const data = getReviewInput(user)
-
-            setDocument(document, data)
+            const reference = Document(firestore, "reviews", reviewId)
+            const data = await getReviewData(user)
+            await setDocument(reference, data)
             .then(() => { 
-                updateDocument(document, { posted: serverTimestamp() })
                 loadReviews()
                 disableReviewInput()
             })
@@ -66,6 +64,18 @@ async function sendReview() {
             console.log("Error: not logged in.")
         }
     })
+}
+
+async function getReviewData(user) {
+    const userDetails = await getUserDetails(user)
+    const data = getReviewInput()
+    data.user = { 
+        "uid": user.uid, 
+        "name": userDetails.name, 
+        "photoURL": userDetails.photoURL,
+    }
+    data.posted = serverTimestamp()
+    return data
 }
 
 async function monitorAuthState() {
