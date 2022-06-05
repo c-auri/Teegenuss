@@ -1,11 +1,13 @@
 import { AuthErrorCodes } from 'https://www.gstatic.com/firebasejs/9.8.1/firebase-auth.js'
+import { UserbaseErrorCodes } from '/assets/js/firebase/userbase.js';
 
 import { 
     showOverflow, 
     isHidden,
     show,
     hide,
- } from "/assets/js/utils/visibility.js";
+} from "/assets/js/utils/visibility.js";
+
 
 const body = document.querySelector('body')
 export const dlgAuth = document.querySelector('#dlgAuth')
@@ -46,6 +48,12 @@ export const InputErrorCodes = {
 
 export function showError(error) {
     switch (error.code) {
+        case UserbaseErrorCodes.USERNAME_TAKEN:
+            spanError.textContent = 'Benutzername bereits vergeben'
+            break
+        case UserbaseErrorCodes.INTERNAL_ERROR:
+            spanError.textContent = 'Interner Fehler'
+            break
         case InputErrorCodes.INVALID_EMAIL:
         case AuthErrorCodes.INVALID_EMAIL:
         case AuthErrorCodes.USER_DELETED:

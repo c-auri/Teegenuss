@@ -1,12 +1,16 @@
 import { auth } from "/assets/js/firebase/app.js";
-  
-import { 
+
+import {
     signInWithEmailAndPassword,
     sendPasswordResetEmail,
-    createUserWithEmailAndPassword,
     updateProfile,
-    sendEmailVerification,
 } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-auth.js"
+
+import { 
+    UserbaseErrorCodes, 
+    isTaken, 
+    createNamedUserWithEmailAndPassword 
+} from "/assets/js/firebase/userbase.js"
 
 import {
     InputErrorCodes,
@@ -26,11 +30,17 @@ import {
 
 import { emailIsValid } from "/assets/js/utils/input.js"
 
+
 const createUser = async () => {
     const name = txtRegisterName.value
     const email = txtRegisterEmail.value
     const password = txtRegisterPassword.value
     const repeat = txtRegisterRepeat.value
+
+    if (await isTaken(name)) {
+        showError({ code: UserbaseErrorCodes.USERNAME_TAKEN })
+        return
+    }
 
     if (!emailIsValid(email)) {
         showError({ code: InputErrorCodes.INVALID_EMAIL })
@@ -42,16 +52,13 @@ const createUser = async () => {
         return
     }
 
-    if (password !== repeat){
+    if (password !== repeat) {
         showError({ code: InputErrorCodes.PASSWORD_MISMATCH })
         return
     }
 
-    createUserWithEmailAndPassword(auth, email, password)
-    .then((credentials) => {
-        updateProfile(credentials.user, { displayName: name, photoURL: "/assets/img/icons/user.png" })
-        sendEmailVerification(credentials.user)
-    })
+    createNamedUserWithEmailAndPassword(name, email, password)
+    .then((credentials) => updateProfile(credentials.user, { displayName: name, photoURL: "/assets/img/icons/user.png" }))
     .then(() => window.location.replace('/profil'))
     .catch((error) => showError(error))
 }
