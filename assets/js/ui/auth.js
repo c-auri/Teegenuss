@@ -84,22 +84,20 @@ export function handle(error) {
         case AuthErrorCodes.USER_DELETED:
             spanError.textContent = 'Unzulässige Email'
             break
-        case InputErrorCodes.NO_PASSWORD:
-            spanError.textContent = 'Fehlendes Passwort'
-            break
         case AuthErrorCodes.EMAIL_EXISTS:
             spanError.textContent = 'Email bereits vergeben'
             break
         case AuthErrorCodes.INVALID_PASSWORD:
             spanError.textContent = 'Falsches Passwort'
             break
+        case InputErrorCodes.WEAK_PASSWORD:
         case AuthErrorCodes.WEAK_PASSWORD:
-            spanError.textContent = 'Passwort zu kurz'
+            spanError.textContent = 'Passwort unzulässig'
             break
         case InputErrorCodes.PASSWORD_MISMATCH:
             spanError.textContent = 'Passwörter stimmen nicht überein'
             break
-        default: 
+        default:
             console.log(error)
             spanError.textContent = 'Unbekannter Fehler'
             break
@@ -111,7 +109,7 @@ export function handle(error) {
 const InputErrorCodes = {
     USERNAME_EMPTY: 'USERNAME_EMPTY',
     INVALID_EMAIL: 'INVALID_EMAIL',
-    NO_PASSWORD: 'NO_PASSWORD',
+    NO_PASSWORD: 'WEAK_PASSWORD',
     PASSWORD_MISMATCH: 'PASSWORD_MISMATCH',
 }
 
@@ -128,8 +126,8 @@ function validateEmail(email) {
 }
 
 function validatePassword(password) {
-    if (password === '') {
-        return { code: InputErrorCodes.NO_PASSWORD }
+    if (password.length < 6) {
+        return { code: InputErrorCodes.WEAK_PASSWORD }
     }
 }
 
