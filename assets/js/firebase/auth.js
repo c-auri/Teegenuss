@@ -14,7 +14,7 @@ import {
 
 import {
     InputErrorCodes,
-    showError,
+    handle,
     txtEmail,
     txtPassword,
     btnLogin,
@@ -39,28 +39,28 @@ const createUser = async () => {
     const repeat = txtRegisterRepeat.value
 
     if (await isTaken(name)) {
-        showError({ code: UserbaseErrorCodes.USERNAME_TAKEN })
+        handle({ code: UserbaseErrorCodes.USERNAME_TAKEN })
         return
     }
 
     if (!emailIsValid(email)) {
-        showError({ code: InputErrorCodes.INVALID_EMAIL })
+        handle({ code: InputErrorCodes.INVALID_EMAIL })
         return
     }
 
     if (password === '') {
-        showError({ code: InputErrorCodes.NO_PASSWORD })
+        handle({ code: InputErrorCodes.NO_PASSWORD })
         return
     }
 
     if (password !== repeat) {
-        showError({ code: InputErrorCodes.PASSWORD_MISMATCH })
+        handle({ code: InputErrorCodes.PASSWORD_MISMATCH })
         return
     }
 
     await createNamedUserWithEmailAndPassword(name, email, password)
     .then(() => window.location.replace('/profil'))
-    .catch((error) => showError(error))
+    .catch((error) => handle(error))
 }
 
 const loginEmailPassword = async () => {
@@ -68,31 +68,31 @@ const loginEmailPassword = async () => {
     const password = txtPassword.value
 
     if (!emailIsValid(email)) {
-        showError({ code: InputErrorCodes.INVALID_EMAIL })
+        handle({ code: InputErrorCodes.INVALID_EMAIL })
         return
     }
 
     if (password === '') {
-        showError({ code: InputErrorCodes.NO_PASSWORD })
+        handle({ code: InputErrorCodes.NO_PASSWORD })
         return
     }
     
     await signInWithPassword(email, password)
     .then(() => window.location.replace('/profil'))
-    .catch((error) => showError(error))
+    .catch((error) => handle(error))
 }
 
 const resetPassword = async () => {
     const email = txtReset.value
 
     if (!emailIsValid(email)) {
-        showError({ code: InputErrorCodes.INVALID_EMAIL })
+        handle({ code: InputErrorCodes.INVALID_EMAIL })
         return
     }
 
     sendPasswordResetEmail(auth, email)
     .then(() => showSuccess('Email zur Passwortrücksetzung versendet'))
-    .catch((error) => showError(error))
+    .catch((error) => handle(error))
 }
 
 function onEnter(event, func) {

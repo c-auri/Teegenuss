@@ -1,6 +1,5 @@
 import { AuthErrorCodes } from 'https://www.gstatic.com/firebasejs/9.8.1/firebase-auth.js'
 import { UserbaseErrorCodes } from '/assets/js/firebase/userbase.js';
-
 import { 
     showOverflow, 
     isHidden,
@@ -9,24 +8,28 @@ import {
 } from "/assets/js/utils/visibility.js";
 
 
-const body = document.querySelector('body')
+// Auth dialog
 export const dlgAuth = document.querySelector('#dlgAuth')
+const backdrop = document.querySelector('body')
 const formAuth = document.querySelector('#formAuth')
 const spanError = document.querySelector('#spanError')
 const spanSuccess = document.querySelector('#spanSuccess')
 const btnCloseAuth = document.querySelector('#btnCloseAuth')
 
+// Login tab
 const tabLogin = document.querySelector('#tabLogin')
 const formLogin = document.querySelector('#formLogin')
 export const txtEmail = document.querySelector('#txtEmail')
 export const txtPassword = document.querySelector('#txtPassword')
 export const btnLogin = document.querySelector('#btnLogin')
 
+// Reset tab
 export const btnForgot = document.querySelector('#btnForgot')
 export const formReset = document.querySelector('#formReset')
 export const txtReset = document.querySelector('#txtReset')
 export const btnReset = document.querySelector('#btnReset')
 
+// Register tab
 const tabRegister = document.querySelector('#tabRegister')
 const formRegister = document.querySelector('#formRegister')
 export const txtRegisterName = document.querySelector('#txtRegisterName')
@@ -40,13 +43,13 @@ export function showAuthModal() {
     showLogin()
 }
 
-export const InputErrorCodes = {
-    INVALID_EMAIL: 'INVALID_EMAIL',
-    NO_PASSWORD: 'NO_PASSWORD',
-    PASSWORD_MISMATCH: 'PASSWORD_MISMATCH',
+export function showSuccess(message) {
+    hide(formLogin, btnLogin, formReset, btnReset, formRegister, btnRegister)
+    spanSuccess.textContent = message
+    show(spanSuccess)
 }
 
-export function showError(error) {
+export function handle(error) {
     switch (error.code) {
         case UserbaseErrorCodes.USERNAME_TAKEN:
             spanError.textContent = 'Benutzername bereits vergeben'
@@ -83,10 +86,51 @@ export function showError(error) {
     show(spanError)
 }
 
-export function showSuccess(message) {
-    hide(formLogin, btnLogin, formReset, btnReset, formRegister, btnRegister)
-    spanSuccess.textContent = message
-    show(spanSuccess)
+export const InputErrorCodes = {
+    INVALID_EMAIL: 'INVALID_EMAIL',
+    NO_PASSWORD: 'NO_PASSWORD',
+    PASSWORD_MISMATCH: 'PASSWORD_MISMATCH',
+}
+
+function closeAuth() {
+    dlgAuth.close()
+    resetForm()
+}
+
+function closeOnBackdropClick(event) {
+    if (event.target === dlgAuth) {
+        closeAuth();
+    }
+}
+
+function showLogin() {
+    if (isHidden(formLogin)) {
+        resetForm()
+        setCurrent(tabLogin)
+        unsetCurrent(tabRegister)
+        show(formLogin, btnLogin)
+        hide(formRegister, btnRegister, formReset, btnReset)
+        txtEmail.focus()
+    }
+}
+
+function showReset() {
+    resetForm()
+    unsetCurrent(tabLogin, tabRegister)
+    show(formReset, btnReset)
+    hide(formLogin, btnLogin, formRegister, btnRegister)
+    txtReset.focus()
+}
+
+function showRegister() {
+    if (isHidden(formRegister)) {
+        resetForm()
+        setCurrent(tabRegister)
+        unsetCurrent(tabLogin)
+        show(formRegister, btnRegister)
+        hide(formLogin, btnLogin, formReset, btnReset)
+        txtRegisterName.focus()
+    }
 }
 
 function resetForm() {
@@ -111,48 +155,7 @@ function unsetCurrent(...elements) {
     }
 }
 
-function showLogin() {
-    if (isHidden(formLogin)) {
-        resetForm()
-        setCurrent(tabLogin)
-        unsetCurrent(tabRegister)
-        show(formLogin, btnLogin)
-        hide(formRegister, btnRegister, formReset, btnReset)
-        txtEmail.focus()
-    }
-}
-
-function showRegister() {
-    if (isHidden(formRegister)) {
-        resetForm()
-        setCurrent(tabRegister)
-        unsetCurrent(tabLogin)
-        show(formRegister, btnRegister)
-        hide(formLogin, btnLogin, formReset, btnReset)
-        txtRegisterName.focus()
-    }
-}
-
-function showReset() {
-    resetForm()
-    unsetCurrent(tabLogin, tabRegister)
-    show(formReset, btnReset)
-    hide(formLogin, btnLogin, formRegister, btnRegister)
-    txtReset.focus()
-}
-
-function closeOnBackdropClick(event) {
-    if (event.target === dlgAuth) {
-        closeAuth();
-    }
-}
-
-function closeAuth() {
-    dlgAuth.close()
-    resetForm()
-}
-
-dlgAuth.addEventListener("close", () => showOverflow(body))
+dlgAuth.addEventListener("close", () => showOverflow(backdrop))
 dlgAuth.addEventListener("click", event => closeOnBackdropClick(event))
 
 btnCloseAuth.addEventListener("click", closeAuth)
