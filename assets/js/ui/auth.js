@@ -51,33 +51,20 @@ export function showSuccess(message) {
 }
 
 export function validateRegistration(name, email, password, repeat) {
-    if (!emailIsValid(email)) {
-        return { code: InputErrorCodes.INVALID_EMAIL }
-    }
-
-    if (password === '') {
-        return { code: InputErrorCodes.NO_PASSWORD }
-    }
-
-    if (password !== repeat) {
-        return { code: InputErrorCodes.PASSWORD_MISMATCH }
-    }
+    return getFirstDefined(
+        validateEmail(email), 
+        validatePassword(password), 
+        validateRepeat(password, repeat))
 }
 
 export function validateLogin(email, password) {
-    if (!emailIsValid(email)) {
-        return { code: InputErrorCodes.INVALID_EMAIL }
-    }
-
-    if (password === '') {
-        return { code: InputErrorCodes.NO_PASSWORD }
-    }
+    return getFirstDefined(
+        validateEmail(email), 
+        validatePassword(password))
 }
 
 export function validateReset(email) {
-    if (!emailIsValid(email)) {
-        return { code: InputErrorCodes.INVALID_EMAIL }
-    }
+    return validateEmail(email)
 }
 
 export function handle(error) {
@@ -121,6 +108,32 @@ const InputErrorCodes = {
     INVALID_EMAIL: 'INVALID_EMAIL',
     NO_PASSWORD: 'NO_PASSWORD',
     PASSWORD_MISMATCH: 'PASSWORD_MISMATCH',
+}
+
+function validateEmail(email) {
+    if (!emailIsValid(email)) {
+        return { code: InputErrorCodes.INVALID_EMAIL }
+    }
+}
+
+function validatePassword(password) {
+    if (password === '') {
+        return { code: InputErrorCodes.NO_PASSWORD }
+    }
+}
+
+function validateRepeat(password, repeat) {
+    if (password !== repeat) {
+        return { code: InputErrorCodes.PASSWORD_MISMATCH }
+    }
+}
+
+function getFirstDefined(...errors) {
+    for (const error of errors) {
+        if (error) {
+            return error
+        }
+    }
 }
 
 function closeAuth() {
