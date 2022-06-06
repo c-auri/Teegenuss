@@ -31,6 +31,10 @@ export async function isTaken(username) {
 }
 
 export async function createNamedUserWithEmailAndPassword(name, email, password) {
+    if (await isTaken(name)) {
+        throw { code: UserbaseErrorCodes.USERNAME_TAKEN }
+    }
+
     const credentials = await createUserWithEmailAndPassword(auth, email, password)
     await createUserbaseEntry(credentials.user, name)
     .catch((error) => {

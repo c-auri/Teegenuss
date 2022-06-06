@@ -5,9 +5,7 @@ import {
     sendPasswordResetEmail,
 } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-auth.js"
 
-import { 
-    UserbaseErrorCodes, 
-    isTaken, 
+import {
     createNamedUserWithEmailAndPassword,
     signInWithPassword
 } from "/assets/js/firebase/userbase.js"
@@ -38,11 +36,6 @@ const createUser = async () => {
     const email = txtRegisterEmail.value
     const password = txtRegisterPassword.value
     const repeat = txtRegisterRepeat.value
-
-    if (await isTaken(name)) {
-        handle({ code: UserbaseErrorCodes.USERNAME_TAKEN })
-        return
-    }
 
     const error = validateRegistration(name, email, password, repeat)
 
