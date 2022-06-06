@@ -1,6 +1,7 @@
 import { auth } from "/assets/js/firebase/app.js";
 
 import {
+    onAuthStateChanged,
     sendPasswordResetEmail,
 } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-auth.js"
 
@@ -27,6 +28,7 @@ import {
     showSuccess,
 } from "/assets/js/ui/auth.js"
 
+import { showLinkToProfile, showLinkToAuth } from "/assets/js/ui/navigation.js"
 import { emailIsValid } from "/assets/js/utils/input.js"
 
 
@@ -98,6 +100,19 @@ function onEnter(event, func) {
         func()
     }
 }
+
+const showLinkToProfileOrAuth = async () => {
+    onAuthStateChanged(auth, user => {
+        if (user) {
+            showLinkToProfile(user)
+        }
+        else {
+            showLinkToAuth()
+        }
+    })
+}
+
+showLinkToProfileOrAuth()
 
 btnLogin.addEventListener("click", loginEmailPassword)
 txtPassword.addEventListener("keypress", (event) => onEnter(event, loginEmailPassword))
