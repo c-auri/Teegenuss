@@ -17,13 +17,13 @@ const aProfile = document.getElementById('aProfile')
 const spanProfile = document.getElementById('spanProfile')
 const imgProfile = document.getElementById('imgProfile')
 
-export function showProfile(user) {
+export function showLinkToProfile(user) {
     spanProfile.textContent = user.displayName
     hide(btnOpenAuth)
     show(aProfile)
 }
 
-export function showAuth() {
+export function showLinkToAuth() {
     hide(aProfile)
     show(btnOpenAuth)
     aProfile.textContent = "Profil"
