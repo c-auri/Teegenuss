@@ -13,8 +13,6 @@ import {
 } from "/assets/js/firebase/userbase.js"
 
 import {
-    InputErrorCodes,
-    handle,
     txtEmail,
     txtPassword,
     btnLogin,
@@ -25,11 +23,14 @@ import {
     txtRegisterPassword,
     txtRegisterRepeat,
     btnRegister,
+    validateLogin,
+    validateReset,
+    validateRegistration,
+    handle,
     showSuccess,
 } from "/assets/js/ui/auth.js"
 
 import { showLinkToProfile, showLinkToAuth } from "/assets/js/ui/navigation.js"
-import { emailIsValid } from "/assets/js/utils/input.js"
 
 
 const createUser = async () => {
@@ -43,18 +44,10 @@ const createUser = async () => {
         return
     }
 
-    if (!emailIsValid(email)) {
-        handle({ code: InputErrorCodes.INVALID_EMAIL })
-        return
-    }
+    const error = validateRegistration(name, email, password, repeat)
 
-    if (password === '') {
-        handle({ code: InputErrorCodes.NO_PASSWORD })
-        return
-    }
-
-    if (password !== repeat) {
-        handle({ code: InputErrorCodes.PASSWORD_MISMATCH })
+    if (error) {
+        handle(error)
         return
     }
 
@@ -67,13 +60,10 @@ const loginEmailPassword = async () => {
     const email = txtEmail.value
     const password = txtPassword.value
 
-    if (!emailIsValid(email)) {
-        handle({ code: InputErrorCodes.INVALID_EMAIL })
-        return
-    }
+    const error = validateLogin(email, password)
 
-    if (password === '') {
-        handle({ code: InputErrorCodes.NO_PASSWORD })
+    if (error) {
+        handle(error)
         return
     }
     
@@ -85,8 +75,10 @@ const loginEmailPassword = async () => {
 const resetPassword = async () => {
     const email = txtReset.value
 
-    if (!emailIsValid(email)) {
-        handle({ code: InputErrorCodes.INVALID_EMAIL })
+    const error = validateReset(email)
+
+    if (error) {
+        handle(error)
         return
     }
 

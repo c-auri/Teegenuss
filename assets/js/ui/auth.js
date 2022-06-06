@@ -1,4 +1,5 @@
 import { AuthErrorCodes } from 'https://www.gstatic.com/firebasejs/9.8.1/firebase-auth.js'
+import { emailIsValid } from '/assets/js/utils/input.js';
 import { UserbaseErrorCodes } from '/assets/js/firebase/userbase.js';
 import { 
     showOverflow, 
@@ -49,6 +50,36 @@ export function showSuccess(message) {
     show(spanSuccess)
 }
 
+export function validateRegistration(name, email, password, repeat) {
+    if (!emailIsValid(email)) {
+        return { code: InputErrorCodes.INVALID_EMAIL }
+    }
+
+    if (password === '') {
+        return { code: InputErrorCodes.NO_PASSWORD }
+    }
+
+    if (password !== repeat) {
+        return { code: InputErrorCodes.PASSWORD_MISMATCH }
+    }
+}
+
+export function validateLogin(email, password) {
+    if (!emailIsValid(email)) {
+        return { code: InputErrorCodes.INVALID_EMAIL }
+    }
+
+    if (password === '') {
+        return { code: InputErrorCodes.NO_PASSWORD }
+    }
+}
+
+export function validateReset(email) {
+    if (!emailIsValid(email)) {
+        return { code: InputErrorCodes.INVALID_EMAIL }
+    }
+}
+
 export function handle(error) {
     switch (error.code) {
         case UserbaseErrorCodes.USERNAME_TAKEN:
@@ -86,7 +117,7 @@ export function handle(error) {
     show(spanError)
 }
 
-export const InputErrorCodes = {
+const InputErrorCodes = {
     INVALID_EMAIL: 'INVALID_EMAIL',
     NO_PASSWORD: 'NO_PASSWORD',
     PASSWORD_MISMATCH: 'PASSWORD_MISMATCH',
