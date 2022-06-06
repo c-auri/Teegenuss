@@ -1,5 +1,5 @@
 import { AuthErrorCodes } from 'https://www.gstatic.com/firebasejs/9.8.1/firebase-auth.js'
-import { emailIsValid } from '/assets/js/utils/input.js';
+import { isEmptyOrSpaces, emailIsValid } from '/assets/js/utils/input.js';
 import { UserbaseErrorCodes } from '/assets/js/firebase/userbase.js';
 import { 
     showOverflow, 
@@ -52,6 +52,7 @@ export function showSuccess(message) {
 
 export function validateRegistration(name, email, password, repeat) {
     return getFirstDefined(
+        validateName(name),
         validateEmail(email), 
         validatePassword(password), 
         validateRepeat(password, repeat))
@@ -69,6 +70,9 @@ export function validateReset(email) {
 
 export function handle(error) {
     switch (error.code) {
+        case InputErrorCodes.USERNAME_EMPTY:
+            spanError.textContent = 'Benutzername darf nicht leer sein'
+            break
         case UserbaseErrorCodes.USERNAME_TAKEN:
             spanError.textContent = 'Benutzername bereits vergeben'
             break
@@ -105,9 +109,16 @@ export function handle(error) {
 }
 
 const InputErrorCodes = {
+    USERNAME_EMPTY: 'USERNAME_EMPTY',
     INVALID_EMAIL: 'INVALID_EMAIL',
     NO_PASSWORD: 'NO_PASSWORD',
     PASSWORD_MISMATCH: 'PASSWORD_MISMATCH',
+}
+
+function validateName(name) {
+    if (isEmptyOrSpaces(name)) {
+        return { code: InputErrorCodes.USERNAME_EMPTY }
+    }
 }
 
 function validateEmail(email) {
