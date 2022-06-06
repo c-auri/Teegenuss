@@ -1,6 +1,12 @@
 import { AuthErrorCodes } from 'https://www.gstatic.com/firebasejs/9.8.1/firebase-auth.js'
-import { isEmptyOrSpaces, emailIsValid } from '/assets/js/utils/input.js';
 import { UserbaseErrorCodes } from '/assets/js/firebase/userbase.js';
+import { 
+    InputErrorCodes, 
+    validateName, 
+    validateEmail, 
+    validatePassword, 
+    validateRepeat,
+} from '/assets/js/utils/input.js';
 import { 
     showOverflow, 
     isHidden,
@@ -104,37 +110,6 @@ export function handle(error) {
     }
 
     show(spanError)
-}
-
-const InputErrorCodes = {
-    USERNAME_EMPTY: 'USERNAME_EMPTY',
-    INVALID_EMAIL: 'INVALID_EMAIL',
-    NO_PASSWORD: 'WEAK_PASSWORD',
-    PASSWORD_MISMATCH: 'PASSWORD_MISMATCH',
-}
-
-function validateName(name) {
-    if (isEmptyOrSpaces(name)) {
-        return { code: InputErrorCodes.USERNAME_EMPTY }
-    }
-}
-
-function validateEmail(email) {
-    if (!emailIsValid(email)) {
-        return { code: InputErrorCodes.INVALID_EMAIL }
-    }
-}
-
-function validatePassword(password) {
-    if (password.length < 6) {
-        return { code: InputErrorCodes.WEAK_PASSWORD }
-    }
-}
-
-function validateRepeat(password, repeat) {
-    if (password !== repeat) {
-        return { code: InputErrorCodes.PASSWORD_MISMATCH }
-    }
 }
 
 function getFirstDefined(...errors) {
