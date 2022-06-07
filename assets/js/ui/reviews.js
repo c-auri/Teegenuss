@@ -1,5 +1,5 @@
 import { show, hide } from "/assets/js/utils/visibility.js"
-import { isEmptyOrSpaces, areAllEmptyOrSpaces, escapeHtml } from "/assets/js/utils/input.js"
+import { isNullOrWhitespace, areAllNullOrWhitespace, escapeHtml } from "/assets/js/utils/input.js"
 
 
 const divTea = document.getElementById('divTea')
@@ -188,8 +188,8 @@ function generateMarkup({
         return
     }
 
-    if ((!showDetails && isEmptyOrSpaces(simpleNotes)) || 
-        (showDetails && areAllEmptyOrSpaces(...detailedNotes))) {
+    if ((!showDetails && isNullOrWhitespace(simpleNotes)) || 
+        (showDetails && areAllNullOrWhitespace(...detailedNotes))) {
         return ''
     }
 
@@ -199,7 +199,7 @@ function generateMarkup({
 
     if (showDetails) {
         for (let i = 0; i < detailedNotes.length; i++) {
-            if (!isEmptyOrSpaces(detailedNotes[i])) {
+            if (!isNullOrWhitespace(detailedNotes[i])) {
                 markup += '<div class="data-table__attribute--inner">' +
                     innerAttributes[i] +
                     '</div>' + 
@@ -224,7 +224,7 @@ function hasRelevantInput() {
             return true
     }
     else {
-        if (!isEmptyOrSpaces(txtLooks.value))
+        if (!isNullOrWhitespace(txtLooks.value))
             return true
     }
 
@@ -233,7 +233,7 @@ function hasRelevantInput() {
             return true
     }
     else {
-        if (!isEmptyOrSpaces(txtAroma.value))
+        if (!isNullOrWhitespace(txtAroma.value))
             return true
     }
 
@@ -242,7 +242,7 @@ function hasRelevantInput() {
             return true
     }
     else {
-        if (!isEmptyOrSpaces(txtTaste.value))
+        if (!isNullOrWhitespace(txtTaste.value))
             return true
     }
     
@@ -251,7 +251,7 @@ function hasRelevantInput() {
 
 function hasInput(...areas) {
     let result = false
-    areas.forEach(area => { result = result || !isEmptyOrSpaces(area.value) })
+    areas.forEach(area => { result = result || !isNullOrWhitespace(area.value) })
 
     return result
 }

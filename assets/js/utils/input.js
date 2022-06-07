@@ -8,7 +8,7 @@ export const InputErrorCodes = {
 }
 
 export function validateName(name) {
-    if (isEmptyOrSpaces(name)) {
+    if (isNullOrWhitespace(name)) {
         return { code: InputErrorCodes.USERNAME_EMPTY }
     }
 
@@ -52,13 +52,15 @@ export const emailIsValid = (email) => {
 };
 
 // https://stackoverflow.com/a/10232792
-export const isEmptyOrSpaces = (str) => {
-    return str === null || str.match(/^ *$/) !== null;
+export const isNullOrWhitespace = (str) => {
+    return str === null 
+        || str === undefined
+        || str.match(/^\s*$/) !== null;
 }
 
-export const areAllEmptyOrSpaces = (...strings) => {
+export const areAllNullOrWhitespace = (...strings) => {
     for (const str of strings) {
-        if (!isEmptyOrSpaces(str)) {
+        if (!isNullOrWhitespace(str)) {
             return false
         }
     }
