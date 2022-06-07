@@ -16,13 +16,20 @@ export function validateName(name) {
         return { code: InputErrorCodes.USERNAME_TOO_SHORT }
     }
 
-    if (!isAllowed(name)) {
+    if (!isValidUsername(name)) {
         return {code: InputErrorCodes.USERNAME_ILLEGAL}
     }
 }
 
-function isAllowed(name) {
-    const regex = /^[a-zA-Z0-9\u00C0-\u017F]+(.?[a-zA-Z0-9\u00C0-\u017F_ -]+)+(.?[a-zA-Z0-9\u00C0-\u017F_ -]+)+.?$/
+export function isValidUsername(name) {
+    // at least three characters in total
+    // start with a letter (including umlauts)
+    // follow with letters and numbers
+    // optionally seperated by
+        // a single underscore (_) or colon (:)
+        // OR a single dot (.) or dash (-), optionally followed by whitespace
+        // OR just whitespace
+    const regex = /^[a-zA-Z\u00C0-\u017F]+((_|:|([.-]?\s?))?[a-zA-Z0-9\u00C0-\u017F]+){2,}$/
     return regex.test(name)
 }
 
