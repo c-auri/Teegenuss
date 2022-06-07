@@ -1,5 +1,7 @@
 export const InputErrorCodes = {
     USERNAME_EMPTY: 'USERNAME_EMPTY',
+    USERNAME_TOO_SHORT: 'USERNAME_TOO_SHORT',
+    USERNAME_ILLEGAL: 'USERNAME_ILLEGAL',
     INVALID_EMAIL: 'INVALID_EMAIL',
     NO_PASSWORD: 'WEAK_PASSWORD',
     PASSWORD_MISMATCH: 'PASSWORD_MISMATCH',
@@ -9,6 +11,19 @@ export function validateName(name) {
     if (isEmptyOrSpaces(name)) {
         return { code: InputErrorCodes.USERNAME_EMPTY }
     }
+
+    if (name.length < 3) {
+        return { code: InputErrorCodes.USERNAME_TOO_SHORT }
+    }
+
+    if (!isAllowed(name)) {
+        return {code: InputErrorCodes.USERNAME_ILLEGAL}
+    }
+}
+
+function isAllowed(name) {
+    const regex = /^[a-zA-Z0-9\u00C0-\u017F]+(.?[a-zA-Z0-9\u00C0-\u017F_ -]+)+(.?[a-zA-Z0-9\u00C0-\u017F_ -]+)+.?$/
+    return regex.test(name)
 }
 
 export function validateEmail(email) {

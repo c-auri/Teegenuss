@@ -20,6 +20,7 @@ service cloud.firestore {
       allow create: 
         if request.auth != null
         && request.auth.uid == request.resource.data.uid
+        && username.matches('^[a-zA-Z0-9\u00C0-\u017F]+(.?[a-zA-Z0-9\u00C0-\u017F_ -]+)+(.?[a-zA-Z0-9\u00C0-\u017F_ -]+)+.?$')
         && username == getAfter(/databases/$(database)/documents/users/$(request.auth.uid)).data.name
     }
     match /bundles/{bundle} {

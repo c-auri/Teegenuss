@@ -79,6 +79,12 @@ export function handle(error) {
         case InputErrorCodes.USERNAME_EMPTY:
             spanError.textContent = 'Benutzername darf nicht leer sein'
             break
+        case InputErrorCodes.USERNAME_TOO_SHORT:
+            spanError.textContent = 'Benutzername zu kurz'
+            break
+        case InputErrorCodes.USERNAME_ILLEGAL:
+            spanError.textContent = 'Benutzername enthält unerlaubte Zeichen'
+            break
         case UserbaseErrorCodes.USERNAME_TAKEN:
             spanError.textContent = 'Benutzername bereits vergeben'
             break
