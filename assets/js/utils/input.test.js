@@ -28,11 +28,12 @@ const validUsernames = [
     "Tee Trinker",
     "Tee-Trinker",
     "Tee.trinker",
-    "Tee- und Kaffeetrinker",
+    "Tee- und Weintrinker",
     "Ein T. Trinker",
     "TEE_TRINKER",
     "Tee 12g",
-    "Tää ist doch aüch schönß",
+    "NämöMitÜmlautß",
+    "NameWith20Characters",
 ]
 
 const invalidUsernames = [
@@ -57,7 +58,8 @@ const invalidUsernames = [
     "Kaffee: 12g",
     "Kaffee$trinker",
     "Kaffee^trinker",
-    "<span style='color:red'>KAFFEE</span>",
+    "aNameWith21Characters",
+    "aNameWithWellOver20Characters",
 ]
 
 const nonemptyStrings = [

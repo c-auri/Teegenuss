@@ -84,6 +84,9 @@ export function handle(error) {
         case InputErrorCodes.USERNAME_TOO_SHORT:
             spanError.textContent = 'Benutzername zu kurz'
             break
+        case InputErrorCodes.USERNAME_TOO_LONG:
+            spanError.textContent = 'Benutzername zu lang'
+            break
         case InputErrorCodes.USERNAME_ILLEGAL:
             spanError.textContent = 'Benutzername enthält unerlaubte Zeichen'
             break

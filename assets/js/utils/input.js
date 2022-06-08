@@ -1,6 +1,7 @@
 export const InputErrorCodes = {
     USERNAME_EMPTY: 'USERNAME_EMPTY',
     USERNAME_TOO_SHORT: 'USERNAME_TOO_SHORT',
+    USERNAME_TOO_LONG: 'USERNAME_TOO_LONG',
     USERNAME_ILLEGAL: 'USERNAME_ILLEGAL',
     INVALID_EMAIL: 'INVALID_EMAIL',
     WEAK_PASSWORD: 'WEAK_PASSWORD',
@@ -12,8 +13,12 @@ export function validateName(name) {
         return { code: InputErrorCodes.USERNAME_EMPTY }
     }
 
-    if (name.length < 3) {
+    if (isTooShort(name)) {
         return { code: InputErrorCodes.USERNAME_TOO_SHORT }
+    }
+
+    if (isTooLong(name)) {
+        return { code: InputErrorCodes.USERNAME_TOO_LONG }
     }
 
     if (!isValidUsername(name)) {
@@ -22,15 +27,24 @@ export function validateName(name) {
 }
 
 export function isValidUsername(name) {
-    // at least three characters in total
     // start with a letter (including umlauts)
     // follow with letters and numbers
     // optionally seperated by
         // a single underscore (_) or colon (:)
         // OR a single dot (.) or dash (-), optionally followed by whitespace
         // OR just whitespace
-    const regex = /^[a-zA-Z\u00C0-\u017F]+((_|:|([.-]?\s?))?[a-zA-Z0-9\u00C0-\u017F]+){2,}$/
-    return regex.test(name)
+    const regex = /^[a-zA-Z\u00C0-\u017F]+((_|:|([.-]?\s?))?[a-zA-Z0-9\u00C0-\u017F]+)*$/
+    return regex.test(name) 
+        && !isTooShort(name)
+        && !isTooLong(name)
+}
+
+function isTooShort(name) {
+    return name.length < 3
+}
+
+function isTooLong(name) {
+    return name.length > 20
 }
 
 export function validateEmail(email) {
