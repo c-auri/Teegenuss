@@ -83,38 +83,44 @@ const emptyStrings = [
     " \t\n\t "
 ]
 
-describe("emailIsValid is truthy for:", () => {
-    test.each(validEmails)(
+describe("Expect emailIsValid", () => {
+  describe("to be truthy for:", () => {
+      test.each(validEmails)(
+          "%p",
+          (email) => expect(emailIsValid(email)).toBeTruthy())
+  })
+  
+  describe("to be falsy for:", () => {
+      test.each(invalidEmails)(
+          "%p",
+          (email) => expect(emailIsValid(email)).toBeFalsy())
+  })
+})
+
+describe("Expect isValidUsername", () => {
+  describe("to be true for:", () => {
+    test.each(validUsernames)(
         "%p",
-        (email) => expect(emailIsValid(email)).toBeTruthy())
-})
-
-describe("emailIsValid is falsy for:", () => {
-    test.each(invalidEmails)(
+        (name) => expect(isValidUsername(name)).toBe(true))
+  })
+  
+  describe("to be false for:", () => {
+    test.each(invalidUsernames)(
         "%p",
-        (email) => expect(emailIsValid(email)).toBeFalsy())
+        (name) => expect(isValidUsername(name)).toBe(false))
+  })
 })
 
-describe("isValidUsername is true for:", () => {
-  test.each(validUsernames)(
-      "%p",
-      (name) => expect(isValidUsername(name)).toBe(true))
-})
-
-describe("isValidUsername is false for:", () => {
-  test.each(invalidUsernames)(
-      "%p",
-      (name) => expect(isValidUsername(name)).toBe(false))
-})
-
-describe("isNullOrWhitespace is falsy for:", () => {
-    test.each(nonemptyStrings)(
-        "%p",
-        (string) => expect(isNullOrWhitespace(string)).toBeFalsy())
-})
-
-describe("isNullOrWhitespace is truthy for:", () => {
-    test.each(emptyStrings)(
-        "%p",
-        (string) => expect(isNullOrWhitespace(string)).toBeTruthy())
+describe("Expect isNullOrWhitespace", () => {
+  describe("to be falsy for:", () => {
+      test.each(nonemptyStrings)(
+          "%p",
+          (string) => expect(isNullOrWhitespace(string)).toBeFalsy())
+  })
+  
+  describe("to be isNullOrWhitespace to be truthy for:", () => {
+      test.each(emptyStrings)(
+          "%p",
+          (string) => expect(isNullOrWhitespace(string)).toBeTruthy())
+  })
 })
