@@ -1,19 +1,21 @@
 import { 
-  emailIsValid,
-  isValidUsername,
-  isNullOrWhitespace,
+    emailIsValid,
+    isValidUsername,
+    isNullOrWhitespace,
 } from './input.js'
 
+
 const validEmails = [
-  "dev@tg.test",
-  "name.surname@domain.de",
-  "name-surname@domain.com",
+    "dev@tg.test",
+    "name.surname@domain.de",
+    "name-surname@domain.com",
 ]
 
 const invalidEmails = [
     "just.a.name",
     "@",
     "name@notld",
+    "name@nodotcom",
     "@noname.com",
     ".name@domain.com",
     "name@double@domain.com",
@@ -59,26 +61,26 @@ const invalidUsernames = [
 ]
 
 const nonemptyStrings = [
-  "asdf",
-  "as df",
-  "§  §",
-  "_",
-  "_ _",
-  "_\t_",
-  "_\n_",
-  "\n_",
-  "_\n",
+    "asdf",
+    "as df",
+    "§  §",
+    "_",
+    "_ _",
+    "_\t_",
+    "_\n_",
+    "\n_",
+    "_\n",
 ]
 
 const emptyStrings = [
-  null,
-  undefined,
-  "",
-  " ",
-  "\t",
-  "\n",
-  "     ",
-  " \t\n\t "
+    null,
+    undefined,
+    "",
+    " ",
+    "\t",
+    "\n",
+    "     ",
+    " \t\n\t "
 ]
 
 describe("emailIsValid is truthy for:", () => {

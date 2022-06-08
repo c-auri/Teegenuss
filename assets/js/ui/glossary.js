@@ -1,5 +1,6 @@
 import { isExpanded, expand, collapse } from "/assets/js/utils/visibility.js";
 
+
 for (const header of document.getElementsByClassName("glossary__header")) {
     var panel = header.nextElementSibling;
     panel.style.maxHeight = '0';

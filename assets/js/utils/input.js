@@ -3,7 +3,7 @@ export const InputErrorCodes = {
     USERNAME_TOO_SHORT: 'USERNAME_TOO_SHORT',
     USERNAME_ILLEGAL: 'USERNAME_ILLEGAL',
     INVALID_EMAIL: 'INVALID_EMAIL',
-    NO_PASSWORD: 'WEAK_PASSWORD',
+    WEAK_PASSWORD: 'WEAK_PASSWORD',
     PASSWORD_MISMATCH: 'PASSWORD_MISMATCH',
 }
 
@@ -17,7 +17,7 @@ export function validateName(name) {
     }
 
     if (!isValidUsername(name)) {
-        return {code: InputErrorCodes.USERNAME_ILLEGAL}
+        return { code: InputErrorCodes.USERNAME_ILLEGAL }
     }
 }
 
@@ -52,20 +52,20 @@ export function validateRepeat(password, repeat) {
 }
 
 // https://stackoverflow.com/a/46181
-export const emailIsValid = (email) => {
+export function emailIsValid(email) {
     return String(email)
         .toLowerCase()
         .match(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
 };
 
 // https://stackoverflow.com/a/10232792
-export const isNullOrWhitespace = (str) => {
+export function isNullOrWhitespace(str) {
     return str === null 
         || str === undefined
         || str.match(/^\s*$/) !== null;
 }
 
-export const areAllNullOrWhitespace = (...strings) => {
+export function areAllNullOrWhitespace(...strings) {
     for (const str of strings) {
         if (!isNullOrWhitespace(str)) {
             return false

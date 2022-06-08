@@ -1,5 +1,6 @@
 import { AuthErrorCodes } from 'https://www.gstatic.com/firebasejs/9.8.1/firebase-auth.js'
 import { UserbaseErrorCodes } from '/assets/js/firebase/userbase.js';
+
 import { 
     InputErrorCodes, 
     validateName, 
@@ -7,6 +8,7 @@ import {
     validatePassword, 
     validateRepeat,
 } from '/assets/js/utils/input.js';
+
 import { 
     showOverflow, 
     isHidden,

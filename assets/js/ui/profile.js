@@ -1,5 +1,6 @@
 import { show } from "/assets/js/utils/visibility.js"
 
+
 const divWelcome = document.querySelector('#divWelcome')
 const spanName = document.querySelector('#spanName')
 const imgUser = document.querySelector('#imgUser')

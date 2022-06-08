@@ -36,7 +36,6 @@ const createUser = async () => {
     const email = txtRegisterEmail.value
     const password = txtRegisterPassword.value
     const repeat = txtRegisterRepeat.value
-
     const error = validateRegistration(name, email, password, repeat)
 
     if (error) {
@@ -52,7 +51,6 @@ const createUser = async () => {
 const loginEmailPassword = async () => {
     const email = txtEmail.value
     const password = txtPassword.value
-
     const error = validateLogin(email, password)
 
     if (error) {
@@ -67,7 +65,6 @@ const loginEmailPassword = async () => {
 
 const resetPassword = async () => {
     const email = txtReset.value
-
     const error = validateReset(email)
 
     if (error) {
