@@ -10,6 +10,8 @@ service cloud.firestore {
         if request.auth != null 
         && request.auth.uid == user
         && 'name' in request.resource.data
+        && request.resource.data.name.length >= 3
+        && request.resource.data.name.length <= 20
         && !exists(/databases/$(database)/documents/usernames/$(request.resource.data.name))
         && request.auth.uid == getAfter(
           /databases/$(database)/documents/usernames/$(request.resource.data.name)
@@ -20,7 +22,7 @@ service cloud.firestore {
       allow create: 
         if request.auth != null
         && request.auth.uid == request.resource.data.uid
-        && username.matches('^[a-zA-Z\u00C0-\u017F]+((_|:|([.-]?\s?))?[a-zA-Z0-9\u00C0-\u017F]+){2,}$')
+        && username.matches('^[a-zA-Z\u00C0-\u017F]+((_|:|([.-]?\s?))?[a-zA-Z0-9\u00C0-\u017F]+)*$')
         && username == getAfter(/databases/$(database)/documents/users/$(request.auth.uid)).data.name
     }
     match /bundles/{bundle} {

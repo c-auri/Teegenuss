@@ -43,31 +43,44 @@ const negativeDividendAndPositiveDivisor = [
     [-1, 3, 2], 
 ]
 
-const testCaseDescription = "%p mod %p = %p"
+const zeroDivisor = [
+    [3, 0, NaN],
+    [0, 0, NaN],
+    [-3, 0, NaN]
+]
 
-describe("Expect mod to return the euclidian remainder", () => {
-    describe("for n = 0:", () => {
-        test.each(zeroDivident)(
-            testCaseDescription, (n, m, r) => testMod(n, m, r))
+const testCaseDescription = "mod(%p, %p) == %p"
+
+describe("Expect mod(n, m)", () => {
+    describe("to return the euclidian remainder", () => {
+        describe("for n = 0:", () => {
+            test.each(zeroDivident)(
+                testCaseDescription, (n, m, r) => testMod(n, m, r))
+        })
+    
+        describe("for 0 < n, m:", () => {
+            test.each(allPositive)(
+                testCaseDescription, (n, m, r) => testMod(n, m, r))
+        })
+    
+        describe("for 0 > n, m:", () => {
+            test.each(allNegative)(
+                testCaseDescription, (n, m, r) => testMod(n, m, r))
+        })
+    
+        describe("for m < 0 < n:", () => {
+            test.each(positiveDividentAndNegativeDivisor)(
+                testCaseDescription, (n, m, r) => testMod(n, m, r))
+        })
+    
+        describe("for n < 0 < m:", () => {
+            test.each(negativeDividendAndPositiveDivisor)(
+                testCaseDescription, (n, m, r) => testMod(n, m, r))
+        })
     })
 
-    describe("for 0 < n, m:", () => {
-        test.each(allPositive)(
-            testCaseDescription, (n, m, r) => testMod(n, m, r))
-    })
-
-    describe("for 0 > n, m:", () => {
-        test.each(allNegative)(
-            testCaseDescription, (n, m, r) => testMod(n, m, r))
-    })
-
-    describe("for m < 0 < n:", () => {
-        test.each(positiveDividentAndNegativeDivisor)(
-            testCaseDescription, (n, m, r) => testMod(n, m, r))
-    })
-
-    describe("for n < 0 < m:", () => {
-        test.each(negativeDividendAndPositiveDivisor)(
+    describe("to return NaN for m = 0", () => {
+        test.each(zeroDivisor)(
             testCaseDescription, (n, m, r) => testMod(n, m, r))
     })
 })
