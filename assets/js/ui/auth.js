@@ -76,7 +76,10 @@ export function validateReset(email) {
     return validateEmail(email)
 }
 
-export function handle(error) {
+export async function handle(error) {
+    resetError()
+    await sleep(200)
+
     switch (error.code) {
         case InputErrorCodes.USERNAME_EMPTY:
             spanError.textContent = 'Benutzername darf nicht leer sein'
@@ -177,10 +180,17 @@ function resetForm() {
         element.value = ''
     }
 
-    spanError.textContent = 'Fehler'
-    hide(spanError)
+    resetError()
+    resetSuccess()
+}
 
-    spanSuccess.textContent = 'Erfolg'
+function resetError() {
+    spanError.textContent = ''
+    hide(spanError)
+}
+
+function resetSuccess() {
+    spanSuccess.textContent = ''
     hide(spanSuccess)
 }
 
