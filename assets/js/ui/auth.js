@@ -1,5 +1,5 @@
 import { AuthErrorCodes } from 'https://www.gstatic.com/firebasejs/9.8.1/firebase-auth.js'
-import { UserbaseErrorCodes } from '/assets/js/firebase/userbase.js';
+import { UserbaseErrorCodes } from '/assets/js/firebase/userbase.js'
 
 import { 
     InputErrorCodes, 
@@ -7,14 +7,16 @@ import {
     validateEmail, 
     validatePassword, 
     validateRepeat,
-} from '/assets/js/utils/input.js';
+} from '/assets/js/utils/input.js'
 
 import { 
     showOverflow, 
     isHidden,
     show,
     hide,
-} from "/assets/js/utils/visibility.js";
+} from "/assets/js/utils/visibility.js"
+
+import { sleep } from "/assets/js/utils/sleep.js"
 
 
 // Auth dialog
@@ -52,20 +54,6 @@ export function showAuthModal() {
     showLogin()
 }
 
-export function showSuccess(message) {
-    hide(formLogin, btnLogin, formReset, btnReset, formRegister, btnRegister)
-    spanSuccess.textContent = message
-    show(spanSuccess)
-}
-
-export function validateRegistration(name, email, password, repeat) {
-    return getFirstDefined(
-        validateName(name),
-        validateEmail(email), 
-        validatePassword(password), 
-        validateRepeat(password, repeat))
-}
-
 export function validateLogin(email, password) {
     return getFirstDefined(
         validateEmail(email), 
@@ -74,6 +62,14 @@ export function validateLogin(email, password) {
 
 export function validateReset(email) {
     return validateEmail(email)
+}
+
+export function validateRegistration(name, email, password, repeat) {
+    return getFirstDefined(
+        validateName(name),
+        validateEmail(email), 
+        validatePassword(password), 
+        validateRepeat(password, repeat))
 }
 
 export async function handle(error) {
@@ -126,6 +122,12 @@ export async function handle(error) {
     show(spanError)
 }
 
+export function showSuccess(message) {
+    hide(formLogin, btnLogin, formReset, btnReset, formRegister, btnRegister)
+    spanSuccess.textContent = message
+    show(spanSuccess)
+}
+
 function getFirstDefined(...errors) {
     for (const error of errors) {
         if (error) {
@@ -140,6 +142,8 @@ function closeAuth() {
 }
 
 function closeOnBackdropClick(event) {
+    // with padding 0 the backdrop is the only clickable part of the dialog
+    // since the actual dialog element is hidden behind its contents
     if (event.target === dlgAuth) {
         closeAuth();
     }

@@ -31,23 +31,6 @@ import {
 import { showLinkToProfile, showLinkToAuth } from "/assets/js/ui/navigation.js"
 
 
-const createUser = async () => {
-    const name = txtRegisterName.value
-    const email = txtRegisterEmail.value
-    const password = txtRegisterPassword.value
-    const repeat = txtRegisterRepeat.value
-    const error = validateRegistration(name, email, password, repeat)
-
-    if (error) {
-        handle(error)
-        return
-    }
-
-    await createNamedUserWithEmailAndPassword(name, email, password)
-    .then(() => window.location.replace('/profil'))
-    .catch((error) => handle(error))
-}
-
 const loginEmailPassword = async () => {
     const email = txtEmail.value
     const password = txtPassword.value
@@ -77,6 +60,23 @@ const resetPassword = async () => {
     .catch((error) => handle(error))
 }
 
+const registerEmailPassword = async () => {
+    const name = txtRegisterName.value
+    const email = txtRegisterEmail.value
+    const password = txtRegisterPassword.value
+    const repeat = txtRegisterRepeat.value
+    const error = validateRegistration(name, email, password, repeat)
+
+    if (error) {
+        handle(error)
+        return
+    }
+
+    await createNamedUserWithEmailAndPassword(name, email, password)
+    .then(() => window.location.replace('/profil'))
+    .catch((error) => handle(error))
+}
+
 function onEnter(event, func) {
     if (event.key === 'Enter') {
         func()
@@ -102,5 +102,5 @@ txtPassword.addEventListener("keypress", (event) => onEnter(event, loginEmailPas
 btnReset.addEventListener("click", resetPassword)
 txtReset.addEventListener("keypress", (event) => onEnter(event, resetPassword))
 
-btnRegister.addEventListener("click", createUser)
-txtRegisterRepeat.addEventListener("keypress", (event) => onEnter(event, createUser))
+btnRegister.addEventListener("click", registerEmailPassword)
+txtRegisterRepeat.addEventListener("keypress", (event) => onEnter(event, registerEmailPassword))
