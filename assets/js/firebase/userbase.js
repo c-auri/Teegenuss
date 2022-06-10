@@ -78,7 +78,7 @@ async function createUserbaseEntry(user, username) {
     const userDetails = {
         "name": username,
         "photoURL": defaultPhotoURL,
-        "registrationDate": serverTimestamp()
+        "registrationDate": new Date(user.metadata.creationTime)
     }
 
     const batch = writeBatch(firestore)
