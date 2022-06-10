@@ -49,7 +49,20 @@ export async function createNamedUserWithEmailAndPassword(name, email, password)
 
 export async function signInWithPassword(email, password) {
     await signInWithEmailAndPassword(auth, email, password)
-    .then((credentials) => synchronizeProfile(credentials.user))
+    .then(async (credentials) => {
+        await writeLegacyUserbaseEntry(credentials.user)
+        await synchronizeProfile(credentials.user)
+    })
+}
+
+// use this function only until all legacy users are migrated, then delete it
+async function writeLegacyUserbaseEntry(user) {
+    if (user.displayName && !await isTaken(user.displayName)) {
+        await createUserbaseEntry(user, user.displayName)
+        .catch(() => {
+            throw { code: UserbaseErrorCodes.INTERNAL_ERROR }
+        })
+    }
 }
 
 async function synchronizeProfile(user) {
