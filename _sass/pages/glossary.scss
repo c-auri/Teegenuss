@@ -1,3 +1,5 @@
+$border-radius: 5px;
+
 .glossary {
   display: grid;
   gap: $content-gap;
@@ -12,17 +14,19 @@
     line-height: var(--fs-600);
     margin: 0 auto;
     max-width: calc(#{$p-width} + 8rem);
+    border-radius: $border-radius;
+    box-shadow: 2px 2px $medium-light-gray;
   }
   
   &__header {
-    border-radius: 5px;
+    border-radius: $border-radius;
     padding: .7rem clamp(1rem, 5vw, 3rem);
     cursor: pointer;
     display: flex;
     justify-content: space-between;
     color: $dark-gray;
     font-weight: bold;
-    background-color: $almost-white;
+    background-color: $light-gray;
   
     &::after {
       content: '\02795';
@@ -31,7 +35,7 @@
     }
   
     &[data-expanded="true"] {
-      border-radius: 5px 5px 0 0;
+      border-radius: $border-radius $border-radius 0 0;
 
       &::after {
         content: '\2796';
@@ -44,30 +48,25 @@
 
     &:hover {
       color: $black;
-      background-color: $light-gray;
-    }
-
-    &:hover ~ .glossary__panel {
-      border-color: $light-gray;
     }
   }
   
   &__panel {
-    border-inline: 5px solid $almost-white;
-    border-radius: 0 0 5px 5px;
-    padding: 0 clamp(1rem, 5vw, 3rem);
-    color: $dark-gray;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
-
+    padding: 0 clamp(1rem, 5vw, 3rem);
+    color: $dark-gray;
+    border-radius: 0 0 $border-radius $border-radius;
+    background-color: $almost-white;
+    
     div:first-child,
     p:first-child {
       margin-top: 1.5rem;
     }
-  }
-
-  &__panel[data-expanded="true"] {
-    border-bottom: 5px solid $almost-white;
+    
+    &[data-expanded="true"] {
+      border-top: 1px solid $medium-light-gray;
+    }
   }
 
   &__addition {
