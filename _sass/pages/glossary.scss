@@ -15,7 +15,6 @@ $border-radius: 5px;
     margin: 0 auto;
     max-width: calc(#{$p-width} + 8rem);
     border-radius: $border-radius;
-    box-shadow: 2px 2px $medium-light-gray;
   }
   
   &__header {
