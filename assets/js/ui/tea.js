@@ -15,7 +15,11 @@ for (const toggler of togglers) {
     const uncheckedTarget = document.getElementById(idUncheckedTarget)
     const checkedTarget = document.getElementById(idCheckedTarget)
 
-    toggler.addEventListener('change', () => {
+    showTarget()
+    toggler.addEventListener('change', () => showTarget());
+
+
+    function showTarget() {
         if (toggler.checked) {
             show(checkedTarget)
             hide(uncheckedTarget)
@@ -26,7 +30,7 @@ for (const toggler of togglers) {
             hide(checkedTarget)
             label.innerHTML = toggler.getAttribute("data-label-text-unchecked")
         }
-    });
+    }
 }
 
 // -------- Slideshow --------- //
