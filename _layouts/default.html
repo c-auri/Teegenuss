@@ -128,8 +128,33 @@
     </div>
   </main>
 
-  <footer class="page__footer">
-    <span class="user-select-none">&copy;&nbsp;</span>Herbert Zilelberg
+  <footer class="page-footer">
+    <div class="page-footer__section">
+      <nav class="sitemap">
+        {% assign packages = site.packages | where: 'order-id', '22-2' %}
+        {% for package in packages %}
+        {% assign teas = site.teas | where: 'order-id', package.order-id | where: 'package', package.shorthand %}
+        <div>
+          <span class="sitemap__bundle">{{ package.title }}</span>
+          <ul class="sitemap__teas">
+            {% for tea in teas %}
+            <li class="sitemap__tea"><a class="sitemap__link" href="{{ tea.url }}">{{ tea.title }}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
+        {% endfor %}
+        <div class="sitemap__secondary-pages">
+          <span class="sitemap__secondary-page"><a class="sitemap__link" href="/glossar">Glossar</a></span>
+          <span class="sitemap__secondary-page"><a class="sitemap__link" href="/ueber">Über</a></span>
+          <span class="sitemap__secondary-page"><a class="sitemap__link" href="https://discord.gg/XQGvCeBDDJ">Discord</a></span>
+        </div>
+      </nav>
+    </div>
+    <div class="page-footer__section--dark">
+      <div class="small-print">
+        <span>&copy;&nbsp;Herbert Zilelberg</span>
+      </div>
+    </div>
   </footer>
 
 </div>
