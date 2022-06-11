@@ -70,14 +70,24 @@ export function showNoReviewsYet() {
 export function renderReview(data) {
     divReviews.innerHTML += 
         '<div class="review">' +
-            '<div class="review__user">' +
-                '<img class="review__user__icon" src="' + data.user.photoURL + '">' +
-                '<span class="review__user__name">' + data.user.name + '</span>' +
+            '<div class="review__header">' +
+                '<img class="review__icon" src="' + data.user.photoURL + '">' +
+                '<div class="review__metadata">' +
+                    '<span class="review__username">' + data.user.name + '</span>' +
+                    '<span class="review__date">am ' + generateDateString(data.posted) + '</span>' +
+                '</div>' +
             '</div>' +
-            '<div class="review__content">' +
-                generateReviewMarkup(data) +
+            '<div class="review__panel">' +
+                '<div class="review__content">' +
+                    generateReviewMarkup(data) +
+                '</div>' +
             '</div>' +
         '</div>'
+}
+
+function generateDateString(firestoreTimestamp) {
+    const date = firestoreTimestamp.toDate()
+    return date.toLocaleDateString('de-DE', {})
 }
 
 export function getReviewInput() {

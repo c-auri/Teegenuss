@@ -173,33 +173,46 @@ $border-radius: 5px;
     text-align: center;
     font-style: italic;
   }
-  
-  &__content {
-    border-radius: 0 $border-radius $border-radius 0;
-    border: 3px $almost-white solid;
-    margin: 0;
-    padding: 1rem;
-    background-color: $almost-white;
-  }
 
-  &__user {
-    display: grid;
-    grid-template-columns: clamp(75px, 5vw, 150px) auto;
+  &__header {
+    display: flex;
+    justify-content: flex-start;
     align-items: center;
     gap: 2rem;
     border-radius: $border-radius $border-radius 0 0;
     border-bottom: $border;
     background-color: $light-gray;
+  }
   
-    &__icon {
-      border-radius: $border-radius 0 0 0;
-      width: clamp(75px, 5vw, 150px);
-    }
-    
-    &__name {
-      color: $medium-dark-gray;
-      font-size: var(--fs-600);
-    }
+  &__icon {
+    border-radius: $border-radius 0 0 0;
+    width: clamp(75px, 5vw, 150px);
+  }
+
+  &__metadata {
+    display: grid;
+  }
+  
+  &__username {
+    color: $medium-dark-gray;
+    font-size: var(--fs-600);
+  }
+
+  &__date {
+    color: $medium-gray;
+  }
+
+  &__panel {
+    display: grid;
+    grid-template-rows: auto var(--fs-500);
+    border-radius: 0 $border-radius $border-radius 0;
+    border: 3px $almost-white solid;
+    margin: 0;
+    background-color: $almost-white;
+  }
+
+  &__content {
+    padding: 1rem;
   }
 
   &__buttons {
@@ -212,36 +225,33 @@ $border-radius: 5px;
   @media (min-width: $bp-tablet) {
     grid-template-columns: 225px auto;
     
-    &__user {
+    &__header {
       border-radius: $border-radius 0 0 $border-radius;
-      grid-template-columns: 100%;
-      grid-template-rows: 6rem auto;
-      gap: 0;
-      align-items: center;
-      justify-items: center;
+      flex-direction: column;
+      justify-content: start;
+      padding-block: 2.5rem;
       border-bottom: none;
       border-right: $border;
       border-bottom: none;
-      padding-bottom: 4rem;
-    
-      &__name {
-        grid-row: 1;
-        width: 100%;
-        text-align: center;
-      }
+    }
   
-      &__icon {
-        grid-row: 2;
-        align-self: baseline;
-        border-radius: $border-radius;
-        width: 150px;
-      }
+    &__icon {
+      border-radius: $border-radius;
+      width: 150px;
+    }
+    
+    &__metadata {
+      width: 100%;
+      text-align: center;
+    }
+
+    &__panel {
+      border-left: none;
     }
 
     &__content {
       margin: 0;
       padding: 2rem 3rem;
-      border-left: none;
       font-size: var(--fs-400);
     }
   }

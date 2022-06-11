@@ -152,117 +152,122 @@ layout: default
     
     <div class="review">
       
-      <div class="review__user">
-        <img class="review__user__icon" id="imgReviewer">
-        <span class="review__user__name" id="spanReviewer"></span>
+      <div class="review__header">
+        <img class="review__icon" id="imgReviewer">
+        <div class="review__metadata">
+          <span class="review__username" id="spanReviewer"></span>
+        </div>
       </div>
       
-      <div class="review__content">
-
-        <div class="preview" id="divPreview" data-display="none">
-          <div id="divPreviewContent"></div>
-        </div>
-
-        <form class="review-input__form" id="formReview">
-
-          <div class="review-input__category">
-            <header class="review-input__header">
-              <h3 class="review-input__title">Aussehen</h3>
-    
-              <div class="review-input__toggler">
-                <label for="togglerLooks" id="lblLooks">einfach</label>
-                <div class="toggler-container">
-                  <input class="toggler" type="checkbox"
-                    data-label-id="lblLooks"
-                    data-label-text-unchecked="einfach" data-label-text-checked="detailliert"
-                    data-target-unchecked="simpleLooks" data-target-checked="detailedLooks"
-                    id="togglerLooks">
-                  </input>
-                </div>
-              </div>
-            </header>
-
-            <div class="review-input__simple" id="simpleLooks">
-              <label class="review-input__label">Zusammenfassung:</label>
-              <textarea class="review-input__textarea" id="txtLooks" maxlength="100"></textarea>
-            </div>
-            <div class="review-input__detailed" id="detailedLooks" data-display="none">
-              <label class="review-input__label">trockenes Blatt:</label>
-              <textarea class="review-input__textarea" id="txtLooksDryLeaf" maxlength="100"></textarea>
-              <label class="review-input__label">Aufgussfarbe:</label>
-              <textarea class="review-input__textarea" id="txtLooksLiquer" maxlength="100"></textarea>
-              <label class="review-input__label">verbrauchte Blätter:</label>
-              <textarea class="review-input__textarea" id="txtLooksSpentLeaf" maxlength="100"></textarea>
-            </div>
+      <div class="review__panel">
+        <div class="review__content">
+  
+          <div class="preview" id="divPreview" data-display="none">
+            <div id="divPreviewContent"></div>
           </div>
-
-          <section class="review-input__category">
-
-            <header class="review-input__header">
-              <h3 class="review-input__title">Aroma</h3>
-    
-              <div class="review-input__toggler">
-                <label for="togglerAroma" id="lblAroma">einfach</label>
-                <div class="toggler-container">
-                  <input class="toggler" type="checkbox"
-                    data-label-id="lblAroma"
-                    data-label-text-unchecked="einfach" data-label-text-checked="detailliert"
-                    data-target-unchecked="simpleAroma" data-target-checked="detailedAroma"
-                    id="togglerAroma">
-                  </input>
+  
+          <form class="review-input__form" id="formReview">
+  
+            <div class="review-input__category">
+              <header class="review-input__header">
+                <h3 class="review-input__title">Aussehen</h3>
+      
+                <div class="review-input__toggler">
+                  <label for="togglerLooks" id="lblLooks">einfach</label>
+                  <div class="toggler-container">
+                    <input class="toggler" type="checkbox"
+                      data-label-id="lblLooks"
+                      data-label-text-unchecked="einfach" data-label-text-checked="detailliert"
+                      data-target-unchecked="simpleLooks" data-target-checked="detailedLooks"
+                      id="togglerLooks">
+                    </input>
+                  </div>
                 </div>
+              </header>
+  
+              <div class="review-input__simple" id="simpleLooks">
+                <label class="review-input__label">Zusammenfassung:</label>
+                <textarea class="review-input__textarea" id="txtLooks" maxlength="100"></textarea>
               </div>
-            </header>
-
-            <div class="review-input__simple" id="simpleAroma">
-              <label class="review-input__label">Zusammenfassung:</label>
-              <textarea class="review-input__textarea" id="txtAroma" maxlength="100"></textarea>
+              <div class="review-input__detailed" id="detailedLooks" data-display="none">
+                <label class="review-input__label">trockenes Blatt:</label>
+                <textarea class="review-input__textarea" id="txtLooksDryLeaf" maxlength="100"></textarea>
+                <label class="review-input__label">Aufgussfarbe:</label>
+                <textarea class="review-input__textarea" id="txtLooksLiquer" maxlength="100"></textarea>
+                <label class="review-input__label">verbrauchte Blätter:</label>
+                <textarea class="review-input__textarea" id="txtLooksSpentLeaf" maxlength="100"></textarea>
+              </div>
             </div>
-            <div class="review-input__detailed" id="detailedAroma" data-display="none">
-              <label class="review-input__label">trockenes Blatt:</label>
-              <textarea class="review-input__textarea" id="txtAromaDryLeaf" maxlength="100"></textarea>
-              <label class="review-input__label">feuchtes Blatt:</label>
-              <textarea class="review-input__textarea" id="txtAromaWetLeaf" maxlength="100"></textarea>
-              <label class="review-input__label">Geschirr:</label>
-              <textarea class="review-input__textarea" id="txtAromaCeramics" maxlength="100"></textarea>
-            </div>
-          </section>
-
-          <section class="review-input__category">
-
-            <header class="review-input__header">
-              <h3 class="review-input__title">Geschmack</h3>
-              
-              <div class="review-input__toggler">
-                <label for="togglerTaste" id="lblTaste">einfach</label>
-                <div class="toggler-container">
-                  <input class="toggler" type="checkbox"
-                    data-label-id="lblTaste"
-                    data-label-text-unchecked="einfach" data-label-text-checked="detailliert"
-                    data-target-unchecked="simpleTaste" data-target-checked="detailedTaste"
-                    id="togglerTaste">
-                  </input>
+  
+            <section class="review-input__category">
+  
+              <header class="review-input__header">
+                <h3 class="review-input__title">Aroma</h3>
+      
+                <div class="review-input__toggler">
+                  <label for="togglerAroma" id="lblAroma">einfach</label>
+                  <div class="toggler-container">
+                    <input class="toggler" type="checkbox"
+                      data-label-id="lblAroma"
+                      data-label-text-unchecked="einfach" data-label-text-checked="detailliert"
+                      data-target-unchecked="simpleAroma" data-target-checked="detailedAroma"
+                      id="togglerAroma">
+                    </input>
+                  </div>
                 </div>
+              </header>
+  
+              <div class="review-input__simple" id="simpleAroma">
+                <label class="review-input__label">Zusammenfassung:</label>
+                <textarea class="review-input__textarea" id="txtAroma" maxlength="100"></textarea>
               </div>
-            </header>
-
-            <div class="review-input__simple" id="simpleTaste">
-              <label class="review-input__label">Zusammenfassung:</label>
-              <textarea class="review-input__textarea" id="txtTaste" maxlength="100"></textarea>
-            </div>
-            <div class="review-input__detailed" id="detailedTaste" data-display="none">
-              <label class="review-input__label">ersten Aufgüsse:</label>
-              <textarea class="review-input__textarea" id="txtTasteEarly" maxlength="100"></textarea>
-              <label class="review-input__label">spätere Aufgüsse:</label>
-              <textarea class="review-input__textarea" id="txtTasteLater" maxlength="100"></textarea>
-              <label class="review-input__label">Textur:</label>
-              <textarea class="review-input__textarea" id="txtTasteTexture" maxlength="100"></textarea>
-              <label class="review-input__label">Nachgeschmack:</label>
-              <textarea class="review-input__textarea" id="txtTasteAfter" maxlength="100"></textarea>
-            </div>
-          </section>
-
-        </form>
+              <div class="review-input__detailed" id="detailedAroma" data-display="none">
+                <label class="review-input__label">trockenes Blatt:</label>
+                <textarea class="review-input__textarea" id="txtAromaDryLeaf" maxlength="100"></textarea>
+                <label class="review-input__label">feuchtes Blatt:</label>
+                <textarea class="review-input__textarea" id="txtAromaWetLeaf" maxlength="100"></textarea>
+                <label class="review-input__label">Geschirr:</label>
+                <textarea class="review-input__textarea" id="txtAromaCeramics" maxlength="100"></textarea>
+              </div>
+            </section>
+  
+            <section class="review-input__category">
+  
+              <header class="review-input__header">
+                <h3 class="review-input__title">Geschmack</h3>
+                
+                <div class="review-input__toggler">
+                  <label for="togglerTaste" id="lblTaste">einfach</label>
+                  <div class="toggler-container">
+                    <input class="toggler" type="checkbox"
+                      data-label-id="lblTaste"
+                      data-label-text-unchecked="einfach" data-label-text-checked="detailliert"
+                      data-target-unchecked="simpleTaste" data-target-checked="detailedTaste"
+                      id="togglerTaste">
+                    </input>
+                  </div>
+                </div>
+              </header>
+  
+              <div class="review-input__simple" id="simpleTaste">
+                <label class="review-input__label">Zusammenfassung:</label>
+                <textarea class="review-input__textarea" id="txtTaste" maxlength="100"></textarea>
+              </div>
+              <div class="review-input__detailed" id="detailedTaste" data-display="none">
+                <label class="review-input__label">ersten Aufgüsse:</label>
+                <textarea class="review-input__textarea" id="txtTasteEarly" maxlength="100"></textarea>
+                <label class="review-input__label">spätere Aufgüsse:</label>
+                <textarea class="review-input__textarea" id="txtTasteLater" maxlength="100"></textarea>
+                <label class="review-input__label">Textur:</label>
+                <textarea class="review-input__textarea" id="txtTasteTexture" maxlength="100"></textarea>
+                <label class="review-input__label">Nachgeschmack:</label>
+                <textarea class="review-input__textarea" id="txtTasteAfter" maxlength="100"></textarea>
+              </div>
+            </section>
+  
+          </form>
+          
+        </div>
       </div>
 
     </div>
