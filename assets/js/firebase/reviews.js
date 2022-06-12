@@ -24,6 +24,7 @@ import {
     clearReviews,
     renderReview,
     showNoReviewsYet,
+    scrollToReviewSection,
 } from "/assets/js/ui/reviews.js"
 
 
@@ -53,6 +54,7 @@ async function sendReview() {
     .then((doc) => setDocument(doc.reference, doc.data))
     .then(() => { 
         loadReviews()
+        scrollToReviewSection("start")
         disableReviewInput()
     })
     .catch((error) => console.error("Error adding review: ", error))

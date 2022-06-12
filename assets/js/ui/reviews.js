@@ -282,6 +282,7 @@ function cancelReview() {
     hide(secNewReview, btnCancelReview, btnPreview)
     show(btnOpenReview)
     resetInput()
+    scrollToReviewSection("end")
 }
 
 function collapseReviewForm() {
@@ -304,6 +305,9 @@ export function scrollToReviewSection(position) {
             break
         case "new": 
             scrollTo(secNewReview)
+            break
+        case "end":
+            scrollTo(divReviews, { "block": "nearest" })
             break
     }
 }
