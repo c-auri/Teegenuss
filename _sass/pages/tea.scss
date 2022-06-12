@@ -204,7 +204,6 @@ $border-radius: 5px;
 
   &__panel {
     display: grid;
-    grid-template-rows: auto var(--fs-500);
     border-radius: 0 $border-radius $border-radius 0;
     border: 3px $almost-white solid;
     margin: 0;
@@ -216,10 +215,10 @@ $border-radius: 5px;
   }
 
   &__buttons {
-    margin: 2rem 0;
     display: flex;
     justify-content: center;
     gap: 1rem;
+    margin: 1rem 0 4rem 0;
   }
 
   @media (min-width: $bp-tablet) {
