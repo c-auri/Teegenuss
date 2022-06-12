@@ -49,22 +49,24 @@ async function render(reviews) {
 }
 
 async function sendReview() {
-    onAuthStateChanged(auth, async user => {
-        if (user) {
-            const reviewId = tea + '-' + user.uid
-            const reference = Document(firestore, "reviews", reviewId)
-            const data = await getReviewData(user)
-            await setDocument(reference, data)
-            .then(() => { 
-                loadReviews()
-                disableReviewInput()
-            })
-            .catch((error) => console.error("Error adding review: ", error))
-        }
-        else {
-            console.log("Error: not logged in.")
-        }
+    prepareReviewDoc(auth.currentUser)
+    .then((doc) => setDocument(doc.reference, doc.data))
+    .then(() => { 
+        loadReviews()
+        disableReviewInput()
     })
+    .catch((error) => console.error("Error adding review: ", error))
+}
+
+async function prepareReviewDoc(user) {
+    const reviewId = tea + '-' + user.uid
+    const reference = Document(firestore, "reviews", reviewId)
+    const data = await getReviewData(user)
+
+    return {
+        "reference": reference,
+        "data": data
+    }
 }
 
 async function getReviewData(user) {
