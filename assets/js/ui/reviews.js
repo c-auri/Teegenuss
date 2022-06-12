@@ -1,4 +1,4 @@
-import { show, hide } from "/assets/js/utils/visibility.js"
+import { show, hide } from "/assets/js/utils/dom.js"
 import { isNullOrWhitespace, areAllNullOrWhitespace, escapeHtml } from "/assets/js/utils/input.js"
 
 
@@ -282,7 +282,7 @@ function cancelReview() {
     hide(secNewReview, btnCancelReview, btnPreview)
     show(btnOpenReview)
     resetInput()
-    titleReviews.scrollIntoView({ behavior: "smooth" })
+    
 }
 
 function collapseReviewForm() {

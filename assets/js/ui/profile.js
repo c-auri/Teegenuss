@@ -1,4 +1,4 @@
-import { show } from "/assets/js/utils/visibility.js"
+import { show } from "/assets/js/utils/dom.js"
 
 
 const divWelcome = document.querySelector('#divWelcome')

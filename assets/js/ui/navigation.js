@@ -1,12 +1,13 @@
 import { 
+    show, 
+    hide,
     isExpanded, 
     expand, 
     collapse, 
     showOverflow, 
     hideOverflow,
-} from "/assets/js/utils/visibility.js";
+} from "/assets/js/utils/dom.js";
 
-import { show, hide } from "/assets/js/utils/visibility.js"
 import { showAuthModal } from "/assets/js/ui/auth.js";
 
 

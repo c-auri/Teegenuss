@@ -14,7 +14,7 @@ import {
     isHidden,
     show,
     hide,
-} from "/assets/js/utils/visibility.js"
+} from "/assets/js/utils/dom.js"
 
 import { sleep } from "/assets/js/utils/sleep.js"
 

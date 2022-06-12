@@ -1,4 +1,4 @@
-import { show, hide } from "/assets/js/utils/visibility.js"
+import { show, hide } from "/assets/js/utils/dom.js"
 import { mod } from "/assets/js/utils/math.js"
 
 

@@ -1,4 +1,4 @@
-import { isExpanded, expand, collapse } from "/assets/js/utils/visibility.js";
+import { isExpanded, expand, collapse } from "/assets/js/utils/dom.js";
 
 
 for (const header of document.getElementsByClassName("glossary__header")) {
