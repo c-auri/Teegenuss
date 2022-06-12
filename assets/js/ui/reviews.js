@@ -6,7 +6,6 @@ const divTea = document.getElementById('divTea')
 export const bundle = divTea.getAttribute("data-bundle")
 export const tea = divTea.getAttribute("data-tea")
 
-const titleReviews = document.getElementById('titleReviews')
 const divReviews = document.getElementById('divReviews')
 const pLoadMessage = document.getElementById('pLoadMessage')
 const secNewReview = document.getElementById('secNewReview')
