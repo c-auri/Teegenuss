@@ -1,4 +1,4 @@
-import { show, hide } from "/assets/js/utils/dom.js"
+import { scrollTo, show, hide } from "/assets/js/utils/dom.js"
 import { isNullOrWhitespace, areAllNullOrWhitespace, escapeHtml } from "/assets/js/utils/input.js"
 
 
@@ -131,7 +131,7 @@ function showPreview() {
             divPreviewContent.innerHTML = generateReviewMarkup(data)
             hide(formReview, btnCancelReview, btnPreview)
             show(divPreview, btnBack, btnSendReview)
-            secNewReview.scrollIntoView({ behavior: "smooth"})
+            scrollTo(secNewReview)
         }
     }
 }
@@ -269,20 +269,19 @@ function hasInput(...areas) {
 function expandReviewForm() {
     hide(btnOpenReview)
     show(secNewReview, btnCancelReview, btnPreview)
-    secNewReview.scrollIntoView({ behavior: "smooth"})
+    scrollTo(secNewReview)
 }
 
 function goBackToInput() {
     hide(divPreview, btnBack, btnSendReview)
     show(formReview, btnCancelReview, btnPreview)
-    secNewReview.scrollIntoView({ behavior: "smooth"})
+    scrollTo(secNewReview)
 }
 
 function cancelReview() {
     hide(secNewReview, btnCancelReview, btnPreview)
     show(btnOpenReview)
     resetInput()
-    
 }
 
 function collapseReviewForm() {

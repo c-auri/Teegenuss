@@ -1,3 +1,11 @@
+export function scrollTo(element, options = { }) {
+    element.scrollIntoView({
+        "behavior": options.behavior ?? "smooth",
+        "block": options.block ?? "start",
+        "inline": options.block ?? "start",
+    })
+}
+
 export function isVisible(element) {
     return !isHidden(element)
 }
