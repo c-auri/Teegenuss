@@ -131,7 +131,7 @@ function showPreview() {
             divPreviewContent.innerHTML = generateReviewMarkup(data)
             hide(formReview, btnCancelReview, btnPreview)
             show(divPreview, btnBack, btnSendReview)
-            scrollTo(secNewReview)
+            scrollToReviewSection("new")
         }
     }
 }
@@ -269,13 +269,13 @@ function hasInput(...areas) {
 function expandReviewForm() {
     hide(btnOpenReview)
     show(secNewReview, btnCancelReview, btnPreview)
-    scrollTo(secNewReview)
+    scrollToReviewSection("new")
 }
 
 function goBackToInput() {
     hide(divPreview, btnBack, btnSendReview)
     show(formReview, btnCancelReview, btnPreview)
-    scrollTo(secNewReview)
+    scrollToReviewSection("new")
 }
 
 function cancelReview() {
@@ -293,6 +293,18 @@ function collapseReviewForm() {
 function resetInput() {
     for (const area of document.getElementsByClassName('review-input__textarea')) {
         area.value = ''
+    }
+}
+
+export function scrollToReviewSection(position) {
+    switch (position) {
+        default:
+        case "start":
+            scrollTo(divReviews)
+            break
+        case "new": 
+            scrollTo(secNewReview)
+            break
     }
 }
 
