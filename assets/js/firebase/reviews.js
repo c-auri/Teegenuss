@@ -92,7 +92,6 @@ async function monitorAuthState() {
 
 async function isAllowedToReview(user) {
     return user
-        && user.emailVerified
         && await boughtBundle(user)
         && !hasExistingReview(user)
 }
