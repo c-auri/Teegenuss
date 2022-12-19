@@ -4,18 +4,18 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  
+
   &__section {
     color: $medium-light-gray;
-    background-color: $dark-gray;
-    
+    background-color: $black;
+
     &--dark {
       color: $medium-gray;
-      background-color: $almost-black;
+      background-color: $black;
     }
   }
 }
-  
+
 .sitemap {
   padding: 2.5rem 1rem;
   display: grid;
