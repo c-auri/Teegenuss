@@ -17,5 +17,5 @@ function togglePanelVisibilty() {
     } else {
         panel.style.maxHeight = panel.scrollHeight + 'px';
         expand(this, panel);
-    } 
+    }
 }

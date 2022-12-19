@@ -10,7 +10,7 @@ for (const toggler of togglers) {
     const idLabel = toggler.getAttribute("data-label-id")
     const idUncheckedTarget = toggler.getAttribute("data-target-unchecked")
     const idCheckedTarget = toggler.getAttribute("data-target-checked")
-    
+
     const label = document.getElementById(idLabel)
     const uncheckedTarget = document.getElementById(idUncheckedTarget)
     const checkedTarget = document.getElementById(idCheckedTarget)
