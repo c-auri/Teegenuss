@@ -61,25 +61,22 @@
 
   @media (min-width: $bp-tablet) {
     width: 100%;
-    display: grid;
-    grid-template-columns: calc(100% - 13rem) 13rem;
-    place-items: center;
     color: $medium-dark-gray;
     font-size: var(--fs-400);
     font-weight: 500;
-    
+
     &__group {
       width: 100%;
       display: flex;
       justify-content: right;
       gap: clamp(1rem, 5vw, 3rem);
     }
-    
+
     &__link,
     &__link:hover {
       color: inherit;
     }
-  
+
     &__link::after {
       content: '';
       margin: 1px auto;
@@ -89,7 +86,7 @@
       background-color: $medium-dark-gray;
       transition: width .3s;
     }
-  
+
     &__link--current::after,
     &__link:hover::after {
       width: 75%;
