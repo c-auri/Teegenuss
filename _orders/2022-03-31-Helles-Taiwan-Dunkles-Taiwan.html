@@ -8,7 +8,7 @@ shipping-cost: 5
 
 lead-path: /assets/img/orders/22-2/alishan.jpg
 lead-alt: Berge im Alishan-Gebirge
-excerpt: "Dieses mal gibt es direkt zwei Pakete: eines widmet sich Taiwans heller Seite und besteht Grüntees und Hochgebirgsoolongs, das andere zeigt Taiwans dunkle Seite mit verschiedenen gerösteten Oolongs und zwei Schwarztees."
+excerpt: "Dieses mal gibt es direkt zwei Pakete: eines widmet sich Taiwans heller Seite und besteht aus Grüntees und Hochgebirgsoolongs, das andere zeigt Taiwans dunkle Seite mit verschiedenen gerösteten Oolongs und zwei Schwarztees."
 ---
 <section class="order-intro">
 
@@ -16,7 +16,7 @@ excerpt: "Dieses mal gibt es direkt zwei Pakete: eines widmet sich Taiwans helle
     <img src="{{ page.lead-path }}" alt="{{ page.lead-alt }}">
     <h1 class="hero__title">{{ page.title }}</h1>
   </header>
-  
+
   <div>
 
     <p>
@@ -24,7 +24,7 @@ excerpt: "Dieses mal gibt es direkt zwei Pakete: eines widmet sich Taiwans helle
     </p>
 
   </div>
-  
+
 </section>
 
 {% assign packages = site.packages | where: 'order-id', page.order-id %}
@@ -49,7 +49,7 @@ excerpt: "Dieses mal gibt es direkt zwei Pakete: eines widmet sich Taiwans helle
 <section>
 
   <p class="order-buttons">
-    <button 
+    <button
       class="button button--large"
       {% if page.open %}
         class="order"
