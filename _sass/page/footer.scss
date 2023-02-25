@@ -1,88 +1,51 @@
 .page-footer {
   cursor: default;
   margin-top: auto;
+  padding-top: 2rem;
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: flex-end;
+  color: $medium-gray;
+  background-color: $black;
 
-  &__section {
-    color: $medium-light-gray;
-    background-color: $black;
+  &__content {
+    box-sizing: border-box;
+    padding: 1rem .5rem;
+    max-width: $content-width;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
 
-    &--dark {
-      color: $medium-gray;
-      background-color: $black;
+  &__nav {
+    padding: 0 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+
+    @media (min-width: $bp-tablet) {
+      flex-direction: row;
+      gap: 3rem;
     }
-  }
-}
-
-.sitemap {
-  padding: 2.5rem 1rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  margin: 0 auto;
-  max-width: 100%;
-  width: $content-width;
-
-  @media (min-width: $content-width) {
-    padding: 2.5rem 0;
-  }
-
-  @media (min-width: $bp-tablet) {
-    grid-template-columns: 2fr 2fr 1fr;
-    padding-inline: 0;
-  }
-
-  &__bundle {
-    font-size: var(--fs-500);
-    font-weight: bold;
-  }
-
-  &__teas {
-    padding: 1rem 0;
-  }
-
-  &__tea {
-    list-style: none;
-    padding: .2rem 0;
   }
 
   &__link {
     color: inherit;
+    font-size: var(--fs-400);
 
     &:hover {
-      color: $light-gray;
-    }
-  }
-
-  &__secondary-pages {
-    grid-column: span 2;
-    display: flex;
-    justify-content: start;
-    gap: .5rem;
-
-    @media (min-width: $bp-tablet) {
-      grid-column: span 1;
-      flex-direction: column;
-      justify-content: start;
-    }
-  }
-
-  &__secondary-page {
-    font-size: var(--fs-500);
-    padding-right: 2rem;
-
-    @media (min-width: $bp-tablet) {
-      padding: 0;
+      color: $medium-light-gray;
     }
   }
 }
+
 
 .small-print {
   height: 5rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: var(--fs-300);
+  font-size: var(--fs-200);
+  color: $medium-dark-gray;
 }

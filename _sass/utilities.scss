@@ -18,8 +18,16 @@
   color: $medium-light-gray !important;
 }
 
+.light-gray {
+  color: $light-gray !important;
+}
+
 .fs-300 {
   font-size: var(--fs-300) !important;
+}
+
+.fs-400 {
+  font-size: var(--fs-400) !important;
 }
 
 .fs-500 {
@@ -28,6 +36,10 @@
 
 .fs-600 {
   font-size: var(--fs-600) !important;
+}
+
+.bold {
+  font-weight: bold;
 }
 
 .italic {
