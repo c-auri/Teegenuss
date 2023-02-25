@@ -6,8 +6,13 @@
     <div class="data-table__value">{{ page.type }}</div>
 
     <div class="data-table__attribute--inner">Strauchsorte</div>
-    <div class="data-table__value">{{ page.variety }}</div>
-
+    <div class="data-table__value">
+      {% if page.variety %}
+        {{ page.variety }}
+      {% else %}
+        <span class="medium-gray italic">k.&hairsp;A.</span>
+      {% endif %}
+    </div>
   </div>
 </div>
 
@@ -22,8 +27,12 @@
     </div>
 
     <div class="data-table__value">
-      {{ entry[1] -}}
-      {%- if entry[0] == 'Höhe' %}&hairsp;m{% endif %}
+      {% if entry[1] %}
+        {{ entry[1] -}}
+        {%- if entry[0] == 'Höhe' %}&hairsp;m{% endif %}
+      {% else %}
+        <span class="medium-gray italic">k.&hairsp;A.</span>
+      {% endif %}
     </div>
     {% endfor %}
 
@@ -42,7 +51,11 @@
     </div>
 
     <div class="data-table__value">
-      {{ entry[1] }}
+      {% if entry[1] %}
+        {{ entry[1] -}}
+      {% else %}
+        <span class="medium-gray italic">k.&hairsp;A.</span>
+      {% endif %}
     </div>
     {% endfor %}
 
