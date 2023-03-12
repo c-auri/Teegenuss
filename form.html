@@ -7,13 +7,331 @@ order-id: 22-2
 {% assign packages = site.packages | where: 'order-id', page.order-id %}
 
 <form  class="order-form" name="{{ page.order-id }}" method="POST" action="/success.html" data-netlify="true">
-  
-  {% include form/1-terms.html %}
-  {% include form/2-packages.html %}
-  {% include form/3-contact.html %}
-  {% include form/4-shipping.html %}
-  {% include form/5-addition.html %}
-  {% include form/6-summary.html %}
+
+  <section class="order-form-section terms">
+
+    <h2>Teilnahme&shy;bedingungen</h2>
+
+    <ol>
+      <li>
+        Ich gebe den Tee ohne Gewinnabsicht an euch weiter und bin kein gewerblich eingetragener Händler. Es handelt sich hier um einen freundschaftlichen Austausch. Deshalb ist es mir auch wichtig jeden Teilnehmer zuordnen zu können. Gebt also bitte kurz an woher wir uns kennen.
+      </li>
+      <li>
+        Nachdem ihr die Bestellung aufgegeben habt, kontaktiere ich euch im Discord und gebe euch meine Zahlungsverbindung. Ich bevorzuge PayPal, sollte das für euch nicht möglich sein ist eine Banküberweisung aber auch in Ordnung. Vorkasse ist aber auf alle Fälle erforderlich.
+      </li>
+      <li>
+        Nachdem ich die Zahlungsinformationen weitergegeben habe, reserviere ich für zwei Tage ein Paket. Wenn die Zahlung erfolgt ist geht dieses dann zeitnah in die Post. Sollte ich in den zwei Tagen keine Rückmeldung erhalten gebe ich das Paket wieder frei.
+      </li>
+      <li>
+        Das Paket wird aus Kostengründen unversichtert und ohne Sendungsverfolgung mit der Briefpost verschickt. Bisher ist dabei noch nie etwas schief gegangen. Ihr tragt dabei als Empfänger aber das Risiko. Sollte das Paket auf dem Versandweg doch verloren gehen, werde ich euch die Kosten wahrscheinlich nicht erstatten können. Wer sicher gehen möchte kann sich gegen Aufpreis für eine andere Versandoption entscheiden. Teilt mir das einfach in der Anmerkung mit.
+      </li>
+      <li>
+        Alle persönlichen Daten die ich sammle verwende ich nur zum Abwickeln der Bezahlung und dem Versenden der Pakete. Sie werden von mir direkt im Anschluss an die Teilung gelöscht.
+      </li>
+    </ol>
+
+    <p class="order-buttons">
+
+      {% assign from-order = site.orders | where: 'order-id', page.order-id | first %}
+
+      <button
+        class="button button--white"
+        onclick="location.href='{{ from-order.url }}'"
+        type="button">
+        Zurück
+      </button>
+
+      <button
+        class="button"
+        onclick="advanceTo('packages')"
+        type="button">
+        Weiter
+      </button>
+
+    </p>
+
+  </section>
+
+  <section class="order-form-section packages" hidden>
+
+    <h2>Paketauswahl</h2>
+
+    <p class="order-form-subtitle">
+      Wähle aus welches Paket du möchtest.<br>Du kannst eines oder alle beide nehmen.
+    </p>
+
+    <div class="package-selection">
+
+      {% for package in packages %}
+
+        <label class="container">
+          <input
+              type="checkbox"
+              class="checkbox-package"
+              id="{{ package.order-id }}{{ package.shorthand }}"
+              name="package-{{ package.shorthand }}"
+              value="ordered">
+
+          <div class="package-selector">
+            <h3>
+              {{ package.title }}
+            </h3>
+            {% assign teas = site.teas
+              | where: 'order-id', page.order-id
+              | where: 'package', package.shorthand %}
+
+            {% for tea in teas %}
+              <p class="checkbox-tea">{{ tea.title }}</p>
+            {% endfor %}
+
+            <p class="checkbox-price">{{ package.price }},00&hairsp;€</p>
+
+          </div>
+        </label>
+
+      {% endfor %}
+
+    </div>
+
+    <p class="form-alert" id="package-alert"></p>
+
+    <p class="order-buttons">
+
+      <button
+        class="button button--white"
+        onclick="showForm('terms')"
+        type="button">
+        Zurück
+      </button>
+
+      <button
+        class="button"
+        onclick="advanceTo('contact')"
+        type="button">
+        Weiter
+      </button>
+    </p>
+
+  </section>
+
+  <section class="order-form-section contact" hidden>
+
+    <h2>Kontakt</h2>
+
+    <div class="form-discord">
+      <div class="form">
+        <label for="discord-username">Dein Discord Username</span>: </label>
+        <input type="text" name="discord-username" id="discord-username" />
+      </div>
+
+      <div class="form">
+        <label for="discord-id">Discord&nbsp;ID</span>: </label>
+        <input type="text" name="discord-id" id="discord-id" />
+      </div>
+    </div>
+
+    <p class="form-description">
+      Die ID ist eine vierstellige Nummernfolge hinter deinem Username, zu finden in deinem Profil.
+    </p>
+
+    <div class="form">
+      <label for="connection">Woher kennen wir uns? </label>
+      <input type="text" name="connection" id="connection" />
+      <p class="form-description">z.B. Jomons Stream, Dotasource, etc.</p>
+    </div>
+
+    <p class="form-alert" id="contact-alert"></p>
+
+    <p class="order-buttons">
+
+      <button
+        class="button button--white"
+        onclick="showForm('packages')"
+        type="button">
+        Zurück
+      </button>
+
+      <button
+        class="button"
+        onclick="advanceTo('shipping')"
+        type="button">
+        Weiter
+      </button>
+
+    </p>
+
+  </section>
+
+  <section class="order-form-section shipping" hidden>
+
+    <h2>Lieferadresse</h2>
+
+    <div class="form-name">
+      <div class="form">
+        <label for="first-name">Vorname: </label>
+        <input type="text" name="first-name" id="first-name" />
+      </div>
+      <div class="form">
+        <label for="last-name">Nachname: </label>
+        <input type="text" name="last-name" id="last-name" />
+      </div>
+    </div>
+
+    <div class="form-street">
+      <div class="form">
+        <label for="street-name">Straße: </label>
+        <input type="text" name="street-name" id="street-name" />
+      </div>
+      <div class="form">
+        <label for="street-number">Hausnr.: </label>
+        <input type="text" name="street-number" id="street-number" />
+      </div>
+    </div>
+
+    <div class="form">
+      <label for="additional-info">Adresszusatz: </label>
+      <input type="text" name="additional-info" id="additional-info" />
+    </div>
+
+    <div class="form-city">
+      <div class="form">
+        <label for="postalcode">PLZ: </label>
+        <input type="text" name="postalcode" id="postal-code" />
+      </div>
+
+      <div class="form">
+        <label for="city">Ort: </label>
+        <input type="text" name="city" id="city"/>
+      </div>
+    </div>
+
+    <div class="form">
+      <label for="country">Land: </label>
+      <input type="text" name="country" id="country"/>
+    </div>
+
+    <p class="form-description">
+      Versand ins nichtdeutsche Ausland ist gegen Aufpreis möglich. Die Preise dafür kann ich aber noch nicht automatisch angeben. Das besprechen wir dann ggf. nach der Bestellung übers Discord.
+    </p>
+
+    <p class="form-alert" id="shipping-alert"></p>
+
+    <p class="order-buttons">
+
+      <button
+        class="button button--white"
+        onclick="showForm('contact')"
+        type="button">
+        Zurück
+      </button>
+
+      <button
+        class="button"
+        onclick="advanceTo('addition')"
+        type="button">
+        Weiter
+      </button>
+
+    </p>
+
+  </section>
+
+  <section class="order-form-section addition" hidden>
+
+    <h2>Anmerkung</h2>
+
+    <div class="form">
+      <textarea name="addition" id="addition"></textarea>
+    </div>
+
+    <p class="form-description">
+      Falls du mir noch etwas mitteilen möchtest.
+    </p>
+
+    <p class="order-buttons">
+
+      <button
+        class="button button--white"
+        onclick="showForm('shipping')"
+        type="button">
+        Zurück
+      </button>
+
+      <button
+        class="button"
+        onclick="advanceTo('summary'); summarize();"
+        type="button">
+        Weiter
+      </button>
+
+    </p>
+
+  </section>
+
+  <section class="order-form-section summary" hidden>
+
+    <h2>Zusammenfassung</h2>
+
+    <div class="summary-person">
+      <div>
+        <h3 class="summary__heading">Kontakt</h3>
+        <p id="discord-summary"></p>
+        <p id="connection-summary"></p>
+      </div>
+      <div>
+        <h3 class="summary__heading">Lieferadresse</h3>
+        <p id="name-summary"></p>
+        <p id="street-summary"></p>
+        <p id="info-summary"></p>
+        <p id="city-summary"></p>
+        <p id="country-summary"></p>
+      </div>
+    </div>
+
+    <div class="summary-addition">
+      <h3 class="summary__heading">Anmerkung</h3>
+      <p id="summary-addition"></p>
+    </div>
+
+    <div class="summary-order">
+      <h3 class="summary__heading">Kosten</h3>
+      <table>
+        {% for package in packages %}
+          <tr id="listing-{{ package.order-id }}{{ package.shorthand }}">
+            <td>{{ package.title }}</td>
+            <td>{{ package.price }},00&hairsp;€</td>
+          </tr>
+        {% endfor %}
+        <tr>
+          <td>Verpackung & Versand</td>
+          <td><span id="shipping-cost-euro">{{ order.shipping-cost }}</span>,00&hairsp;€</td>
+        </tr>
+        <tr>
+          <td>Gesamt</td>
+          <td class="total-cost"><span id="total-cost-euro">{{ order-shipping-cost }}</span>,00&hairsp;€</td>
+        </tr>
+      </table>
+      <p class="form-description" id="shipping-description">
+        evtl. zzgl. Auslandsversandkosten
+      </p>
+    </div>
+
+    <p class="order-buttons">
+
+      <button
+        class="button button--white"
+        onclick="showForm('addition')"
+        type="button">
+        Zurück
+      </button>
+
+      <button class="button button--accept" type="submit">
+        Bestellen
+      </button>
+
+    </p>
+
+  </section>
 
 </form>
 
