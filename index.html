@@ -1,8 +1,8 @@
 ---
 title: "Projekt Teegenuss"
 ---
-{% assign orders = site.orders | sort: date %}
-{% assign primary = orders | where: "order-id", "22-2" | first %}
+{% assign orders = site.orders | sort: date | reverse %}
+{% assign primary = orders | where: "primary", "true" | first %}
 
 <section class="order-showcase order-showcase--primary">
 
@@ -18,13 +18,13 @@ title: "Projekt Teegenuss"
     <p>
       {{ primary.excerpt }}
     </p>
-  
+
     <p class="learn-more">
       <a class="button button--large" href="{{ primary.url }}">Mehr erfahren</a>
     </p>
 
   </div>
-    
+
 </section>
 
 <section class="orders">
@@ -33,25 +33,31 @@ title: "Projekt Teegenuss"
     <h2 class="orders__header">Weitere</h2>
   </header>
 
-  {% assign closed = orders | where: 'open', 'false' %}
-  {% for order in closed %}
-  <article class="order-showcase order-showcase--secondary">  
-  
+  {% assign secondary = orders | where: 'primary', 'false' %}
+  {% for order in secondary %}
+  <article class="order-showcase order-showcase--secondary">
+
     <a class="order-showcase__image" href="{{ order.url }}">
-      <img src="{{ order.lead-path }}" alt="{{ order.lead-alt }}">
+      <img src="{{ order.preview-path }}" alt="{{ order.lead-alt }}">
     </a>
-  
+
     <header class="text-header text-align-left">
       <a class="order-link" href="{{ order.url }}">
-        <span class="subtitle subtitle--medium">Beendet</span>
+        <span class="subtitle subtitle--medium">
+          {% if order.open %}
+            Laufend
+          {% else %}
+            Beendet
+          {% endif %}
+        </span>
         <h3 class="title title--link title--medium">{{ order.title }}</h3>
       </a>
     </header>
-  
+
     <p>
       {{ order.excerpt }}
     </p>
-    
+
     <p class="learn-more">
       <a class="button button--large" href="{{ order.url }}">Mehr erfahren</a>
     </p>
