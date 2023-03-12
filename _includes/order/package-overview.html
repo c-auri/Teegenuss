@@ -1,16 +1,16 @@
 <div class="package__overview">
-  {% assign teas = site.teas 
+  {% assign teas = site.teas
     | where: 'order-id',  package.order-id
-    | where: 'package', package.shorthand 
+    | where: 'package', package.shorthand
     | sort: 'key' %}
 
   {%- for tea in teas -%}
   <a class="tea-showcase" href="{{- tea.url -}}">
     {% if tea.no-hover %}
-    <img src="/assets/img/orders/{{tea.order-id}}/{{tea.shorthand}}/thumb.jpg" alt="">
+    <img src="/assets/img/orders/{{tea.order-id}}/{{tea.shorthand}}/thumb.png" alt="">
     {% else %}
-    <img class="thumb" src="/assets/img/orders/{{tea.order-id}}/{{tea.shorthand}}/thumb.jpg" alt="">
-    <img class="hover" src="/assets/img/orders/{{tea.order-id}}/{{tea.shorthand}}/hover.jpg" alt="">
+    <img class="thumb" src="/assets/img/orders/{{tea.order-id}}/{{tea.shorthand}}/thumb.png" alt="">
+    <img class="hover" src="/assets/img/orders/{{tea.order-id}}/{{tea.shorthand}}/hover.png" alt="">
     {% endif %}
     <p>{{ tea.title }}</p>
     <p class="subtitle">
