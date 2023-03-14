@@ -5,7 +5,9 @@
 }
 
 .package {
-  margin-top: 5rem;
+  header {
+    margin-top: 5rem;
+  }
 
   &__overview {
     margin: 3rem auto;

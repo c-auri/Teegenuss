@@ -4,7 +4,7 @@ layout: none
 
 function advanceTo(formName) {
   if (formName == "packages" ||
-    formName == "contact" && validatePackages() || 
+    formName == "contact" && validatePackages() ||
     formName == "shipping" && validateContact() ||
     formName == "addition" && validateShipping() ||
     formName == "summary") {
@@ -29,7 +29,7 @@ function hideAllSections() {
   }
 }
 
-function summarize() {
+function summarize(orderId) {
   let username = document.getElementById("discord-username").value;
   let userID = document.getElementById("discord-id").value;
   let discord = document.getElementById("discord-summary");
@@ -70,46 +70,49 @@ function summarize() {
     additionSummary.innerHTML = addition;
   }
 
-  summarizeCosts();
+  summarizeCosts(orderId);
 }
 
-function summarizeCosts() {
-  {% assign packages = site.packages | where: 'order-id', '22-2' %}
+function summarizeCosts(orderId) {
+  {% assign packages = site.packages %}
   let spanShippingCost = document.getElementById("shipping-cost-euro").innerHTML;
   let totalCost = parseInt(spanShippingCost);
-  
+
   var checkbox;
   var listing;
 
   {% for package in packages %}
-    checkbox = document.getElementById("{{package.order-id}}{{ package.shorthand }}");
-    listing = document.getElementById("listing-{{package.order-id}}{{ package.shorthand }}");
+    if ("{{ package.order-id}}" === orderId) {
+      checkbox = document.getElementById("{{package.order-id}}{{ package.shorthand }}");
+      listing = document.getElementById("listing-{{package.order-id}}{{ package.shorthand }}");
 
-    if (checkbox.checked) {
-      totalCost += {{ package.price }};
-      listing.removeAttribute("hidden");
+      if (checkbox.checked) {
+        totalCost += {{ package.price }};
+        listing.removeAttribute("hidden");
+      }
+      else {
+        listing.setAttribute("hidden", "hidden");
+      }
     }
-    else {
-      listing.setAttribute("hidden", "hidden");
-    }
+
   {% endfor %}
-    
+
   let spanTotalCost = document.getElementById("total-cost-euro");
   spanTotalCost.innerHTML = totalCost;
 }
 
 function validatePackages() {
   let checkboxes = document.getElementsByClassName("checkbox-package");
-  
+
   let checked = false;
-  
+
   for (let i = 0; i < checkboxes.length; i++) {
     checked |= checkboxes[i].checked
   }
-  
+
   fillAlert(
-    checked, 
-    "package-alert", 
+    checked,
+    "package-alert",
     "Bitte wähle mindestens ein Paket aus.");
 
   return checked;
@@ -117,12 +120,12 @@ function validatePackages() {
 
 function validateContact() {
   let isValid = true;
-  
+
   isValid &= validateTextInput("discord-username");
   isValid &= validateTextInput("connection");
-  
+
   let id = document.getElementById("discord-id");
-  
+
   if (isNaN(id.value) || id.value.length != 4 || id.value < 1 || id.value > 10000) {
     id.classList.add("invalid")
     isValid &= false;
@@ -130,7 +133,7 @@ function validateContact() {
   else {
     id.classList.remove("invalid");
   }
-  
+
   fillAlert(isValid, "contact-alert");
 
   return isValid;
@@ -147,20 +150,20 @@ function validateShipping() {
     "country",
   ]
 
-  
+
   let isValid = true;
-  
+
   for (let i = 0; i < ids.length; i++) {
     isValid &= validateTextInput(ids[i]);
   }
-  
+
   fillAlert(isValid, "shipping-alert");
-  
+
   return isValid;
 }
 
 function fillAlert(
-  isValid, 
+  isValid,
   alertID,
   message = "Bitte fülle alle Pflichtfelder aus.") {
   let alert = document.getElementById(alertID)
@@ -168,13 +171,13 @@ function fillAlert(
     alert.innerHTML = "";
   }
   else {
-    alert.innerHTML = message;  
+    alert.innerHTML = message;
   }
 }
 
 function validateTextInput(id) {
   let element = document.getElementById(id);
-  
+
   if (element.value.length == 0) {
     element.classList.add("invalid")
     return false;

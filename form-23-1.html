@@ -1,6 +1,6 @@
 ---
 layout: default
-order-id: 22-2
+order-id: 23-1
 ---
 
 {% assign order = site.orders | where: 'order-id', page.order-id | first %}
@@ -43,7 +43,7 @@ order-id: 22-2
 
       <button
         class="button"
-        onclick="advanceTo('packages')"
+        onclick="advanceTo('contact')"
         type="button">
         Weiter
       </button>
@@ -70,7 +70,8 @@ order-id: 22-2
               class="checkbox-package"
               id="{{ package.order-id }}{{ package.shorthand }}"
               name="package-{{ package.shorthand }}"
-              value="ordered">
+              value="ordered"
+              checked="checked">
 
           <div class="package-selector">
             <h3>
@@ -259,7 +260,7 @@ order-id: 22-2
 
       <button
         class="button"
-        onclick="advanceTo('summary'); summarize('22-2');"
+        onclick="advanceTo('summary'); summarize('23-1');"
         type="button">
         Weiter
       </button>

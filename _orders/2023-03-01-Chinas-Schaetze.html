@@ -7,9 +7,10 @@ open: true
 shipping-cost: 5
 primary: true
 
-lead-path: /assets/img/orders/22-2/alishan.jpg
-lead-alt: Berge im Alishan-Gebirge
-excerpt: "Lorem Ipsum"
+lead-path: /assets/img/orders/23-1/clay-banks.jpg
+preview-path: /assets/img/orders/23-1/clay-banks-preview.jpg
+lead-alt: Eine Teeplantage
+excerpt: "Diese Paket gibt einen Überblick über das breite Spektrum des chinesischen Tees. Das Herzstück sind dabei vier verschiedene Oolongs in verschiedenen Röststufen. Begleitet werden sie von verschiedenen grünen, weißen und schwarzen Tees. Auch dabei ist ein Vertreter des im Westen eher unbekannten nachfermentiertem Heichas."
 ---
 <section class="order-intro">
 
@@ -32,11 +33,6 @@ excerpt: "Lorem Ipsum"
 {% for package in packages %}
 <section class="package">
 
-  <header class="text-header">
-    <span class="subtitle subtitle--medium">Paket</span>
-    <h2 class="title title--medium">{{ package.title }}</h2>
-  </header>
-
   <p>
     {{ package.content }}
   </p>
@@ -54,7 +50,7 @@ excerpt: "Lorem Ipsum"
       class="button button--large"
       {% if page.open %}
         class="order"
-        onclick="location.href='/form'"
+        onclick="location.href='/form-23-1'"
       {% else %}
         class="order-closed"
       {% endif %}
