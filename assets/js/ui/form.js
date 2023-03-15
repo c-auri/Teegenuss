@@ -1,6 +1,13 @@
 ---
 layout: none
 ---
+document.querySelector(".order-form").onkeypress = function(e) {
+  var key = e.charCode || e.keyCode || 0;
+  if (key == 13) {
+    e.preventDefault();
+  }
+}
+
 
 function advanceTo(formName) {
   if (formName == "packages" ||
