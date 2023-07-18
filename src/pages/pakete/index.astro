@@ -1,0 +1,18 @@
+---
+import Page from '../../layouts/Page.astro'
+import { getCollection } from "astro:content"
+
+const packs = await getCollection('packs')
+---
+<Page title="Projekt Teegenuss">
+  <ul>
+  {
+    packs.reverse().map(async (pack) => {
+      return (
+        <li><a href={`${pack.data.route}`}>
+          {pack.data.title}
+        </a></li>)
+    })
+  }
+  </ul>
+</Page>

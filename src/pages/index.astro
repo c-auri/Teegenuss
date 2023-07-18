@@ -1,19 +1,6 @@
 ---
 import Page from '../layouts/Page.astro'
-import { getCollection, getEntry } from "astro:content"
-
-const teas = await getCollection('teas')
 ---
 <Page title="Projekt Teegenuss">
-  <ul>
-  {
-    teas.map(async (tea) => {
-      const pack = await getEntry('packs', tea.data.pack.id)
-      return (
-        <li><a href={`pakete/${pack.data.route}/${tea.data.route}`}>
-          {tea.data.title}
-        </a></li>)
-    })
-  }
-  </ul>
+    <a href="/pakete">Pakete</a>
 </Page>
