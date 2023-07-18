@@ -2,8 +2,9 @@
 title: Canton Canon TGY
 route: canton-canon
 pack: 23-1-Chinas-Schaetze
-shop: white2tea
-shopUrl: https://white2tea.com/products/canton-canon?variant=43599182692580
+shop:
+    name: white2tea
+    url: https://white2tea.com/products/canton-canon?variant=43599182692580
 amount: 12&hairsp;g
 price: 0.29
 currency: €

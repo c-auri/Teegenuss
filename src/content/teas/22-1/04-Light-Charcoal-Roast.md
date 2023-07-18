@@ -2,8 +2,9 @@
 title: Kohle-gerösteter JX
 route: lcrjx
 pack: 22-1-Einstieg
-shop: Taiwan Tea Crafts
-shopUrl: https://www.taiwanteacrafts.com/product/organic-jin-xuan-light-charcoal-pit-fired-oolong-tea
+shop:
+    name: Taiwan Tea Crafts
+    url: https://www.taiwanteacrafts.com/product/organic-jin-xuan-light-charcoal-pit-fired-oolong-tea
 amount: 12&hairsp;g
 price: 0.22
 currency: $

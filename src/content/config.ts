@@ -16,8 +16,10 @@ const teas = defineCollection({
     title: z.string(),
     route: z.string(),
     pack: reference('packs'),
-    shop: z.string(),
-    shopUrl: z.string().url(),
+    shop: z.object({
+      name: z.string(),
+      url: z.string().url(),
+    }),
     amount: z.string(),
     price: z.number(),
     currency: z.string(),

@@ -2,8 +2,9 @@
 title: Bai Hao
 route: bai-hao
 pack: 22-1-Einstieg
-shop: Taiwan Tea Crafts
-shopUrl: https://www.taiwanteacrafts.com/product/oriental-beauty-superior-grade-oolong-tea
+shop:
+    name: Taiwan Tea Crafts
+    url: https://www.taiwanteacrafts.com/product/oriental-beauty-superior-grade-oolong-tea
 amount: 12&hairsp;g
 price: 0.29
 currency: $

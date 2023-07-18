@@ -2,8 +2,9 @@
 title: Fuzhuan
 route: fuzhuan
 pack: 23-1-Chinas-Schaetze
-shop: Teewald
-shopUrl: https://teewald.de/products/anhua-heicha
+shop:
+    name: Teewald
+    url: https://teewald.de/products/anhua-heicha
 amount: 12&hairsp;g
 price: 0.29
 currency: €
