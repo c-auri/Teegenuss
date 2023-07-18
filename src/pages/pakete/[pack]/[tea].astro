@@ -1,5 +1,5 @@
 ---
-import Tea from '../../../layouts/Tea.astro'
+import Page from '../../../layouts/Page.astro'
 import  { getCollection } from 'astro:content'
 
 export async function getStaticPaths() {
@@ -19,7 +19,7 @@ export async function getStaticPaths() {
 const { entry } = Astro.props
 const { Content } = await entry.render()
 ---
-<Tea title={entry.data.title}>
+<Page title={entry.data.title}>
     <h1>{entry.data.title}</h1>
     <Content />
-</Tea>
+</Page>

@@ -1,24 +1,19 @@
 ---
-import { getCollection, getEntry } from "astro:content";
+import Page from '../layouts/Page.astro'
+import { getCollection, getEntry } from "astro:content"
 
 const teas = await getCollection('teas')
 ---
-<html>
-  <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-  </head>
-  <body>
-    <a href="/">Projekt Teegenuss</a>
-    <ul>
-    {
-      teas.map(async (tea) => {
-        const pack = await getEntry('packs', tea.data.pack.id)
-        return (
-          <li><a href={`pakete/${pack.data.route}/${tea.data.route}`}>
-            {tea.data.title}
-          </a></li>)
-      })
-    }
-    </ul>
-  </body>
-</html>
+<Page title="Projekt Teegenuss">
+  <ul>
+  {
+    teas.map(async (tea) => {
+      const pack = await getEntry('packs', tea.data.pack.id)
+      return (
+        <li><a href={`pakete/${pack.data.route}/${tea.data.route}`}>
+          {tea.data.title}
+        </a></li>)
+    })
+  }
+  </ul>
+</Page>
