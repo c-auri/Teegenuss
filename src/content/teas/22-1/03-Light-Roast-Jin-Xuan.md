@@ -1,6 +1,7 @@
 ---
-slug: taiwan-einstieg/light-roast-jin-xuan
 title: Leicht gerösteter JX
+route: lrjx
+pack: 22-1-Einstieg
 shop: Taiwan Tea Crafts
 shopUrl: https://www.taiwanteacrafts.com/product/organic-jin-xuan-oolong-tea
 amount: 12&hairsp;g

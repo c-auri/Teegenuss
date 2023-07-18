@@ -1,5 +1,5 @@
 ---
-import { getCollection } from "astro:content";
+import { getCollection, getEntry } from "astro:content";
 
 const teas = await getCollection('teas')
 ---
@@ -11,7 +11,13 @@ const teas = await getCollection('teas')
     <a href="/">Projekt Teegenuss</a>
     <ul>
     {
-      teas.map(tea => <li><a href={tea.slug}>{tea.data.title}</a></li>)
+      teas.map(async (tea) => {
+        const pack = await getEntry('packs', tea.data.pack.id)
+        return (
+          <li><a href={`pakete/${pack.data.route}/${tea.data.route}`}>
+            {tea.data.title}
+          </a></li>)
+      })
     }
     </ul>
   </body>

@@ -1,6 +1,7 @@
 ---
-slug: taiwan-einstieg/light-charcoal-roast-jin-xuan
 title: Kohle-gerösteter JX
+route: lcrjx
+pack: 22-1-Einstieg
 shop: Taiwan Tea Crafts
 shopUrl: https://www.taiwanteacrafts.com/product/organic-jin-xuan-light-charcoal-pit-fired-oolong-tea
 amount: 12&hairsp;g

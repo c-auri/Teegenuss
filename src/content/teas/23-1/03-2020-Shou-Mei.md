@@ -1,6 +1,7 @@
 ---
-slug: chinas-schaetze/2020-shou-mei
 title: 2020 Shou Mei
+route: shou-mei
+pack: 23-1-Chinas-Schaetze
 shop: Teewald
 shopUrl: https://teewald.de/collections/weisser-tee/products/2020-shoumei-weisser-tee-perle
 amount: "2x8&hairsp;g"

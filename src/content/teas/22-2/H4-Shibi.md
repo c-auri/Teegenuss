@@ -1,6 +1,7 @@
 ---
-slug: helles-taiwan/shibi
 title: Shibi
+route: shibi
+pack: 22-2-Helles-Taiwan
 shop: Taiwan Tea Crafts
 shopUrl: https://www.taiwanteacrafts.com/product/shibi-high-mountain-spring-oolong-tea/?v=3a52f3c22ed6
 amount: 12&hairsp;g

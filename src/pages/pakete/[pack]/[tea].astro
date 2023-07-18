@@ -1,0 +1,25 @@
+---
+import Tea from '../../../layouts/Tea.astro'
+import  { getCollection } from 'astro:content'
+
+export async function getStaticPaths() {
+    const teas = await getCollection('teas')
+    const packs = await getCollection('packs')
+    
+    return teas.map(tea => {
+        const pack = packs.find(p => p.id === tea.data.pack.id)!
+        return {
+            params: { 
+                pack: pack.data.route,
+                tea: tea.data.route }, 
+            props: { entry: tea }
+        }})
+}
+
+const { entry } = Astro.props
+const { Content } = await entry.render()
+---
+<Tea title={entry.data.title}>
+    <h1>{entry.data.title}</h1>
+    <Content />
+</Tea>

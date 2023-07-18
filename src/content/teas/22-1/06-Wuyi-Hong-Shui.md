@@ -1,6 +1,7 @@
 ---
-slug: taiwan-einstieg/wuyi
 title: Wuyi Hong Shui
+route: wuyi
+pack: 22-1-Einstieg
 shop: Taiwan Tea Crafts
 shopUrl: https://www.taiwanteacrafts.com/product/wuyi-hong-shui-high-mountain-oolong-tea
 amount: 12&hairsp;g

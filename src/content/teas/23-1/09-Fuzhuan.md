@@ -1,6 +1,7 @@
 ---
-slug: chinas-schaetze/fuzhuan
 title: Fuzhuan
+route: fuzhuan
+pack: 23-1-Chinas-Schaetze
 shop: Teewald
 shopUrl: https://teewald.de/products/anhua-heicha
 amount: 12&hairsp;g

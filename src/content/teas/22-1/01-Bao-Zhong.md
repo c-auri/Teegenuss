@@ -1,6 +1,7 @@
 ---
-slug: taiwan-einstieg/bao-zhong
 title: Bao Zhong
+route: bao-zhong
+pack: 22-1-Einstieg
 shop: Taiwan Tea Crafts
 shopUrl: https://www.taiwanteacrafts.com/product/baguashan-spring-bao-zhong-tea/
 amount: 12&hairsp;g

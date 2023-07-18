@@ -1,6 +1,7 @@
 ---
-slug: chinas-schaetze/canton-canon-tgy
 title: Canton Canon TGY
+route: canton-canon
+pack: 23-1-Chinas-Schaetze
 shop: white2tea
 shopUrl: https://white2tea.com/products/canton-canon?variant=43599182692580
 amount: 12&hairsp;g

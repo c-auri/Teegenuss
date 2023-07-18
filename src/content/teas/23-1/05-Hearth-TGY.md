@@ -1,6 +1,7 @@
 ---
-slug: chinas-schaetze/hearth-tgy
 title: Hearth TGY
+route: hearth
+pack: 23-1-Chinas-Schaetze
 shop: white2tea
 shopUrl: https://white2tea.com/collections/oolong-tea/products/hearth-tieguanyin
 amount: 12&hairsp;g
