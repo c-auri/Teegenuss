@@ -24,6 +24,8 @@ properties:
 preparation:
     gongfu:
         temperature: 90°C
+        amount:
+            ball: 'etwa 100-150ml pro Kugel'
         times:
             rinse: '30-60 Sekunden'
             firstInfusion: '20 Sekunden'

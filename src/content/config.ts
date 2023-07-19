@@ -26,8 +26,8 @@ const teas = defineCollection({
     properties: z.object({
       categorization: z.object({
         tea: z.string(),
-        plant: z.string(),
-      }).partial(),
+        plant: z.optional(z.string()),
+      }),
       origin: z.object({
         country: z.string(),
         province: z.string(),
@@ -44,11 +44,12 @@ const teas = defineCollection({
       }).partial(),
     }).partial(),
     preparation: z.object({
-      gongfu: z.object({
+      gongfu: z.optional(z.object({
         temperature: z.string(),
         amount: z.object({
           weight: z.string(),
           orVolume: z.string(),
+          ball: z.string(),
         }).partial(),
         times: z.object({
           rinse: z.string(),
@@ -59,9 +60,9 @@ const teas = defineCollection({
           until: z.string(),
           laterInfusions: z.string(),
         }).partial()
-      }).partial()
-    }).partial()
-  }).partial()
+      }))
+    })
+  })
 });
 
 const tags = defineCollection({
