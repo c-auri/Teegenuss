@@ -1,0 +1,13 @@
+---
+import Page from '../../layouts/Page.astro';
+import GlossaryEntry from '../../components/glossary/entry.astro'
+
+import  { getCollection } from 'astro:content'
+
+const tags = await getCollection('tags')
+---
+<Page>
+    {
+        tags.map(tag => <GlossaryEntry tag={tag} />)
+    }
+</Page>

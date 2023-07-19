@@ -1,0 +1,26 @@
+---
+const { tag } = Astro.props
+const { Content } = await tag.render()
+---
+<div>
+    <h2 id={tag.slug}>{tag.data.title}</h2>
+    <p>
+    {
+        tag.data.translation &&
+        <span>Übersetzt: {tag.data.translation}</span>
+    }
+    {
+        tag.data.synonyms &&
+        <span>Auch: {tag.data.synonyms}</span>
+    }
+    </p>
+    <p>
+        <Content />
+    </p>
+</div>
+<style>
+    span {
+        display: block;
+        opacity: .75;
+    }
+</style>

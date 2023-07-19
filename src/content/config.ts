@@ -64,7 +64,17 @@ const teas = defineCollection({
   }).partial()
 });
 
+const tags = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    translation: z.optional(z.string()),
+    synonyms: z.optional(z.string()),
+  })
+})
+
 export const collections = {
   'packs': packs,
   'teas': teas,
+  'tags': tags,
 };
