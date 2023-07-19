@@ -23,7 +23,45 @@ const teas = defineCollection({
     amount: z.string(),
     price: z.number(),
     currency: z.string(),
-  })
+    properties: z.object({
+      categorization: z.object({
+        tea: z.string(),
+        plant: z.string(),
+      }).partial(),
+      origin: z.object({
+        country: z.string(),
+        province: z.string(),
+        region: z.string(),
+        town: z.string(),
+        elevation: z.string(),
+      }).partial(),
+      production: z.object({
+        harvest: z.string(),
+        picking: z.string(),
+        oxidation: z.string(),
+        roast: z.string(),
+        roastMethod: z.string(),
+      }).partial(),
+    }).partial(),
+    preparation: z.object({
+      gongfu: z.object({
+        temperature: z.string(),
+        amount: z.object({
+          weight: z.string(),
+          orVolume: z.string(),
+        }).partial(),
+        times: z.object({
+          rinse: z.string(),
+          firstInfusions: z.string(),
+          firstInfusion: z.string(),
+          secondInfusion: z.string(),
+          thirdInfusion: z.string(),
+          until: z.string(),
+          laterInfusions: z.string(),
+        }).partial()
+      }).partial()
+    }).partial()
+  }).partial()
 });
 
 export const collections = {

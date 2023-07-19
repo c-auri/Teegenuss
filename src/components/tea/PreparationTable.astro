@@ -1,0 +1,46 @@
+---
+import PreparationRow from "./preparationRow.astro";
+
+const { preparation } = Astro.props
+---
+<table>
+    <tbody>
+        <tr>
+            <th>Temperatur</th>
+            <td></td>
+            <td>{preparation.gongfu.temperature}</td>
+        </tr>
+        {
+            preparation.gongfu.amount &&
+            <PreparationRow 
+                group={preparation.gongfu.amount}
+                title="Menge"
+                dictionary={{
+                    "weight": "Gewicht",
+                    "orVolume": "oder Volumen"
+                }}
+            />
+        }
+        {
+            preparation.gongfu.times &&
+            <PreparationRow 
+                group={preparation.gongfu.times}
+                title="Ziehzeiten"
+                dictionary={{
+                    "rinse": "Abguss",
+                    "firstInfusions": "ersten Aufgüsse",
+                    "firstInfusion": "erster Aufguss",
+                    "secondInfusion": "zweiter Aufguss",
+                    "thirdInfusion": "dritter Aufguss",
+                    "until": "bis",
+                    "laterInfusions": "später"
+                }}
+            />
+        }
+    </tbody>
+</table>
+<style>
+    table {
+        margin: 1rem 0;
+    }
+</style>

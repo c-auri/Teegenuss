@@ -1,5 +1,8 @@
 ---
 import Page from '../../../layouts/Page.astro'
+import PropertyTable from '../../../components/tea/PropertyTable.astro'
+import PreparationTable from '../../../components/tea/PreparationTable.astro'
+
 import  { getCollection } from 'astro:content'
 
 export async function getStaticPaths() {
@@ -7,11 +10,11 @@ export async function getStaticPaths() {
     const packs = await getCollection('packs')
     
     return teas.map(tea => {
-        const pack = packs.find(p => p.id === tea.data.pack.id)!
+        const pack = packs.find(p => p.id === tea.data.pack!.id)!
         return {
             params: { 
                 pack: pack.data.route,
-                tea: tea.data.route }, 
+                    tea: tea.data.route }, 
             props: { entry: tea }
         }})
 }
@@ -21,5 +24,14 @@ const { Content } = await entry.render()
 ---
 <Page title={entry.data.title}>
     <h1>{entry.data.title}</h1>
+    <span>{entry.data.properties.category}</span>
+    {
+        entry.data.properties &&
+        <PropertyTable properties={entry.data.properties} />
+    }
+    {
+        entry.data.preparation &&
+        <PreparationTable preparation={entry.data.preparation} />
+    }
     <Content />
 </Page>

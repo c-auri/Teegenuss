@@ -1,0 +1,41 @@
+---
+import PropertyRow from "./PropertyRow.astro"
+
+const { properties } = Astro.props
+---
+<table>
+    <tbody>
+        <PropertyRow 
+            group={Object.entries(properties.categorization)} 
+            title="Sorte" 
+            dictionary={{
+                "tea": "Teesorte",
+                "plant": "Strauchsorte"
+        }} />
+        <PropertyRow 
+            group={Object.entries(properties.origin)} 
+            title="Herkunft" 
+            dictionary={{
+                "country": "Land",
+                "province": "Provinz",
+                "region": "Region",
+                "town": "Ortschaft",
+                "elevation": "Höhe"
+        }} />
+        <PropertyRow 
+            group={Object.entries(properties.production)} 
+            title="Verarbeitung" 
+            dictionary={{
+                "harvest": "Ernte",
+                "picking": "Pflückung",
+                "oxidation": "Oxidation",
+                "roast": "Röstung",
+                "roastMethod": "Röstungsmethode"
+        }} />
+    </tbody>
+</table>
+<style>
+    table {
+        margin: 1rem 0;
+    }
+</style>
