@@ -24,15 +24,30 @@ const { entry } = Astro.props
 const { Content } = await entry.render()
 ---
 <Page title={entry.data.title}>
-    <h1>{entry.data.title}</h1>
-    <PurchaseInfo purchase={entry.data.purchase} />
-    {
-        entry.data.properties &&
-        <PropertyTable properties={entry.data.properties} />
-    }
-    {
-        entry.data.preparation &&
-        <PreparationTable preparation={entry.data.preparation} />
-    }
-    <Content />
+    <div class="description">
+        <h1>{entry.data.title}</h1>
+        <PurchaseInfo purchase={entry.data.purchase} />
+        <Content />
+    </div>
+    <div class="infobox">
+        {
+            entry.data.properties &&
+            <PropertyTable properties={entry.data.properties} />
+        }
+        {
+            entry.data.preparation &&
+            <PreparationTable preparation={entry.data.preparation} />
+        }
+    </div>
 </Page>
+<style>
+    .description {
+        max-width: 32rem;
+    }
+
+    .infobox {
+        display: flex;
+        justify-content: space-evenly;
+        background-color: whitesmoke;
+    }
+</style>
