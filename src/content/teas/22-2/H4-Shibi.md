@@ -2,12 +2,12 @@
 title: Shibi
 route: shibi
 pack: 22-2-Helles-Taiwan
-shop:
-    name: Taiwan Tea Crafts
-    url: https://www.taiwanteacrafts.com/product/shibi-high-mountain-spring-oolong-tea/?v=3a52f3c22ed6
-amount: 12 g
-price: 0.25
-currency: $
+purchase:
+    shopName: Taiwan Tea Crafts
+    shopUrl: https://www.taiwanteacrafts.com/product/shibi-high-mountain-spring-oolong-tea/?v=3a52f3c22ed6
+    amount: 12 g
+    pricePer100g: 0,25
+    currency: $
 properties:
     categorization:
         tea:  Oolong

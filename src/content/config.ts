@@ -16,13 +16,13 @@ const teas = defineCollection({
     title: z.string(),
     route: z.string(),
     pack: reference('packs'),
-    shop: z.object({
-      name: z.string(),
-      url: z.string().url(),
+    purchase: z.object({
+      shopName: z.string(),
+      shopUrl: z.string().url(),
+      amount: z.string(),
+      pricePer100g: z.string(),
+      currency: z.string(),
     }),
-    amount: z.string(),
-    price: z.number(),
-    currency: z.string(),
     properties: z.object({
       categorization: z.object({
         tea: z.string(),

@@ -2,12 +2,12 @@
 title: Hearth TGY
 route: hearth
 pack: 23-1-Chinas-Schaetze
-shop:
-    name: white2tea
-    url: https://white2tea.com/collections/oolong-tea/products/hearth-tieguanyin
-amount: 12 g
-price: 0.31
-currency: €
+purchase:
+    shopName: white2tea
+    shopUrl: https://white2tea.com/collections/oolong-tea/products/hearth-tieguanyin
+    amount: 12 g
+    pricePer100g: 0,31
+    currency: €
 properties:
     categorization:
         tea:  Oolong

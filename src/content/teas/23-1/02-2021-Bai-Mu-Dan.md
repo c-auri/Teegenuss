@@ -2,12 +2,12 @@
 title: 2021 Bai Mu Dan
 route: bai-mu-dan
 pack: 23-1-Chinas-Schaetze
-shop:
-    name: Teewald
-    url: https://teewald.de/collections/weisser-tee/products/2021-pai-mu-tan-teekuchen
-amount: "12 g"
-price: 0.28
-currency: €
+purchase:
+    shopName: Teewald
+    shopUrl: https://teewald.de/collections/weisser-tee/products/2021-pai-mu-tan-teekuchen
+    amount: 12 g
+    pricePer100g: 0,28
+    currency: €
 properties:
     categorization:
         tea:  Weißer Tee

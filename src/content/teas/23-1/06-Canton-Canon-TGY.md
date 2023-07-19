@@ -2,12 +2,12 @@
 title: Canton Canon TGY
 route: canton-canon
 pack: 23-1-Chinas-Schaetze
-shop:
-    name: white2tea
-    url: https://white2tea.com/products/canton-canon?variant=43599182692580
-amount: 12 g
-price: 0.29
-currency: €
+purchase:
+    shopName: white2tea
+    shopUrl: https://white2tea.com/products/canton-canon?variant=43599182692580
+    amount: 12 g
+    pricePer100g: 0,29
+    currency: €
 properties:
     categorization:
         tea:  Oolong

@@ -2,12 +2,12 @@
 title: Lapsang Souchong
 route: lapsang-souchong
 pack: 23-1-Chinas-Schaetze
-shop:
-    name: Wuyi Origin
-    url: https://www.wuyiorigin.com/collections/wuyi-black/products/wild-lapsang-souchong-%E9%87%8E%E7%94%9F%E5%B0%8F%E7%A7%8D2022?variant=39907726131288
-amount: 12 g
-price: 0.25
-currency: €
+purchase:
+    shopName: Wuyi Origin
+    shopUrl: https://www.wuyiorigin.com/collections/wuyi-black/products/wild-lapsang-souchong-%E9%87%8E%E7%94%9F%E5%B0%8F%E7%A7%8D2022?variant=39907726131288
+    amount: 12 g
+    pricePer100g: 0,25
+    currency: €
 properties:
     categorization:
         tea:  Oolong

@@ -2,12 +2,12 @@
 title: Bao Zhong
 route: bao-zhong
 pack: 22-1-Einstieg
-shop:
-    name: Taiwan Tea Crafts
-    url: https://www.taiwanteacrafts.com/product/baguashan-spring-bao-zhong-tea/
-amount: 12 g
-price: 0.11
-currency: $
+purchase:
+    shopName: Taiwan Tea Crafts
+    shopUrl: https://www.taiwanteacrafts.com/product/baguashan-spring-bao-zhong-tea/
+    amount: 12 g
+    pricePer100g: 0,1
+    currency: $
 properties:
     categorization:
         tea:  Oolong

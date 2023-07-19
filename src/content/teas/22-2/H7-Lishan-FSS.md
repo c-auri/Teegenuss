@@ -2,12 +2,12 @@
 title: Lishan FSS
 route: lishan-fss
 pack: 22-2-Helles-Taiwan
-shop:
-    name: Taiwan Tea Crafts
-    url: https://www.taiwanteacrafts.com/product/fushoushan-high-mountain-spring-oolong-tea/?v=3a52f3c22ed6
-amount: 12 g
-price: 0.39
-currency: $
+purchase:
+    shopName: Taiwan Tea Crafts
+    shopUrl: https://www.taiwanteacrafts.com/product/fushoushan-high-mountain-spring-oolong-tea/?v=3a52f3c22ed6
+    amount: 12 g
+    pricePer100g: 0,39
+    currency: $
 properties:
     categorization:
         tea:  Oolong

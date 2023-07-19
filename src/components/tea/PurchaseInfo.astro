@@ -1,0 +1,17 @@
+---
+const { purchase } = Astro.props
+---
+<p>
+    <span>
+        von 
+        <a href={purchase.shopUrl}>{purchase.shopName}</a>
+    </span>
+    <span>{purchase.amount}</span>
+    <span>{purchase.pricePer100g} <sup>{purchase.currency}</sup>&frasl;<sub>g</sub></span>
+</p>
+<style>
+    p {
+        display: flex;
+        gap: 2rem;
+    }
+</style>

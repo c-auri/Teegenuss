@@ -2,12 +2,12 @@
 title: Wuyi Hong Shui
 route: wuyi
 pack: 22-1-Einstieg
-shop:
-    name: Taiwan Tea Crafts
-    url: https://www.taiwanteacrafts.com/product/wuyi-hong-shui-high-mountain-oolong-tea
-amount: 12 g
-price: 0.24
-currency: $
+purchase:
+    shopName: Taiwan Tea Crafts
+    shopUrl: https://www.taiwanteacrafts.com/product/wuyi-hong-shui-high-mountain-oolong-tea
+    amount: 12 g
+    pricePer100g: 0,24
+    currency: $
 properties:
     categorization:
         tea:  Oolong

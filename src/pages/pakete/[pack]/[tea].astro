@@ -1,5 +1,6 @@
 ---
 import Page from '../../../layouts/Page.astro'
+import PurchaseInfo from '../../../components/tea/PurchaseInfo.astro'
 import PropertyTable from '../../../components/tea/PropertyTable.astro'
 import PreparationTable from '../../../components/tea/PreparationTable.astro'
 
@@ -24,7 +25,7 @@ const { Content } = await entry.render()
 ---
 <Page title={entry.data.title}>
     <h1>{entry.data.title}</h1>
-    <span>{entry.data.properties.category}</span>
+    <PurchaseInfo purchase={entry.data.purchase} />
     {
         entry.data.properties &&
         <PropertyTable properties={entry.data.properties} />

@@ -2,12 +2,12 @@
 title: Traditionell gerösteter JX
 route: trjx
 pack: 22-1-Einstieg
-shop:
-    name: Taiwan Tea Crafts
-    url: https://www.taiwanteacrafts.com/product/high-mountain-charcoal-pit-fired-oolong-tea
-amount: 12 g
-price: 0.25
-currency: $
+purchase:
+    shopName: Taiwan Tea Crafts
+    shopUrl: https://www.taiwanteacrafts.com/product/high-mountain-charcoal-pit-fired-oolong-tea
+    amount: 12 g
+    pricePer100g: 0,25
+    currency: $
 properties:
     categorization:
         tea:  Oolong

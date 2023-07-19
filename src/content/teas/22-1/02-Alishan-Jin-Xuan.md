@@ -2,12 +2,12 @@
 title: Alishan Jin Xuan
 route: ajx
 pack: 22-1-Einstieg
-shop:
-    name: Taiwan Tea Crafts
-    url: https://www.taiwanteacrafts.com/product/alishan-jin-xuan-high-mountain-oolong-tea
-amount: 12 g
-price: 0.22
-currency: $
+purchase:
+    shopName: Taiwan Tea Crafts
+    shopUrl: https://www.taiwanteacrafts.com/product/alishan-jin-xuan-high-mountain-oolong-tea
+    amount: 12 g
+    pricePer100g: 0,22
+    currency: $
 properties:
     categorization:
         tea:  Oolong

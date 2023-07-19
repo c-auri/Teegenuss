@@ -2,12 +2,12 @@
 title: Tie Guan Yin
 route: tie-guan-yin
 pack: 22-2-Dunkles-Taiwan
-shop:
-    name: Taiwan Tea Crafts
-    url: https://www.taiwanteacrafts.com/product/alishan-deep-baked-tieguanyin-oolong-tea/?attribute_pa_weight=250-g-8-82-oz-save-20&v=3a52f3c22ed6
-amount: 12 g
-price: 0.27
-currency: $
+purchase:
+    shopName: Taiwan Tea Crafts
+    shopUrl: https://www.taiwanteacrafts.com/product/alishan-deep-baked-tieguanyin-oolong-tea/?attribute_pa_weight=250-g-8-82-oz-save-20&v=3a52f3c22ed6
+    amount: 12 g
+    pricePer100g: 0,27
+    currency: $
 properties:
     categorization:
         tea:  Oolong
