@@ -1,5 +1,5 @@
 ---
-title: Kohle-gerösteter JX
+title: Leicht kohle-gerösteter JX
 route: lcrjx
 pack: 22-1-Einstieg
 shop:

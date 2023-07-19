@@ -1,5 +1,5 @@
 ---
-title: Kohle-gerösteter QX
+title: Traditionell gerösteter JX
 route: trjx
 pack: 22-1-Einstieg
 shop:
