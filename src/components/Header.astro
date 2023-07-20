@@ -1,10 +1,10 @@
 ---
-import PageSection from './PageSection.astro';
+import Frame from './Frame.astro';
 import Logo from './Logo.astro'
 
 const { bg } = Astro.props
 ---
-<PageSection bg={bg}>
+<Frame bg={bg}>
     <header class="my-4 md:my-12 flex justify-between items-center">
         <Logo mode="light" />
         <div class="flex-1"></div>
@@ -15,4 +15,4 @@ const { bg } = Astro.props
             </ul>
         </nav>
     </header>
-</PageSection>
+</Frame>

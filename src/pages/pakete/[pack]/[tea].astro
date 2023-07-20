@@ -1,6 +1,6 @@
 ---
 import Page from '../../../layouts/Page.astro'
-import PageSection from '../../../components/PageSection.astro'
+import Frame from '../../../components/Frame.astro'
 import PurchaseInfo from '../../../components/tea/PurchaseInfo.astro'
 import PropertyTable from '../../../components/tea/PropertyTable.astro'
 import PreparationTable from '../../../components/tea/PreparationTable.astro'
@@ -31,7 +31,7 @@ const imagePaths = Object.keys(import.meta.glob('/public/images/teas/*/*/0*.png'
 const tags = await getCollection('tags', tag => entry.data.tags.includes(tag.slug))
 ---
 <Page title={entry.data.title}>
-    <PageSection>
+    <Frame>
         <section class="w-full my-10 grid justify-items-center lg:grid-cols-2">
             <div>
                 <img class="w-xl max-w-screen aspect-square" src={imagePaths[0]}>
@@ -46,8 +46,8 @@ const tags = await getCollection('tags', tag => entry.data.tags.includes(tag.slu
                 </div>
             </div>
         </section>
-    </PageSection>
-    <PageSection bg="bg-gray-100">
+    </Frame>
+    <Frame bg="bg-gray-100">
         <section class="flex justify-evenly">
             {
                 entry.data.properties &&
@@ -58,12 +58,12 @@ const tags = await getCollection('tags', tag => entry.data.tags.includes(tag.slu
                 <PreparationTable preparation={entry.data.preparation} />
             }
         </section>
-    </PageSection>
-    <PageSection bg="bg-white">
+    </Frame>
+    <Frame bg="bg-white">
         {
             tags.map(tag => <Tag tag={tag} />)
         }
-    </PageSection>
+    </Frame>
 </Page>
 <style>
 </style>

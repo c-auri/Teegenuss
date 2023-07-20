@@ -1,13 +1,13 @@
 ---
 import Page from '../../layouts/Page.astro'
-import PageSection from '../../components/PageSection.astro'
+import Frame from '../../components/Frame.astro'
 import { getCollection } from "astro:content"
 
 const packs = await getCollection('packs')
 const bg = "bg-white"
 ---
 <Page title="Projekt Teegenuss" bgHeader={bg}>
-    <PageSection bg={bg}>
+    <Frame bg={bg}>
         <ul>
         {
             packs.reverse().map(pack => 
@@ -16,5 +16,5 @@ const bg = "bg-white"
                 </li>)
         }
         </ul>
-    </PageSection>
+    </Frame>
 </Page>
