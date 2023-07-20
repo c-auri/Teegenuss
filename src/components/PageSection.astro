@@ -1,0 +1,8 @@
+---
+const { bg } = Astro.props
+---
+<div class=`w-screen flex justify-center ${bg}`>
+    <div class="px-2 w-screen max-w-screen-xl">
+        <slot />
+    </div>
+</div>

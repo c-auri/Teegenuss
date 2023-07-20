@@ -1,13 +1,17 @@
 ---
-import Page from '../../layouts/Page.astro';
+import Page from '../../layouts/Page.astro'
+import PageSection from '../../components/PageSection.astro'
 import GlossaryEntry from '../../components/glossary/Entry.astro'
 
 import  { getCollection } from 'astro:content'
 
 const tags = await getCollection('tags')
+const bg = "bg-white"
 ---
-<Page>
+<Page bgHeader={bg}>
+    <PageSection bg={bg}>
     {
         tags.map(tag => <GlossaryEntry tag={tag} />)
     }
+    </PageSection>
 </Page>

@@ -1,10 +1,11 @@
 ---
 import Page from '../../../layouts/Page.astro'
-import  { getCollection } from 'astro:content'
+import PageSection from '../../../components/PageSection.astro'
+import    { getCollection } from 'astro:content'
 
 export async function getStaticPaths() {
     const packs = await getCollection('packs')
-    
+
     return packs.map(pack => ({
         params: { pack: pack.data.route },
         props: { pack: pack }
@@ -13,14 +14,16 @@ export async function getStaticPaths() {
 
 const { pack } = Astro.props
 const teas = await getCollection('teas', tea => tea.data.pack.id === pack.id)
+const bg = "bg-white"
 ---
-<Page title={pack.data.title}>
-    <h1 class="my-5 text-3xl font-bold">{pack.data.title}</h1>
-    {
-      teas.map(tea => (
-        <li><a href={`${pack.data.route}/${tea.data.route}`}>
-          {tea.data.title}
-        </a></li>
-      ))
-    }
+<Page title={pack.data.title} bgHeader={bg}>
+    <PageSection bg={bg}>
+        <h1 class="my-5 text-3xl font-bold">{pack.data.title}</h1>
+        {
+            teas.map(tea => (
+                <li><a href={`${pack.data.route}/${tea.data.route}`}>
+                    {tea.data.title}
+                </a></li>))
+        }
+    </PageSection>
 </Page>

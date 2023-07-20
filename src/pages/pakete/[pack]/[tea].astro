@@ -1,5 +1,6 @@
 ---
 import Page from '../../../layouts/Page.astro'
+import PageSection from '../../../components/PageSection.astro'
 import PurchaseInfo from '../../../components/tea/PurchaseInfo.astro'
 import PropertyTable from '../../../components/tea/PropertyTable.astro'
 import PreparationTable from '../../../components/tea/PreparationTable.astro'
@@ -28,30 +29,34 @@ const imagePaths = Object.keys(
     .filter(path => path.includes(entry.slug))
 ---
 <Page title={entry.data.title}>
-    <section class="my-10 flex flex-col items-center">
-        <div>
-            <img class="aspect-square max-w-xl" src={imagePaths[0]}>
-        </div>
-        <div class="flex flex-col items-center">
-            <h1 class="my-3 text-3xl font-bold">{entry.data.title}</h1>
-            <p class="my-3 flex self-stretch justify-between text-lg opacity-70">
-                <PurchaseInfo data={entry.data} />
-            </p>
-            <div class="my-3 text-lg">
-                <Content />
+    <PageSection>
+        <section class="my-10 flex flex-col items-center">
+            <div>
+                <img class="aspect-square max-w-xl" src={imagePaths[0]}>
             </div>
-        </div>
-    </section>
-    <section class="flex justify-evenly bg-gray-100">
-        {
-            entry.data.properties &&
-            <PropertyTable properties={entry.data.properties} />
-        }
-        {
-            entry.data.preparation &&
-            <PreparationTable preparation={entry.data.preparation} />
-        }
-    </section>
+            <div class="flex flex-col items-center">
+                <h1 class="my-3 text-3xl font-bold">{entry.data.title}</h1>
+                <p class="my-3 flex self-stretch justify-between text-lg opacity-70">
+                    <PurchaseInfo data={entry.data} />
+                </p>
+                <div class="my-3 text-lg">
+                    <Content />
+                </div>
+            </div>
+        </section>
+    </PageSection>
+    <PageSection bg="bg-gray-100">
+        <section class="flex justify-evenly">
+            {
+                entry.data.properties &&
+                <PropertyTable properties={entry.data.properties} />
+            }
+            {
+                entry.data.preparation &&
+                <PreparationTable preparation={entry.data.preparation} />
+            }
+        </section>
+    </PageSection>
 </Page>
 <style>
 </style>

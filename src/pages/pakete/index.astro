@@ -1,18 +1,20 @@
 ---
 import Page from '../../layouts/Page.astro'
+import PageSection from '../../components/PageSection.astro'
 import { getCollection } from "astro:content"
 
 const packs = await getCollection('packs')
+const bg = "bg-white"
 ---
-<Page title="Projekt Teegenuss">
-  <ul>
-  {
-    packs.reverse().map(async (pack) => {
-      return (
-        <li><a href={`${pack.data.route}`}>
-          {pack.data.title}
-        </a></li>)
-    })
-  }
-  </ul>
+<Page title="Projekt Teegenuss" bgHeader={bg}>
+    <PageSection bg={bg}>
+        <ul>
+        {
+            packs.reverse().map(pack => 
+                <li>
+                    <a href={`${pack.data.route}`}>{pack.data.title}</a>
+                </li>)
+        }
+        </ul>
+    </PageSection>
 </Page>

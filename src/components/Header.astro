@@ -1,15 +1,18 @@
 ---
+import PageSection from './PageSection.astro';
 import Logo from './Logo.astro'
+
+const { bg } = Astro.props
 ---
-<header class="my-4 md:my-8 flex justify-between items-center text-xl">
-    <Logo />
-    <div class="flex-1"></div>
-    <nav class="flex-1">
-        <ul class="flex justify-center gap-12">
-            <li><a class="opacity-75 hover:opacity-90" href="/pakete/">Pakete</a></li>
-            <li><a class="opacity-75 hover:opacity-90" href="/glossar/">Glossar</a></li>
-        </ul>
-    </nav>
-</header>
-<style>
-</style>
+<PageSection bg={bg}>
+    <header class="my-4 md:my-8 flex justify-between items-center text-xl">
+        <Logo />
+        <div class="flex-1"></div>
+        <nav class="flex-1">
+            <ul class="flex justify-center gap-12">
+                <li><a class="opacity-75 hover:opacity-90" href="/pakete/">Pakete</a></li>
+                <li><a class="opacity-75 hover:opacity-90" href="/glossar/">Glossar</a></li>
+            </ul>
+        </nav>
+    </header>
+</PageSection>
