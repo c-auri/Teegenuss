@@ -3,7 +3,7 @@ import PropertyRow from "./PropertyRow.astro"
 
 const { properties } = Astro.props
 ---
-<table>
+<table class="my-8">
     <tbody>
         <PropertyRow 
             group={Object.entries(properties.categorization)} 
@@ -34,8 +34,3 @@ const { properties } = Astro.props
         }} />
     </tbody>
 </table>
-<style>
-    table {
-        margin: 1rem 0;
-    }
-</style>

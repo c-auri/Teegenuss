@@ -28,17 +28,21 @@ const imagePaths = Object.keys(
     .filter(path => path.includes(entry.slug))
 ---
 <Page title={entry.data.title}>
-    <div class="hero">
-        <div class="description">
-            <h1>{entry.data.title}</h1>
-            <PurchaseInfo purchase={entry.data.purchase} />
-            <Content />
-        </div>
+    <section class="my-10 flex flex-col items-center">
         <div>
-            <img src={imagePaths[0]}>
+            <img class="aspect-square max-w-xl" src={imagePaths[0]}>
         </div>
-    </div>
-    <div class="infobox">
+        <div class="flex flex-col items-center">
+            <h1 class="my-3 text-3xl font-bold">{entry.data.title}</h1>
+            <p class="my-3 flex self-stretch justify-between">
+                <PurchaseInfo purchase={entry.data.purchase} />
+            </p>
+            <p class="my-3">
+                <Content />
+            </p>
+        </div>
+    </section>
+    <section class="flex justify-evenly bg-gray-100">
         {
             entry.data.properties &&
             <PropertyTable properties={entry.data.properties} />
@@ -47,22 +51,7 @@ const imagePaths = Object.keys(
             entry.data.preparation &&
             <PreparationTable preparation={entry.data.preparation} />
         }
-    </div>
+    </section>
 </Page>
 <style>
-    .hero {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    img {
-        max-width: 40rem;
-    }
-
-    .infobox {
-        display: flex;
-        justify-content: space-evenly;
-        background-color: whitesmoke;
-    }
 </style>

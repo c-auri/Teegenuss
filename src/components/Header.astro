@@ -1,40 +1,15 @@
 ---
 import Logo from './Logo.astro'
 ---
-<header>
+<header class="my-4 md:my-8 flex justify-between items-center text-xl">
     <Logo />
-    <nav>
-        <ul>
-            <li><a href="/pakete/">Pakete</a></li>
-            <li><a href="/glossar/">Glossar</a></li>
+    <div class="flex-1"></div>
+    <nav class="flex-1">
+        <ul class="flex justify-center gap-12">
+            <li><a class="opacity-75 hover:opacity-90" href="/pakete/">Pakete</a></li>
+            <li><a class="opacity-75 hover:opacity-90" href="/glossar/">Glossar</a></li>
         </ul>
     </nav>
 </header>
 <style>
-    header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    ul, li {
-        margin: 0;
-    }
-
-    ul {
-        margin-right: 5rem;
-        display: flex;
-        justify-content: space-evenly;
-        gap: 2.5rem;
-        font-size: 1.25rem;
-    }
-
-    li {
-        list-style: none;
-    }
-
-    a {
-        color: black;
-        opacity: .8;
-    }
 </style>

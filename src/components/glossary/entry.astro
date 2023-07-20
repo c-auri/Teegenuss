@@ -2,25 +2,19 @@
 const { tag } = Astro.props
 const { Content } = await tag.render()
 ---
-<div>
-    <h2 id={tag.slug}>{tag.data.title}</h2>
-    <p>
+<article class="my-8">
+    <h2 class="text-xl font-bold" id={tag.slug}>{tag.data.title}</h2>
+    <p class="my-2">
     {
         tag.data.translation &&
-        <span>Übersetzt: {tag.data.translation}</span>
+        <span class="block opacity-75">Übersetzt: {tag.data.translation}</span>
     }
     {
         tag.data.synonyms &&
-        <span>Auch: {tag.data.synonyms}</span>
+        <span class="block opacity-75">Auch: {tag.data.synonyms}</span>
     }
     </p>
     <p>
         <Content />
     </p>
-</div>
-<style>
-    span {
-        display: block;
-        opacity: .75;
-    }
-</style>
+</article class="pb-5">

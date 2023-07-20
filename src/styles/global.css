@@ -7,14 +7,5 @@
 }
 
 * {
-    box-sizing: border-box;
     font-family: 'Roboto';
-}
-
-a {
-    text-decoration: none;
-}
-
-body {
-    margin: 0;
 }
