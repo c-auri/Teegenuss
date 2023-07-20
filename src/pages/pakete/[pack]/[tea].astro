@@ -34,9 +34,9 @@ const tags = await getCollection('tags', tag => entry.data.tags.includes(tag.slu
     <PageSection>
         <section class="my-10 flex flex-col items-center">
             <div>
-                <img class="aspect-square max-w-xl" src={imagePaths[0]}>
+                <img class="w-xl max-w-screen aspect-square" src={imagePaths[0]}>
             </div>
-            <div class="flex flex-col items-center">
+            <div class="max-w-lg flex flex-col items-center">
                 <h1 class="my-3 text-3xl font-bold">{entry.data.title}</h1>
                 <p class="my-3 flex self-stretch justify-between text-lg opacity-70">
                     <PurchaseInfo data={entry.data} />
