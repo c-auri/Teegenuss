@@ -1,11 +1,14 @@
 ---
-const { purchase } = Astro.props
+const { data } = Astro.props
 ---
 <span>
-    von 
-    <a href={purchase.shopUrl}>{purchase.shopName}</a>
+    {data.properties.categorization.tea}
 </span>
 |
-<span>{purchase.amount}</span>
+<span>
+    <a href={data.purchase.shopUrl}>{data.purchase.shopName}</a>
+</span>
 |
-<span>{purchase.pricePer100g} <sup>{purchase.currency}</sup>&frasl;<sub>g</sub></span>
+<span>{data.purchase.amount}</span>
+|
+<span>{data.purchase.pricePer100g} <sup>{data.purchase.currency}</sup>&frasl;<sub>g</sub></span>

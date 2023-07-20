@@ -34,12 +34,12 @@ const imagePaths = Object.keys(
         </div>
         <div class="flex flex-col items-center">
             <h1 class="my-3 text-3xl font-bold">{entry.data.title}</h1>
-            <p class="my-3 flex self-stretch justify-between">
-                <PurchaseInfo purchase={entry.data.purchase} />
+            <p class="my-3 flex self-stretch justify-between text-lg opacity-70">
+                <PurchaseInfo data={entry.data} />
             </p>
-            <p class="my-3">
+            <div class="my-3 text-lg">
                 <Content />
-            </p>
+            </div>
         </div>
     </section>
     <section class="flex justify-evenly bg-gray-100">
