@@ -1,10 +1,14 @@
 ---
+const  { mode } = Astro.props
+const textColor = mode === 'light' ? "text-black" : "text-white"
+const primaryOpacity = mode === 'light' ? "opacity-80" : "opacity-100"
+const secondaryOpacity = mode === 'light' ? "opacity-70" : "opacity-75"
 ---
-<a class="flex flex-col font-bold leading-8 text-black" href="/">
-    <span class="text-2xl opacity-70">
+<a class=`max-w-min flex flex-col font-bold leading-8 ${textColor}` href="/">
+    <span class=`text-2xl ${secondaryOpacity}`>
         Projekt
     </span>
-    <span class="text-3xl opacity-80">
+    <span class=`text-3xl ${primaryOpacity}`>
         Teegenuss
     </span>
 </a>
