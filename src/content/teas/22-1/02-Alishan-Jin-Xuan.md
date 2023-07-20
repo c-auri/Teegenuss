@@ -32,5 +32,6 @@ preparation:
             firstInfusions: '10 Sekunden'
             until: 'die Blätter geöffnet sind'
             laterInfusions: '+10 Sekunden'
+tags: [ 'alishan', 'jin-xuan', 'gruener-oolong' ]
 ---
 Ein moderner, grüner Oolong aus dem Alishan mit einem betörenden Blütenduft und der für die Strauchsorte typischen starken Milchigkeit. Aufgrund der geringen oxidation ist er temperaturanfällig und wird leicht grasig herb.

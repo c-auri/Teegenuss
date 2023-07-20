@@ -33,5 +33,6 @@ preparation:
             firstInfusions: '10 Sekunden'
             until: 'die Blätter geöffnet sind'
             laterInfusions: '+10 Sekunden'
+tags: [ 'jin-xuan' ]
 ---
 Ein Oolong auf der helleren Seite, der durch seine leichte Holzkohleröstung an Komplexität gewinnt. Zur leichten Milchigkeit und den grünen Aromen kommen sanfte Röstnoten und eine leichte Nussigkeit.

@@ -32,5 +32,6 @@ preparation:
             firstInfusions: '20 Sekunden'
             until: 'bis die Blätter geöffnet sind'
             laterInfusions: '+10 Sekunden'
+tags: [ 'meishan-shibi', 'gruener-oolong', 'qing-xin' ]
 ---
 Leichter und spritziger im Geschmack als der Meishan Jin Xuan. Für diesen Preis ein guter Einstieg in Qing Xin Gaoshans.

@@ -28,5 +28,6 @@ preparation:
             rinse: 'optional'
             firstInfusion: '5 Sekunden'
             laterInfusions: '+2 Sekunden'
+tags: [ mi-xiang ]
 ---
-Ein weicher Schwarztee mit einer ausgeprägten Honignote ("Mi Xiang"), die von der Pflanze als Reaktion auf Käferbisse erzeugt wird.
+Ein weicher Schwarztee mit einer ausgeprägten Honignote, die von der Pflanze als Reaktion auf Käferbisse erzeugt wird.

@@ -61,7 +61,8 @@ const teas = defineCollection({
           laterInfusions: z.string(),
         }).partial()
       }))
-    })
+    }),
+    tags: z.array(z.string())
   })
 });
 

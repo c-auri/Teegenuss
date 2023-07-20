@@ -29,5 +29,6 @@ preparation:
             firstInfusions: '10-20 Sekunden'
             until: 'bis die Blätter geöffnet sind'
             laterInfusions: '+10 Sekunden'
+tags: [ tie-guan-yin ]
 ---
 Bei diesem dunklen Oolong vereint sich der blumige Grundcharakter des Tie Guan Yin mit warmen, nussigen Geschmacksnoten und einer an Karamell erinnernden Süße.

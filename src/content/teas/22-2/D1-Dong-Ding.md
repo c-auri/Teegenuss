@@ -32,5 +32,6 @@ preparation:
             firstInfusions: '10-20 Sekunden'
             until: 'bis die Blätter geöffnet sind'
             laterInfusions: '+10 Sekunden'
+tags: [ 'dong-ding', 'gruener-oolong' ]
 ---
 Eine modern interpretierter Dong Ding mit nur sehr geringer oxidation. Dank der roast kann er stärker zubereitet werden als grüne Oolongs. Dann zeigen sich kräftig würzige Noten. Bei schonenden Temperaturen zeigt sich der Tee hingegen von seiner blumig frischen Seite und offenbart seinen süßen Grundcharakter.

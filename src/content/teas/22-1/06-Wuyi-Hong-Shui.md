@@ -33,5 +33,6 @@ preparation:
             firstInfusions: '5-10 Sekunden'
             until:  'die Blätter geöffnet sind'
             laterInfusions: '+5 Sekunden'
+tags: [ 'hong-shui' ]
 ---
 Diese althergebrachte Strauchsorte aus dem Wuyi in China eignet sich hervorragend für den als Hong Shui ("Rotes Wasser") bezeichneten Oolongstil mit höherer oxidation. Ein wärmend-nussiger Tee mit einer starken Röstnote, allerdings etwas heller als die meisten Felsentees aus China.

@@ -32,5 +32,6 @@ preparation:
             firstInfusions: '5-10 Sekunden'
             until: 'bis die Blätter geöffnet sind'
             laterInfusions: '+10 Sekunden'
+tags: [ 'tie-guan-yin', 'grandpa-style' ]
 ---
 Die fortgeschrittene oxidation und starke roast gibt dieser Strauchsorte einen deutlich anderen Charakter als den chinesischen Vertretern. Im Gaiwan je nach Zubereitung sehr facettenreich. Empfehlenswert aber auch im Grandpa Style, dabei zeigt sich eine konzentrierte Süße, die bei kurzen Ziehzeiten nicht so stark zum Vorschein kommt.

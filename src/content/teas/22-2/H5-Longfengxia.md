@@ -32,5 +32,6 @@ preparation:
             firstInfusions: '10 Sekunden'
             until: 'bis die Blätter geöffnet sind'
             laterInfusions: '+10 Sekunden'
+tags: [ 'gaoshan', 'gruener-oolong', 'qing-xin' ]
 ---
 Longfengxia ("Drachenschlucht") ist der Name einer Plantage auf dem Shanlinxi, einem der prestigeträchtigsten Anbaugebiete Taiwans.

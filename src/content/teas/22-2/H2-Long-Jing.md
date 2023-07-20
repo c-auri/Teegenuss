@@ -30,5 +30,6 @@ preparation:
             firstInfusion: '20 Sekunden'
             secondInfusion: '10 Sekunden'
             laterInfusions: '+10 Sekunden'
+tags: [ 'sanxia', 'long-jing' ]
 ---
 Die für Long Jings übliche leichte roast gibt diesem Tee seine charakteristische Nadelform und einen leicht nussigen Geschmack. Etwas weniger frisch und dafür runder und intensiver im Geschmack als der Bi Luo Chun.

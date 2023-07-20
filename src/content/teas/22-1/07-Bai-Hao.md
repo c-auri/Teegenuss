@@ -32,5 +32,6 @@ preparation:
             rinse: 'optional'
             firstInfusion: '5 Sekunden'
             laterInfusions: '+5 Sekunden'
+tags: [ 'eastern-beauty']
 ---
 Eine günstige Version des beliebten Eastern Beauties. Aufgrund des Preises ist davon auszugehen, dass er nicht von Käfern gebissen wurde. Dennoch ein bemerkenswert vielschichtiger Tee der seinen Preis wert ist.

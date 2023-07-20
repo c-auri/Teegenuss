@@ -29,5 +29,6 @@ preparation:
             firstInfusions: '5-10 Sekunden'
             until: 'bis die Blätter geöffnet sind'
             laterInfusions: '+5 Sekunden'
+tags: [ tie-guan-yin ]
 ---
 Bei diesem über Holzkohle gerösteten Oolong ist die blumige Strauchsorte wegen der starken roast fast nicht wieder zu erkennen. Der Tee bewegt sich auf einem schmalen Grat und wirkt stellenweise fast verbrannt. Nicht für jedermann. Wer stark geröstete Tees mag, wird hier aber nicht enttäuscht werden.

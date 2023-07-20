@@ -33,5 +33,6 @@ preparation:
             firstInfusions: '10 Sekunden'
             until: 'die Blätter geöffnet sind'
             laterInfusions: '+10 Sekunden'
+tags: [ 'jin-xuan' ]
 ---
 Die minimale roast gibt diesem ansonsten sehr grünen Oolong eine leichte Nussigkeit und macht ihn robuster in der Zubereitung. Weniger herb und damit etwas bekömmlicher als ungeröstete grüne Oolongs.

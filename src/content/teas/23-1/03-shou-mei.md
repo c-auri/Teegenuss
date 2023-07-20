@@ -31,5 +31,6 @@ preparation:
             firstInfusion: '20 Sekunden'
             secondInfusion: '10 Sekunden'
             laterInfusions: '+10 Sekunden'
+tags: [ fujian, white-tea, shou-mei ]
 ---
 Wegen der dicht gepressten Kugelform ist dieser Tee anfangs täuschend sanft. Doch wenn sich die Blätter öffnen, zeigt sich sein kräftiger Charakter. Erinnert geschmacklich an eine Pilzbrühe, was beim Auskochen der aufgegangenen Blätter noch verstärkt wird.

@@ -31,5 +31,6 @@ preparation:
             rinse: 'optional'
             firstInfusion: '5 Sekunden'
             laterInfusions: '+5 Sekunden'
+tags: [ 'eastern-beauty']
 ---
 Ein etwas teurerer Eastern Beauty als in der letzten Teilung, dennoch wahrscheinlich kein authentischer Käferbisstee. Trotzdem sehr aromatisch und vielschichtig im Geschmack.

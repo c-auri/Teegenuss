@@ -32,5 +32,6 @@ preparation:
             firstInfusions: '5-10 Sekunden'
             until: 'bis die Blätter geöffnet sind'
             laterInfusions: '+10 Sekunden'
+tags: [ 'hong-shui', 'grandpa-style' ]
 ---
 Ein günstiger Oolong mit starker Fruchtnote. Geignet für die Zubereitung im Gaiwan, dabei aber nicht so ergiebig. Im Grandpa Style wird die Frucht stark betont, was dem Tee sehr in die Karten spielt.

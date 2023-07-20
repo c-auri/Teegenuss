@@ -32,5 +32,6 @@ preparation:
             firstInfusions: '5-10 Sekunden'
             until: 'bis die Blätter geöffnet sind'
             laterInfusions: '+5 Sekunden'
+tags: [ 'gaba' ]
 ---
 Unter der schweren roast versteckt sich ein überraschend saftiger Tee. Gleichzeitig wärmend und erfrischend, eine sehr ungewöhnliche Kombination.

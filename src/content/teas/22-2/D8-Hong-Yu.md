@@ -28,5 +28,6 @@ preparation:
             rinse: 'blitz'
             firstInfusion: '3 Sekunden'
             laterInfusions: '+2 Sekunden'
+tags: [ 'hong-yu']
 ---
 Die natürliche Eukalyptusnote dieser Strauchsorte verbindet sich mit der Fruchtigkeit des schwarzen Tees und ergibt ein sehr außergewöhnliches Aroma. Großblättrige Schwarztees wie dieser hier können leicht zu intensiv werden, wenn man sie zu sehr fordet. Vorsichtig zubereitet rückt das besondere Aroma aber auch im Geschmack spürbar in den Vordergrund.

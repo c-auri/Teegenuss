@@ -30,5 +30,6 @@ preparation:
             firstInfusion: '5 Sekunden'
             secondInfusion: '5 Sekunden'
             laterInfusions: '+5 Sekunden'
+tags: [ heicha, fuzhuan ]
 ---
 Ein vollmundiger Heicha aus Hunan, der nur wenige goldene Blumen aufweist. Hinter dem typisch erdigen Körper versteckt sich eine sehr angenehme Süße und ein angenehmer, leicht fruchtiger Nachgeschmack. Kann auch ausgekocht werden.

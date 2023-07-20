@@ -33,5 +33,6 @@ preparation:
             firstInfusions: '5-10 Sekunden'
             until: 'die Blätter geöffnet sind'
             laterInfusions: '+5 Sekunden'
+tags: [ 'qing-xin' ]
 ---
 Ein mitteldunkler Oolong mit traditioneller Holzkohleröstung. Süße Honignoten verbinden sich mit deutlichen Röstnoten und erinnern stellenweise an Karamellbonbons.

@@ -32,5 +32,6 @@ preparation:
             firstInfusions: '10 Sekunden'
             until: 'bis die Blätter geöffnet sind'
             laterInfusions: '+10 Sekunden'
+tags: [ 'dayuling', 'gruener-oolong', 'qing-xin' ]
 ---
 Dieser Tee schmückt sich demonstrativ mit seiner Adresse am berühmten Highway No.&nbsp;8, um an die Teegärten Dayulings zu erinnern.

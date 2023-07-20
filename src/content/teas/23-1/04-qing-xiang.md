@@ -32,5 +32,6 @@ preparation:
             firstInfusions: '20 Sekunden'
             until: 'bis die Blätter geöffnet sind'
             laterInfusions: '+10 Sekunden'
+tags: [ gruener-oolong, tie-guan-yin, qing-xiang ]
 ---
 Dieser frische Tie Guan Yin aus Anxi ist der Inbegriff eines modernen grünen Oolongs. Das sehr blumige Aroma und die deutliche Säure im Geschmack ergeben einen erfrischenden Tee, der wie gemacht ist für warme Tage.

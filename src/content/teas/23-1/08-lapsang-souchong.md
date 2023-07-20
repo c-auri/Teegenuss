@@ -31,5 +31,6 @@ preparation:
             rinse: 'weglassen'
             firstInfusion: 'blitz'
             laterInfusions: '+3 Sekunden'
+tags: [ fujian, lapsang ]
 ---
 Anders als die bekannteren geräucherten Vertreter derselben Sorte ist dieser Lapsang Souchong ein bemerkenswert sanfter Schwarztee. Über die typisch schokoladigen Basisnoten legt sich das zarte Aroma von Rosenblüten und eine fruchtige Süße.

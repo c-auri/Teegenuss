@@ -30,5 +30,6 @@ preparation:
             firstInfusion: '20 Sekunden'
             secondInfusion: '10 Sekunden'
             laterInfusions: '+10 Sekunden'
+tags: [ 'sanxia', 'bi-luo-chun' ]
 ---
 Ein nach chinesischem Vorbild hergestellter Grüntee, der sich mittlerweile zu einem taiwanesischen Klassiker entwickelt hat. Frisch und leicht im Geschmack mit einem Hauch Fruchtigkeit.

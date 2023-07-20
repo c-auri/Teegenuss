@@ -4,6 +4,7 @@ import PageSection from '../../../components/PageSection.astro'
 import PurchaseInfo from '../../../components/tea/PurchaseInfo.astro'
 import PropertyTable from '../../../components/tea/PropertyTable.astro'
 import PreparationTable from '../../../components/tea/PreparationTable.astro'
+import Tag from '../../../components/glossary/Entry.astro'
 
 import  { getCollection } from 'astro:content'
 
@@ -24,9 +25,10 @@ export async function getStaticPaths() {
 const { entry } = Astro.props
 const { Content } = await entry.render()
 
-const imagePaths = Object.keys(
-    import.meta.glob('/public/images/teas/*/*/0*.png'))
+const imagePaths = Object.keys(import.meta.glob('/public/images/teas/*/*/0*.png'))
     .filter(path => path.includes(entry.slug))
+
+const tags = await getCollection('tags', tag => entry.data.tags.includes(tag.slug))
 ---
 <Page title={entry.data.title}>
     <PageSection>
@@ -56,6 +58,11 @@ const imagePaths = Object.keys(
                 <PreparationTable preparation={entry.data.preparation} />
             }
         </section>
+    </PageSection>
+    <PageSection bg="bg-white">
+        {
+            tags.map(tag => <Tag tag={tag} />)
+        }
     </PageSection>
 </Page>
 <style>

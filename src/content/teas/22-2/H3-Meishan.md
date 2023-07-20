@@ -32,5 +32,6 @@ preparation:
             firstInfusions: '20 Sekunden'
             until: 'bis die Blätter geöffnet sind'
             laterInfusions: '+10 Sekunden'
+tags: [ 'meishan-shibi', 'gruener-oolong', 'jin-xuan' ]
 ---
 Ein solider Jin Xuan Gaoshan der die charakteristische Milchigkeit und den vollmundigen Charakter der Strauchsorte zeigt. Und das für einen echten Schnäppchenpreis.

@@ -32,5 +32,6 @@ preparation:
             firstInfusions: '10 Sekunden'
             until: 'bis die Blätter geöffnet sind'
             laterInfusions: '+10 Sekunden'
+tags: [ 'lishan', 'gruener-oolong', 'qing-xin' ]
 ---
 Cui Luan ist eine Anbauregion im Lishan und mit etwa 1800 Metern Höhe bereits sehr gut gelegen, allerdings noch keine der stark nachgefragten und entsprechend hochpreisigen Spitzenregionen.

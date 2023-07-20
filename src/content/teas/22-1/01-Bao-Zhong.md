@@ -31,5 +31,6 @@ preparation:
             rinse: 'optional'
             firstInfusion: '10 Sekunden'
             laterInfusions: '+10 Sekunden'
+tags: [ 'gruener-oolong' ]
 ---
 Erinnert optisch an grünen Tee, aufgrund seiner Milchigkeit ist es aber zweifellos ein Oolong. Geschmacklich wenig überraschend und eher eindimensional, trotzdem eine überraschend gute Qualität für diesen niedrigen Preis.

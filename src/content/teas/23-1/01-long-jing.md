@@ -28,5 +28,6 @@ preparation:
             firstInfusion: '20 Sekunden'
             secondInfusion: '10 Sekunden'
             laterInfusions: '+10 Sekunden'
+tags: [ 'long-jing' ]
 ---
 Ein günstiger Long Jing mit der klassischen Nadelform und dem charakteristisch nussigem Kastanienaroma. Sehr guter Tee für den Preis, kann jedoch bitter werden wenn er zu stark zubereitet wird.
