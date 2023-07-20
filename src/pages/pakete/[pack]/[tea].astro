@@ -32,16 +32,16 @@ const tags = await getCollection('tags', tag => entry.data.tags.includes(tag.slu
 ---
 <Page title={entry.data.title}>
     <PageSection>
-        <section class="my-10 flex flex-col items-center">
+        <section class="w-full my-10 grid justify-items-center lg:grid-cols-2">
             <div>
                 <img class="w-xl max-w-screen aspect-square" src={imagePaths[0]}>
             </div>
-            <div class="max-w-lg flex flex-col items-center">
-                <h1 class="my-3 text-3xl font-bold">{entry.data.title}</h1>
-                <p class="my-3 flex self-stretch justify-between text-lg opacity-70">
+            <div class="max-w-3xl lg:max-w-xl flex flex-col items-center lg:items-start lg:justify-self-start lg:mt-16">
+                <h1 class="my-3 text-6xl font-bold">{entry.data.title}</h1>
+                <p class="my-3 pr-5 self-stretch flex justify-between text-xl opacity-70">
                     <PurchaseInfo data={entry.data} />
                 </p>
-                <div class="my-3 text-lg">
+                <div class="my-3 text-2xl">
                     <Content />
                 </div>
             </div>
