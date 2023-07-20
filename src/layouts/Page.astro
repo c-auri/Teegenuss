@@ -14,9 +14,9 @@ const { title, bgHeader } = Astro.props
 </head>
 <body class="min-h-screen flex flex-col">
     <Header bg={bgHeader} />
-    <div class="flex-1">
+    <main class="flex-1">
         <slot />
-    </div>
+    </main>
     <Footer />
 </body>
 </html>
