@@ -6,7 +6,8 @@ import PropertyTable from '../../../components/tea/PropertyTable.astro'
 import PreparationTable from '../../../components/tea/PreparationTable.astro'
 import Tag from '../../../components/glossary/Entry.astro'
 
-import  { getCollection } from 'astro:content'
+import  { getCollection, getEntry } from 'astro:content'
+import { modulo } from '/src/scripts/modulo.js'
 
 export async function getStaticPaths() {
     const teas = await getCollection('teas')
@@ -29,14 +30,26 @@ const imagePaths = Object.keys(import.meta.glob('/public/images/teas/*/*/0*.png'
     .filter(path => path.toLowerCase().includes(entry.slug))
 
 const tags = await getCollection('tags', tag => entry.data.tags.includes(tag.slug))
+const pack = await getEntry('packs', entry.data.pack.id)
+const teasInPack = await getCollection('teas', tea => tea.data.pack.id === entry.data.pack.id)
+const entryIndex = teasInPack.findIndex(tea => tea.id === entry.id)
+const previousTea = teasInPack[modulo(entryIndex - 1, teasInPack.length)]!
+const nextTea = teasInPack[modulo(entryIndex + 1, teasInPack.length)]!
 ---
 <Page title={entry.data.title}>
     <Frame>
-        <section class="w-full my-10 grid justify-items-center lg:grid-cols-2">
-            <div>
+        <section class="w-full my-10 grid justify-items-center lg:grid-cols-2 lg:grid-rows-[6rem]">
+            <div class="lg:col-start-2 lg:justify-self-stretch lg:max-w-xl lg:self-end text-lg tracking-wider flex flex-col items-center lg:flex-row lg:justify-between">
+                <a class="col-span-2 opacity-70 hover:opacity-90" href="../">{pack.data.title}</a>
+                <div class="flex gap-2 lg:gap-5">
+                    <a class="opacity-70 hover:opacity-90" href={previousTea.data.route}>&#8249; zurück</a>
+                    <a class="opacity-70 hover:opacity-90" href={nextTea.data.route}>weiter &#8250;</a>
+                </div>
+            </div>
+            <div class="lg:col-start-1 lg:row-start-1 lg:row-span-2">
                 <img class="w-xl max-w-screen aspect-square" src={imagePaths[0]}>
             </div>
-            <div class="max-w-3xl lg:max-w-xl flex flex-col items-center lg:items-start lg:justify-self-start lg:mt-16">
+            <div class="lg:col-start-2 lg:justify-self-start max-w-3xl lg:max-w-xl flex flex-col items-center lg:items-start">
                 <h1 class="my-3 text-6xl font-bold">{entry.data.title}</h1>
                 <p class="my-3 pr-5 self-stretch flex justify-between text-lg tracking-wider opacity-70">
                     <PurchaseInfo data={entry.data} />
