@@ -26,7 +26,7 @@ export async function getStaticPaths() {
 const { entry } = Astro.props
 const { Content } = await entry.render()
 
-const imagePaths = Object.keys(import.meta.glob('/public/images/teas/*/*/0*.png'))
+const imagePaths = Object.keys(import.meta.glob('~/assets/images/teas/*/*/0*.png'))
     .filter(path => path.toLowerCase().includes(entry.slug))
 
 const tags = await getCollection('tags', tag => entry.data.tags.includes(tag.slug))
