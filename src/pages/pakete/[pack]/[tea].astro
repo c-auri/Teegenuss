@@ -38,7 +38,7 @@ const tags = await getCollection('tags', tag => entry.data.tags.includes(tag.slu
             </div>
             <div class="max-w-3xl lg:max-w-xl flex flex-col items-center lg:items-start lg:justify-self-start lg:mt-16">
                 <h1 class="my-3 text-6xl font-bold">{entry.data.title}</h1>
-                <p class="my-3 pr-5 self-stretch flex justify-between text-xl opacity-70">
+                <p class="my-3 pr-5 self-stretch flex justify-between text-lg tracking-wider opacity-70">
                     <PurchaseInfo data={entry.data} />
                 </p>
                 <div class="my-3 text-2xl">
