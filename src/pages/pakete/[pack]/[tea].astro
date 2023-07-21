@@ -38,7 +38,7 @@ const nextTea = teasInPack[modulo(entryIndex + 1, teasInPack.length)]!
 ---
 <Page title={entry.data.title}>
     <Frame>
-        <section class="w-full my-10 grid justify-items-center lg:grid-cols-2 lg:grid-rows-[6rem]">
+        <section class="w-full mt-12 mb-20 grid justify-items-center lg:grid-cols-2 lg:grid-rows-[6rem]">
             <div class="lg:col-start-2 lg:justify-self-stretch lg:max-w-xl lg:self-end text-lg tracking-wider flex flex-col items-center lg:flex-row lg:justify-between">
                 <a class="col-span-2 opacity-70 hover:opacity-90" href="../">{pack.data.title}</a>
                 <div class="flex gap-2 lg:gap-5">
@@ -63,19 +63,27 @@ const nextTea = teasInPack[modulo(entryIndex + 1, teasInPack.length)]!
     <Frame bg="bg-gray-100">
         <section class="flex justify-evenly">
             {
-                entry.data.properties &&
-                <PropertyTable properties={entry.data.properties} />
-            }
-            {
                 entry.data.preparation &&
                 <PreparationTable preparation={entry.data.preparation} />
             }
         </section>
     </Frame>
     <Frame bg="bg-white">
-        {
-            tags.map(tag => <Tag tag={tag} />)
-        }
+        <section class="my-10 grid md:grid-cols-2 gap-20 lg:gap-64">
+            <div class="max-w-2xl">
+                <h2 class="text-2xl font-bold">Erklärungen</h2>
+                {
+                    tags.map(tag => <Tag tag={tag} />)
+                }
+            </div>
+            <div class="">
+                <h2 class="text-2xl font-bold">Details</h2>
+                {
+                    entry.data.properties &&
+                    <PropertyTable properties={entry.data.properties} />
+                }
+            </div>
+        </section>
     </Frame>
 </Page>
 <style>
