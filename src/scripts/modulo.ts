@@ -1,4 +1,4 @@
-export function modulo(n, m) {
+export function modulo(n: number, m: number) {
     let r = n % m
 
     if (r < 0) {

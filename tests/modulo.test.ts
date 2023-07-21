@@ -1,5 +1,5 @@
 import { describe, test, expect } from 'vitest'
-import { modulo } from '/src/scripts/modulo.js'
+import { modulo } from '../src/scripts/modulo'
 
 
 // divident % divisor = remainder
@@ -86,7 +86,7 @@ describe("Expect mod(n, m)", () => {
     })
 })
 
-function testModulo(n, m, expectedResult) {
+function testModulo(n: number, m: number, expectedResult: number) {
     const actualResult = modulo(n, m)
     expect(actualResult).toBe(expectedResult)
 }
