@@ -5,5 +5,5 @@ export function modulo(n: number, m: number) {
         r = m > 0 ? r + m : r - m
     }
     
-    return r === -0 ? 0 : r
+    return Math.abs(r)
 }
