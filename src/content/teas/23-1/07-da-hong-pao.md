@@ -5,7 +5,7 @@ pack: 23-1-Chinas-Schaetze
 purchase:
     shopName: Wuyi Origin
     shopUrl: https://www.wuyiorigin.com/collections/2020-wuyi-ming-cong/products/da-hong-pao-blended-%E6%8B%BC%E9%85%8D%E5%A4%A7%E7%BA%A2%E8%A2%8D-2022?variant=40074178756696
-    amount: 12 g
+    amount: "12\u200Ag"
     pricePer100g: 0,41
     currency: €
 properties:
@@ -13,24 +13,24 @@ properties:
         tea:  Oolong
         plant: Verschnitt (Rougui, Shuixian, Jinmudan, Meizhan, Chunlan)
     origin:
-        country: 'China'
-        province: 'Fujian'
-        region: 'Wuyishan'
+        country: "China"
+        province: "Fujian"
+        region: "Wuyishan"
     production:
-        harvest: '2021'
-        oxidization: 'stark'
-        roast: 'sehr stark'
+        harvest: "2021"
+        oxidization: "stark"
+        roast: "sehr stark"
 preparation:
     gongfu:
-        temperature: 100°C
+        temperature: "100\u200A°\u200AC"
         amount:
-            weight: '5-6 g'
-            orVolume: 'ca. ¹/₃ des Gefäßes'
+            weight: "5\u200A-\u200A6\u200Ag"
+            orVolume: "ca. ¹/₃ des Gefäßes"
         times:
-            rinse: 'blitz'
-            firstInfusion: 'blitz'
-            secondInfusion: 'blitz'
-            laterInfusions: '+5 Sekunden'
+            rinse: "blitz"
+            firstInfusion: "blitz"
+            secondInfusion: "blitz"
+            laterInfusions: "+\u200A5 Sekunden"
 tags: [ fujian, yancha, si-da-ming-cong, da-hong-pao ]
 ---
-Ein klassischer Felsentee aus Wuyi. Im Vordergrund steht eine kräftige roast, die trotz ihrer Intensität bemerkenswert geschmeidig ist. Dahinter verbergen sich leicht florale Noten und das charakteristisch mineralische Mundgefühl.
+Ein klassischer Felsentee aus Wuyi. Im Vordergrund steht eine kräftige Röstung, die trotz ihrer Intensität bemerkenswert geschmeidig ist. Dahinter verbergen sich leicht florale Noten und das charakteristisch mineralische Mundgefühl.

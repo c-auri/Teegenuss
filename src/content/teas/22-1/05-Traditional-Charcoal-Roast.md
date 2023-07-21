@@ -5,7 +5,7 @@ pack: 22-1-Einstieg
 purchase:
     shopName: Taiwan Tea Crafts
     shopUrl: https://www.taiwanteacrafts.com/product/high-mountain-charcoal-pit-fired-oolong-tea
-    amount: 12 g
+    amount: "12\u200Ag"
     pricePer100g: 0,25
     currency: $
 properties:
@@ -13,26 +13,26 @@ properties:
         tea:  Oolong
         plant: Qing Xin
     origin:
-        country: 'Taiwan'
-        region: 'Baguashan'
-        elevation: '1200m'
+        country: "Taiwan"
+        region: "Baguashan"
+        elevation: "1200\u200Am"
     production:
-        harvest: 'April 2019'
-        picking: 'handgepflückt'
-        oxidation: 'medium'
-        roast: 'medium'
-        roastMethod: 'Holzkohleröstung'
+        harvest: "April 2019"
+        picking: "handgepflückt"
+        oxidation: "medium"
+        roast: "medium"
+        roastMethod: "Holzkohleröstung"
 preparation:
     gongfu:
-        temperature: 100°C
+        temperature: "100\u200A°C"
         amount:
-            weight: '5-6 g'
-            orVolume: 'bis der Gefäßboden bedeckt ist'
+            weight: "5\u200A-\u200A6\u200Ag"
+            orVolume: "bis der Gefäßboden bedeckt ist"
         times:
-            rinse: 'blitz'
-            firstInfusions: '5-10 Sekunden'
-            until: 'die Blätter geöffnet sind'
-            laterInfusions: '+5 Sekunden'
-tags: [ 'qing-xin' ]
+            rinse: "blitz"
+            firstInfusions: "5\u200A-\u200A10 Sekunden"
+            until: "die Blätter geöffnet sind"
+            laterInfusions: "+\u200A5 Sekunden"
+tags: [ "qing-xin" ]
 ---
 Ein mitteldunkler Oolong mit traditioneller Holzkohleröstung. Süße Honignoten verbinden sich mit deutlichen Röstnoten und erinnern stellenweise an Karamellbonbons.

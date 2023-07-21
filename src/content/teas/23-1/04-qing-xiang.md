@@ -5,7 +5,7 @@ pack: 23-1-Chinas-Schaetze
 purchase:
     shopName: Nannuoshan
     shopUrl: https://www.nannuoshan.org/collections/oolong-tea/products/qing-xiang-tieguanyin-2022?variant=43506658738443
-    amount: 12 g
+    amount: "12\u200Ag"
     pricePer100g: 0,24
     currency: €
 properties:
@@ -13,25 +13,25 @@ properties:
         tea:  Oolong
         plant: Tie Guan Yin
     origin:
-        country: 'China' 
-        province: 'Fujian' 
-        region: 'Anxi' 
-        town: 'Longjuan'
+        country: "China" 
+        province: "Fujian" 
+        region: "Anxi" 
+        town: "Longjuan"
     production:
-        harvest: '5. Oktober 2021'
-        oxidization: 'minimal'
-        roast: 'keine'
+        harvest: "5. Oktober 2021"
+        oxidization: "minimal"
+        roast: "keine"
 preparation:
     gongfu:
-        temperature: 90°C
+        temperature: "90\u200A°C"
         amount:
-            weight: '5g'
-            orVolume: 'bis der Gefäßboden bedeckt ist'
+            weight: "5\u200Ag"
+            orVolume: "bis der Gefäßboden bedeckt ist"
         times:
-            rinse: 'blitz'
-            firstInfusions: '20 Sekunden'
-            until: 'bis die Blätter geöffnet sind'
-            laterInfusions: '+10 Sekunden'
+            rinse: "blitz"
+            firstInfusion: "20 Sekunden"
+            secondInfusion: "20 Sekunden"
+            laterInfusions: "+\u200A10 Sekunden"
 tags: [ gruener-oolong, tie-guan-yin, qing-xiang ]
 ---
 Dieser frische Tie Guan Yin aus Anxi ist der Inbegriff eines modernen grünen Oolongs. Das sehr blumige Aroma und die deutliche Säure im Geschmack ergeben einen erfrischenden Tee, der wie gemacht ist für warme Tage.
