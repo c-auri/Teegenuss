@@ -10,8 +10,13 @@ const bg = "bg-white"
 ---
 <Page bgHeader={bg}>
     <Frame bg={bg}>
-    {
-        tags.map(tag => <GlossaryEntry tag={tag} />)
-    }
+        <section class="my-24 flex flex-col items-center sm:gap-12 lg:gap-24">
+            <h1 class="my-12 font-bold text-3xl">Glossar</h1>
+            <div class="w-full grid grid-cols-[repeat(auto-fit,minmax(48ch,1fr))] gap-x-20 justify-items-center">
+            {
+                tags.map(tag => <GlossaryEntry tag={tag} />)
+            }
+            </div>
+        </section>
     </Frame>
 </Page>
