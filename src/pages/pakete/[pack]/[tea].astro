@@ -61,10 +61,11 @@ const nextTea = teasInPack[modulo(entryIndex + 1, teasInPack.length)]!
         </section>
     </Frame>
     <Frame bg="bg-gray-100">
-        <section class="flex justify-evenly">
+        <section class="pt-10 pb-20 sm:pb-24 lg:pt-14 lg:pb-28 xl:pb-32 2xl:pb-36 text-gray-700 fill-gray-700">
+            <h2 class="my-10 xl:my-16 text-center 2xl:text-left text-2xl font-bold">Zubereitung</h2>
         {
             entry.data.preparation &&
-            <Preparation preparation={entry.data.preparation} />
+            <Preparation preparation={entry.data.preparation} color="fill-gray-500" />
         }
         </section>
     </Frame>

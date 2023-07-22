@@ -1,26 +1,29 @@
 ---
-let { group, title, dictionary } = Astro.props
-group = Object.entries(group)
+interface Props {
+    title: string,
+    svgPaths: string[],
+    values: string[],
+    bg: string,
+}
+
+const { title, svgPaths, values, bg } = Astro.props
 ---
-{
-    group &&
-    <tr>
-        <th rowspan={group.length}>
-            {title}
-        </th>
-    {
-        group[0] &&
-        <td>{dictionary[group[0][0]]}</td>
-        <td>{group[0][1]}</td>
-    }
-    </tr>
+<div class=`grid grid-cols-${svgPaths.length} grid-rows-[5rem_4rem] md:grid-rows-[6rem_5rem] xl:grid-rows-[7rem_6rem] md:gap-x-6 xl:gap-x-12 place-items-center`>
+{   
+    svgPaths.length == 1 &&
+    <span class={`text-center ${bg}`}>{title}</span>
 }
 {
-    group.slice(1) &&
-    group.slice(1).map(([key, value]: string[]) => (
-        <tr>
-            <td>{dictionary[key!]}</td>
-            <td>{value}</td>
-        </tr>
-    ))
+    svgPaths.length > 1 &&
+    <div class={`col-span-${svgPaths.length} w-10/12 border-b border-gray-500 leading-[.1] text-center`}>
+        <span class={`px-4 text-center ${bg}`}>{title}</span>
+    </div>
 }
+{
+    svgPaths.map(path => 
+        <svg class="h-14 w-20 sm:h-16 sm:w-24 md:h-20 md:w-28 2xl:h-24 2xl:w-32" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d={path} /></svg>)
+}
+{
+    values.map(value => <div class="my-4 w-20 sm:w-24 md:w-28 2xl:w-32 text-center">{value}</div>)
+}
+</div>
