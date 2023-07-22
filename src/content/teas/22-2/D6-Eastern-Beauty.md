@@ -25,12 +25,13 @@ preparation:
     gongfu:
         temperature: "95\u200A°C"
         amount:
-            weight: "4\u200A-\u200A5\u200Ag"
+            weight: "4\u200A-\u200A5\u200Ag pro 100\u200Aml"
             orVolume: "ca. ¹/₃ des Gefäßes"
         times:
             rinse: "optional"
-            firstInfusion: "5 Sekunden"
-            laterInfusions: "+\u200A5 Sekunden"
+            firstInfusion: "5\u200As"
+            secondInfusion: "10\u200As"
+            laterInfusions: "+\u200A5\u200As"
 tags: [ "eastern-beauty"]
 ---
 Ein etwas teurerer Eastern Beauty als in der letzten Teilung, dennoch wahrscheinlich kein authentischer Käferbisstee. Trotzdem sehr aromatisch und vielschichtig im Geschmack.

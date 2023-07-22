@@ -26,13 +26,13 @@ preparation:
     gongfu:
         temperature: "100\u200A°C"
         amount:
-            weight: "5\u200A-\u200A6\u200Ag"
-            orVolume: "bis der Gefäßboden bedeckt ist"
+            weight: "5\u200A-\u200A6\u200Ag pro 100\u200Aml"
+            orVolume: "oder bis Boden bedeckt"
         times:
             rinse: "blitz"
-            firstInfusions: "5\u200A-\u200A10 Sekunden"
-            until: "die Blätter geöffnet sind"
-            laterInfusions: "+\u200A5 Sekunden"
+            firstInfusion: "5\u200A-\u200A10\u200As"
+            secondInfusion: "5\u200As"
+            laterInfusions: "+\u200A5\u200As"
 tags: [ "qing-xin" ]
 ---
 Ein mitteldunkler Oolong mit traditioneller Holzkohleröstung. Süße Honignoten verbinden sich mit deutlichen Röstnoten und erinnern stellenweise an Karamellbonbons.

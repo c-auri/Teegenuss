@@ -25,13 +25,13 @@ preparation:
     gongfu:
         temperature: "90\u200A-\u200A95\u200A°C"
         amount:
-            weight: "4\u200A-\u200A5\u200Ag"
-            orVolume: "bis der Gefäßboden leicht bedeckt ist"
+            weight: "4\u200A-\u200A5\u200Ag pro 100\u200Aml"
+            orVolume: "oder bis Boden bedeckt"
         times:
             rinse: "blitz"
-            firstInfusions: "5\u200A-\u200A10 Sekunden"
-            until: "bis die Blätter geöffnet sind"
-            laterInfusions: "+\u200A10 Sekunden"
+            firstInfusion: "5\u200A-\u200A10\u200As"
+            secondInfusion: "10\u200A-\u200A10\u200As"
+            laterInfusions: "+\u200A10\u200As"
 tags: [ "tie-guan-yin", "grandpa-style" ]
 ---
 Die fortgeschrittene Oxidation und starke Röstung gibt dieser Strauchsorte einen deutlich anderen Charakter als den chinesischen Vertretern. Im Gaiwan je nach Zubereitung sehr facettenreich. Empfehlenswert aber auch im Grandpa Style, dabei zeigt sich eine konzentrierte Süße, die bei kurzen Ziehzeiten nicht so stark zum Vorschein kommt.

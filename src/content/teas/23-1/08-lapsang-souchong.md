@@ -26,11 +26,12 @@ preparation:
     gongfu:
         temperature: "95\u200A°C"
         amount:
-            weight: "4\u200A-\u200A5\u200Ag"
+            weight: "4\u200A-\u200A5\u200Ag pro 100\u200Aml"
         times:
-            rinse: "weglassen"
+            rinse: "⦻"
             firstInfusion: "blitz"
-            laterInfusions: "+\u200A3 Sekunden"
+            secondInfusion: "5\u200As"
+            laterInfusions: "+\u200A3\u200As"
 tags: [ fujian, lapsang ]
 ---
 Anders als die bekannteren geräucherten Vertreter derselben Sorte ist dieser Lapsang Souchong ein bemerkenswert sanfter Schwarztee. Über die typisch schokoladigen Basisnoten legt sich das zarte Aroma von Rosenblüten und eine fruchtige Süße.

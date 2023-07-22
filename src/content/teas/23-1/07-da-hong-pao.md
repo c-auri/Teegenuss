@@ -24,13 +24,13 @@ preparation:
     gongfu:
         temperature: "100\u200A°\u200AC"
         amount:
-            weight: "5\u200A-\u200A6\u200Ag"
+            weight: "5\u200A-\u200A6\u200Ag pro 100\u200Aml"
             orVolume: "ca. ¹/₃ des Gefäßes"
         times:
             rinse: "blitz"
             firstInfusion: "blitz"
             secondInfusion: "blitz"
-            laterInfusions: "+\u200A5 Sekunden"
+            laterInfusions: "+\u200A5\u200As"
 tags: [ fujian, yancha, si-da-ming-cong, da-hong-pao ]
 ---
 Ein klassischer Felsentee aus Wuyi. Im Vordergrund steht eine kräftige Röstung, die trotz ihrer Intensität bemerkenswert geschmeidig ist. Dahinter verbergen sich leicht florale Noten und das charakteristisch mineralische Mundgefühl.

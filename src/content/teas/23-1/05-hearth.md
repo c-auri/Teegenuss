@@ -23,12 +23,12 @@ preparation:
         temperature: "90\u200A-\u200A95°C"
         amount:
             weight: "4\u200A-\u200A5 g"
-            orVolume: "bis der Gefäßboden leicht bedeckt ist"
+            orVolume: "oder bis Boden bedeckt"
         times:
             rinse: "blitz"
-            firstInfusion: "10 Sekunden"
-            secondInfusion: "10 Sekunden"
-            laterInfusions: "+\u200A10 Sekunden"
+            firstInfusion: "10\u200As"
+            secondInfusion: "10\u200As"
+            laterInfusions: "+\u200A10\u200As"
 tags: [ tie-guan-yin ]
 ---
 Bei diesem dunklen Oolong vereint sich der blumige Grundcharakter des Tie Guan Yin mit warmen, nussigen Geschmacksnoten und einer an Karamell erinnernden Süße.

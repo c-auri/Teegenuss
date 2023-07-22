@@ -25,13 +25,13 @@ preparation:
     gongfu:
         temperature: "90\u200A°C"
         amount:
-            weight: "5\u200A-\u200A6\u200Ag"
-            orVolume: "bis der Gefäßboden bedeckt ist"
+            weight: "5\u200A-\u200A6\u200Ag pro 100\u200Aml"
+            orVolume: "oder bis Boden bedeckt"
         times:
             rinse: "blitz"
-            firstInfusions: "10 Sekunden"
-            until: "die Blätter geöffnet sind"
-            laterInfusions: "+\u200A10 Sekunden"
+            firstInfusion: "10\u200As"
+            secondInfusion: "20\u200As"
+            laterInfusions: "+\u200A10\u200As"
 tags: [ "alishan", "jin-xuan", "gruener-oolong" ]
 ---
 Ein moderner, grüner Oolong aus dem Alishan mit einem betörenden Blütenduft und der für die Strauchsorte typischen starken Milchigkeit. Aufgrund der geringen Oxidation ist er temperaturanfällig und wird leicht grasig herb.

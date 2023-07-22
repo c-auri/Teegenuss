@@ -23,13 +23,13 @@ preparation:
     gongfu:
         temperature: "80\u200A°C"
         amount:
-            weight: "2\u200A-\u200A3\u200Ag"
-            orVolume: "bis der Gefäßboden bedeckt ist"
+            weight: "2\u200A-\u200A3\u200Ag pro 100\u200Aml"
+            orVolume: "oder bis Boden bedeckt"
         times:
-            rinse: "weglassen"
-            firstInfusion: "20 Sekunden"
-            secondInfusion: "10 Sekunden"
-            laterInfusions: "+\u200A10 Sekunden"
+            rinse: "⦻"
+            firstInfusion: "20\u200As"
+            secondInfusion: "10\u200As"
+            laterInfusions: "+\u200A10\u200As"
 tags: [ "sanxia", "long-jing" ]
 ---
 Die für Long Jings übliche leichte Röstung gibt diesem Tee seine charakteristische Nadelform und einen leicht nussigen Geschmack. Etwas weniger frisch und dafür runder und intensiver im Geschmack als der Bi Luo Chun.

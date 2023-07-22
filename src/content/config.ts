@@ -53,13 +53,10 @@ const teas = defineCollection({
         }).partial(),
         times: z.object({
           rinse: z.string(),
-          firstInfusions: z.string(),
           firstInfusion: z.string(),
           secondInfusion: z.string(),
-          thirdInfusion: z.string(),
-          until: z.string(),
           laterInfusions: z.string(),
-        }).partial()
+        })
       }))
     }),
     tags: z.array(z.string())

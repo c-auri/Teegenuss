@@ -25,13 +25,13 @@ preparation:
     gongfu:
         temperature: "100\u200A°C"
         amount:
-            weight: "5\u200A-\u200A6\u200Ag"
-            orVolume: "bis der Gefäßboden bedeckt ist"
+            weight: "5\u200A-\u200A6\u200Ag pro 100\u200Aml"
+            orVolume: "oder bis Boden bedeckt"
         times:
             rinse: "blitz"
-            firstInfusions: "5\u200A-\u200A10 Sekunden"
-            until: "bis die Blätter geöffnet sind"
-            laterInfusions: "+\u200A5 Sekunden"
+            firstInfusion: "5\u200As"
+            secondInfusion: "10\u200As"
+            laterInfusions: "+\u200A5\u200As"
 tags: [ "gaba" ]
 ---
 Unter der schweren Röstung versteckt sich ein überraschend saftiger Tee. Gleichzeitig wärmend und erfrischend, eine sehr ungewöhnliche Kombination.

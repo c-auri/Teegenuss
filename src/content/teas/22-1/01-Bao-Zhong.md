@@ -25,12 +25,13 @@ preparation:
     gongfu:
         temperature: "85\u200A°C"
         amount:
-            weight: "5\u200A-\u200A6\u200Ag"
+            weight: "5\u200A-\u200A6\u200Ag pro 100\u200Aml"
             orVolume: "ca. ¹/₃ des Gefäßes"
         times:
             rinse: "optional"
-            firstInfusion: "10 Sekunden"
-            laterInfusions: "+\u200A10 Sekunden"
+            firstInfusion: "10\u200As"
+            secondInfusion: "20\u200As"
+            laterInfusions: "+\u200A10\u200As"
 tags: [ "gruener-oolong" ]
 ---
 Erinnert optisch an grünen Tee, aufgrund seiner Milchigkeit ist es aber zweifellos ein Oolong. Geschmacklich wenig überraschend und eher eindimensional, trotzdem eine überraschend gute Qualität für diesen niedrigen Preis.

@@ -26,12 +26,13 @@ preparation:
     gongfu:
         temperature: "95\u200A°C"
         amount:
-            weight: "4\u200A-\u200A5\u200Ag"
+            weight: "4\u200A-\u200A5\u200Ag pro 100\u200Aml"
             orVolume: "ca. ¹/₃ des Gefäßes"
         times:
             rinse: "optional"
-            firstInfusion: "5 Sekunden"
-            laterInfusions: "+\u200A5 Sekunden"
+            firstInfusion: "5\u200As"
+            secondInfusion: "10\u200As"
+            laterInfusions: "+\u200A5\u200As"
 tags: [ "eastern-beauty"]
 ---
 Eine günstige Version des beliebten Eastern Beauties. Aufgrund des Preises ist davon auszugehen, dass er nicht von Käfern gebissen wurde. Dennoch ein bemerkenswert vielschichtiger Tee der seinen Preis wert ist.

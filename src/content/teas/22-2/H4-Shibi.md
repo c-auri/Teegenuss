@@ -25,13 +25,13 @@ preparation:
     gongfu:
         temperature: "90\u200A°C"
         amount:
-            weight: "5\u200Ag"
-            orVolume: "bis der Gefäßboden bedeckt ist"
+            weight: "5\u200Ag pro 100\u200Aml"
+            orVolume: "oder bis Boden bedeckt"
         times:
             rinse: "blitz"
-            firstInfusions: "20 Sekunden"
-            until: "bis die Blätter geöffnet sind"
-            laterInfusions: "+\u200A10 Sekunden"
+            firstInfusion: "20\u200As"
+            secondInfusion: "20\u200As"
+            laterInfusions: "+\u200A10\u200As"
 tags: [ "meishan-shibi", "gruener-oolong", "qing-xin" ]
 ---
 Leichter und spritziger im Geschmack als der Meishan Jin Xuan. Für diesen Preis ein guter Einstieg in Qing Xin Gaoshans.

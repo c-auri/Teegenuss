@@ -23,11 +23,12 @@ preparation:
     gongfu:
         temperature: "90\u200A°C"
         amount:
-            weight: "2\u200A-\u200A3\u200Ag"
+            weight: "2\u200A-\u200A3\u200Ag pro 100\u200Aml"
         times:
             rinse: "blitz"
-            firstInfusion: "3 Sekunden"
-            laterInfusions: "+\u200A2 Sekunden"
+            firstInfusion: "3\u200As"
+            secondInfusion: "5\u200As"
+            laterInfusions: "+\u200A2\u200As"
 tags: [ "hong-yu"]
 ---
 Die natürliche Eukalyptusnote dieser Strauchsorte verbindet sich mit der Fruchtigkeit des schwarzen Tees und ergibt ein sehr außergewöhnliches Aroma. Großblättrige Schwarztees wie dieser hier können leicht zu intensiv werden, wenn man sie zu sehr fordet. Vorsichtig zubereitet rückt das besondere Aroma aber auch im Geschmack spürbar in den Vordergrund.

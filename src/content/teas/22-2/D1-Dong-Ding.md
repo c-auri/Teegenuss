@@ -25,13 +25,13 @@ preparation:
     gongfu:
         temperature: "90\u200A-\u200A95\u200A°C"
         amount:
-            weight: "4\u200A-\u200A5\u200Ag"
-            orVolume: "bis der Gefäßboden leicht bedeckt ist"
+            weight: "4\u200A-\u200A5\u200Ag pro 100\u200Aml"
+            orVolume: "oder bis Boden bedeckt"
         times:
             rinse: "blitz"
-            firstInfusions: "10\u200A-\u200A20 Sekunden"
-            until: "bis die Blätter geöffnet sind"
-            laterInfusions: "+\u200A10 Sekunden"
+            firstInfusion: "10\u200A-\u200A20\u200As"
+            secondInfusion: "20\u200A-\u200A20\u200As"
+            laterInfusions: "+\u200A10\u200As"
 tags: [ "dong-ding", "gruener-oolong" ]
 ---
 Eine modern interpretierter Dong Ding mit nur sehr geringer Oxidation. Dank der Röstung kann er stärker zubereitet werden als grüne Oolongs, dann zeigen sich kräftig würzige Noten. Bei schonenden Temperaturen zeigt sich der Tee hingegen von seiner blumig frischen Seite und offenbart seinen süßen Grundcharakter.

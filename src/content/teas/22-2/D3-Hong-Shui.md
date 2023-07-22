@@ -25,13 +25,13 @@ preparation:
     gongfu:
         temperature: "100\u200A°C"
         amount:
-            weight: "5\u200A-\u200A6\u200Ag"
-            orVolume: "bis der Gefäßboden bedeckt ist"
+            weight: "5\u200A-\u200A6\u200Ag pro 100\u200Aml"
+            orVolume: "oder bis Boden bedeckt"
         times:
             rinse: "blitz"
-            firstInfusions: "5\u200A-\u200A10 Sekunden"
-            until: "bis die Blätter geöffnet sind"
-            laterInfusions: "+\u200A10 Sekunden"
+            firstInfusion: "5\u200A-\u200A10\u200As"
+            secondInfusion: "5\u200A-\u200A10\u200As"
+            laterInfusions: "+\u200A10\u200As"
 tags: [ "hong-shui", "grandpa-style" ]
 ---
 Ein günstiger Oolong mit starker Fruchtnote. Geignet für die Zubereitung im Gaiwan, dabei aber nicht so ergiebig. Im Grandpa Style wird die Frucht stark betont, was dem Tee sehr in die Karten spielt.

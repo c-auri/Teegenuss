@@ -24,11 +24,12 @@ preparation:
     gongfu:
         temperature: "80\u200A-\u200A90°C"
         amount:
-            weight: "4\u200A-\u200A5\u200Ag"
+            weight: "4\u200A-\u200A5\u200Ag pro 100\u200Aml"
         times:
             rinse: "blitz"
-            firstInfusion: "10 Sekunden"
-            laterInfusions: "+\u200A10 Sekunden"
+            firstInfusion: "10\u200As"
+            secondInfusion: "20\u200As"
+            laterInfusions: "+\u200A10\u200As"
 tags: [ fujian, white-tea, bai-mu-dan ]
 ---
 Ein vielseitiger Baimudan aus Fuding mit leicht fortgeschrittenem Reifegrad. Vorsichtig zubereitet zeigt sich die zurückhaltende Blumigkeit des weißen Tees mit einer sanften, honigartigen Süße. Wird er kräftiger gebrüht legen sich jedoch kräftigere Gewürznoten darüber.
