@@ -1,14 +1,25 @@
 # Project Teegenuss
 
 ## Backlog
-- Tee content Korrekturlesen
-- Mobile Menu
-- Images:
-    - resize
-    - move to src, use experimental?
-- Glossary:
-    - add to tea page
-    - fix links
+- Mobile menu
+- Image slideshow
+- Accordion
+- Glossary links
+- Crop out image shadow
+- Maps
+
 - Footer:
-    - Impressum
-    - Datenschutz
+    Logo        Newsletter
+
+    Discord     Über Projekt Teegenuss          Impressum
+    RSS         Glossar                         Datenschutz
+                FAQ                             Kontakt
+
+
+## FAQ
+- Machst du Gewinn?
+- Gibts Rabatt?
+- Wie wird der Tee versendet?
+- Wie aufbewahren?
+    
+                               
