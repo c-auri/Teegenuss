@@ -3,7 +3,7 @@ import Page from '../../../layouts/Page.astro'
 import Frame from '../../../components/page/Frame.astro'
 import PurchaseInfo from '../../../components/tea/PurchaseInfo.astro'
 import PropertyTable from '../../../components/tea/PropertyTable.astro'
-import PreparationTable from '../../../components/tea/PreparationTable.astro'
+import Preparation from '../../../components/tea/Preparation.astro'
 import Tag from '../../../components/glossary/Entry.astro'
 
 import  { getCollection, getEntry } from 'astro:content'
@@ -64,7 +64,7 @@ const nextTea = teasInPack[modulo(entryIndex + 1, teasInPack.length)]!
         <section class="flex justify-evenly">
             {
                 entry.data.preparation &&
-                <PreparationTable preparation={entry.data.preparation} />
+                <Preparation preparation={entry.data.preparation} />
             }
         </section>
     </Frame>

@@ -1,5 +1,5 @@
 ---
-import PreparationRow from "./PreparationRow.astro";
+import PreparationGroup from "./PreparationGroup.astro";
 
 const { preparation } = Astro.props
 ---
@@ -12,7 +12,7 @@ const { preparation } = Astro.props
         </tr>
         {
             preparation.gongfu.amount &&
-            <PreparationRow 
+            <PreparationGroup 
                 group={preparation.gongfu.amount}
                 title="Menge"
                 dictionary={{
@@ -24,7 +24,7 @@ const { preparation } = Astro.props
         }
         {
             preparation.gongfu.times &&
-            <PreparationRow 
+            <PreparationGroup 
                 group={preparation.gongfu.times}
                 title="Ziehzeiten"
                 dictionary={{
