@@ -5,10 +5,11 @@ import Logo from './Logo.astro'
 const { bg } = Astro.props
 ---
 <Frame bg={bg}>
-    <header class="my-4 md:my-12 flex justify-between items-center">
-        <Logo mode="light" />
-        <div class="flex-1"></div>
-        <nav class="flex-1">
+    <header class="sm:my-2 grid grid-cols-2 items-center">
+        <div class="pt-3 sm:px-3 py-5">
+            <Logo mode="light" />
+        </div>
+        <nav class="flex-1 max-w-xl lg:pr-14 xl:pr-0 hidden sm:flex justify-center lg:justify-end">
             <ul class="flex justify-center gap-12 font-bold text-2xl">
                 <li><a class="opacity-50 hover:opacity-80" href="/pakete/">Pakete</a></li>
                 <li><a class="opacity-50 hover:opacity-80" href="/glossar/">Glossar</a></li>
