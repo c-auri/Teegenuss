@@ -67,13 +67,13 @@ const nextTea = teasInPack[modulo(entryIndex + 1, teasInPack.length)]!
         </section>
     </Frame>
     <Frame bg="bg-white">
-        <section class="my-10 grid md:grid-cols-2 gap-20 lg:gap-64">
-            <div class="max-w-2xl">
+        <section class="my-10 xl:mt-20 xl:mb-36 grid lg:grid-cols-2 gap-20">
+            <div class="flex flex-col items-center lg:items-start">
                 <h2 class="my-8 text-2xl font-bold">Erklärungen</h2>
                 <Accordion client:load entries={tags} />
             </div>
-            <div class="">
-                <h2 class="text-2xl font-bold">Details</h2>
+            <div class="flex flex-col items-center lg:items-start">
+                <h2 class="my-8 text-2xl font-bold">Details</h2>
                 {
                     entry.data.properties &&
                     <PropertyTable properties={entry.data.properties} />
