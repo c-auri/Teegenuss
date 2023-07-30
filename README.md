@@ -7,6 +7,7 @@
 - Glossary links
 - Crop out image shadow
 - Maps
+- RSS Feed (Astro tutorial)
 
 - Footer:
     Logo        Newsletter
