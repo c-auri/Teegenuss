@@ -4,7 +4,7 @@ import Frame from '../../../components/page/Frame.astro'
 import PurchaseInfo from '../../../components/tea/PurchaseInfo.astro'
 import PropertyTable from '../../../components/tea/PropertyTable.astro'
 import Preparation from '../../../components/tea/Preparation.astro'
-import Tag from '../../../components/glossary/Entry.astro'
+import Accordion from '../../../components/tea/Accordion.jsx'
 
 import  { getCollection, getEntry } from 'astro:content'
 import { modulo } from '../../../scripts/modulo'
@@ -69,10 +69,8 @@ const nextTea = teasInPack[modulo(entryIndex + 1, teasInPack.length)]!
     <Frame bg="bg-white">
         <section class="my-10 grid md:grid-cols-2 gap-20 lg:gap-64">
             <div class="max-w-2xl">
-                <h2 class="text-2xl font-bold">Erklärungen</h2>
-                {
-                    tags.map(tag => <Tag tag={tag} />)
-                }
+                <h2 class="my-8 text-2xl font-bold">Erklärungen</h2>
+                <Accordion client:load entries={tags} />
             </div>
             <div class="">
                 <h2 class="text-2xl font-bold">Details</h2>
@@ -84,5 +82,3 @@ const nextTea = teasInPack[modulo(entryIndex + 1, teasInPack.length)]!
         </section>
     </Frame>
 </Page>
-<style>
-</style>
