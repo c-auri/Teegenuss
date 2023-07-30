@@ -42,8 +42,8 @@ const nextTea = teasInPack[modulo(entryIndex + 1, teasInPack.length)]!
             <div class="lg:col-start-2 lg:justify-self-stretch lg:max-w-xl lg:self-end select-none text-lg md:text-xl tracking-wider flex flex-col items-center lg:flex-row lg:justify-between">
                 <a class="col-span-2 opacity-70 hover:opacity-90" href="./">{pack.data.title}</a>
                 <div class="flex gap-2 lg:gap-5">
-                    <a class="opacity-70 hover:opacity-90" href={previousTea.data.route}>&#8249; zurück</a>
-                    <a class="opacity-70 hover:opacity-90" href={nextTea.data.route}>weiter &#8250;</a>
+                    <a class="opacity-70 hover:opacity-90" href={`/pakete/${pack.data.route}/${previousTea.data.route}`}>&#8249; zurück</a>
+                    <a class="opacity-70 hover:opacity-90" href={`/pakete/${pack.data.route}/${nextTea.data.route}`}>weiter &#8250;</a>
                 </div>
             </div>
             <div class="lg:px-10 lg:col-start-1 lg:row-start-1 lg:row-span-2">
