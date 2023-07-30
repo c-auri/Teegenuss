@@ -3,7 +3,7 @@ import PropertyRow from "./PropertyRow.astro"
 
 const { properties } = Astro.props
 ---
-<table class="my-8">
+<table class="w-full max-w-xl xl:max-w-2xl table-fixed text-left text-md sm:text-lg md:text-xl">
     <tbody>
         <PropertyRow 
             group={Object.entries(properties.categorization)} 

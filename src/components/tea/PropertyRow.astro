@@ -4,13 +4,13 @@ const { group, title, dictionary } = Astro.props
 {
     group &&
     <tr>
-        <th rowspan={group.length}>
+        <th rowspan={group.length} class="w-1/3 pt-4 align-top">
             {title}
         </th>
     {
         group[0] &&
-        <td>{dictionary[group[0][0]]}</td>
-        <td>{group[0][1]}</td>
+        <td class="w-1/3 pt-4 align-top">{dictionary[group[0][0]]}</td>
+        <td class="w-1/3 pt-4 align-top text-gray-700">{group[0][1]}</td>
     }
     </tr>
 }
@@ -18,8 +18,8 @@ const { group, title, dictionary } = Astro.props
     group.slice(1) &&
     group.slice(1).map(([key, value]: string[]) => (
         <tr>
-            <td>{dictionary[key!]}</td>
-            <td>{value}</td>
+            <td class="align-top">{dictionary[key!]}</td>
+            <td class="align-top text-gray-700">{value}</td>
         </tr>
     ))
 }
