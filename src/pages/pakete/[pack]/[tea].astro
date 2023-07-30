@@ -26,9 +26,6 @@ export async function getStaticPaths() {
 const { entry } = Astro.props
 const { Content } = await entry.render()
 
-const imagePaths = Object.keys(import.meta.glob('~/assets/images/teas/*/*/0*.png'))
-    .filter(path => path.toLowerCase().includes(entry.slug))
-
 const tags = await getCollection('tags', tag => entry.data.tags.includes(tag.slug))
 const pack = await getEntry('packs', entry.data.pack.id)
 const teasInPack = await getCollection('teas', tea => tea.data.pack.id === entry.data.pack.id)
@@ -47,7 +44,7 @@ const nextTea = teasInPack[modulo(entryIndex + 1, teasInPack.length)]!
                 </div>
             </div>
             <div class="lg:px-10 lg:col-start-1 lg:row-start-1 lg:row-span-2">
-                <img class="w-xl max-w-screen aspect-square" src={imagePaths[0]}>
+                <img class="w-xl max-w-screen aspect-square" src={`/images/teas/${entry.slug}/01.png`}>
             </div>
             <div class="lg:col-start-2 lg:justify-self-start max-w-2xl md:max-w-3xl lg:max-w-xl flex flex-col items-center lg:items-start">
                 <h1 class="my-3 sm:my-6 text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-bold">{entry.data.title}</h1>
