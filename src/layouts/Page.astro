@@ -3,6 +3,8 @@ import '../styles/global.css'
 import Header from '../components/page/Header.astro'
 import Footer from '../components/page/Footer.astro'
 
+import favicon from '../assets/icons/favicon.svg'
+
 const { title, bgHeader } = Astro.props
 ---
 <!DOCTYPE html>
@@ -10,7 +12,7 @@ const { title, bgHeader } = Astro.props
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/svg+xml" href="/src/assets/icons/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href={favicon.src} />
     <title>{ title }</title>
 </head>
 <body class="min-h-screen flex flex-col">
