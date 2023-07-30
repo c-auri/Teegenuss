@@ -1,21 +1,22 @@
 ---
 interface Props {
     title: string,
+    gridCols: string,
     svgPaths: string[],
     values: string[],
     bg: string,
 }
 
-const { title, svgPaths, values, bg } = Astro.props
+const { title, gridCols, svgPaths, values, bg } = Astro.props
 ---
-<div class=`grid grid-cols-${svgPaths.length} grid-rows-[5rem_4rem] md:grid-rows-[6rem_5rem] xl:grid-rows-[7rem_6rem] md:gap-x-6 xl:gap-x-12 place-items-center`>
+<div class=`grid ${gridCols} grid-rows-[5rem_4rem] md:grid-rows-[6rem_5rem] xl:grid-rows-[7rem_6rem] md:gap-x-6 xl:gap-x-12 place-items-center`>
 {   
     svgPaths.length == 1 &&
     <span class={`text-center ${bg}`}>{title}</span>
 }
 {
     svgPaths.length > 1 &&
-    <div class={`col-span-${svgPaths.length} w-10/12 border-b border-gray-500 leading-[.1] text-center`}>
+    <div class={"w-10/12 col-span-full border-b border-gray-500 leading-[.1] text-center"}>
         <span class={`px-4 text-center ${bg}`}>{title}</span>
     </div>
 }
