@@ -28,9 +28,9 @@ function Panel({ entry, isOpen, toggle }) {
     const path = isOpen ? patchCevronUp : pathCevronDown
 
     return (
-        <article className="border-b border-gray-300 py-3 md:py-4">
-            <header className="cursor-pointer flex justify-between items-center" onClick={toggle}>
-                <h3 className="text-lg sm:text-xl md:text-2xl font-bold">{entry.data.title}</h3>
+        <article className="border-b border-gray-300">
+            <header className="cursor-pointer py-3 md:py-4 flex justify-between items-center" onClick={toggle}>
+                <h3 className="text-xl md:text-2xl font-bold">{entry.data.title}</h3>
                 <svg className="h-8 fill-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d={path} /></svg>
             </header>
             {
@@ -38,17 +38,17 @@ function Panel({ entry, isOpen, toggle }) {
                 <div className="mt-3 md:mt-4">
                 {
                     entry.data.translation &&
-                    <p className="text-md sm:text-lg md:text-xl text-gray-600">Übersetzt: {entry.data.translation}</p>
+                    <p className="text-lg md:text-xl text-gray-600">Übersetzt: {entry.data.translation}</p>
                 }
                 {
                     entry.data.synonyms &&
-                    <p className="text-md sm:text-lg md:text-xl text-gray-600">Auch: {entry.data.synonyms}</p>
+                    <p className="text-lg md:text-xl text-gray-600">Auch: {entry.data.synonyms}</p>
                 }
                 </div>
             }
             {
                 isOpen && 
-                <p className="mt-2 mb-4 text-md sm:text-lg md:text-xl">{entry.body}</p>
+                <p className="mt-2 mb-8 text-lg md:text-xl">{entry.body}</p>
             }
         </article>
     )
