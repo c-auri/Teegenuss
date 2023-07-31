@@ -8,7 +8,7 @@ purchase:
     amount: "12\u200Ag"
     pricePer100g: 0,27
     currency: $
-properties:
+details:
     categorization:
         tea:  Oolong
         plant: Tie Guan Yin

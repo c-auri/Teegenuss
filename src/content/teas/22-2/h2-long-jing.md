@@ -8,7 +8,7 @@ purchase:
     amount: "12\u200Ag"
     pricePer100g: 0,17
     currency: $
-properties:
+details:
     categorization:
         tea:  Grüner Tee
         plant: Qing Xin Gan Zhi

@@ -8,7 +8,7 @@ purchase:
     amount: "2\u200A×\u200A8\u200Ag"
     pricePer100g: 0,17
     currency: €
-properties:
+details:
     categorization:
         tea:  Weißer Tee
         plant: Cai Cha

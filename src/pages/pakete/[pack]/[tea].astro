@@ -2,7 +2,7 @@
 import Page from '../../../layouts/Page.astro'
 import Frame from '../../../components/page/Frame.astro'
 import PurchaseInfo from '../../../components/tea/PurchaseInfo.astro'
-import PropertyTable from '../../../components/tea/PropertyTable.astro'
+import DetailsTable from '../../../components/tea/DetailsTable.astro'
 import Preparation from '../../../components/tea/Preparation.astro'
 import Accordion from '../../../components/tea/Accordion.jsx'
 
@@ -71,8 +71,8 @@ const nextTea = teasInPack[modulo(entryIndex + 1, teasInPack.length)]!
             <section class="lg:col-start-4 lg:col-end-6 flex flex-col items-center lg:items-start gap-5">
                 <h2 class="my-10 text-3xl font-bold">Details</h2>
                 {
-                    entry.data.properties &&
-                    <PropertyTable properties={entry.data.properties} />
+                    entry.data.details &&
+                    <DetailsTable details={entry.data.details} />
                 }
             </section>
             <section class="w-full max-w-2xl xl:max-w-3xl lg:row-start-1 lg:col-start-1 lg:col-end-4 flex flex-col items-center lg:items-start gap-5">

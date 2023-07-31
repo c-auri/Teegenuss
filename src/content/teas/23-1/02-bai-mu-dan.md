@@ -8,7 +8,7 @@ purchase:
     amount: "12\u200Ag"
     pricePer100g: 0,28
     currency: €
-properties:
+details:
     categorization:
         tea:  Weißer Tee
         plant: null

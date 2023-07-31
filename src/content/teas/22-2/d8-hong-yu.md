@@ -8,7 +8,7 @@ purchase:
     amount: "12\u200Ag"
     pricePer100g: 0,31
     currency: $
-properties:
+details:
     categorization:
         tea:  Schwarzer Tee
         plant: Hong Yu

@@ -1,20 +1,20 @@
 ---
-import PropertyRow from "./PropertyRow.astro"
+import DetailsRow from "./DetailsRow.astro"
 
-const { properties } = Astro.props
+const { details } = Astro.props
 ---
 <table class="w-full max-w-xl xl:max-w-2xl table-fixed text-left text-xl">
     <tbody>
-        <PropertyRow 
-            group={Object.entries(properties.categorization)} 
+        <DetailsRow 
+            group={Object.entries(details.categorization)} 
             title="Sorte" 
             dictionary={{
                 "tea": "Teesorte",
                 "plant": "Strauchsorte"
             }}
         />
-        <PropertyRow 
-            group={Object.entries(properties.origin)} 
+        <DetailsRow 
+            group={Object.entries(details.origin)} 
             title="Herkunft" 
             dictionary={{
                 "country": "Land",
@@ -24,8 +24,8 @@ const { properties } = Astro.props
                 "elevation": "Höhe"
             }}
         />
-        <PropertyRow 
-            group={Object.entries(properties.production)} 
+        <DetailsRow 
+            group={Object.entries(details.production)} 
             title="Verarbeitung" 
             dictionary={{
                 "harvest": "Ernte",

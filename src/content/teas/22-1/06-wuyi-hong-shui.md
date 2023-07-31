@@ -8,7 +8,7 @@ purchase:
     amount: "12\u200Ag"
     pricePer100g: 0,24
     currency: $
-properties:
+details:
     categorization:
         tea:  Oolong
         plant: Wuyi

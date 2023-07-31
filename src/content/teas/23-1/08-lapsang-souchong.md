@@ -8,7 +8,7 @@ purchase:
     amount: "12\u200Ag"
     pricePer100g: 0,25
     currency: €
-properties:
+details:
     categorization:
         tea:  Oolong
         plant: wilde Pflanzen, unbekannt

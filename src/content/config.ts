@@ -23,7 +23,7 @@ const teas = defineCollection({
       pricePer100g: z.string(),
       currency: z.string(),
     }),
-    properties: z.object({
+    details: z.object({
       categorization: z.object({
         tea: z.string(),
         plant: z.string().nullable(),

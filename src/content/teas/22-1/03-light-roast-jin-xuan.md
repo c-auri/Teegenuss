@@ -8,7 +8,7 @@ purchase:
     amount: "12\u200Ag"
     pricePer100g: 0,16
     currency: $
-properties:
+details:
     categorization:
         tea:  Oolong
         plant: Jin Xuan
