@@ -7,7 +7,7 @@ export default function Accordion({ entries }) {
     const [activeIndex, setActiveIndex] = useState(0)
     
     return (
-        <div class="border-t border-gray-300 w-full max-w-2xl xl:max-w-3xl">
+        <div class="border-t border-gray-300 w-full">
         {
             entries.map((entry, index) => 
                 <Panel
