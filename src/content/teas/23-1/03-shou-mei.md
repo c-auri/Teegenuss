@@ -17,6 +17,7 @@ properties:
         province: "Fujian" 
         region: "Fuding" 
         town: "Tai Mu Shan"
+        elevation: null
     production:
         harvest: "Herbst 2020"
         oxidization: "leicht"

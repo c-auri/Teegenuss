@@ -17,6 +17,7 @@ properties:
         province: "Fujian" 
         region: "Anxi" 
         town: "Longjuan"
+        elevation: null
     production:
         harvest: "5. Oktober 2021"
         oxidization: "minimal"

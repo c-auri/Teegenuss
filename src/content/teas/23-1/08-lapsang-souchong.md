@@ -17,6 +17,7 @@ properties:
         province: "Fujian"
         region: "Wuyishan"
         town: "Tong Mu Guan"
+        elevation: null
     production:
         harvest: "8. April 2022"
         oxidization: "stark"

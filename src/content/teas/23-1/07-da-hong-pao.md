@@ -16,6 +16,8 @@ properties:
         country: "China"
         province: "Fujian"
         region: "Wuyishan"
+        town: null
+        elevation: null
     production:
         harvest: "2021"
         oxidization: "stark"

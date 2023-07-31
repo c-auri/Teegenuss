@@ -11,11 +11,13 @@ purchase:
 properties:
     categorization:
         tea:  Weißer Tee
+        plant: null
     origin:
         country: "China" 
         province: "Fujian" 
         region: "Fuding" 
         town: "Tai Mu Shan"
+        elevation: null
     production:
         harvest: "Frühjahr 2021"
         oxidization: "minimal"

@@ -15,7 +15,11 @@ properties:
     origin:
         country: "China"
         province: "Fujian"
+        region: null
+        town: null
+        elevation: null
     production:
+        harvest: null
         oxidization: "stark"
         roast: "sehr stark"
 preparation:

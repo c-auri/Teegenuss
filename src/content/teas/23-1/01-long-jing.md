@@ -11,10 +11,15 @@ purchase:
 properties:
     categorization:
         tea:  Grüner Tee
+        plant: null
     origin:
         country: "China"
         province: "Zhejiang"
+        region: null
+        town: null
+        elevation: null
     production:
+        harvest: null
         oxidization: "keine"
         roast: "keine"
 preparation:

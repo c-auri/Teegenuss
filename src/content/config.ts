@@ -26,22 +26,22 @@ const teas = defineCollection({
     properties: z.object({
       categorization: z.object({
         tea: z.string(),
-        plant: z.optional(z.string()),
+        plant: z.string().nullable(),
       }),
       origin: z.object({
-        country: z.string(),
-        province: z.string(),
-        region: z.string(),
-        town: z.string(),
-        elevation: z.string(),
-      }).partial(),
+        country: z.optional(z.string().nullable()),
+        province: z.optional(z.string().nullable()),
+        region: z.optional(z.string().nullable()),
+        town: z.optional(z.string().nullable()),
+        elevation: z.string().nullable(),
+      }),
       production: z.object({
-        harvest: z.string(),
-        picking: z.string(),
-        oxidation: z.string(),
-        roast: z.string(),
-        roastMethod: z.string(),
-      }).partial(),
+        harvest: z.string().nullable(),
+        picking: z.optional(z.string()),
+        oxidation: z.optional(z.string()),
+        roast: z.optional(z.string()),
+        roastMethod: z.optional(z.string()),
+      }),
     }).partial(),
     preparation: z.object({
       gongfu: z.optional(z.object({
