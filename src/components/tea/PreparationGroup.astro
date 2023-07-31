@@ -2,6 +2,7 @@
 interface Props {
     group: { 
         title: string,
+        tooltips: string[],
         svgPaths: string[],
         values: string[],
     },
@@ -23,8 +24,8 @@ const { group, gridCols, bg } = Astro.props
     </div>
 }
 {
-    group.svgPaths.map(path => 
-        <svg class="h-14 w-20 sm:h-16 sm:w-24 md:h-20 md:w-28 2xl:h-24 2xl:w-32" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d={path} /></svg>)
+    group.svgPaths.map((path, index) => 
+        <svg class="h-14 w-20 sm:h-16 sm:w-24 md:h-20 md:w-28 2xl:h-24 2xl:w-32" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d={path} /><title>{group.tooltips[index]}</title></svg>)
 }
 {
     group.values.map(value => <div class="my-4 w-20 sm:w-24 md:w-28 2xl:w-32 text-center">{value}</div>)
