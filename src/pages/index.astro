@@ -1,5 +1,20 @@
 ---
 import Page from '../layouts/Page.astro'
+import Frame from '../components/page/Frame.astro'
+import { getCollection } from "astro:content"
+
+const packs = await getCollection('packs')
+const bg = "bg-white"
 ---
-<Page title="Projekt Teegenuss">
+<Page title="Projekt Teegenuss" bgHeader={bg}>
+    <Frame bg={bg}>
+        <ul>
+        {
+            packs.reverse().map(pack => 
+                <li>
+                    <a href={`/pakete/${pack.data.route}`}>{pack.data.title}</a>
+                </li>)
+        }
+        </ul>
+    </Frame>
 </Page>
