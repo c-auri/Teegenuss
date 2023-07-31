@@ -1,30 +1,32 @@
 ---
 interface Props {
-    title: string,
+    group: { 
+        title: string,
+        svgPaths: string[],
+        values: string[],
+    },
     gridCols: string,
-    svgPaths: string[],
-    values: string[],
     bg: string,
 }
 
-const { title, gridCols, svgPaths, values, bg } = Astro.props
+const { group, gridCols, bg } = Astro.props
 ---
 <div class=`grid ${gridCols} grid-rows-[5rem_4rem] md:grid-rows-[6rem_5rem] xl:grid-rows-[7rem_6rem] md:gap-x-6 xl:gap-x-12 place-items-center`>
 {   
-    svgPaths.length == 1 &&
-    <span class={`text-center ${bg}`}>{title}</span>
+    group.svgPaths.length == 1 &&
+    <span class={`text-center ${bg}`}>{group.title}</span>
 }
 {
-    svgPaths.length > 1 &&
+    group.svgPaths.length > 1 &&
     <div class={"w-10/12 col-span-full border-b border-gray-500 leading-[.1] text-center"}>
-        <span class={`px-4 text-center ${bg}`}>{title}</span>
+        <span class={`px-4 text-center ${bg}`}>{group.title}</span>
     </div>
 }
 {
-    svgPaths.map(path => 
+    group.svgPaths.map(path => 
         <svg class="h-14 w-20 sm:h-16 sm:w-24 md:h-20 md:w-28 2xl:h-24 2xl:w-32" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d={path} /></svg>)
 }
 {
-    values.map(value => <div class="my-4 w-20 sm:w-24 md:w-28 2xl:w-32 text-center">{value}</div>)
+    group.values.map(value => <div class="my-4 w-20 sm:w-24 md:w-28 2xl:w-32 text-center">{value}</div>)
 }
 </div>
