@@ -12,7 +12,7 @@ const bg = "bg-white"
         {
             packs.reverse().map(pack => 
                 <li>
-                    <a href={`${pack.data.route}`}>{pack.data.title}</a>
+                    <a href={`/pakete/${pack.data.route}`}>{pack.data.title}</a>
                 </li>)
         }
         </ul>
