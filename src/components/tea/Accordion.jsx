@@ -6,7 +6,7 @@ const pathCevronDown = "M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.5
 export default function Accordion({ entries }) {
     const [activeIndex, setActiveIndex] = useState(0)
     
-    return (
+    return <>
         <div className="border-t border-gray-300 w-full">
         {
             entries.map((entry, index) => 
@@ -21,7 +21,12 @@ export default function Accordion({ entries }) {
                 />)
         }
         </div>
-    )
+        <p className="w-full text-end px-1 py-3">
+            <a className="italic text-gray-500 hover:text-gray-600" href="/glossar">
+                zum Glossar
+            </a>
+        </p>
+    </>
 }
 
 function Panel({ entry, isOpen, toggle }) {

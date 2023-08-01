@@ -1,20 +1,21 @@
 ---
 import Frame from "./Frame.astro"
+import Subheading from "../page/Subheading.astro";
 ---
 <Frame bg="bg-black">
     <footer class="text-gray-400 text-lg">
-        <section class="border-b-2 border-gray-900 flex flex-col justify-between">
-            <h2 class="mt-10 sm:mt-14 md:mt-16 lg:mt-24 font-bold text-gray-300 text-2xl lg:text-3xl">Kontakt</h2>
-            <form class="lg:max-w-3xl pb-12">
-                <p class="my-5">
+        <section class="pt-16 pb-24 border-b-2 border-gray-900 grid justify-between">
+            <Subheading classList="mb-10 text-start">Kontakt</Subheading>
+            <form class="lg:max-w-3xl flex flex-col gap-4">
+                <div>
                     <p>
                         Hast du Fragen oder Anregungen?
                     </p>
                     <p>
                         Schreib mir gerne eine Nachricht, dann melde ich mich so schnell es geht bei dir.
                     </p>
-                </p>
-                <fieldset class="my-10 flex flex-col gap-5">
+                </div>
+                <fieldset class="flex flex-col gap-5">
                     <div class="flex flex-col md:flex-row gap-5">
                         <p class="w-full flex flex-col gap-1">
                             <label for="name">Name</label>
