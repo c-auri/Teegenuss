@@ -2,7 +2,7 @@
 title: Lapsang Souchong
 route: lapsang-souchong
 pack: 23-1-Chinas-Schaetze
-type: Oolong
+type: Schwarzer Tee
 purchase:
     shop: WuyiOrigin
     productUrl: https://www.wuyiorigin.com/collections/wuyi-black/products/wild-lapsang-souchong-%E9%87%8E%E7%94%9F%E5%B0%8F%E7%A7%8D2022?variant=39907726131288

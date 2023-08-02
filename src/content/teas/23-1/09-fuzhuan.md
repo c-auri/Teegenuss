@@ -2,7 +2,7 @@
 title: Fuzhuan
 route: fuzhuan
 pack: 23-1-Chinas-Schaetze
-type: Oolong
+type: Heicha
 purchase:
     shop: Teewald
     productUrl: https://teewald.de/products/anhua-heicha
