@@ -1,10 +1,10 @@
 ---
-const  { mode } = Astro.props
+const  { mode, classList } = Astro.props
 const textColor = mode === 'light' ? "text-black" : "text-white"
 const primaryOpacity = mode === 'light' ? "opacity-80" : "opacity-100"
 const secondaryOpacity = mode === 'light' ? "opacity-70" : "opacity-75"
 ---
-<a class=`max-w-min flex flex-col select-none font-bold leading-8 ${textColor}` href="/">
+<a class:list={[classList, textColor, "select-none max-w-min flex flex-col font-bold leading-8"]} href="/">
     <span class=`text-2xl ${secondaryOpacity}`>
         Projekt
     </span>
