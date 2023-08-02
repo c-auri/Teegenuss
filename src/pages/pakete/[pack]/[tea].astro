@@ -3,7 +3,7 @@ import Page from '../../../layouts/Page.astro'
 import Frame from '../../../components/page/Frame.astro'
 import Subheading from '../../../components/page/Subheading.astro'
 import Slideshow from '../../../components/tea/Slideshow.jsx'
-import PurchaseInfo from '../../../components/tea/PurchaseInfo.astro'
+import Purchase from '../../../components/tea/Purchase.astro'
 import Origin from '../../../components/tea/Origin.astro'
 import Preparation from '../../../components/tea/Preparation.astro'
 import Accordion from '../../../components/tea/Accordion.jsx'
@@ -57,7 +57,7 @@ const nextTea = teasInPack[modulo(entryIndex + 1, teasInPack.length)]!
             </div>
             <div class="max-w-2xl flex flex-col items-center lg:col-start-2 lg:justify-self-start lg:mt-3 lg:items-start">
                 <div class="self-stretch flex justify-between tracking-wider text-gray-500">
-                    <PurchaseInfo data={entry.data} />
+                    <Purchase data={entry.data} />
                 </div>
                 <div class="my-5 xl:text-2xl">
                     <Content />
