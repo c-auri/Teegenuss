@@ -2,25 +2,19 @@
 title: Alishan Jin Xuan
 route: ajx
 pack: 22-1-Einstieg
+type: Oolong
 purchase:
     shopName: Taiwan Tea Crafts
     shopUrl: https://www.taiwanteacrafts.com/product/alishan-jin-xuan-high-mountain-oolong-tea
     amount: "12\u200Ag"
     pricePer100g: 0,22
     currency: $
-details:
-    categorization:
-        tea:  Oolong
-        plant: Jin Xuan
-    origin:
-        country: "Taiwan"
-        region: "Alishan"
-        elevation: "1200\u200Am"
-    production:
-        harvest: "April 2021"
-        picking: "handgepflückt"
-        oxidation: "sehr leicht"
-        roast: "keine"
+origin:
+    country: "Taiwan"
+    town: "Alishan"
+    elevation: "1200\u200Am"
+    plant: Jin Xuan
+    harvest: "April 2021"
 preparation:
     gongfu:
         temperature: "90\u200A°C"

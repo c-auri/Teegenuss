@@ -2,26 +2,19 @@
 title: Qing Xiang TGY
 route: qing-xiang
 pack: 23-1-Chinas-Schaetze
+type: Oolong
 purchase:
     shopName: Nannuoshan
     shopUrl: https://www.nannuoshan.org/collections/oolong-tea/products/qing-xiang-tieguanyin-2022?variant=43506658738443
     amount: "12\u200Ag"
     pricePer100g: 0,24
     currency: €
-details:
-    categorization:
-        tea:  Oolong
-        plant: Tie Guan Yin
-    origin:
-        country: "China" 
-        province: "Fujian" 
-        region: "Anxi" 
-        town: "Longjuan"
-        elevation: null
-    production:
-        harvest: "5. Oktober 2021"
-        oxidization: "minimal"
-        roast: "keine"
+origin:
+    country: "China" 
+    town: "Longjuan, Anxi, Fujian"
+    elevation: null
+    plant: Tie Guan Yin
+    harvest: "5. Oktober 2021"
 preparation:
     gongfu:
         temperature: "90\u200A°C"

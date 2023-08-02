@@ -16,6 +16,7 @@ const teas = defineCollection({
     title: z.string(),
     route: z.string(),
     pack: reference('packs'),
+    type: z.string(),
     purchase: z.object({
       shopName: z.string(),
       shopUrl: z.string().url(),
@@ -23,26 +24,13 @@ const teas = defineCollection({
       pricePer100g: z.string(),
       currency: z.string(),
     }),
-    details: z.object({
-      categorization: z.object({
-        tea: z.string(),
-        plant: z.string().nullable(),
-      }),
-      origin: z.object({
-        country: z.optional(z.string().nullable()),
-        province: z.optional(z.string().nullable()),
-        region: z.optional(z.string().nullable()),
-        town: z.optional(z.string().nullable()),
-        elevation: z.string().nullable(),
-      }),
-      production: z.object({
-        harvest: z.string().nullable(),
-        picking: z.optional(z.string()),
-        oxidation: z.optional(z.string()),
-        roast: z.optional(z.string()),
-        roastMethod: z.optional(z.string()),
-      }),
-    }).partial(),
+    origin: z.object({
+      country: z.optional(z.string().nullable()),
+      town: z.optional(z.string().nullable()),
+      elevation: z.string().nullable(),
+      harvest: z.string().nullable(),
+      plant: z.string().nullable(),
+    }),
     preparation: z.object({
       gongfu: z.optional(z.object({
         temperature: z.string(),

@@ -2,25 +2,19 @@
 title: Shibi
 route: shibi
 pack: 22-2-Helles-Taiwan
+type: Oolong
 purchase:
     shopName: Taiwan Tea Crafts
     shopUrl: https://www.taiwanteacrafts.com/product/shibi-high-mountain-spring-oolong-tea/?v=3a52f3c22ed6
     amount: "12\u200Ag"
     pricePer100g: 0,25
     currency: $
-details:
-    categorization:
-        tea:  Oolong
-        plant: Qing Xin
-    origin:
-        country: "Taiwan"
-        region: "Shibi"
-        elevation: "1300\u200Am"
-    production:
-        harvest: "April 2021"
-        picking: "handgepflückt"
-        oxidization: "sehr leicht"
-        roast: "keine"
+origin:
+    country: "Taiwan"
+    town: "Shibi"
+    elevation: "1300\u200Am"
+    plant: Qing Xin
+    harvest: "April 2021"
 preparation:
     gongfu:
         temperature: "90\u200A°C"

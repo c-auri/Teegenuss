@@ -2,25 +2,19 @@
 title: Tie Guan Yin
 route: tie-guan-yin
 pack: 22-2-Dunkles-Taiwan
+type: Oolong
 purchase:
     shopName: Taiwan Tea Crafts
     shopUrl: https://www.taiwanteacrafts.com/product/alishan-deep-baked-tieguanyin-oolong-tea/?attribute_pa_weight=250-g-8-82-oz-save-20&v=3a52f3c22ed6
     amount: "12\u200Ag"
     pricePer100g: 0,27
     currency: $
-details:
-    categorization:
-        tea:  Oolong
-        plant: Tie Guan Yin
-    origin:
-        country: "Taiwan"
-        region: "Alishan"
-        elevation: "1000\u200Am"
-    production:
-        harvest: "April 2021"
-        picking: "handgepflückt"
-        oxidization: "mittel"
-        roast: "stark"
+origin:
+    country: "Taiwan"
+    town: "Alishan"
+    elevation: "1000\u200Am"
+    plant: Tie Guan Yin
+    harvest: "April 2021"
 preparation:
     gongfu:
         temperature: "90\u200A-\u200A95\u200A°C"

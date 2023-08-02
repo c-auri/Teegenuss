@@ -2,25 +2,19 @@
 title: Longfengxia
 route: longfengxia
 pack: 22-2-Helles-Taiwan
+type: Oolong
 purchase:
     shopName: Taiwan Tea Crafts
     shopUrl: https://www.taiwanteacrafts.com/product/longfengxia-high-mountain-spring-oolong-tea/?attribute_pa_weight=250-g-8-82-oz-save-20&v=3a52f3c22ed6
     amount: "12\u200Ag"
     pricePer100g: 0,30
     currency: $
-details:
-    categorization:
-        tea:  Oolong
-        plant: Qing Xin
-    origin:
-        country: "Taiwan"
-        region: "Shanlinxi"
-        elevation: "1750\u200Am"
-    production:
-        harvest: "April 2021"
-        picking: "handgepflückt"
-        oxidization: "sehr leicht"
-        roast: "keine"
+origin:
+    country: "Taiwan"
+    town: "Shanlinxi"
+    elevation: "1750\u200Am"
+    plant: Qing Xin
+    harvest: "April 2021"
 preparation:
     gongfu:
         temperature: "90\u200A°C"

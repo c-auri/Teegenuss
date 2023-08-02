@@ -2,25 +2,19 @@
 title: Hong Shui
 route: hong-shui
 pack: 22-2-Dunkles-Taiwan
+type: Oolong
 purchase:
     shopName: Taiwan Tea Crafts
     shopUrl: https://www.taiwanteacrafts.com/product/organic-red-spring-hong-shui-oolong-tea/?attribute_pa_weight=250-g-8-82-oz-save-20&v=3a52f3c22ed6
     amount: "12\u200Ag"
     pricePer100g: 0,10
     currency: $
-details:
-    categorization:
-        tea:  Oolong
-        plant: Jin Xuan
-    origin:
-        country: "Taiwan"
-        region: "Baguashan"
-        elevation: "250\u200Am"
-    production:
-        harvest: "April 2021"
-        picking: "handgepflückt"
-        oxidization: "mittel"
-        roast: "stark"
+origin:
+    country: "Taiwan"
+    town: "Baguashan"
+    elevation: "250\u200Am"
+    plant: Jin Xuan
+    harvest: "April 2021"
 preparation:
     gongfu:
         temperature: "100\u200A°C"

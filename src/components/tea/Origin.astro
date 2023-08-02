@@ -1,0 +1,26 @@
+---
+const { origin, classList } = Astro.props
+const dictionary = {
+    "country": "Land",
+    "town": "Ort",
+    "elevation": "Höhe",
+    "harvest": "Ernte",
+    "plant": "Strauchsorte",
+}
+---
+<table class:list={[classList, "table-fixed text-left text-xl"]}>
+    <tr>
+        <th class="w-1/2 pb-2 font-bold" colspan="2">Herkunft</th>
+    </tr>
+    {
+        Object.entries(origin).map(([key, value], index) => {
+            return (
+                <tr>
+                    <td class="pr-2 align-top text-gray-700">{dictionary[key as keyof typeof dictionary]}</td>
+                    <td class={`pl-2 align-top ${index === origin.length - 1 && "pb-6"} ${value === null && "text-gray-500"}`} title={origin[key] === null ? "keine Angabe" : ""}>
+                            {value === null ? "k.\u200AA." : value }
+                    </td>
+                </tr>
+            )})
+    }
+</table>

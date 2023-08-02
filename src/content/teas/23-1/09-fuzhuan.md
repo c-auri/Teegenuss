@@ -2,24 +2,19 @@
 title: Fuzhuan
 route: fuzhuan
 pack: 23-1-Chinas-Schaetze
+type: Oolong
 purchase:
     shopName: Teewald
     shopUrl: https://teewald.de/products/anhua-heicha
     amount: "12\u200Ag"
     pricePer100g: 0,29
     currency: €
-details:
-    categorization:
-        tea:  Oolong
-        plant: Da Ye Zhong
-    origin: 
-        country: "China"
-        province: "Anhua"
-        town: "Yuntai Shan"
-        elevation: "900 \u200Am"
-    production:
-        harvest: "2017"
-        fermentation: "stark"
+origin: 
+    country: "China"
+    town: "Yuntai Shan, Anhua"
+    elevation: "900 \u200Am"
+    plant: Da Ye Zhong
+    harvest: "2017"
 preparation:
     gongfu:
         temperature: "100\u200A°C"

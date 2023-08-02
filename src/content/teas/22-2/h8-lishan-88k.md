@@ -2,25 +2,19 @@
 title: Lishan 88K
 route: lishan-88k
 pack: 22-2-Helles-Taiwan
+type: Oolong
 purchase:
     shopName: Taiwan Tea Crafts
     shopUrl: https://www.taiwanteacrafts.com/product/lishan-88k-high-mountain-spring-oolong-tea/?attribute_pa_weight=250-g-8-82-oz-save-20&v=3a52f3c22ed6
     amount: "12\u200Ag"
     pricePer100g: 0,47
     currency: $
-details:
-    categorization:
-        tea:  Oolong
-        plant: Qing Xin
-    origin:
-        country: "Taiwan"
-        region: "Lishan"
-        elevation: "2100\u200Am"
-    production:
-        harvest: "Mai 2021"
-        picking: "handgepflückt"
-        oxidization: "sehr leicht"
-        roast: "keine"
+origin:
+    country: "Taiwan"
+    town: "Lishan"
+    elevation: "2100\u200Am"
+    plant: Qing Xin
+    harvest: "Mai 2021"
 preparation:
     gongfu:
         temperature: "90\u200A°C"

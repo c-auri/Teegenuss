@@ -2,6 +2,7 @@
 title: Dong Ding
 route: dong-ding
 pack: 22-2-Dunkles-Taiwan
+type: Oolong
 purchase:
     shopName: Taiwan Tea Crafts
     shopUrl: https://www.taiwanteacrafts.com/product/dong-ding-high-mountain-heritage-oolong-tea/?attribute_pa_weight=250-g-8-82-oz-save-20&v=3a52f3c22ed6
@@ -9,18 +10,12 @@ purchase:
     pricePer100g: 0,19
     currency: $
 details:
-    categorization:
-        tea:  Oolong
-        plant: Qing Xin
-    origin:
-        country: "Taiwan"
-        region: "Meishan"
-        elevation: "1100\u200Am"
-    production:
-        harvest: "Mai 2021"
-        picking: "handgepflückt"
-        oxidization: "leicht"
-        roast: "mittel"
+origin:
+    country: "Taiwan"
+    town: "Meishan"
+    elevation: "1100\u200Am"
+    plant: Qing Xin
+    harvest: "Mai 2021"
 preparation:
     gongfu:
         temperature: "90\u200A-\u200A95\u200A°C"

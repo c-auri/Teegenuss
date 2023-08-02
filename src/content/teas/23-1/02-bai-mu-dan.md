@@ -2,26 +2,19 @@
 title: 2021 Bai Mu Dan
 route: bai-mu-dan
 pack: 23-1-Chinas-Schaetze
+type: Weißer Tee
 purchase:
     shopName: Teewald
     shopUrl: https://teewald.de/collections/weisser-tee/products/2021-pai-mu-tan-teekuchen
     amount: "12\u200Ag"
     pricePer100g: 0,28
     currency: €
-details:
-    categorization:
-        tea:  Weißer Tee
-        plant: null
-    origin:
-        country: "China" 
-        province: "Fujian" 
-        region: "Fuding" 
-        town: "Tai Mu Shan"
-        elevation: null
-    production:
-        harvest: "Frühjahr 2021"
-        oxidization: "minimal"
-        maturity: "leicht bis mittel"
+origin:
+    country: "China" 
+    town: "Tai Mu Shan, Fudin, Fujian"
+    elevation: null
+    plant: null
+    harvest: "Frühjahr 2021"
 preparation:
     gongfu:
         temperature: "80\u200A-\u200A90°C"

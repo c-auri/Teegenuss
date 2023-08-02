@@ -2,23 +2,19 @@
 title: Hong Yu
 route: hong-yu
 pack: 22-2-Dunkles-Taiwan
+type: Schwarzer Tee
 purchase:
     shopName: Taiwan Tea Crafts
     shopUrl: https://www.taiwanteacrafts.com/product/red-jade-black-tea/?attribute_pa_weight=250-g-8-82-oz-save-20&v=3a52f3c22ed6
     amount: "12\u200Ag"
     pricePer100g: 0,31
     currency: $
-details:
-    categorization:
-        tea:  Schwarzer Tee
-        plant: Hong Yu
-    origin:
-        country: "Taiwan"
-        region: "Sun Moon Lake"
-        elevation: "700\u200Am"
-    production:
-        harvest: "September 2021"
-        picking: "handgepflückt"
+origin:
+    country: "Taiwan"
+    town: "Sun Moon Lake"
+    elevation: "700\u200Am"
+    plant: Hong Yu
+    harvest: "September 2021"
 preparation:
     gongfu:
         temperature: "90\u200A°C"

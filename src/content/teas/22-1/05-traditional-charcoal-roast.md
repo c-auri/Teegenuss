@@ -2,26 +2,19 @@
 title: Traditionell gerösteter JX
 route: trjx
 pack: 22-1-Einstieg
+type: Oolong
 purchase:
     shopName: Taiwan Tea Crafts
     shopUrl: https://www.taiwanteacrafts.com/product/high-mountain-charcoal-pit-fired-oolong-tea
     amount: "12\u200Ag"
     pricePer100g: 0,25
     currency: $
-details:
-    categorization:
-        tea:  Oolong
-        plant: Qing Xin
-    origin:
-        country: "Taiwan"
-        region: "Baguashan"
-        elevation: "1200\u200Am"
-    production:
-        harvest: "April 2019"
-        picking: "handgepflückt"
-        oxidation: "medium"
-        roast: "medium"
-        roastMethod: "Holzkohleröstung"
+origin:
+    country: "Taiwan"
+    town: "Baguashan"
+    elevation: "1200\u200Am"
+    plant: Qing Xin
+    harvest: "April 2019"
 preparation:
     gongfu:
         temperature: "100\u200A°C"

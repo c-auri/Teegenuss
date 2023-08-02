@@ -2,26 +2,19 @@
 title: Hearth TGY
 route: hearth
 pack: 23-1-Chinas-Schaetze
+type: Oolong
 purchase:
     shopName: white2tea
     shopUrl: https://white2tea.com/collections/oolong-tea/products/hearth-tieguanyin
     amount: "12\u200Ag"
     pricePer100g: 0,31
     currency: €
-details:
-    categorization:
-        tea:  Oolong
-        plant: Tie Guan Yin
-    origin:
-        country: "China"
-        province: "Fujian"
-        region: null
-        town: null
-        elevation: null
-    production:
-        harvest: null
-        oxidization: "mittel"
-        roast: "mittel"
+origin:
+    country: "China"
+    town: "Fujian"
+    elevation: null
+    plant: Tie Guan Yin
+    harvest: null
 preparation:
     gongfu:
         temperature: "90\u200A-\u200A95°C"

@@ -2,26 +2,19 @@
 title: Wuyi Hong Shui
 route: wuyi
 pack: 22-1-Einstieg
+type: Oolong
 purchase:
     shopName: Taiwan Tea Crafts
     shopUrl: https://www.taiwanteacrafts.com/product/wuyi-hong-shui-high-mountain-oolong-tea
     amount: "12\u200Ag"
     pricePer100g: 0,24
     currency: $
-details:
-    categorization:
-        tea:  Oolong
-        plant: Wuyi
-    origin:
-        country: "Taiwan"
-        region: "Beishan"
-        elevation: "1100\u200Am"
-    production:
-        harvest: "Juni 2021"
-        picking: "maschinell"
-        oxidation: "medium"
-        roast: "medium"
-        roastMethod: "Ofenröstung"
+origin:
+    country: "Taiwan"
+    town: "Beishan"
+    elevation: "1100\u200Am"
+    plant: Wuyi
+    harvest: "Juni 2021"
 preparation:
     gongfu:
         temperature: "100\u200A°C"

@@ -2,26 +2,19 @@
 title: Long Jing
 route: long-jing
 pack: 23-1-Chinas-Schaetze
+type: Grüner Tee
 purchase:
     shopName: Paper & Tea
     shopUrl: https://www.paperandtea.com/collections/green-tea/products/imperial-dragon-n-302?variant=31685522423879
     amount: "12\u200Ag"
     pricePer100g: 0,10
     currency: €
-details:
-    categorization:
-        tea:  Grüner Tee
-        plant: null
-    origin:
-        country: "China"
-        province: "Zhejiang"
-        region: null
-        town: null
-        elevation: null
-    production:
-        harvest: null
-        oxidization: "keine"
-        roast: "keine"
+origin:
+    country: "China"
+    town: "Zhejiang"
+    elevation: null
+    plant: null
+    harvest: null
 preparation:
     gongfu:
         temperature: "80\u200A°C"

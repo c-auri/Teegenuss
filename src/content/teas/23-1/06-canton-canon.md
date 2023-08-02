@@ -2,26 +2,19 @@
 title: Canton Canon TGY
 route: canton-canon
 pack: 23-1-Chinas-Schaetze
+type: Oolong
 purchase:
     shopName: white2tea
     shopUrl: https://white2tea.com/products/canton-canon?variant=43599182692580
     amount: "12\u200Ag"
     pricePer100g: 0,29
     currency: €
-details:
-    categorization:
-        tea:  Oolong
-        plant: Tie Guan Yin
-    origin:
-        country: "China"
-        province: "Fujian"
-        region: null
-        town: null
-        elevation: null
-    production:
-        harvest: null
-        oxidization: "stark"
-        roast: "sehr stark"
+origin:
+    country: "China"
+    town: "Fujian"
+    elevation: null
+    plant: Tie Guan Yin
+    harvest: null
 preparation:
     gongfu:
         temperature: "100\u200A°C"

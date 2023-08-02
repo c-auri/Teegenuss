@@ -2,25 +2,19 @@
 title: Bao Zhong
 route: bao-zhong
 pack: 22-1-Einstieg
+type: Oolong
 purchase:
     shopName: Taiwan Tea Crafts
     shopUrl: https://www.taiwanteacrafts.com/product/baguashan-spring-bao-zhong-tea/
     amount: "12\u200Ag"
     pricePer100g: 0,10
     currency: $
-details:
-    categorization:
-        tea:  Oolong
-        plant: Si Ji Chun
-    origin: 
-        country: "Taiwan"
-        region: "Baguashan"
-        elevation: "350\u200Am"
-    production:
-        harvest: "Frühling 2021"
-        picking: "maschinell"
-        oxidation: "sehr leicht"
-        roast: "keine"
+origin: 
+    country: "Taiwan"
+    town: "Baguashan"
+    elevation: "350\u200Am"
+    plant: Si Ji Chun
+    harvest: "Frühling 2021"
 preparation:
     gongfu:
         temperature: "85\u200A°C"

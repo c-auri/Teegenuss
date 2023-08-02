@@ -2,26 +2,19 @@
 title: 2020 Shou Mei
 route: shou-mei
 pack: 23-1-Chinas-Schaetze
+type: Weißer Tee
 purchase:
     shopName: Teewald
     shopUrl: https://teewald.de/collections/weisser-tee/products/2020-shoumei-weisser-tee-perle
     amount: "2\u200A×\u200A8\u200Ag"
     pricePer100g: 0,17
     currency: €
-details:
-    categorization:
-        tea:  Weißer Tee
-        plant: Cai Cha
-    origin:
-        country: "China" 
-        province: "Fujian" 
-        region: "Fuding" 
-        town: "Tai Mu Shan"
-        elevation: null
-    production:
-        harvest: "Herbst 2020"
-        oxidization: "leicht"
-        maturity: "mittel"
+origin:
+    country: "China" 
+    town: "Tai Mu Shan, Fuding, Fujian"
+    elevation: null
+    plant: Cai Cha
+    harvest: "Herbst 2020"
 preparation:
     gongfu:
         temperature: "90\u200A°C"

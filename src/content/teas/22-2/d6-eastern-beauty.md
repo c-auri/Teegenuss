@@ -2,25 +2,19 @@
 title: Eastern Beauty
 route: eastern-beauty
 pack: 22-2-Dunkles-Taiwan
+type: Oolong
 purchase:
     shopName: Taiwan Tea Crafts
     shopUrl: https://www.taiwanteacrafts.com/product/premium-oriental-beauty-oolong-tea/?attribute_pa_weight=250-g-8-82-oz-save-20&v=3a52f3c22ed6
     amount: "12\u200Ag"
     pricePer100g: 0,36
     currency: $
-details:
-    categorization:
-        tea:  Oolong
-        plant: Qing Xin Da Mu
-    origin:
-        country: "Taiwan"
-        region: "Emei"
-        elevation: "600\u200Am"
-    production:
-        harvest: "Juni 2021"
-        picking: "handgepflückt"
-        oxidization: "mittel"
-        roast: "leicht"
+origin:
+    country: "Taiwan"
+    town: "Emei"
+    elevation: "600\u200Am"
+    plant: Qing Xin Da Mu
+    harvest: "Juni 2021"
 preparation:
     gongfu:
         temperature: "95\u200A°C"

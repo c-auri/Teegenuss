@@ -2,26 +2,19 @@
 title: Leicht gerösteter JX
 route: lrjx
 pack: 22-1-Einstieg
+type: Oolong
 purchase:
     shopName: Taiwan Tea Crafts
     shopUrl: https://www.taiwanteacrafts.com/product/organic-jin-xuan-oolong-tea
     amount: "12\u200Ag"
     pricePer100g: 0,16
     currency: $
-details:
-    categorization:
-        tea:  Oolong
-        plant: Jin Xuan
-    origin:
-        country: "Taiwan"
-        region: "Beishan"
-        elevation: "1100\u200Am"
-    production:
-        harvest: "Oktober 2021"
-        picking: "handgepflückt" 
-        oxidation: "sehr leicht" 
-        roast: "sehr leicht" 
-        roastMethod: "Ofenröstung"
+origin:
+    country: "Taiwan"
+    town: "Beishan"
+    elevation: "1100\u200Am"
+    plant: Jin Xuan
+    harvest: "Oktober 2021"
 preparation:
     gongfu:
         temperature: "90\u200A°C"

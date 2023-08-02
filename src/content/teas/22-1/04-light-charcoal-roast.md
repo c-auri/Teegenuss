@@ -2,26 +2,19 @@
 title: Leicht kohle-gerösteter JX
 route: lcrjx
 pack: 22-1-Einstieg
+type: Oolong
 purchase:
     shopName: Taiwan Tea Crafts
     shopUrl: https://www.taiwanteacrafts.com/product/organic-jin-xuan-light-charcoal-pit-fired-oolong-tea
     amount: "12\u200Ag"
     pricePer100g: 0,22
     currency: $
-details:
-    categorization:
-        tea:  Oolong
-        plant: Jin Xuan
-    origin:
-        country: "Taiwan"
-        region: "Zhushan"
-        elevation: "400\u200Am"
-    production:
-        harvest: "Oktober 2019"
-        picking: "handgepflückt"
-        oxidation: "leicht"
-        roast: "leicht"
-        roastMethod: "Holzkohleröstung"
+origin:
+    country: "Taiwan"
+    town: "Zhushan"
+    elevation: "400\u200Am"
+    plant: Jin Xuan
+    harvest: "Oktober 2019"
 preparation:
     gongfu:
         temperature: "95\u200A°C"
