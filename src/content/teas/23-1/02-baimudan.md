@@ -1,6 +1,6 @@
 ---
-title: 2021 Bai Mu Dan
-route: bai-mu-dan
+title: 2021 Baimudan
+route: baimudan
 pack: 23-1-Chinas-Schaetze
 type: Weißer Tee
 purchase:

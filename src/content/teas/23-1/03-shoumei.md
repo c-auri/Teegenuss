@@ -1,6 +1,6 @@
 ---
-title: 2020 Shou Mei
-route: shou-mei
+title: 2020 Shoumei
+route: shoumei
 pack: 23-1-Chinas-Schaetze
 type: Weißer Tee
 purchase:
