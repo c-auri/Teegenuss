@@ -18,8 +18,8 @@ const teas = defineCollection({
     pack: reference('packs'),
     type: z.string(),
     purchase: z.object({
-      shopName: z.string(),
-      shopUrl: z.string().url(),
+      shop: reference('shops'),
+      productUrl: z.string().url(),
       amount: z.string(),
       pricePer100g: z.string(),
       currency: z.string(),
@@ -47,7 +47,7 @@ const teas = defineCollection({
         })
       }))
     }),
-    tags: z.array(z.string())
+    tags: z.array(z.string()),
   })
 });
 
@@ -60,8 +60,17 @@ const tags = defineCollection({
   })
 })
 
+const shops = defineCollection({
+  type: 'data',
+  schema: z.object({
+    name: z.string(),
+    shorthand: z.string()
+  })
+})
+
 export const collections = {
   'packs': packs,
   'teas': teas,
   'tags': tags,
+  'shops': shops,
 };

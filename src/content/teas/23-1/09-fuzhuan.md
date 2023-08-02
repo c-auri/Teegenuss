@@ -4,8 +4,8 @@ route: fuzhuan
 pack: 23-1-Chinas-Schaetze
 type: Oolong
 purchase:
-    shopName: Teewald
-    shopUrl: https://teewald.de/products/anhua-heicha
+    shop: Teewald
+    productUrl: https://teewald.de/products/anhua-heicha
     amount: "12\u200Ag"
     pricePer100g: 0,29
     currency: €

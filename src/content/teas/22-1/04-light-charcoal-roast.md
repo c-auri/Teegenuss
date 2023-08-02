@@ -4,8 +4,8 @@ route: lcrjx
 pack: 22-1-Einstieg
 type: Oolong
 purchase:
-    shopName: Taiwan Tea Crafts
-    shopUrl: https://www.taiwanteacrafts.com/product/organic-jin-xuan-light-charcoal-pit-fired-oolong-tea
+    shop: TaiwanTeaCrafts
+    productUrl: https://www.taiwanteacrafts.com/product/organic-jin-xuan-light-charcoal-pit-fired-oolong-tea
     amount: "12\u200Ag"
     pricePer100g: 0,22
     currency: $

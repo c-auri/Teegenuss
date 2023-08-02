@@ -4,8 +4,8 @@ route: shoumei
 pack: 23-1-Chinas-Schaetze
 type: Weißer Tee
 purchase:
-    shopName: Teewald
-    shopUrl: https://teewald.de/collections/weisser-tee/products/2020-shoumei-weisser-tee-perle
+    shop: Teewald
+    productUrl: https://teewald.de/collections/weisser-tee/products/2020-shoumei-weisser-tee-perle
     amount: "2\u200A×\u200A8\u200Ag"
     pricePer100g: 0,17
     currency: €

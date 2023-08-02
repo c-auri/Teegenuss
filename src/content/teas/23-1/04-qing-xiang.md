@@ -4,8 +4,8 @@ route: qing-xiang
 pack: 23-1-Chinas-Schaetze
 type: Oolong
 purchase:
-    shopName: Nannuoshan
-    shopUrl: https://www.nannuoshan.org/collections/oolong-tea/products/qing-xiang-tieguanyin-2022?variant=43506658738443
+    shop: Nannuoshan
+    productUrl: https://www.nannuoshan.org/collections/oolong-tea/products/qing-xiang-tieguanyin-2022?variant=43506658738443
     amount: "12\u200Ag"
     pricePer100g: 0,24
     currency: €

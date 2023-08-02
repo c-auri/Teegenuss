@@ -4,8 +4,8 @@ route: long-jing
 pack: 22-2-Helles-Taiwan
 type: Grüner Tee
 purchase:
-    shopName: Taiwan Tea Crafts
-    shopUrl: https://www.taiwanteacrafts.com/product/sanxia-long-jing-green-tea/?attribute_pa_weight=250-g-8-82-oz-save-20&v=3a52f3c22ed6
+    shop: TaiwanTeaCrafts
+    productUrl: https://www.taiwanteacrafts.com/product/sanxia-long-jing-green-tea/?attribute_pa_weight=250-g-8-82-oz-save-20&v=3a52f3c22ed6
     amount: "12\u200Ag"
     pricePer100g: 0,17
     currency: $

@@ -4,8 +4,8 @@ route: hearth
 pack: 23-1-Chinas-Schaetze
 type: Oolong
 purchase:
-    shopName: white2tea
-    shopUrl: https://white2tea.com/collections/oolong-tea/products/hearth-tieguanyin
+    shop: white2tea
+    productUrl: https://white2tea.com/collections/oolong-tea/products/hearth-tieguanyin
     amount: "12\u200Ag"
     pricePer100g: 0,31
     currency: €

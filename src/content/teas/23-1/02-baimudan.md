@@ -4,8 +4,8 @@ route: baimudan
 pack: 23-1-Chinas-Schaetze
 type: Weißer Tee
 purchase:
-    shopName: Teewald
-    shopUrl: https://teewald.de/collections/weisser-tee/products/2021-pai-mu-tan-teekuchen
+    shop: Teewald
+    productUrl: https://teewald.de/collections/weisser-tee/products/2021-pai-mu-tan-teekuchen
     amount: "12\u200Ag"
     pricePer100g: 0,28
     currency: €

@@ -4,8 +4,8 @@ route: canton-canon
 pack: 23-1-Chinas-Schaetze
 type: Oolong
 purchase:
-    shopName: white2tea
-    shopUrl: https://white2tea.com/products/canton-canon?variant=43599182692580
+    shop: white2tea
+    productUrl: https://white2tea.com/products/canton-canon?variant=43599182692580
     amount: "12\u200Ag"
     pricePer100g: 0,29
     currency: €
