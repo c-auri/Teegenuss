@@ -25,6 +25,6 @@ preparation:
             firstInfusion: "10\u200As"
             secondInfusion: "20\u200As"
             laterInfusions: "+\u200A10\u200As"
-tags: [ fujian, white-tea, bai-mu-dan ]
+tags: [ fujian, white-tea, baimudan ]
 ---
 Ein vielseitiger Baimudan aus Fuding mit leicht fortgeschrittenem Reifegrad. Vorsichtig zubereitet zeigt sich die zurückhaltende Blumigkeit des weißen Tees mit einer sanften, honigartigen Süße. Wird er kräftiger gebrüht legen sich jedoch kräftigere Gewürznoten darüber.
