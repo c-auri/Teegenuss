@@ -11,7 +11,7 @@ purchase:
     currency: €
 origin:
     country: "China" 
-    town: "Tai Mu Shan, Fudin, Fujian"
+    town: "Tai Mu Shan, Fuding, Fujian"
     elevation: null
     plant: null
     harvest: "Frühjahr 2021"
