@@ -6,7 +6,7 @@ const dictionary = {
 }
 
 export default function FooterContent() {
-    const [current, setCurrent] = useState("contact")
+    const [current, setCurrent] = useState(null)
 
     return <>
         <div className="pb-24 border-b-2 border-gray-900">
@@ -34,7 +34,7 @@ function Control(state, current, setCurrent) {
 }
 
 function Contact() {
-    return <>
+    return <section>
         {Heading(dictionary["contact"])}
         <form className="grid gap-4 md:gap-8 lg:gap-16 lg:grid-cols-[1fr,1fr] xl:grid-cols-[2fr,3fr]">
             <div className="text-xl">
@@ -61,11 +61,11 @@ function Contact() {
                 <button className="mb-8 py-2 px-16 border border-gray-900 md:justify-self-start hover:border-gray-500 focus:outline-none focus:border-gray-500 rounded-md hover:text-gray-300">Absenden</button>
             </fieldset>
         </form>
-    </>
+    </section>
 }
 
 function Privacy() {
-    return <>
+    return <section>
         {Heading(dictionary["privacy"])}
         <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt quibusdam similique, numquam, rem inventore, minus reiciendis laudantium suscipit exercitationem libero temporibus adipisci illum perspiciatis! Maxime reiciendis consequatur nostrum? Molestiae, nisi!
@@ -76,7 +76,7 @@ function Privacy() {
         <p>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis placeat consequatur expedita nisi beatae sunt porro voluptatum vitae, quo animi molestias laboriosam commodi laudantium inventore repellendus aperiam voluptas aspernatur rem!
         </p>
-    </>
+    </section>
 }
 
 function Heading(text) {

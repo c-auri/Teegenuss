@@ -4,10 +4,8 @@ import Logo from "./Logo.astro"
 import FooterContent from "./FooterContent.jsx"
 ---
 <Frame bg="bg-black">
-    <footer class="text-gray-400 text-lg">
-        <section class="pt-12 lg:pt-20">
-            <Logo mode="dark" classList="mb-10" />
-            <FooterContent client:load />
-        </section>
+    <footer class="pt-12 lg:pt-20 text-gray-400 text-lg">
+        <Logo mode="dark" classList="mb-10" />
+        <FooterContent client:load />
     </footer>
 </Frame>
