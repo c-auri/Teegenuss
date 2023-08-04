@@ -3,8 +3,9 @@ import { defineCollection, z, reference } from 'astro:content';
 const packs = defineCollection({
   type: 'data',
   schema: z.object({
-    title: z.string(),
     route: z.string(),
+    title: z.string(),
+    teaser: z.string(),
     stash: z.number().int(),
     price: z.number(),
   })
