@@ -8,6 +8,7 @@ export default function FooterContent() {
     return <>
         <div className="pb-24 border-b-2 border-gray-900">
             { current === "contact" && Contact() }
+            { current === "privacy" && Privacy() }
         </div>
         <div className="select-none my-8 lg:my-14 flex justify-between text-gray-800 text-sm md:text-md lg:text-lg">
             <span>Copyright &copy; Christoph Aurich</span>
@@ -50,5 +51,19 @@ function Contact() {
                 <button className="mb-8 py-2 px-16 border border-gray-900 md:justify-self-start hover:border-gray-500 focus:outline-none focus:border-gray-500 rounded-md hover:text-gray-300">Absenden</button>
             </fieldset>
         </form>
+    </>
+}
+
+function Privacy() {
+    return <>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt quibusdam similique, numquam, rem inventore, minus reiciendis laudantium suscipit exercitationem libero temporibus adipisci illum perspiciatis! Maxime reiciendis consequatur nostrum? Molestiae, nisi!
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum ullam earum temporibus sint similique assumenda sequi voluptatem quas animi alias, incidunt non tempora nobis est cum fugit autem consequatur facere.
+        </p>
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis placeat consequatur expedita nisi beatae sunt porro voluptatum vitae, quo animi molestias laboriosam commodi laudantium inventore repellendus aperiam voluptas aspernatur rem!
+        </p>
     </>
 }
