@@ -27,7 +27,7 @@ function Control(state, current, setCurrent) {
     return <>
         <span 
             onClick={() => current === state ? setCurrent(null) : setCurrent(state)}
-            className={current === state ? "text-gray-500" : "text-gray-800"}>
+            className={(current === state ? "text-gray-500" : "text-gray-800 hover:text-gray-700") + " cursor-pointer"}>
                 {dictionary[state]}
         </span>
     </>
