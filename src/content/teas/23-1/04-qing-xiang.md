@@ -2,7 +2,7 @@
 title: Qing Xiang TGY
 route: qing-xiang
 pack: 23-1-Chinas-Schaetze
-type: Oolong
+type: oolong
 purchase:
     shop: Nannuoshan
     productUrl: https://www.nannuoshan.org/collections/oolong-tea/products/qing-xiang-tieguanyin-2022?variant=43506658738443

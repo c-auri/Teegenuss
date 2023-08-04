@@ -2,7 +2,7 @@
 title: Lishan Cui Luan
 route: lishan-cui-luan
 pack: 22-2-Helles-Taiwan
-type: Oolong
+type: oolong
 purchase:
     shop: TaiwanTeaCrafts
     productUrl: https://www.taiwanteacrafts.com/product/lishan-cui-luan-high-mountain-winter-oolong-tea/?attribute_pa_weight=250-g-8-82-oz-save-20&v=3a52f3c22ed6

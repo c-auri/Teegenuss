@@ -2,7 +2,7 @@
 title: Canton Canon TGY
 route: canton-canon
 pack: 23-1-Chinas-Schaetze
-type: Oolong
+type: oolong
 purchase:
     shop: white2tea
     productUrl: https://white2tea.com/products/canton-canon?variant=43599182692580

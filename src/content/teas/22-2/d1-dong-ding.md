@@ -2,7 +2,7 @@
 title: Dong Ding
 route: dong-ding
 pack: 22-2-Dunkles-Taiwan
-type: Oolong
+type: oolong
 purchase:
     shop: TaiwanTeaCrafts
     productUrl: https://www.taiwanteacrafts.com/product/dong-ding-high-mountain-heritage-oolong-tea/?attribute_pa_weight=250-g-8-82-oz-save-20&v=3a52f3c22ed6

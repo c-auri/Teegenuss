@@ -2,7 +2,7 @@
 title: Shibi
 route: shibi
 pack: 22-2-Helles-Taiwan
-type: Oolong
+type: oolong
 purchase:
     shop: TaiwanTeaCrafts
     productUrl: https://www.taiwanteacrafts.com/product/shibi-high-mountain-spring-oolong-tea/?v=3a52f3c22ed6

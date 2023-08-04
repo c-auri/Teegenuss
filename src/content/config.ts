@@ -1,5 +1,13 @@
 import { defineCollection, z, reference } from 'astro:content';
 
+const types = defineCollection({
+  type: 'data',
+  schema: z.object({
+    title: z.string(),
+    shorthand: z.string()
+  })
+})
+
 const packs = defineCollection({
   type: 'data',
   schema: z.object({
@@ -17,7 +25,7 @@ const teas = defineCollection({
     title: z.string(),
     route: z.string(),
     pack: reference('packs'),
-    type: z.string(),
+    type: reference('types'),
     purchase: z.object({
       shop: reference('shops'),
       productUrl: z.string().url(),
@@ -70,6 +78,7 @@ const shops = defineCollection({
 })
 
 export const collections = {
+  'types': types,
   'packs': packs,
   'teas': teas,
   'tags': tags,

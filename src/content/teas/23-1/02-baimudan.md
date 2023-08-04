@@ -2,7 +2,7 @@
 title: 2021 Baimudan
 route: baimudan
 pack: 23-1-Chinas-Schaetze
-type: Weißer Tee
+type: white
 purchase:
     shop: Teewald
     productUrl: https://teewald.de/collections/weisser-tee/products/2021-pai-mu-tan-teekuchen

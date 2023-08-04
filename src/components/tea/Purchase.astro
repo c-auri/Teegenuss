@@ -3,9 +3,13 @@ import { getEntry } from "astro:content";
 
 const { data } = Astro.props
 const shop = await getEntry('shops', data.purchase.shop.id)
+const type = await getEntry('types', data.type.id)
 ---
-<span>
-    {data.type}
+<span class="sm:hidden">
+    {type.data.shorthand}
+</span>
+<span class="hidden sm:inline">
+    {type.data.title}
 </span>
 |
 <span>
@@ -18,8 +22,5 @@ const shop = await getEntry('shops', data.purchase.shop.id)
 <span>{data.purchase.amount}</span>
 |
 <span>
-    {data.purchase.pricePer100g}
-    <span class="hidden sm:inline">
-        <sup>{data.purchase.currency}</sup>&frasl;<sub>g</sub>
-    </span>
+    {data.purchase.pricePer100g}&hairsp;<sup>{data.purchase.currency}</sup>&frasl;<sub>g</sub>
 </span>

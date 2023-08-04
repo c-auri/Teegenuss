@@ -2,7 +2,7 @@
 title: Long Jing
 route: long-jing
 pack: 23-1-Chinas-Schaetze
-type: Grüner Tee
+type: green
 purchase:
     shop: PaperAndTea
     productUrl: https://www.paperandtea.com/collections/green-tea/products/imperial-dragon-n-302?variant=31685522423879

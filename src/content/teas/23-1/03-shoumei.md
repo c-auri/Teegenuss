@@ -2,7 +2,7 @@
 title: 2020 Shoumei
 route: shoumei
 pack: 23-1-Chinas-Schaetze
-type: Weißer Tee
+type: white
 purchase:
     shop: Teewald
     productUrl: https://teewald.de/collections/weisser-tee/products/2020-shoumei-weisser-tee-perle

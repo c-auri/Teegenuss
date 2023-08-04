@@ -2,7 +2,7 @@
 title: Hearth TGY
 route: hearth
 pack: 23-1-Chinas-Schaetze
-type: Oolong
+type: oolong
 purchase:
     shop: white2tea
     productUrl: https://white2tea.com/collections/oolong-tea/products/hearth-tieguanyin

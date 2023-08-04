@@ -2,7 +2,7 @@
 title: Bai Hao
 route: bai-hao
 pack: 22-1-Einstieg
-type: Oolong
+type: oolong
 purchase:
     shop: TaiwanTeaCrafts
     productUrl: https://www.taiwanteacrafts.com/product/oriental-beauty-superior-grade-oolong-tea

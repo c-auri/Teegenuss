@@ -2,7 +2,7 @@
 title: Wuyi Hong Shui
 route: wuyi
 pack: 22-1-Einstieg
-type: Oolong
+type: oolong
 purchase:
     shop: TaiwanTeaCrafts
     productUrl: https://www.taiwanteacrafts.com/product/wuyi-hong-shui-high-mountain-oolong-tea

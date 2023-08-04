@@ -2,7 +2,7 @@
 title: Mi Xiang
 route: mi-xiang
 pack: 22-2-Dunkles-Taiwan
-type: Schwarzer Tee
+type: black
 purchase:
     shop: TaiwanTeaCrafts
     productUrl: https://www.taiwanteacrafts.com/product/organic-mi-xiang-jin-xuan-black-tea/?attribute_pa_weight=250-g-8-82-oz-save-20&v=3a52f3c22ed6

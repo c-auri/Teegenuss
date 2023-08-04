@@ -2,7 +2,7 @@
 title: Leicht kohle-gerösteter JX
 route: lcrjx
 pack: 22-1-Einstieg
-type: Oolong
+type: oolong
 purchase:
     shop: TaiwanTeaCrafts
     productUrl: https://www.taiwanteacrafts.com/product/organic-jin-xuan-light-charcoal-pit-fired-oolong-tea
