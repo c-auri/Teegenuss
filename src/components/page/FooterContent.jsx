@@ -6,7 +6,7 @@ const dictionary = {
 }
 
 export default function FooterContent() {
-    const [current, setCurrent] = useState(null)
+    const [current, setCurrent] = useState("contact")
 
     return <>
         <div className="pb-24 border-b-2 border-gray-900">
@@ -35,8 +35,9 @@ function Control(state, current, setCurrent) {
 
 function Contact() {
     return <>
+        {Heading(dictionary["contact"])}
         <form className="grid gap-4 md:gap-8 lg:gap-16 lg:grid-cols-[1fr,1fr] xl:grid-cols-[2fr,3fr]">
-            <div className="text-xl lg:text-2xl">
+            <div className="text-xl">
                 <p className="lg:my-3">
                     Fragen oder Anregungen?
                 </p>
@@ -65,6 +66,7 @@ function Contact() {
 
 function Privacy() {
     return <>
+        {Heading(dictionary["privacy"])}
         <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt quibusdam similique, numquam, rem inventore, minus reiciendis laudantium suscipit exercitationem libero temporibus adipisci illum perspiciatis! Maxime reiciendis consequatur nostrum? Molestiae, nisi!
         </p>
@@ -75,4 +77,8 @@ function Privacy() {
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis placeat consequatur expedita nisi beatae sunt porro voluptatum vitae, quo animi molestias laboriosam commodi laudantium inventore repellendus aperiam voluptas aspernatur rem!
         </p>
     </>
+}
+
+function Heading(text) {
+    return <h2 className="my-4 font-bold text-gray-300 text-2xl">{text}</h2>
 }
