@@ -2,11 +2,12 @@ import { useState } from "react"
 
 const dictionary = {
     "contact": "Kontakt",
+    "address": "Anschrift",
     "privacy": "Datenschutz",
 }
 
 export default function FooterContent() {
-    const [current, setCurrent] = useState("contact")
+    const [current, setCurrent] = useState(null)
 
     return <>
         <div className="pb-24 border-b-2 border-gray-900">
@@ -14,7 +15,7 @@ export default function FooterContent() {
                 current === "contact" && 
                 <div className="grid lg:grid-cols-[3fr,2fr] lg:gap-20">
                     {Contact()}
-                    <div></div>
+                    {Address()}
                 </div>
             }
             { current === "privacy" && Privacy() }
@@ -44,10 +45,10 @@ function Contact() {
         {Heading(dictionary["contact"])}
         <form className="grid gap-4 md:gap-8 lg:gap-16">
             <div className="text-xl">
-                <p className="lg:my-3">
+                <p className="lg:my-1">
                     Fragen oder Anregungen?
                 </p>
-                <p className="lg:my-3">
+                <p className="lg:my-1">
                     Schreib mir gerne eine Nachricht und ich komme auf dich zurück.
                 </p>
             </div>
@@ -62,11 +63,20 @@ function Contact() {
                 </p>
                 <p className="flex flex-col gap-1 md:col-span-2">
                     <label for="message">Nachricht</label>
-                    <textarea className="my-1 border border-gray-800 focus:outline-none focus:border-gray-600 p-2 rounded-md bg-gray-900 text-gray-300" id="message" name="message" rows="10" title="Bitte gib deine Nachricht ein."></textarea>
+                    <textarea className="my-1 border border-gray-800 focus:outline-none focus:border-gray-600 p-2 rounded-md bg-gray-900 text-gray-300" id="message" name="message" rows="4" title="Bitte gib deine Nachricht ein."></textarea>
                 </p>
                 <button className="mb-8 py-2 px-16 border border-gray-900 md:justify-self-start hover:border-gray-500 focus:outline-none focus:border-gray-500 rounded-md hover:text-gray-300">Absenden</button>
             </fieldset>
         </form>
+    </section>
+}
+
+function Address() {
+    return <section>
+        {Heading(dictionary["address"])}
+        <p>Christoph Aurich</p>
+        <p>Nordstraße 37</p>
+        <p>04105 Leipzig</p>
     </section>
 }
 
