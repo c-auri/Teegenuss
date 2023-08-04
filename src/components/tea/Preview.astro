@@ -2,6 +2,7 @@
 import { getEntry } from "astro:content"
 
 const { tea, images } = Astro.props
+const type = await getEntry('types', tea.data.type.id)
 const pack = await getEntry('packs', tea.data.pack.id)
 const href = `/pakete/${pack.data.route}/${tea.data.route}` 
 ---
@@ -12,7 +13,7 @@ const href = `/pakete/${pack.data.route}/${tea.data.route}`
         <div class="lg:px-8">
             <h2 class="mt-4 text-xl font-bold">{tea.data.title}</h2>
             <p class="flex justify-between text-lg">
-                <span>{tea.data.type}</span>
+                <span>{type.data.title}</span>
                 <span>{tea.data.purchase.amount}</span>
             </p>
         </div>
