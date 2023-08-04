@@ -27,7 +27,10 @@ function Image(src, index, current) {
 
 function Control(label, onClick) {
     return (
-        <span onClick={onClick} className="cursor-pointer select-none text-right hover:text-gray-400 row-start-2 sm:row-start-1" >
+        <span 
+            onClick={onClick} 
+            className="cursor-pointer select-none justify-self-center hover:text-gray-400 row-start-2 sm:row-start-1"
+        >
             {label}
         </span>)
 }
