@@ -7,8 +7,6 @@ const dictionary = {
 
 export default function FooterContent() {
     const [current, setCurrent] = useState(null)
-    const toggleContact = () => current === "contact" ? setCurrent(null) : setCurrent("contact")
-    const togglePrivacy = () => current === "privacy" ? setCurrent(null) : setCurrent("privacy")
 
     return <>
         <div className="pb-24 border-b-2 border-gray-900">
@@ -18,17 +16,17 @@ export default function FooterContent() {
         <div className="select-none my-8 lg:my-14 flex justify-between text-gray-800 text-sm md:text-md lg:text-lg">
             <span>Copyright &copy; Christoph Aurich</span>
             <span className="flex gap-4">
-                {Control("contact", toggleContact, current)}
-                {Control("privacy", togglePrivacy, current)}
+                {Control("contact", current, setCurrent)}
+                {Control("privacy", current, setCurrent)}
             </span>
         </div>
     </>
 }
 
-function Control(state, toggleContent, current) {
+function Control(state, current, setCurrent) {
     return <>
         <span 
-            onClick={toggleContent} 
+            onClick={() => current === state ? setCurrent(null) : setCurrent(state)}
             className={current === state ? "text-gray-500" : "text-gray-800"}>
                 {dictionary[state]}
         </span>
