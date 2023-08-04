@@ -46,7 +46,7 @@ const nextTea = teasInPack[modulo(entryIndex + 1, teasInPack.length)]!
         <section class="w-full mt-8 mb-24 text-xl grid justify-items-center lg:grid-cols-2 lg:gap-x-20 lg:gap-y-2 xl:grid-rows-[13rem]">
             <div class="tracking-wider text-gray-500 grid place-items-center lg:col-start-2 lg:justify-self-stretch lg:self-end lg:place-items-start lg:gap-3">
                 <a class="select-none hover:text-gray-800 lg:row-start-1" href="./">{pack.data.title}</a>
-                <h1 class="my-1 text-3xl text-center font-bold text-black sm:text-4xl lg:row-start-2 lg:col-span-2 lg:text-left lg:text-5xl xl:text-6xl">{entry.data.title}</h1>
+                <h1 class="cursor-default my-1 text-3xl text-center font-bold text-black sm:text-4xl lg:row-start-2 lg:col-span-2 lg:text-left lg:text-5xl xl:text-6xl">{entry.data.title}</h1>
                 <div class="select-none flex gap-3 lg:row-start-1 lg:justify-self-end lg:gap-5">
                     <a class="hover:text-gray-800" href={`/pakete/${pack.data.route}/${previousTea.data.route}`}>&#8249; zurück</a>
                     <a class="hover:text-gray-800" href={`/pakete/${pack.data.route}/${nextTea.data.route}`}>weiter &#8250;</a>
@@ -56,7 +56,7 @@ const nextTea = teasInPack[modulo(entryIndex + 1, teasInPack.length)]!
                 <Slideshow client:load images={images} />
             </div>
             <div class="max-w-2xl flex flex-col items-center lg:col-start-2 lg:justify-self-start lg:mt-3 lg:items-start">
-                <div class="self-stretch flex justify-between tracking-wider text-gray-500">
+                <div class="cursor-default self-stretch flex justify-between tracking-wider text-gray-500">
                     <Purchase data={entry.data} />
                 </div>
                 <div class="my-5 xl:text-2xl">
