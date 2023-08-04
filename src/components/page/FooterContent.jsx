@@ -1,13 +1,18 @@
+import { useState } from "react"
+
 export default function FooterContent() {
+    const [current, setCurrent] = useState(null)
+    const toggleContact = () => current === "contact" ? setCurrent(null) : setCurrent("contact")
+
     return <>
             <div class="pb-24 border-b-2 border-gray-900">
-                {Contact()}
+                { current === "contact" && Contact() }
             </div>
             <div class="select-none my-8 lg:my-14 flex justify-between text-gray-800 text-sm md:text-md lg:text-lg">
                 <span>Copyright &copy; Christoph Aurich</span>
                 <span class="flex gap-4">
-                    <a>Kontakt</a>
-                    <a>Datenschutz</a>
+                    <span onClick={toggleContact}>Kontakt</span>
+                    <span>Datenschutz</span>
                 </span>
             </div>
         </>
