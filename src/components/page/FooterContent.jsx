@@ -3,6 +3,7 @@ import { useState } from "react"
 export default function FooterContent() {
     const [current, setCurrent] = useState(null)
     const toggleContact = () => current === "contact" ? setCurrent(null) : setCurrent("contact")
+    const togglePrivacy = () => current === "privacy" ? setCurrent(null) : setCurrent("privacy")
 
     return <>
             <div class="pb-24 border-b-2 border-gray-900">
@@ -11,11 +12,15 @@ export default function FooterContent() {
             <div class="select-none my-8 lg:my-14 flex justify-between text-gray-800 text-sm md:text-md lg:text-lg">
                 <span>Copyright &copy; Christoph Aurich</span>
                 <span class="flex gap-4">
-                    <span onClick={toggleContact}>Kontakt</span>
-                    <span>Datenschutz</span>
+                    {Control("Kontakt", toggleContact)}
+                    {Control("Datenschutz", togglePrivacy)}
                 </span>
             </div>
         </>
+}
+
+function Control(label, toggleContent) {
+    return <span onClick={toggleContent}>{label}</span>
 }
 
 function Contact() {
