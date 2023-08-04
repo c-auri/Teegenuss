@@ -6,17 +6,17 @@ export default function FooterContent() {
     const togglePrivacy = () => current === "privacy" ? setCurrent(null) : setCurrent("privacy")
 
     return <>
-            <div className="pb-24 border-b-2 border-gray-900">
-                { current === "contact" && Contact() }
-            </div>
-            <div className="select-none my-8 lg:my-14 flex justify-between text-gray-800 text-sm md:text-md lg:text-lg">
-                <span>Copyright &copy; Christoph Aurich</span>
-                <span className="flex gap-4">
-                    {Control("Kontakt", toggleContact)}
-                    {Control("Datenschutz", togglePrivacy)}
-                </span>
-            </div>
-        </>
+        <div className="pb-24 border-b-2 border-gray-900">
+            { current === "contact" && Contact() }
+        </div>
+        <div className="select-none my-8 lg:my-14 flex justify-between text-gray-800 text-sm md:text-md lg:text-lg">
+            <span>Copyright &copy; Christoph Aurich</span>
+            <span className="flex gap-4">
+                {Control("Kontakt", toggleContact)}
+                {Control("Datenschutz", togglePrivacy)}
+            </span>
+        </div>
+    </>
 }
 
 function Control(label, toggleContent) {
