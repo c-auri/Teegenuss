@@ -6,11 +6,17 @@ const dictionary = {
 }
 
 export default function FooterContent() {
-    const [current, setCurrent] = useState(null)
+    const [current, setCurrent] = useState("contact")
 
     return <>
         <div className="pb-24 border-b-2 border-gray-900">
-            { current === "contact" && Contact() }
+            { 
+                current === "contact" && 
+                <div className="grid lg:grid-cols-[3fr,2fr] lg:gap-20">
+                    {Contact()}
+                    <div></div>
+                </div>
+            }
             { current === "privacy" && Privacy() }
         </div>
         <div className="select-none my-8 lg:my-14 flex justify-between text-gray-800 text-sm md:text-md lg:text-lg">
@@ -36,7 +42,7 @@ function Control(state, current, setCurrent) {
 function Contact() {
     return <section>
         {Heading(dictionary["contact"])}
-        <form className="grid gap-4 md:gap-8 lg:gap-16 lg:grid-cols-[1fr,1fr] xl:grid-cols-[2fr,3fr]">
+        <form className="grid gap-4 md:gap-8 lg:gap-16">
             <div className="text-xl">
                 <p className="lg:my-3">
                     Fragen oder Anregungen?
