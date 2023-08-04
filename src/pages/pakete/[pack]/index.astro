@@ -1,6 +1,8 @@
 ---
+import { getEntry } from 'astro:content'
 import Page from '../../../layouts/Page.astro'
 import Frame from '../../../components/page/Frame.astro'
+import Preview from '../../../components/tea/Preview.astro'
 
 import { getCollection } from 'astro:content'
 
@@ -19,12 +21,22 @@ const bg = "bg-white"
 ---
 <Page title={pack.data.title} bgHeader={bg}>
     <Frame bg={bg}>
-        <h1 class="my-5 text-3xl font-bold">{pack.data.title}</h1>
-        {
-            teas.map(tea => (
-                <li><a href={`/pakete/${pack.data.route}/${tea.data.route}`}>
-                    {tea.data.title}
-                </a></li>))
-        }
+        <div class="mb-36 w-full flex flex-col items-center">
+            <h1 class="my-5 text-3xl font-bold">{pack.data.title}</h1>
+            <p class="max-w-md text-center text-lg">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit blanditiis sed id, fuga esse beatae?</p>
+            <div class="w-full my-20 flex justify-center">
+                <div class="w-full max-w-5xl flex gap-14 flex-wrap justify-center">
+                    {
+                        teas.map(tea => (
+                            <li class="list-none">
+                                <Preview tea={tea} images={[
+                                    { src: `/images/teas/${tea.slug}/01.png` },
+                                    { src: `/images/teas/${tea.slug}/02.png` }
+                                ]} />
+                            </li>))
+                    }
+                </div>
+            </div>
+        </div>
     </Frame>
 </Page>
