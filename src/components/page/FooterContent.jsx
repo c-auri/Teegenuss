@@ -1,5 +1,10 @@
 import { useState } from "react"
 
+const dictionary = {
+    "contact": "Kontakt",
+    "privacy": "Datenschutz",
+}
+
 export default function FooterContent() {
     const [current, setCurrent] = useState(null)
     const toggleContact = () => current === "contact" ? setCurrent(null) : setCurrent("contact")
@@ -13,15 +18,21 @@ export default function FooterContent() {
         <div className="select-none my-8 lg:my-14 flex justify-between text-gray-800 text-sm md:text-md lg:text-lg">
             <span>Copyright &copy; Christoph Aurich</span>
             <span className="flex gap-4">
-                {Control("Kontakt", toggleContact)}
-                {Control("Datenschutz", togglePrivacy)}
+                {Control("contact", toggleContact, current)}
+                {Control("privacy", togglePrivacy, current)}
             </span>
         </div>
     </>
 }
 
-function Control(label, toggleContent) {
-    return <span onClick={toggleContent}>{label}</span>
+function Control(state, toggleContent, current) {
+    return <>
+        <span 
+            onClick={toggleContent} 
+            className={current === state ? "text-gray-500" : "text-gray-800"}>
+                {dictionary[state]}
+        </span>
+    </>
 }
 
 function Contact() {
