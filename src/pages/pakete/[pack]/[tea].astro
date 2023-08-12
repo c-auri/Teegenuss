@@ -41,12 +41,23 @@ const entryIndex = teasInPack.findIndex(tea => tea.id === entry.id)
 const previousTea = teasInPack[modulo(entryIndex - 1, teasInPack.length)]!
 const nextTea = teasInPack[modulo(entryIndex + 1, teasInPack.length)]!
 
+const absolute = [
+    {
+        name: pack.data.title,
+        href: `/pakete/${pack.data.route}`,
+    },
+    {
+        name: entry.data.title,
+        href: `/pakete/${pack.data.route}/${entry.data.route}`
+    }
+]
+
 const relative = {
-    prevUrl:`/pakete/${pack.data.route}/${previousTea.data.route}`,
-    nextUrl:`/pakete/${pack.data.route}/${nextTea.data.route}`, 
+    prevHref:`/pakete/${pack.data.route}/${previousTea.data.route}`,
+    nextHref:`/pakete/${pack.data.route}/${nextTea.data.route}`, 
 }
 ---
-<Page title={entry.data.title} relative={relative}>
+<Page title={entry.data.title} absolute={absolute} relative={relative}>
     <Frame>
         <section class="w-full mt-8 mb-24 text-xl grid justify-items-center lg:grid-cols-2 lg:gap-x-20 lg:gap-y-2 xl:grid-rows-[11rem]">
             <div class="tracking-wider text-gray-500 grid place-items-center lg:col-start-2 lg:justify-self-stretch lg:self-end lg:place-items-start lg:gap-2">

@@ -24,12 +24,16 @@ const packIndex = packs.findIndex(pack => pack.id === entry.id)
 const prevPack = packs[modulo(packIndex - 1, packs.length)]!
 const nextPack = packs[modulo(packIndex + 1, packs.length)]!
 
+const absolute = [{
+    name: entry.data.title, url: entry.route
+}]
+
 const relative = {
-    prevUrl: `/pakete/${prevPack.data.route}`,
-    nextUrl: `/pakete/${nextPack.data.route}`,
+    prevHref: `/pakete/${prevPack.data.route}`,
+    nextHref: `/pakete/${nextPack.data.route}`,
 }
 ---
-<Page title={entry.data.title} relative={relative}>
+<Page title={entry.data.title} absolute={absolute} relative={relative}>
     <Frame bg={bg}>
         <div class="mb-36 w-full flex flex-col items-center">
             <h1 class="my-5 text-4xl font-bold">{entry.data.title}</h1>

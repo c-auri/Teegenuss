@@ -3,25 +3,36 @@ import Frame from './Frame.astro';
 import Logo from './Logo.astro'
 
 interface Props {
+    absolute: {
+        name: string,
+        href: string
+    }[],
     relative: {
-        prevUrl: string
-        nextUrl: string,
+        prevHref: string
+        nextHref: string,
     }
 }
 
-const { relative } = Astro.props
+const { absolute, relative } = Astro.props
 ---
 <Frame>
     <header class="w-full sm:my-2 xl:my-10 grid grid-cols-[auto_1fr_auto] items-center">
         <div class="pt-3 py-5">
             <Logo mode="light" />
         </div>
-        <div></div>
+        <div class="hidden select-none tracking-wider text-lg text-gray-400 pl-20 md:flex md:gap-5 md:items-center lg:pl-32 xl:pl-40">
+            {
+                absolute &&
+                absolute.map((segment, index) => (
+                    <a href={segment.href} class="cursor-pointer hover:text-gray-500">{segment.name}</a>
+                    <span>{index < absolute.length - 1 ? "/" : ""}</span>))
+            }
+        </div>
         {
             relative && 
-            <div class="select-none tracking-wider text-lg text-gray-500 flex gap-3  hover:text-gray-600 lg:gap-5">
-                <a class="hover:text-gray-800" href={relative.prevUrl}>&#8249; zurück</a>
-                <a class="hover:text-gray-800" href={relative.nextUrl}>weiter &#8250;</a>
+            <div class="col-start-3 select-none tracking-wider text-lg text-gray-400 flex gap-3  lg:gap-5">
+                <a class="cursor-pointer hover:text-gray-500" href={relative.prevHref}>&#8249; zurück</a>
+                <a class="cursor-pointer hover:text-gray-500" href={relative.nextHref}>weiter &#8250;</a>
             </div>
         }
     </header>
