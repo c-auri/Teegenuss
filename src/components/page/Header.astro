@@ -2,11 +2,27 @@
 import Frame from './Frame.astro';
 import Logo from './Logo.astro'
 
+interface Props {
+    relative: {
+        prevUrl: string
+        nextUrl: string,
+    }
+}
+
+const { relative } = Astro.props
 ---
 <Frame>
-    <header class="sm:my-2 xl:my-10 grid grid-cols-2 items-center">
+    <header class="w-full sm:my-2 xl:my-10 grid grid-cols-[auto_1fr_auto] items-center">
         <div class="pt-3 py-5">
             <Logo mode="light" />
         </div>
+        <div></div>
+        {
+            relative && 
+            <div class="select-none tracking-wider text-lg text-gray-500 flex gap-3  hover:text-gray-600 lg:gap-5">
+                <a class="hover:text-gray-800" href={relative.prevUrl}>&#8249; zurück</a>
+                <a class="hover:text-gray-800" href={relative.nextUrl}>weiter &#8250;</a>
+            </div>
+        }
     </header>
 </Frame>
