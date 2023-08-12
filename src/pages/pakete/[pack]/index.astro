@@ -43,7 +43,7 @@ const relative = {
                     {
                         teas.map(tea => (
                             <li class="list-none">
-                                <Preview tea={tea} images={[
+                                <Preview tea={tea} images={ tea.data.hasNoImages ? [] : [
                                     { src: `/images/teas/${tea.slug}/01.png` },
                                     { src: `/images/teas/${tea.slug}/02.png` }
                                 ]} />

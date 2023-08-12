@@ -28,7 +28,7 @@ export async function getStaticPaths() {
 const { entry } = Astro.props
 const { Content } = await entry.render()
 
-const images = [
+const images = entry.data.hasNoImages ? [] : [
     { src: `/images/teas/${entry.slug}/01.png` },
     { src: `/images/teas/${entry.slug}/02.png` },
     { src: `/images/teas/${entry.slug}/03.png` },

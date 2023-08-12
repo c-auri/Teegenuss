@@ -9,8 +9,13 @@ const href = `/pakete/${pack.data.route}/${tea.data.route}`
 <article class="max-w-xs">
     <a href={href} class="group">
         <div class="image-wrapper">
-            <img width="300" height="250" src={images[0]!.src} />
-            <img width="300" height="250" src={images[1]!.src} class="image-hover"/>
+          {
+            images.length == 2 ?
+            <img width="300" height="250" src={images[0].src} />
+            <img width="300" height="250" src={images[1].src} class="image-hover"/>
+            :
+            <img width="300" height="250" src="/images/teas/empty-cup.png" />
+          }
         </div>
         <div class="lg:px-8">
             <h2 class="mt-4 text-xl font-bold">{tea.data.title}</h2>

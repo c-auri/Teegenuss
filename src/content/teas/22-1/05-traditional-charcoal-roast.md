@@ -3,6 +3,7 @@ title: Traditionell gerösteter JX
 route: trjx
 pack: 22-1-Einstieg
 type: oolong
+hasNoImages: true
 purchase:
     shop: TaiwanTeaCrafts
     productUrl: https://www.taiwanteacrafts.com/product/high-mountain-charcoal-pit-fired-oolong-tea

@@ -9,7 +9,11 @@ export default function Slideshow({ images }) {
     return (
         <div className="grid grid-rows-[auto,auto] grid-cols-2 gap-8 text-6xl text-gray-200 sm:grid-cols-[auto,auto,auto] sm:items-center sm:gap-0 justify-center lg:justify-start">
             { Control("❮", showPrevious) }
-            { images.map((image, index) => Image(image.src, index, current)) }
+            { 
+                images.length > 0 ? 
+                images.map((image, index) => Image(image.src, index, current)) :
+                Image("/images/teas/empty-cup.png")
+            }
             { Control("❯", showNext) }
         </div>
     )

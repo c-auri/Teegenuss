@@ -26,6 +26,7 @@ const teas = defineCollection({
     route: z.string(),
     pack: reference('packs'),
     type: reference('types'),
+    hasNoImages: z.optional(z.boolean()),
     purchase: z.object({
       shop: reference('shops'),
       productUrl: z.string().url(),
