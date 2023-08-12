@@ -18,7 +18,7 @@ const { pack } = Astro.props
 const teas = await getCollection('teas', tea => tea.data.pack.id === pack.id)
 const bg = "bg-white"
 ---
-<Page title={pack.data.title} bgHeader={bg}>
+<Page title={pack.data.title}>
     <Frame bg={bg}>
         <div class="mb-36 w-full flex flex-col items-center">
             <h1 class="my-5 text-4xl font-bold">{pack.data.title}</h1>
