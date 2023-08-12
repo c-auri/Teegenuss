@@ -16,7 +16,7 @@ const prevPack = packs[modulo(packIndex - 1, packs.length)]!
 const nextPack = packs[modulo(packIndex + 1, packs.length)]!
 
 const absolute = [{
-    name: entry.data.title, url: entry.data.route
+    name: entry.data.title, href: `/pakete/${entry.data.route}`
 }]
 
 const relative = {
