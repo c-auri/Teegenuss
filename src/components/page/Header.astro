@@ -20,22 +20,22 @@ const { absolute, relative } = Astro.props
         <div class="pt-3 py-5">
             <Logo mode="light" />
         </div>
-        <div class="hidden select-none tracking-wider text-lg text-gray-400 pl-20 md:flex md:gap-5 md:items-center lg:pl-32 xl:pl-40">
+        <div class="hidden select-none tracking-wider text-md text-gray-400 pl-20 md:flex md:gap-5 md:items-center lg:pl-32 lg:text-lg xl:pl-40">
             {
                 absolute &&
                 absolute.map((segment, index) => (
-                    <a href={segment.href} class="group cursor-pointer hover:text-gray-500">
-                        <svg class="h-5 inline fill-gray-400 group-hover:fill-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26"><path d="M12,18.17L8.83,15L7.42,16.41L12,21L16.59,16.41L15.17,15M12,5.83L15.17,9L16.58,7.59L12,3L7.41,7.59L8.83,9L12,5.83Z" /></svg>
+                    <a href={segment.href} class="group cursor-pointer pl-2 pr-5 py-1 hover:text-gray-500 hover:bg-gray-200 hover:rounded-md">
+                        <svg class="h-5 inline fill-white group-hover:fill-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26"><path d="M12,18.17L8.83,15L7.42,16.41L12,21L16.59,16.41L15.17,15M12,5.83L15.17,9L16.58,7.59L12,3L7.41,7.59L8.83,9L12,5.83Z" /></svg>
                         {segment.name}
                     </a>
-                    <span>{index < absolute.length - 1 ? "/" : ""}</span>))
+                    <span class="pl-1">{index < absolute.length - 1 ? "/" : ""}</span>))
             }
         </div>
         {
             relative && 
-            <div class="col-start-3 select-none tracking-wider text-lg text-gray-400 flex gap-3  lg:gap-5">
-                <a class="cursor-pointer hover:text-gray-500" href={relative.prevHref}>&#8249; zurück</a>
-                <a class="cursor-pointer hover:text-gray-500" href={relative.nextHref}>weiter &#8250;</a>
+            <div class="col-start-3 select-none tracking-wider text-md text-gray-400 flex gap-3 lg:text-lg lg:gap-5">
+                <a class="cursor-pointer pl-3 pr-3.5 py-1 hover:text-gray-500 hover:bg-gray-200 hover:rounded-md" href={relative.prevHref}>&#8249; zurück</a>
+                <a class="cursor-pointer pl-3.5 pr-3 py-1 hover:text-gray-500 hover:bg-gray-200 hover:rounded-md" href={relative.nextHref}>weiter &#8250;</a>
             </div>
         }
     </header>
