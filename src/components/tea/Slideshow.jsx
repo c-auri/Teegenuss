@@ -7,7 +7,7 @@ export default function Slideshow({ images }) {
     const showNext = () => setCurrent(modulo(current + 1, images.length))
 
     return (
-        <div className="grid grid-rows-[auto,auto] grid-cols-2 gap-8 text-6xl text-gray-200 sm:grid-cols-[auto,auto,auto] sm:items-center sm:gap-0 justify-center lg:justify-start">
+        <div className="grid grid-rows-[auto,auto] grid-cols-2 text-6xl text-gray-200 sm:grid-cols-[auto,auto,auto] sm:items-center sm:gap-0 justify-center xl:justify-start">
             { Control("❮", showPrevious) }
             { 
                 images.length > 0 ? 

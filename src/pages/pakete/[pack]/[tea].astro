@@ -59,16 +59,16 @@ const relative = {
 ---
 <Page title={entry.data.title} absolute={absolute} relative={relative}>
     <Frame>
-        <section class="w-full mt-8 mb-24 text-xl grid justify-items-center lg:grid-cols-2 lg:gap-x-20 lg:gap-y-2 xl:grid-rows-[11rem]">
-            <h1 class="w-full mt-1 mb-2 text-3xl text-center font-bold text-black sm:text-4xl lg:my-0 lg:row-start-1 lg:self-end lg:text-left lg:text-5xl xl:text-6xl">{entry.data.title}</h1>
-            <div class="w-full mt-3 mb-10 lg:col-start-1 lg:row-start-1 lg:row-span-2">
+        <section class="w-full mb-5 text-xl flex flex-col items-center sm:mb-10 lg:flex-row lg:gap-5 xl:gap-10 xl:items-start 2xl:mt-16 2xl:mb-28">
+            <div class="w-full">
                 <Slideshow client:load images={images} />
             </div>
-            <div class="max-w-2xl flex flex-col items-center lg:col-start-2 lg:justify-self-start lg:mt-3 lg:items-start">
+            <div class="max-w-2xl flex flex-col items-center lg:items-start xl:mt-24">
+                <h1 class="w-full my-4 text-3xl text-center font-bold text-black sm:text-4xl lg:text-left lg:text-4xl xl:text-6xl">{entry.data.title}</h1>
                 <div class="cursor-default self-stretch flex justify-between tracking-wider text-gray-500">
                     <Purchase data={entry.data} />
                 </div>
-                <div class="my-5 xl:text-2xl">
+                <div class="my-3 xl:text-2xl">
                     <Content />
                 </div>
             </div>
