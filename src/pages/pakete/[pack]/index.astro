@@ -3,7 +3,7 @@ import Page from '../../../layouts/Page.astro'
 import Frame from '../../../components/page/Frame.astro'
 import Preview from '../../../components/tea/Preview.astro'
 
-import { getCollection } from 'astro:content'
+import { CollectionEntry, getCollection } from 'astro:content'
 import { modulo } from '../../../scripts/modulo'
 
 export async function getStaticPaths() {
@@ -27,7 +27,7 @@ const nextPack = packs[modulo(packIndex + 1, packs.length)]!
 const navigation = {
     root: "pakete",
     segments: [{
-        collection: packs.reverse(), 
+        collection: packs.sort((a: CollectionEntry<'packs'>, b: CollectionEntry<'packs'>) => a.id <= b.id ? +1 : -1), 
         entry: entry
     }],
     relative: {

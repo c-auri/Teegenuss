@@ -8,7 +8,7 @@ import Origin from '../../../components/tea/Origin.astro'
 import Preparation from '../../../components/tea/Preparation.astro'
 import Accordion from '../../../components/tea/Accordion.jsx'
 
-import  { getCollection, getEntry } from 'astro:content'
+import  { CollectionEntry, getCollection, getEntry } from 'astro:content'
 import { modulo } from '../../../scripts/modulo'
 
 export async function getStaticPaths() {
@@ -48,7 +48,7 @@ const navigation = {
     root: "pakete",
     segments: [
         {
-            collection: packs.reverse(),
+            collection: packs.sort((a: CollectionEntry<'packs'>, b: CollectionEntry<'packs'>) => a.id <= b.id ? +1 : -1),
             entry: pack,
         },
         {
