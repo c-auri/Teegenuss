@@ -26,9 +26,10 @@ const { navigation } = Astro.props
             <Logo mode="light" />
         </div>
         <div class="hidden select-none tracking-wider text-md text-gray-400 pl-20 md:flex md:gap-5 md:items-center lg:pl-32 lg:text-lg xl:pl-40">
-            <Breadcrumbs navigation={navigation} />
+            <Breadcrumbs client:load navigation={navigation} />
         </div>
         {
+            navigation &&
             navigation.relative && 
             <div class="col-start-3 select-none tracking-wider text-md text-gray-400 flex gap-3 lg:text-lg lg:gap-5">
                 <a class="cursor-pointer pl-4 pr-4 py-1 hover:text-gray-500 hover:bg-gray-200 hover:rounded-md" href={navigation.relative.prevHref}>&#8249; zurück</a>

@@ -25,9 +25,9 @@ const prevPack = packs[modulo(packIndex - 1, packs.length)]!
 const nextPack = packs[modulo(packIndex + 1, packs.length)]!
 
 const navigation = {
+    root: "pakete",
     segments: [{
-        root: "pakete",
-        collection: packs, 
+        collection: packs.reverse(), 
         entry: entry
     }],
     relative: {
