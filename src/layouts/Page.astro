@@ -7,7 +7,7 @@ import Footer from '../components/page/Footer.jsx'
 
 import favicon from '../assets/icons/favicon.svg'
 
-const { title, absolute, relative } = Astro.props
+const { title, navigation } = Astro.props
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -18,7 +18,7 @@ const { title, absolute, relative } = Astro.props
     <title>{ title }</title>
 </head>
 <body class="min-h-screen flex flex-col">
-    <Header absolute={absolute} relative={relative} />
+    <Header navigation={navigation} />
     <main class="flex-1">
         <slot />
     </main>

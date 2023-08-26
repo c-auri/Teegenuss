@@ -3,7 +3,7 @@ import Page from '../layouts/Page.astro'
 import Frame from '../components/page/Frame.astro'
 import Preview from '../components/tea/Preview.astro'
 
-import { getCollection, getEntry } from 'astro:content'
+import { CollectionEntry, getCollection, getEntry } from 'astro:content'
 import { modulo } from '../scripts/modulo'
 
 const entry = await getEntry('packs', "23-1-Chinas-Schaetze")
@@ -15,16 +15,19 @@ const packIndex = packs.findIndex(pack => pack.id === entry.id)
 const prevPack = packs[modulo(packIndex - 1, packs.length)]!
 const nextPack = packs[modulo(packIndex + 1, packs.length)]!
 
-const absolute = [{
-    name: entry.data.title, href: `/pakete/${entry.data.route}`
-}]
-
-const relative = {
-    prevHref: `/pakete/${prevPack.data.route}`,
-    nextHref: `/pakete/${nextPack.data.route}`,
+const navigation = {
+    root: "pakete",
+    segments: [{
+        collection: packs.sort((a: CollectionEntry<'packs'>, b: CollectionEntry<'packs'>) => a.id <= b.id ? +1 : -1), 
+        entry: entry
+    }],
+    relative: {
+        prevHref: `/pakete/${prevPack.data.route}`,
+        nextHref: `/pakete/${nextPack.data.route}`,
+    }
 }
 ---
-<Page title={entry.data.title} absolute={absolute} relative={relative}>
+<Page title={entry.data.title} navigation={navigation}>
     <Frame bg={bg}>
         <div class="mb-36 w-full flex flex-col items-center">
             <h1 class="my-5 text-4xl font-medium">{entry.data.title}</h1>
