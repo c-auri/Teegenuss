@@ -14,7 +14,7 @@ import { modulo } from '../../../scripts/modulo'
 export async function getStaticPaths() {
     const teas = await getCollection('teas')
     const packs = await getCollection('packs')
-    
+
     return teas.map(tea => {
         const pack = packs.find(p => p.id === tea.data.pack!.id)!
         return {
@@ -24,6 +24,9 @@ export async function getStaticPaths() {
             props: { entry: tea }
         }})
 }
+
+const teas = await getCollection('teas')
+const packs = await getCollection('packs')
 
 const { entry } = Astro.props
 const { Content } = await entry.render()
@@ -41,23 +44,25 @@ const entryIndex = teasInPack.findIndex(tea => tea.id === entry.id)
 const previousTea = teasInPack[modulo(entryIndex - 1, teasInPack.length)]!
 const nextTea = teasInPack[modulo(entryIndex + 1, teasInPack.length)]!
 
-const absolute = [
-    {
-        name: pack.data.title,
-        href: `/pakete/${pack.data.route}`,
-    },
-    {
-        name: entry.data.title,
-        href: `/pakete/${pack.data.route}/${entry.data.route}`
+const navigation = {
+    root: "pakete",
+    segments: [
+        {
+            collection: packs,
+            entry: pack,
+        },
+        {
+            collection: teas,
+            entry: entry,
+        }
+    ],    
+    relative: {
+        prevHref:`/pakete/${pack.data.route}/${previousTea.data.route}`,
+        nextHref:`/pakete/${pack.data.route}/${nextTea.data.route}`, 
     }
-]
-
-const relative = {
-    prevHref:`/pakete/${pack.data.route}/${previousTea.data.route}`,
-    nextHref:`/pakete/${pack.data.route}/${nextTea.data.route}`, 
 }
 ---
-<Page title={entry.data.title} absolute={absolute} relative={relative}>
+<Page title={entry.data.title} navigation={navigation}>
     <Frame>
         <section class="w-full mb-5 text-xl flex flex-col items-center sm:mb-10 lg:flex-row lg:gap-5 xl:gap-10 xl:items-start 2xl:mt-16 2xl:mb-28">
             <div class="w-full">

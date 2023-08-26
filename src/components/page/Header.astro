@@ -1,19 +1,33 @@
 ---
+import type { CollectionEntry } from 'astro:content';
 import Frame from './Frame.astro';
 import Logo from './Logo.astro'
 
 interface Props {
-    absolute: {
-        name: string,
-        href: string
-    }[],
-    relative: {
-        prevHref: string
-        nextHref: string,
+    navigation: {
+        root: string,
+        segments: {
+            collection: CollectionEntry<'packs'>[] | CollectionEntry<'teas'>[],
+            entry: CollectionEntry<'packs'> | CollectionEntry<'teas'>
+        }[],
+        relative: {
+            prevHref: string
+            nextHref: string,
+        }
     }
 }
 
-const { absolute, relative } = Astro.props
+const { navigation } = Astro.props
+
+function buildHref(index: number) {
+    let result = `/${navigation.root}`
+
+    for (let i = 0; i <= index; i++) {
+        result += `/${navigation.segments[i]!.entry.data.route}`
+    }
+
+    return result
+}
 ---
 <Frame>
     <header class="w-full grid grid-cols-[auto_1fr_auto] items-center md:py-4 2xl:my-6">
@@ -22,20 +36,20 @@ const { absolute, relative } = Astro.props
         </div>
         <div class="hidden select-none tracking-wider text-md text-gray-400 pl-20 md:flex md:gap-5 md:items-center lg:pl-32 lg:text-lg xl:pl-40">
             {
-                absolute &&
-                absolute.map((segment, index) => (
-                    <a href={segment.href} class="group cursor-pointer pl-2 pr-4 py-1 hover:text-gray-500 hover:bg-gray-200 hover:rounded-md">
+                navigation.segments &&
+                navigation.segments.map((segment, index) => (
+                    <a href={buildHref(index)} class="group cursor-pointer pl-2 pr-4 py-1 hover:text-gray-500 hover:bg-gray-200 hover:rounded-md">
                         <svg class="h-5 inline fill-white group-hover:fill-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26"><path d="M12,18.17L8.83,15L7.42,16.41L12,21L16.59,16.41L15.17,15M12,5.83L15.17,9L16.58,7.59L12,3L7.41,7.59L8.83,9L12,5.83Z" /></svg>
-                        {segment.name}
+                        {segment.entry.data.title}
                     </a>
-                    <span class="pl-1">{index < absolute.length - 1 ? "/" : ""}</span>))
+                    <span class="pl-1">{index < navigation.segments.length - 1 ? "/" : ""}</span>))
             }
         </div>
         {
-            relative && 
+            navigation.relative && 
             <div class="col-start-3 select-none tracking-wider text-md text-gray-400 flex gap-3 lg:text-lg lg:gap-5">
-                <a class="cursor-pointer pl-4 pr-4 py-1 hover:text-gray-500 hover:bg-gray-200 hover:rounded-md" href={relative.prevHref}>&#8249; zurück</a>
-                <a class="cursor-pointer pl-4 pr-4 py-1 hover:text-gray-500 hover:bg-gray-200 hover:rounded-md" href={relative.nextHref}>weiter &#8250;</a>
+                <a class="cursor-pointer pl-4 pr-4 py-1 hover:text-gray-500 hover:bg-gray-200 hover:rounded-md" href={navigation.relative.prevHref}>&#8249; zurück</a>
+                <a class="cursor-pointer pl-4 pr-4 py-1 hover:text-gray-500 hover:bg-gray-200 hover:rounded-md" href={navigation.relative.nextHref}>weiter &#8250;</a>
             </div>
         }
     </header>

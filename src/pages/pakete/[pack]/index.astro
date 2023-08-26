@@ -24,16 +24,19 @@ const packIndex = packs.findIndex(pack => pack.id === entry.id)
 const prevPack = packs[modulo(packIndex - 1, packs.length)]!
 const nextPack = packs[modulo(packIndex + 1, packs.length)]!
 
-const absolute = [{
-    name: entry.data.title, href: `/pakete/${entry.data.route}`
-}]
-
-const relative = {
-    prevHref: `/pakete/${prevPack.data.route}`,
-    nextHref: `/pakete/${nextPack.data.route}`,
+const navigation = {
+    segments: [{
+        root: "pakete",
+        collection: packs, 
+        entry: entry
+    }],
+    relative: {
+        prevHref: `/pakete/${prevPack.data.route}`,
+        nextHref: `/pakete/${nextPack.data.route}`,
+    }
 }
 ---
-<Page title={entry.data.title} absolute={absolute} relative={relative}>
+<Page title={entry.data.title} navigation={navigation}>
     <Frame bg={bg}>
         <div class="mb-36 w-full flex flex-col items-center">
             <h1 class="my-5 text-4xl font-medium">{entry.data.title}</h1>
