@@ -1,7 +1,8 @@
 ---
-import type { CollectionEntry } from 'astro:content';
-import Frame from './Frame.astro';
+import type { CollectionEntry } from 'astro:content'
+import Frame from './Frame.astro'
 import Logo from './Logo.astro'
+import Breadcrumbs from './Breadcrumbs.jsx'
 
 interface Props {
     navigation: {
@@ -18,16 +19,6 @@ interface Props {
 }
 
 const { navigation } = Astro.props
-
-function buildHref(index: number) {
-    let result = `/${navigation.root}`
-
-    for (let i = 0; i <= index; i++) {
-        result += `/${navigation.segments[i]!.entry.data.route}`
-    }
-
-    return result
-}
 ---
 <Frame>
     <header class="w-full grid grid-cols-[auto_1fr_auto] items-center md:py-4 2xl:my-6">
@@ -35,15 +26,7 @@ function buildHref(index: number) {
             <Logo mode="light" />
         </div>
         <div class="hidden select-none tracking-wider text-md text-gray-400 pl-20 md:flex md:gap-5 md:items-center lg:pl-32 lg:text-lg xl:pl-40">
-            {
-                navigation.segments &&
-                navigation.segments.map((segment, index) => (
-                    <a href={buildHref(index)} class="group cursor-pointer pl-2 pr-4 py-1 hover:text-gray-500 hover:bg-gray-200 hover:rounded-md">
-                        <svg class="h-5 inline fill-white group-hover:fill-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26"><path d="M12,18.17L8.83,15L7.42,16.41L12,21L16.59,16.41L15.17,15M12,5.83L15.17,9L16.58,7.59L12,3L7.41,7.59L8.83,9L12,5.83Z" /></svg>
-                        {segment.entry.data.title}
-                    </a>
-                    <span class="pl-1">{index < navigation.segments.length - 1 ? "/" : ""}</span>))
-            }
+            <Breadcrumbs navigation={navigation} />
         </div>
         {
             navigation.relative && 
