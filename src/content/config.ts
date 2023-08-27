@@ -13,6 +13,9 @@ const packs = defineCollection({
   schema: z.object({
     route: z.string(),
     title: z.string(),
+    date: z.string(),
+    numberOfTeas: z.number(),
+    totalWeight: z.string(),
     teaser: z.string(),
     stash: z.number().int(),
     price: z.number(),
