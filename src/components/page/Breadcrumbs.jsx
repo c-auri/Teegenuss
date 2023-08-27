@@ -4,7 +4,7 @@ export default function Breadcrumbs({ navigation }) {
     }
 
     return navigation.segments.map((segment, segmentIndex) => (
-        <div key={`segment-${segmentIndex}`} className="flex items-center">
+        <div key={`segment-${segmentIndex}`} className="flex items-center select-none tracking-wider text-md text-gray-400">
             <div className="relative group cursor-pointer pl-2 pr-5 py-1 rounded-md hover:bg-gray-200">
                 <svg className="h-5 pr-1 inline fill-white group-hover:fill-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26"><path d="M12,18.17L8.83,15L7.42,16.41L12,21L16.59,16.41L15.17,15M12,5.83L15.17,9L16.58,7.59L12,3L7.41,7.59L8.83,9L12,5.83Z" /></svg>
                 <span className="group-hover:text-gray-500 ">{segment.entry.data.title}</span>
