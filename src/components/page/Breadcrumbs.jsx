@@ -10,7 +10,7 @@ export default function Breadcrumbs({ navigation }) {
                     <svg className="h-5 pr-1 inline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26"><path d="M12,18.17L8.83,15L7.42,16.41L12,21L16.59,16.41L15.17,15M12,5.83L15.17,9L16.58,7.59L12,3L7.41,7.59L8.83,9L12,5.83Z" /></svg>
                     <a href={Href(navigation, segmentIndex, segment.entry)}>{segment.entry.data.title}</a>
                 </div>
-                <ul className={`absolute left-0 top-[2rem] py-4 hidden group-hover:block hover:block`}>
+                <ul className={`absolute left-0 top-full py-4 hidden group-hover:block hover:block`}>
                 {
                     Dropdown(navigation, segmentIndex, segment.entry)
                 }
