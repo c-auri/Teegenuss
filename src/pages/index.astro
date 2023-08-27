@@ -1,15 +1,10 @@
 ---
-import Page from '../layouts/Page.astro'
-import Frame from '../components/page/Frame.astro'
-import Preview from '../components/tea/Preview.astro'
-
+import Pack from '../layouts/Pack.astro'
 import { CollectionEntry, getCollection, getEntry } from 'astro:content'
 import { modulo } from '../scripts/modulo'
 
 const entry = await getEntry('packs', "23-1-Chinas-Schaetze")
 const packs = await getCollection('packs')
-const teas = await getCollection('teas', tea => tea.data.pack.id === entry.id)
-const bg = "bg-white"
 
 const packIndex = packs.findIndex(pack => pack.id === entry.id)
 const prevPack = packs[modulo(packIndex - 1, packs.length)]!
@@ -27,24 +22,4 @@ const navigation = {
     }
 }
 ---
-<Page title={entry.data.title} navigation={navigation}>
-    <Frame bg={bg}>
-        <div class="mb-36 w-full flex flex-col items-center">
-            <h1 class="my-5 text-4xl text-gray-800 font-medium">{entry.data.title}</h1>
-            <p class="my-12 max-w-3xl text-xl text-gray-800 lg:max-w-4xl xl:text-2xl">{entry.data.teaser}</p>
-            <div class="my-16 w-full flex justify-center">
-                <div class="w-full max-w-5xl flex gap-14 flex-wrap justify-center">
-                    {
-                        teas.map(tea => (
-                            <li class="list-none">
-                                <Preview tea={tea} images={[
-                                    { src: `/images/teas/${tea.slug}/01.png` },
-                                    { src: `/images/teas/${tea.slug}/02.png` }
-                                ]} />
-                            </li>))
-                    }
-                </div>
-            </div>
-        </div>
-    </Frame>
-</Page>
+<Pack pack={entry} navigation={navigation} />
