@@ -20,24 +20,25 @@ export default function Breadcrumbs({ navigation }) {
 
 function Dropdown(navigation, segmentIndex, currentEntry) {
     const segment = navigation.segments[segmentIndex]
+    const filteredCollection = segment.collection.filter(entry => entry.id != currentEntry.id)
 
-    return segment.collection.map((entry, entryIndex) => {
+    return filteredCollection.map((entry, entryIndex) => {
         let rounded = ""
         
         if (entryIndex === 0) {
             rounded = "rounded-t-md pt-1"
         } 
         
-        if (entryIndex === segment.collection.length - 1) {
+        if (entryIndex === filteredCollection.length - 1) {
             rounded = "rounded-b-md pb-1"
         }
 
         return <a 
-                    className={`${entry.id === currentEntry.id ? "text-gray-500 hover:text-gray-700" : ""} whitespace-nowrap`}
+                    className="whitespace-nowrap"
                     href={Href(navigation, segmentIndex, entry)}
                     key={`${entryIndex}`}
                 >
-            <li className={`${rounded} flex flex-col items-stretch py-1 pl-8 pr-6 bg-gray-100 hover:text-gray-700 hover:bg-gray-200`}>
+            <li className={`${rounded} flex flex-col items-stretch py-1 pl-8 pr-6 bg-gray-100 hover:text-gray-500 hover:bg-gray-200`}>
                 {entry.data.title}
             </li>
         </a>
