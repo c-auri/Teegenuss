@@ -25,7 +25,7 @@ const { navigation } = Astro.props
         <div class="pt-3 py-5">
             <Logo mode="light" />
         </div>
-        <div class="hidden select-none tracking-wider text-md text-gray-400 pl-20 md:flex md:gap-5 md:items-center lg:pl-32 lg:text-lg xl:pl-40">
+        <div class="hidden pl-20 md:flex md:gap-5 md:items-center lg:pl-32 lg:text-lg xl:pl-40">
             <Breadcrumbs client:load navigation={navigation} />
         </div>
         {
