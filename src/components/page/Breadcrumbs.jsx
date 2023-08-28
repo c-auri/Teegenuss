@@ -44,13 +44,11 @@ function Dropdown(navigation, segmentIndex, currentEntry) {
 }
 
 function Href(navigation, segmentIndex, entry) {
-    let result = `/${navigation.root}`
+    let currentDirectory = `/${navigation.root}`
 
     for (let i = 0; i < segmentIndex; i++) {
-        result += `/${navigation.segments[i].entry.data.route}`
+        currentDirectory += `/${navigation.segments[i].entry.data.route}`
     }
 
-    result += `/${entry.data.route}`
-
-    return result
+    return currentDirectory + `/${entry.data.route}`
 }
