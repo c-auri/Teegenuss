@@ -1,9 +1,5 @@
 export default function Breadcrumbs({ navigation }) {
-    if (!navigation) {
-        return
-    }
-
-    return navigation.segments.map((segment, segmentIndex) => (
+    return navigation?.segments.map((segment, segmentIndex) => (
         <div key={`segment-${segmentIndex}`} className="group flex items-center select-none tracking-wider text-md text-gray-400 fill-gray-400">
             <div className="relative cursor-pointer rounded-md hover:fill-gray-500 group-hover:text-gray-500 group-hover:bg-gray-100">
                 <div className="pl-2 pr-4 py-1 rounded-md hover:bg-gray-200">
