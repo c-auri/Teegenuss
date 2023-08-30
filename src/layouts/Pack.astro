@@ -12,7 +12,7 @@ const teas = await getCollection('teas', tea => tea.data.pack.id === pack.id)
         <div class="mb-36 w-full flex flex-col items-center">
             <div class="my-14">
                 <h1 class="cursor-default text-center text-4xl text-gray-800 font-medium lg:my-8 lg:text-5xl xl:text-6xl xl:my-10">{pack.data.title}</h1>
-                <p class="cursor-default w-full mt-5 mb-4 tracking-wider flex gap-5 justify-center text-gray-500 md:text-xl lg:my-6 lg:text-2xl xl:text-2xl xl:my-8">
+                <p class="cursor-default w-full mt-5 mb-4 tracking-wider flex justify-between sm:justify-around text-gray-500 text-lg md:text-xl lg:my-6 lg:text-2xl xl:text-2xl xl:my-8">
                     <span>{pack.data.date}</span>
                     <span class="select-none">|</span>
                     <span>{pack.data.numberOfTeas} Tees</span>
