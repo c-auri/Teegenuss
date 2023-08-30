@@ -34,8 +34,8 @@ function Panel({ entry, isOpen, toggle }) {
 
     return (
         <article className="border-b border-gray-300">
-            <header className="cursor-pointer py-3 md:py-4 flex justify-between items-center" onClick={toggle}>
-                <h3 className="text-xl md:text-2xl font-bold">{entry.data.title}</h3>
+            <header className="cursor-pointer my-2 md:my-3 flex justify-between items-center" onClick={toggle}>
+                <h3 className="text-xl font-bold">{entry.data.title}</h3>
                 <svg className="h-8 fill-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d={path} /></svg>
             </header>
             {
