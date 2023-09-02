@@ -26,8 +26,15 @@ const navigation = {
         entry: entry
     }],
     relative: {
-        prevHref: `/pakete/${prevPack.data.route}`,
-        nextHref: `/pakete/${nextPack.data.route}`,
+        prev: {
+            title: "vorheriges Paket",
+            href: `/pakete/${prevPack.data.route}`,
+
+        },
+        next: {
+            title: "nächstes Paket",
+            href: `/pakete/${nextPack.data.route}`,
+        }
     }
 }
 ---

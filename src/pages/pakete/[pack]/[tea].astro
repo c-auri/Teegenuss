@@ -56,8 +56,14 @@ const navigation = {
         }
     ],    
     relative: {
-        prevHref:`/pakete/${pack.data.route}/${previousTea.data.route}`,
-        nextHref:`/pakete/${pack.data.route}/${nextTea.data.route}`, 
+        prev: {
+            title: "vorheriger Tee",
+            href: `/pakete/${pack.data.route}/${previousTea.data.route}`,
+        },
+        next: {
+            title: "nächster Tee",
+            href: `/pakete/${pack.data.route}/${nextTea.data.route}`,
+        }
     }
 }
 ---
