@@ -23,27 +23,34 @@ export default function Breadcrumbs({ navigation }) {
 }
 
 function Dropdown(navigation, segmentIndex, currentEntry) {
-    const segment = navigation.segments[segmentIndex]
-    const filteredCollection = segment.collection.filter(entry => entry.id != currentEntry.id)
+    const collection = navigation.segments[segmentIndex].collection
 
-    return filteredCollection.map((entry, entryIndex) => {
+    return collection.map((entry, entryIndex) => {
         let rounded = ""
         
         if (entryIndex === 0) {
             rounded = "rounded-t-md pt-1"
         } 
         
-        if (entryIndex === filteredCollection.length - 1) {
+        if (entryIndex === collection.length - 1) {
             rounded = "rounded-b-md pb-1"
         }
 
         return <a 
-                    className="whitespace-nowrap"
-                    href={Href(navigation, segmentIndex, entry)}
-                    key={`${entryIndex}`}
-                >
-            <li className={`${rounded} flex flex-col items-stretch py-1 pl-8 pr-6 bg-gray-100 hover:text-gray-500 hover:bg-gray-200`}>
-                {entry.data.title}
+            className="whitespace-nowrap"
+            href={Href(navigation, segmentIndex, entry)}
+            key={`${entryIndex}`}
+        >
+            <li className={`${rounded} py-1 pl-3 pr-6 flex items-center gap-2 bg-gray-100 hover:text-gray-500 hover:bg-gray-200`}>
+                <span className="w-3">
+                    {
+                        entry.id === currentEntry.id &&
+                        <svg xmlns="http://www.w3.org/2000/svg" height="10" viewBox="0 -960 960 960">
+                            <path d="M480-200q-117 0-198.5-81.5T200-480q0-117 81.5-198.5T480-760q117 0 198.5 81.5T760-480q0 117-81.5 198.5T480-200Z"/>
+                        </svg>
+                    }
+                </span>
+                <span>{entry.data.title}</span>
             </li>
         </a>
     })
