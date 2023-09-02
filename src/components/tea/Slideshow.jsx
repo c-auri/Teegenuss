@@ -3,18 +3,20 @@ import { modulo } from '../../scripts/modulo'
 
 export default function Slideshow({ images }) {
     const [current, setCurrent] = useState(0)
+    const pathPrevious = "M560-240 320-480l240-240 56 56-184 184 184 184-56 56Z"
+    const pathNext = "M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"
     const showPrevious = () => setCurrent(modulo(current - 1, images.length))
     const showNext = () => setCurrent(modulo(current + 1, images.length))
 
     return (
-        <div className="grid grid-rows-[auto,auto] grid-cols-2 text-6xl text-gray-200 sm:grid-cols-[auto,auto,auto] sm:items-center sm:gap-0 justify-center xl:justify-start">
-            { Control("❮", showPrevious) }
+        <div className="grid grid-rows-[auto,auto] grid-cols-2 text-6xl sm:grid-cols-[auto,auto,auto] sm:items-center sm:gap-0 justify-center xl:justify-start">
+            { Control("previous", pathPrevious, showPrevious) }
             { 
                 images.length > 0 ? 
                 images.map((image, index) => Image(image.src, index, current)) :
                 Image("/images/teas/empty-cup.png")
             }
-            { Control("❯", showNext) }
+            { Control("next", pathNext, showNext) }
         </div>
     )
 }
@@ -29,12 +31,15 @@ function Image(src, index, current) {
     />
 }
 
-function Control(label, onClick) {
+function Control(title, path, onClick) {
     return (
         <span 
+            title={title === "previous" ? "vorherige Abbildung" : "nächste Abbildung"}
             onClick={onClick} 
-            className="cursor-pointer select-none justify-self-center hover:text-gray-400 row-start-2 sm:row-start-1"
+            className={(title === "previous" ? "justify-self-end" : "justify-self-start") + " cursor-pointer select-none px-3 py-1 rounded-md row-start-2 lg:justify-self-center fill-gray-300 hover:fill-gray-400 hover:bg-gray-100 sm:row-start-1 sm:py-3 sm:px-1"}
         >
-            {label}
+            <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960">
+                <path d={path}/>
+            </svg>
         </span>)
 }
