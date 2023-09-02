@@ -25,21 +25,31 @@ const { navigation } = Astro.props
         <div class="pt-3 py-5">
             <Logo mode="light" />
         </div>
-        <div class="flex-1 flex md:gap-5 md:items-center md:pl-20 lg:pl-32 lg:text-lg xl:pr-20 xl:pl-40">
+        <div class="flex md:flex-1 md:gap-5 md:items-center md:pl-20 lg:pl-32 lg:text-lg xl:pr-20 xl:pl-40">
             <div class="flex-1 hidden md:block">
                 <Breadcrumbs client:load navigation={navigation} />
             </div>
             {
                 navigation &&
                 navigation.relative && 
-                <div class="col-start-3 select-none tracking-wider text-md text-gray-400 flex lg:text-lg lg:gap-2">
-                    <a class="cursor-pointer pl-4 pr-4 py-1 hover:text-gray-500 hover:bg-gray-200 hover:rounded-md" href={navigation.relative.prevHref}>
-                        <span class="font-bold">&#8249;</span>
-                        <span class="md:hidden">zurück</span>
+                <div class="col-start-3 select-none tracking-wider text-md text-gray-400 fill-gray-400 flex lg:text-lg lg:gap-2">
+                    <a class="cursor-pointer pl-4 pr-4 py-1 flex items-center gap-1 hover:text-gray-500 hover:fill-gray-500 hover:bg-gray-200 hover:rounded-md" href={navigation.relative.prevHref}>
+                        <span class="font-bold md:hidden 2xl:inline">&#8249;</span>
+                        <span class="md:hidden 2xl:inline">zurück</span>
+                        <span class="hidden md:inline 2xl:hidden" title="zurück">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960">
+                                <path d="M560-240 320-480l240-240 56 56-184 184 184 184-56 56Z"/>
+                            </svg>
+                        </span>
                     </a>
-                    <a class="cursor-pointer pl-4 pr-4 py-1 hover:text-gray-500 hover:bg-gray-200 hover:rounded-md" href={navigation.relative.nextHref}>
-                        <span class="md:hidden">weiter</span>
-                        <span class="font-bold">&#8250;</span>
+                    <a class="cursor-pointer pl-4 pr-4 py-1 flex items-center gap-1 hover:text-gray-500 hover:fill-gray-500 hover:bg-gray-200 hover:rounded-md" href={navigation.relative.nextHref}>
+                        <span class="md:hidden 2xl:inline">weiter</span>
+                        <span class="font-bold md:hidden 2xl:inline">&#8250;</span>
+                        <span class="hidden md:inline 2xl:hidden" title="weiter">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960">
+                                <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"/>
+                            </svg>
+                        </span>
                     </a>
                 </div>
             }
