@@ -43,7 +43,7 @@ function Dropdown(navigation, segmentIndex, currentEntry) {
         >
             <li className={`${rounded} py-1 pl-3 pr-6 flex items-center gap-2 bg-gray-100 hover:text-gray-500 hover:bg-gray-200`}>
                 <span className="w-3"></span>
-                <span className={entry.id === currentEntry.id && "text-gray-800"}>{entry.data.title}</span>
+                <span className={entry.id === currentEntry.id ? "text-gray-800" : ""}>{entry.data.title}</span>
             </li>
         </a>
     })
