@@ -2,7 +2,9 @@
 import Page from '../layouts/Page.astro'
 import Frame from '../components/page/Frame.astro'
 import Preview from '../components/tea/Preview.astro'
-import { getCollection } from 'astro:content' 
+import Button from '../components/forms/Button'
+
+import { getCollection } from 'astro:content'
 
 const { pack, navigation } = Astro.props
 const teas = await getCollection('teas', tea => tea.data.pack.id === pack.id)
@@ -35,6 +37,9 @@ const teas = await getCollection('teas', tea => tea.data.pack.id === pack.id)
                             </li>))
                     }
                 </div>
+            </div>
+            <div class="pt-12 flex flex-col items-center gap-3">
+                <Button type="link" href="/bestellung">bestellen</Button>
             </div>
         </div>
     </Frame>
