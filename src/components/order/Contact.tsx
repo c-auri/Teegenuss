@@ -14,13 +14,11 @@ type Props = {
     handleSubmit: (contact: Contact) => void
 }
 
-type UpdateEvent = React.FormEvent<HTMLTextAreaElement | HTMLInputElement>
-
 export default function ContactForm({initialValues, handleSubmit}: Props) {
     const [contact, setContact] = useState(initialValues)
 
     const update = (property: keyof Contact) => {
-        return (e: UpdateEvent) => {
+        return (e: React.FormEvent<HTMLTextAreaElement | HTMLInputElement>) => {
             const newContact = {...contact}
             newContact[property] = e.currentTarget.value
             setContact(newContact)
