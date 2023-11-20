@@ -4,6 +4,7 @@ interface Props {
     label: string,
     value: string,
     handleChange?: (e: React.FormEvent<HTMLTextAreaElement | HTMLInputElement>) => void,
+    isRequired?: boolean,
     size?: number
 }
 
@@ -13,6 +14,7 @@ export default function Input({
     label,
     value,
     handleChange,
+    isRequired = false,
     size
 }: Props) {
     return <>
@@ -26,6 +28,7 @@ export default function Input({
                     rows={size}
                     value={value}
                     onChange={handleChange}
+                    required={isRequired}
                 />
                 : <input
                     className={"px-2 py-1 border rounded-md text-lg text-gray-800 focus:outline-none focus:border-gray-600"}
@@ -34,6 +37,7 @@ export default function Input({
                     size={size}
                     value={value}
                     onChange={handleChange}
+                    required={isRequired}
                 />
             }
         </label>

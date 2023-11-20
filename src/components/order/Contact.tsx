@@ -20,9 +20,9 @@ export function ContactForm({values, update}: Props) {
                 className="my-24 flex flex-col gap-6"
                 onSubmit={(e) => { e.preventDefault(); console.log(values)}}
             >
-                <Input type="email" label="Email" name="contact-email" value={values.email ?? ""} handleChange={update("email")}/>
-                <Input type="text" label="Discord" name="contact-discord" value={values.discord ?? ""} handleChange={update("discord")}/>
-                <Input type="text" label="Woher kennen wir uns?" name="contact-source" value={values.source ?? ""} handleChange={update("source")}/>
+                <Input type="email" label="Email" name="contact-email" value={values.email ?? ""} handleChange={update("email")} isRequired={true}/>
+                <Input type="text" label="Discord" name="contact-discord" value={values.discord ?? ""} handleChange={update("discord")} isRequired={true}/>
+                <Input type="text" label="Woher kennen wir uns?" name="contact-source" value={values.source ?? ""} handleChange={update("source")} isRequired={true}/>
                 <Button type="submit">Weiter</Button>
             </form>
         </section>
