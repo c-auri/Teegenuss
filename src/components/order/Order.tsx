@@ -2,25 +2,21 @@ import { useState } from 'react'
 import { ContactForm, type Contact } from './Contact'
 
 export default function Order() {
-    const [ state, setState ] = useState({
-        contact: {
+    const [ contact, setContact ] = useState({
             email: "",
             discord: "",
             source: "",
-        },
     })
 
-    const updateContact = (newContact: Contact) => setState({...state, contact: newContact})
-
     return <>
-        <ContactForm initialValues={state.contact} handleSubmit={updateContact}/>
+        <ContactForm initialValues={contact} handleSubmit={(contact: Contact) => setContact(contact)}/>
 
         <section>
             <h2>Übersicht</h2>
             <h3>Kontakt</h3>
-            <p>{state.contact.email}</p>
-            <p>{state.contact.discord}</p>
-            <p>{state.contact.source}</p>
+            <p>{contact.email}</p>
+            <p>{contact.discord}</p>
+            <p>{contact.source}</p>
         </section>
     </>
 }
