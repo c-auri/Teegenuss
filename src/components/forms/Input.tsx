@@ -19,7 +19,7 @@ export default function Input({
 }: Props) {
     return <>
         <label className={(size ? "" : "flex-1 ") + "flex flex-col"}>
-            <span className="pl-1 text-gray-600 text-md">{label}</span>
+            <span className="pl-1 text-gray-600 text-md">{label}{isRequired && " *"}</span>
             {
                 type === "textarea"
                 ? <textarea
