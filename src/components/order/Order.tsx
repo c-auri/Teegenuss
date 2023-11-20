@@ -10,12 +10,17 @@ export default function Order() {
         },
     })
 
-    const updateContact = (newContact: Contact) => {
-        setState({...state, contact: newContact})
-        console.log(newContact)
-    }
+    const updateContact = (newContact: Contact) => setState({...state, contact: newContact})
 
     return <>
         <ContactForm initialValues={state.contact} handleSubmit={updateContact}/>
+
+        <section>
+            <h2>Übersicht</h2>
+            <h3>Kontakt</h3>
+            <p>{state.contact.email}</p>
+            <p>{state.contact.discord}</p>
+            <p>{state.contact.source}</p>
+        </section>
     </>
 }
