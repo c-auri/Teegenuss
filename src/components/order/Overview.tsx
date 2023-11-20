@@ -11,10 +11,12 @@ export default function Overview({
     return <>
         <form className="my-24 flex flex-col">
             <h2 className="font-bold text-xl text-gray-600">Übersicht</h2>
-            <h3 className="font-bold text-lg text-gray-600">Kontakt</h3>
-            {ReadOnlyInput("contact-email", contact.email)}
-            {ReadOnlyInput("contact-discord", contact.discord)}
-            {ReadOnlyInput("contact-source", contact.source)}
+            <fieldset>
+                <h3 className="font-bold text-lg text-gray-600">Kontakt</h3>
+                {ReadOnlyInput("contact-email", contact.email)}
+                {ReadOnlyInput("contact-discord", contact.discord)}
+                {ReadOnlyInput("contact-source", contact.source)}
+            </fieldset>
             <Button type="submit">Bestellen</Button>
         </form>
     </>
