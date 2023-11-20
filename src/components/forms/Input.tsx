@@ -25,7 +25,7 @@ export default function Input({
             {
                 type === "textarea"
                 ? <textarea
-                    className={"px-2 py-1 border rounded-md text-lg text-gray-800 focus:outline-none focus:border-gray-600"}
+                    className={"peer px-2 py-1 border rounded-md text-lg text-gray-800 focus:outline-none focus:border-gray-600"}
                     name={name}
                     rows={size}
                     value={value}
@@ -33,7 +33,7 @@ export default function Input({
                     required={isRequired}
                 />
                 : <input
-                    className={"px-2 py-1 border rounded-md text-lg text-gray-800 focus:outline-none focus:border-gray-600"}
+                    className={"peer px-2 py-1 border rounded-md text-lg text-gray-800 focus:outline-none focus:border-gray-600"}
                     type={type}
                     name={name}
                     size={size}
@@ -45,7 +45,7 @@ export default function Input({
             {
                 additions &&
                 additions.map(addition =>
-                    <span className="text-sm text-gray-500 text-right">
+                    <span className="text-sm text-transparent text-right peer-focus:text-gray-500">
                         {addition}
                     </span>)
             }
