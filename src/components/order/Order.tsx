@@ -10,15 +10,12 @@ export default function Order() {
         },
     })
 
-    const setContact = (property: keyof Contact) => {
-        return (e: React.FormEvent<HTMLTextAreaElement | HTMLInputElement>) => {
-            const newContact = {...state.contact}
-            newContact[property] = e.currentTarget.value
-            setState({...state, contact: newContact})
-        }
+    const updateContact = (newContact: Contact) => {
+        setState({...state, contact: newContact})
+        console.log(newContact)
     }
 
     return <>
-        <ContactForm values={state.contact} update={setContact}/>
+        <ContactForm initialValues={state.contact} handleSubmit={updateContact}/>
     </>
 }
