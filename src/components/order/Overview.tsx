@@ -9,8 +9,8 @@ export default function Overview({
 }: Props) {
     return <>
         <form>
-            <h2>Übersicht</h2>
-            <h3>Kontakt</h3>
+            <h2 className="font-bold text-xl text-gray-600">Übersicht</h2>
+            <h3 className="font-bold text-lg text-gray-600">Kontakt</h3>
             {ReadOnlyInput(contact.email)}
             {ReadOnlyInput(contact.discord)}
             {ReadOnlyInput(contact.source)}
