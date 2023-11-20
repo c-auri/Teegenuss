@@ -1,8 +1,8 @@
 interface Props {
     type: string,
-    name: string,
-    label: string,
-    value: string,
+    name?: string,
+    label?: string,
+    value?: string,
     handleChange?: (e: React.FormEvent<HTMLTextAreaElement | HTMLInputElement>) => void,
     explanation?: string,
     isRequired?: boolean,
