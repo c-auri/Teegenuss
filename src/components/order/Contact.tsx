@@ -3,7 +3,7 @@ import Button from '../forms/Button'
 
 import { useState } from 'react'
 
-export type Contact = {
+type Contact = {
     email: string,
     discord: string,
     source: string
@@ -16,7 +16,7 @@ type Props = {
 
 type UpdateEvent = React.FormEvent<HTMLTextAreaElement | HTMLInputElement>
 
-export function ContactForm({initialValues, handleSubmit}: Props) {
+export default function ContactForm({initialValues, handleSubmit}: Props) {
     const [contact, setContact] = useState(initialValues)
 
     const update = (property: keyof Contact) => {
