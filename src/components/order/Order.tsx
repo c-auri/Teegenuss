@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import ContactForm from './Contact'
+import { ContactForm } from './ContactForm'
+import Overview from './Overview'
 
 export default function Order() {
     const [ contact, setContact ] = useState({
@@ -11,12 +12,6 @@ export default function Order() {
     return <>
         <ContactForm initialValues={contact} handleSubmit={contact => setContact(contact)}/>
 
-        <section>
-            <h2>Übersicht</h2>
-            <h3>Kontakt</h3>
-            <p>{contact.email}</p>
-            <p>{contact.discord}</p>
-            <p>{contact.source}</p>
-        </section>
+        <Overview contact={contact}/>
     </>
 }
