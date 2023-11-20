@@ -4,6 +4,7 @@ interface Props {
     label: string,
     value: string,
     handleChange?: (e: React.FormEvent<HTMLTextAreaElement | HTMLInputElement>) => void,
+    explanation?: string,
     isRequired?: boolean,
     size?: number
 }
@@ -14,6 +15,7 @@ export default function Input({
     label,
     value,
     handleChange,
+    explanation,
     isRequired = false,
     size
 }: Props) {
@@ -39,6 +41,12 @@ export default function Input({
                     onChange={handleChange}
                     required={isRequired}
                 />
+            }
+            {
+                explanation &&
+                <span className="pl-1 text-right text-gray-400 text-sm">
+                    {explanation}
+                </span>
             }
         </label>
     </>
