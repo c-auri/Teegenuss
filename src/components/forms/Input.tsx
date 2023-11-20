@@ -31,6 +31,7 @@ export default function Input({
                     value={value}
                     onChange={handleChange}
                     required={isRequired}
+                    autoComplete="off"
                 />
                 : <input
                     className={"peer px-2 py-1 border rounded-md text-lg text-gray-800 focus:outline-none focus:border-gray-600"}
@@ -40,6 +41,7 @@ export default function Input({
                     value={value}
                     onChange={handleChange}
                     required={isRequired}
+                    autoComplete="off"
                 />
             }
             {
