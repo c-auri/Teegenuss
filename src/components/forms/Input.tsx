@@ -4,7 +4,7 @@ interface Props {
     label?: string,
     value?: string,
     handleChange?: (e: React.FormEvent<HTMLTextAreaElement | HTMLInputElement>) => void,
-    explanation?: string,
+    additions?: string[],
     isRequired?: boolean,
     size?: number
 }
@@ -15,7 +15,7 @@ export default function Input({
     label,
     value,
     handleChange,
-    explanation,
+    additions,
     isRequired = false,
     size
 }: Props) {
@@ -43,10 +43,11 @@ export default function Input({
                 />
             }
             {
-                explanation &&
-                <span className="pl-1 text-right text-gray-400 text-sm">
-                    {explanation}
-                </span>
+                additions &&
+                additions.map(addition =>
+                    <span className="text-sm text-gray-500 text-right">
+                        {addition}
+                    </span>)
             }
         </label>
     </>
