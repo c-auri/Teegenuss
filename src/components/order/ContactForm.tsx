@@ -31,9 +31,9 @@ export function ContactForm({initialValues, handleSubmit}: Props) {
             onSubmit={(e) => { e.preventDefault(); handleSubmit(contact)}}
         >
             <h2 className="font-bold text-lg text-gray-600">Kontakt</h2>
-            <Input type="email" label="Email" name="contact-email" value={contact.email ?? ""} handleChange={update("email")} isRequired={true}/>
-            <Input type="text" label="Discord" name="contact-discord" value={contact.discord ?? ""} handleChange={update("discord")} isRequired={true}/>
-            <Input type="text" label="Woher kennen wir uns?" name="contact-source" value={contact.source ?? ""} handleChange={update("source")} explanation="kurzer Stichpunkt genügt" isRequired={true}/>
+            <Input type="email" label="Email" value={contact.email ?? ""} handleChange={update("email")} isRequired={true}/>
+            <Input type="text" label="Discord" value={contact.discord ?? ""} handleChange={update("discord")} isRequired={true}/>
+            <Input type="text" label="Woher kennen wir uns?" value={contact.source ?? ""} handleChange={update("source")} explanation="kurzer Stichpunkt genügt" isRequired={true}/>
             <Button type="submit">Weiter</Button>
         </form>
     </>
