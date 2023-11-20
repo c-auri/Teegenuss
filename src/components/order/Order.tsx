@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { ContactForm, type Contact } from './Contact'
+import ContactForm from './Contact'
 
 export default function Order() {
     const [ contact, setContact ] = useState({
@@ -9,7 +9,7 @@ export default function Order() {
     })
 
     return <>
-        <ContactForm initialValues={contact} handleSubmit={(contact: Contact) => setContact(contact)}/>
+        <ContactForm initialValues={contact} handleSubmit={contact => setContact(contact)}/>
 
         <section>
             <h2>Übersicht</h2>
