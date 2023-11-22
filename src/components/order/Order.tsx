@@ -7,6 +7,7 @@ export default function Order() {
             email: "",
             discord: "",
             source: "",
+            addition: ""
     })
 
     return <>

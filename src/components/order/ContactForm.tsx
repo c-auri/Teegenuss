@@ -6,7 +6,8 @@ import { useState } from 'react'
 export type Contact = {
     email: string,
     discord: string,
-    source: string
+    source: string,
+    addition: string,
 }
 
 type Props = {
@@ -33,6 +34,7 @@ export function ContactForm({initialValues, handleSubmit}: Props) {
             <h2 className="font-bold text-lg text-gray-600">Kontakt</h2>
             <Input type="text" label="Discord" value={contact.discord ?? ""} handleChange={update("discord")} isRequired={true} addition={"Bitte gib deinen einmaligen Usernamen an, nicht deinen Display Name"}/>
             <Input type="text" label="Woher kennen wir uns?" value={contact.source ?? ""} handleChange={update("source")} addition={"kurzer Stichpunkt genügt"} isRequired={true}/>
+            <Input type="textarea" label="Zusatz" value={contact.addition} handleChange={update("addition")} addition='Falls du mir noch etwas mitteilen möchtest'/>
             <Button type="submit">Weiter</Button>
         </form>
     </>
