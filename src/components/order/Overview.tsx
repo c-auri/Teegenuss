@@ -9,10 +9,11 @@ export default function Overview({
     contact
 }: Props) {
     return <>
-        <form className="my-24 flex flex-col">
+        <form className="my-24 flex flex-col" name="order" method="POST" data-netlify="true">
             <h2 className="font-bold text-xl text-gray-600">Übersicht</h2>
             <fieldset>
                 <h3 className="font-bold text-lg text-gray-600">Kontakt</h3>
+                <input type="hidden" name="form-name" value="order" />
                 {ReadOnlyInput("contact-email", contact.email)}
                 {ReadOnlyInput("contact-discord", contact.discord)}
                 {ReadOnlyInput("contact-source", contact.source)}
