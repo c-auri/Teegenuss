@@ -67,6 +67,7 @@ export function ContactForm({initialValues, handleSubmit}: Props) {
                 addition='Falls du mir noch etwas mitteilen möchtest.'
             />
 
+            <p className="text-sm text-gray-600">* Pflichtfeld</p>
             <Button type="submit">Weiter</Button>
         </form>
     </>
