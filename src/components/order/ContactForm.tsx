@@ -44,11 +44,11 @@ export function ContactForm({initialValues, handleSubmit}: Props) {
 
             <Input
                 type="text"
-                label="Discord"
+                label="Discord Benutzername"
                 value={contact.discord ?? ""}
                 handleChange={update("discord")}
                 isRequired={true}
-                addition={"Bitte gib deinen einmaligen Usernamen an, nicht deinen Display Name"}
+                addition={"Bitte gib deinen einmaligen Benutzernamen an, nicht deinen Anzeigenamen."}
             />
 
             <Input
@@ -56,7 +56,7 @@ export function ContactForm({initialValues, handleSubmit}: Props) {
                 label="Woher kennen wir uns?"
                 value={contact.source ?? ""}
                 handleChange={update("source")}
-                addition={"kurzer Stichpunkt genügt"} isRequired={true}
+                addition={"Kurzer Stichpunkt genügt."} isRequired={true}
             />
 
             <Input
@@ -64,7 +64,7 @@ export function ContactForm({initialValues, handleSubmit}: Props) {
                 label="Zusatz"
                 value={contact.addition}
                 handleChange={update("addition")}
-                addition='Falls du mir noch etwas mitteilen möchtest'
+                addition='Falls du mir noch etwas mitteilen möchtest.'
             />
 
             <Button type="submit">Weiter</Button>
