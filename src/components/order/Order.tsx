@@ -1,14 +1,9 @@
 import { useState } from 'react'
-import { ContactForm } from './ContactForm'
+import { initializeContact, ContactForm } from './ContactForm'
 import Overview from './Overview'
 
 export default function Order() {
-    const [ contact, setContact ] = useState({
-            email: "",
-            discord: "",
-            source: "",
-            addition: ""
-    })
+    const [ contact, setContact ] = useState(initializeContact())
 
     return <>
         <ContactForm initialValues={contact} handleSubmit={contact => setContact(contact)}/>
