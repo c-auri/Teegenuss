@@ -1,5 +1,5 @@
 import Button from "../forms/Button"
-import type { Contact } from "./ContactForm"
+import type { Contact } from "./Contact"
 
 type Props = {
     contact: Contact,
