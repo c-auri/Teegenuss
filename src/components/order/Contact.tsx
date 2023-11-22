@@ -24,7 +24,7 @@ type Props = {
     handleSubmit: (contact: Contact) => void
 }
 
-export function ContactForm({initialValues, handleSubmit}: Props) {
+export function ContactStep({initialValues, handleSubmit}: Props) {
     const [contact, setContact] = useState(initialValues)
 
     const update = (property: keyof Contact) => {
