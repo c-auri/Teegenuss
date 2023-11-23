@@ -26,11 +26,14 @@ export function initializeAddress() {
 }
 
 type Props = {
+    isVisible: boolean,
     initialValues: Address,
     handleSubmit: (address: Address) => void
+    goPrev: () => void,
+    goNext: () => void,
 }
 
-export function AddressStep({initialValues, handleSubmit}: Props) {
+export function AddressStep({isVisible, initialValues, handleSubmit, goPrev, goNext}: Props) {
     const [address, setAddress] = useState(initialValues)
 
     const update = (property: keyof Address) => {
@@ -43,8 +46,12 @@ export function AddressStep({initialValues, handleSubmit}: Props) {
 
     return <>
         <form
-            className="my-24 flex flex-col gap-6"
-            onSubmit={(e) => { e.preventDefault(); handleSubmit(address)}}
+            className={"my-24 " + (isVisible ? "flex" : "hidden") + "  flex-col gap-6"}
+            onSubmit={(e) => {
+                e.preventDefault()
+                handleSubmit(address)
+                goNext()
+            }}
         >
             <h2 className="font-bold text-lg text-gray-600">Adresse</h2>
 
@@ -105,7 +112,11 @@ export function AddressStep({initialValues, handleSubmit}: Props) {
             />
 
             <p className="text-sm text-gray-600">* Pflichtfeld</p>
-            <Button type="submit">Weiter</Button>
+
+            <p className="w-full flex gap-5">
+                <Button type="submit" handleClick={goPrev}>Zurück</Button>
+                <Button type="submit">Weiter</Button>
+            </p>
         </form>
     </>
 }
