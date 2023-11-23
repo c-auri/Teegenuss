@@ -70,37 +70,47 @@ export function AddressStep({isVisible, initialValues, handleSubmit, goPrev, goN
                 handleChange={update("addition")}
             />
 
-            <Input
-                type="text"
-                label="Straße"
-                value={address.street ?? ""}
-                handleChange={update("street")}
-                isRequired={true}
-            />
+            <p className="flex gap-5">
 
-            <Input
-                type="text"
-                label="Hausnummer"
-                value={address.number ?? ""}
-                handleChange={update("number")}
-                isRequired={true}
-            />
+                <Input
+                    type="text"
+                    label="Straße"
+                    value={address.street ?? ""}
+                    handleChange={update("street")}
+                    isRequired={true}
+                />
 
-            <Input
-                type="text"
-                label="PLZ"
-                value={address.postalCode ?? ""}
-                handleChange={update("postalCode")}
-                isRequired={true}
-            />
+                <Input
+                    type="text"
+                    label="Hausnr."
+                    value={address.number ?? ""}
+                    handleChange={update("number")}
+                    isRequired={true}
+                    size={1}
+                />
 
-            <Input
-                type="text"
-                label="Ort"
-                value={address.town ?? ""}
-                handleChange={update("town")}
-                isRequired={true}
-            />
+            </p>
+
+            <p className="flex gap-5">
+
+                <Input
+                    type="text"
+                    label="PLZ"
+                    value={address.postalCode ?? ""}
+                    handleChange={update("postalCode")}
+                    isRequired={true}
+                    size={5}
+                />
+
+                <Input
+                    type="text"
+                    label="Ort"
+                    value={address.town ?? ""}
+                    handleChange={update("town")}
+                    isRequired={true}
+                />
+
+            </p>
 
             <Input
                 type="text"
