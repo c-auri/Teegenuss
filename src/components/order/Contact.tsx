@@ -20,11 +20,14 @@ export function initializeContact() {
 }
 
 type Props = {
+    isVisible: boolean,
     initialValues: Contact,
-    handleSubmit: (contact: Contact) => void
+    handleSubmit: (contact: Contact) => void,
+    goPrev: () => void,
+    goNext: () => void,
 }
 
-export function ContactStep({initialValues, handleSubmit}: Props) {
+export function ContactStep({isVisible, initialValues, handleSubmit, goPrev, goNext}: Props) {
     const [contact, setContact] = useState(initialValues)
 
     const update = (property: keyof Contact) => {
@@ -37,8 +40,12 @@ export function ContactStep({initialValues, handleSubmit}: Props) {
 
     return <>
         <form
-            className="my-24 flex flex-col gap-6"
-            onSubmit={(e) => { e.preventDefault(); handleSubmit(contact)}}
+            className={"my-24 " + (isVisible ? "flex" : "hidden") + " flex-col gap-6"}
+            onSubmit={(e) => {
+                e.preventDefault()
+                handleSubmit(contact)
+                goNext()
+            }}
         >
             <h2 className="font-bold text-lg text-gray-600">Kontakt</h2>
 
@@ -68,7 +75,12 @@ export function ContactStep({initialValues, handleSubmit}: Props) {
             />
 
             <p className="text-sm text-gray-600">* Pflichtfeld</p>
-            <Button type="submit">Weiter</Button>
+
+            <p className="w-full flex gap-5">
+                <Button type="button" handleClick={goPrev}>Zurück</Button>
+                <Button type="submit">Weiter</Button>
+            </p>
+
         </form>
     </>
 }

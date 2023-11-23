@@ -3,21 +3,29 @@ import type { Address } from "./Address"
 import type { Contact } from "./Contact"
 
 type Props = {
+    isVisible: boolean,
     contact: Contact,
     address: Address,
+    goPrev: () => void,
 }
 
 export default function Overview({
+    isVisible,
     contact,
     address,
+    goPrev
 }: Props) {
     return <>
-        <form className="my-24 flex flex-col" name="order" method="POST" data-netlify="true">
+        <form
+            className={"my-24 " + (isVisible ? "flex" : "hidden") + "  flex-col"}
+            name="order"
+            method="POST"
+            data-netlify="true"
+        >
             <h2 className="font-bold text-xl text-gray-600">Übersicht</h2>
-        <input type="hidden" name="form-name" value="order" />
+            <input type="hidden" name="form-name" value="order" />
             <fieldset>
                 <h3 className="font-bold text-lg text-gray-600">Kontakt</h3>
-                {ReadOnlyInput("contact-email", contact.email)}
                 {ReadOnlyInput("contact-discord", contact.discord)}
                 {ReadOnlyInput("contact-source", contact.source)}
             </fieldset>
@@ -31,7 +39,12 @@ export default function Overview({
                 {ReadOnlyInput("address-town", address.town)}
                 {ReadOnlyInput("address-country", address.country)}
             </fieldset>
-            <Button type="submit">Bestellen</Button>
+
+            <p className="w-full flex gap-5">
+                <Button type="button" handleClick={goPrev}>Zurück</Button>
+                <Button type="submit">Bestellen</Button>
+            </p>
+
         </form>
     </>
 }
