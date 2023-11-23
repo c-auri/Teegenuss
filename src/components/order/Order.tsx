@@ -8,9 +8,11 @@ export default function Order() {
     const [ address, setAddress ] = useState(initializeAddress())
 
     return <>
-        <ContactStep initialValues={contact} handleSubmit={contact => setContact(contact)}/>
-        <AddressStep initialValues={address} handleSubmit={address => setAddress(address)}/>
+        <div className="max-w-lg">
+            <ContactStep initialValues={contact} handleSubmit={contact => setContact(contact)}/>
+            <AddressStep initialValues={address} handleSubmit={address => setAddress(address)}/>
 
-        <Overview contact={contact} address={address}/>
+            <Overview contact={contact} address={address}/>
+        </div>
     </>
 }
