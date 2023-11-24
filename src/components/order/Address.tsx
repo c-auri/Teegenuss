@@ -4,7 +4,7 @@ import { Controls } from './Controls'
 
 export type Address = {
     name: string,
-    addition: string,
+    annotation: string,
     street: string,
     number: string,
     postalCode: string,
@@ -15,7 +15,7 @@ export type Address = {
 export function initializeAddress() {
     return {
         name: "",
-        addition: "",
+        annotation: "",
         street: "",
         number: "",
         postalCode: "",
@@ -66,8 +66,8 @@ export function AddressStep({isVisible, initialValues, handleBack, handleNext}: 
                     <Input
                         type="text"
                         label="Adresszusatz"
-                        value={address.addition ?? ""}
-                        handleChange={update("addition")}
+                        value={address.annotation ?? ""}
+                        handleChange={update("annotation")}
                     />
 
                     <p className="flex gap-5">
@@ -118,7 +118,7 @@ export function AddressStep({isVisible, initialValues, handleBack, handleNext}: 
                         value={address.country ?? ""}
                         handleChange={update("country")}
                         isRequired={true}
-                        addition="Versand ins Ausland erhöht die Versandkosten."
+                        explanation="Versand ins Ausland erhöht die Versandkosten."
                     />
 
                 </div>

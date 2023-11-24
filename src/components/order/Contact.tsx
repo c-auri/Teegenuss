@@ -6,7 +6,7 @@ export type Contact = {
     email: string,
     discord: string,
     source: string,
-    addition: string,
+    annotation: string,
 }
 
 export function initializeContact() {
@@ -14,7 +14,7 @@ export function initializeContact() {
         email: "",
         discord: "",
         source: "",
-        addition: ""
+        annotation: ""
     }
 }
 
@@ -55,7 +55,7 @@ export function ContactStep({isVisible, initialValues, handleBack, handleNext}: 
                         value={contact.discord ?? ""}
                         handleChange={update("discord")}
                         isRequired={true}
-                        addition={"Bitte gib den einmaligen Benutzernamen an, nicht den Anzeigenamen."}
+                        explanation={"Bitte gib den einmaligen Benutzernamen an, nicht den Anzeigenamen."}
                     />
 
                     <Input
@@ -63,15 +63,15 @@ export function ContactStep({isVisible, initialValues, handleBack, handleNext}: 
                         label="Woher kennen wir uns?"
                         value={contact.source ?? ""}
                         handleChange={update("source")}
-                        addition={"Kurzer Stichpunkt genügt."} isRequired={true}
+                        explanation={"Kurzer Stichpunkt genügt."} isRequired={true}
                     />
 
                     <Input
                         type="textarea"
                         label="Zusatz"
-                        value={contact.addition}
-                        handleChange={update("addition")}
-                        addition='Falls du mir noch etwas mitteilen möchtest.'
+                        value={contact.annotation}
+                        handleChange={update("annotation")}
+                        explanation='Falls du mir noch etwas mitteilen möchtest.'
                     />
 
                 </div>
