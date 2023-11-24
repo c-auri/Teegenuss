@@ -58,7 +58,7 @@ function ReadOnlyInput(name: string, value: string) {
                 readOnly
                 name={name}
                 value={value}
-                className="text-lg text-gray-800 focus:outline-none"
+                className="text-lg text-gray-800 bg-transparent focus:outline-none"
             />
         </label>
     </>
