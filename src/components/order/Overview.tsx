@@ -17,7 +17,7 @@ export default function Overview({
 }: Props) {
     return <>
         <form
-            className={"my-24 " + (isVisible ? "flex" : "hidden") + "  flex-col"}
+            className={(isVisible ? "flex" : "hidden") + "  flex-col"}
             name="order"
             method="POST"
             data-netlify="true"

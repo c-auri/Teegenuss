@@ -46,7 +46,7 @@ export function AddressStep({isVisible, initialValues, handleSubmit, goPrev, goN
 
     return <>
         <form
-            className={"my-24 " + (isVisible ? "flex" : "hidden") + "  flex-col gap-6"}
+            className={(isVisible ? "flex" : "hidden") + "  flex-col gap-6"}
             onSubmit={(e) => {
                 e.preventDefault()
                 handleSubmit(address)
