@@ -20,7 +20,7 @@ export default function Button({
                 href={href}
                 className=
                 {
-                    "cursor-pointer py-1 px-5 border-2 rounded-md text-lg hover:bg-gray-200 hover:text-gray-600 hover:border-gray-200 "
+                    "cursor-pointer py-1 px-8 border-2 rounded-md text-lg hover:bg-gray-200 hover:text-gray-600 hover:border-gray-200 "
                     + (style === "primary" ? " border-gray-100 bg-gray-100 text-gray-600" : " bg-white border-gray-100 text-gray-600")
                 }
             >
@@ -34,7 +34,7 @@ export default function Button({
                 onClick={handleClick}
                 className=
                 {
-                    "cursor-pointer py-1 px-5 border-2 rounded-md text-lg hover:bg-gray-200 hover:text-gray-600 hover:border-gray-200 "
+                    "cursor-pointer py-1 px-8 border-2 rounded-md text-lg hover:bg-gray-200 hover:text-gray-600 hover:border-gray-200 "
                     + (style === "primary" ? " border-gray-100 bg-gray-100 text-gray-600" : " bg-white border-gray-100 text-gray-600")
                 }
             >
