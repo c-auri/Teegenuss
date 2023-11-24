@@ -1,19 +1,19 @@
-import Button from "../forms/Button"
 import type { Address } from "./Address"
 import type { Contact } from "./Contact"
+import { Controls } from "./Controls"
 
 type Props = {
     isVisible: boolean,
     contact: Contact,
     address: Address,
-    goPrev: () => void,
+    handleBack: () => void,
 }
 
 export default function Overview({
     isVisible,
     contact,
     address,
-    goPrev
+    handleBack
 }: Props) {
     return <>
         <form
@@ -40,10 +40,7 @@ export default function Overview({
                 {ReadOnlyInput("address-country", address.country)}
             </fieldset>
 
-            <p className="w-full flex gap-5">
-                <Button type="button" handleClick={goPrev}>Zurück</Button>
-                <Button type="submit">Bestellen</Button>
-            </p>
+            <Controls handleBack={handleBack} isSubmit={true} />
 
         </form>
     </>

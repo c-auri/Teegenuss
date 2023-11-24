@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import type { CollectionEntry } from 'astro:content'
-import { initializeContact, ContactStep } from './Contact'
-import { initializeAddress, AddressStep } from './Address'
+import { initializeContact, ContactStep, Contact } from './Contact'
+import { initializeAddress, AddressStep, Address } from './Address'
 import Overview from './Overview'
 
 type Props = {
@@ -49,24 +49,36 @@ export default function Order({ pack }: Props) {
                 <AddressStep
                     isVisible={current === 'address'}
                     initialValues={address}
-                    handleSubmit={setAddress}
-                    goPrev={() => setCurrent("address")}
-                    goNext={() => setCurrent("contact")}
+                    handleBack={() => {
+                        setAddress(address)
+                        setCurrent("address")
+                    }}
+                    handleNext={(address: Address) => {
+                        setAddress(address)
+                        setCurrent("contact")
+                    }}
                 />
 
                 <ContactStep
                     isVisible={current === 'contact'}
                     initialValues={contact}
-                    handleSubmit={setContact}
-                    goPrev={() => setCurrent("address")}
-                    goNext={() => setCurrent("overview")}
+                    handleBack={() => {
+                        setContact(contact)
+                        setCurrent("address")
+                    }}
+                    handleNext={(contact: Contact) => {
+                        setContact(contact)
+                        setCurrent("overview")
+                    }}
                 />
 
                 <Overview
                     isVisible={current === 'overview'}
                     contact={contact}
                     address={address}
-                    goPrev={() => setCurrent("contact")}
+                    handleBack={() => {
+                        setCurrent("contact")
+                    }}
                 />
 
             </section>

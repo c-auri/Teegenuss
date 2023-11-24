@@ -1,7 +1,6 @@
 import Input from '../forms/Input'
-import Button from '../forms/Button'
-
 import { useState } from 'react'
+import { Controls } from './Controls'
 
 export type Address = {
     name: string,
@@ -28,12 +27,11 @@ export function initializeAddress() {
 type Props = {
     isVisible: boolean,
     initialValues: Address,
-    handleSubmit: (address: Address) => void
-    goPrev: () => void,
-    goNext: () => void,
+    handleBack: () => void,
+    handleNext: (address: Address) => void,
 }
 
-export function AddressStep({isVisible, initialValues, handleSubmit, goPrev, goNext}: Props) {
+export function AddressStep({isVisible, initialValues, handleBack, handleNext}: Props) {
     const [address, setAddress] = useState(initialValues)
 
     const update = (property: keyof Address) => {
@@ -49,8 +47,7 @@ export function AddressStep({isVisible, initialValues, handleSubmit, goPrev, goN
             className={(isVisible ? "flex" : "hidden") + "  flex-col gap-6"}
             onSubmit={(e) => {
                 e.preventDefault()
-                handleSubmit(address)
-                goNext()
+                handleNext(address)
             }}
         >
             <h2 className="font-bold text-lg text-gray-600">Adresse</h2>
@@ -121,12 +118,9 @@ export function AddressStep({isVisible, initialValues, handleSubmit, goPrev, goN
                 addition="Bei Versand außerhalb Deutschlands kommen zusätzliche Versandkosten hinzu."
             />
 
-            <p className="text-sm text-gray-600">* Pflichtfeld</p>
+            <Controls handleBack={handleBack} />
 
-            <p className="w-full flex gap-5">
-                <Button type="submit" handleClick={goPrev}>Zurück</Button>
-                <Button type="submit">Weiter</Button>
-            </p>
+            <p className="text-sm text-gray-600">* Pflichtfeld</p>
         </form>
     </>
 }
