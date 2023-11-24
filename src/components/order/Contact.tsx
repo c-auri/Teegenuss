@@ -38,7 +38,7 @@ export function ContactStep({isVisible, initialValues, handleBack, handleNext}: 
 
     return <>
         <form
-            className={(isVisible ? "flex" : "hidden") + " flex-col gap-6"}
+            className={(isVisible ? "flex" : "hidden") + " flex-col gap-4"}
             onSubmit={(e) => {
                 e.preventDefault()
                 handleNext(contact)
