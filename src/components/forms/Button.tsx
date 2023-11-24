@@ -2,12 +2,14 @@ import type { PropsWithChildren } from "react"
 
 interface Props {
     type: "button" | "submit" | "link",
+    style?: "primary" | "secondary",
     handleClick?: (e: React.MouseEvent<HTMLElement>) => void
     href?: string,
 }
 
 export default function Button({
     type,
+    style = "primary",
     handleClick,
     href,
     children
@@ -16,7 +18,11 @@ export default function Button({
         return  <>
             <a
                 href={href}
-                className="cursor-pointer py-1 px-5 rounded-md text-lg bg-gray-200 text-gray-600 hover:bg-gray-300 hover:text-gray-700"
+                className=
+                {
+                    "cursor-pointer py-1 px-5 border-2 rounded-md text-lg hover:bg-gray-300 hover:text-gray-600 hover:border-gray-300 "
+                    + (style === "primary" ? " bg-gray-200 text-gray-600" : " bg-white border-gray-200 text-gray-600")
+                }
             >
                 {children}
             </a>
@@ -26,7 +32,11 @@ export default function Button({
             <button
                 type={type}
                 onClick={handleClick}
-                className="cursor-pointer py-1 px-5 rounded-md text-lg bg-gray-200 text-gray-600 hover:bg-gray-300 hover:text-gray-700"
+                className=
+                {
+                    "cursor-pointer py-1 px-5 border-2 rounded-md text-lg hover:bg-gray-300 hover:text-gray-600 hover:border-gray-300 "
+                    + (style === "primary" ? " bg-gray-200 text-gray-600" : " bg-white border-gray-200 text-gray-600")
+                }
             >
                 {children}
             </button>
