@@ -14,9 +14,9 @@ export default function Order({ pack }: Props) {
     const [ address, setAddress ] = useState(initializeAddress())
 
     return <>
-        <div className="flex flex-col items-center gap-5 lg:mb-10 lg:flex-row lg:gap-0 lg:items-stretch lg:rounded-xl lg:bg-white lg:shadow-sm">
+        <div className="flex flex-col items-center gap-5 lg:bg-gray-50 lg:mb-10 lg:flex-row lg:gap-0 lg:items-stretch lg:rounded-xl lg:shadow-sm">
 
-            <section className="max-w-2xl w-screen p-3 rounded-md bg-gray-100 text-lg text-gray-600 lg:min-w-fit lg:w-1/3 lg:rounded-none lg:rounded-l-xl lg:p-8 lg:pr-12">
+            <section className="max-w-2xl w-screen rounded-md text-lg text-gray-600 lg:bg-gray-100 lg:min-w-fit lg:w-1/3 lg:rounded-none lg:rounded-l-xl lg:p-8 lg:pr-12">
 
                 <h1 className="pb-2 font-bold text-2xl text-gray-700">
                     Bestellung
