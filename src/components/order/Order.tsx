@@ -14,12 +14,12 @@ export default function Order({ pack }: Props) {
     const [ address, setAddress ] = useState(initializeAddress())
 
     return <>
-        <div className="flex flex-col gap-5">
+        <div className="flex flex-col items-center gap-5">
 
-            <section className="max-w-lg py-5 px-3 rounded-md bg-gray-100 text-lg text-gray-600">
+            <section className="max-w-lg w-screen py-3 px-3 rounded-md bg-gray-100 text-lg text-gray-600">
 
-                <h1 className="py-2 font-bold text-2xl text-gray-700">
-                    Bestellübersicht
+                <h1 className="pb-2 font-bold text-2xl text-gray-700">
+                    Bestellung
                 </h1>
 
                 <p className="flex justify-between">
@@ -44,7 +44,7 @@ export default function Order({ pack }: Props) {
 
             </section>
 
-            <section className="max-w-lg mb-10">
+            <section className="max-w-lg w-screen mb-10">
 
                 <AddressStep
                     isVisible={current === 'address'}
