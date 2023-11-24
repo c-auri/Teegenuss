@@ -30,7 +30,7 @@ export default function Overview({
                     <fieldset>
                         <h2 className="font-bold text-lg text-gray-600">Adresse</h2>
                         {ReadOnlyInput("address-name", address.name)}
-                        {ReadOnlyInput("address-addition", address.addition)}
+                        {ReadOnlyInput("address-annotation", address.annotation)}
                         {ReadOnlyInput("address-street", `${address.street} ${address.number}`)}
                         {ReadOnlyInput("address-town", `${address.postalCode} ${address.town}`)}
                         {ReadOnlyInput("address-country", address.country)}
@@ -40,7 +40,7 @@ export default function Overview({
                         <h2 className="font-bold text-lg text-gray-600">Kontakt</h2>
                         {ReadOnlyInput("contact-discord", contact.discord)}
                         {ReadOnlyInput("contact-source", contact.source)}
-                        {ReadOnlyInput("contact-addition", contact.addition)}
+                        {ReadOnlyInput("contact-annotation", contact.annotation)}
                     </fieldset>
 
                 </div>
