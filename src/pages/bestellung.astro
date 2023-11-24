@@ -3,10 +3,10 @@ import Page from '../layouts/Page.astro'
 import Frame from '../components/page/Frame.astro'
 import Order from '../components/order/Order'
 
-const bg = "bg-white"
+const backgroundColor = "bg-white"
 ---
-<Page title="Bestellung" bgHeader={bg}>
-    <Frame bg={bg}>
+<Page title="Bestellung" backgroundColor={backgroundColor}>
+    <Frame>
         <h1 class="my-14 lg:my-24 font-bold text-3xl text-center">Bestellung</h1>
         <Order client:load />
     </Frame>
