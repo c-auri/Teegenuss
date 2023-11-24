@@ -40,6 +40,7 @@ export default function Overview({
                         <h2 className="font-bold text-lg text-gray-600">Kontakt</h2>
                         {ReadOnlyInput("contact-discord", contact.discord)}
                         {ReadOnlyInput("contact-source", contact.source)}
+                        {ReadOnlyInput("contact-addition", contact.addition)}
                     </fieldset>
 
                 </div>
