@@ -1,7 +1,6 @@
 import Input from '../forms/Input'
-import Button from '../forms/Button'
-
 import { useState } from 'react'
+import { Controls } from './Controls'
 
 export type Contact = {
     email: string,
@@ -22,12 +21,11 @@ export function initializeContact() {
 type Props = {
     isVisible: boolean,
     initialValues: Contact,
-    handleSubmit: (contact: Contact) => void,
-    goPrev: () => void,
-    goNext: () => void,
+    handleBack: () => void,
+    handleNext: (contact: Contact) => void,
 }
 
-export function ContactStep({isVisible, initialValues, handleSubmit, goPrev, goNext}: Props) {
+export function ContactStep({isVisible, initialValues, handleBack, handleNext}: Props) {
     const [contact, setContact] = useState(initialValues)
 
     const update = (property: keyof Contact) => {
@@ -43,8 +41,7 @@ export function ContactStep({isVisible, initialValues, handleSubmit, goPrev, goN
             className={(isVisible ? "flex" : "hidden") + " flex-col gap-6"}
             onSubmit={(e) => {
                 e.preventDefault()
-                handleSubmit(contact)
-                goNext()
+                handleNext(contact)
             }}
         >
             <h2 className="font-bold text-lg text-gray-600">Kontakt</h2>
@@ -74,12 +71,9 @@ export function ContactStep({isVisible, initialValues, handleSubmit, goPrev, goN
                 addition='Falls du mir noch etwas mitteilen möchtest.'
             />
 
-            <p className="text-sm text-gray-600">* Pflichtfeld</p>
+            <Controls handleBack={handleBack} />
 
-            <p className="w-full flex gap-5">
-                <Button type="button" handleClick={goPrev}>Zurück</Button>
-                <Button type="submit">Weiter</Button>
-            </p>
+            <p className="text-sm text-gray-600">* Pflichtfeld</p>
 
         </form>
     </>
