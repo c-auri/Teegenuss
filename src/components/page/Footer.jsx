@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-export default function Footer({ children }) {
+export function Footer({ children }) {
     return <footer className="text-gray-400">
         <div className="w-full text-lg flex justify-between flex-col">
             <div className="py-12 lg:pt-20">
@@ -20,24 +20,35 @@ export default function Footer({ children }) {
                 </a>
             </div>
         </div>
-        <Smallprint />
+        <Smallprint isDark={true} />
     </footer>
 }
 
-function Smallprint() {
+export function Smallprint({ isDark }) {
     const [isActive, setIsActive] = useState(false)
 
     return <>
         {
             isActive &&
-            <div className="w-full py-10 border-t-2 border-gray-900 text-gray-500 grid gap-5 md:grid-cols-[auto,1fr] md:gap-10 lg:grid-cols-[20rem,1fr] xl:gap-20">
+            <div className={
+                "w-full py-10 border-t-2 grid gap-5 md:grid-cols-[auto,1fr] md:gap-10 lg:grid-cols-[20rem,1fr] xl:gap-20 "
+                + (isDark ? "border-gray-900 text-gray-500" : "border-gray-300 text-gray-500")
+            }>
                 { Address() }
                 { Privacy() }
             </div>
         }
-        <div className="select-none py-8 border-t-2 border-gray-900 text-gray-800 flex justify-between text-sm md:text-md lg:text-lg">
+        <div className={
+            "select-none py-8 border-t-2 flex justify-between text-sm md:text-md lg:text-lg "
+            + (isDark ? "border-gray-900 text-gray-800" : (isActive ? "border-gray-300 text-gray-400" : "border-none text-gray-400"))
+        }>
             <span>Copyright &copy; Christoph Aurich</span>
-            <span onClick={() => setIsActive(!isActive)} className={(isActive ? "text-gray-500" : "text-gray-800 hover:text-gray-700") + " cursor-pointer"}>
+            <span onClick={() => setIsActive(!isActive)} className={
+                (isDark
+                    ? (isActive ? "text-gray-500" : "text-gray-800 hover:text-gray-700")
+                    : (isActive ? "text-gray-500" : "text-gray-400 hover:text-gray-500"))
+                + " cursor-pointer"
+            }>
                 Impressum
             </span>
         </div>
@@ -69,5 +80,5 @@ function Privacy() {
 }
 
 function Heading(text) {
-    return <h2 className="mb-4 font-bold text-gray-300 text-xl lg:text-2xl">{text}</h2>
+    return <h2 className="mb-4 font-bold text-xl lg:text-2xl">{text}</h2>
 }
