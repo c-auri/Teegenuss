@@ -1,8 +1,6 @@
 import { useState } from "react"
 
 export default function Footer({ children }) {
-    const [isActive, setIsActive] = useState(false)
-
     return <footer className="text-gray-400">
         <div className="w-full text-lg flex justify-between flex-col">
             <div className="py-12 lg:pt-20">
@@ -21,21 +19,29 @@ export default function Footer({ children }) {
                     </svg>
                 </a>
             </div>
-            { 
-                isActive &&
-                <div className="w-full py-10 border-t-2 border-gray-900 grid gap-5 md:grid-cols-[auto,1fr] md:gap-10 lg:grid-cols-[20rem,1fr] xl:gap-20">
-                    { Address() }
-                    { Privacy() }
-                </div>
-            }
         </div>
+        <Smallprint />
+    </footer>
+}
+
+function Smallprint() {
+    const [isActive, setIsActive] = useState(false)
+
+    return <>
+        {
+            isActive &&
+            <div className="w-full py-10 border-t-2 border-gray-900 text-gray-500 grid gap-5 md:grid-cols-[auto,1fr] md:gap-10 lg:grid-cols-[20rem,1fr] xl:gap-20">
+                { Address() }
+                { Privacy() }
+            </div>
+        }
         <div className="select-none py-8 border-t-2 border-gray-900 text-gray-800 flex justify-between text-sm md:text-md lg:text-lg">
             <span>Copyright &copy; Christoph Aurich</span>
             <span onClick={() => setIsActive(!isActive)} className={(isActive ? "text-gray-500" : "text-gray-800 hover:text-gray-700") + " cursor-pointer"}>
                 Impressum
             </span>
         </div>
-    </footer>
+    </>
 }
 
 function Address() {
