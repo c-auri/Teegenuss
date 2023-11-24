@@ -17,30 +17,26 @@ export default function Overview({
 }: Props) {
     return <>
         <form
-            className={(isVisible ? "flex" : "hidden") + "  flex-col"}
+            className={isVisible ? "block" : "hidden"}
             name="order"
             method="POST"
             data-netlify="true"
         >
-            <h2 className="font-bold text-xl text-gray-600">Übersicht</h2>
-
             <input type="hidden" name="form-name" value="order" />
 
-            <div className="flex justify-between">
+            <div className="mb-6 flex justify-between">
 
                 <fieldset>
-                    <h3 className="font-bold text-lg text-gray-600">Adresse</h3>
+                    <h2 className="font-bold text-lg text-gray-600">Adresse</h2>
                     {ReadOnlyInput("address-name", address.name)}
                     {ReadOnlyInput("address-addition", address.addition)}
-                    {ReadOnlyInput("address-street", address.street)}
-                    {ReadOnlyInput("address-number", address.number)}
-                    {ReadOnlyInput("address-postalCode", address.postalCode)}
-                    {ReadOnlyInput("address-town", address.town)}
+                    {ReadOnlyInput("address-street", `${address.street} ${address.number}`)}
+                    {ReadOnlyInput("address-town", `${address.postalCode} ${address.town}`)}
                     {ReadOnlyInput("address-country", address.country)}
                 </fieldset>
 
                 <fieldset>
-                    <h3 className="font-bold text-lg text-gray-600">Kontakt</h3>
+                    <h2 className="font-bold text-lg text-gray-600">Kontakt</h2>
                     {ReadOnlyInput("contact-discord", contact.discord)}
                     {ReadOnlyInput("contact-source", contact.source)}
                 </fieldset>
