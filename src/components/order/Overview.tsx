@@ -23,22 +23,29 @@ export default function Overview({
             data-netlify="true"
         >
             <h2 className="font-bold text-xl text-gray-600">Übersicht</h2>
+
             <input type="hidden" name="form-name" value="order" />
-            <fieldset>
-                <h3 className="font-bold text-lg text-gray-600">Kontakt</h3>
-                {ReadOnlyInput("contact-discord", contact.discord)}
-                {ReadOnlyInput("contact-source", contact.source)}
-            </fieldset>
-            <fieldset>
-                <h3 className="font-bold text-lg text-gray-600">Adresse</h3>
-                {ReadOnlyInput("address-name", address.name)}
-                {ReadOnlyInput("address-addition", address.addition)}
-                {ReadOnlyInput("address-street", address.street)}
-                {ReadOnlyInput("address-number", address.number)}
-                {ReadOnlyInput("address-postalCode", address.postalCode)}
-                {ReadOnlyInput("address-town", address.town)}
-                {ReadOnlyInput("address-country", address.country)}
-            </fieldset>
+
+            <div className="flex justify-between">
+
+                <fieldset>
+                    <h3 className="font-bold text-lg text-gray-600">Adresse</h3>
+                    {ReadOnlyInput("address-name", address.name)}
+                    {ReadOnlyInput("address-addition", address.addition)}
+                    {ReadOnlyInput("address-street", address.street)}
+                    {ReadOnlyInput("address-number", address.number)}
+                    {ReadOnlyInput("address-postalCode", address.postalCode)}
+                    {ReadOnlyInput("address-town", address.town)}
+                    {ReadOnlyInput("address-country", address.country)}
+                </fieldset>
+
+                <fieldset>
+                    <h3 className="font-bold text-lg text-gray-600">Kontakt</h3>
+                    {ReadOnlyInput("contact-discord", contact.discord)}
+                    {ReadOnlyInput("contact-source", contact.source)}
+                </fieldset>
+
+            </div>
 
             <Controls handleBack={handleBack} isSubmit={true} />
 
