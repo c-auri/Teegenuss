@@ -44,7 +44,7 @@ export function AddressStep({isVisible, initialValues, handleBack, handleNext}: 
 
     return <>
         <form
-            className={isVisible ? "block" : "hidden"}
+            className={(isVisible ? "block" : "hidden") + " h-full flex flex-col"}
             onSubmit={(e) => {
                 e.preventDefault()
                 handleNext(address)
@@ -52,75 +52,78 @@ export function AddressStep({isVisible, initialValues, handleBack, handleNext}: 
         >
             <h2 className="mb-3 font-bold text-lg text-gray-600">Adresse</h2>
 
-            <div className="flex flex-col gap-3">
-
-                <Input
-                    type="text"
-                    label="Name"
-                    value={address.name ?? ""}
-                    handleChange={update("name")}
-                    isRequired={true}
-                />
-
-                <Input
-                    type="text"
-                    label="Adresszusatz"
-                    value={address.addition ?? ""}
-                    handleChange={update("addition")}
-                />
-
-                <p className="flex gap-5">
+            <div className="flex-1">
+                <div className="flex flex-col justify-start gap-3">
 
                     <Input
                         type="text"
-                        label="Straße"
-                        value={address.street ?? ""}
-                        handleChange={update("street")}
+                        label="Name"
+                        value={address.name ?? ""}
+                        handleChange={update("name")}
                         isRequired={true}
                     />
 
                     <Input
                         type="text"
-                        label="Hausnr."
-                        value={address.number ?? ""}
-                        handleChange={update("number")}
-                        isRequired={true}
-                        size={1}
+                        label="Adresszusatz"
+                        value={address.addition ?? ""}
+                        handleChange={update("addition")}
                     />
 
-                </p>
+                    <p className="flex gap-5">
 
-                <p className="flex gap-5">
+                        <Input
+                            type="text"
+                            label="Straße"
+                            value={address.street ?? ""}
+                            handleChange={update("street")}
+                            isRequired={true}
+                        />
+
+                        <Input
+                            type="text"
+                            label="Hausnr."
+                            value={address.number ?? ""}
+                            handleChange={update("number")}
+                            isRequired={true}
+                            size={1}
+                        />
+
+                    </p>
+
+                    <p className="flex gap-5">
+
+                        <Input
+                            type="text"
+                            label="PLZ"
+                            value={address.postalCode ?? ""}
+                            handleChange={update("postalCode")}
+                            isRequired={true}
+                            size={5}
+                        />
+
+                        <Input
+                            type="text"
+                            label="Ort"
+                            value={address.town ?? ""}
+                            handleChange={update("town")}
+                            isRequired={true}
+                        />
+
+                    </p>
 
                     <Input
                         type="text"
-                        label="PLZ"
-                        value={address.postalCode ?? ""}
-                        handleChange={update("postalCode")}
+                        label="Land"
+                        value={address.country ?? ""}
+                        handleChange={update("country")}
                         isRequired={true}
-                        size={5}
+                        addition="Versand ins Ausland erhöht die Versandkosten."
                     />
 
-                    <Input
-                        type="text"
-                        label="Ort"
-                        value={address.town ?? ""}
-                        handleChange={update("town")}
-                        isRequired={true}
-                    />
-
-                </p>
-
-                <Input
-                    type="text"
-                    label="Land"
-                    value={address.country ?? ""}
-                    handleChange={update("country")}
-                    isRequired={true}
-                    addition="Versand ins Ausland erhöht die Versandkosten."
-                />
-
+                </div>
             </div>
+
 
             <p className="pt-2 pb-5 text-sm text-gray-600">* Pflichtfeld</p>
 

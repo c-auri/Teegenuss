@@ -38,7 +38,7 @@ export function ContactStep({isVisible, initialValues, handleBack, handleNext}: 
 
     return <>
         <form
-            className={isVisible ? "block" : "hidden"}
+            className={(isVisible ? "block" : "hidden") + " h-full flex flex-col"}
             onSubmit={(e) => {
                 e.preventDefault()
                 handleNext(contact)
@@ -46,33 +46,35 @@ export function ContactStep({isVisible, initialValues, handleBack, handleNext}: 
         >
             <h2 className="my-3 font-bold text-lg text-gray-600">Kontakt</h2>
 
-            <div className="my-3 flex flex-col justify-start gap-3">
+            <div className="flex-1">
+                <div className="my-3 flex flex-col justify-start gap-3">
 
-                <Input
-                    type="text"
-                    label="Discord Benutzername"
-                    value={contact.discord ?? ""}
-                    handleChange={update("discord")}
-                    isRequired={true}
-                    addition={"Bitte gib den einmaligen Benutzernamen an, nicht den Anzeigenamen."}
-                />
+                    <Input
+                        type="text"
+                        label="Discord Benutzername"
+                        value={contact.discord ?? ""}
+                        handleChange={update("discord")}
+                        isRequired={true}
+                        addition={"Bitte gib den einmaligen Benutzernamen an, nicht den Anzeigenamen."}
+                    />
 
-                <Input
-                    type="text"
-                    label="Woher kennen wir uns?"
-                    value={contact.source ?? ""}
-                    handleChange={update("source")}
-                    addition={"Kurzer Stichpunkt genügt."} isRequired={true}
-                />
+                    <Input
+                        type="text"
+                        label="Woher kennen wir uns?"
+                        value={contact.source ?? ""}
+                        handleChange={update("source")}
+                        addition={"Kurzer Stichpunkt genügt."} isRequired={true}
+                    />
 
-                <Input
-                    type="textarea"
-                    label="Zusatz"
-                    value={contact.addition}
-                    handleChange={update("addition")}
-                    addition='Falls du mir noch etwas mitteilen möchtest.'
-                />
+                    <Input
+                        type="textarea"
+                        label="Zusatz"
+                        value={contact.addition}
+                        handleChange={update("addition")}
+                        addition='Falls du mir noch etwas mitteilen möchtest.'
+                    />
 
+                </div>
             </div>
 
             <p className="pt-2 pb-5 text-sm text-gray-600">* Pflichtfeld</p>

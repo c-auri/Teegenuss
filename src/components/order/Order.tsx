@@ -44,7 +44,7 @@ export default function Order({ pack }: Props) {
 
             </section>
 
-            <section className="max-w-2xl w-screen mb-10 border-gray-100 lg:rounded-r-xl lg:py-8 lg:px-12">
+            <section className="max-w-2xl w-screen mb-10 border-gray-100 lg:min-h-[32rem] lg:rounded-r-xl lg:mt-8 lg:px-12">
 
                 <AddressStep
                     isVisible={current === 'address'}
