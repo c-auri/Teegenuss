@@ -2,11 +2,13 @@
 import Page from '../layouts/Page.astro'
 import Frame from '../components/page/Frame.astro'
 import Order from '../components/order/Order'
+import { getEntry } from 'astro:content'
 
+const pack = await getEntry('packs', '23-1-Chinas-Schaetze')
 const backgroundColor = "bg-white"
 ---
 <Page title="Bestellung" backgroundColor={backgroundColor}>
     <Frame>
-        <Order client:load />
+        <Order pack={pack} client:load />
     </Frame>
 </Page>
