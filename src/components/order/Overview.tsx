@@ -17,30 +17,32 @@ export default function Overview({
 }: Props) {
     return <>
         <form
-            className={isVisible ? "block" : "hidden"}
+            className={(isVisible ? "block" : "hidden") + " h-full flex flex-col"}
             name="order"
             method="POST"
             data-netlify="true"
         >
             <input type="hidden" name="form-name" value="order" />
 
-            <div className="mb-6 flex justify-between">
+            <div className="flex-1">
+                <div className="mb-6 flex justify-start">
 
-                <fieldset>
-                    <h2 className="font-bold text-lg text-gray-600">Adresse</h2>
-                    {ReadOnlyInput("address-name", address.name)}
-                    {ReadOnlyInput("address-addition", address.addition)}
-                    {ReadOnlyInput("address-street", `${address.street} ${address.number}`)}
-                    {ReadOnlyInput("address-town", `${address.postalCode} ${address.town}`)}
-                    {ReadOnlyInput("address-country", address.country)}
-                </fieldset>
+                    <fieldset>
+                        <h2 className="font-bold text-lg text-gray-600">Adresse</h2>
+                        {ReadOnlyInput("address-name", address.name)}
+                        {ReadOnlyInput("address-addition", address.addition)}
+                        {ReadOnlyInput("address-street", `${address.street} ${address.number}`)}
+                        {ReadOnlyInput("address-town", `${address.postalCode} ${address.town}`)}
+                        {ReadOnlyInput("address-country", address.country)}
+                    </fieldset>
 
-                <fieldset>
-                    <h2 className="font-bold text-lg text-gray-600">Kontakt</h2>
-                    {ReadOnlyInput("contact-discord", contact.discord)}
-                    {ReadOnlyInput("contact-source", contact.source)}
-                </fieldset>
+                    <fieldset>
+                        <h2 className="font-bold text-lg text-gray-600">Kontakt</h2>
+                        {ReadOnlyInput("contact-discord", contact.discord)}
+                        {ReadOnlyInput("contact-source", contact.source)}
+                    </fieldset>
 
+                </div>
             </div>
 
             <Controls handleBack={handleBack} isSubmit={true} />
