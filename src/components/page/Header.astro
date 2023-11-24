@@ -22,11 +22,12 @@ interface Props {
             }
         }
     }
+    size?: string,
 }
 
-const { navigation } = Astro.props
+const { navigation, size } = Astro.props
 ---
-<Frame>
+<Frame size={size}>
     <header class="w-full flex items-center justify-between md:py-4 xl:grid xl:grid-cols-[auto,1fr,auto] 2xl:my-6">
         <div class="pt-3 py-5">
             <Logo mode="light" />

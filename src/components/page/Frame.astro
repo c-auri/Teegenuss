@@ -1,8 +1,15 @@
 ---
-const { bg } = Astro.props
+type size = "sm" | "md"
+
+type Props = {
+    bg?: string,
+    size?: size
+}
+
+const { bg = "", size = "md"} = Astro.props
 ---
 <div class=`max-w-screen flex justify-center ${bg}`>
-    <div class="w-screen max-w-screen-2xl px-2 sm:px-5 md:px-8">
+    <div class={(size === "md" ? "max-w-screen-2xl" : "max-w-screen-xl") + " w-screen px-2 sm:px-5 md:px-8"}>
         <slot />
     </div>
 </div>
