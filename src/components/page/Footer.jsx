@@ -40,13 +40,13 @@ export function Smallprint({ isDark }) {
         }
         <div className={
             "select-none py-8 border-t-2 flex justify-between text-sm md:text-md lg:text-lg "
-            + (isDark ? "border-gray-900 text-gray-800" : (isActive ? "border-gray-300 text-gray-400" : "border-none text-gray-400"))
+            + (isDark ? "border-gray-900 text-gray-800" : (isActive ? "border-gray-300 text-gray-400" : "border-none text-gray-300"))
         }>
             <span>Copyright &copy; Christoph Aurich</span>
             <span onClick={() => setIsActive(!isActive)} className={
                 (isDark
                     ? (isActive ? "text-gray-500" : "text-gray-800 hover:text-gray-700")
-                    : (isActive ? "text-gray-500" : "text-gray-400 hover:text-gray-500"))
+                    : (isActive ? "text-gray-500" : "text-gray-300 hover:text-gray-400"))
                 + " cursor-pointer"
             }>
                 Impressum
