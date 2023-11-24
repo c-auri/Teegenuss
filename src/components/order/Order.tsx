@@ -11,6 +11,8 @@ export default function Order() {
     return <>
         <div className="max-w-lg">
 
+                <h1 className="my-14 lg:my-24 font-bold text-3xl text-center text-gray-700">Bestellung</h1>
+
             <AddressStep
                 isVisible={current === 'address'}
                 initialValues={address}
