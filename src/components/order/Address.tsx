@@ -57,7 +57,7 @@ export function AddressStep({isVisible, initialValues, handleBack, handleNext}: 
 
                     <Input
                         type="text"
-                        label="Name"
+                        label="Vor- und Nachname"
                         value={address.name ?? ""}
                         handleChange={update("name")}
                         isRequired={true}
