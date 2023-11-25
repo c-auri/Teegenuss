@@ -3,13 +3,14 @@ import type { CollectionEntry } from 'astro:content'
 import { initializeContact, ContactStep, Contact } from './Contact'
 import { initializeAddress, AddressStep, Address } from './Address'
 import Overview from './Overview'
+import { TermsStep } from './Terms'
 
 type Props = {
     pack: CollectionEntry<'packs'>,
 }
 
 export default function Order({ pack }: Props) {
-    const [ current, setCurrent ] = useState("address")
+    const [ current, setCurrent ] = useState("terms")
     const [ contact, setContact ] = useState(initializeContact())
     const [ address, setAddress ] = useState(initializeAddress())
 
@@ -46,12 +47,18 @@ export default function Order({ pack }: Props) {
 
             <section className="max-w-2xl w-screen mb-10 border-gray-100 lg:min-h-[32rem] lg:rounded-r-xl lg:mt-8 lg:px-12">
 
+                <TermsStep
+                    isVisible={current === 'terms'}
+                    handleBack={() => setCurrent('terms')}
+                    handleNext={() => setCurrent('address')}
+                />
+
                 <AddressStep
                     isVisible={current === 'address'}
                     initialValues={address}
                     handleBack={() => {
                         setAddress(address)
-                        setCurrent("address")
+                        setCurrent("terms")
                     }}
                     handleNext={(address: Address) => {
                         setAddress(address)
