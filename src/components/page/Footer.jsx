@@ -65,18 +65,27 @@ function Address() {
 }
 
 function Privacy() {
-    return <section>
+    return <article>
         {Heading("Datenschutz")}
+        <section className="mb-6">
+            <h3 className="mb-4 font-bold text-lg lg:text-xl">Datenverarbeitung</h3>
+            <p>
+                Bei einer Bestellung speichere ich eure Address- und Kontaktdaten. Die Addressdaten benötigt der Versanddienstleister für den Versand der Pakete, die Kontaktdaten benötige ich für die Detailabstimmung und den Bezahlungsvorgang. Die Daten werden nicht über diese Zwecke hinaus verwendet oder weitergegeben und von mir nach Ablauf einer Teilung gelöscht.
+            </p>
+        </section>
+
+        <h3 className="mb-4 font-bold text-lg lg:text-xl">Webhosting</h3>
         <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt quibusdam similique, numquam, rem inventore, minus reiciendis laudantium suscipit exercitationem libero temporibus adipisci illum perspiciatis! Maxime reiciendis consequatur nostrum? Molestiae, nisi!
+            Diese Seite verwendet Webhosting-Dienst Netlify, angeboten vom amerikanischen Unternehmen Netlify Inc., 2325 3rd Street, Suite 29, San Francisco, CA 94104, USA.
         </p>
         <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum ullam earum temporibus sint similique assumenda sequi voluptatem quas animi alias, incidunt non tempora nobis est cum fugit autem consequatur facere.
+            Netlify verarbeitet Daten u.a. auch in den USA, nach Meinung des Europäischen Gerichtshofs besteht derzeit kein angemessenes Schutzniveau für den Datentransfer in die USA.
         </p>
         <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis placeat consequatur expedita nisi beatae sunt porro voluptatum vitae, quo animi molestias laboriosam commodi laudantium inventore repellendus aperiam voluptas aspernatur rem!
+            Netlify hält <a className="text-gray-600" href="https://www.netlify.com/pdf/netlify-dpa.pdf">diesen Vertrag</a> über die Auftragsverarbeitung gemäß Art. 28 DSGVO bereit, er verweist inhaltlich auf die EU-Standardvertragsklauseln.
+            Mehr über die Daten, die durch die Verwendung von Netlify verarbeitet werden, findet man in der <a className="text-gray-600" href="https://www.netlify.com/privacy/?tid=331700912743">Privacy Policy des Unternehmens</a>.
         </p>
-    </section>
+    </article>
 }
 
 function Heading(text) {
