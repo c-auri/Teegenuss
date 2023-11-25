@@ -27,7 +27,7 @@ export function TermsStep({isVisible, handleBack, handleNext}: Props) {
             </div>
 
 
-            <Controls handleBack={handleBack} />
+            <Controls handleBack={handleBack} textBack={"Abbrechen"} textNext={"Akzeptieren"} />
 
         </form>
     </>
