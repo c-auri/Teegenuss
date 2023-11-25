@@ -38,9 +38,12 @@ const teas = await getCollection('teas', tea => tea.data.pack.id === pack.id)
                     }
                 </div>
             </div>
-            <div class="pt-12 flex flex-col items-center gap-3">
-                <Button type="link" href="/bestellung">Zur Bestellung</Button>
-            </div>
+            {
+                pack.data.stash > 0 &&
+                <div class="pt-12 flex flex-col items-center gap-3">
+                    <Button type="link" href="/bestellung">Zur Bestellung</Button>
+                </div>
+            }
         </div>
     </Frame>
 </Page>
