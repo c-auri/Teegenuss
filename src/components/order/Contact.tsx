@@ -44,7 +44,7 @@ export function ContactStep({isVisible, initialValues, handleBack, handleNext}: 
                 handleNext(contact)
             }}
         >
-            <h2 className="my-3 font-bold text-lg text-gray-600">Kontakt</h2>
+            <h2 className="pb-3 font-bold text-2xl text-gray-600">Kontakt</h2>
 
             <div className="flex-1">
                 <div className="my-3 flex flex-col justify-start gap-3">
