@@ -46,7 +46,7 @@ export default function Overview({
                 </div>
             </div>
 
-            <Controls handleBack={handleBack} isSubmit={true} />
+            <Controls handleBack={handleBack} textNext={"Bestellen"} />
 
         </form>
     </>
