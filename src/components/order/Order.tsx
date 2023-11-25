@@ -49,7 +49,7 @@ export default function Order({ pack }: Props) {
 
                 <TermsStep
                     isVisible={current === 'terms'}
-                    handleBack={() => setCurrent('terms')}
+                    handleBack={() => window.location.href = "/"}
                     handleNext={() => setCurrent('address')}
                 />
 
