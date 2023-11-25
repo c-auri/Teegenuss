@@ -19,8 +19,8 @@ export default function Order({ pack }: Props) {
 
             <section className="max-w-2xl w-screen rounded-md text-lg text-gray-600 lg:bg-gray-100 lg:min-w-fit lg:w-1/3 lg:rounded-none lg:rounded-l-xl lg:p-8 lg:pr-12">
 
-                <h1 className="pb-2 font-bold text-2xl text-gray-700">
-                    Bestellung
+                <h1 className="pb-3 font-bold text-2xl text-gray-600">
+                    Paketauswahl
                 </h1>
 
                 <p className="flex justify-between gap-8">

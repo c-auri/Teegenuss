@@ -25,6 +25,8 @@ export default function Overview({
             <input type="hidden" name="form-name" value="order" />
 
             <div className="flex-1">
+
+                <h1 className="pb-3 font-bold text-2xl text-gray-600">Bestellübersicht</h1>
                 <div className="mb-6 grid grid-cols-2 gap-y-8">
 
                     <fieldset className="flex flex-col">
