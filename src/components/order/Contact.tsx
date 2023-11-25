@@ -68,7 +68,7 @@ export function ContactStep({isVisible, initialValues, handleBack, handleNext}: 
 
                     <Input
                         type="textarea"
-                        label="Zusatz"
+                        label="Anmerkung"
                         value={contact.annotation}
                         handleChange={update("annotation")}
                         explanation='Falls du mir noch etwas mitteilen möchtest.'
