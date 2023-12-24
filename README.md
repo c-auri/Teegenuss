@@ -2,7 +2,7 @@
 This is a website I use to share imported tea samples from overseas. It's currently in a working state, but undergoing construction.
 
 - Production deployment: [projekt-teegenuss.de](https://projekt-teegenuss.de)
-- Development deployment: [dev-teegenuss.netlify.app](dev-teegenuss.netlify.app)
+- Development deployment: [dev-teegenuss.netlify.app](https://dev-teegenuss.netlify.app)
 
 Some designs ideas can be found on [Figma](https://www.figma.com/proto/TDuz9f4zXzVkXuKgXyvFPJ/Teegenuss?node-id=335-1908).
 
