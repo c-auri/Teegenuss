@@ -1,7 +1,7 @@
 ---
 import '../styles/global.css'
 import Header from '../components/page/Header.astro'
-import { Smallprint } from '../components/page/Footer.jsx'
+import Footer from '../components/page/Footer.astro'
 import Frame from '../components/page/Frame.astro'
 import Order from '../components/order/Order'
 import favicon from '../assets/icons/favicon.svg'
@@ -25,8 +25,6 @@ const pack = await getEntry('packs', '23-1-Chinas-Schaetze')
             <Order pack={pack} client:load />
         </Frame>
     </main>
-    <Frame size="sm">
-        <Smallprint isDark={false} client:load />
-    </Frame>
+    <Footer size="sm" />
 </body>
 </html>
