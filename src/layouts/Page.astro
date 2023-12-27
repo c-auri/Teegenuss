@@ -5,7 +5,7 @@ import Footer from '../components/page/Footer.astro'
 
 import favicon from '../assets/icons/favicon.svg'
 
-const { title, backgroundColor = "bg-white", navigation } = Astro.props
+const { title, backgroundColor = "bg-white", size, navigation } = Astro.props
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -16,10 +16,10 @@ const { title, backgroundColor = "bg-white", navigation } = Astro.props
     <title>{ title }</title>
 </head>
 <body class={backgroundColor + " min-h-screen flex flex-col"}>
-    <Header navigation={navigation} />
+    <Header navigation={navigation} size={size} />
     <main class="flex-1">
         <slot />
     </main>
-    <Footer />
+    <Footer size={size} />
 </body>
 </html>
