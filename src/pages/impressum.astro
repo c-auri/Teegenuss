@@ -2,36 +2,40 @@
 import Page from '../layouts/Page.astro'
 import Frame from '../components/page/Frame.astro'
 ---
-<Page title="Impressum">
-    <Frame>
-        <div class="w-full py-10 grid gap-5 md:grid-cols-[auto,1fr] md:gap-10 lg:grid-cols-[1fr,20rem] xl:gap-20">
-            <article>
-                <h2 class="mb-4 font-bold text-xl lg:text-2xl">Datenschutz</h2>
-                <section class="mb-6">
-                    <h3 class="mb-4 font-bold text-lg lg:text-xl">Datenverarbeitung</h3>
-                    <p>
-                        Bei einer Bestellung speichere ich eure Address- und Kontaktdaten. Die Addressdaten benötigt der Versanddienstleister für den Versand der Pakete, die Kontaktdaten benötige ich für die Detailabstimmung und den Bezahlungsvorgang. Die Daten werden nicht über diese Zwecke hinaus verwendet oder weitergegeben und von mir nach Ablauf einer Teilung gelöscht.
-                    </p>
-                </section>
-
-                <h3 class="mb-4 font-bold text-lg lg:text-xl">Webhosting</h3>
-                <p>
-                    Diese Seite verwendet Webhosting-Dienst Netlify, angeboten vom amerikanischen Unternehmen Netlify Inc., 2325 3rd Street, Suite 29, San Francisco, CA 94104, USA.
-                </p>
-                <p>
-                    Netlify verarbeitet Daten u.a. auch in den USA, nach Meinung des Europäischen Gerichtshofs besteht derzeit kein angemessenes Schutzniveau für den Datentransfer in die USA.
-                </p>
-                <p>
-                    Netlify hält <a class="text-gray-600" href="https://www.netlify.com/pdf/netlify-dpa.pdf">diesen Vertrag</a> über die Auftragsverarbeitung gemäß Art. 28 DSGVO bereit, er verweist inhaltlich auf die EU-Standardvertragsklauseln.
-                    Mehr über die Daten, die durch die Verwendung von Netlify verarbeitet werden, findet man in der <a class="text-gray-600" href="https://www.netlify.com/privacy/?tid=331700912743">Privacy Policy des Unternehmens</a>.
-                </p>
-            </article>
+<Page title="Impressum" size="sm">
+    <Frame size="sm">
+        <div class="w-full py-10 flex flex-col gap-12 lg:flex-row lg:gap-20">
             <section>
                 <h2 class="mb-4 font-bold text-xl lg:text-2xl">Anschrift</h2>
                 <p>Christoph&nbsp;Aurich</p>
                 <p>Nordstraße 37</p>
                 <p>04105 Leipzig</p>
             </section>
+            <article>
+                <h2 class="mb-4 font-bold text-xl lg:text-2xl">Datenschutz</h2>
+                <div class="md:grid md:grid-cols-2 md:gap-8">
+                    <section>
+                        <h3 class="mb-4 font-bold text-lg lg:text-xl">Webhosting</h3>
+                        <p>
+                            Diese Seite verwendet Webhosting-Dienst Netlify, angeboten vom amerikanischen Unternehmen Netlify Inc., 2325 3rd Street, Suite 29, San Francisco, CA 94104, USA.
+                        </p>
+                        <p>
+                            Netlify verarbeitet Daten u.a. auch in den USA, nach Meinung des Europäischen Gerichtshofs besteht derzeit kein angemessenes Schutzniveau für den Datentransfer in die USA.
+                        </p>
+                        <p>
+                            Netlify hält <a class="text-gray-600" href="https://www.netlify.com/pdf/netlify-dpa.pdf">diesen Vertrag</a> über die Auftragsverarbeitung gemäß Art. 28 DSGVO bereit, er verweist inhaltlich auf die EU-Standardvertragsklauseln.
+                            Mehr über die Daten, die durch die Verwendung von Netlify verarbeitet werden, findet man in der <a class="text-gray-600" href="https://www.netlify.com/privacy/?tid=331700912743">Privacy Policy des Unternehmens</a>.
+                        </p>
+                    </section>
+
+                    <section class="mb-6">
+                        <h3 class="mb-4 font-bold text-lg lg:text-xl">Datenverarbeitung</h3>
+                        <p>
+                            Bei einer Bestellung speichere ich eure Address- und Kontaktdaten. Die Addressdaten benötigt der Versanddienstleister für den Versand der Pakete, die Kontaktdaten benötige ich für die Detailabstimmung und den Bezahlungsvorgang. Die Daten werden nicht über diese Zwecke hinaus verwendet oder weitergegeben und von mir nach Ablauf einer Teilung gelöscht.
+                        </p>
+                    </section>
+                </div>
+            </article>
         </div>
     </Frame>
 </Page>
