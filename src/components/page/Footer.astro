@@ -1,0 +1,13 @@
+---
+import Frame from './Frame.astro'
+
+const { size } = Astro.props
+---
+<Frame bg="bg-gray-100" size={size}>
+    <footer class="select-none py-8 flex justify-between text-sm md:text-md lg:text-lg border-gray-300 text-gray-400">
+        <span>Copyright &copy; Christoph Aurich</span>
+        <a href="/impressum" class="cursor-pointer hover:text-gray-500">
+            Impressum
+        </a>
+    </footer>
+</Frame>
