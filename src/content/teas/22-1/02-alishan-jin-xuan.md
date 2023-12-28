@@ -3,7 +3,7 @@ title: Alishan Jin Xuan
 route: ajx
 pack: 22-1-Einstieg
 type: oolong
-hasImage: false
+hasHover: false
 purchase:
     shop: TaiwanTeaCrafts
     productUrl: https://www.taiwanteacrafts.com/product/alishan-jin-xuan-high-mountain-oolong-tea

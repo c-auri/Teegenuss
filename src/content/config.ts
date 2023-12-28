@@ -30,6 +30,7 @@ const teas = defineCollection({
     pack: reference('packs'),
     type: reference('types'),
     hasImage: z.boolean().default(true),
+    hasHover: z.boolean().default(true),
     purchase: z.object({
       shop: reference('shops'),
       productUrl: z.string().url(),
