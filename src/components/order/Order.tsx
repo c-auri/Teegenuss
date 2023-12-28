@@ -19,7 +19,7 @@ export default function Order({ pack }: Props) {
 
             <section className="max-w-2xl w-screen text-lg text-gray-600 lg:min-w-fit lg:w-1/3 lg:py-6">
 
-                <div className="h-full w-full lg:px-8 lg:py-4 lg:border-r lg:border-gray-200">
+                <div className="h-full w-full lg:pl-10 lg:pr-8 lg:py-4 lg:border-r lg:border-gray-200">
 
                     <h1 className="pb-3 font-bold text-2xl text-gray-600">
                         Paketauswahl
