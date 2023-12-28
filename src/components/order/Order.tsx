@@ -25,24 +25,24 @@ export default function Order({ pack }: Props) {
                         Paketauswahl
                     </h1>
 
-                    <p className="flex justify-between gap-8">
+                    <p className="pt-1 flex justify-between gap-8">
                         <span>{pack.data.title}</span>
                         <span>{pack.data.price},00&thinsp;€</span>
                     </p>
 
-                    <p className="flex justify-between gap-8">
+                    <p className="pb-1 flex justify-between gap-8">
                         <span>Versand (Deutschland)</span>
                         <span>3,00&thinsp;€</span>
                     </p>
 
                     <div className="my-1 w-full h-px bg-slate-300"></div>
 
-                    <p className="flex justify-between gap-8">
+                    <p className="py-1 flex justify-between gap-8">
                         <span>Gesamt</span>
                         <span>{pack.data.price + 3},00&thinsp;€</span>
                     </p>
 
-                    <p className="text-right text-sm text-slate-400">
+                    <p className="text-right py-1 text-sm text-slate-400">
                         ggf. zzgl. Auslandsversandkosten
                     </p>
 
