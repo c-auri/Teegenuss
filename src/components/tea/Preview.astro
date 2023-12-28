@@ -1,7 +1,7 @@
 ---
 import { getEntry } from "astro:content"
 
-const { tea, images } = Astro.props
+const { tea } = Astro.props
 const type = await getEntry('types', tea.data.type.id)
 const pack = await getEntry('packs', tea.data.pack.id)
 const href = `/pakete/${pack.data.route}/${tea.data.route}` 
@@ -10,11 +10,11 @@ const href = `/pakete/${pack.data.route}/${tea.data.route}`
     <a href={href} class="group">
         <div class="image-wrapper">
           {
-            images.length == 2 ?
-            <img width="300" height="250" src={images[0].src} />
-            <img width="300" height="250" src={images[1].src} class="image-hover"/>
-            :
+            tea.data.hasNoImages ?
             <img width="300" height="250" src="/images/teas/empty-cup.png" />
+            :
+            <img width="300" height="250" src={`/images/teas/${tea.slug}/01.png`} />
+            <img width="300" height="250" src={`/images/teas/${tea.slug}/02.png`} class="image-hover"/>
           }
         </div>
         <div class="lg:px-8">
