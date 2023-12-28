@@ -17,11 +17,11 @@ export default function Order({ pack }: Props) {
     return <>
         <div className="flex flex-col items-center gap-5 lg:min-h-[40rem] lg:bg-white lg:mb-10 lg:flex-row lg:gap-0 lg:items-stretch lg:rounded-xl lg:shadow-sm">
 
-            <section className="max-w-2xl w-screen text-lg text-gray-600 lg:min-w-fit lg:w-1/3 lg:py-6">
+            <section className="max-w-2xl w-screen text-lg text-slate-600 lg:min-w-fit lg:w-1/3 lg:py-6">
 
-                <div className="h-full w-full lg:px-12 lg:py-4 lg:border-r lg:border-gray-200">
+                <div className="h-full w-full lg:px-12 lg:py-4 lg:border-r lg:border-slate-200">
 
-                    <h1 className="pb-6 font-bold text-2xl text-gray-600">
+                    <h1 className="pb-6 font-bold text-2xl text-slate-600">
                         Paketauswahl
                     </h1>
 
@@ -35,14 +35,14 @@ export default function Order({ pack }: Props) {
                         <span>3,00&thinsp;€</span>
                     </p>
 
-                    <div className="my-1 w-full h-px bg-gray-600"></div>
+                    <div className="my-1 w-full h-px bg-slate-300"></div>
 
                     <p className="flex justify-between gap-8">
                         <span>Gesamt</span>
                         <span>{pack.data.price + 3},00&thinsp;€</span>
                     </p>
 
-                    <p className="text-right text-sm text-gray-500">
+                    <p className="text-right text-sm text-slate-400">
                         ggf. zzgl. Auslandsversandkosten
                     </p>
 
