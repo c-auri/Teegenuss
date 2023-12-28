@@ -15,7 +15,7 @@ export default function Order({ pack }: Props) {
     const [ address, setAddress ] = useState(initializeAddress())
 
     return <>
-        <div className="flex flex-col items-center gap-5 lg:bg-gray-50 lg:mb-10 lg:flex-row lg:gap-0 lg:items-stretch lg:rounded-xl lg:shadow-sm">
+        <div className="flex flex-col items-center gap-5 lg:min-h-[40rem] lg:bg-gray-50 lg:mb-10 lg:flex-row lg:gap-0 lg:items-stretch lg:rounded-xl lg:shadow-sm">
 
             <section className="max-w-2xl w-screen text-lg text-gray-600 lg:min-w-fit lg:w-1/3 lg:py-6">
 
@@ -50,7 +50,7 @@ export default function Order({ pack }: Props) {
 
             </section>
 
-            <section className="max-w-2xl w-screen mb-10 border-gray-100 lg:min-h-[32rem] lg:pt-10 lg:px-12">
+            <section className="max-w-2xl w-screen mb-10 border-gray-100 lg:pt-10 lg:px-12">
 
                 <TermsStep
                     isVisible={current === 'terms'}
