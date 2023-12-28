@@ -1,9 +1,9 @@
-import { useState } from 'react'
 import type { CollectionEntry } from 'astro:content'
+import { useState } from 'react'
 import { initializeContact, ContactStep, Contact } from './Contact'
 import { initializeAddress, AddressStep, Address } from './Address'
-import Overview from './Overview'
 import { TermsStep } from './Terms'
+import Overview from './Overview'
 
 type Props = {
     pack: CollectionEntry<'packs'>,
