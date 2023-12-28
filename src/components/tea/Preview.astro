@@ -9,13 +9,13 @@ const href = `/pakete/${pack.data.route}/${tea.data.route}`
 <article class="max-w-xs">
     <a href={href} class="group">
         <div class="image-wrapper">
-          {
-            tea.data.hasNoImages ?
-            <img width="300" height="250" src="/images/teas/empty-cup.png" />
-            :
-            <img width="300" height="250" src={`/images/teas/${tea.slug}/01.png`} />
-            <img width="300" height="250" src={`/images/teas/${tea.slug}/02.png`} class="image-hover"/>
-          }
+            {
+                tea.data.hasNoImages ?
+                <img width="300" height="250" src="/images/teas/empty-cup.png" />
+                :
+                <img width="300" height="250" src={`/images/teas/${tea.slug}/01.png`} />
+                <img width="300" height="250" src={`/images/teas/${tea.slug}/02.png`} class="image-hover"/>
+            }
         </div>
         <div class="lg:px-8">
             <h2 class="mt-4 text-xl font-bold">{tea.data.title}</h2>
@@ -28,22 +28,22 @@ const href = `/pakete/${pack.data.route}/${tea.data.route}`
 </article>
 <style>
     .image-wrapper {
-      position: relative;
-      max-width: 100%;
+        position: relative;
+        max-width: 100%;
     }
 
     .image-hover {
-      position: absolute;
-      top: 0;
-      right: 0;
-      left: 0;
-      bottom: 0;
-      object-fit: contain;
-      opacity: 0;
-      transition: opacity .2s;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        object-fit: contain;
+        opacity: 0;
+        transition: opacity .2s;
     }
 
     article:hover .image-hover {
-      opacity: 1;
+        opacity: 1;
     }
   </style>
