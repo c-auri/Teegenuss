@@ -16,6 +16,9 @@ const href = `/pakete/${pack.data.route}/${tea.data.route}`
             {
                 tea.data.hasImage &&
                 <img width="300" height="250" src={`/images/teas/${tea.slug}/01.png`} />
+            }
+            {
+                tea.data.hasHover &&
                 <img width="300" height="250" src={`/images/teas/${tea.slug}/02.png`} class="image-hover"/>
             }
         </div>
