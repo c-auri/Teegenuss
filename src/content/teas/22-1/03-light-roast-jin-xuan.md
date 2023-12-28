@@ -3,7 +3,7 @@ title: Leicht gerösteter JX
 route: lrjx
 pack: 22-1-Einstieg
 type: oolong
-hasNoImages: true
+hasImage: false
 purchase:
     shop: TaiwanTeaCrafts
     productUrl: https://www.taiwanteacrafts.com/product/organic-jin-xuan-oolong-tea

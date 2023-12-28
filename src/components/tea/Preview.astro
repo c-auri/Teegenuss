@@ -10,11 +10,11 @@ const href = `/pakete/${pack.data.route}/${tea.data.route}`
     <a href={href} class="group">
         <div class="image-wrapper">
             {
-                tea.data.hasNoImages ?
-                <img width="300" height="250" src="/images/teas/empty-cup.png" />
-                :
+                tea.data.hasImage ?
                 <img width="300" height="250" src={`/images/teas/${tea.slug}/01.png`} />
                 <img width="300" height="250" src={`/images/teas/${tea.slug}/02.png`} class="image-hover"/>
+                :
+                <img width="300" height="250" src="/images/teas/empty-cup.png" />
             }
         </div>
         <div class="lg:px-8">
