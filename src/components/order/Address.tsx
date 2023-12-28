@@ -50,7 +50,7 @@ export function AddressStep({isVisible, initialValues, handleBack, handleNext}: 
                 handleNext(address)
             }}
         >
-            <h2 className="pb-3 font-bold text-2xl text-gray-600">Adresse</h2>
+            <h2 className="pb-6 font-bold text-2xl text-gray-600">Adresse</h2>
 
             <div className="flex-1">
                 <div className="flex flex-col justify-start gap-3">

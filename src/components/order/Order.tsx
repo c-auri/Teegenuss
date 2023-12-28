@@ -21,7 +21,7 @@ export default function Order({ pack }: Props) {
 
                 <div className="h-full w-full lg:px-12 lg:py-4 lg:border-r lg:border-gray-200">
 
-                    <h1 className="pb-3 font-bold text-2xl text-gray-600">
+                    <h1 className="pb-6 font-bold text-2xl text-gray-600">
                         Paketauswahl
                     </h1>
 

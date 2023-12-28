@@ -15,7 +15,7 @@ export function TermsStep({isVisible, handleBack, handleNext}: Props) {
                 handleNext()
             }}
         >
-            <h2 className="pb-3 font-bold text-2xl text-gray-600">Teilnahmebedingungen</h2>
+            <h2 className="pb-6 font-bold text-2xl text-gray-600">Teilnahmebedingungen</h2>
 
             <div className="mb-8 flex-1">
                 <ol className="list-decimal list-inside text-gray-800 flex flex-col justify-start gap-3">
