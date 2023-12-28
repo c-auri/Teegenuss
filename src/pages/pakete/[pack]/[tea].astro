@@ -79,25 +79,25 @@ const navigation = {
                 <Slideshow client:load images={images} />
             </div>
             <div class="max-w-2xl xl:mt-16 2xl:mt-24">
-                <h1 class="cursor-default w-full my-2 text-3xl text-center font-bold text-gray-800 sm:text-4xl lg:text-left lg:text-5xl xl:text-6xl">{entry.data.title}</h1>
+                <h1 class="cursor-default w-full my-2 text-3xl text-center font-bold text-slate-800 sm:text-4xl lg:text-left lg:text-5xl xl:text-6xl">{entry.data.title}</h1>
                 <div class="my-3 md:mt-4 lg:text-2xl xl:mb-4 xl:mt-5">
                     <Purchase data={entry.data} />
                 </div>
-                <div class="text-gray-800 xl:text-2xl">
+                <div class="text-slate-800 xl:text-2xl">
                     <Content />
                 </div>
             </div>
         </section>
     </Frame>
-    <Frame bg="bg-gray-100">
-        <section class="pt-16 pb-24 text-gray-700 fill-gray-700 lg:pt-20 lg:pb-28">
+    <Frame bg="bg-slate-100">
+        <section class="pt-16 pb-24 text-slate-700 fill-slate-700 lg:pt-20 lg:pb-28">
             <Subheading classList="mb-8 text-center lg:text-left lg:mb-4">Zubereitung</Subheading>
-            <Preparation preparation={entry.data.preparation} color="fill-gray-500" />
+            <Preparation preparation={entry.data.preparation} color="fill-slate-500" />
         </section>
     </Frame>
     <Frame>
         <section class="py-24 grid gap-14 lg:grid-cols-5">
-            <Subheading classList="text-start text-gray-800 sm:text-start lg:row-start-1 lg:col-start-1 lg:col-end-6">Details</Subheading>
+            <Subheading classList="text-start text-slate-800 sm:text-start lg:row-start-1 lg:col-start-1 lg:col-end-6">Details</Subheading>
             <Origin origin={entry.data.origin} classList="w-full max-w-2xl lg:col-span-2 lg:row-start-2 lg:col-start-4 lg:col-end-6 lg:self-start" />
             <div class="w-full lg:max-w-2xl lg:row-start-2 lg:col-start-1 lg:col-end-4 flex flex-col items-center lg:items-start gap-5 xl:max-w-3xl">
                 <Accordion client:load entries={tags} />

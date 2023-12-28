@@ -16,8 +16,8 @@ const dictionary = {
         Object.entries(origin).map(([key, value], index) => {
             return (
                 <tr>
-                    <td class="pr-2 align-top text-gray-700">{dictionary[key as keyof typeof dictionary]}</td>
-                    <td class={`pl-2 align-top ${index === origin.length - 1 && "pb-6"} ${value === null && "text-gray-500"}`} title={origin[key] === null ? "keine Angabe" : ""}>
+                    <td class="pr-2 align-top text-slate-700">{dictionary[key as keyof typeof dictionary]}</td>
+                    <td class={`pl-2 align-top ${index === origin.length - 1 && "pb-6"} ${value === null && "text-slate-500"}`} title={origin[key] === null ? "keine Angabe" : ""}>
                             {value === null ? "k.\u200AA." : value }
                     </td>
                 </tr>
