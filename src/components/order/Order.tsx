@@ -17,35 +17,40 @@ export default function Order({ pack }: Props) {
     return <>
         <div className="flex flex-col items-center gap-5 lg:bg-gray-50 lg:mb-10 lg:flex-row lg:gap-0 lg:items-stretch lg:rounded-xl lg:shadow-sm">
 
-            <section className="max-w-2xl w-screen rounded-md text-lg text-gray-600 lg:min-w-fit lg:w-1/3 lg:border-r lg:border-gray-200 lg:p-8 lg:pr-12">
+            <section className="max-w-2xl w-screen text-lg text-gray-600 lg:min-w-fit lg:w-1/3 lg:py-6">
 
-                <h1 className="pb-3 font-bold text-2xl text-gray-600">
-                    Paketauswahl
-                </h1>
+                <div className="h-full w-full lg:px-8 lg:py-4 lg:border-r lg:border-gray-200">
 
-                <p className="flex justify-between gap-8">
-                    <span>{pack.data.title}</span>
-                    <span>{pack.data.price},00&thinsp;€</span>
-                </p>
-                <p className="flex justify-between gap-8">
-                    <span>Versand (Deutschland)</span>
-                    <span>3,00&thinsp;€</span>
-                </p>
+                    <h1 className="pb-3 font-bold text-2xl text-gray-600">
+                        Paketauswahl
+                    </h1>
 
-                <div className="my-1 w-full h-px bg-gray-600"></div>
+                    <p className="flex justify-between gap-8">
+                        <span>{pack.data.title}</span>
+                        <span>{pack.data.price},00&thinsp;€</span>
+                    </p>
 
-                <p className="flex justify-between gap-8">
-                    <span>Gesamt</span>
-                    <span>{pack.data.price + 3},00&thinsp;€</span>
-                </p>
+                    <p className="flex justify-between gap-8">
+                        <span>Versand (Deutschland)</span>
+                        <span>3,00&thinsp;€</span>
+                    </p>
 
-                <p className="text-right text-sm text-gray-500">
-                    ggf. zzgl. Auslandsversandkosten
-                </p>
+                    <div className="my-1 w-full h-px bg-gray-600"></div>
+
+                    <p className="flex justify-between gap-8">
+                        <span>Gesamt</span>
+                        <span>{pack.data.price + 3},00&thinsp;€</span>
+                    </p>
+
+                    <p className="text-right text-sm text-gray-500">
+                        ggf. zzgl. Auslandsversandkosten
+                    </p>
+
+                </div>
 
             </section>
 
-            <section className="max-w-2xl w-screen mb-10 border-gray-100 lg:min-h-[32rem] lg:mt-8 lg:px-12">
+            <section className="max-w-2xl w-screen mb-10 border-gray-100 lg:min-h-[32rem] lg:pt-10 lg:px-12">
 
                 <TermsStep
                     isVisible={current === 'terms'}
