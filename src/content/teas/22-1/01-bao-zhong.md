@@ -3,7 +3,7 @@ title: Bao Zhong
 route: bao-zhong
 pack: 22-1-Einstieg
 type: oolong
-hasImage: false
+hasHover: false
 purchase:
     shop: TaiwanTeaCrafts
     productUrl: https://www.taiwanteacrafts.com/product/baguashan-spring-bao-zhong-tea/
