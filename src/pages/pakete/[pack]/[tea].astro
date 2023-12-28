@@ -30,11 +30,16 @@ const packs = await getCollection('packs')
 const { entry } = Astro.props
 const { Content } = await entry.render()
 
-const images = entry.data.hasNoImages ? [] : [
-    { src: `/images/teas/${entry.slug}/01.png` },
-    { src: `/images/teas/${entry.slug}/02.png` },
-    { src: `/images/teas/${entry.slug}/03.png` },
-]
+const images = []
+
+if (entry.data.hasImage) {
+    images.push({ src: `/images/teas/${entry.slug}/01.png` })
+}
+
+if (entry.data.hasHover) {
+    images.push({ src: `/images/teas/${entry.slug}/02.png` })
+    images.push({ src: `/images/teas/${entry.slug}/03.png` })
+}
 
 const tags = await getCollection('tags', tag => entry.data.tags.includes(tag.slug))
 const pack = await getEntry('packs', entry.data.pack.id)
