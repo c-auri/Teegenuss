@@ -7,7 +7,7 @@ export default function Accordion({ entries }) {
     const [activeIndex, setActiveIndex] = useState(0)
     
     return <>
-        <div className="border-t border-gray-300 w-full">
+        <div className="border-t border-slate-300 w-full">
         {
             entries.map((entry, index) => 
                 <Panel
@@ -22,7 +22,7 @@ export default function Accordion({ entries }) {
         }
         </div>
         <p className="w-full text-end px-1 py-3">
-            <a className="italic text-gray-500 hover:text-gray-600" href="/glossar">
+            <a className="italic text-slate-500 hover:text-slate-600" href="/glossar">
                 zum Glossar
             </a>
         </p>
@@ -33,7 +33,7 @@ function Panel({ entry, isOpen, toggle }) {
     const path = isOpen ? patchCevronUp : pathCevronDown
 
     return (
-        <article className="border-b border-gray-300">
+        <article className="border-b border-slate-300">
             <header className="cursor-pointer my-2 md:my-3 flex justify-between items-center" onClick={toggle}>
                 <h3 className="text-xl font-bold">{entry.data.title}</h3>
                 <svg className="h-8 fill-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d={path} /></svg>
@@ -43,11 +43,11 @@ function Panel({ entry, isOpen, toggle }) {
                 <div className="mt-3 md:mt-4">
                 {
                     entry.data.translation &&
-                    <p className="text-lg md:text-xl text-gray-600">Übersetzt: {entry.data.translation}</p>
+                    <p className="text-lg md:text-xl text-slate-600">Übersetzt: {entry.data.translation}</p>
                 }
                 {
                     entry.data.synonyms &&
-                    <p className="text-lg md:text-xl text-gray-600">Auch: {entry.data.synonyms}</p>
+                    <p className="text-lg md:text-xl text-slate-600">Auch: {entry.data.synonyms}</p>
                 }
                 </div>
             }
