@@ -17,7 +17,7 @@ export default function Order({ pack }: Props) {
     return <>
         <div className="flex flex-col items-center gap-5 lg:bg-gray-50 lg:mb-10 lg:flex-row lg:gap-0 lg:items-stretch lg:rounded-xl lg:shadow-sm">
 
-            <section className="max-w-2xl w-screen rounded-md text-lg text-gray-600 lg:bg-gray-100 lg:min-w-fit lg:w-1/3 lg:rounded-none lg:rounded-l-xl lg:p-8 lg:pr-12">
+            <section className="max-w-2xl w-screen rounded-md text-lg text-gray-600 lg:min-w-fit lg:w-1/3 lg:border-r lg:border-gray-200 lg:p-8 lg:pr-12">
 
                 <h1 className="pb-3 font-bold text-2xl text-gray-600">
                     Paketauswahl
@@ -45,7 +45,7 @@ export default function Order({ pack }: Props) {
 
             </section>
 
-            <section className="max-w-2xl w-screen mb-10 border-gray-100 lg:min-h-[32rem] lg:rounded-r-xl lg:mt-8 lg:px-12">
+            <section className="max-w-2xl w-screen mb-10 border-gray-100 lg:min-h-[32rem] lg:mt-8 lg:px-12">
 
                 <TermsStep
                     isVisible={current === 'terms'}
