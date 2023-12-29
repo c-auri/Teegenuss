@@ -1,4 +1,6 @@
 ---
+import Subheading from '../../components/page/Subheading.astro'
+
 const { origin, classList } = Astro.props
 const dictionary = {
   "country": "Land",
@@ -10,7 +12,9 @@ const dictionary = {
 ---
 <table class:list={[classList, "table-fixed text-left text-xl"]}>
   <tr>
-    <th class="w-1/2 pb-2 font-bold" colspan="2">Herkunft</th>
+    <th class="w-1/2 pb-2 font-bold" colspan="2">
+      <Subheading>Herkunft</Subheading>
+    </th>
   </tr>
   {
     Object.entries(origin).map(([key, value], index) => {

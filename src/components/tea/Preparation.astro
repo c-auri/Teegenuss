@@ -1,4 +1,6 @@
 ---
+import Subheading from '../../components/page/Subheading.astro'
+
 const { gongfu, classList } = Astro.props
 const amountEnglishToGerman = {
   "weight": "Menge",
@@ -20,7 +22,9 @@ const isGraytext = (key: string, value: string) => {
 ---
 <table class:list={[classList, "table-fixed text-left text-xl"]}>
   <tr>
-    <th class="w-1/2 pb-2 font-bold" colspan="2">Zubereitung</th>
+    <th class="w-1/2 pb-2 font-bold" colspan="2">
+      <Subheading>Zubereitung</Subheading>
+    </th>
   </tr>
   <tr>
     <td class="pr-2 align-top text-slate-700">Temperatur</td>
