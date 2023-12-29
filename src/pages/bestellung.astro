@@ -12,13 +12,13 @@ const pack = await getEntry('packs', '23-1-Chinas-Schaetze')
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/svg+xml" href={favicon.src} />
-    <title>{title}</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href={favicon.src} />
+  <title>{title}</title>
 </head>
 <Page size="sm">
-    <Frame size="sm">
-        <Order pack={pack} client:load />
-    </Frame>
+  <Frame size="sm">
+    <Order pack={pack} client:load />
+  </Frame>
 </Page>
