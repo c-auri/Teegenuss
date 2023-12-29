@@ -6,23 +6,23 @@ const shop = await getEntry('shops', data.purchase.shop.id)
 const type = await getEntry('types', data.type.id)
 ---
 <div class="cursor-default flex justify-between md:justify-around lg:justify-between xl:justify-start xl:gap-8 tracking-wider text-slate-500 xl:text-2xl">
-    <span class="sm:hidden">
-        {type.data.shorthand}
-    </span>
-    <span class="hidden sm:inline">
-        {type.data.title}
-    </span>
-    <span class="select-none">|</span>
-    <span>
-        <a href={data.purchase.productUrl} class="underline decoration-dashed decoration-1 underline-offset-4 hover:text-slate-700">
-            <span class="sm:hidden" title={shop.data.name}>{shop.data.shorthand}</span>
-            <span class="hidden sm:inline">{shop.data.name}</span>
-        </a>
-    </span>
-    <span class="select-none">|</span>
-    <span>{data.purchase.amount}</span>
-    <span class="select-none">|</span>
-    <span>
-        {data.purchase.pricePer100g}&hairsp;<sup>{data.purchase.currency}</sup>&frasl;<sub>g</sub>
-    </span>
+  <span class="sm:hidden">
+    {type.data.shorthand}
+  </span>
+  <span class="hidden sm:inline">
+    {type.data.title}
+  </span>
+  <span class="select-none">|</span>
+  <span>
+    <a href={data.purchase.productUrl} class="underline decoration-dashed decoration-1 underline-offset-4 hover:text-slate-700">
+      <span class="sm:hidden" title={shop.data.name}>{shop.data.shorthand}</span>
+      <span class="hidden sm:inline">{shop.data.name}</span>
+    </a>
+  </span>
+  <span class="select-none">|</span>
+  <span>{data.purchase.amount}</span>
+  <span class="select-none">|</span>
+  <span>
+    {data.purchase.pricePer100g}&hairsp;<sup>{data.purchase.currency}</sup>&frasl;<sub>g</sub>
+  </span>
 </div>
