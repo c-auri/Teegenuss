@@ -12,17 +12,17 @@ import  { CollectionEntry, getCollection, getEntry } from 'astro:content'
 import { modulo } from '../../../scripts/modulo'
 
 export async function getStaticPaths() {
-    const teas = await getCollection('teas')
-    const packs = await getCollection('packs')
+  const teas = await getCollection('teas')
+  const packs = await getCollection('packs')
 
-    return teas.map(tea => {
-        const pack = packs.find(p => p.id === tea.data.pack!.id)!
-        return {
-            params: { 
-                pack: pack.data.route,
-                tea: tea.data.route }, 
-            props: { entry: tea }
-        }})
+  return teas.map(tea => {
+    const pack = packs.find(p => p.id === tea.data.pack!.id)!
+    return {
+      params: {
+        pack: pack.data.route,
+        tea: tea.data.route },
+      props: { entry: tea }
+    }})
 }
 
 const packs = await getCollection('packs')
@@ -33,12 +33,12 @@ const { Content } = await entry.render()
 const images = []
 
 if (entry.data.hasImage) {
-    images.push({ src: `/images/teas/${entry.slug}/01.png` })
+  images.push({ src: `/images/teas/${entry.slug}/01.png` })
 }
 
 if (entry.data.hasHover) {
-    images.push({ src: `/images/teas/${entry.slug}/02.png` })
-    images.push({ src: `/images/teas/${entry.slug}/03.png` })
+  images.push({ src: `/images/teas/${entry.slug}/02.png` })
+  images.push({ src: `/images/teas/${entry.slug}/03.png` })
 }
 
 const tags = await getCollection('tags', tag => entry.data.tags.includes(tag.slug))
@@ -49,59 +49,61 @@ const previousTea = teasInPack[modulo(entryIndex - 1, teasInPack.length)]!
 const nextTea = teasInPack[modulo(entryIndex + 1, teasInPack.length)]!
 
 const navigation = {
-    root: "pakete",
-    segments: [
-        {
-            collection: packs.sort((a: CollectionEntry<'packs'>, b: CollectionEntry<'packs'>) => a.id <= b.id ? +1 : -1),
-            entry: pack,
-        },
-        {
-            collection: teasInPack,
-            entry: entry,
-        }
-    ],    
-    relative: {
-        prev: {
-            title: "vorheriger Tee",
-            href: `/pakete/${pack.data.route}/${previousTea.data.route}`,
-        },
-        next: {
-            title: "nächster Tee",
-            href: `/pakete/${pack.data.route}/${nextTea.data.route}`,
-        }
+  root: "pakete",
+  segments: [
+    {
+      collection: packs.sort((a: CollectionEntry<'packs'>, b: CollectionEntry<'packs'>) => a.id <= b.id ? +1 : -1),
+      entry: pack,
+    },
+    {
+      collection: teasInPack,
+      entry: entry,
     }
+  ],
+  relative: {
+    prev: {
+      title: "vorheriger Tee",
+      href: `/pakete/${pack.data.route}/${previousTea.data.route}`,
+    },
+    next: {
+      title: "nächster Tee",
+      href: `/pakete/${pack.data.route}/${nextTea.data.route}`,
+    }
+  }
 }
 ---
 <Page title={entry.data.title} navigation={navigation}>
-    <Frame>
-        <section class="w-full mb-8 text-xl flex flex-col items-center sm:mb-10 lg:flex-row lg:gap-5 xl:gap-10 xl:items-start 2xl:mt-12 2xl:mb-24">
-            <div class="w-full lg:min-w-[400px]">
-                <Slideshow client:load images={images} />
-            </div>
-            <div class="max-w-2xl xl:mt-16 2xl:mt-24">
-                <h1 class="cursor-default w-full my-2 text-3xl text-center font-bold text-slate-800 sm:text-4xl lg:text-left lg:text-5xl xl:text-6xl">{entry.data.title}</h1>
-                <div class="my-3 md:mt-4 lg:text-2xl xl:mb-4 xl:mt-5">
-                    <Purchase data={entry.data} />
-                </div>
-                <div class="text-slate-800 xl:text-2xl">
-                    <Content />
-                </div>
-            </div>
-        </section>
-    </Frame>
-    <Frame bg="bg-slate-100">
-        <section class="pt-16 pb-24 text-slate-700 fill-slate-700 lg:pt-20 lg:pb-28">
-            <Subheading classList="mb-8 text-center lg:text-left lg:mb-4">Zubereitung</Subheading>
-            <Preparation preparation={entry.data.preparation} color="fill-slate-500" />
-        </section>
-    </Frame>
-    <Frame>
-        <section class="py-24 grid gap-14 lg:grid-cols-5">
-            <Subheading classList="text-start text-slate-800 sm:text-start lg:row-start-1 lg:col-start-1 lg:col-end-6">Details</Subheading>
-            <Origin origin={entry.data.origin} classList="w-full max-w-2xl lg:col-span-2 lg:row-start-2 lg:col-start-4 lg:col-end-6 lg:self-start" />
-            <div class="w-full lg:max-w-2xl lg:row-start-2 lg:col-start-1 lg:col-end-4 flex flex-col items-center lg:items-start gap-5 xl:max-w-3xl">
-                <Accordion client:load entries={tags} />
-            </div>
-        </section>
-    </Frame>
+  <Frame>
+    <section class="w-full mb-8 text-xl flex flex-col items-center sm:mb-10 lg:flex-row lg:gap-5 xl:gap-10 xl:items-start 2xl:mt-12 2xl:mb-24">
+      <div class="w-full lg:min-w-[400px]">
+        <Slideshow client:load images={images} />
+      </div>
+      <div class="max-w-2xl xl:mt-16 2xl:mt-24">
+        <h1 class="cursor-default w-full my-2 text-3xl text-center font-bold text-slate-800 sm:text-4xl lg:text-left lg:text-5xl xl:text-6xl">{entry.data.title}</h1>
+        <div class="my-3 md:mt-4 lg:text-2xl xl:mb-4 xl:mt-5">
+          <Purchase data={entry.data} />
+        </div>
+        <div class="text-slate-800 xl:text-2xl">
+          <Content />
+        </div>
+      </div>
+    </section>
+  </Frame>
+  <Frame bg="bg-slate-100">
+    <section class="pt-16 pb-24 text-slate-700 fill-slate-700 lg:pt-20 lg:pb-28">
+      <Subheading classList="mb-8 text-center lg:text-left lg:mb-4">Zubereitung</Subheading>
+    </section>
+  </Frame>
+  <Frame>
+    <section class="py-24 grid gap-14 lg:grid-cols-5">
+      <Subheading classList="text-start text-slate-800 sm:text-start lg:row-start-1 lg:col-start-1 lg:col-end-6">Details</Subheading>
+      <div>
+        <Preparation gongfu={entry.data.preparation.gongfu} classList="w-full my-6 max-w-2xl lg:col-span-2 lg:row-start-2 lg:col-start-4 lg:col-end-6 lg:self-start" />
+        <Origin origin={entry.data.origin} classList="w-full max-w-2xl lg:col-span-2 lg:row-start-2 lg:col-start-4 lg:col-end-6 lg:self-start" />
+      </div>
+      <div class="w-full lg:max-w-2xl lg:row-start-2 lg:col-start-1 lg:col-end-4 flex flex-col items-center lg:items-start gap-5 xl:max-w-3xl">
+        <Accordion client:load entries={tags} />
+      </div>
+    </section>
+  </Frame>
 </Page>
