@@ -51,7 +51,6 @@ const teas = defineCollection({
         amount: z.object({
           weight: z.string(),
           orVolume: z.string(),
-          ball: z.string(),
         }).partial(),
         times: z.object({
           rinse: z.string(),
