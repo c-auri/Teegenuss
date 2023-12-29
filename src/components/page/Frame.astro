@@ -1,9 +1,7 @@
 ---
-type size = "sm" | "md"
-
 type Props = {
     bg?: string,
-    size?: size
+    size?: "sm" | "md"
 }
 
 const { bg = "", size = "md"} = Astro.props
