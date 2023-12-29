@@ -22,7 +22,7 @@ export default function Order({ pack }: Props) {
         <div className="h-full w-full lg:px-12 lg:py-4 lg:border-r lg:border-slate-200">
 
           <h1 className="pb-6 font-bold text-2xl text-slate-600">
-            Paketauswahl
+            Bestellung
           </h1>
 
           <p className="pt-1 flex justify-between gap-8">
