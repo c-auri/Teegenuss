@@ -2,11 +2,10 @@ import { Controls } from './Controls'
 
 type Props = {
   isVisible: boolean,
-  handleBack: () => void,
   handleNext: () => void,
 }
 
-export function TermsStep({isVisible, handleBack, handleNext}: Props) {
+export function TermsStep({isVisible, handleNext}: Props) {
   return <>
     <form
       className={(isVisible ? "block" : "hidden") + " h-full flex flex-col"}
@@ -27,7 +26,7 @@ export function TermsStep({isVisible, handleBack, handleNext}: Props) {
       </div>
 
 
-      <Controls handleBack={handleBack} textBack={"Abbrechen"} textNext={"Akzeptieren"} />
+      <Controls textNext={"Akzeptieren"} />
 
     </form>
   </>
