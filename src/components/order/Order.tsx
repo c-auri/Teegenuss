@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { initializeContact, ContactStep, Contact } from './Contact'
 import { initializeAddress, AddressStep, Address } from './Address'
 import { TermsStep } from './Terms'
-import Overview from './Overview'
+import FinalStep from './Final'
 
 type Props = {
   pack: CollectionEntry<'packs'>,
@@ -83,7 +83,7 @@ export default function Order({ pack }: Props) {
           }}
         />
 
-        <Overview
+        <FinalStep
           isVisible={current === 'overview'}
           contact={contact}
           address={address}
