@@ -20,7 +20,7 @@ export default function Order({ pack }: Props) {
 
       <section className="max-w-2xl w-full text-lg text-slate-600 lg:min-w-fit lg:w-1/3 lg:py-6">
         <div className=" h-full w-full lg:px-12 lg:py-4 lg:border-r lg:border-slate-200">
-          <Overview isVisible={current !== "terms"} pack={pack} />
+          <Overview current={current} pack={pack} />
         </div>
       </section>
 
