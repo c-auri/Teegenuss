@@ -20,7 +20,7 @@ export default function Order({ pack }: Props) {
     <div className="flex flex-col items-center gap-5 lg:min-h-[40rem] lg:bg-white lg:mb-10 lg:flex-row lg:gap-0 lg:items-stretch lg:rounded-xl lg:shadow-md">
 
       <section className="max-w-2xl w-full text-lg text-slate-600 lg:min-w-fit lg:w-1/3 lg:py-6">
-        <div className=" h-full w-full lg:px-12 lg:py-4 lg:border-r lg:border-slate-200">
+        <div className="h-full w-full lg:px-12 lg:py-4 lg:border-r lg:border-slate-200">
           <Overview current={current} pack={pack} address={address} contact={contact} annotation={annotation} />
         </div>
       </section>
