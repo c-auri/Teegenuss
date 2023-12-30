@@ -14,21 +14,21 @@ type Props = {
 export function Overview({ current, pack, address, contact, annotation }: Props) {
   return <>
     <form
-      className={`${current === "overview" ? "block" : "hidden"} ${current !== "terms" && "lg:block"}`}
+      className={`${current === "overview" ? "grid" : "hidden"} ${current !== "terms" && "lg:grid"} grid-cols-1 sm:grid-cols-2 lg:grid-cols-1`}
       method="POST"
       data-netlify="true"
     >
 
       <input type="hidden" name="form-name" value="order" />
 
-      <h1 className="pb-6 font-bold text-2xl text-slate-600">
-        Bestellübersicht
+      <h1 className="pb-6 font-bold text-2xl text-slate-600 sm:col-span-2 lg:col-span-1">
+        Übersicht
       </h1>
 
       {
         pack &&
-        <fieldset>
-          <h2 className="font-bold text-lg text-gray-600">Auswahl</h2>
+        <fieldset className="sm:col-span-2 lg:col-span-1">
+          <h2 className="font-bold text-lg text-gray-600">Bestellung</h2>
 
           <p className="pt-1 flex justify-between gap-8">
             <span>{pack.data.title}</span>
@@ -54,7 +54,7 @@ export function Overview({ current, pack, address, contact, annotation }: Props)
       }
       {
         address.name.trim() &&
-        <fieldset className="flex flex-col">
+        <fieldset className="pt-8 flex flex-col">
           <h2 className="font-bold text-lg text-gray-600">Adresse</h2>
           {ReadOnlyInput("address-name", address.name)}
           {address.annotation && ReadOnlyInput("address-annotation", address.annotation)}
@@ -65,7 +65,7 @@ export function Overview({ current, pack, address, contact, annotation }: Props)
       }
       {
         contact.source.trim() &&
-        <fieldset className="flex flex-col">
+        <fieldset className="pt-8 flex flex-col">
           <h2 className="font-bold text-lg text-gray-600">Kontakt</h2>
           {ReadOnlyInput("contact-discord", contact.discord)}
           {ReadOnlyInput("contact-source", contact.source)}
@@ -73,7 +73,7 @@ export function Overview({ current, pack, address, contact, annotation }: Props)
       }
       {
         annotation.trim() &&
-        <fieldset className="col-span-2">
+        <fieldset className="block pt-8 sm:col-span-2 lg:hidden">
           <h2 className="font-bold text-lg text-gray-600">Anmerkung</h2>
           {ReadOnlyInput("contact-annotation", annotation, "textarea")}
         </fieldset>
