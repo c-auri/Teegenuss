@@ -1,5 +1,6 @@
 import type { Address } from "./Address"
 import type { Contact } from "./Contact"
+import { ReadOnlyInput } from "../forms/Input"
 import { Controls } from "./Controls"
 
 type Props = {
@@ -59,31 +60,4 @@ export default function FinalStep({
 
     </form>
   </>
-}
-
-function ReadOnlyInput(name: string, value: string, type: "text" | "textarea" = "text") {
-  if (type === "text") {
-    return <>
-      <label>
-        <input
-          readOnly
-          name={name}
-          value={value}
-          className="text-lg text-gray-800 bg-transparent focus:outline-none"
-        />
-      </label>
-    </>
-  } else {
-    return <>
-      <label>
-        <textarea
-          readOnly
-          name={name}
-          value={value}
-          className="w-full text-lg text-gray-800 bg-transparent focus:outline-none"
-          rows={6}
-        />
-      </label>
-    </>
-  }
 }

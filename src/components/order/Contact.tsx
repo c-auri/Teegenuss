@@ -1,4 +1,4 @@
-import Input from '../forms/Input'
+import { Input } from '../forms/Input'
 import { useState } from 'react'
 import { Controls } from './Controls'
 

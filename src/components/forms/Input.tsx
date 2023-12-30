@@ -9,7 +9,7 @@ interface Props {
     size?: number
 }
 
-export default function Input({
+export function Input({
     type,
     name,
     label,
@@ -52,4 +52,31 @@ export default function Input({
             }
         </label>
     </>
+}
+
+export function ReadOnlyInput(name: string, value: string, type: "text" | "textarea" = "text") {
+  if (type === "text") {
+    return <>
+      <label>
+        <input
+          readOnly
+          name={name}
+          value={value}
+          className="text-lg text-gray-800 bg-transparent focus:outline-none"
+        />
+      </label>
+    </>
+  } else {
+    return <>
+      <label>
+        <textarea
+          readOnly
+          name={name}
+          value={value}
+          className="w-full text-lg text-gray-800 bg-transparent focus:outline-none"
+          rows={6}
+        />
+      </label>
+    </>
+  }
 }
