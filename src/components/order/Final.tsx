@@ -9,7 +9,7 @@ type Props = {
   handleBack: () => void,
 }
 
-export default function Overview({
+export default function FinalStep({
   isVisible,
   contact,
   address,
