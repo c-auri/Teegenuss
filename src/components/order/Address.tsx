@@ -31,6 +31,8 @@ type Props = {
   handleNext: (address: Address) => void,
 }
 
+const formId = "address-form"
+
 export function AddressStep({isVisible, initialValues, handleBack, handleNext}: Props) {
   const [address, setAddress] = useState(initialValues)
 
@@ -44,6 +46,7 @@ export function AddressStep({isVisible, initialValues, handleBack, handleNext}: 
 
   return <>
     <form
+      id={formId}
       className={(isVisible ? "block" : "hidden") + " h-full flex flex-col"}
       onSubmit={(e) => {
         e.preventDefault()
@@ -127,7 +130,7 @@ export function AddressStep({isVisible, initialValues, handleBack, handleNext}: 
 
       <p className="pt-2 pb-5 text-sm text-gray-600">* Pflichtfeld</p>
 
-      <Controls handleBack={handleBack} />
+      <Controls formId={formId} handleBack={handleBack} />
 
     </form>
   </>

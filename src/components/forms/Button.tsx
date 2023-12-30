@@ -2,6 +2,7 @@ import type { PropsWithChildren } from "react"
 
 interface Props {
     type: "button" | "submit" | "link",
+    formId?: string,
     style?: "primary" | "secondary",
     handleClick?: (e: React.MouseEvent<HTMLElement>) => void
     href?: string,
@@ -9,6 +10,7 @@ interface Props {
 
 export default function Button({
     type,
+    formId="",
     style = "primary",
     handleClick,
     href,
@@ -31,6 +33,7 @@ export default function Button({
         return <>
             <button
                 type={type}
+                form={formId}
                 onClick={handleClick}
                 className=
                 {

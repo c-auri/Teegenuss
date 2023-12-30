@@ -25,6 +25,8 @@ type Props = {
   handleNext: (contact: Contact) => void,
 }
 
+const formId = "contact-form"
+
 export function ContactStep({isVisible, initialValues, handleBack, handleNext}: Props) {
   const [contact, setContact] = useState(initialValues)
 
@@ -38,6 +40,7 @@ export function ContactStep({isVisible, initialValues, handleBack, handleNext}: 
 
   return <>
     <form
+      id={formId}
       className={(isVisible ? "block" : "hidden") + " h-full flex flex-col"}
       onSubmit={(e) => {
         e.preventDefault()
@@ -79,7 +82,7 @@ export function ContactStep({isVisible, initialValues, handleBack, handleNext}: 
 
       <p className="pt-2 pb-5 text-sm text-gray-600">* Pflichtfeld</p>
 
-      <Controls handleBack={handleBack} />
+      <Controls formId={formId} handleBack={handleBack} />
 
     </form>
   </>
