@@ -1,13 +1,13 @@
 import type { CollectionEntry } from 'astro:content'
 
 type Props = {
-  isVisible: boolean,
-  pack: CollectionEntry<'packs'>
+  current: string,
+  pack: CollectionEntry<'packs'>,
 }
 
-export function Overview({ isVisible, pack }: Props) {
+export function Overview({ current, pack }: Props) {
   return <>
-    <div className={isVisible ? "block" : "hidden"}>
+    <div className={current !== "terms" ? "block" : "hidden"}>
 
       <h1 className="pb-6 font-bold text-2xl text-slate-600">
         Übersicht
