@@ -12,39 +12,43 @@ type Props = {
 
 export function Overview({ current, pack, address, contact }: Props) {
   return <>
-    <div className={current !== "terms" ? "block" : "hidden"}>
+    <form className={current !== "terms" ? "block" : "hidden"}>
+
+      <input type="hidden" name="form-name" value="order" />
 
       <h1 className="pb-6 font-bold text-2xl text-slate-600">
         Bestellübersicht
       </h1>
 
-      <h2 className="font-bold text-lg text-gray-600">Auswahl</h2>
+      {
+        pack &&
+        <fieldset>
+          <h2 className="font-bold text-lg text-gray-600">Auswahl</h2>
 
-      <p className="pt-1 flex justify-between gap-8">
-        <span>{pack.data.title}</span>
-        <span>{pack.data.price},00&thinsp;€</span>
-      </p>
+          <p className="pt-1 flex justify-between gap-8">
+            <span>{pack.data.title}</span>
+            <span>{pack.data.price},00&thinsp;€</span>
+          </p>
 
-      <p className="pb-1 flex justify-between gap-8">
-        <span>Versand (Deutschland)</span>
-        <span>3,00&thinsp;€</span>
-      </p>
+          <p className="pb-1 flex justify-between gap-8">
+            <span>Versand (Deutschland)</span>
+            <span>3,00&thinsp;€</span>
+          </p>
 
-      <div className="my-1 w-full h-px bg-slate-300"></div>
+          <div className="my-1 w-full h-px bg-slate-300"></div>
 
-      <p className="py-1 flex justify-between gap-8">
-        <span>Gesamt</span>
-        <span>{pack.data.price + 3},00&thinsp;€</span>
-      </p>
+          <p className="py-1 flex justify-between gap-8">
+            <span>Gesamt</span>
+            <span>{pack.data.price + 3},00&thinsp;€</span>
+          </p>
 
-      <p className="text-right py-1 text-sm text-slate-400">
-        ggf. zzgl. Auslandsversandkosten
-      </p>
-
-      <input type="hidden" name="form-name" value="order" />
-
-      <div className="my-6 grid md:grid-cols-2 lg:grid-cols-1">
-
+          <p className="text-right py-1 text-sm text-slate-400">
+            ggf. zzgl. Auslandsversandkosten
+          </p>
+        </fieldset>
+      }
+      {
+        address.name.trim() &&
         <fieldset className="flex flex-col">
           <h2 className="font-bold text-lg text-gray-600">Adresse</h2>
           {ReadOnlyInput("address-name", address.name)}
@@ -53,15 +57,15 @@ export function Overview({ current, pack, address, contact }: Props) {
           {ReadOnlyInput("address-town", `${address.postalCode} ${address.town}`)}
           {ReadOnlyInput("address-country", address.country)}
         </fieldset>
-
+      }
+      {
+        contact.source.trim() &&
         <fieldset className="flex flex-col">
           <h2 className="font-bold text-lg text-gray-600">Kontakt</h2>
           {ReadOnlyInput("contact-discord", contact.discord)}
           {ReadOnlyInput("contact-source", contact.source)}
         </fieldset>
-
-      </div>
-
+      }
       {
         contact.annotation.trim() &&
         <fieldset className="col-span-2">
@@ -70,6 +74,6 @@ export function Overview({ current, pack, address, contact }: Props) {
         </fieldset>
       }
 
-    </div>
+    </form>
   </>
 }
