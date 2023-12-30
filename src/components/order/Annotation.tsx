@@ -33,6 +33,7 @@ export function AnnotationStep({
             type="textarea"
             label="Anmerkung"
             value={annotation}
+            size={4}
             handleChange={e => setAnnotation(e.currentTarget.value)}
             explanation='Falls du mir noch etwas mitteilen möchtest.'
           />
