@@ -14,7 +14,7 @@ type Props = {
 export function Overview({ current, pack, address, contact, annotation }: Props) {
   return <>
     <form
-      className={current !== "terms" ? "block" : "hidden"}
+      className={`${current === "overview" ? "block" : "hidden"} ${current !== "terms" && "lg:block"}`}
       method="POST"
       data-netlify="true"
     >
