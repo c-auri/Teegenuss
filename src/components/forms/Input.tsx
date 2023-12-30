@@ -62,7 +62,7 @@ export function ReadOnlyInput(name: string, value: string, type: "text" | "texta
           readOnly
           name={name}
           value={value}
-          className="text-lg text-gray-800 bg-transparent focus:outline-none"
+          className="text-lg bg-transparent focus:outline-none"
         />
       </label>
     </>
@@ -73,7 +73,7 @@ export function ReadOnlyInput(name: string, value: string, type: "text" | "texta
           readOnly
           name={name}
           value={value}
-          className="w-full text-lg text-gray-800 bg-transparent resize-none focus:outline-none"
+          className="w-full text-lg bg-transparent resize-none focus:outline-none"
           rows={4}
         />
       </label>
