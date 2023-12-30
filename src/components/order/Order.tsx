@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { initializeContact, ContactStep, Contact } from './Contact'
 import { initializeAddress, AddressStep, Address } from './Address'
 import { TermsStep } from './Terms'
-import FinalStep from './Final'
+import { FinalStep } from './Final'
 import { Overview } from './Overview'
 
 type Props = {
@@ -20,7 +20,7 @@ export default function Order({ pack }: Props) {
 
       <section className="max-w-2xl w-full text-lg text-slate-600 lg:min-w-fit lg:w-1/3 lg:py-6">
         <div className=" h-full w-full lg:px-12 lg:py-4 lg:border-r lg:border-slate-200">
-          <Overview current={current} pack={pack} />
+          <Overview current={current} pack={pack} address={address} contact={contact} />
         </div>
       </section>
 
@@ -59,8 +59,6 @@ export default function Order({ pack }: Props) {
 
         <FinalStep
           isVisible={current === 'overview'}
-          contact={contact}
-          address={address}
           handleBack={() => setCurrent("contact")}
         />
 
