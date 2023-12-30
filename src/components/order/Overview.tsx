@@ -8,11 +8,16 @@ type Props = {
   pack: CollectionEntry<'packs'>,
   address: Address,
   contact: Contact,
+  annotation: string
 }
 
-export function Overview({ current, pack, address, contact }: Props) {
+export function Overview({ current, pack, address, contact, annotation }: Props) {
   return <>
-    <form className={current !== "terms" ? "block" : "hidden"}>
+    <form
+      className={current !== "terms" ? "block" : "hidden"}
+      method="POST"
+      data-netlify="true"
+    >
 
       <input type="hidden" name="form-name" value="order" />
 
@@ -67,10 +72,10 @@ export function Overview({ current, pack, address, contact }: Props) {
         </fieldset>
       }
       {
-        contact.annotation.trim() &&
+        annotation.trim() &&
         <fieldset className="col-span-2">
           <h2 className="font-bold text-lg text-gray-600">Anmerkung</h2>
-          {ReadOnlyInput("contact-annotation", contact.annotation, "textarea")}
+          {ReadOnlyInput("contact-annotation", annotation, "textarea")}
         </fieldset>
       }
 

@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { initializeContact, ContactStep, Contact } from './Contact'
 import { initializeAddress, AddressStep, Address } from './Address'
 import { TermsStep } from './Terms'
-import { FinalStep } from './Final'
+import { AnnotationStep } from './Annotation'
 import { Overview } from './Overview'
 
 type Props = {
@@ -14,13 +14,14 @@ export default function Order({ pack }: Props) {
   const [ current, setCurrent ] = useState("terms")
   const [ address, setAddress ] = useState(initializeAddress())
   const [ contact, setContact ] = useState(initializeContact())
+  const [ annotation, setAnnotation ] = useState("")
 
   return <>
     <div className="flex flex-col items-center gap-5 lg:min-h-[40rem] lg:bg-white lg:mb-10 lg:flex-row lg:gap-0 lg:items-stretch lg:rounded-xl lg:shadow-md">
 
       <section className="max-w-2xl w-full text-lg text-slate-600 lg:min-w-fit lg:w-1/3 lg:py-6">
         <div className=" h-full w-full lg:px-12 lg:py-4 lg:border-r lg:border-slate-200">
-          <Overview current={current} pack={pack} address={address} contact={contact} />
+          <Overview current={current} pack={pack} address={address} contact={contact} annotation={annotation} />
         </div>
       </section>
 
@@ -57,9 +58,14 @@ export default function Order({ pack }: Props) {
           }}
         />
 
-        <FinalStep
+        <AnnotationStep
           isVisible={current === 'overview'}
+          initialValue={annotation}
           handleBack={() => setCurrent("contact")}
+          handleNext={(annotation: string) => {
+            setAnnotation(annotation)
+            setCurrent("hoho")
+          }}
         />
 
       </section>
