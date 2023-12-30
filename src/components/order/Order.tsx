@@ -12,8 +12,8 @@ type Props = {
 
 export default function Order({ pack }: Props) {
   const [ current, setCurrent ] = useState("terms")
-  const [ contact, setContact ] = useState(initializeContact())
   const [ address, setAddress ] = useState(initializeAddress())
+  const [ contact, setContact ] = useState(initializeContact())
 
   return <>
     <div className="flex flex-col items-center gap-5 lg:min-h-[40rem] lg:bg-white lg:mb-10 lg:flex-row lg:gap-0 lg:items-stretch lg:rounded-xl lg:shadow-md">
