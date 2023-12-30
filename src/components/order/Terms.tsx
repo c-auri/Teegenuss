@@ -5,9 +5,12 @@ type Props = {
   handleNext: () => void,
 }
 
+const formId = "terms-form"
+
 export function TermsStep({isVisible, handleNext}: Props) {
   return <>
     <form
+      id={formId}
       className={(isVisible ? "block" : "hidden") + " h-full flex flex-col"}
       onSubmit={(e) => {
         e.preventDefault()
@@ -26,7 +29,7 @@ export function TermsStep({isVisible, handleNext}: Props) {
       </div>
 
 
-      <Controls textNext={"Akzeptieren"} />
+      <Controls formId={formId} textNext={"Akzeptieren"} />
 
     </form>
   </>

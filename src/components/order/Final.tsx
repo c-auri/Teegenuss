@@ -10,6 +10,8 @@ type Props = {
   handleBack: () => void,
 }
 
+const formId = "final-form"
+
 export default function FinalStep({
   isVisible,
   contact,
@@ -19,7 +21,7 @@ export default function FinalStep({
   return <>
     <form
       className={(isVisible ? "block" : "hidden") + " h-full flex flex-col"}
-      name="order"
+      id={formId}
       method="POST"
       data-netlify="true"
     >
@@ -56,7 +58,7 @@ export default function FinalStep({
         </div>
       </div>
 
-      <Controls handleBack={handleBack} textNext={"Bestellen"} />
+      <Controls formId={formId} handleBack={handleBack} textNext={"Bestellen"} />
 
     </form>
   </>
