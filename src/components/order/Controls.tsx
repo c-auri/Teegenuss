@@ -13,7 +13,7 @@ export function Controls({ formId, handleBack, textBack = "Zurück", textNext = 
       <Button formId={formId} type="submit">{textNext}</Button>
       {
         handleBack &&
-        <Button type="button" handleClick={handleBack}>{textBack}</Button>
+        <Button type="button" handleClick={handleBack} style="secondary">{textBack}</Button>
       }
     </p>
   </>
