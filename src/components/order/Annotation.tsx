@@ -28,7 +28,7 @@ export function AnnotationStep({
         handleNext(annotation)
       }}
     >
-      <h2 className="pb-6 font-bold text-2xl text-gray-600">Kontakt</h2>
+      <h2 className="pb-6 font-bold text-2xl text-gray-600">Anmerkung</h2>
       <Input
             type="textarea"
             label="Anmerkung"
