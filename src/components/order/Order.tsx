@@ -54,17 +54,17 @@ export default function Order({ pack }: Props) {
           }}
           handleNext={(contact: Contact) => {
             setContact(contact)
-            setCurrent("overview")
+            setCurrent("annotation")
           }}
         />
 
         <AnnotationStep
-          isVisible={current === 'overview'}
+          isVisible={current === 'annotation'}
           initialValue={annotation}
           handleBack={() => setCurrent("contact")}
           handleNext={(annotation: string) => {
             setAnnotation(annotation)
-            setCurrent("hoho")
+            setCurrent("overview")
           }}
         />
 
