@@ -4,6 +4,7 @@ import { initializeContact, ContactStep, Contact } from './Contact'
 import { initializeAddress, AddressStep, Address } from './Address'
 import { TermsStep } from './Terms'
 import FinalStep from './Final'
+import { Overview } from './Overview'
 
 type Props = {
   pack: CollectionEntry<'packs'>,
@@ -18,36 +19,9 @@ export default function Order({ pack }: Props) {
     <div className="flex flex-col items-center gap-5 lg:min-h-[40rem] lg:bg-white lg:mb-10 lg:flex-row lg:gap-0 lg:items-stretch lg:rounded-xl lg:shadow-md">
 
       <section className="max-w-2xl w-full text-lg text-slate-600 lg:min-w-fit lg:w-1/3 lg:py-6">
-
-        <div className="h-full w-full lg:px-12 lg:py-4 lg:border-r lg:border-slate-200">
-
-          <h1 className="pb-6 font-bold text-2xl text-slate-600">
-            Bestellung
-          </h1>
-
-          <p className="pt-1 flex justify-between gap-8">
-            <span>{pack.data.title}</span>
-            <span>{pack.data.price},00&thinsp;€</span>
-          </p>
-
-          <p className="pb-1 flex justify-between gap-8">
-            <span>Versand (Deutschland)</span>
-            <span>3,00&thinsp;€</span>
-          </p>
-
-          <div className="my-1 w-full h-px bg-slate-300"></div>
-
-          <p className="py-1 flex justify-between gap-8">
-            <span>Gesamt</span>
-            <span>{pack.data.price + 3},00&thinsp;€</span>
-          </p>
-
-          <p className="text-right py-1 text-sm text-slate-400">
-            ggf. zzgl. Auslandsversandkosten
-          </p>
-
+        <div className=" h-full w-full lg:px-12 lg:py-4 lg:border-r lg:border-slate-200">
+          <Overview isVisible={current !== "terms"} pack={pack} />
         </div>
-
       </section>
 
       <section className="max-w-2xl w-full mb-10 border-gray-100 lg:pt-10 lg:px-12">
