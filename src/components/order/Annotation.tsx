@@ -38,7 +38,9 @@ export function AnnotationStep({
             explanation='Falls du mir noch etwas mitteilen möchtest.'
           />
 
-      <Controls formId={formId} handleBack={handleBack} textNext={"Weiter"} />
+      <div className="flex-1 flex flex-col justify-end">
+        <Controls formId={formId} handleBack={handleBack} textNext={"Weiter"} />
+      </div>
     </form>
   </>
 }
