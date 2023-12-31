@@ -11,7 +11,7 @@ export function TermsStep({isVisible, handleNext}: Props) {
   return <>
     <form
       id={formId}
-      className={(isVisible ? "block" : "hidden") + " h-full flex flex-col"}
+      className={(isVisible ? "block" : "hidden") + " flex-1 flex flex-col"}
       onSubmit={(e) => {
         e.preventDefault()
         handleNext()

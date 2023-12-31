@@ -27,7 +27,7 @@ export default function Order({ pack }: Props) {
         </div>
       </section>
 
-      <section className="max-w-2xl w-full lg:py-10 lg:px-12">
+      <section className="max-w-2xl flex-1 w-full flex flex-col lg:py-10 lg:px-12">
 
         <TermsStep
           isVisible={current === 'terms'}

@@ -39,7 +39,7 @@ export function ContactStep({isVisible, initialValues, handleBack, handleNext}: 
   return <>
     <form
       id={formId}
-      className={(isVisible ? "block" : "hidden") + " h-full flex flex-col"}
+      className={(isVisible ? "block" : "hidden") + " flex-1 flex flex-col"}
       onSubmit={(e) => {
         e.preventDefault()
         handleNext(contact)
@@ -47,7 +47,7 @@ export function ContactStep({isVisible, initialValues, handleBack, handleNext}: 
     >
       <h2 className="pb-6 font-bold text-2xl text-gray-600">Kontakt</h2>
 
-      <div className="flex-1">
+      <div className="">
         <div className="flex flex-col justify-start gap-3">
 
           <Input
@@ -70,7 +70,7 @@ export function ContactStep({isVisible, initialValues, handleBack, handleNext}: 
         </div>
       </div>
 
-      <p className="pt-2 pb-5 text-sm text-gray-600">* Pflichtfeld</p>
+      <p className="pt-2 pb-5 flex-1 text-sm text-gray-600">* Pflichtfeld</p>
 
       <Controls formId={formId} handleBack={handleBack} />
 
