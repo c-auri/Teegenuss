@@ -9,16 +9,9 @@ type Props = {
   contact: Contact
 }
 
-export const formId = "order-form"
-
 export function Overview({ pack, address, contact }: Props) {
   return <>
-    <form
-      id={formId}
-      className={`text-slate-600 grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-1`}
-      method="POST"
-      data-netlify="true"
-    >
+    <div className={`text-slate-600 grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-1`}>
 
       <input type="hidden" name="form-name" value="order" />
 
@@ -80,6 +73,6 @@ export function Overview({ pack, address, contact }: Props) {
         </fieldset>
       }
 
-    </form>
+    </div>
   </>
 }
