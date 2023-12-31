@@ -69,15 +69,16 @@ export function ContactStep({isVisible, initialValues, handleBack, handleNext}: 
             explanation={"Kurzer Stichpunkt genügt."} isRequired={true}
           />
 
-          <Input
-            type="textarea"
-            label="Anmerkung"
-            value={contact.annotation}
-            size={4}
-            handleChange={update("annotation")}
-            explanation='Falls du mir noch etwas mitteilen möchtest.'
-          />
-
+          <div className="lg:hidden">
+            <Input
+              type="textarea"
+              label="Anmerkung"
+              value={contact.annotation}
+              size={4}
+              handleChange={update("annotation")}
+              explanation='Falls du mir noch etwas mitteilen möchtest.'
+            />
+          </div>
 
         </div>
       </div>
