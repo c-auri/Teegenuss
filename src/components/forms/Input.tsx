@@ -46,7 +46,7 @@ export function Input({
             }
             {
                 explanation &&
-                <span className="text-sm text-transparent text-right peer-focus:text-gray-500">
+                <span className="select-none text-sm text-transparent text-right peer-focus:text-gray-500">
                     {explanation}
                 </span>
             }
