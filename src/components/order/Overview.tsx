@@ -1,7 +1,6 @@
 import type { CollectionEntry } from 'astro:content'
 import type { Contact } from './ContactStep'
 import type { Address } from './AddressStep'
-import { ReadOnlyInput } from "../forms/Input"
 
 type Props = {
   pack: CollectionEntry<'packs'>,
@@ -50,26 +49,26 @@ export function Overview({ pack, address, contact }: Props) {
         address.name.trim() &&
         <fieldset className="flex flex-col">
           <h2 className="font-bold text-lg">Adresse</h2>
-          {ReadOnlyInput("address-name", address.name)}
-          {address.annotation && ReadOnlyInput("address-annotation", address.annotation)}
-          {ReadOnlyInput("address-street", `${address.street} ${address.number}`)}
-          {ReadOnlyInput("address-town", `${address.postalCode} ${address.town}`)}
-          {ReadOnlyInput("address-country", address.country)}
+          <span>{address.name}</span>
+          {address.annotation && <span>{address.annotation}</span>}
+          <span>{`${address.street} ${address.number}`}</span>
+          <span>{`${address.postalCode} ${address.town}`}</span>
+          <span>{address.country}</span>
         </fieldset>
       }
       {
         contact.source.trim() &&
         <fieldset className="flex flex-col">
           <h2 className="font-bold text-lg">Kontakt</h2>
-          {ReadOnlyInput("contact-discord", contact.discord)}
-          {ReadOnlyInput("contact-source", contact.source)}
+          <span>{contact.discord}</span>
+          <span>{contact.source}</span>
         </fieldset>
       }
       {
         contact.annotation.trim() &&
         <fieldset className="block lg:hidden">
           <h2 className="font-bold text-lg">Anmerkung</h2>
-          {ReadOnlyInput("contact-annotation", contact.annotation, "textarea")}
+          <p>{contact.annotation}</p>
         </fieldset>
       }
 
