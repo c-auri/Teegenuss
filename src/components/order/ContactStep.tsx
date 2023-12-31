@@ -68,7 +68,7 @@ export function ContactStep({initialValues, handleBack, handleNext}: Props) {
             explanation={"Kurzer Stichpunkt genügt."} isRequired={true}
           />
 
-          <div className="lg:hidden">
+          <div>
             <Input
               type="textarea"
               label="Anmerkung"
