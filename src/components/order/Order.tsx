@@ -17,7 +17,7 @@ export default function Order({ pack }: Props) {
   const [ annotation, setAnnotation ] = useState("")
 
   return <>
-    <div className="py-12 min-h-[42rem] flex flex-col items-center gap-5 md:bg-white  md:rounded-xl md:shadow-md lg:py-4 lg:mb-10 lg:flex-row lg:gap-0 lg:items-stretch">
+    <div className="py-12 flex flex-col items-center gap-5 md:bg-white md:rounded-xl md:shadow-md  md:min-h-[44rem] lg:min-h-[42rem] lg:py-4 lg:mb-10 lg:flex-row lg:gap-0 lg:items-stretch">
 
       <section className="max-w-2xl w-full text-lg text-slate-600 lg:min-w-fit lg:w-1/3 lg:py-6">
         <div className="h-full w-full lg:px-12 lg:py-4 lg:border-r lg:border-slate-200">
@@ -27,7 +27,7 @@ export default function Order({ pack }: Props) {
         </div>
       </section>
 
-      <section className="mb-10 max-w-2xl w-full lg:pt-10 lg:px-12">
+      <section className="max-w-2xl w-full lg:py-10 lg:px-12">
 
         <TermsStep
           isVisible={current === 'terms'}
