@@ -28,47 +28,52 @@ export default function Order({ pack }: Props) {
 
       <section className="max-w-2xl flex-1 w-full flex flex-col lg:py-10 lg:px-12">
 
-        <TermsStep
-          isVisible={current === 'terms'}
-          handleNext={() => setCurrent('address')}
-        />
-
-        <AddressStep
-          isVisible={current === 'address'}
-          initialValues={address}
-          handleBack={() => {
-            setAddress(address)
-            setCurrent("terms")
-          }}
-          handleNext={(address: Address) => {
-            setAddress(address)
-            setCurrent("contact")
-          }}
-        />
-
-        <ContactStep
-          isVisible={current === 'contact'}
-          initialValues={contact}
-          handleBack={() => {
-            setContact(contact)
-            setCurrent("address")
-          }}
-          handleNext={(contact: Contact) => {
-            setContact(contact)
-            setCurrent("overview")
-          }}
-        />
-
-        <OverviewStep
-          isVisible={current === 'overview'}
-          initialValue={contact.annotation}
-          handleBack={() => setCurrent("contact")}
-          handleNext={(annotation: string) => {
-            setContact({...contact, annotation: annotation})
-            const orderForm = document.getElementById(formId) as HTMLFormElement
-            orderForm.submit()
-          }}
-        />
+        {
+          current === 'terms' &&
+          <TermsStep
+            handleNext={() => setCurrent('address')}
+          />
+        }
+        {
+          current === 'address' &&
+          <AddressStep
+            initialValues={address}
+            handleBack={() => {
+              setAddress(address)
+              setCurrent("terms")
+            }}
+            handleNext={(address: Address) => {
+              setAddress(address)
+              setCurrent("contact")
+            }}
+          />
+        }
+        {
+          current === 'contact' &&
+          <ContactStep
+            initialValues={contact}
+            handleBack={() => {
+              setContact(contact)
+              setCurrent("address")
+            }}
+            handleNext={(contact: Contact) => {
+              setContact(contact)
+              setCurrent("overview")
+            }}
+          />
+        }
+        {
+          current === 'overview' &&
+          <OverviewStep
+            initialValue={contact.annotation}
+            handleBack={() => setCurrent("contact")}
+            handleNext={(annotation: string) => {
+              setContact({...contact, annotation: annotation})
+              const orderForm = document.getElementById(formId) as HTMLFormElement
+              orderForm.submit()
+            }}
+          />
+        }
 
       </section>
 

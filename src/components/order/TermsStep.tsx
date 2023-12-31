@@ -1,17 +1,16 @@
 import { Controls } from './Controls'
 
 type Props = {
-  isVisible: boolean,
   handleNext: () => void,
 }
 
 const formId = "terms-form"
 
-export function TermsStep({isVisible, handleNext}: Props) {
+export function TermsStep({handleNext}: Props) {
   return <>
     <form
       id={formId}
-      className={(isVisible ? "block" : "hidden") + " flex-1 flex flex-col"}
+      className="flex-1 flex flex-col"
       onSubmit={(e) => {
         e.preventDefault()
         handleNext()
