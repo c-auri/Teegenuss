@@ -1,8 +1,8 @@
 import type { CollectionEntry } from 'astro:content'
 import { useState } from 'react'
-import { initializeContact, ContactStep, Contact } from './Contact'
-import { initializeAddress, AddressStep, Address } from './Address'
-import { TermsStep } from './Terms'
+import { initializeContact, ContactStep, Contact } from './ContactStep'
+import { initializeAddress, AddressStep, Address } from './AddressStep'
+import { TermsStep } from './TermsStep'
 import { AnnotationStep } from './Annotation'
 import { Overview } from './Overview'
 
