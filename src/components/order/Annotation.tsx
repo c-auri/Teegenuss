@@ -21,7 +21,7 @@ export function AnnotationStep({
 
   return <>
     <form
-      className={(isVisible ? "block" : "hidden") + " h-full flex flex-col"}
+      className={(isVisible ? "block" : "hidden") + " flex-1 flex flex-col"}
       id={formId}
       onSubmit={(e) => {
         e.preventDefault()
