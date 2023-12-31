@@ -70,7 +70,7 @@ export default function Order({ pack }: Props) {
             handleNext={(annotation: string) => {
               setContact({...contact, annotation: annotation})
               const orderForm = document.getElementById(formId) as HTMLFormElement
-              orderForm.submit()
+              orderForm.requestSubmit()
             }}
           />
         }
