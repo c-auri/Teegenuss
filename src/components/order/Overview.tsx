@@ -6,11 +6,10 @@ import { ReadOnlyInput } from "../forms/Input"
 type Props = {
   pack: CollectionEntry<'packs'>,
   address: Address,
-  contact: Contact,
-  annotation: string
+  contact: Contact
 }
 
-export function Overview({ pack, address, contact, annotation }: Props) {
+export function Overview({ pack, address, contact }: Props) {
   return <>
     <form
       className={`grid text-slate-600 grid-cols-1 sm:grid-cols-2 lg:grid-cols-1`}
@@ -71,10 +70,10 @@ export function Overview({ pack, address, contact, annotation }: Props) {
         </fieldset>
       }
       {
-        annotation.trim() &&
+        contact.annotation.trim() &&
         <fieldset className="block pt-8 sm:col-span-2 lg:hidden">
           <h2 className="font-bold text-lg">Anmerkung</h2>
-          {ReadOnlyInput("contact-annotation", annotation, "textarea")}
+          {ReadOnlyInput("contact-annotation", contact.annotation, "textarea")}
         </fieldset>
       }
 

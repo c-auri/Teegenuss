@@ -6,6 +6,7 @@ export type Contact = {
   email: string,
   discord: string,
   source: string,
+  annotation: string,
 }
 
 export function initializeContact() {
@@ -66,6 +67,16 @@ export function ContactStep({isVisible, initialValues, handleBack, handleNext}: 
             handleChange={update("source")}
             explanation={"Kurzer Stichpunkt genügt."} isRequired={true}
           />
+
+          <Input
+            type="textarea"
+            label="Anmerkung"
+            value={contact.annotation}
+            size={4}
+            handleChange={update("annotation")}
+            explanation='Falls du mir noch etwas mitteilen möchtest.'
+          />
+
 
         </div>
       </div>

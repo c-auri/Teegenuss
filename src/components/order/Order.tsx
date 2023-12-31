@@ -14,7 +14,6 @@ export default function Order({ pack }: Props) {
   const [ current, setCurrent ] = useState("terms")
   const [ address, setAddress ] = useState(initializeAddress())
   const [ contact, setContact ] = useState(initializeContact())
-  const [ annotation, setAnnotation ] = useState("")
 
   return <>
     <div className="py-12 flex flex-col items-center gap-5 md:bg-white md:rounded-xl md:shadow-md  md:min-h-[44rem] lg:min-h-[42rem] lg:py-4 lg:mb-10 lg:flex-row lg:gap-0 lg:items-stretch">
@@ -22,7 +21,7 @@ export default function Order({ pack }: Props) {
       <section className="max-w-2xl w-full text-lg text-slate-600 lg:min-w-fit lg:w-1/3 lg:py-6">
         <div className="h-full w-full lg:px-12 lg:py-4 lg:border-r lg:border-slate-200">
           <div className={`${current === "overview" ? "block" : "hidden lg:block"}`}>
-            <Overview pack={pack} address={address} contact={contact} annotation={annotation} />
+            <Overview pack={pack} address={address} contact={contact} />
           </div>
         </div>
       </section>
@@ -56,17 +55,16 @@ export default function Order({ pack }: Props) {
           }}
           handleNext={(contact: Contact) => {
             setContact(contact)
-            setCurrent("annotation")
+            setCurrent("overview")
           }}
         />
 
         <AnnotationStep
-          isVisible={current === 'annotation'}
-          initialValue={annotation}
+          isVisible={current === 'overview'}
+          initialValue={contact.annotation}
           handleBack={() => setCurrent("contact")}
           handleNext={(annotation: string) => {
-            setAnnotation(annotation)
-            setCurrent("overview")
+            setCurrent("done")
           }}
         />
 
