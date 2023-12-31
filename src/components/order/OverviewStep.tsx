@@ -9,7 +9,7 @@ type Props = {
 
 const formId = "annotation-form"
 
-export function AnnotationStep({
+export function OverviewStep({
   isVisible,
   initialValue,
   handleBack,
