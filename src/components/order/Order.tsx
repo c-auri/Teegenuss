@@ -4,7 +4,7 @@ import { initializeContact, ContactStep, Contact } from './ContactStep'
 import { initializeAddress, AddressStep, Address } from './AddressStep'
 import { TermsStep } from './TermsStep'
 import { OverviewStep } from './OverviewStep'
-import { Overview } from './Overview'
+import { Overview, formId } from './Overview'
 
 type Props = {
   pack: CollectionEntry<'packs'>,
@@ -64,7 +64,9 @@ export default function Order({ pack }: Props) {
           initialValue={contact.annotation}
           handleBack={() => setCurrent("contact")}
           handleNext={(annotation: string) => {
-            setCurrent("done")
+            setContact({...contact, annotation: annotation})
+            const orderForm = document.getElementById(formId) as HTMLFormElement
+            orderForm.submit()
           }}
         />
 
