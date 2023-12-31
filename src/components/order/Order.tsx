@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { initializeContact, ContactStep, Contact } from './ContactStep'
 import { initializeAddress, AddressStep, Address } from './AddressStep'
 import { TermsStep } from './TermsStep'
-import { AnnotationStep } from './Annotation'
+import { OverviewStep } from './OverviewStep'
 import { Overview } from './Overview'
 
 type Props = {
@@ -59,7 +59,7 @@ export default function Order({ pack }: Props) {
           }}
         />
 
-        <AnnotationStep
+        <OverviewStep
           isVisible={current === 'overview'}
           initialValue={contact.annotation}
           handleBack={() => setCurrent("contact")}
