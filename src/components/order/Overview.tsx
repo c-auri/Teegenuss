@@ -4,17 +4,16 @@ import type { Address } from './Address'
 import { ReadOnlyInput } from "../forms/Input"
 
 type Props = {
-  current: string,
   pack: CollectionEntry<'packs'>,
   address: Address,
   contact: Contact,
   annotation: string
 }
 
-export function Overview({ current, pack, address, contact, annotation }: Props) {
+export function Overview({ pack, address, contact, annotation }: Props) {
   return <>
     <form
-      className={`${current === "overview" ? "grid" : "hidden"} ${current !== "terms" && "lg:grid"} text-slate-600 grid-cols-1 sm:grid-cols-2 lg:grid-cols-1`}
+      className={`grid text-slate-600 grid-cols-1 sm:grid-cols-2 lg:grid-cols-1`}
       method="POST"
       data-netlify="true"
     >
