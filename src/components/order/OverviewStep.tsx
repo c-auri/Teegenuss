@@ -1,4 +1,5 @@
 import { Controls } from "./Controls"
+import { formId } from "./Overview"
 
 type Props = {
   isVisible: boolean,
@@ -6,8 +7,6 @@ type Props = {
   handleBack: () => void,
   handleNext: (annotation: string) => void,
 }
-
-const formId = "annotation-form"
 
 export function OverviewStep({
   isVisible,

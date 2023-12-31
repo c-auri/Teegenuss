@@ -9,9 +9,12 @@ type Props = {
   contact: Contact
 }
 
+export const formId = "order-form"
+
 export function Overview({ pack, address, contact }: Props) {
   return <>
     <form
+      id={formId}
       className={`grid text-slate-600 grid-cols-1 sm:grid-cols-2 lg:grid-cols-1`}
       method="POST"
       data-netlify="true"
