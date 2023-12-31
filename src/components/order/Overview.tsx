@@ -15,14 +15,14 @@ export function Overview({ pack, address, contact }: Props) {
   return <>
     <form
       id={formId}
-      className={`grid text-slate-600 grid-cols-1 sm:grid-cols-2 lg:grid-cols-1`}
+      className={`text-slate-600 grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-1`}
       method="POST"
       data-netlify="true"
     >
 
       <input type="hidden" name="form-name" value="order" />
 
-      <h1 className="pb-6 font-bold text-2xl sm:col-span-2 lg:col-span-1">
+      <h1 className="font-bold text-2xl sm:col-span-2 lg:col-span-1">
         Übersicht
       </h1>
 
@@ -55,7 +55,7 @@ export function Overview({ pack, address, contact }: Props) {
       }
       {
         address.name.trim() &&
-        <fieldset className="pt-8 flex flex-col">
+        <fieldset className="flex flex-col">
           <h2 className="font-bold text-lg">Adresse</h2>
           {ReadOnlyInput("address-name", address.name)}
           {address.annotation && ReadOnlyInput("address-annotation", address.annotation)}
@@ -66,7 +66,7 @@ export function Overview({ pack, address, contact }: Props) {
       }
       {
         contact.source.trim() &&
-        <fieldset className="pt-8 flex flex-col">
+        <fieldset className="flex flex-col">
           <h2 className="font-bold text-lg">Kontakt</h2>
           {ReadOnlyInput("contact-discord", contact.discord)}
           {ReadOnlyInput("contact-source", contact.source)}
@@ -74,7 +74,7 @@ export function Overview({ pack, address, contact }: Props) {
       }
       {
         contact.annotation.trim() &&
-        <fieldset className="block pt-8 sm:col-span-2 lg:hidden">
+        <fieldset className="block lg:hidden">
           <h2 className="font-bold text-lg">Anmerkung</h2>
           {ReadOnlyInput("contact-annotation", contact.annotation, "textarea")}
         </fieldset>
