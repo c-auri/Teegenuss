@@ -1,6 +1,6 @@
 import type { CollectionEntry } from 'astro:content'
-import type { Contact } from './Contact'
-import type { Address } from './Address'
+import type { Contact } from './ContactStep'
+import type { Address } from './AddressStep'
 import { ReadOnlyInput } from "../forms/Input"
 
 type Props = {
