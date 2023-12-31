@@ -3,7 +3,6 @@ import { Input } from "../forms/Input"
 import { Controls } from "./Controls"
 
 type Props = {
-  isVisible: boolean,
   initialValue: string,
   handleBack: () => void,
   handleNext: (annotation: string) => void,
@@ -12,7 +11,6 @@ type Props = {
 const formId = "overview-form"
 
 export function OverviewStep({
-  isVisible,
   initialValue,
   handleBack,
   handleNext
@@ -21,7 +19,7 @@ export function OverviewStep({
 
   return <>
     <form
-      className={(isVisible ? "block" : "hidden") + " flex-1 flex flex-col"}
+      className={"flex-1 flex flex-col"}
       id={formId}
       onSubmit={(e) => {
         e.preventDefault()

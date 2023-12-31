@@ -19,7 +19,6 @@ export function initializeContact() {
 }
 
 type Props = {
-  isVisible: boolean,
   initialValues: Contact,
   handleBack: () => void,
   handleNext: (contact: Contact) => void,
@@ -27,7 +26,7 @@ type Props = {
 
 const formId = "contact-form"
 
-export function ContactStep({isVisible, initialValues, handleBack, handleNext}: Props) {
+export function ContactStep({initialValues, handleBack, handleNext}: Props) {
   const [contact, setContact] = useState(initialValues)
 
   const update = (property: keyof Contact) => {
@@ -41,7 +40,7 @@ export function ContactStep({isVisible, initialValues, handleBack, handleNext}: 
   return <>
     <form
       id={formId}
-      className={(isVisible ? "block" : "hidden") + " flex-1 flex flex-col"}
+      className={"flex-1 flex flex-col"}
       onSubmit={(e) => {
         e.preventDefault()
         handleNext(contact)

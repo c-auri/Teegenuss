@@ -25,7 +25,6 @@ export function initializeAddress() {
 }
 
 type Props = {
-  isVisible: boolean,
   initialValues: Address,
   handleBack: () => void,
   handleNext: (address: Address) => void,
@@ -33,7 +32,7 @@ type Props = {
 
 const formId = "address-form"
 
-export function AddressStep({isVisible, initialValues, handleBack, handleNext}: Props) {
+export function AddressStep({initialValues, handleBack, handleNext}: Props) {
   const [address, setAddress] = useState(initialValues)
 
   const update = (property: keyof Address) => {
@@ -47,7 +46,7 @@ export function AddressStep({isVisible, initialValues, handleBack, handleNext}: 
   return <>
     <form
       id={formId}
-      className={(isVisible ? "block" : "hidden") + " flex-1 flex flex-col"}
+      className={"flex-1 flex flex-col"}
       onSubmit={(e) => {
         e.preventDefault()
         handleNext(address)
