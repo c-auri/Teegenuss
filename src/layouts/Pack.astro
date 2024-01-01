@@ -10,34 +10,34 @@ const { pack, navigation } = Astro.props
 const teas = await getCollection('teas', tea => tea.data.pack.id === pack.id)
 ---
 <Page title={pack.data.title} navigation={navigation}>
-    <Frame>
-        <div class="mb-36 w-full flex flex-col items-center">
-            <div class="my-14">
-                <h1 class="cursor-default text-center text-4xl text-slate-800 font-medium lg:my-8 lg:text-5xl xl:text-6xl xl:my-10">{pack.data.title}</h1>
-                <p class="cursor-default w-full mt-5 mb-4 tracking-wider flex justify-between sm:justify-around text-slate-500 text-lg md:text-xl lg:my-6 lg:text-2xl xl:text-2xl xl:my-8">
-                    <span>{pack.data.date}</span>
-                    <span class="select-none">|</span>
-                    <span>{pack.data.numberOfTeas} Tees</span>
-                    <span class="select-none">|</span>
-                    <span>{pack.data.totalWeight}</span>
-                    <span class="select-none">|</span>
-                    <span>{pack.data.price}&hairsp;€</span>
-                </p>
-                <p class="max-w-3xl text-xl text-slate-800 lg:max-w-4xl lg:text-2xl">{pack.data.teaser}</p>
-            </div>
-            <div class="my-16 w-full flex justify-center">
-                <div class="w-full max-w-5xl flex gap-14 flex-wrap justify-center">
-                    {
-                        teas.map(tea => (<li class="list-none"><Preview tea={tea} /></li>))
-                    }
-                </div>
-            </div>
-            {
-                pack.data.stash > 0 &&
-                <div class="pt-12 flex flex-col items-center gap-3">
-                    <Button type="link" href="/bestellung">Zur Bestellung</Button>
-                </div>
-            }
+  <Frame>
+    <div class="mb-36 w-full flex flex-col items-center">
+      <div class="my-14">
+        <h1 class="cursor-default text-center text-4xl text-slate-800 font-medium lg:my-8 lg:text-5xl xl:text-6xl xl:my-10">{pack.data.title}</h1>
+        <p class="cursor-default w-full mt-5 mb-4 tracking-wider flex justify-between sm:justify-around text-slate-500 text-lg md:text-xl lg:my-6 lg:text-2xl xl:text-2xl xl:my-8">
+          <span>{pack.data.date}</span>
+          <span class="select-none">|</span>
+          <span>{pack.data.numberOfTeas} Tees</span>
+          <span class="select-none">|</span>
+          <span>{pack.data.totalWeight}</span>
+          <span class="select-none">|</span>
+          <span>{pack.data.price}&hairsp;€</span>
+        </p>
+        <p class="max-w-3xl text-xl text-slate-800 lg:max-w-4xl lg:text-2xl">{pack.data.teaser}</p>
+      </div>
+      <div class="my-16 w-full flex justify-center">
+        <div class="w-full max-w-5xl flex gap-14 flex-wrap justify-center">
+          {
+            teas.map(tea => (<li class="list-none"><Preview tea={tea} /></li>))
+          }
         </div>
-    </Frame>
+      </div>
+      {
+        pack.data.stash > 0 &&
+        <div class="pt-12 flex flex-col items-center gap-3">
+          <Button type="link" href="/bestellung">Zur Bestellung</Button>
+        </div>
+      }
+    </div>
+  </Frame>
 </Page>
