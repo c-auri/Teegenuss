@@ -14,13 +14,14 @@ export default function Order({ pack }: Props) {
   const [ current, setCurrent ] = useState("terms")
   const [ address, setAddress ] = useState(initializeAddress())
   const [ contact, setContact ] = useState(initializeContact())
+  const [ message, setMessage ] = useState("")
 
   return <>
     <div className="py-12 flex flex-col items-center gap-5 md:bg-white md:rounded-xl md:shadow-md  md:min-h-[46rem] lg:min-h-[42rem] lg:py-4 lg:mb-10 lg:flex-row lg:gap-0 lg:items-stretch">
 
       <section className="max-w-2xl w-full text-lg text-slate-600 lg:min-w-fit lg:w-1/3 lg:py-6">
         <div className="hidden h-full w-full lg:block lg:px-12 lg:py-4 lg:border-r lg:border-slate-200">
-          <Overview pack={pack} address={address} contact={contact} />
+          <Overview pack={pack} address={address} contact={contact} message={message} />
         </div>
       </section>
 
@@ -66,7 +67,11 @@ export default function Order({ pack }: Props) {
             pack={pack}
             address={address}
             contact={contact}
-            handleBack={() => setCurrent("contact")}
+            initialMessage={message}
+            handleBack={(message: string) => {
+              setMessage(message)
+              setCurrent("contact")
+            }}
           />
         }
 
