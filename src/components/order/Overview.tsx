@@ -22,7 +22,7 @@ export function Overview({ pack, address, contact }: Props) {
       {
         pack &&
         <fieldset className="sm:col-span-2 lg:col-span-1">
-          <h2 className="font-bold text-lg">Bestellung</h2>
+          <h2 className="font-bold text-lg">Auswahl</h2>
 
           <p className="pt-1 flex justify-between gap-8">
             <span>{pack.data.title}</span>
