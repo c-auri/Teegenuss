@@ -12,9 +12,9 @@ type Props = {
   handleBack: () => void,
 }
 
-const formId = "overview-form"
+const formId = "order-form"
 
-export function OverviewStep({
+export function SubmitStep({
   isVisible,
   address,
   contact,

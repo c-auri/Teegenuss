@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { initializeContact, ContactStep, Contact } from './ContactStep'
 import { initializeAddress, AddressStep, Address } from './AddressStep'
 import { TermsStep } from './TermsStep'
-import { OverviewStep } from './OverviewStep'
+import { SubmitStep } from './SubmitStep'
 import { Overview } from './Overview'
 
 type Props = {
@@ -63,7 +63,7 @@ export default function Order({ pack }: Props) {
           />
         }
         {
-          <OverviewStep
+          <SubmitStep
             isVisible={current === 'overview'}
             pack={pack}
             address={address}
