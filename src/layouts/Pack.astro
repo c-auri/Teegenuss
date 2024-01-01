@@ -9,8 +9,8 @@ import { getCollection } from 'astro:content'
 const { pack, navigation } = Astro.props
 const teas = await getCollection('teas', tea => tea.data.pack.id === pack.id)
 ---
-<Page title={pack.data.title} navigation={navigation}>
-  <Frame>
+<Page title={pack.data.title} navigation={navigation} size="sm">
+  <Frame size="sm">
     <div class="mb-36 w-full flex flex-col items-center">
       <div class="my-14">
         <h1 class="cursor-default text-center text-4xl text-slate-800 font-medium lg:my-8 lg:text-5xl xl:text-6xl xl:my-10">{pack.data.title}</h1>
