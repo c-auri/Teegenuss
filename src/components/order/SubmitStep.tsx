@@ -46,6 +46,8 @@ export function SubmitStep({
       {HiddenInput("contact-source", contact.source)}
       {HiddenInput("message", message)}
 
+      <h2 className="pb-6 font-bold text-2xl text-gray-600 hidden lg:block">Bestätigung</h2>
+
       <div className="lg:hidden">
         <Overview pack={pack} address={address} contact={contact} message={message} />
       </div>
