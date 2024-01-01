@@ -83,7 +83,7 @@ export function OverviewStep({
         contact.annotation.trim() &&
         <fieldset className="block">
           <h2 className="font-bold text-lg">Anmerkung</h2>
-          {ReadOnlyInput("contact-annotation", contact.annotation, "textarea")}
+          {ReadOnlyInput("contact-annotation", contact.annotation)}
         </fieldset>
       }
 
