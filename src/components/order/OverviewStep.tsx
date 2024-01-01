@@ -22,12 +22,12 @@ export function OverviewStep({
   return <>
     <form
       id={formId}
-      name="order"
+      name="dev-order"
       className={"flex-1 flex flex-col"}
       method="POST"
       data-netlify="true"
     >
-      <input type="hidden" name="form-name" value="order" />
+      <input type="hidden" name="form-name" value="dev-order" />
 
       <h1 className="font-bold text-2xl sm:col-span-2 lg:col-span-1">
         Übersicht
