@@ -1,4 +1,4 @@
-import { ReadOnlyInput } from "../forms/Input"
+import { HiddenInput } from "../forms/Input"
 import { Controls } from "./Controls"
 import type { CollectionEntry } from "astro:content"
 import type { Address } from "./AddressStep"
@@ -16,7 +16,6 @@ const formId = "overview-form"
 
 export function OverviewStep({
   isVisible,
-  pack,
   address,
   contact,
   handleBack,
@@ -31,63 +30,14 @@ export function OverviewStep({
     >
       <input type="hidden" name="form-name" value="order" />
 
-      <h1 className="font-bold text-2xl sm:col-span-2 lg:col-span-1">
-        Übersicht
-      </h1>
-
-      {
-        pack &&
-        <fieldset className="sm:col-span-2 lg:col-span-1">
-          <h2 className="font-bold text-lg">Bestellung</h2>
-
-          <p className="pt-1 flex justify-between gap-8">
-            <span>{pack.data.title}</span>
-            <span>{pack.data.price},00&thinsp;€</span>
-          </p>
-
-          <p className="pb-1 flex justify-between gap-8">
-            <span>Versand (Deutschland)</span>
-            <span>3,00&thinsp;€</span>
-          </p>
-
-          <div className="my-1 w-full h-px bg-slate-300"></div>
-
-          <p className="py-1 flex justify-between gap-8">
-            <span>Gesamt</span>
-            <span>{pack.data.price + 3},00&thinsp;€</span>
-          </p>
-
-          <p className="text-right py-1 text-sm text-slate-400">
-            ggf. zzgl. Auslandsversandkosten
-          </p>
-        </fieldset>
-      }
-      {
-        address.name.trim() &&
-        <fieldset className="flex flex-col">
-          <h2 className="font-bold text-lg">Adresse</h2>
-          {ReadOnlyInput("address-name", address.name)}
-          {address.annotation && ReadOnlyInput("address-annotation", address.annotation)}
-          {ReadOnlyInput("address-street", `${address.street} ${address.number}`)}
-          {ReadOnlyInput("address-town", `${address.postalCode} ${address.town}`)}
-          {ReadOnlyInput("address-country", address.country)}
-        </fieldset>
-      }
-      {
-        contact.source.trim() &&
-        <fieldset className="flex flex-col">
-          <h2 className="font-bold text-lg">Kontakt</h2>
-          {ReadOnlyInput("contact-discord", contact.discord)}
-          {ReadOnlyInput("contact-source", contact.source)}
-        </fieldset>
-      }
-      {
-        contact.annotation.trim() &&
-        <fieldset className="block">
-          <h2 className="font-bold text-lg">Anmerkung</h2>
-          {ReadOnlyInput("contact-annotation", contact.annotation)}
-        </fieldset>
-      }
+      {HiddenInput("address-name", address.name)}
+      {HiddenInput("address-annotation", address.annotation)}
+      {HiddenInput("address-street", `${address.street} ${address.number}`)}
+      {HiddenInput("address-town", `${address.postalCode} ${address.town}`)}
+      {HiddenInput("address-country", address.country)}
+      {HiddenInput("contact-discord", contact.discord)}
+      {HiddenInput("contact-source", contact.source)}
+      {HiddenInput("contact-annotation", contact.annotation)}
 
       <div className="flex-1 flex flex-col justify-end">
         <Controls formId={formId} handleBack={handleBack} textNext={"Bestellen"} />

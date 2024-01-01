@@ -54,11 +54,12 @@ export function Input({
     </>
 }
 
-export function ReadOnlyInput(name: string, value: string, type: "text" | "textarea" = "text") {
+export function HiddenInput(name: string, value: string, type: "text" | "textarea" = "text") {
   if (type === "text") {
     return <>
       <label>
         <input
+          type="hidden"
           readOnly
           name={name}
           value={value}
