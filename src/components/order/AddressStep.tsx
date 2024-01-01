@@ -26,7 +26,7 @@ export function initializeAddress() {
 
 type Props = {
   initialValues: Address,
-  handleBack: () => void,
+  handleBack: (address: Address) => void,
   handleNext: (address: Address) => void,
 }
 
@@ -128,7 +128,7 @@ export function AddressStep({initialValues, handleBack, handleNext}: Props) {
 
       <p className="flex-1 pt-2 pb-5 text-sm text-gray-400">* notwendige Angabe</p>
 
-      <Controls formId={formId} handleBack={handleBack} />
+      <Controls formId={formId} handleBack={() => handleBack(address)} />
 
     </form>
   </>

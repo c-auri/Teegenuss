@@ -18,7 +18,7 @@ export function initializeContact() {
 
 type Props = {
   initialValues: Contact,
-  handleBack: () => void,
+  handleBack: (contact: Contact) => void,
   handleNext: (contact: Contact) => void,
 }
 
@@ -71,7 +71,7 @@ export function ContactStep({initialValues, handleBack, handleNext}: Props) {
 
       <p className="pt-2 pb-5 flex-1 text-sm text-gray-400">* notwendige Angabe</p>
 
-      <Controls formId={formId} handleBack={handleBack} />
+      <Controls formId={formId} handleBack={() => handleBack(contact)} />
 
     </form>
   </>

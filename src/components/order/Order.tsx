@@ -37,7 +37,7 @@ export default function Order({ pack }: Props) {
           current === 'address' &&
           <AddressStep
             initialValues={address}
-            handleBack={() => {
+            handleBack={(address: Address) => {
               setAddress(address)
               setCurrent("terms")
             }}
@@ -51,7 +51,7 @@ export default function Order({ pack }: Props) {
           current === 'contact' &&
           <ContactStep
             initialValues={contact}
-            handleBack={() => {
+            handleBack={(contact: Contact) => {
               setContact(contact)
               setCurrent("address")
             }}
