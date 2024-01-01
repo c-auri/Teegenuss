@@ -69,7 +69,7 @@ export function ContactStep({initialValues, handleBack, handleNext}: Props) {
         </div>
       </div>
 
-      <p className="pt-2 pb-5 flex-1 text-sm text-gray-600">* notwendige Angabe</p>
+      <p className="pt-2 pb-5 flex-1 text-sm text-gray-400">* notwendige Angabe</p>
 
       <Controls formId={formId} handleBack={handleBack} />
 
