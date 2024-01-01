@@ -1,16 +1,18 @@
-import { HiddenInput } from "../forms/Input"
+import { useState } from "react"
+import { Input, HiddenInput } from "../forms/Input"
+import { Overview } from "./Overview"
 import { Controls } from "./Controls"
 import type { CollectionEntry } from "astro:content"
 import type { Address } from "./AddressStep"
 import type { Contact } from "./ContactStep"
-import { Overview } from "./Overview"
 
 type Props = {
   isVisible: boolean,
   pack: CollectionEntry<'packs'>,
   address: Address,
-  contact: Contact
-  handleBack: () => void,
+  contact: Contact,
+  initialMessage: string,
+  handleBack: (message: string) => void,
 }
 
 const formId = "order-form"
@@ -20,8 +22,11 @@ export function SubmitStep({
   pack,
   address,
   contact,
+  initialMessage,
   handleBack,
 }: Props) {
+  const [message, setMessage] = useState(initialMessage)
+
   return <>
     <form
       id={formId}
@@ -39,14 +44,23 @@ export function SubmitStep({
       {HiddenInput("address-country", address.country)}
       {HiddenInput("contact-discord", contact.discord)}
       {HiddenInput("contact-source", contact.source)}
-      {HiddenInput("contact-annotation", contact.annotation)}
+      {HiddenInput("message", message)}
 
       <div className="lg:hidden">
-        <Overview pack={pack} address={address} contact={contact} />
+        <Overview pack={pack} address={address} contact={contact} message={message} />
       </div>
 
+      <Input
+        type="textarea"
+        label="Anmerkung"
+        value={message}
+        size={4}
+        handleChange={(e) => setMessage(e.currentTarget.value)}
+        explanation='Falls du mir noch etwas mitteilen möchtest.'
+      />
+
       <div className="flex-1 flex flex-col justify-end">
-        <Controls formId={formId} handleBack={handleBack} textNext={"Bestellen"} />
+        <Controls formId={formId} handleBack={() => handleBack(message)} textNext={"Bestellen"} />
       </div>
     </form>
   </>

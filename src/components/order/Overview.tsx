@@ -5,7 +5,8 @@ import type { Address } from './AddressStep'
 type Props = {
   pack: CollectionEntry<'packs'>,
   address: Address,
-  contact: Contact
+  contact: Contact,
+  message: string,
 }
 
 export function Overview({ pack, address, contact }: Props) {
@@ -62,13 +63,6 @@ export function Overview({ pack, address, contact }: Props) {
           <h2 className="font-bold text-lg">Kontakt</h2>
           <span>{contact.discord}</span>
           <span>{contact.source}</span>
-        </fieldset>
-      }
-      {
-        contact.annotation.trim() &&
-        <fieldset className="block lg:hidden">
-          <h2 className="font-bold text-lg">Anmerkung</h2>
-          <p>{contact.annotation}</p>
         </fieldset>
       }
 
