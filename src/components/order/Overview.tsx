@@ -48,7 +48,7 @@ export function Overview({ pack, address, contact }: Props) {
       }
       {
         address.name.trim() &&
-        <fieldset className="flex flex-col">
+        <fieldset className="flex flex-col grid-col-start-2">
           <h2 className="font-bold text-lg">Adresse</h2>
           <span>{address.name}</span>
           {address.annotation && <span>{address.annotation}</span>}
@@ -59,7 +59,7 @@ export function Overview({ pack, address, contact }: Props) {
       }
       {
         contact.source.trim() &&
-        <fieldset className="flex flex-col">
+        <fieldset className="flex flex-col grid-col-start-2 lg:grid-col-start-1">
           <h2 className="font-bold text-lg">Kontakt</h2>
           <span>{contact.discord}</span>
           <span>{contact.source}</span>
