@@ -15,9 +15,9 @@ export function Overview({ pack, address, contact }: Props) {
 
       <input type="hidden" name="form-name" value="order" />
 
-      <h1 className="font-bold text-2xl sm:col-span-2 lg:col-span-1">
+      <h2 className="font-bold text-2xl col-span-1 hidden lg:block">
         Übersicht
-      </h1>
+      </h2>
 
       {
         pack &&
