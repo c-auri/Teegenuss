@@ -3,6 +3,7 @@ import { Controls } from "./Controls"
 import type { CollectionEntry } from "astro:content"
 import type { Address } from "./AddressStep"
 import type { Contact } from "./ContactStep"
+import { Overview } from "./Overview"
 
 type Props = {
   isVisible: boolean,
@@ -16,6 +17,7 @@ const formId = "order-form"
 
 export function SubmitStep({
   isVisible,
+  pack,
   address,
   contact,
   handleBack,
@@ -38,6 +40,10 @@ export function SubmitStep({
       {HiddenInput("contact-discord", contact.discord)}
       {HiddenInput("contact-source", contact.source)}
       {HiddenInput("contact-annotation", contact.annotation)}
+
+      <div className="lg:hidden">
+        <Overview pack={pack} address={address} contact={contact} />
+      </div>
 
       <div className="flex-1 flex flex-col justify-end">
         <Controls formId={formId} handleBack={handleBack} textNext={"Bestellen"} />

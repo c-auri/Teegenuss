@@ -19,10 +19,8 @@ export default function Order({ pack }: Props) {
     <div className="py-12 flex flex-col items-center gap-5 md:bg-white md:rounded-xl md:shadow-md  md:min-h-[46rem] lg:min-h-[42rem] lg:py-4 lg:mb-10 lg:flex-row lg:gap-0 lg:items-stretch">
 
       <section className="max-w-2xl w-full text-lg text-slate-600 lg:min-w-fit lg:w-1/3 lg:py-6">
-        <div className="h-full w-full lg:px-12 lg:py-4 lg:border-r lg:border-slate-200">
-          <div className={`${current === "overview" ? "block" : "hidden lg:block"}`}>
-            <Overview pack={pack} address={address} contact={contact} />
-          </div>
+        <div className="hidden h-full w-full lg:block lg:px-12 lg:py-4 lg:border-r lg:border-slate-200">
+          <Overview pack={pack} address={address} contact={contact} />
         </div>
       </section>
 
