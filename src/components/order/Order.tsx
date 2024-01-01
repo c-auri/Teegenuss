@@ -63,8 +63,8 @@ export default function Order({ pack }: Props) {
           />
         }
         {
-          current === 'overview' &&
           <OverviewStep
+            isVisible={current === 'overview'}
             pack={pack}
             address={address}
             contact={contact}

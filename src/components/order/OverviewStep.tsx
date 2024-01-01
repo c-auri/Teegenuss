@@ -5,6 +5,7 @@ import type { Address } from "./AddressStep"
 import type { Contact } from "./ContactStep"
 
 type Props = {
+  isVisible: boolean,
   pack: CollectionEntry<'packs'>,
   address: Address,
   contact: Contact
@@ -14,6 +15,7 @@ type Props = {
 const formId = "overview-form"
 
 export function OverviewStep({
+  isVisible,
   pack,
   address,
   contact,
@@ -23,7 +25,7 @@ export function OverviewStep({
     <form
       id={formId}
       name="order"
-      className={"flex-1 flex flex-col"}
+      className={`${isVisible ? "block" : "hidden"} flex-1 flex flex-col`}
       method="POST"
       data-netlify="true"
     >
