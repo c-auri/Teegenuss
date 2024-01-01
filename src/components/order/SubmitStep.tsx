@@ -31,7 +31,7 @@ export function SubmitStep({
     <form
       id={formId}
       name="order"
-      className={`${isVisible ? "block" : "hidden"} flex-1 flex flex-col`}
+      className={`${isVisible ? "flex" : "hidden"} flex-1 flex-col`}
       method="POST"
       data-netlify="true"
     >
@@ -46,24 +46,30 @@ export function SubmitStep({
       {HiddenInput("contact-source", contact.source)}
       {HiddenInput("message", message)}
 
-      <h2 className="pb-6 font-bold text-2xl text-gray-600 hidden lg:block">Bestätigung</h2>
+      <section className="text-slate-600 flex-1 flex flex-col gap-6">
+        <h2 className="font-bold text-2xl text-gray-600">Bestellbestätigung</h2>
 
-      <div className="lg:hidden">
-        <Overview pack={pack} address={address} contact={contact} message={message} />
-      </div>
+        <p>
+          Hier kannst du noch einmal alle Angaben auf Korrektheit überprüfen und mir eine Anmerkung mitgeben, sollte noch etwas ungeklärt sein.
+        </p>
 
-      <Input
-        type="textarea"
-        label="Anmerkung"
-        value={message}
-        size={4}
-        handleChange={(e) => setMessage(e.currentTarget.value)}
-        explanation='Falls du mir noch etwas mitteilen möchtest.'
-      />
+        <div className="lg:hidden">
+          <Overview pack={pack} address={address} contact={contact} message={message} />
+        </div>
 
-      <div className="flex-1 flex flex-col justify-end">
-        <Controls formId={formId} handleBack={() => handleBack(message)} textNext={"Bestellen"} />
-      </div>
+        <Input
+          type="textarea"
+          label="Anmerkung"
+          value={message}
+          size={4}
+          handleChange={(e) => setMessage(e.currentTarget.value)}
+        />
+
+        <div className="flex-1 flex flex-col justify-end">
+          <Controls formId={formId} handleBack={() => handleBack(message)} textNext={"Bestellen"} />
+        </div>
+      </section>
+
     </form>
   </>
 }
