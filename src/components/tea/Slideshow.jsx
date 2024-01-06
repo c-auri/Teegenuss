@@ -36,7 +36,7 @@ function Control(title, path, onClick) {
         <span 
             title={title === "previous" ? "vorherige Abbildung" : "nächste Abbildung"}
             onClick={onClick} 
-            className={(title === "previous" ? "justify-self-end" : "justify-self-start") + " cursor-pointer select-none px-3 py-1 rounded-md row-start-2 lg:justify-self-center fill-slate-300 hover:fill-slate-400 hover:bg-slate-100 sm:row-start-1 sm:py-3 sm:px-1"}
+            className={(title === "previous" ? "justify-self-end" : "justify-self-start") + " cursor-pointer select-none px-3 py-1 rounded-md row-start-2 lg:justify-self-center fill-slate-400 hover:fill-slate-500 hover:bg-slate-200 sm:row-start-1 sm:py-3 sm:px-1"}
         >
             <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960">
                 <path d={path}/>
