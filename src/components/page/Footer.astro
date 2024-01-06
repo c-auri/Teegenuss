@@ -6,8 +6,15 @@ const { size } = Astro.props
 <Frame size={size}>
     <footer class="select-none pt-5 pb-5 flex justify-between text-sm text-slate-400 md:text-md">
         <span>Copyright &copy; Christoph Aurich</span>
-        <a href="/impressum" class="cursor-pointer hover:text-slate-500">
-            Impressum
-        </a>
+        <ul>
+            <li class="flex gap-5">
+                <a href="/glossar" class="cursor-pointer hover:text-slate-500 hidden sm:inline">
+                    Glossar
+                </a>
+                <a href="/impressum" class="cursor-pointer hover:text-slate-500">
+                    Impressum
+                </a>
+            </li>
+        </ul>
     </footer>
 </Frame>
