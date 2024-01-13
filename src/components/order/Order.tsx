@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { initializeContact, ContactStep, Contact } from './ContactStep'
 import { initializeAddress, AddressStep, Address } from './AddressStep'
 import { TermsStep } from './TermsStep'
+import { PacksStep, initializePacks } from './PacksStep'
 import { SubmitStep } from './SubmitStep'
 import { Overview } from './Overview'
 
@@ -12,6 +13,7 @@ type Props = {
 
 export default function Order({ pack }: Props) {
   const [ current, setCurrent ] = useState("terms")
+  const [ packs, setPacks ] = useState(initializePacks())
   const [ address, setAddress ] = useState(initializeAddress())
   const [ contact, setContact ] = useState(initializeContact())
   const [ message, setMessage ] = useState("")
@@ -30,7 +32,19 @@ export default function Order({ pack }: Props) {
         {
           current === 'terms' &&
           <TermsStep
-            handleNext={() => setCurrent('address')}
+            handleNext={() => setCurrent('packs')}
+          />
+        }
+        {
+          current === 'packs' &&
+          <PacksStep
+            initialValues={packs}
+            handleBack={() => {
+              setCurrent("terms")
+            }}
+            handleNext={() => {
+              setCurrent("address")
+            }}
           />
         }
         {
@@ -39,7 +53,7 @@ export default function Order({ pack }: Props) {
             initialValues={address}
             handleBack={(address: Address) => {
               setAddress(address)
-              setCurrent("terms")
+              setCurrent("packs")
             }}
             handleNext={(address: Address) => {
               setAddress(address)
