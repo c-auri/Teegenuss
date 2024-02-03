@@ -3,13 +3,13 @@ import type { Contact } from './ContactStep'
 import type { Address } from './AddressStep'
 
 type Props = {
-  pack: CollectionEntry<'packs'>,
+  packs: CollectionEntry<'packs'>[],
   address: Address,
   contact: Contact,
   message: string,
 }
 
-export function Overview({ pack, address, contact }: Props) {
+export function Overview({ packs, address, contact }: Props) {
   return <>
     <div className={`text-slate-600 grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-1`}>
 
@@ -20,14 +20,17 @@ export function Overview({ pack, address, contact }: Props) {
       </h2>
 
       {
-        pack &&
+        packs &&
         <fieldset className="sm:col-span-2 lg:col-span-1">
           <h2 className="font-bold text-lg">Auswahl</h2>
 
-          <p className="pt-1 flex justify-between gap-8">
-            <span>{pack.data.title}</span>
-            <span>{pack.data.price},00&thinsp;€</span>
-          </p>
+          {
+            packs.map((pack, i) =>
+              <p key={i} className="pt-1 flex justify-between gap-8">
+                <span>{pack.data.title}</span>
+                <span>{pack.data.price},00&thinsp;€</span>
+              </p>)
+          }
 
           <p className="pb-1 flex justify-between gap-8">
             <span>Versand (Deutschland)</span>
@@ -38,7 +41,7 @@ export function Overview({ pack, address, contact }: Props) {
 
           <p className="py-1 flex justify-between gap-8">
             <span>Gesamt</span>
-            <span>{pack.data.price + 3},00&thinsp;€</span>
+            <span>{packs.reduce<number>((price, pack) => price + pack.data.price, 3)},00&thinsp;€</span>
           </p>
 
           <p className="text-right py-1 text-sm text-slate-400">
