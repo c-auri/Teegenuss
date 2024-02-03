@@ -2,13 +2,13 @@ import { useState } from 'react'
 import { initializeContact, ContactStep, Contact } from './ContactStep'
 import { initializeAddress, AddressStep, Address } from './AddressStep'
 import { TermsStep } from './TermsStep'
-import { PacksStep, initializePacks } from './PacksStep'
+import { SelectionStep, initializeSelection } from './SelectionStep'
 import { SubmitStep } from './SubmitStep'
 import { Overview } from './Overview'
 
 export default function Order() {
   const [ current, setCurrent ] = useState("terms")
-  const [ packs, setPacks ] = useState(initializePacks())
+  const [ selection, setSelection ] = useState(initializeSelection())
   const [ address, setAddress ] = useState(initializeAddress())
   const [ contact, setContact ] = useState(initializeContact())
   const [ message, setMessage ] = useState("")
@@ -18,7 +18,7 @@ export default function Order() {
 
       <section className="max-w-2xl w-full text-lg text-slate-600 lg:min-w-fit lg:w-1/3 lg:py-6">
         <div className="hidden h-full w-full lg:block lg:px-12 lg:py-4 lg:border-r lg:border-slate-200">
-          <Overview packs={packs} address={address} contact={contact} message={message} />
+          <Overview selection={selection} address={address} contact={contact} message={message} />
         </div>
       </section>
 
@@ -27,13 +27,13 @@ export default function Order() {
         {
           current === 'terms' &&
           <TermsStep
-            handleNext={() => setCurrent('packs')}
+            handleNext={() => setCurrent('selection')}
           />
         }
         {
-          current === 'packs' &&
-          <PacksStep
-            initialValue={packs}
+          current === 'selection' &&
+          <SelectionStep
+            initialSelection={selection}
             handleBack={() => {
               setCurrent("terms")
             }}
@@ -48,7 +48,7 @@ export default function Order() {
             initialValues={address}
             handleBack={(address: Address) => {
               setAddress(address)
-              setCurrent("packs")
+              setCurrent("selection")
             }}
             handleNext={(address: Address) => {
               setAddress(address)
@@ -73,7 +73,7 @@ export default function Order() {
         {
           <SubmitStep
             isVisible={current === 'overview'}
-            packs={packs}
+            selection={selection}
             address={address}
             contact={contact}
             initialMessage={message}

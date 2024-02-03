@@ -2,13 +2,13 @@ import { useState } from "react"
 import { Input, HiddenInput } from "../forms/Input"
 import { Overview } from "./Overview"
 import { Controls } from "./Controls"
-import type { CollectionEntry } from "astro:content"
+import type { Selection } from "./SelectionStep"
 import type { Address } from "./AddressStep"
 import type { Contact } from "./ContactStep"
 
 type Props = {
   isVisible: boolean,
-  packs: CollectionEntry<'packs'>[],
+  selection: Selection[],
   address: Address,
   contact: Contact,
   initialMessage: string,
@@ -19,7 +19,7 @@ const formId = "order-form"
 
 export function SubmitStep({
   isVisible,
-  packs,
+  selection,
   address,
   contact,
   initialMessage,
@@ -54,7 +54,7 @@ export function SubmitStep({
         </p>
 
         <div className="lg:hidden">
-          <Overview packs={packs} address={address} contact={contact} message={message} />
+          <Overview selection={selection} address={address} contact={contact} message={message} />
         </div>
 
         <Input
