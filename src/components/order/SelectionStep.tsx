@@ -2,23 +2,23 @@ import { getEntry, type CollectionEntry } from 'astro:content'
 import { Input } from '../forms/Input'
 import { Controls } from './Controls'
 
-const defaultPack: Pack = await getEntry('packs', '23-1-Chinas-Schaetze')
+const defaultSelection: Pack = await getEntry('packs', '23-1-Chinas-Schaetze')
 
 export type Pack = CollectionEntry<'packs'>
 
-export function initializePacks(): Pack[] {
-  return [defaultPack]
+export function initializeSelection(): Pack[] {
+  return [defaultSelection]
 }
 
 type Props = {
-  initialValue: Pack[],
+  initialSelection: Pack[],
   handleBack: () => void,
   handleNext: () => void,
 }
 
 const formId = "packs-form"
 
-export function PacksStep({initialValue, handleBack, handleNext}: Props) {
+export function SelectionStep({initialSelection, handleBack, handleNext}: Props) {
   return <>
     <form
       id={formId}
@@ -28,7 +28,7 @@ export function PacksStep({initialValue, handleBack, handleNext}: Props) {
         handleNext()
       }}
     >
-      <h2 className="pb-6 font-bold text-2xl text-gray-600">Paketwauswahl</h2>
+      <h2 className="pb-6 font-bold text-2xl text-gray-600">Paketauswahl</h2>
 
       <div className="flex-1">
         <div className="flex flex-col justify-start gap-3">
@@ -36,7 +36,7 @@ export function PacksStep({initialValue, handleBack, handleNext}: Props) {
           <Input
             type="text"
             label="Paket"
-            value={initialValue.map(pack => pack.data.title).join(', ')}
+            value={initialSelection.map(pack => pack.data.title).join(', ')}
             handleChange={() => undefined}
             isRequired={true}
           />
