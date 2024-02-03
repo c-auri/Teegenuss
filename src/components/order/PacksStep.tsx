@@ -1,22 +1,24 @@
-import type { CollectionEntry } from 'astro:content'
+import { getEntry, type CollectionEntry } from 'astro:content'
 import { Input } from '../forms/Input'
 import { Controls } from './Controls'
 
-export type Packs = CollectionEntry<'packs'>[]
+const defaultPack: Pack = await getEntry('packs', '23-1-Chinas-Schaetze')
 
-export function initializePacks() {
-  return []
+export type Pack = CollectionEntry<'packs'>
+
+export function initializePacks(): Pack[] {
+  return [defaultPack]
 }
 
 type Props = {
-  initialValues: Packs,
+  initialValue: Pack[],
   handleBack: () => void,
   handleNext: () => void,
 }
 
 const formId = "packs-form"
 
-export function PacksStep({initialValues, handleBack, handleNext}: Props) {
+export function PacksStep({initialValue, handleBack, handleNext}: Props) {
   return <>
     <form
       id={formId}
@@ -34,7 +36,7 @@ export function PacksStep({initialValues, handleBack, handleNext}: Props) {
           <Input
             type="text"
             label="Paket"
-            value="Chinas Schätze"
+            value={initialValue.map(pack => pack.data.title).join(', ')}
             handleChange={() => undefined}
             isRequired={true}
           />

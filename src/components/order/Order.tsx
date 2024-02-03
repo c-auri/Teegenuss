@@ -38,7 +38,7 @@ export default function Order({ pack }: Props) {
         {
           current === 'packs' &&
           <PacksStep
-            initialValues={packs}
+            initialValue={packs}
             handleBack={() => {
               setCurrent("terms")
             }}
