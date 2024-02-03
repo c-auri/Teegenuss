@@ -7,7 +7,7 @@ import { SubmitStep } from './SubmitStep'
 import { Overview } from './Overview'
 
 export default function Order() {
-  const [ current, setCurrent ] = useState("terms")
+  const [ current, setCurrent ] = useState("selection")
   const [ selection, setSelection ] = useState(initializeSelection())
   const [ address, setAddress ] = useState(initializeAddress())
   const [ contact, setContact ] = useState(initializeContact())
