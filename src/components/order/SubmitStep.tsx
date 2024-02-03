@@ -8,7 +8,7 @@ import type { Contact } from "./ContactStep"
 
 type Props = {
   isVisible: boolean,
-  pack: CollectionEntry<'packs'>,
+  packs: CollectionEntry<'packs'>[],
   address: Address,
   contact: Contact,
   initialMessage: string,
@@ -19,7 +19,7 @@ const formId = "order-form"
 
 export function SubmitStep({
   isVisible,
-  pack,
+  packs,
   address,
   contact,
   initialMessage,
@@ -54,7 +54,7 @@ export function SubmitStep({
         </p>
 
         <div className="lg:hidden">
-          <Overview pack={pack} address={address} contact={contact} message={message} />
+          <Overview packs={packs} address={address} contact={contact} message={message} />
         </div>
 
         <Input

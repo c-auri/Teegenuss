@@ -4,10 +4,8 @@ import Page from '../layouts/Page.astro'
 import Frame from '../components/page/Frame.astro'
 import Order from '../components/order/Order'
 import favicon from '../assets/icons/favicon.svg'
-import { getEntry } from 'astro:content'
 
 const title = "Bestellung"
-const pack = await getEntry('packs', '23-1-Chinas-Schaetze')
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -19,6 +17,6 @@ const pack = await getEntry('packs', '23-1-Chinas-Schaetze')
 </head>
 <Page size="sm">
   <Frame size="sm">
-    <Order pack={pack} client:load />
+    <Order client:load />
   </Frame>
 </Page>

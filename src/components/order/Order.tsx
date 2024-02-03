@@ -1,4 +1,3 @@
-import type { CollectionEntry } from 'astro:content'
 import { useState } from 'react'
 import { initializeContact, ContactStep, Contact } from './ContactStep'
 import { initializeAddress, AddressStep, Address } from './AddressStep'
@@ -7,11 +6,7 @@ import { PacksStep, initializePacks } from './PacksStep'
 import { SubmitStep } from './SubmitStep'
 import { Overview } from './Overview'
 
-type Props = {
-  pack: CollectionEntry<'packs'>,
-}
-
-export default function Order({ pack }: Props) {
+export default function Order() {
   const [ current, setCurrent ] = useState("terms")
   const [ packs, setPacks ] = useState(initializePacks())
   const [ address, setAddress ] = useState(initializeAddress())
@@ -23,7 +18,7 @@ export default function Order({ pack }: Props) {
 
       <section className="max-w-2xl w-full text-lg text-slate-600 lg:min-w-fit lg:w-1/3 lg:py-6">
         <div className="hidden h-full w-full lg:block lg:px-12 lg:py-4 lg:border-r lg:border-slate-200">
-          <Overview pack={pack} address={address} contact={contact} message={message} />
+          <Overview packs={packs} address={address} contact={contact} message={message} />
         </div>
       </section>
 
@@ -78,7 +73,7 @@ export default function Order({ pack }: Props) {
         {
           <SubmitStep
             isVisible={current === 'overview'}
-            pack={pack}
+            packs={packs}
             address={address}
             contact={contact}
             initialMessage={message}
