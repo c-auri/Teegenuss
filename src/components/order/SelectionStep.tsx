@@ -127,7 +127,7 @@ function Input({selection, handleChange}: InputProps) {
         className={`w-10 focus:outline-none`}
         type="number"
         onKeyDown={(event) => event.preventDefault()}
-        min="0"
+        min="1"
         max={selection.max}
         value={selection.amount}
         onChange={(e) => handleChange(parseInt(e.currentTarget.value))}>
