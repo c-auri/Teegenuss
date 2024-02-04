@@ -7,6 +7,7 @@ import type { Address } from "./AddressStep"
 import type { Contact } from "./ContactStep"
 
 type Props = {
+  current: number,
   isVisible: boolean,
   selection: Selection[],
   address: Address,
@@ -18,6 +19,7 @@ type Props = {
 const formId = "order-form"
 
 export function SubmitStep({
+  current,
   isVisible,
   selection,
   address,
@@ -54,14 +56,14 @@ export function SubmitStep({
         </p>
 
         <div className="lg:hidden">
-          <Overview selection={selection} address={address} contact={contact} message={message} />
+          <Overview current={4} selection={selection} address={address} contact={contact} message={message} />
         </div>
 
         <Input
           type="textarea"
           label="Anmerkung"
           value={message}
-          size={4}
+          size={current}
           handleChange={(e) => setMessage(e.currentTarget.value)}
         />
 
