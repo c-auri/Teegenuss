@@ -7,7 +7,7 @@ import { SubmitStep } from './SubmitStep'
 import { Overview } from './Overview'
 
 export default function Order() {
-  const [ current, setCurrent ] = useState("selection")
+  const [ current, setCurrent ] = useState(0)
   const [ selection, setSelection ] = useState(initializeSelection())
   const [ address, setAddress ] = useState(initializeAddress())
   const [ contact, setContact ] = useState(initializeContact())
@@ -18,70 +18,71 @@ export default function Order() {
 
       <section className="max-w-2xl w-full text-lg text-slate-600 lg:min-w-fit lg:w-1/3 lg:py-6">
         <div className="hidden h-full w-full lg:block lg:px-12 lg:py-4 lg:border-r lg:border-slate-200">
-          <Overview selection={selection} address={address} contact={contact} message={message} />
+          <Overview current={current} selection={selection} address={address} contact={contact} message={message} />
         </div>
       </section>
 
       <section className="max-w-2xl flex-1 w-full flex flex-col lg:py-10 lg:px-12">
 
         {
-          current === 'terms' &&
+          current === 0 &&
           <TermsStep
-            handleNext={() => setCurrent('selection')}
+            handleNext={() => setCurrent(1)}
           />
         }
         {
-          current === 'selection' &&
+          current === 1 &&
           <SelectionStep
             initialSelection={selection}
             handleBack={(selection: Selection[]) => {
               setSelection(selection)
-              setCurrent("terms")
+              setCurrent(0)
             }}
             handleNext={(selection: Selection[]) => {
               setSelection(selection)
-              setCurrent("address")
+              setCurrent(2)
             }}
           />
         }
         {
-          current === 'address' &&
+          current === 2 &&
           <AddressStep
             initialValues={address}
             handleBack={(address: Address) => {
               setAddress(address)
-              setCurrent("selection")
+              setCurrent(1)
             }}
             handleNext={(address: Address) => {
               setAddress(address)
-              setCurrent("contact")
+              setCurrent(3)
             }}
           />
         }
         {
-          current === 'contact' &&
+          current === 3 &&
           <ContactStep
             initialValues={contact}
             handleBack={(contact: Contact) => {
               setContact(contact)
-              setCurrent("address")
+              setCurrent(2)
             }}
             handleNext={(contact: Contact) => {
               setContact(contact)
-              setCurrent("overview")
+              setCurrent(4)
             }}
           />
         }
         {
           <SubmitStep
-            isVisible={current === 'overview'}
+            current={current}
+            isVisible={current === 4}
             selection={selection}
             address={address}
             contact={contact}
             initialMessage={message}
             handleBack={(message: string) => {
               setMessage(message)
-              setCurrent("contact")
+              setCurrent(3)
             }}
           />
         }

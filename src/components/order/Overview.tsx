@@ -3,13 +3,14 @@ import type { Contact } from './ContactStep'
 import type { Address } from './AddressStep'
 
 type Props = {
+  current: number,
   selection: Selection[],
   address: Address,
   contact: Contact,
   message: string,
 }
 
-export function Overview({ selection, address, contact }: Props) {
+export function Overview({ current, selection, address, contact }: Props) {
   return <>
     <div className={`text-slate-600 grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-1`}>
 
@@ -20,7 +21,7 @@ export function Overview({ selection, address, contact }: Props) {
       </h2>
 
       {
-        selection &&
+        current > 1 &&
         <fieldset className="sm:col-span-2 lg:col-span-1">
           <h2 className="font-bold text-lg">Auswahl</h2>
 
@@ -50,7 +51,7 @@ export function Overview({ selection, address, contact }: Props) {
         </fieldset>
       }
       {
-        address.name.trim() &&
+        current > 2 &&
         <fieldset className="flex flex-col grid-col-start-2">
           <h2 className="font-bold text-lg">Adresse</h2>
           <span>{address.name}</span>
@@ -61,7 +62,7 @@ export function Overview({ selection, address, contact }: Props) {
         </fieldset>
       }
       {
-        contact.source.trim() &&
+        current > 3 &&
         <fieldset className="flex flex-col grid-col-start-2 lg:grid-col-start-1">
           <h2 className="font-bold text-lg">Kontakt</h2>
           <span>{contact.discord}</span>
