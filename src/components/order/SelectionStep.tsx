@@ -1,8 +1,6 @@
-import { getCollection } from 'astro:content'
+import type { CollectionEntry } from 'astro:content'
 import { Controls } from './Controls'
 import { useState } from 'react'
-
-const allPacks = await getCollection('packs')
 
 export type Selection = { name: string, price: number, amount: number, max: number }
 
@@ -22,8 +20,8 @@ export function calculateShipping(selection: Selection[]) {
   }
 }
 
-export function initializeSelection(): Selection[] {
-  return allPacks.reduce<Selection[]>((result, current) => {
+export function initializeSelection(packs: CollectionEntry<'packs'>[]): Selection[] {
+  return packs.reduce<Selection[]>((result, current) => {
     if (current.data.stash > 0) {
       result.push({
         name: current.data.title,

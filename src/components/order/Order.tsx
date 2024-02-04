@@ -1,3 +1,4 @@
+import type { CollectionEntry } from 'astro:content'
 import { useState } from 'react'
 import { initializeContact, ContactStep, Contact } from './ContactStep'
 import { initializeAddress, AddressStep, Address } from './AddressStep'
@@ -6,9 +7,13 @@ import { initializeSelection, SelectionStep, Selection } from './SelectionStep'
 import { SubmitStep } from './SubmitStep'
 import { Overview } from './Overview'
 
-export default function Order() {
+type Props = {
+  packs: CollectionEntry<'packs'>[]
+}
+
+export default function Order({packs}: Props) {
   const [ current, setCurrent ] = useState(0)
-  const [ selection, setSelection ] = useState(initializeSelection())
+  const [ selection, setSelection ] = useState(initializeSelection(packs))
   const [ address, setAddress ] = useState(initializeAddress())
   const [ contact, setContact ] = useState(initializeContact())
   const [ message, setMessage ] = useState("")

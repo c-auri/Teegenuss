@@ -4,8 +4,10 @@ import Page from '../layouts/Page.astro'
 import Frame from '../components/page/Frame.astro'
 import Order from '../components/order/Order'
 import favicon from '../assets/icons/favicon.svg'
+import { getCollection } from 'astro:content'
 
 const title = "Bestellung"
+const allPacks = await getCollection('packs')
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -17,6 +19,6 @@ const title = "Bestellung"
 </head>
 <Page size="sm">
   <Frame size="sm">
-    <Order client:load />
+    <Order packs={allPacks.filter(pack => pack.data.stash > 0)} client:load />
   </Frame>
 </Page>
