@@ -28,7 +28,7 @@ export function Overview({ selection, address, contact }: Props) {
             selection.map((pack, i) =>
               <p key={i} className="pt-1 flex justify-between gap-8">
                 <span>{pack.name}</span>
-                <span>{pack.price},00&thinsp;€</span>
+                <span>{pack.amount * pack.price},00&thinsp;€</span>
               </p>)
           }
 
