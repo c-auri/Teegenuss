@@ -6,6 +6,22 @@ const allPacks = await getCollection('packs')
 
 export type Selection = { name: string, price: number, amount: number, max: number }
 
+export function calculateShipping(selection: Selection[]) {
+  const totalAmount = selection.reduce((amount, current) => amount += current.amount, 0)
+  switch (totalAmount) {
+    case 0:
+      return 0
+    case 1:
+      return 3
+    case 2:
+    case 3:
+    case 4:
+      return 5
+    default:
+      return 8
+  }
+}
+
 export function initializeSelection(): Selection[] {
   return allPacks.reduce<Selection[]>((result, current) => {
     if (current.data.stash > 0) {
@@ -62,19 +78,28 @@ export function SelectionStep({initialSelection, handleBack, handleNext}: Props)
 
         </div>
 
-        <span className="mt-8 text-xl text-slate-600 flex justify-between">
+        <span className="mt-8 text-md text-slate-600 flex justify-between">
+          <span>
+            Versand&nbsp;
+          </span>
+          <span>
+            {calculateShipping(selection)},00&thinsp;€
+          </span>
+        </span>
+
+        <span className="text-xl text-slate-600 flex justify-between">
           <span>
             Gesamt&nbsp;
           </span>
           <span>
             {
-              selection.reduce<number>((total, current) => total + (current.amount * current.price), 0)
+              selection.reduce<number>((total, current) => total + (current.amount * current.price), calculateShipping(selection))
             },00&thinsp;€
           </span>
         </span>
 
         <span className="text-sm text-slate-400 flex justify-end">
-          zuzüglich&nbsp;Versandkosten
+          ggf.&nbsp;zzgl.&nbsp;Auslandsversandkosten
         </span>
 
       </div>
