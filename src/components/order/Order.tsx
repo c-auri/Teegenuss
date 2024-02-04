@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { initializeContact, ContactStep, Contact } from './ContactStep'
 import { initializeAddress, AddressStep, Address } from './AddressStep'
 import { TermsStep } from './TermsStep'
-import { SelectionStep, initializeSelection } from './SelectionStep'
+import { initializeSelection, SelectionStep, Selection } from './SelectionStep'
 import { SubmitStep } from './SubmitStep'
 import { Overview } from './Overview'
 
@@ -34,10 +34,12 @@ export default function Order() {
           current === 'selection' &&
           <SelectionStep
             initialSelection={selection}
-            handleBack={() => {
+            handleBack={(selection: Selection[]) => {
+              setSelection(selection)
               setCurrent("terms")
             }}
-            handleNext={() => {
+            handleNext={(selection: Selection[]) => {
+              setSelection(selection)
               setCurrent("address")
             }}
           />

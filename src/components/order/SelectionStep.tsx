@@ -22,8 +22,8 @@ export function initializeSelection(): Selection[] {
 
 type Props = {
   initialSelection: Selection[],
-  handleBack: () => void,
-  handleNext: () => void,
+  handleBack: (selection: Selection[]) => void,
+  handleNext: (selection: Selection[]) => void,
 }
 
 const formId = "packs-form"
@@ -46,7 +46,7 @@ export function SelectionStep({initialSelection, handleBack, handleNext}: Props)
       className={"flex-1 flex flex-col"}
       onSubmit={(e) => {
         e.preventDefault()
-        handleNext()
+        handleNext(selection)
       }}
     >
       <h2 className="pb-8 font-bold text-2xl text-gray-600">Paketauswahl</h2>
@@ -79,7 +79,7 @@ export function SelectionStep({initialSelection, handleBack, handleNext}: Props)
 
       </div>
 
-      <Controls formId={formId} handleBack={() => handleBack()} />
+      <Controls formId={formId} handleBack={() => handleBack(selection)} />
 
     </form>
   </>
