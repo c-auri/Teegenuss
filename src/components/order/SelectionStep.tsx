@@ -36,7 +36,7 @@ export function initializeSelection(packs: CollectionEntry<'packs'>[]): Selectio
       result.push({
         name: current.data.title,
         price: current.data.price,
-        amount: 0,
+        amount: 1,
         max: current.data.stash
       })
     }
