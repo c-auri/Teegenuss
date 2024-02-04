@@ -4,6 +4,16 @@ import { useState } from 'react'
 
 export type Selection = { name: string, price: number, amount: number, max: number }
 
+export function toString(selection: Selection[]) {
+  return selection.map(pack => `${pack.amount}x ${pack.name}: ${pack.amount * pack.price},00€`).join(' + ')
+}
+
+export function calculateTotal(selection: Selection[]) {
+  return selection.reduce<number>(
+    (total, current) => total + (current.amount * current.price),
+    calculateShipping(selection))
+}
+
 export function calculateShipping(selection: Selection[]) {
   const totalAmount = selection.reduce((amount, current) => amount += current.amount, 0)
   switch (totalAmount) {
@@ -91,7 +101,7 @@ export function SelectionStep({initialSelection, handleBack, handleNext}: Props)
           </span>
           <span>
             {
-              selection.reduce<number>((total, current) => total + (current.amount * current.price), calculateShipping(selection))
+              calculateTotal(selection)
             },00&thinsp;€
           </span>
         </span>

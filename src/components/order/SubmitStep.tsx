@@ -2,7 +2,7 @@ import { useState } from "react"
 import { Input, HiddenInput } from "../forms/Input"
 import { Overview } from "./Overview"
 import { Controls } from "./Controls"
-import type { Selection } from "./SelectionStep"
+import { type Selection, toString, calculateTotal, calculateShipping } from "./SelectionStep"
 import type { Address } from "./AddressStep"
 import type { Contact } from "./ContactStep"
 
@@ -39,6 +39,9 @@ export function SubmitStep({
     >
       <input type="hidden" name="form-name" value="order" />
 
+      {HiddenInput("selection-packs", toString(selection))}
+      {HiddenInput("selection-shipping", calculateShipping(selection) + ",00€")}
+      {HiddenInput("selection-total", calculateTotal(selection) + ",00€")}
       {HiddenInput("address-name", address.name)}
       {HiddenInput("address-annotation", address.annotation)}
       {HiddenInput("address-street", `${address.street} ${address.number}`)}

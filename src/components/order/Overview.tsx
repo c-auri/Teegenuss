@@ -1,4 +1,4 @@
-import { calculateShipping, type Selection } from './SelectionStep'
+import { calculateShipping, calculateTotal, type Selection } from './SelectionStep'
 import type { Contact } from './ContactStep'
 import type { Address } from './AddressStep'
 
@@ -42,7 +42,7 @@ export function Overview({ current, selection, address, contact }: Props) {
 
           <p className="py-1 flex justify-between gap-8">
             <span>Gesamt</span>
-            <span>{selection.reduce<number>((price, pack) => price + pack.price, 3)},00&thinsp;€</span>
+            <span>{calculateTotal(selection)},00&thinsp;€</span>
           </p>
 
           <p className="text-right py-1 text-sm text-slate-400">
