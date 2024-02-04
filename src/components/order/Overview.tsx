@@ -1,4 +1,4 @@
-import type { Selection } from './SelectionStep'
+import { calculateShipping, type Selection } from './SelectionStep'
 import type { Contact } from './ContactStep'
 import type { Address } from './AddressStep'
 
@@ -35,7 +35,7 @@ export function Overview({ current, selection, address, contact }: Props) {
 
           <p className="pb-1 flex justify-between gap-8">
             <span>Versand (Deutschland)</span>
-            <span>3,00&thinsp;€</span>
+            <span>{calculateShipping(selection)},00&thinsp;€</span>
           </p>
 
           <div className="my-1 w-full h-px bg-slate-300"></div>
