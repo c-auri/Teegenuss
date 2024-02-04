@@ -91,7 +91,7 @@ interface InputProps {
 }
 
 function Input({selection, handleChange}: InputProps) {
-  return <span className={`w-full px-8 py-3 text-lg text-slate-600 rounded-md border border-slate-300 grid grid-cols-[3fr,2fr,1fr] gap-10`}>
+  return <span className={`w-full px-4 py-3 text-lg text-slate-600 rounded-md border border-slate-300 grid grid-cols-[3fr,2fr,1fr] gap-10`}>
     <div className="flex-1">
       <h3 className="text-slate-700">{selection.name}</h3>
       <span className="text-slate-500">{selection.price},00&thinsp;€</span>
