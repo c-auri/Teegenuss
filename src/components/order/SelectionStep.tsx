@@ -132,7 +132,7 @@ function Input({selection, handleChange}: InputProps) {
     <span className="border rounded-md flex justify-center items-center">
       <span className="mx-3">Anzahl</span>
       <input
-        className={`w-10 focus:outline-none`}
+        className={`w-10 focus:outline-none bg-transparent`}
         type="number"
         onKeyDown={(event) => event.preventDefault()}
         min="1"
