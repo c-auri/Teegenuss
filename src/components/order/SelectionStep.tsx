@@ -49,18 +49,34 @@ export function SelectionStep({initialSelection, handleBack, handleNext}: Props)
         handleNext()
       }}
     >
-      <h2 className="pb-6 font-bold text-2xl text-gray-600">Paketauswahl</h2>
+      <h2 className="pb-8 font-bold text-2xl text-gray-600">Paketauswahl</h2>
 
       <div className="flex-1">
         <div className="flex flex-col justify-start gap-3">
 
           {
-            initialSelection.map(pack => <>
+            selection.map(pack => <>
               <Input selection={pack} handleChange={(amount) =>  setAmount(pack, amount)}></Input>
             </>)
           }
 
         </div>
+
+        <span className="mt-8 text-xl text-slate-600 flex justify-between">
+          <span>
+            Gesamt&nbsp;
+          </span>
+          <span>
+            {
+              selection.reduce<number>((total, current) => total + (current.amount * current.price), 0)
+            },00&thinsp;€
+          </span>
+        </span>
+
+        <span className="text-sm text-slate-400 flex justify-end">
+          zuzüglich&nbsp;Versandkosten
+        </span>
+
       </div>
 
       <Controls formId={formId} handleBack={() => handleBack()} />
