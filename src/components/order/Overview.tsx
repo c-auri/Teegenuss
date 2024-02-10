@@ -63,7 +63,7 @@ export function Overview({ current, selection, address, contact }: Props) {
       }
       {
         current > 3 &&
-        <fieldset className="flex flex-col grid-col-start-2 lg:grid-col-start-1">
+        <fieldset className="max-w-full flex flex-col grid-col-start-2 lg:grid-col-start-1">
           <h2 className="font-bold text-lg">Kontakt</h2>
           <TruncatedInput text={contact.discord} />
           <TruncatedInput text={contact.source} />
@@ -75,7 +75,7 @@ export function Overview({ current, selection, address, contact }: Props) {
 }
 
 function TruncatedInput({text} : {text: string}) {
-  return <span className="max-w-[19rem] truncate" title={text}>
+  return <span className="max-w-[16rem] lg:max-w-[19rem] truncate" title={text}>
       {text}
   </span>
 }
