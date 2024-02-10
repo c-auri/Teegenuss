@@ -76,7 +76,7 @@ export function SelectionStep({initialSelection, handleBack, handleNext}: Props)
       <h2 className="font-bold text-2xl text-gray-600">Paketauswahl</h2>
 
       <div className="flex-1">
-        <div className="flex flex-col justify-start gap-3">
+        <div className="mb-8 flex flex-col justify-start gap-3">
 
           {
             selection.map(pack => <>
@@ -86,7 +86,7 @@ export function SelectionStep({initialSelection, handleBack, handleNext}: Props)
 
         </div>
 
-        <span className="mt-8 text-md text-slate-600 flex justify-between">
+        <span className="my-4 text-md text-slate-600 flex justify-between">
           <span>
             Versand&nbsp;
           </span>
@@ -95,7 +95,7 @@ export function SelectionStep({initialSelection, handleBack, handleNext}: Props)
           </span>
         </span>
 
-        <div className="my-5 w-full h-px bg-slate-200"></div>
+        <div className="my-3 w-full h-px bg-slate-200"></div>
 
         <span className="text-xl text-slate-600 flex justify-between">
           <span>
