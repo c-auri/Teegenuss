@@ -54,22 +54,28 @@ export function Overview({ current, selection, address, contact }: Props) {
         current > 2 &&
         <fieldset className="flex flex-col grid-col-start-2">
           <h2 className="font-bold text-lg">Adresse</h2>
-          <span>{address.name}</span>
-          {address.annotation && <span>{address.annotation}</span>}
-          <span>{`${address.street} ${address.number}`}</span>
-          <span>{`${address.postalCode} ${address.town}`}</span>
-          <span>{address.country}</span>
+          <TruncatedInput text={address.name} />
+          {address.annotation && <TruncatedInput text={address.annotation} />}
+          <TruncatedInput text={`${address.street} ${address.number}`} />
+          <TruncatedInput text={`${address.postalCode} ${address.town}`} />
+          <TruncatedInput text={address.country} />
         </fieldset>
       }
       {
         current > 3 &&
         <fieldset className="flex flex-col grid-col-start-2 lg:grid-col-start-1">
           <h2 className="font-bold text-lg">Kontakt</h2>
-          <span>{contact.discord}</span>
-          <span>{contact.source}</span>
+          <TruncatedInput text={contact.discord} />
+          <TruncatedInput text={contact.source} />
         </fieldset>
       }
 
     </div>
   </>
+}
+
+function TruncatedInput({text} : {text: string}) {
+  return <span className="max-w-[19rem] truncate" title={text}>
+      {text}
+  </span>
 }
