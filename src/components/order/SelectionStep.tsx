@@ -67,13 +67,13 @@ export function SelectionStep({initialSelection, handleBack, handleNext}: Props)
   return <>
     <form
       id={formId}
-      className={"flex-1 flex flex-col"}
+      className={"flex-1 flex flex-col gap-8"}
       onSubmit={(e) => {
         e.preventDefault()
         handleNext(selection)
       }}
     >
-      <h2 className="pb-8 font-bold text-2xl text-gray-600">Paketauswahl</h2>
+      <h2 className="font-bold text-2xl text-gray-600">Paketauswahl</h2>
 
       <div className="flex-1">
         <div className="flex flex-col justify-start gap-3">
