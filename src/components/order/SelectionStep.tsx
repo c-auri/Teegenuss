@@ -95,6 +95,8 @@ export function SelectionStep({initialSelection, handleBack, handleNext}: Props)
           </span>
         </span>
 
+        <div className="my-5 w-full h-px bg-slate-200"></div>
+
         <span className="text-xl text-slate-600 flex justify-between">
           <span>
             Gesamt&nbsp;
