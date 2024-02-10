@@ -88,7 +88,7 @@ export function SelectionStep({initialSelection, handleBack, handleNext}: Props)
 
         <span className="my-4 text-md text-slate-600 flex justify-between">
           <span>
-            Versand&nbsp;
+            Versand&nbsp;&&nbsp;Verpackung
           </span>
           <span>
             {calculateShipping(selection)},00&thinsp;€
