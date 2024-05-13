@@ -114,7 +114,7 @@ export function SelectionStep({initialSelection, handleBack, handleNext}: Props)
 
       </div>
 
-      <Controls formId={formId} handleBack={() => handleBack(selection)} />
+      <Controls formId={formId} handleBack={() => handleBack(selection)} isValid={() => selection.reduce((total, current) => total + current.amount, 0) > 0} />
 
     </form>
   </>
