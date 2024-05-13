@@ -36,7 +36,7 @@ export function initializeSelection(packs: CollectionEntry<'packs'>[]): Selectio
       result.push({
         name: current.data.title,
         price: current.data.price,
-        amount: 1,
+        amount: 0,
         max: current.data.stash
       })
     }
@@ -137,7 +137,7 @@ function Input({selection, handleChange}: InputProps) {
         className={`w-10 focus:outline-none bg-transparent`}
         type="number"
         onKeyDown={(event) => event.preventDefault()}
-        min="1"
+        min="0"
         max={selection.max}
         value={selection.amount}
         onChange={(e) => handleChange(parseInt(e.currentTarget.value))}>
