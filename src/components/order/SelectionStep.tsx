@@ -79,8 +79,8 @@ export function SelectionStep({initialSelection, handleBack, handleNext}: Props)
         <div className="mb-8 flex flex-col justify-start gap-3">
 
           {
-            selection.map(pack => <>
-              <Input selection={pack} handleChange={(amount) =>  setAmount(pack, amount)}></Input>
+            selection.map((pack, i)=> <>
+              <Input key={i} selection={pack} handleChange={(amount) =>  setAmount(pack, amount)}></Input>
             </>)
           }
 
