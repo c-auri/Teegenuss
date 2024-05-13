@@ -19,6 +19,7 @@ const packs = defineCollection({
     teaser: z.string(),
     stash: z.number().int(),
     price: z.number(),
+    priority: z.number().optional()
   })
 })
 

@@ -19,6 +19,6 @@ const allPacks = await getCollection('packs')
 </head>
 <Page size="sm">
   <Frame size="sm">
-    <Order packs={allPacks.filter(pack => pack.data.stash > 0)} client:load />
+    <Order packs={allPacks.filter(pack => pack.data.stash > 0).sort((a, b) => (a.data.priority ?? 0) - (b.data.priority ?? 0))} client:load />
   </Frame>
 </Page>

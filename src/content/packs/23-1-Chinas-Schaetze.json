@@ -6,5 +6,6 @@
     "numberOfTeas": 9,
     "totalWeight": "112\u200Ag",
     "stash": 10,
-    "price": 30
+    "price": 30,
+    "priority": 3
 }
