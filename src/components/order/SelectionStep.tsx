@@ -2,7 +2,7 @@ import type { CollectionEntry } from 'astro:content'
 import { Controls } from './Controls'
 import { useState } from 'react'
 
-export type Selection = { name: string, price: number, amount: number, max: number }
+export type Selection = { name: string, price: number, numberOfTeas: number, amount: number, max: number }
 
 export function toString(selection: Selection[]) {
   return selection.map(pack => `${pack.amount}x ${pack.name}: ${pack.amount * pack.price},00€`).join(' + ')
@@ -15,19 +15,13 @@ export function calculateTotal(selection: Selection[]) {
 }
 
 export function calculateShipping(selection: Selection[]) {
-  const totalAmount = selection.reduce((amount, current) => amount += current.amount, 0)
-  switch (totalAmount) {
-    case 0:
-      return 0
-    case 1:
-      return 3
-    case 2:
-    case 3:
-    case 4:
-      return 5
-    default:
-      return 8
-  }
+  const numberOfTeas = selection.reduce((result, current) => result += current.amount * current.numberOfTeas, 0)
+
+  if (numberOfTeas === 0) return 0
+  if (numberOfTeas <= 10) return 3
+  if (numberOfTeas <= 20) return 5
+
+  return 8
 }
 
 export function initializeSelection(packs: CollectionEntry<'packs'>[]): Selection[] {
@@ -36,6 +30,7 @@ export function initializeSelection(packs: CollectionEntry<'packs'>[]): Selectio
       result.push({
         name: current.data.title,
         price: current.data.price,
+        numberOfTeas: current.data.numberOfTeas,
         amount: 0,
         max: current.data.stash
       })
