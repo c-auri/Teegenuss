@@ -12,7 +12,7 @@ type Props = {
 }
 
 export default function Order({packs}: Props) {
-  const [ current, setCurrent ] = useState(0)
+  const [ current, setCurrent ] = useState(1)
   const [ selection, setSelection ] = useState(initializeSelection(packs))
   const [ address, setAddress ] = useState(initializeAddress())
   const [ contact, setContact ] = useState(initializeContact())
