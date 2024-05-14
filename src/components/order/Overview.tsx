@@ -29,7 +29,7 @@ export function Overview({ current, selection, address, contact }: Props) {
             selection.map((pack, i) =>
               pack.amount > 0 &&
               <p key={i} className="pt-1 flex justify-between gap-8">
-                <span>{pack.name}</span>
+                <span>{pack.name}{pack.amount > 1 && " x" + pack.amount}</span>
                 <span>{pack.amount * pack.price},00&thinsp;€</span>
               </p>)
           }
