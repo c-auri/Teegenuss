@@ -2,7 +2,14 @@ import type { CollectionEntry } from 'astro:content'
 import { Controls } from './Controls'
 import { useState } from 'react'
 
-export type Selection = { name: string, price: number, numberOfTeas: number, amount: number, max: number }
+export type Selection = { 
+  name: string, 
+  price: number, 
+  numberOfTeas: number, 
+  amount: number, 
+  min: number, 
+  max: number 
+}
 
 export function toString(selection: Selection[]) {
   return selection.map(pack => `${pack.amount}x ${pack.name}: ${pack.amount * pack.price},00€`).join(' + ')
@@ -31,7 +38,8 @@ export function initializeSelection(packs: CollectionEntry<'packs'>[]): Selectio
         name: current.data.title,
         price: current.data.price,
         numberOfTeas: current.data.numberOfTeas,
-        amount: 0,
+        amount: packs.length > 1 ? 0 : 1,
+        min: packs.length > 1 ? 0 : 1,
         max: current.data.stash
       })
     }
@@ -132,7 +140,7 @@ function Input({selection, handleChange}: InputProps) {
         className={`w-10 focus:outline-none bg-transparent`}
         type="number"
         onKeyDown={(event) => event.preventDefault()}
-        min="0"
+        min={selection.min}
         max={selection.max}
         value={selection.amount}
         onChange={(e) => handleChange(parseInt(e.currentTarget.value))}>
