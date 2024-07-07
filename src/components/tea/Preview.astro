@@ -15,7 +15,7 @@ const href = `/pakete/${pack.data.route}/${tea.data.route}`
             }
             {
                 tea.data.hasImage &&
-                <img width="300" height="250" src={`/images/teas/${tea.slug}/01.png`} />
+                <img width="300" height="250" src={`/images/teas/${tea.slug}/01.png`} class={tea.data.hasHover ? "image-hoverable" : ""}/>
             }
             {
                 tea.data.hasHover &&
@@ -45,10 +45,18 @@ const href = `/pakete/${pack.data.route}/${tea.data.route}`
         bottom: 0;
         object-fit: contain;
         opacity: 0;
+    }
+
+    .image-hoverable,
+    .image-hover {
         transition: opacity .2s;
     }
 
     article:hover .image-hover {
         opacity: 1;
+    }
+
+    article:hover .image-hoverable {
+        opacity: 0;
     }
   </style>
