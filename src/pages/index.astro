@@ -3,7 +3,7 @@ import Pack from '../layouts/Pack.astro'
 import { CollectionEntry, getCollection, getEntry } from 'astro:content'
 import { modulo } from '../scripts/modulo'
 
-const entry = await getEntry('packs', "23-1-Chinas-Schaetze")
+const entry = await getEntry('packs', "24-1-Yunnan")
 const packs = await getCollection('packs')
 
 const packIndex = packs.findIndex(pack => pack.id === entry.id)
