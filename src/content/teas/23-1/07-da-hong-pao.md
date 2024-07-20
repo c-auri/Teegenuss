@@ -26,6 +26,6 @@ preparation:
             firstInfusion: "blitz"
             secondInfusion: "blitz"
             laterInfusions: "+\u200A5\u200As"
-tags: [ fujian, yancha, si-da-ming-cong, da-hong-pao ]
+tags: [ da-hong-pao, yancha, si-da-ming-cong, fujian  ]
 ---
 Ein klassischer Felsentee aus Wuyi. Im Vordergrund steht eine kräftige Röstung, die trotz ihrer Intensität bemerkenswert geschmeidig ist. Dahinter verbergen sich leicht florale Noten und das charakteristisch mineralische Mundgefühl.
