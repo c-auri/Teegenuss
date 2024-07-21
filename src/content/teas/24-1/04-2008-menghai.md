@@ -8,7 +8,7 @@ purchase:
     shop: white2tea
     productUrl: https://white2tea.com/products/2008-menghai-raw-puer
     amount: "16\u200Ag"
-    pricePer100g: 0,27
+    pricePer100g: 0,29
     currency: €
 origin:
     country: "China"
@@ -20,12 +20,12 @@ preparation:
     gongfu:
         temperature: "100°C"
         amount:
-            weight: "4\u200A-\u200A5\u200Ag pro 100\u200Aml"
+            weight: "5\u200Ag pro 100\u200Aml"
         times:
             rinse: "blitz"
-            firstInfusion: "10\u200As"
-            secondInfusion: "20\u200As"
-            laterInfusions: "+\u200A10\u200As"
-tags: [ pu-er ]
+            firstInfusion: "5\u200As"
+            secondInfusion: "5\u200As"
+            laterInfusions: "+\u200A5\u200As"
+tags: [ menghai, banna, pu-er ]
 ---
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+Die für Menghai typische Bitterkeit ist hier noch deutlich zu spüren, wurde durch die Reifung aber bereits gezähmt. Hinter dem kräftigen und holzigen Grundcharakter verbirgt sich eine Süße und angenehme Cremigkeit.
