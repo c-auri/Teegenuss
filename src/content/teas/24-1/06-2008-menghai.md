@@ -28,4 +28,4 @@ preparation:
             laterInfusions: "+\u200A5\u200As"
 tags: [ menghai, banna, pu-er ]
 ---
-Die für Menghai typische Bitterkeit ist hier noch deutlich zu spüren, wurde durch die Reifung aber bereits gezähmt. Hinter dem kräftigen und holzigen Grundcharakter verbirgt sich eine Süße und angenehme Cremigkeit.
+Die für Menghai typische dominante Bitterkeit ist diesem Tee noch deutlich zu anzumerken, durch die Reifung wurde sie aber bereits deutlich gezähmt. Hinter dem kräftigen und holzigen Grundcharakter verbirgt sich eine Süße und eine angenehme Cremigkeit.
