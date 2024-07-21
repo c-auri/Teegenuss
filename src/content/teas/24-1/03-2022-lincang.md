@@ -28,4 +28,4 @@ preparation:
             laterInfusions: "+\u200A10\u200As"
 tags: [ pu-er ]
 ---
-Ein kräftiger und sauber fermentierter Shu mit robustem Körper. Gepresst in praktischen Mini-Scheiben, die sich gut halbieren lassen.
+Ein kräftiger und sauber fermentierter Shu mit robustem Körper. Gepresst in praktischen Mini-Scheiben, die sich gut portionieren lassen.
