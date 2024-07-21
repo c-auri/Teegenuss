@@ -1,4 +1,0 @@
----
-title: Weißer Tee
----
-Eine Verarbeitungsform bei der der Tee nach dem Pflücken lediglich getrocknet wird. Damit die Oxidation dabei nicht zu schnell voranschreitet, muss der Tee sehr sanft behandelt werden. Deshalb behalten die Blätter ihre natürliche Form und die besonders bei jungen Knospen vorkommenden feinen weißen Härchen bleiben erhalten, was der Sorte ihren Namen gibt. Besonders wertvoll ist weißer Tee mit einer hohen Knospenanzahl. Der Aufguss ist dort üblicherweise sehr hell, das Aroma frisch und leicht blumig. Im Geschmack ist er eher mild und zurückhaltend. Da die Oxidation der Blätter durch das Trocknen nicht entgültig gestoppt wird, lässt sich weißer Tee aber auch nachreifen, was ihm eine zusätliche Komplexität geben kann. Ursprünglich stammt die Sorte aus Fujian, mittlerweile wird er aber auch zum Beispiel in Yunnan oder Darjeeling produziert.
