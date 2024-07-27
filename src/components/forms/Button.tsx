@@ -22,8 +22,8 @@ export default function Button({
                 href={href}
                 className=
                 {
-                    "cursor-pointer py-1 px-8 border-2 rounded-md text-lg hover:bg-slate-200 hover:text-slate-600 hover:border-slate-200 "
-                    + (style === "primary" ? " border-slate-100 bg-slate-100 text-slate-600" : " bg-white border-slate-100 text-slate-600")
+                    "cursor-pointer py-1 px-8 border-2 rounded-md text-lg hover:bg-olive-700 hover:text-slate-100 hover:border-olive-700 "
+                    + (style === "primary" ? " border-olive-800 bg-olive-800 text-slate-100" : " bg-white border-olive-800 text-slate-800")
                 }
             >
                 {children}
@@ -37,9 +37,8 @@ export default function Button({
                 onClick={handleClick}
                 className=
                 {
-                    "cursor-pointer py-1 px-8 border-2 rounded-md text-lg border-slate-200 "
-                    + (style === "primary" && " text-slate-500 bg-slate-200 hover:bg-slate-300 hover:text-slate-600 hover:border-slate-300 first-letter:")
-                    + (style === "secondary" && " text-slate-400 bg-white hover:text-slate-500 hover:border-slate-300 ")
+                    "cursor-pointer py-1 px-8 border-2 rounded-md text-lg border-olive-800 hover:border-olive-700 hover:bg-olive-700 hover:text-slate-100"
+                    + (style === "primary" ? " text-slate-100 bg-olive-800 first-letter:" : " text-olive-800 bg-white")
                 }
             >
                 {children}
