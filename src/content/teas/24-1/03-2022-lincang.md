@@ -24,7 +24,7 @@ preparation:
         times:
             rinse: "blitz"
             firstInfusion: "10\u200As"
-            secondInfusion: "20\u200As"
+            secondInfusion: "10\u200As"
             laterInfusions: "+\u200A10\u200As"
 tags: [ pu-er ]
 ---
