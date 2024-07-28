@@ -17,6 +17,7 @@ const packs = defineCollection({
     numberOfTeas: z.number(),
     totalWeight: z.string(),
     teaser: z.string(),
+    annotation: z.string().optional(),
     stash: z.number().int(),
     price: z.number(),
     priority: z.number().optional()
