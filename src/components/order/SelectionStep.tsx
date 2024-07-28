@@ -135,6 +135,7 @@ function Input({selection, handleChange}: InputProps) {
       <span className="text-slate-500">{selection.price},00&thinsp;€</span>
     </div>
     <span className="border rounded-md flex justify-center items-center">
+      <button type="button" onClick={() => selection.amount > selection.min && handleChange(selection.amount - 1)}>-</button>
       <span className="mx-3">Anzahl</span>
       <input
         className={`w-10 focus:outline-none bg-transparent`}
@@ -142,9 +143,9 @@ function Input({selection, handleChange}: InputProps) {
         onKeyDown={(event) => event.preventDefault()}
         min={selection.min}
         max={selection.max}
-        value={selection.amount}
-        onChange={(e) => handleChange(parseInt(e.currentTarget.value))}>
+        value={selection.amount}>
       </input>
+      <button type="button" onClick={() => selection.amount < selection.max && handleChange(selection.amount + 1)}>+</button>
     </span>
     <span className="text-right flex justify-end items-center">
       {selection.amount * selection.price},00&thinsp;€

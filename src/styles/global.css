@@ -30,6 +30,17 @@
     font-family: 'Roboto';
 }
 
+/* hide arrows in number input element */
+input[type=number] { 
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button { 
+      -webkit-appearance: none; 
+}
+
 :root {
     --olive-800: #35492E;
     --olive-700: #566b4e;
