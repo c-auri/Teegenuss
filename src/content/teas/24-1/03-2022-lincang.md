@@ -2,7 +2,7 @@
 title: 2022 Lincang
 route: 2022-lincang
 hasImage: true 
-pack: 24-1-Yunnan
+pack: 24-1-Suedlich-der-Wolken
 type: shu
 purchase:
     shop: Teewald

@@ -2,7 +2,7 @@
 title: 2008 Menghai
 route: 2008-menghai
 hasImage: true 
-pack: 24-1-Yunnan
+pack: 24-1-Suedlich-der-Wolken
 type: sheng
 purchase:
     shop: white2tea

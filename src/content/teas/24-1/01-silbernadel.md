@@ -2,7 +2,7 @@
 title: Silbernadel
 route: silbernadel
 hasImage: true
-pack: 24-1-Yunnan
+pack: 24-1-Suedlich-der-Wolken
 type: white
 purchase:
     shop: Teewald

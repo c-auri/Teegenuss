@@ -2,7 +2,7 @@
 title: Goldnadel
 route: goldnadel
 hasImage: true 
-pack: 24-1-Yunnan
+pack: 24-1-Suedlich-der-Wolken
 type: black
 purchase:
     shop: Teewald
