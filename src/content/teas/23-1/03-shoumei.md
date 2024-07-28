@@ -6,7 +6,7 @@ type: white
 purchase:
     shop: Teewald
     productUrl: https://teewald.de/collections/weisser-tee/products/2020-shoumei-weisser-tee-perle
-    amount: "2\u200A×\u200A8\u200Ag"
+    amount: "2\u200A×\u200A6\u200Ag"
     pricePer100g: 0,17
     currency: €
 origin:
