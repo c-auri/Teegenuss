@@ -58,6 +58,7 @@ const teas = defineCollection({
           rinse: z.string(),
           firstInfusion: z.string(),
           secondInfusion: z.string(),
+          thirdInfusion: z.string().optional(),
           laterInfusions: z.string(),
         })
       }))

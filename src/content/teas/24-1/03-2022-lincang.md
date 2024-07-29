@@ -22,9 +22,10 @@ preparation:
         amount:
             weight: "4\u200Ag pro 100\u200Aml"
         times:
-            rinse: "blitz"
-            firstInfusion: "10\u200As"
+            rinse: "1\u200Amin"
+            firstInfusion: "30\u200As"
             secondInfusion: "10\u200As"
+            thirdInfusion: "10\u200As"
             laterInfusions: "+\u200A10\u200As"
 tags: [ pu-er ]
 ---
