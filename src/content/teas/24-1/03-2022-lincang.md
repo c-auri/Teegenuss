@@ -7,7 +7,7 @@ type: shu
 purchase:
     shop: Teewald
     productUrl: https://teewald.de/products/2022-mingfeng-shan-shu-pu-erh?variant=44947960955144
-    amount: "16\u200Ag"
+    amount: "2\u200A×\u200A8\u200Ag"
     pricePer100g: 0,14
     currency: €
 origin:
