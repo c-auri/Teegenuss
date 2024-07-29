@@ -134,18 +134,18 @@ function Input({selection, handleChange}: InputProps) {
       <h3 className="text-slate-700">{selection.name}</h3>
       <span className="text-slate-500">{selection.price},00&thinsp;€</span>
     </div>
-    <span className="border rounded-md flex justify-center items-center">
-      <button type="button" onClick={() => selection.amount > selection.min && handleChange(selection.amount - 1)}>-</button>
-      <span className="mx-3">Anzahl</span>
+    <span className="flex justify-center items-center">
+      <button type="button" class="px-3 py-2 border-l border-t border-b rounded-l-md bg-slate-200 hover:bg-slate-300 hover:border-slate-300" onClick={() => selection.amount > selection.min && handleChange(selection.amount - 1)}>-</button>
+      <span className="hidden md:inline px-3 py-2 border-t border-b">Anzahl</span>
       <input
-        className={`w-10 focus:outline-none bg-transparent`}
+        className={`w-12 text-center px-3 py-2 border-t border-b focus:outline-none bg-transparent`}
         type="number"
         onKeyDown={(event) => event.preventDefault()}
         min={selection.min}
         max={selection.max}
         value={selection.amount}>
       </input>
-      <button type="button" onClick={() => selection.amount < selection.max && handleChange(selection.amount + 1)}>+</button>
+      <button type="button" class="px-3 py-2 border-t border-b border-r rounded-r-md bg-slate-200 hover:bg-slate-300 hover:border-slate-300" onClick={() => selection.amount < selection.max && handleChange(selection.amount + 1)}>+</button>
     </span>
     <span className="text-right flex justify-end items-center">
       {selection.amount * selection.price},00&thinsp;€
