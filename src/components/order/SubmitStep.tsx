@@ -39,6 +39,8 @@ export function SubmitStep({
     >
       <input type="hidden" name="form-name" value="order" />
 
+      {HiddenInput("contact-discord", contact.discord)}
+      {HiddenInput("contact-source", contact.source)}
       {HiddenInput("selection-packs", toString(selection))}
       {HiddenInput("selection-shipping", calculateShipping(selection) + ",00€")}
       {HiddenInput("selection-total", calculateTotal(selection) + ",00€")}
@@ -47,8 +49,6 @@ export function SubmitStep({
       {HiddenInput("address-street", `${address.street} ${address.number}`)}
       {HiddenInput("address-town", `${address.postalCode} ${address.town}`)}
       {HiddenInput("address-country", address.country)}
-      {HiddenInput("contact-discord", contact.discord)}
-      {HiddenInput("contact-source", contact.source)}
       {HiddenInput("message", message)}
 
       <section className="text-slate-600 flex-1 flex flex-col gap-6">
